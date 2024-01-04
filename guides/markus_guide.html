@@ -1,0 +1,623 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Guide to Using MarkUs &#8212; Computation and Data Science for Social Sciences</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'guides/markus_guide';</script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Welcome to GGR274" href="../weekly-materials/week01/lecture/Class1_GGR274_MM.html" />
+    <link rel="prev" title="Guide to Using Jupyter Notebooks and JupyterHub" href="jupyterhub_guide.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <header>
+  
+    <div class="bd-header navbar navbar-expand-lg bd-navbar">
+    </div>
+  
+  </header>
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../jupyter-book/index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Computation and Data Science for Social Sciences</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../jupyter-book/index.html">
+                    👋 Course Website for GGR274H1-S Winter 2024
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Quick Links</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../syllabus/ggr274_syllabus.html">GGR274 Winter 2024 Course Syllabus</a></li>
+
+<li class="toctree-l1"><a class="reference external" href="https://q.utoronto.ca/courses/338580/announcements">Announcements</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://piazza.com/utoronto.ca/winter2024/ggr274h1">Piazza</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Resources</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="jupyterhub_guide.html">JupyterHub Guide</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">MarkUs Guide</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 1</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://q.utoronto.ca/courses/296372/files/?preview=24224703">Prof. Li's PDF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../weekly-materials/week01/lecture/Class1_GGR274_MM.html">Prof. Moon's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../weekly-materials/week01/lecture/Class1_GGR274_DL.html">Prof. Musabirov's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../weekly-materials/week01/lab/Lab_1.html">Lab 1 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../weekly-materials/week01/lab/Lab_1_solutions.html">Lab 1 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../weekly-materials/week01/homework/Homework_1.html">Homework 1 Notebook</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://jupyter.utoronto.ca/hub/user-redirect/git-pull?repo=https%3A//github.com/UofTCompDSci/ggr274-20241&urlpath=tree/ggr274-20241/guides/markus_guide.ipynb&branch=main" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onJupyterHub"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">JupyterHub</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/guides/markus_guide.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Guide to Using MarkUs</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-to-markus">Getting to MarkUs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submitting-work-to-markus">Submitting Work to MarkUs</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#experimental-submitting-directly-from-jupyterhub">(Experimental) Submitting directly from JupyterHub</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-automated-tests">Running Automated Tests</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#viewing-feedback-and-graded-results">Viewing Feedback and Graded Results</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="guide-to-using-markus">
+<h1>Guide to Using MarkUs<a class="headerlink" href="#guide-to-using-markus" title="Permalink to this heading">#</a></h1>
+<p>MarkUs is a web application we’re using in this course to manage your labs and homeworks.
+MarkUs lets you submit your Jupyter notebook files for feedback and grading from both automated tests and your TAs.
+In this guide, we’ll go over the basics of how you’ll use MarkUs in this course.</p>
+<p>(Fun fact: MarkUs is developed and maintained by the Department of Computer Science and Professor David Liu right here at the University of Toronto!)</p>
+<section id="getting-to-markus">
+<h2>Getting to MarkUs<a class="headerlink" href="#getting-to-markus" title="Permalink to this heading">#</a></h2>
+<p>To access MarkUs, visit the following URL: <a class="reference external" href="https://markus-ds.teach.cs.toronto.edu">https://markus-ds.teach.cs.toronto.edu</a>.</p>
+<ul class="simple">
+<li><p><em>Tip</em>: Control/Command-click to open the link in a new tab so you can still see this guide.</p></li>
+</ul>
+<p>You’ll be prompted to login with your UTORid and password.
+After logging in, you’ll be taken to your MarkUs homepage, which shows your courses that are using MarkUs this semester (likely just this course).</p>
+<p>Click on your course to be taken to the MarkUs course.</p>
+</section>
+<section id="submitting-work-to-markus">
+<h2>Submitting Work to MarkUs<a class="headerlink" href="#submitting-work-to-markus" title="Permalink to this heading">#</a></h2>
+<p>On your course page, you’ll see a list of assessments that your instructors have set up.</p>
+<ul class="simple">
+<li><p><em>Note</em>: These assessments will be set up and published on Markus throughout the semester, so you won’t see them right away.</p></li>
+</ul>
+<p>To submit a Jupyter notebook file to MarkUs:</p>
+<ol class="arabic">
+<li><p>First, go to the <a class="reference external" href="https://jupyter.utoronto.ca">University of Toronto JupyterHub</a> and download the file you want to submit (e.g., <code class="docutils literal notranslate"><span class="pre">Lab_1.ipynb</span></code>).</p></li>
+<li><p>Then in MarkUs, click on the link to the assessment you want to submit to (e.g., <strong>lab1: Introduction to Data Science Tools</strong>).</p>
+<p>You’ll now see the assignment page. There’s some information about the assignment here, but this will likely all be repeated from your assessment handout.</p>
+</li>
+<li><p>Click the <strong>Submissions</strong> tab. This takes you to the page where you’ll submit your work for the assignment. You’ll see a list of files you’ve submitted, which starts off empty.</p></li>
+<li><p>Click on the <strong>Submit File</strong> button on the top-right corner of the table of files. This opens a popup dialog.</p></li>
+<li><p>Click on <strong>Browse</strong> button, and select the notebook file you downloaded in Step 1.</p>
+<p><em>Tip</em>: if your instructor has configured the assessment to only allow you to submit a file with a particular name (useful for autograding), you’ll need to make sure the name of your file matches the required filename. In the popup dialog, you can also choose to automatically rename the file you’re submitting to match the required filename.</p>
+</li>
+<li><p>Finally, click <strong>Save</strong> to submit the file!</p></li>
+</ol>
+<p>The table of submitted files should refresh, showing the file you just submitted.
+You can click on the file to preview it directly in your web browser, which lets you check whether you submitted the correct file.
+You can also download the file you submitted by clicking on the download icon next to the name of the file.</p>
+<section id="experimental-submitting-directly-from-jupyterhub">
+<h3>(Experimental) Submitting directly from JupyterHub<a class="headerlink" href="#experimental-submitting-directly-from-jupyterhub" title="Permalink to this heading">#</a></h3>
+<p>We are piloting a new JupyterHub-MarkUs integration that lets you submit files to MarkUs directly from JupyterHub, without needing to download your notebook file to your computer.
+To make use of this feature, you’ll need to perform a <strong>one-time setup</strong> by following these steps:</p>
+<ol class="arabic">
+<li><p>First, go to the <a class="reference external" href="https://jupyter.utoronto.ca">JupyterHub home page</a>, logging in if necessary.</p></li>
+<li><p><strong>Important</strong>: make sure you are in the top-most (“root”) folder on JupyterHub, not inside your <code class="docutils literal notranslate"><span class="pre">ggr274-20241</span></code> folder. Otherwise, click on the blue folder icon above your file list to go to your root folder.</p></li>
+<li><p>In your root folder, go to the top-right menu and click on <strong>New</strong> -&gt; <strong>Text File</strong>.</p></li>
+<li><p>A new page will open for the new file. First, click on the file name (usually <em>untitled.txt</em>) at the top of your screen and rename the file to <strong>markus-api-key.txt</strong>. Make sure to use that exact file name, including all lowercase letters, the hyphens, and the .txt extension.</p></li>
+<li><p>Now, keep the file open and open a new browser tab. In the new tab, login to <a class="reference external" href="https://markus-ds.teach.cs.toronto.edu">MarkUs</a>.</p></li>
+<li><p>In MarkUs, go to the top-right menu, click on the “down arrow” and go to <strong>Settings</strong>.</p></li>
+<li><p>In your Account Settings page, look for the “Your API Key” section.
+You likely won’t have an API key yet. Click on the <strong>Reset API Key</strong> button and wait for the page to refresh.</p></li>
+<li><p>Now under “Your API Key”, you’ll see a long string of letters/numbers followed by an equals sign (<code class="docutils literal notranslate"><span class="pre">=</span></code>), e.g.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Bzk...........................hM4x=
+</pre></div>
+</div>
+<p>Copy-and-paste that string, <em>including</em> the equals sign (<code class="docutils literal notranslate"><span class="pre">=</span></code>), into your markus-api-key.txt file on JupyterHub.</p>
+</li>
+<li><p>Save your markus-api-key.txt file by going to <strong>File -&gt; Save</strong>.</p></li>
+<li><p>Then, close the file. Congratulations, you’ve finished the setup! 🎉</p></li>
+</ol>
+<p>Now, let’s try it out! <em>Starting with Week 7 onwards</em>, when you are ready to submit your notebook file to MarkUs, you can do the following:</p>
+<ol class="arabic simple">
+<li><p>Open your notebook file (e.g. <code class="docutils literal notranslate"><span class="pre">Homework7.ipynb</span></code>) in JupyterHub, if it isn’t already.</p></li>
+<li><p>Look in the toolbar for the MarkUs icon
+<a class="reference internal" href="../_images/markus.ico"><img alt="MarkUs icon" src="../_images/markus.ico" style="width: 16px;" /></a>
+and click on it.</p></li>
+<li><p>That’s it! After a few seconds (or minutes, depending on the size of your file), a popup window should appear saying that your file was submitted to MarkUs.</p>
+<ul class="simple">
+<li><p>If an error occurred, first make sure that you followed the setup instructions correctly. If you’re confident that you did, please contact Prof. David Liu and in the mean time, submit your file using the standard approach (downloading the file to your computer and uploading it to MarkUs).</p></li>
+</ul>
+</li>
+</ol>
+<p><em>Warning</em>: this MarkUs integration will allow you to submit files even after the due date has passed. It is your responsibility to ensure that you are submitting your work before the due date.</p>
+</section>
+</section>
+<section id="running-automated-tests">
+<h2>Running Automated Tests<a class="headerlink" href="#running-automated-tests" title="Permalink to this heading">#</a></h2>
+<p>For each assignment, we provide some automated tests that check whether your submission matches the values we expected.</p>
+<p>Here is how to run them:</p>
+<ol class="arabic simple">
+<li><p>Click the <strong>Automated Testing</strong> tab.</p></li>
+<li><p>Click button <strong>Run tests</strong> and wait several seconds while the test is run.</p></li>
+<li><p>Reload the webpage. Hopefully you see something like this. If not, and you can’t figure it out, ask for help!</p></li>
+</ol>
+<p><img alt="Download As" src="../_images/lab1testresult.png" /></p>
+</section>
+<section id="viewing-feedback-and-graded-results">
+<h2>Viewing Feedback and Graded Results<a class="headerlink" href="#viewing-feedback-and-graded-results" title="Permalink to this heading">#</a></h2>
+<p>Once your assignment has been graded by a Teaching Assistant (TA), you will be able to view your results and feedback left by your TA.</p>
+<ol class="arabic">
+<li><p>Click on the assignment, and go to the <strong>Results</strong> tab</p></li>
+<li><p>You can view your grade breakdown on the right side of the screen, like below:</p>
+<p><img alt="Marking Rubric" src="../_images/marking-rubric.jpg" /></p>
+</li>
+<li><p>On the left side under <strong>Submission files</strong>, you can go through your submitted files and view feedback. Using the dropdown menu, you can switch between files. Hover over the yellow boxes to read any annotations left by the TA.</p>
+<p><img alt="Submission Files" src="../_images/submission-files.jpg" /></p>
+</li>
+<li><p>You can also view these annotations in the <strong>Annotations</strong> tab.</p>
+<p><img alt="Annotations" src="../_images/annotations.jpg" /></p>
+</li>
+<li><p>Click on the <strong>Test Results</strong> to see the results of running our automated tests on your submission. If a test failed, it would be highlighted in red.</p>
+<p><img alt="Test Results" src="../_images/test-results.jpg" /></p>
+</li>
+</ol>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./guides"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="jupyterhub_guide.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Guide to Using Jupyter Notebooks and JupyterHub</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../weekly-materials/week01/lecture/Class1_GGR274_MM.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Welcome to GGR274</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-to-markus">Getting to MarkUs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submitting-work-to-markus">Submitting Work to MarkUs</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#experimental-submitting-directly-from-jupyterhub">(Experimental) Submitting directly from JupyterHub</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-automated-tests">Running Automated Tests</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#viewing-feedback-and-graded-results">Viewing Feedback and Graded Results</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By GGR274 Instructors
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
