@@ -30,7 +30,7 @@ parts:
       title: Prof. Musabirov's Notebook
     - file: weekly-materials/week01/lab/Lab_1.ipynb
       title: Lab 1 Notebook
-    - file: weekly-materials/week01/lab/Lab_1_solutions.ipynb
-      title: Lab 1 Solutions
+    # - file: weekly-materials/week01/lab/Lab_1_solutions.ipynb
+    #   title: Lab 1 Solutions
     - file: weekly-materials/week01/homework/Homework_1.ipynb
       title: Homework 1 Notebook
