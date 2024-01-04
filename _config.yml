@@ -1,0 +1,63 @@
+# Book settings
+# Learn more at https://jupyterbook.org/customize/config.html
+
+title: Computation and Data Science for Social Sciences
+author: GGR274 Instructors
+# logo: logo.png
+
+# Force re-execution of notebooks on each build.
+# See https://jupyterbook.org/content/execute.html
+execute:
+  execute_notebooks: off
+
+# Only build files in the TOC
+only_build_toc_files: true
+
+# hidden folders must be excluded explicitly
+exclude_patterns: ['**/.pytest_cache/*']
+
+
+# Define the name of the latex output file for PDF builds
+latex:
+  latex_documents:
+    targetname: book.tex
+
+# Add a bibtex file so that we can create citations
+bibtex_bibfiles:
+  - references.bib
+
+html:
+  favicon: images/favicon.png
+#   Add GitHub buttons to your book
+#   See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
+#   use_issues_button: true
+#   use_repository_button: true
+
+launch_buttons:
+  binderhub_url: ""
+  jupyterhub_url: "https://jupyter.utoronto.ca"
+
+repository:
+  url: https://github.com/UofTCompDSci/ggr274-20241
+  branch: main
+
+
+parse:
+  myst_enable_extensions:
+    # These are the defaults, with amsmath and html_image enabled
+    - amsmath
+    - colon_fence
+    # - deflist
+    - dollarmath
+    # - html_admonition
+    - html_image
+    - linkify
+    # - replacements
+    # - smartquotes
+    - substitution
+    - tasklist
+
+# Use MathJaX 3
+sphinx:
+  config:
+    mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
