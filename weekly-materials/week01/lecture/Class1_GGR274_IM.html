@@ -499,9 +499,11 @@ Wow Ilya, you&#39;re already 39 years old? You should be resting more!
 <li><p>Vocabulary is much, much smaller</p></li>
 <li><p>Syntax/Grammar are much simpler</p></li>
 <li><p>The main limitation is that the computer (of pre-GPT era) is much more limited in understanding and thus more strict</p></li>
-<li><p>The real barrier is understanding what <em>you</em> want to do and explaining that in a <em>clear non-contradictory way</em></p></li>
+<li><p>The real barrier is understanding what <em>you</em> want to do and explaining that in a <em>clear non self-contradictory way</em></p></li>
 </ul>
 </li>
+</ul>
+<ul class="simple">
 <li><p>In addition to writing code, we in this course and you, as you progress, should be learning <strong>reading</strong> code, and doing that effectively might be even more crucial</p>
 <ul>
 <li><p>Data Science tasks rarely start from a blank page</p></li>
@@ -514,7 +516,7 @@ Wow Ilya, you&#39;re already 39 years old? You should be resting more!
 <h3>Why learning is difficult?<a class="headerlink" href="#why-learning-is-difficult" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://theeducationhub.org.nz/an-introduction-to-cognitive-load-theory/">An Intro to Cognitive Load Theory</a></p></li>
-<li><p><a class="reference external" href="https://cdn.theeducationhub.org.nz/wp-content/uploads/2021/02/Cognitive-load-theory-fig1-1024x566.png">Cognitive Load Theory Memory Model</a></p></li>
+<li><p><img alt="Cognitive Load Theory Memory Model" src="https://cdn.theeducationhub.org.nz/wp-content/uploads/2021/02/Cognitive-load-theory-fig1-1024x566.png" /></p></li>
 </ul>
 </section>
 </section>
@@ -528,63 +530,49 @@ Wow Ilya, you&#39;re already 39 years old? You should be resting more!
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">word</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="s1">&#39;Hello, this is a sample sentence.&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">()])</span>
 </pre></div>
 </div>
-<p>Example 3:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;Hello, this is a sample sentence.&quot;</span>
-<span class="n">words</span> <span class="o">=</span> <span class="n">sentence</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
-
-<span class="n">reversed_words</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
-    <span class="n">reversed_word</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-    <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">word</span><span class="p">:</span>
-        <span class="n">reversed_word</span> <span class="o">=</span> <span class="n">char</span> <span class="o">+</span> <span class="n">reversed_word</span>
-    <span class="n">reversed_words</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">reversed_word</span><span class="p">)</span>
-
-<span class="n">reversed_sentence</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">reversed_words</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">reversed_sentence</span><span class="p">:</span>
-        <span class="n">reversed_sentence</span> <span class="o">+=</span> <span class="s1">&#39; &#39;</span>
-    <span class="n">reversed_sentence</span> <span class="o">+=</span> <span class="n">word</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">reversed_sentence</span><span class="p">)</span>
-</pre></div>
-</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;Hello, this is a sample sentence.&quot;</span>
-<span class="n">words</span> <span class="o">=</span> <span class="n">sentence</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
-
-<span class="n">reversed_words</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
-    <span class="n">reversed_word</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-    <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">word</span><span class="p">:</span>
-        <span class="n">reversed_word</span> <span class="o">=</span> <span class="n">char</span> <span class="o">+</span> <span class="n">reversed_word</span>
-    <span class="n">reversed_words</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">reversed_word</span><span class="p">)</span>
-
-<span class="n">reversed_sentence</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">reversed_words</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">reversed_sentence</span><span class="p">:</span>
-        <span class="n">reversed_sentence</span> <span class="o">+=</span> <span class="s1">&#39; &#39;</span>
-    <span class="n">reversed_sentence</span> <span class="o">+=</span> <span class="n">word</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">reversed_sentence</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">word</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="s1">&#39;Hello, this is a sample sentence.&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">()])</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>,olleH siht si a elpmas .ecnetnes
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;,olleH siht si a elpmas .ecnetnes&#39;
 </pre></div>
 </div>
 </div>
+</div>
+<p>Example 3:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;Hello, this is a sample sentence.&quot;</span>
+<span class="n">words</span> <span class="o">=</span> <span class="n">sentence</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<span class="n">reversed_words</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+    <span class="n">reversed_word</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">word</span><span class="p">:</span>
+        <span class="n">reversed_word</span> <span class="o">=</span> <span class="n">char</span> <span class="o">+</span> <span class="n">reversed_word</span>
+    <span class="n">reversed_words</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">reversed_word</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Example 3 (contd)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">reversed_sentence</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">reversed_words</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">reversed_sentence</span><span class="p">:</span>
+        <span class="n">reversed_sentence</span> <span class="o">+=</span> <span class="s1">&#39; &#39;</span>
+    <span class="n">reversed_sentence</span> <span class="o">+=</span> <span class="n">word</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">reversed_sentence</span><span class="p">)</span>
+</pre></div>
 </div>
 <p>Example 4:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Original sentence</span>
 <span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;Hello, this is a sample sentence.&quot;</span>
 <span class="c1"># Split the sentence into individual words</span>
 <span class="n">words</span> <span class="o">=</span> <span class="n">sentence</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
-
 <span class="c1"># Initialize an empty list to hold reversed words</span>
 <span class="n">reversed_words</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="c1"># Iterate over each word in the sentence</span>
+</pre></div>
+</div>
+<p>Example 4 (contd)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Iterate over each word in the sentence</span>
 <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
     <span class="c1"># Initialize an empty string to build the reversed word</span>
     <span class="n">reversed_word</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
@@ -594,8 +582,10 @@ Wow Ilya, you&#39;re already 39 years old? You should be resting more!
         <span class="n">reversed_word</span> <span class="o">=</span> <span class="n">char</span> <span class="o">+</span> <span class="n">reversed_word</span>
     <span class="c1"># Append the reversed word to the list of reversed_words</span>
     <span class="n">reversed_words</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">reversed_word</span><span class="p">)</span>
-
-<span class="c1"># Initialize an empty string for the reversed sentence</span>
+</pre></div>
+</div>
+<p>Example 4 (contd 2)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize an empty string for the reversed sentence</span>
 <span class="n">reversed_sentence</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 <span class="c1"># Iterate over each reversed word</span>
 <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">reversed_words</span><span class="p">:</span>
@@ -642,6 +632,8 @@ Wow Ilya, you&#39;re already 39 years old? You should be resting more!
 </li>
 </ul>
 </li>
+</ul>
+<ul class="simple">
 <li><p>Distributed practice and elaborative rehearsal:</p>
 <ul>
 <li><p>Read the lab and homework at the beginning of the week. If you have time, make comments</p></li>
