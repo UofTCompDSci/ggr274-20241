@@ -12,6 +12,8 @@ parts:
       title: Announcements
     - url: https://piazza.com/utoronto.ca/winter2024/ggr274h1
       title: Piazza
+    - url: https://forms.office.com/Pages/ResponsePage.aspx?id=JsKqeAMvTUuQN7RtVsVSEF-wqptfr85NieT8UyliaxxUOUtMSVFUQkFTNVdRTlVJNkZFQU84NldYUi4u
+      title: Course Feedback Form
 
   - caption: Resources
     chapters:
@@ -22,8 +24,8 @@ parts:
 
   - caption: Week 1
     chapters:
-    - url: https://q.utoronto.ca/courses/296372/files/?preview=24224703
-      title: Prof. Li's PDF
+    - url: https://q.utoronto.ca/courses/338580/files?preview=29750629
+      title: Prof. Li's Slides
     - file: weekly-materials/week01/lecture/Class1_GGR274_MM.ipynb
       title: Prof. Moon's Notebook
     - file: weekly-materials/week01/lecture/Class1_GGR274_DL.ipynb
