@@ -62,7 +62,7 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'weekly-materials/week01/lecture/Class1_GGR274_DL';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'weekly-materials/week01/lecture/Class1_GGR274_IM';</script>
     <link rel="shortcut icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -188,8 +188,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference external" href="https://q.utoronto.ca/courses/338580/files?preview=29750629">Prof. Li's Slides</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Class1_GGR274_MM.html">Prof. Moon's Notebook</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Prof. Musabirov's Notebook</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lab/Lab_1.html">Lab 1 Notebook</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../homework/Homework_1.html">Homework 1 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lab/Lab_1.html">Lab 01 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../homework/Homework_1.html">Homework 01 Notebook</a></li>
 </ul>
 
     </div>
@@ -244,7 +244,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://jupyter.utoronto.ca/hub/user-redirect/git-pull?repo=https%3A//github.com/UofTCompDSci/ggr274-20241&urlpath=tree/ggr274-20241/weekly-materials/week01/lecture/Class1_GGR274_DL.ipynb&branch=main" target="_blank"
+      <li><a href="https://jupyter.utoronto.ca/hub/user-redirect/git-pull?repo=https%3A//github.com/UofTCompDSci/ggr274-20241&urlpath=tree/ggr274-20241/weekly-materials/week01/lecture/Class1_GGR274_IM.ipynb&branch=main" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onJupyterHub"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -275,7 +275,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../../_sources/weekly-materials/week01/lecture/Class1_GGR274_DL.ipynb" target="_blank"
+      <li><a href="../../../_sources/weekly-materials/week01/lecture/Class1_GGR274_IM.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -369,9 +369,6 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hello">Hello!</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-computation">What is computation?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-s-a-computer">What’s a computer?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-programming">What is programming?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python">Python!</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-python">Why Python?</a></li>
@@ -382,6 +379,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#do-i-need-to-download-and-install-python-and-jupyter">Do I need to download and install Python and Jupyter?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#no-software-installation-required">No software installation required!</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyterhub-demo">JupyterHub Demo!</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-and-learning-to-program-some-things-to-remember">Learning and Learning to Program. Some things to remember</a></li>
 </ul>
             </nav>
         </div>
@@ -395,30 +393,6 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="ggr274-week-1-computation-python-and-jupyterhub">
 <h1>GGR274 Week 1: Computation, Python, and JupyterHub<a class="headerlink" href="#ggr274-week-1-computation-python-and-jupyterhub" title="Permalink to this heading">#</a></h1>
-<section id="hello">
-<h2>Hello!<a class="headerlink" href="#hello" title="Permalink to this heading">#</a></h2>
-<p>Quick facts about me (David):</p>
-<ul class="simple">
-<li><p>Born in Ottawa, grew up in Toronto</p></li>
-<li><p>Teaching-stream faculty member in Computer Science</p></li>
-<li><p>Plays piano and board games; likes sci-fi and fantasy</p></li>
-<li><p>Call me “David” or “Professor Liu” 😃</p></li>
-</ul>
-</section>
-<section id="what-is-computation">
-<h2>What is computation?<a class="headerlink" href="#what-is-computation" title="Permalink to this heading">#</a></h2>
-<p>From <a class="reference external" href="https://www.dictionary.com">https://www.dictionary.com</a>:</p>
-<ul class="simple">
-<li><p><em>Computation</em>: an act, process, or method of computing; calculation.</p></li>
-<li><p><em>Computing</em>: the use of a computer to process data or perform calculations; the act of calculating or reckoning.</p></li>
-</ul>
-<p>In this course, a computation is a series of calculations that manipulates, analyzes, and derives information from data.</p>
-</section>
-<section id="what-s-a-computer">
-<h2>What’s a computer?<a class="headerlink" href="#what-s-a-computer" title="Permalink to this heading">#</a></h2>
-<p>Computation can be done by hand or it can be automated. In the 1940’s, when computation became particularly important for war as technology advanced, the original modern “computers” were people.</p>
-<a class="reference internal image-reference" href="https://www.nasa.gov/sites/default/files/styles/full_width/public/thumbnails/image/gpn-2000-001932.jpg?itok=YPLuBm48"><img alt="Computer at her work with microscope and the Friden calculating machine. Credits -- NASA" src="https://www.nasa.gov/sites/default/files/styles/full_width/public/thumbnails/image/gpn-2000-001932.jpg?itok=YPLuBm48" style="width: 400px;" /></a>
-</section>
 <section id="what-is-programming">
 <h2>What is programming?<a class="headerlink" href="#what-is-programming" title="Permalink to this heading">#</a></h2>
 <p>A <strong>computer program</strong> is a set of instructions for a computer to execute.</p>
@@ -444,10 +418,14 @@ document.write(`
 <p>You’ve seen examples of Python code earlier this lecture. Next week, we’ll start going over the basics of Python programming, but for now, think of Python code as a <em>sequence of very precise instructions that your computer can understand</em>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_name</span> <span class="o">=</span> <span class="s2">&quot;David&quot;</span>
-<span class="n">my_age</span> <span class="o">=</span> <span class="mi">6</span> <span class="o">*</span> <span class="mi">3</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_name</span> <span class="o">=</span> <span class="s2">&quot;Ilya&quot;</span>
+<span class="n">my_age</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">+</span> <span class="mi">13</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Wow </span><span class="si">{</span><span class="n">my_name</span><span class="si">}</span><span class="s2">, you&#39;re only </span><span class="si">{</span><span class="n">my_age</span><span class="si">}</span><span class="s2"> years old? Why do they let you teach?!&quot;</span><span class="p">)</span>
+
+<span class="n">my_age</span> <span class="o">=</span> <span class="n">my_age</span> <span class="o">+</span> <span class="mi">21</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Wow </span><span class="si">{</span><span class="n">my_name</span><span class="si">}</span><span class="s2">, you&#39;re already </span><span class="si">{</span><span class="n">my_age</span><span class="si">}</span><span class="s2"> years old? You should be resting more!&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -492,10 +470,32 @@ document.write(`
 <p>Two ways of accessing JupyterHub:</p>
 <ol class="arabic">
 <li><p>Go to <a class="reference external" href="https://jupyter.utoronto.ca">https://jupyter.utoronto.ca</a></p></li>
-<li><p>Go to any notebook on our course website (<a class="reference external" href="https://uoftcompdsci.github.io/ggr274-20231/">https://uoftcompdsci.github.io/ggr274-20231/</a>) and click on the little rocket icon:</p>
+<li><p>Go to any notebook on our course website (<a class="reference external" href="https://uoftcompdsci.github.io/ggr274-20241/">https://uoftcompdsci.github.io/ggr274-20241/</a>) and click on the little rocket icon:</p>
 <p><img alt="Image of JupyterHub launch from course website" src="../../../_images/jupyterhub-launch.png" /></p>
 </li>
 </ol>
+</section>
+<section id="learning-and-learning-to-program-some-things-to-remember">
+<h2>Learning and Learning to Program. Some things to remember<a class="headerlink" href="#learning-and-learning-to-program-some-things-to-remember" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Computer programming languages are actually for people, not for computers :)</p></li>
+<li><p>To some extent, learning a new programming language is quite like learning a new (written) human language, but … easier</p>
+<ul>
+<li><p>Vocabulary is much, much smaller</p></li>
+<li><p>Syntax/Grammar are much simpler</p></li>
+<li><p>The main limitation is that the computer (of pre-GPT era) is much more limited in understanding and thus more strict</p></li>
+<li><p>The real barrier is understanding what <em>you</em> want to do and explaining that in a <em>clear non-contradictory way</em></p></li>
+</ul>
+</li>
+<li><p>In addition to writing code, we in this course and you, as you progress, should be learning <strong>reading</strong> code, and doing that effectively might be even more crucial</p>
+<ul>
+<li><p>Data Science tasks rarely start from a blank page</p></li>
+<li><p>You use, assimilate, and adapt the code and ideas of others</p></li>
+<li><p>Quite often, you are in a “menu in an exotic restaurant” situation, and that’s okay!</p></li>
+</ul>
+</li>
+<li><p>Learning science tells us a bit about why and how we should learn</p></li>
+</ul>
 </section>
 </section>
 
@@ -563,9 +563,6 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hello">Hello!</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-computation">What is computation?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-s-a-computer">What’s a computer?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-programming">What is programming?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python">Python!</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-python">Why Python?</a></li>
@@ -576,6 +573,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#do-i-need-to-download-and-install-python-and-jupyter">Do I need to download and install Python and Jupyter?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#no-software-installation-required">No software installation required!</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyterhub-demo">JupyterHub Demo!</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-and-learning-to-program-some-things-to-remember">Learning and Learning to Program. Some things to remember</a></li>
 </ul>
   </nav></div>
 
