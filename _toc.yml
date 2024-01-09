@@ -28,11 +28,11 @@ parts:
       title: Prof. Li's Slides
     - file: weekly-materials/week01/lecture/Class1_GGR274_MM.ipynb
       title: Prof. Moon's Notebook
-    - file: weekly-materials/week01/lecture/Class1_GGR274_DL.ipynb
+    - file: weekly-materials/week01/lecture/Class1_GGR274_IM.ipynb
       title: Prof. Musabirov's Notebook
     - file: weekly-materials/week01/lab/Lab_1.ipynb
-      title: Lab 1 Notebook
+      title: Lab 01 Notebook
     # - file: weekly-materials/week01/lab/Lab_1_solutions.ipynb
     #   title: Lab 1 Solutions
     - file: weekly-materials/week01/homework/Homework_1.ipynb
-      title: Homework 1 Notebook
+      title: Homework 01 Notebook
