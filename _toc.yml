@@ -36,3 +36,13 @@ parts:
     #   title: Lab 1 Solutions
     - file: weekly-materials/week01/homework/Homework_1.ipynb
       title: Homework 01 Notebook
+  - caption: Week 2
+    chapters:
+    - file: weekly-materials/week02/lecture/Class2_GGR274_DL_IM.ipynb
+      title: Prof. Musabirov's Notebook
+    - file: weekly-materials/week02/lab/Lab_2.ipynb
+      title: Lab 02 Notebook
+    # - file: weekly-materials/week01/lab/Lab_1_solutions.ipynb
+    #   title: Lab 1 Solutions
+    - file: weekly-materials/week01/homework/Homework_1.ipynb
+      title: Homework 01 Notebook
