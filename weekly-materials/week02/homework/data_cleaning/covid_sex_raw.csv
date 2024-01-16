@@ -1,0 +1,54 @@
+﻿State,Date,Total_cases,Male_cases,Female_cases,Male_cases_pct,Female_cases_pct,Male_cases_rate,Female_cases_rate,Total_deaths,Male_deaths,Female_deaths,Male_deaths_pct,Female_deaths_pct,Male_deaths_rate,Female_deaths_rate,source
+Alabama,30-Oct,"831,653",,,,,,,"15,573",,,,,,,https://alpublichealth.maps.arcgis.com/apps/opsdashboard/index.html#/6d2771faa9da4a2786a509d82c8cf0f7
+Alaska,30-Oct,"132,645",67287,64852,50.73,48.89,"17,450.90","18,374.95",699,425,274,60.8,39.2,110.22,77.63,https://coronavirus-response-alaska-dhss.hub.arcgis.com/
+Arizona,30-Oct,1166060,561976,599451,48.19,51.41,"16,272.94","17,160.29",21153,12392,8748,58.58,41.36,358.83,250.43,https://www.azdhs.gov/preparedness/epidemiology-disease-control/infectious-disease-epidemiology/index.php#novel-coronavirus-home
+Arkansas,30-Oct,"512,994",239568,268296,46.7,52.3,"16,314.78","17,624.85","8,370",,,,,,,https://www.healthy.arkansas.gov/programs-services/topics/novel-coronavirus
+California,30-Oct,"4,647,587",2221547,2356327,47.8,50.7,"11,419.62","11,964.09","71,519",41696,29537,58.3,41.3,214.33,149.97,https://update.covid19.ca.gov/
+Colorado,30-Oct,740461,360012,370008,48.62,49.97,"12,946.21","13,453.33","8,186",4508,3666,55.07,44.78,162.11,133.28,https://covid19.colorado.gov/case-data
+Connecticut,30-Oct,"402,583",192749,208210,47.88,51.72,"11,032.32","11,350.47","8,764",4338,4416,49.5,50.39,248.29,240.74,https://portal.ct.gov/Coronavirus
+Delaware,30-Oct,"143,950",67113,76632,46.62,53.24,"14,603.43","15,641.58","2,091",1043,1048,49.88,50.12,226.95,213.91,https://myhealthycommunity.dhss.delaware.gov/locations/state
+District of Columbia,30-Oct,"64,240",30235,33535,47.07,52.2,"9,306.48","9,325.20","1,190",643,545,54.03,45.8,197.92,151.55,https://coronavirus.dc.gov/release/coronavirus-data-april-30-2020
+Florida,30-Oct,,,,,,,,,,,,,,,https://experience.arcgis.com/experience/96dd742462124fa0b38ddedb9b25e429/
+Georgia,30-Oct,"1,263,757",579945,673793,45.89,53.32,"11,570.60","12,748.54","24,786",13213,11561,53.31,46.64,263.62,218.74,https://dph.georgia.gov/covid-19-daily-status-report
+Hawaii,30-Oct,81049,42072,38899,51.91,47.99,"5,894.32","5,492.22",884,533,351,60.29,39.71,74.67,49.56,https://health.hawaii.gov/coronavirusdisease2019/what-you-should-know/current-situation-in-hawaii/
+Idaho,30-Oct,291252,138195,151535,47.45,52.03,"16,343.53","17,991.80",3538,2074,1455,58.62,41.12,245.28,172.75,https://public.tableau.com/profile/idaho.division.of.public.health#!/vizhome/DPHIdahoCOVID-19Dashboard_V2/Story1
+Illinois,30-Oct,"1,695,524",799595,875387,47.16,51.63,"12,700.22","13,414.70","25,771",13977,11794,54.24,45.76,222,180.73,http://www.dph.illinois.gov/covid19/covid19-statistics
+Indiana,30-Oct,"1,018,638",472648,539878,46.4,53,"14,449.35","16,037.45","16,134",8325,7744,51.6,48,254.51,230.05,https://coronavirus.in.gov/
+Iowa,30-Oct,522421,245538,271659,47,52,"15,795.49","17,215.20","6,965",3691,3274,53,47,237.47,207.45,https://idph.iowa.gov/Emerging-Health-Issues/Novel-Coronavirus
+Kansas,30-Oct,434646,207479,226477,47.74,52.11,"14,314.69","15,518.89",6415,3526,2887,54.96,45,243.27,197.83,https://www.coronavirus.kdheks.gov/
+Kentucky,30-Oct,"743,156",347500,386961,46.76,52.07,"15,891.41","17,171.65","9,766",5035,4730,51.56,48.43,230.27,209.88,https://govstatus.egov.com/kycovid19
+Louisiana,30-Oct,"758,471",341312,417159,45,55,"14,970.03","17,500.87","14,547",7768,6779,53.4,46.6,340.71,284.39,http://ldh.la.gov/coronavirus/
+Maine,30-Oct,104259,50188,54071,48.14,51.86,"7,694.02","7,945.61",1167,592,575,50.73,49.27,90.76,84.49,https://www.maine.gov/dhhs/mecdc/infectious-disease/epi/airborne/coronavirus.shtml
+Maryland,30-Oct,"560,634",267077,293557,47.64,52.36,"9,176.89","9,490.67","10,651",5535,5116,51.97,48.03,190.19,165.4,https://coronavirus.maryland.gov/
+Massachussets,30-Oct,794382,,,,,,,18601,9272,9693,49.85,52.11,279.78,275.67,https://www.mass.gov/info-details/covid-19-cases-quarantine-and-monitoring
+Michigan,30-Oct,1128435,540419,581725,47.89,51.55,"11,030.94","11,500.25",22182,12025,10155,54.21,45.78,245.45,200.76,"https://www.michigan.gov/coronavirus/0,9753,7-406-98163_98173---,00.html"
+Minnesota,30-Oct,787550,379884,402123,48.24,51.06,"13,805.19","14,487.73","8,669",4603,4026,53.1,46.44,167.28,145.05,https://www.health.state.mn.us/diseases/coronavirus/situation.html#raceeth1
+Mississippi,30-Oct,"504,318",,,,,,,"10,075",,,,,,,"https://msdh.ms.gov/msdhsite/_static/14,0,420.html#caseTable"
+Missouri,30-Oct,702327,322791,372939,45.96,53.1,"10,800.12","12,025.29",12055,6410,5528,53.17,45.86,214.47,178.25,https://health.mo.gov/living/healthcondiseases/communicable/novel-coronavirus/results.php
+Montana,30-Oct,175847,83456,91502,47.46,52.04,"15,920.03","17,681.14","2,346",1314,1027,56.01,43.78,250.66,198.45,https://dphhs.mt.gov/publichealth/cdepi/diseases/coronavirusmt/demographics
+Nebraska,30-Oct,"94,933",,,,,,,1005,,,,,,,http://dhhs.ne.gov/Pages/Coronavirus.aspx
+Nevada,30-Oct,438216,210391,224248,48.01,51.17,"14,339.97","15,404.99",7631,4658,2936,61.04,38.47,317.48,201.69,https://app.powerbigov.us/view?r=eyJrIjoiMjA2ZThiOWUtM2FlNS00MGY5LWFmYjUtNmQwNTQ3Nzg5N2I2IiwidCI6ImU0YTM0MGU2LWI4OWUtNGU2OC04ZWFhLTE1NDRkMjcwMzk4MCJ9
+New Hampshire,30-Oct,132441,63690,66779,48.09,50.42,"9,577.69","9,840.14",1544,796,748,51.55,48.45,119.7,110.22,https://www.nh.gov/covid19/
+New Jersey,30-Oct,1042293,503238,537006,48.28,51.52,"11,606.23","11,812.94",27863,15179,12684,54.48,45.52,350.07,279.02,https://maps.arcgis.com/apps/MapSeries/index.html?appid=c2efd1898e48452e83d7218329e953d7
+New Mexico,30-Oct,"275,209",129592,141774,47.09,51.52,"12,510.69","13,418.15","5,049",,,,,,,https://cv.nmhealth.org/
+New York,30-Oct,2537145,1215292,1291407,47.9,50.9,"12,766.27","12,787.60",45567,25411,20145,55.77,44.21,266.93,199.48,https://covid19tracker.health.ny.gov/views/NYS-COVID19-Tracker/NYSDOHCOVID-19Tracker-Fatalities?%3Aembed=yes&%3Atoolbar=no&%3Atabs=n
+North Carolina,30-Oct,1477514,688327,774942,46.59,52.45,"13,920.33","14,871.66",17847,9495,8352,53.2,46.8,192.02,160.28,https://www.ncdhhs.gov/divisions/public-health/covid19/covid-19-nc-case-count#by-race-ethnicity
+North Dakota,30-Oct,148394,71579,76813,48.24,51.76,"18,535.00","20,986.13",1762,,,,,,,https://www.health.nd.gov/diseases-conditions/coronavirus/north-dakota-coronavirus-cases
+Ohio,30-Oct,1545327,710850,819023,46,53,"12,462.39","13,793.12",24527,13057,11470,53.24,46.76,228.91,193.17,https://coronavirus.ohio.gov/wps/portal/gov/covid-19/home
+Oklahoma,30-Oct,"641,051",301573,339323,47.04,52.93,"15,532.38","17,167.34","10,710",5930,4779,55.37,44.62,305.42,241.78,https://coronavirus.health.ok.gov/
+Oregon,30-Oct,363673,173328,183724,47.66,50.52,"8,567.78","8,923.31",4337,2364,1958,54.51,45.15,116.85,95.1,https://govstatus.egov.com/OR-OHA-COVID-19
+Pennsylvania,30-Oct,1564939,735257,823957,46.98,52.65,"11,739.34","12,621.91",31454,16096,15281,51.17,48.58,256.99,234.08,https://www.health.pa.gov/topics/disease/coronavirus/Pages/Cases.aspx
+Puerto Rico,30-Oct,"218,427",,,,,0,0,3220,,,,,,,https://estadisticas.pr/en/covid-19
+Rhode Island,30-Oct,"157,436",74168,83268,47.11,52.89,"14,448.35","15,326.93","2,870",1408,1462,49.06,50.94,274.29,269.11,https://ri-department-of-health-covid-19-data-rihealth.hub.arcgis.com/
+South Carolina,30-Oct,897152,403789,470357,44.8,52.5,"16,784.50","18,443.93",13716,7338,6193,53.7,45,305.02,242.84,https://scdhec.gov/infectious-diseases/viruses/coronavirus-disease-2019-covid-19/testing-sc-data-covid-19
+South Dakota,30-Oct,154482,73797,80685,47.77,52.23,"16,935.20","18,828.41",2235,1206,1029,53.96,46.04,276.76,240.12,https://doh.sd.gov/news/coronavirus.aspx
+Tennessee,30-Oct,1280265,593892,676986,46.39,52.88,"18,309.22","19,868.05",16351,8871,7473,54.25,45.7,273.49,219.32,https://www.tn.gov/health/cedep/ncov.html
+Texas,30-Oct,"3,511,739",2149184,1316902,61.2,37.5,"15,517.83","9,382.71","69,981",40729,29252,58.2,41.8,294.08,208.42,https://txdshs.maps.arcgis.com/apps/opsdashboard/index.html#/ed483ecd702b4298ab01e8b9cafc8b83
+US Virgin Islands,30-Oct,7204,3217,3818,44.66,53,,,81,,,,,,,https://doh.vi.gov/covid19usvi
+Utah,30-Oct,"549,882",271907,277374,49.45,50.44,"17,739.61","18,337.78","3,208",1633,1575,50.9,49.1,106.53,104.14,https://coronavirus.utah.gov/case-counts/
+Vermont,30-Oct,40191,19945,20117,49.63,50.05,"6,476.22","6,345.98",364,184,180,50.55,49.45,59.75,56.78,https://vcgi.maps.arcgis.com/apps/opsdashboard/index.html#/6128a0bc9ae14e98a686b635001ef7a7
+Virginia,30-Oct,924771,440629,477419,47.65,51.63,"10,646.88","11,167.17",13907,7282,6615,52.36,47.57,175.95,154.73,https://public.tableau.com/views/VirginiaCOVID-19Dashboard/VirginiaCOVID-19Dashboard?:embed=yes&:display_count=yes&:showVizHome=no&:toolbar=no
+Washington,30-Oct,725435,350385,356189,48.3,49.1,"9,611.01","9,762.15",8628,4745,3743,55,43.38,130.17,102.58,https://www.doh.wa.gov/Emergencies/Coronavirus
+West Virginia,30-Oct,272532,128200,141440,47.04,51.9,"14,178.34","15,293.16",4426,,,,,,,https://dhhr.wv.gov/COVID-19/Pages/default.aspx
+Wisconsin,30-Oct,790282,424868,455363,53.76,57.62,"14,791.52","15,669.66",8483,,,,,0,0,https://www.dhs.wisconsin.gov/covid-19/data.htm
+Wyoming,30-Oct,102926,39168,41155,38.05,39.99,"13,188.81","14,447.60",1174,655,515,55.79,43.87,220.55,180.8,https://health.wyo.gov/publichealth/infectious-disease-epidemiology-unit/disease/novel-coronavirus/covid-19-map-and-statistics/

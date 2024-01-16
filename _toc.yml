@@ -44,5 +44,5 @@ parts:
       title: Lab 02 Notebook
     # - file: weekly-materials/week01/lab/Lab_1_solutions.ipynb
     #   title: Lab 1 Solutions
-    - file: weekly-materials/week01/homework/Homework_1.ipynb
-      title: Homework 01 Notebook
+    - file: weekly-materials/week02/homework/Homework_2.ipynb
+      title: Homework 02 Notebook
