@@ -62,12 +62,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'weekly-materials/week01/lab/Lab_1';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'weekly-materials/week01/lab/Lab_1_solutions';</script>
     <link rel="shortcut icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="GGR274 Lab 1: Intro to Data Science Tools" href="Lab_1_solutions.html" />
-    <link rel="prev" title="GGR274 Week 1: Computation, Python, and JupyterHub" href="../lecture/Class1_GGR274_IM.html" />
+    <link rel="next" title="GG274 Homework 1: A Python Intro" href="../homework/Homework_1.html" />
+    <link rel="prev" title="GGR274 Lab 1: Intro to Data Science Tools" href="Lab_1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -188,8 +188,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference external" href="https://q.utoronto.ca/courses/338580/files?preview=29750629">Prof. Li's Slides</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lecture/Class1_GGR274_MM.html">Prof. Moon's Notebook</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lecture/Class1_GGR274_IM.html">Prof. Musabirov's Notebook</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lab 01 Notebook</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Lab_1_solutions.html">Lab 1 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lab_1.html">Lab 01 Notebook</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lab 1 Solutions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../homework/Homework_1.html">Homework 01 Notebook</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 2</span></p>
@@ -252,7 +252,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://jupyter.utoronto.ca/hub/user-redirect/git-pull?repo=https%3A//github.com/UofTCompDSci/ggr274-20241&urlpath=tree/ggr274-20241/weekly-materials/week01/lab/Lab_1.ipynb&branch=main" target="_blank"
+      <li><a href="https://jupyter.utoronto.ca/hub/user-redirect/git-pull?repo=https%3A//github.com/UofTCompDSci/ggr274-20241&urlpath=tree/ggr274-20241/weekly-materials/week01/lab/Lab_1_solutions.ipynb&branch=main" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onJupyterHub"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -283,7 +283,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../../_sources/weekly-materials/week01/lab/Lab_1.ipynb" target="_blank"
+      <li><a href="../../../_sources/weekly-materials/week01/lab/Lab_1_solutions.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -403,6 +403,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1a">Task 1A</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1a-solution">Task 1A solution</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1b">Task 1B</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-download-this-notebook">Task: download this notebook</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#warning-if-you-download-twice-you-need-to-rename-the-file">WARNING: if you download twice, you need to rename the file</a></li>
@@ -453,7 +454,7 @@ document.write(`
 <p>To submit your work on MarkUs for autograding:</p>
 <ol class="arabic simple">
 <li><p>Download this file (<code class="docutils literal notranslate"><span class="pre">Lab_1.ipynb</span></code>) from JupyterHub. (See <a class="reference internal" href="../../../guides/jupyterhub_guide.html"><span class="doc std std-doc">our JupyterHub Guide</span></a> for detailed instructions.)</p></li>
-<li><p>Submit this file to MarkUs under the <strong>lab01</strong> assignment. (See <a class="reference internal" href="../../../guides/markus_guide.html"><span class="doc std std-doc">our MarkUs Guide</span></a> for detailed instructions.)</p></li>
+<li><p>Submit this file to MarkUs under the <strong>lab1</strong> assignment. (See <a class="reference internal" href="../../../guides/markus_guide.html"><span class="doc std std-doc">our MarkUs Guide</span></a> for detailed instructions.)</p></li>
 <li><p>Run the autograding for this lab on MarkUs and view the results. <em>You can resubmit to MarkUs and re-run the autograder as many times as you like.</em> (See <a class="reference internal" href="../../../guides/markus_guide.html"><span class="doc std std-doc">our MarkUs Guide</span></a> for detailed instructions.)</p></li>
 </ol>
 </section>
@@ -604,6 +605,13 @@ Perhaps one of the more important functions, this dropdown menu lets you set the
 <li><p>Finally, add a link to the course syllabus on Quercus.</p></li>
 </ol>
 </section>
+<section id="task-1a-solution">
+<h2>Task 1A solution<a class="headerlink" href="#task-1a-solution" title="Permalink to this heading">#</a></h2>
+<p>We learned that data science is very cool and opens up a lot of possibilities.
+Here is a picture of puppies:</p>
+<p><img alt="Puppies" src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=1" /></p>
+<p>This is a link to <a class="reference external" href="https://q.utoronto.ca/">Quercus</a>.</p>
+</section>
 <section id="task-1b">
 <h2>Task 1B<a class="headerlink" href="#task-1b" title="Permalink to this heading">#</a></h2>
 <p>Now, create a new <strong>Code</strong> cell below this cell. In it, write the following two lines of Python code:</p>
@@ -612,6 +620,20 @@ Perhaps one of the more important functions, this dropdown menu lets you set the
 </pre></div>
 </div>
 <p>You can copy and paste if you like. When you run the cell, should should see <code class="docutils literal notranslate"><span class="pre">25</span></code> as an <code class="docutils literal notranslate"><span class="pre">Out</span></code> cell below it.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Solution</span>
+<span class="n">five</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">2</span>
+<span class="n">five</span> <span class="o">*</span> <span class="n">five</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>25
+</pre></div>
+</div>
+</div>
+</div>
 <p>What happened?</p>
 <p>Line 1: First, Python added <code class="docutils literal notranslate"><span class="pre">3</span></code> and <code class="docutils literal notranslate"><span class="pre">2</span></code>, getting the value <code class="docutils literal notranslate"><span class="pre">5</span></code>. Then Python gave that value a name, <code class="docutils literal notranslate"><span class="pre">five</span></code>.</p>
 <p>Line 2: <code class="docutils literal notranslate"><span class="pre">five</span></code> is a name for the value <code class="docutils literal notranslate"><span class="pre">5</span></code>, so Python does <code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">*</span> <span class="pre">5</span></code>, getting <code class="docutils literal notranslate"><span class="pre">25</span></code>.</p>
@@ -689,20 +711,20 @@ Perhaps one of the more important functions, this dropdown menu lets you set the
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../lecture/Class1_GGR274_IM.html"
+       href="Lab_1.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">GGR274 Week 1: Computation, Python, and JupyterHub</p>
+        <p class="prev-next-title">GGR274 Lab 1: Intro to Data Science Tools</p>
       </div>
     </a>
     <a class="right-next"
-       href="Lab_1_solutions.html"
+       href="../homework/Homework_1.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">GGR274 Lab 1: Intro to Data Science Tools</p>
+        <p class="prev-next-title">GG274 Homework 1: A Python Intro</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -748,6 +770,7 @@ Perhaps one of the more important functions, this dropdown menu lets you set the
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1a">Task 1A</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1a-solution">Task 1A solution</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1b">Task 1B</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-download-this-notebook">Task: download this notebook</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#warning-if-you-download-twice-you-need-to-rename-the-file">WARNING: if you download twice, you need to rename the file</a></li>
