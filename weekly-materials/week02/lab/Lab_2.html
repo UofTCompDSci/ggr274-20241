@@ -1,0 +1,746 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>GGR274 Lab 2: Introduction to Programming, Part 1 &#8212; Computation and Data Science for Social Sciences</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
+  <script src="../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'weekly-materials/week02/lab/Lab_2';</script>
+    <link rel="shortcut icon" href="../../../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="GGR274 Homework 2" href="../homework/Homework_2.html" />
+    <link rel="prev" title="Lecture 2: Introduction to Python Programming, Part 1" href="../lecture/Class2_GGR274_DL_IM.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <header>
+  
+    <div class="bd-header navbar navbar-expand-lg bd-navbar">
+    </div>
+  
+  </header>
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../jupyter-book/index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Computation and Data Science for Social Sciences</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../jupyter-book/index.html">
+                    👋 Course Website for GGR274H1-S Winter 2024
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Quick Links</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../syllabus/ggr274_syllabus.html">Course Syllabus</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://q.utoronto.ca/courses/338580/announcements">Announcements</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://piazza.com/utoronto.ca/winter2024/ggr274h1">Piazza</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://forms.office.com/Pages/ResponsePage.aspx?id=JsKqeAMvTUuQN7RtVsVSEF-wqptfr85NieT8UyliaxxUOUtMSVFUQkFTNVdRTlVJNkZFQU84NldYUi4u">Course Feedback Form</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Resources</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../guides/jupyterhub_guide.html">JupyterHub Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../guides/markus_guide.html">MarkUs Guide</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 1</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://q.utoronto.ca/courses/338580/files?preview=29750629">Prof. Li's Slides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week01/lecture/Class1_GGR274_MM.html">Prof. Moon's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week01/lecture/Class1_GGR274_IM.html">Prof. Musabirov's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week01/lab/Lab_1.html">Lab 01 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week01/homework/Homework_1.html">Homework 01 Notebook</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 2</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../lecture/Class2_GGR274_DL_IM.html">Prof. Musabirov's Notebook</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">GGR274 Lab 2: Introduction to Programming, Part 1</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../homework/Homework_2.html">Homework 02 Notebook</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://jupyter.utoronto.ca/hub/user-redirect/git-pull?repo=https%3A//github.com/UofTCompDSci/ggr274-20241&urlpath=tree/ggr274-20241/weekly-materials/week02/lab/Lab_2.ipynb&branch=main" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onJupyterHub"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">JupyterHub</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/weekly-materials/week02/lab/Lab_2.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>GGR274 Lab 2: Introduction to Programming, Part 1</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">GGR274 Lab 2: Introduction to Programming, Part 1</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logistics">Logistics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1a-reviewing-python-data-types">Task 1a: Reviewing Python data types</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1b-reviewing-python-operations-and-data-types">Task 1b: Reviewing Python operations and data types</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-2-assigning-variables">Task 2: Assigning variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-3-some-computations">Task 3: Some computations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-a">Part (a)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-b">Part (b)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#task-4-your-music-tastes">Task 4: Your music tastes</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="ggr274-lab-2-introduction-to-programming-part-1">
+<h1>GGR274 Lab 2: Introduction to Programming, Part 1<a class="headerlink" href="#ggr274-lab-2-introduction-to-programming-part-1" title="Permalink to this heading">#</a></h1>
+<section id="logistics">
+<h2>Logistics<a class="headerlink" href="#logistics" title="Permalink to this heading">#</a></h2>
+<p>Like last week, our lab grade will be based on attendance and submission of a few small tasks to MarkUs during the lab session (or by 23:59 on Thursday).</p>
+<p>Complete the tasks in this Jupyter notebook and submit your completed file to <a class="reference external" href="https://markus-ds.teach.cs.toronto.edu">MarkUs</a>.
+Here are the instructions for submitting to MarkUs (same as last week):</p>
+<ol class="arabic simple">
+<li><p>Download this file (<code class="docutils literal notranslate"><span class="pre">Lab_2.ipynb</span></code>) from JupyterHub. (See <a class="reference internal" href="../../../guides/jupyterhub_guide.html"><span class="doc std std-doc">our JupyterHub Guide</span></a> for detailed instructions.)</p></li>
+<li><p>Submit this file to MarkUs under the <strong>lab2</strong> assignment. (See <a class="reference internal" href="../../../guides/markus_guide.html"><span class="doc std std-doc">our MarkUs Guide</span></a> for detailed instructions.)</p></li>
+</ol>
+<p>Note: there’s no autograding set up for this week’s lab, but your TA will be checking that your submitted lab file is complete as part of your “lab attendance” grade.</p>
+</section>
+<section id="task-1a-reviewing-python-data-types">
+<h2>Task 1a: Reviewing Python data types<a class="headerlink" href="#task-1a-reviewing-python-data-types" title="Permalink to this heading">#</a></h2>
+<p>The table below shows a few different Python values.
+Your task is to fill in the second column to write down the <em>name of the Python data type</em> that corresponds to each value.</p>
+<p>To “fill in the table”, double-click on this cell and edit the text in the table.
+We’ve done the first row for you.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Value</p></th>
+<th class="head"><p>Data type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">3</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">int</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">True</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&quot;Hello&quot;</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-7.5</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">[&quot;Hello&quot;,</span> <span class="pre">&quot;GGR&quot;,</span> <span class="pre">&quot;274&quot;]</span></code></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="task-1b-reviewing-python-operations-and-data-types">
+<h2>Task 1b: Reviewing Python operations and data types<a class="headerlink" href="#task-1b-reviewing-python-operations-and-data-types" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Based on part I of the lecture, fill in the gaps AND write down another 2-3 examples of operations you know now, data types you can apply them to and examples of use (you don’t have to cover all of them, but this is a good way to revise)</p></li>
+</ul>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Operation</p></th>
+<th class="head"><p>Applied to type …</p></th>
+<th class="head"><p>Results is of type …</p></th>
+<th class="head"><p>Example</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">len</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">str</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">int</span></code></p></td>
+<td><p>….</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">int</span></code> or <code class="docutils literal notranslate"><span class="pre">float</span></code></p></td>
+<td><p></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">&gt;</span> <span class="pre">7</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">not</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code></p></td>
+<td><p></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">bool</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>…</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<p>Can some functions or operators be aplied to other types? Experiment :)</p>
+</section>
+<section id="task-2-assigning-variables">
+<h2>Task 2: Assigning variables<a class="headerlink" href="#task-2-assigning-variables" title="Permalink to this heading">#</a></h2>
+<p>In the code cell below, use assignment statements to define the following four variables:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code>: your full name</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">age</span></code>: your age, in years</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">likes_python</span></code>: a <em>boolean</em> representing whether or not you like Python so far (any value is acceptable!)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">courses</span></code>: a list of the course codes (e.g. GGR274) that you are enrolled in this semester</p></li>
+</ul>
+<p>Then, print out each of the four variables.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># write your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="task-3-some-computations">
+<h2>Task 3: Some computations<a class="headerlink" href="#task-3-some-computations" title="Permalink to this heading">#</a></h2>
+<section id="part-a">
+<h3>Part (a)<a class="headerlink" href="#part-a" title="Permalink to this heading">#</a></h3>
+<p>Suppose you’re taking a course with the following grading scheme:</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Assessment</p></th>
+<th class="head"><p>Weight</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Test 1</p></td>
+<td><p>20%</p></td>
+</tr>
+<tr class="row-odd"><td><p>Test 2</p></td>
+<td><p>15%</p></td>
+</tr>
+<tr class="row-even"><td><p>Final Project</p></td>
+<td><p>35%</p></td>
+</tr>
+<tr class="row-odd"><td><p>Final Exam</p></td>
+<td><p>30%</p></td>
+</tr>
+</tbody>
+</table>
+<p>Now suppose you’ve received the following marks in the course:</p>
+<ul class="simple">
+<li><p>Test 1: 28/30</p></li>
+<li><p>Test 2: 23/30</p></li>
+<li><p>Final Project: 75/100</p></li>
+<li><p>Final Exam: 77/100</p></li>
+</ul>
+<p>In the cell below, write Python code to calculate and print out your final grade in the course. <em>Note</em>: your final grade should be rounded to the nearest integer.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here!</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="part-b">
+<h3>Part (b)<a class="headerlink" href="#part-b" title="Permalink to this heading">#</a></h3>
+<p>In the cell below, we’ve defined a variable containing the text of Prime Minister Trudeau’s 2021 <a class="reference external" href="https://pm.gc.ca/en/news/speeches/2021/09/29/prime-ministers-remarks-event-first-national-day-truth-and-reconciliation">speech marking the first National Day for Truth and Reconciliation</a>.</p>
+<p>It’s the longest piece of data we’ve seen the course so far, so please just run the cell for now and then continue reading below.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">speech</span> <span class="o">=</span> <span class="s2">&quot;Good evening.</span><span class="se">\n\n</span><span class="s2">Let me begin by acknowledging that we are on the traditional territory of the Algonquin People who we recognize as past, present, and future caretakers of this land.</span><span class="se">\n\n</span><span class="s2">Thank you Elder Commanda for your words, for your leadership, for your prayers, for gathering us here today on this beautiful land.</span><span class="se">\n\n</span><span class="s2">Thank you Grand Chief McGregor for your leadership, for your strength, and for representing not just leadership but youth as we look to the future and acknowledge the past.</span><span class="se">\n\n</span><span class="s2">Thank you Elder Celine for your words, and for sharing your heartbreaking story. It couldn’t have been easy to tell so I applaud your courage. It’s hard to hear that this is the history of our country.</span><span class="se">\n\n</span><span class="s2">Right now, we are in this place that has so much history for our country. This is where we celebrate Canada Day, and we talk about a country of peace, rights, and openness to the world. But we must also remember that our country has made terrible mistakes.</span><span class="se">\n\n</span><span class="s2">Elder Levina, as you shared your words and recognized the teddy bears and empty shoes, thank you for your leadership. And thank you for that reflection. That all of us – all of us – need to hold these stories in our hearts, in our understanding not just as we reflect on reconciliation, but as we reflect on this country. This country we all grew up in, this country we live in, but mostly this country we choose to create every single day.</span><span class="se">\n\n</span><span class="s2">Elder Jimmy Durocher, you reminded us that the stories we tell about ourselves, about our communities, the stories we tell our children and grandchildren as we tuck them into bed about who they are, about where they come from, or what they might be later in life are incredibly important. And on this day we celebrate and mark and commemorate tomorrow – the National Day for Truth and Reconciliation – we must reflect not just on those children ripped from their homes, from their communities, from their language, from their culture, from their moms and dads who didn’t get to hear the stories of who they were or of what they might be.</span><span class="se">\n\n</span><span class="s2">We must also take tomorrow and every day as a moment to remember and to reflect on the stories we tell about who we are as people who share this land, as Canadians. All people are good at telling stories of how great we are, of how we were heroic in this moment or there were brave leaders in other moments. It’s harder to reflect on the truth, on the mistakes, on the evil that we did in the past, but that’s what this day, this day of truth and reconciliation must be. To recognize the truth that this country in its past was responsible for terrible injustices. But that it’s not just about the past. That reconciliation is understanding that that legacy of the past that we were so painfully reminded of, that so many non-Indigenous Canadians discovered with the graves discovered in Kamloops and in Cowessess. This shock and dismay that so many non-Indigenous Canadians felt when they heard these stories and saw these images of unmarked graves of children. For Indigenous peoples across this country, it was a terrible blow not because it was a surprise because families across this country remember all too well the stories of aunties and uncles, family members taken from their homes, taken from their communities, so many of them never to return. But it was a reopening of old wounds, a hint of perhaps a hope of closure and putting names and stories to those losses.</span><span class="se">\n\n</span><span class="s2">We must reflect on the fact that reconciliation is not just a matter of looking back and understanding the mistakes of the past. It’s also about understanding that those mistakes are still shaping us today. The systemic racism that cost Joyce Echaquan her life. The hardships, the poverty, and the terrible challenges that Indigenous communities and Indigenous peoples are still going through across our country today because of things done decades and generations ago. That is also our responsibility as a country.</span><span class="se">\n\n</span><span class="s2">Even as we look at truth and reconciliation as not just the past, not just the present of injustice, inequality, discrimination, and racism that we live still far too often in this country every single day – reconciliation is about a choice we make for the future. We condemn the residential schools across the country, schools that tried very hard to erase the Indian in the child, to take from Indigenous peoples, their language, their culture, but more their families, their sense of communities. At the same time as those schools were telling Indigenous peoples that they had no worth, no value in their culture, every other school in this country was teaching the same thing to non-Indigenous children. That the languages, the culture, the identity of Indigenous peoples had no worth, had no value in this country.</span><span class="se">\n\n</span><span class="s2">That is the legacy. That is the truth that we need to mark tomorrow and every day.</span><span class="se">\n\n</span><span class="s2">So do not tell me or try to explain that the National Day for Truth and Reconciliation is a day for Indigenous Canadians. It is a day for all Canadians. It is all of us. It is all of our story. Because if we do not just recognize the truth, but also understand the truth and bring it into ourselves and then bring it into every action we take every day as we live with intention, with mindfulness about what we bring and what we shape with our words, with our choices throughout our lives, then we’re not understanding the lessons of the past that we must acknowledge and learn from.</span><span class="se">\n\n</span><span class="s2">Indigenous peoples in this country have so much to teach us about patience, openness, and understanding of a long-term vision for inhabiting this beautiful planet. This is our responsibility to future generations. But we also have to learn about ourselves, as a society, that did not leave them any room in this magnificent land of Canada that they were always ready to share with us all.</span><span class="se">\n\n</span><span class="s2">So tomorrow, all of you here tonight, all of you reflecting on this at home, and all of you as you go about your daily lives, take a moment to listen to the stories of a survivor, to an Indigenous elder who shares their perspective and their experiences in this country. And know that that story, their story, is your story as well. And until we understand as a country that each one of our stories is all of our stories, there can be no truth. There can be no reconciliation.</span><span class="se">\n\n</span><span class="s2">So tomorrow and in all the days to come, we will reflect on how each and every one of us can contribute to a better country. And on that shared vision of a better world through truth and reconciliation.</span><span class="se">\n\n</span><span class="s2">Merci.</span><span class="se">\n\n</span><span class="s2">Thank you.</span><span class="se">\n\n</span><span class="s2">Gilakas’la.</span><span class="se">\n\n</span><span class="s2">Nakummek.</span><span class="se">\n\n</span><span class="s2">Mashi cho</span><span class="se">\n\n</span><span class="s2">Miigwetch</span><span class="se">\n\n</span><span class="s2">Kinanaskomitinow.&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>In the cell below, do the following:</p>
+<ol class="arabic simple">
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">str.split</span></code> method to break up the speech text into words. (This will also get rid of the “<code class="docutils literal notranslate"><span class="pre">\n</span></code>”, which is a special character representing a line break in the text.)</p></li>
+<li><p>Count the number of words in the text. This can include strings like <code class="docutils literal notranslate"><span class="pre">'-'</span></code>, since those will also be separated out when you call <code class="docutils literal notranslate"><span class="pre">str.split</span></code>.</p></li>
+<li><p>Use the (new!) <code class="docutils literal notranslate"><span class="pre">list.count(value)</span></code> method to count the number of times the word <code class="docutils literal notranslate"><span class="pre">&quot;Indigenous&quot;</span></code> appears in the speech.</p></li>
+</ol>
+<p>We recommend using the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function to output the values from your code cell.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here!</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="task-4-your-music-tastes">
+<h1>Task 4: Your music tastes<a class="headerlink" href="#task-4-your-music-tastes" title="Permalink to this heading">#</a></h1>
+<p>In the cell below:</p>
+<ul class="simple">
+<li><p>write into list <code class="docutils literal notranslate"><span class="pre">my_tastes</span></code> how much do you like the music of the following artists (let’s use -5 to +5 scale, -5 absolutely can’t stand, 0 - idk/neutral, +5 on repeat, actually listening right now):</p>
+<ul>
+<li><p>Drake, Tame Impala, Billie Eilish, The Weeknd, Taylor Swift</p></li>
+</ul>
+</li>
+<li><p>assign your name to variable <code class="docutils literal notranslate"><span class="pre">my_name</span></code></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_tastes</span> <span class="o">=</span> <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+<span class="n">my_name</span> <span class="o">=</span> <span class="s2">&quot;...&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Experiment more!</p>
+<ul class="simple">
+<li><p>Write down the same for one of your friends or family members (or make up an imaginary friend) to the list <code class="docutils literal notranslate"><span class="pre">tastes2</span></code></p></li>
+<li><p>Think how to answer based on this data:</p>
+<ul>
+<li><p>How (comparatively) enthusiastic about music you and your friend are?</p></li>
+<li><p>How would you approach comparing music tastes between two people?</p></li>
+</ul>
+</li>
+<li><p>Write down your ideas first and then you can try to put it into code (it does not have to work)!</p></li>
+</ul>
+<p>My ideas…</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#My code to experiment...</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./weekly-materials/week02/lab"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../lecture/Class2_GGR274_DL_IM.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Lecture 2: Introduction to Python Programming, Part 1</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../homework/Homework_2.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">GGR274 Homework 2</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">GGR274 Lab 2: Introduction to Programming, Part 1</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logistics">Logistics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1a-reviewing-python-data-types">Task 1a: Reviewing Python data types</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1b-reviewing-python-operations-and-data-types">Task 1b: Reviewing Python operations and data types</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-2-assigning-variables">Task 2: Assigning variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-3-some-computations">Task 3: Some computations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-a">Part (a)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-b">Part (b)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#task-4-your-music-tastes">Task 4: Your music tastes</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By GGR274 Instructors
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
