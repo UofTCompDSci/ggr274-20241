@@ -62,12 +62,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'weekly-materials/week02/lab/Lab_2';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'weekly-materials/week02/lab/Lab_2_solutions';</script>
     <link rel="shortcut icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="GGR274 Lab 2: Introduction to Programming, Part 1" href="Lab_2_solutions.html" />
-    <link rel="prev" title="Lecture 2: Introduction to Python Programming, Part 1" href="../lecture/Class2_GGR274_DL_IM.html" />
+    <link rel="next" title="GGR274 Homework 2" href="../homework/Homework_2.html" />
+    <link rel="prev" title="GGR274 Lab 2: Introduction to Programming, Part 1" href="Lab_2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -190,9 +190,9 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 2</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../lecture/Class2_GGR274_DL_IM.html">Prof. Musabirov's Notebook</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">GGR274 Lab 2: Introduction to Programming, Part 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lab_2.html">GGR274 Lab 2: Introduction to Programming, Part 1</a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="Lab_2_solutions.html">GGR274 Lab 2: Introduction to Programming, Part 1</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">GGR274 Lab 2: Introduction to Programming, Part 1</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="../homework/Homework_2.html">Homework 02 Notebook</a></li>
 </ul>
@@ -256,7 +256,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://jupyter.utoronto.ca/hub/user-redirect/git-pull?repo=https%3A//github.com/UofTCompDSci/ggr274-20241&urlpath=tree/ggr274-20241/weekly-materials/week02/lab/Lab_2.ipynb&branch=main" target="_blank"
+      <li><a href="https://jupyter.utoronto.ca/hub/user-redirect/git-pull?repo=https%3A//github.com/UofTCompDSci/ggr274-20241&urlpath=tree/ggr274-20241/weekly-materials/week02/lab/Lab_2_solutions.ipynb&branch=main" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onJupyterHub"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -287,7 +287,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../../_sources/weekly-materials/week02/lab/Lab_2.ipynb" target="_blank"
+      <li><a href="../../../_sources/weekly-materials/week02/lab/Lab_2_solutions.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -417,7 +417,7 @@ Here are the instructions for submitting to MarkUs (same as last week):</p>
 <li><p>Download this file (<code class="docutils literal notranslate"><span class="pre">Lab_2.ipynb</span></code>) from JupyterHub. (See <a class="reference internal" href="../../../guides/jupyterhub_guide.html"><span class="doc std std-doc">our JupyterHub Guide</span></a> for detailed instructions.)</p></li>
 <li><p>Submit this file to MarkUs under the <strong>lab2</strong> assignment. (See <a class="reference internal" href="../../../guides/markus_guide.html"><span class="doc std std-doc">our MarkUs Guide</span></a> for detailed instructions.)</p></li>
 </ol>
-<p><strong>Note</strong> (Updated 2024): you can use autotests with this week’s lab to see if you are on the right track. Your TA and instructors can look in more detail to see if you answered all questions. The submission is a part of your Lab attendance grade.</p>
+<p>Note: there’s no autograding set up for this week’s lab, but your TA will be checking that your submitted lab file is complete as part of your “lab attendance” grade.</p>
 </section>
 <section id="task-1a-reviewing-python-data-types">
 <h2>Task 1a: Reviewing Python data types<a class="headerlink" href="#task-1a-reviewing-python-data-types" title="Permalink to this heading">#</a></h2>
@@ -436,16 +436,16 @@ We’ve done the first row for you.</p>
 <td><p><code class="docutils literal notranslate"><span class="pre">int</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">True</span></code></p></td>
-<td><p></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">bool</span></code></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&quot;Hello&quot;</span></code></p></td>
-<td><p></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">str</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-7.5</span></code></p></td>
-<td><p></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">float</span></code></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">[&quot;Hello&quot;,</span> <span class="pre">&quot;GGR&quot;,</span> <span class="pre">&quot;274&quot;]</span></code></p></td>
-<td><p></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">list</span></code> (of <code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></td>
 </tr>
 </tbody>
 </table>
@@ -467,17 +467,17 @@ We’ve done the first row for you.</p>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">len</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">str</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">int</span></code></p></td>
-<td><p>….</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">len(&quot;Python&quot;)</span> <span class="pre">#==</span> <span class="pre">6</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">int</span></code> or <code class="docutils literal notranslate"><span class="pre">float</span></code></p></td>
-<td><p></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">&gt;</span> <span class="pre">7</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">bool</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">&gt;</span> <span class="pre">7</span> <span class="pre">#==</span> <span class="pre">False</span></code></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">not</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code></p></td>
-<td><p></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">bool</span></code></p></td>
-<td><p></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">bool</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">(5</span> <span class="pre">&gt;</span> <span class="pre">3)</span> <span class="pre">and</span>&#160; <span class="pre">(&quot;python&quot;</span> <span class="pre">==</span> <span class="pre">&quot;Python&quot;)</span>&#160; <span class="pre">#==</span> <span class="pre">False</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><p>…</p></td>
 <td><p></p></td>
@@ -501,6 +501,10 @@ We’ve done the first row for you.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># write your code here</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;student&#39;</span>
+<span class="n">age</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">likes_python</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">courses</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;GGR274&#39;</span><span class="p">,</span> <span class="s1">&#39;GGR001&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -543,6 +547,11 @@ We’ve done the first row for you.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here!</span>
+
+<span class="n">final_grade</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="mi">20</span> <span class="o">*</span> <span class="p">(</span><span class="mi">28</span> <span class="o">/</span> <span class="mi">30</span><span class="p">)</span> <span class="o">+</span> <span class="mi">15</span> <span class="o">*</span> <span class="p">(</span><span class="mi">23</span> <span class="o">/</span> <span class="mi">30</span><span class="p">)</span> <span class="o">+</span> <span class="mi">35</span> <span class="o">*</span> <span class="p">(</span><span class="mi">75</span> <span class="o">/</span> <span class="mi">100</span><span class="p">)</span> <span class="o">+</span> <span class="mi">30</span> <span class="o">*</span> <span class="p">(</span><span class="mi">77</span> <span class="o">/</span> <span class="mi">100</span><span class="p">))</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="n">final_grade</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -569,6 +578,22 @@ We’ve done the first row for you.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here!</span>
+
+<span class="n">words</span> <span class="o">=</span> <span class="n">speech</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
+
+<span class="n">num_words</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">num_words</span><span class="p">)</span>
+
+<span class="n">num_indigenous</span> <span class="o">=</span> <span class="n">words</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;Indigenous&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">num_indigenous</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Good&#39;, &#39;evening.&#39;, &#39;Let&#39;, &#39;me&#39;, &#39;begin&#39;, &#39;by&#39;, &#39;acknowledging&#39;, &#39;that&#39;, &#39;we&#39;, &#39;are&#39;, &#39;on&#39;, &#39;the&#39;, &#39;traditional&#39;, &#39;territory&#39;, &#39;of&#39;, &#39;the&#39;, &#39;Algonquin&#39;, &#39;People&#39;, &#39;who&#39;, &#39;we&#39;, &#39;recognize&#39;, &#39;as&#39;, &#39;past,&#39;, &#39;present,&#39;, &#39;and&#39;, &#39;future&#39;, &#39;caretakers&#39;, &#39;of&#39;, &#39;this&#39;, &#39;land.&#39;, &#39;Thank&#39;, &#39;you&#39;, &#39;Elder&#39;, &#39;Commanda&#39;, &#39;for&#39;, &#39;your&#39;, &#39;words,&#39;, &#39;for&#39;, &#39;your&#39;, &#39;leadership,&#39;, &#39;for&#39;, &#39;your&#39;, &#39;prayers,&#39;, &#39;for&#39;, &#39;gathering&#39;, &#39;us&#39;, &#39;here&#39;, &#39;today&#39;, &#39;on&#39;, &#39;this&#39;, &#39;beautiful&#39;, &#39;land.&#39;, &#39;Thank&#39;, &#39;you&#39;, &#39;Grand&#39;, &#39;Chief&#39;, &#39;McGregor&#39;, &#39;for&#39;, &#39;your&#39;, &#39;leadership,&#39;, &#39;for&#39;, &#39;your&#39;, &#39;strength,&#39;, &#39;and&#39;, &#39;for&#39;, &#39;representing&#39;, &#39;not&#39;, &#39;just&#39;, &#39;leadership&#39;, &#39;but&#39;, &#39;youth&#39;, &#39;as&#39;, &#39;we&#39;, &#39;look&#39;, &#39;to&#39;, &#39;the&#39;, &#39;future&#39;, &#39;and&#39;, &#39;acknowledge&#39;, &#39;the&#39;, &#39;past.&#39;, &#39;Thank&#39;, &#39;you&#39;, &#39;Elder&#39;, &#39;Celine&#39;, &#39;for&#39;, &#39;your&#39;, &#39;words,&#39;, &#39;and&#39;, &#39;for&#39;, &#39;sharing&#39;, &#39;your&#39;, &#39;heartbreaking&#39;, &#39;story.&#39;, &#39;It&#39;, &#39;couldn’t&#39;, &#39;have&#39;, &#39;been&#39;, &#39;easy&#39;, &#39;to&#39;, &#39;tell&#39;, &#39;so&#39;, &#39;I&#39;, &#39;applaud&#39;, &#39;your&#39;, &#39;courage.&#39;, &#39;It’s&#39;, &#39;hard&#39;, &#39;to&#39;, &#39;hear&#39;, &#39;that&#39;, &#39;this&#39;, &#39;is&#39;, &#39;the&#39;, &#39;history&#39;, &#39;of&#39;, &#39;our&#39;, &#39;country.&#39;, &#39;Right&#39;, &#39;now,&#39;, &#39;we&#39;, &#39;are&#39;, &#39;in&#39;, &#39;this&#39;, &#39;place&#39;, &#39;that&#39;, &#39;has&#39;, &#39;so&#39;, &#39;much&#39;, &#39;history&#39;, &#39;for&#39;, &#39;our&#39;, &#39;country.&#39;, &#39;This&#39;, &#39;is&#39;, &#39;where&#39;, &#39;we&#39;, &#39;celebrate&#39;, &#39;Canada&#39;, &#39;Day,&#39;, &#39;and&#39;, &#39;we&#39;, &#39;talk&#39;, &#39;about&#39;, &#39;a&#39;, &#39;country&#39;, &#39;of&#39;, &#39;peace,&#39;, &#39;rights,&#39;, &#39;and&#39;, &#39;openness&#39;, &#39;to&#39;, &#39;the&#39;, &#39;world.&#39;, &#39;But&#39;, &#39;we&#39;, &#39;must&#39;, &#39;also&#39;, &#39;remember&#39;, &#39;that&#39;, &#39;our&#39;, &#39;country&#39;, &#39;has&#39;, &#39;made&#39;, &#39;terrible&#39;, &#39;mistakes.&#39;, &#39;Elder&#39;, &#39;Levina,&#39;, &#39;as&#39;, &#39;you&#39;, &#39;shared&#39;, &#39;your&#39;, &#39;words&#39;, &#39;and&#39;, &#39;recognized&#39;, &#39;the&#39;, &#39;teddy&#39;, &#39;bears&#39;, &#39;and&#39;, &#39;empty&#39;, &#39;shoes,&#39;, &#39;thank&#39;, &#39;you&#39;, &#39;for&#39;, &#39;your&#39;, &#39;leadership.&#39;, &#39;And&#39;, &#39;thank&#39;, &#39;you&#39;, &#39;for&#39;, &#39;that&#39;, &#39;reflection.&#39;, &#39;That&#39;, &#39;all&#39;, &#39;of&#39;, &#39;us&#39;, &#39;–&#39;, &#39;all&#39;, &#39;of&#39;, &#39;us&#39;, &#39;–&#39;, &#39;need&#39;, &#39;to&#39;, &#39;hold&#39;, &#39;these&#39;, &#39;stories&#39;, &#39;in&#39;, &#39;our&#39;, &#39;hearts,&#39;, &#39;in&#39;, &#39;our&#39;, &#39;understanding&#39;, &#39;not&#39;, &#39;just&#39;, &#39;as&#39;, &#39;we&#39;, &#39;reflect&#39;, &#39;on&#39;, &#39;reconciliation,&#39;, &#39;but&#39;, &#39;as&#39;, &#39;we&#39;, &#39;reflect&#39;, &#39;on&#39;, &#39;this&#39;, &#39;country.&#39;, &#39;This&#39;, &#39;country&#39;, &#39;we&#39;, &#39;all&#39;, &#39;grew&#39;, &#39;up&#39;, &#39;in,&#39;, &#39;this&#39;, &#39;country&#39;, &#39;we&#39;, &#39;live&#39;, &#39;in,&#39;, &#39;but&#39;, &#39;mostly&#39;, &#39;this&#39;, &#39;country&#39;, &#39;we&#39;, &#39;choose&#39;, &#39;to&#39;, &#39;create&#39;, &#39;every&#39;, &#39;single&#39;, &#39;day.&#39;, &#39;Elder&#39;, &#39;Jimmy&#39;, &#39;Durocher,&#39;, &#39;you&#39;, &#39;reminded&#39;, &#39;us&#39;, &#39;that&#39;, &#39;the&#39;, &#39;stories&#39;, &#39;we&#39;, &#39;tell&#39;, &#39;about&#39;, &#39;ourselves,&#39;, &#39;about&#39;, &#39;our&#39;, &#39;communities,&#39;, &#39;the&#39;, &#39;stories&#39;, &#39;we&#39;, &#39;tell&#39;, &#39;our&#39;, &#39;children&#39;, &#39;and&#39;, &#39;grandchildren&#39;, &#39;as&#39;, &#39;we&#39;, &#39;tuck&#39;, &#39;them&#39;, &#39;into&#39;, &#39;bed&#39;, &#39;about&#39;, &#39;who&#39;, &#39;they&#39;, &#39;are,&#39;, &#39;about&#39;, &#39;where&#39;, &#39;they&#39;, &#39;come&#39;, &#39;from,&#39;, &#39;or&#39;, &#39;what&#39;, &#39;they&#39;, &#39;might&#39;, &#39;be&#39;, &#39;later&#39;, &#39;in&#39;, &#39;life&#39;, &#39;are&#39;, &#39;incredibly&#39;, &#39;important.&#39;, &#39;And&#39;, &#39;on&#39;, &#39;this&#39;, &#39;day&#39;, &#39;we&#39;, &#39;celebrate&#39;, &#39;and&#39;, &#39;mark&#39;, &#39;and&#39;, &#39;commemorate&#39;, &#39;tomorrow&#39;, &#39;–&#39;, &#39;the&#39;, &#39;National&#39;, &#39;Day&#39;, &#39;for&#39;, &#39;Truth&#39;, &#39;and&#39;, &#39;Reconciliation&#39;, &#39;–&#39;, &#39;we&#39;, &#39;must&#39;, &#39;reflect&#39;, &#39;not&#39;, &#39;just&#39;, &#39;on&#39;, &#39;those&#39;, &#39;children&#39;, &#39;ripped&#39;, &#39;from&#39;, &#39;their&#39;, &#39;homes,&#39;, &#39;from&#39;, &#39;their&#39;, &#39;communities,&#39;, &#39;from&#39;, &#39;their&#39;, &#39;language,&#39;, &#39;from&#39;, &#39;their&#39;, &#39;culture,&#39;, &#39;from&#39;, &#39;their&#39;, &#39;moms&#39;, &#39;and&#39;, &#39;dads&#39;, &#39;who&#39;, &#39;didn’t&#39;, &#39;get&#39;, &#39;to&#39;, &#39;hear&#39;, &#39;the&#39;, &#39;stories&#39;, &#39;of&#39;, &#39;who&#39;, &#39;they&#39;, &#39;were&#39;, &#39;or&#39;, &#39;of&#39;, &#39;what&#39;, &#39;they&#39;, &#39;might&#39;, &#39;be.&#39;, &#39;We&#39;, &#39;must&#39;, &#39;also&#39;, &#39;take&#39;, &#39;tomorrow&#39;, &#39;and&#39;, &#39;every&#39;, &#39;day&#39;, &#39;as&#39;, &#39;a&#39;, &#39;moment&#39;, &#39;to&#39;, &#39;remember&#39;, &#39;and&#39;, &#39;to&#39;, &#39;reflect&#39;, &#39;on&#39;, &#39;the&#39;, &#39;stories&#39;, &#39;we&#39;, &#39;tell&#39;, &#39;about&#39;, &#39;who&#39;, &#39;we&#39;, &#39;are&#39;, &#39;as&#39;, &#39;people&#39;, &#39;who&#39;, &#39;share&#39;, &#39;this&#39;, &#39;land,&#39;, &#39;as&#39;, &#39;Canadians.&#39;, &#39;All&#39;, &#39;people&#39;, &#39;are&#39;, &#39;good&#39;, &#39;at&#39;, &#39;telling&#39;, &#39;stories&#39;, &#39;of&#39;, &#39;how&#39;, &#39;great&#39;, &#39;we&#39;, &#39;are,&#39;, &#39;of&#39;, &#39;how&#39;, &#39;we&#39;, &#39;were&#39;, &#39;heroic&#39;, &#39;in&#39;, &#39;this&#39;, &#39;moment&#39;, &#39;or&#39;, &#39;there&#39;, &#39;were&#39;, &#39;brave&#39;, &#39;leaders&#39;, &#39;in&#39;, &#39;other&#39;, &#39;moments.&#39;, &#39;It’s&#39;, &#39;harder&#39;, &#39;to&#39;, &#39;reflect&#39;, &#39;on&#39;, &#39;the&#39;, &#39;truth,&#39;, &#39;on&#39;, &#39;the&#39;, &#39;mistakes,&#39;, &#39;on&#39;, &#39;the&#39;, &#39;evil&#39;, &#39;that&#39;, &#39;we&#39;, &#39;did&#39;, &#39;in&#39;, &#39;the&#39;, &#39;past,&#39;, &#39;but&#39;, &#39;that’s&#39;, &#39;what&#39;, &#39;this&#39;, &#39;day,&#39;, &#39;this&#39;, &#39;day&#39;, &#39;of&#39;, &#39;truth&#39;, &#39;and&#39;, &#39;reconciliation&#39;, &#39;must&#39;, &#39;be.&#39;, &#39;To&#39;, &#39;recognize&#39;, &#39;the&#39;, &#39;truth&#39;, &#39;that&#39;, &#39;this&#39;, &#39;country&#39;, &#39;in&#39;, &#39;its&#39;, &#39;past&#39;, &#39;was&#39;, &#39;responsible&#39;, &#39;for&#39;, &#39;terrible&#39;, &#39;injustices.&#39;, &#39;But&#39;, &#39;that&#39;, &#39;it’s&#39;, &#39;not&#39;, &#39;just&#39;, &#39;about&#39;, &#39;the&#39;, &#39;past.&#39;, &#39;That&#39;, &#39;reconciliation&#39;, &#39;is&#39;, &#39;understanding&#39;, &#39;that&#39;, &#39;that&#39;, &#39;legacy&#39;, &#39;of&#39;, &#39;the&#39;, &#39;past&#39;, &#39;that&#39;, &#39;we&#39;, &#39;were&#39;, &#39;so&#39;, &#39;painfully&#39;, &#39;reminded&#39;, &#39;of,&#39;, &#39;that&#39;, &#39;so&#39;, &#39;many&#39;, &#39;non-Indigenous&#39;, &#39;Canadians&#39;, &#39;discovered&#39;, &#39;with&#39;, &#39;the&#39;, &#39;graves&#39;, &#39;discovered&#39;, &#39;in&#39;, &#39;Kamloops&#39;, &#39;and&#39;, &#39;in&#39;, &#39;Cowessess.&#39;, &#39;This&#39;, &#39;shock&#39;, &#39;and&#39;, &#39;dismay&#39;, &#39;that&#39;, &#39;so&#39;, &#39;many&#39;, &#39;non-Indigenous&#39;, &#39;Canadians&#39;, &#39;felt&#39;, &#39;when&#39;, &#39;they&#39;, &#39;heard&#39;, &#39;these&#39;, &#39;stories&#39;, &#39;and&#39;, &#39;saw&#39;, &#39;these&#39;, &#39;images&#39;, &#39;of&#39;, &#39;unmarked&#39;, &#39;graves&#39;, &#39;of&#39;, &#39;children.&#39;, &#39;For&#39;, &#39;Indigenous&#39;, &#39;peoples&#39;, &#39;across&#39;, &#39;this&#39;, &#39;country,&#39;, &#39;it&#39;, &#39;was&#39;, &#39;a&#39;, &#39;terrible&#39;, &#39;blow&#39;, &#39;not&#39;, &#39;because&#39;, &#39;it&#39;, &#39;was&#39;, &#39;a&#39;, &#39;surprise&#39;, &#39;because&#39;, &#39;families&#39;, &#39;across&#39;, &#39;this&#39;, &#39;country&#39;, &#39;remember&#39;, &#39;all&#39;, &#39;too&#39;, &#39;well&#39;, &#39;the&#39;, &#39;stories&#39;, &#39;of&#39;, &#39;aunties&#39;, &#39;and&#39;, &#39;uncles,&#39;, &#39;family&#39;, &#39;members&#39;, &#39;taken&#39;, &#39;from&#39;, &#39;their&#39;, &#39;homes,&#39;, &#39;taken&#39;, &#39;from&#39;, &#39;their&#39;, &#39;communities,&#39;, &#39;so&#39;, &#39;many&#39;, &#39;of&#39;, &#39;them&#39;, &#39;never&#39;, &#39;to&#39;, &#39;return.&#39;, &#39;But&#39;, &#39;it&#39;, &#39;was&#39;, &#39;a&#39;, &#39;reopening&#39;, &#39;of&#39;, &#39;old&#39;, &#39;wounds,&#39;, &#39;a&#39;, &#39;hint&#39;, &#39;of&#39;, &#39;perhaps&#39;, &#39;a&#39;, &#39;hope&#39;, &#39;of&#39;, &#39;closure&#39;, &#39;and&#39;, &#39;putting&#39;, &#39;names&#39;, &#39;and&#39;, &#39;stories&#39;, &#39;to&#39;, &#39;those&#39;, &#39;losses.&#39;, &#39;We&#39;, &#39;must&#39;, &#39;reflect&#39;, &#39;on&#39;, &#39;the&#39;, &#39;fact&#39;, &#39;that&#39;, &#39;reconciliation&#39;, &#39;is&#39;, &#39;not&#39;, &#39;just&#39;, &#39;a&#39;, &#39;matter&#39;, &#39;of&#39;, &#39;looking&#39;, &#39;back&#39;, &#39;and&#39;, &#39;understanding&#39;, &#39;the&#39;, &#39;mistakes&#39;, &#39;of&#39;, &#39;the&#39;, &#39;past.&#39;, &#39;It’s&#39;, &#39;also&#39;, &#39;about&#39;, &#39;understanding&#39;, &#39;that&#39;, &#39;those&#39;, &#39;mistakes&#39;, &#39;are&#39;, &#39;still&#39;, &#39;shaping&#39;, &#39;us&#39;, &#39;today.&#39;, &#39;The&#39;, &#39;systemic&#39;, &#39;racism&#39;, &#39;that&#39;, &#39;cost&#39;, &#39;Joyce&#39;, &#39;Echaquan&#39;, &#39;her&#39;, &#39;life.&#39;, &#39;The&#39;, &#39;hardships,&#39;, &#39;the&#39;, &#39;poverty,&#39;, &#39;and&#39;, &#39;the&#39;, &#39;terrible&#39;, &#39;challenges&#39;, &#39;that&#39;, &#39;Indigenous&#39;, &#39;communities&#39;, &#39;and&#39;, &#39;Indigenous&#39;, &#39;peoples&#39;, &#39;are&#39;, &#39;still&#39;, &#39;going&#39;, &#39;through&#39;, &#39;across&#39;, &#39;our&#39;, &#39;country&#39;, &#39;today&#39;, &#39;because&#39;, &#39;of&#39;, &#39;things&#39;, &#39;done&#39;, &#39;decades&#39;, &#39;and&#39;, &#39;generations&#39;, &#39;ago.&#39;, &#39;That&#39;, &#39;is&#39;, &#39;also&#39;, &#39;our&#39;, &#39;responsibility&#39;, &#39;as&#39;, &#39;a&#39;, &#39;country.&#39;, &#39;Even&#39;, &#39;as&#39;, &#39;we&#39;, &#39;look&#39;, &#39;at&#39;, &#39;truth&#39;, &#39;and&#39;, &#39;reconciliation&#39;, &#39;as&#39;, &#39;not&#39;, &#39;just&#39;, &#39;the&#39;, &#39;past,&#39;, &#39;not&#39;, &#39;just&#39;, &#39;the&#39;, &#39;present&#39;, &#39;of&#39;, &#39;injustice,&#39;, &#39;inequality,&#39;, &#39;discrimination,&#39;, &#39;and&#39;, &#39;racism&#39;, &#39;that&#39;, &#39;we&#39;, &#39;live&#39;, &#39;still&#39;, &#39;far&#39;, &#39;too&#39;, &#39;often&#39;, &#39;in&#39;, &#39;this&#39;, &#39;country&#39;, &#39;every&#39;, &#39;single&#39;, &#39;day&#39;, &#39;–&#39;, &#39;reconciliation&#39;, &#39;is&#39;, &#39;about&#39;, &#39;a&#39;, &#39;choice&#39;, &#39;we&#39;, &#39;make&#39;, &#39;for&#39;, &#39;the&#39;, &#39;future.&#39;, &#39;We&#39;, &#39;condemn&#39;, &#39;the&#39;, &#39;residential&#39;, &#39;schools&#39;, &#39;across&#39;, &#39;the&#39;, &#39;country,&#39;, &#39;schools&#39;, &#39;that&#39;, &#39;tried&#39;, &#39;very&#39;, &#39;hard&#39;, &#39;to&#39;, &#39;erase&#39;, &#39;the&#39;, &#39;Indian&#39;, &#39;in&#39;, &#39;the&#39;, &#39;child,&#39;, &#39;to&#39;, &#39;take&#39;, &#39;from&#39;, &#39;Indigenous&#39;, &#39;peoples,&#39;, &#39;their&#39;, &#39;language,&#39;, &#39;their&#39;, &#39;culture,&#39;, &#39;but&#39;, &#39;more&#39;, &#39;their&#39;, &#39;families,&#39;, &#39;their&#39;, &#39;sense&#39;, &#39;of&#39;, &#39;communities.&#39;, &#39;At&#39;, &#39;the&#39;, &#39;same&#39;, &#39;time&#39;, &#39;as&#39;, &#39;those&#39;, &#39;schools&#39;, &#39;were&#39;, &#39;telling&#39;, &#39;Indigenous&#39;, &#39;peoples&#39;, &#39;that&#39;, &#39;they&#39;, &#39;had&#39;, &#39;no&#39;, &#39;worth,&#39;, &#39;no&#39;, &#39;value&#39;, &#39;in&#39;, &#39;their&#39;, &#39;culture,&#39;, &#39;every&#39;, &#39;other&#39;, &#39;school&#39;, &#39;in&#39;, &#39;this&#39;, &#39;country&#39;, &#39;was&#39;, &#39;teaching&#39;, &#39;the&#39;, &#39;same&#39;, &#39;thing&#39;, &#39;to&#39;, &#39;non-Indigenous&#39;, &#39;children.&#39;, &#39;That&#39;, &#39;the&#39;, &#39;languages,&#39;, &#39;the&#39;, &#39;culture,&#39;, &#39;the&#39;, &#39;identity&#39;, &#39;of&#39;, &#39;Indigenous&#39;, &#39;peoples&#39;, &#39;had&#39;, &#39;no&#39;, &#39;worth,&#39;, &#39;had&#39;, &#39;no&#39;, &#39;value&#39;, &#39;in&#39;, &#39;this&#39;, &#39;country.&#39;, &#39;That&#39;, &#39;is&#39;, &#39;the&#39;, &#39;legacy.&#39;, &#39;That&#39;, &#39;is&#39;, &#39;the&#39;, &#39;truth&#39;, &#39;that&#39;, &#39;we&#39;, &#39;need&#39;, &#39;to&#39;, &#39;mark&#39;, &#39;tomorrow&#39;, &#39;and&#39;, &#39;every&#39;, &#39;day.&#39;, &#39;So&#39;, &#39;do&#39;, &#39;not&#39;, &#39;tell&#39;, &#39;me&#39;, &#39;or&#39;, &#39;try&#39;, &#39;to&#39;, &#39;explain&#39;, &#39;that&#39;, &#39;the&#39;, &#39;National&#39;, &#39;Day&#39;, &#39;for&#39;, &#39;Truth&#39;, &#39;and&#39;, &#39;Reconciliation&#39;, &#39;is&#39;, &#39;a&#39;, &#39;day&#39;, &#39;for&#39;, &#39;Indigenous&#39;, &#39;Canadians.&#39;, &#39;It&#39;, &#39;is&#39;, &#39;a&#39;, &#39;day&#39;, &#39;for&#39;, &#39;all&#39;, &#39;Canadians.&#39;, &#39;It&#39;, &#39;is&#39;, &#39;all&#39;, &#39;of&#39;, &#39;us.&#39;, &#39;It&#39;, &#39;is&#39;, &#39;all&#39;, &#39;of&#39;, &#39;our&#39;, &#39;story.&#39;, &#39;Because&#39;, &#39;if&#39;, &#39;we&#39;, &#39;do&#39;, &#39;not&#39;, &#39;just&#39;, &#39;recognize&#39;, &#39;the&#39;, &#39;truth,&#39;, &#39;but&#39;, &#39;also&#39;, &#39;understand&#39;, &#39;the&#39;, &#39;truth&#39;, &#39;and&#39;, &#39;bring&#39;, &#39;it&#39;, &#39;into&#39;, &#39;ourselves&#39;, &#39;and&#39;, &#39;then&#39;, &#39;bring&#39;, &#39;it&#39;, &#39;into&#39;, &#39;every&#39;, &#39;action&#39;, &#39;we&#39;, &#39;take&#39;, &#39;every&#39;, &#39;day&#39;, &#39;as&#39;, &#39;we&#39;, &#39;live&#39;, &#39;with&#39;, &#39;intention,&#39;, &#39;with&#39;, &#39;mindfulness&#39;, &#39;about&#39;, &#39;what&#39;, &#39;we&#39;, &#39;bring&#39;, &#39;and&#39;, &#39;what&#39;, &#39;we&#39;, &#39;shape&#39;, &#39;with&#39;, &#39;our&#39;, &#39;words,&#39;, &#39;with&#39;, &#39;our&#39;, &#39;choices&#39;, &#39;throughout&#39;, &#39;our&#39;, &#39;lives,&#39;, &#39;then&#39;, &#39;we’re&#39;, &#39;not&#39;, &#39;understanding&#39;, &#39;the&#39;, &#39;lessons&#39;, &#39;of&#39;, &#39;the&#39;, &#39;past&#39;, &#39;that&#39;, &#39;we&#39;, &#39;must&#39;, &#39;acknowledge&#39;, &#39;and&#39;, &#39;learn&#39;, &#39;from.&#39;, &#39;Indigenous&#39;, &#39;peoples&#39;, &#39;in&#39;, &#39;this&#39;, &#39;country&#39;, &#39;have&#39;, &#39;so&#39;, &#39;much&#39;, &#39;to&#39;, &#39;teach&#39;, &#39;us&#39;, &#39;about&#39;, &#39;patience,&#39;, &#39;openness,&#39;, &#39;and&#39;, &#39;understanding&#39;, &#39;of&#39;, &#39;a&#39;, &#39;long-term&#39;, &#39;vision&#39;, &#39;for&#39;, &#39;inhabiting&#39;, &#39;this&#39;, &#39;beautiful&#39;, &#39;planet.&#39;, &#39;This&#39;, &#39;is&#39;, &#39;our&#39;, &#39;responsibility&#39;, &#39;to&#39;, &#39;future&#39;, &#39;generations.&#39;, &#39;But&#39;, &#39;we&#39;, &#39;also&#39;, &#39;have&#39;, &#39;to&#39;, &#39;learn&#39;, &#39;about&#39;, &#39;ourselves,&#39;, &#39;as&#39;, &#39;a&#39;, &#39;society,&#39;, &#39;that&#39;, &#39;did&#39;, &#39;not&#39;, &#39;leave&#39;, &#39;them&#39;, &#39;any&#39;, &#39;room&#39;, &#39;in&#39;, &#39;this&#39;, &#39;magnificent&#39;, &#39;land&#39;, &#39;of&#39;, &#39;Canada&#39;, &#39;that&#39;, &#39;they&#39;, &#39;were&#39;, &#39;always&#39;, &#39;ready&#39;, &#39;to&#39;, &#39;share&#39;, &#39;with&#39;, &#39;us&#39;, &#39;all.&#39;, &#39;So&#39;, &#39;tomorrow,&#39;, &#39;all&#39;, &#39;of&#39;, &#39;you&#39;, &#39;here&#39;, &#39;tonight,&#39;, &#39;all&#39;, &#39;of&#39;, &#39;you&#39;, &#39;reflecting&#39;, &#39;on&#39;, &#39;this&#39;, &#39;at&#39;, &#39;home,&#39;, &#39;and&#39;, &#39;all&#39;, &#39;of&#39;, &#39;you&#39;, &#39;as&#39;, &#39;you&#39;, &#39;go&#39;, &#39;about&#39;, &#39;your&#39;, &#39;daily&#39;, &#39;lives,&#39;, &#39;take&#39;, &#39;a&#39;, &#39;moment&#39;, &#39;to&#39;, &#39;listen&#39;, &#39;to&#39;, &#39;the&#39;, &#39;stories&#39;, &#39;of&#39;, &#39;a&#39;, &#39;survivor,&#39;, &#39;to&#39;, &#39;an&#39;, &#39;Indigenous&#39;, &#39;elder&#39;, &#39;who&#39;, &#39;shares&#39;, &#39;their&#39;, &#39;perspective&#39;, &#39;and&#39;, &#39;their&#39;, &#39;experiences&#39;, &#39;in&#39;, &#39;this&#39;, &#39;country.&#39;, &#39;And&#39;, &#39;know&#39;, &#39;that&#39;, &#39;that&#39;, &#39;story,&#39;, &#39;their&#39;, &#39;story,&#39;, &#39;is&#39;, &#39;your&#39;, &#39;story&#39;, &#39;as&#39;, &#39;well.&#39;, &#39;And&#39;, &#39;until&#39;, &#39;we&#39;, &#39;understand&#39;, &#39;as&#39;, &#39;a&#39;, &#39;country&#39;, &#39;that&#39;, &#39;each&#39;, &#39;one&#39;, &#39;of&#39;, &#39;our&#39;, &#39;stories&#39;, &#39;is&#39;, &#39;all&#39;, &#39;of&#39;, &#39;our&#39;, &#39;stories,&#39;, &#39;there&#39;, &#39;can&#39;, &#39;be&#39;, &#39;no&#39;, &#39;truth.&#39;, &#39;There&#39;, &#39;can&#39;, &#39;be&#39;, &#39;no&#39;, &#39;reconciliation.&#39;, &#39;So&#39;, &#39;tomorrow&#39;, &#39;and&#39;, &#39;in&#39;, &#39;all&#39;, &#39;the&#39;, &#39;days&#39;, &#39;to&#39;, &#39;come,&#39;, &#39;we&#39;, &#39;will&#39;, &#39;reflect&#39;, &#39;on&#39;, &#39;how&#39;, &#39;each&#39;, &#39;and&#39;, &#39;every&#39;, &#39;one&#39;, &#39;of&#39;, &#39;us&#39;, &#39;can&#39;, &#39;contribute&#39;, &#39;to&#39;, &#39;a&#39;, &#39;better&#39;, &#39;country.&#39;, &#39;And&#39;, &#39;on&#39;, &#39;that&#39;, &#39;shared&#39;, &#39;vision&#39;, &#39;of&#39;, &#39;a&#39;, &#39;better&#39;, &#39;world&#39;, &#39;through&#39;, &#39;truth&#39;, &#39;and&#39;, &#39;reconciliation.&#39;, &#39;Merci.&#39;, &#39;Thank&#39;, &#39;you.&#39;, &#39;Gilakas’la.&#39;, &#39;Nakummek.&#39;, &#39;Mashi&#39;, &#39;cho&#39;, &#39;Miigwetch&#39;, &#39;Kinanaskomitinow.&#39;]
+1160
+9
 </pre></div>
 </div>
 </div>
@@ -589,27 +614,8 @@ We’ve done the first row for you.</p>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_tastes</span> <span class="o">=</span> <span class="p">[</span><span class="o">...</span><span class="p">]</span>
-<span class="n">my_name</span> <span class="o">=</span> <span class="s2">&quot;...&quot;</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Experiment more!</p>
-<ul class="simple">
-<li><p>Write down the same for one of your friends or family members (or make up an imaginary friend) to the list <code class="docutils literal notranslate"><span class="pre">tastes2</span></code></p></li>
-<li><p>Think how to answer based on this data:</p>
-<ul>
-<li><p>How (comparatively) enthusiastic about music you and your friend are?</p></li>
-<li><p>How would you approach comparing music tastes between two people?</p></li>
-</ul>
-</li>
-<li><p>Write down your ideas first and then you can try to put it into code (it does not have to work)!</p></li>
-</ul>
-<p>My ideas…</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#My code to experiment...</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_tastes</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">my_name</span> <span class="o">=</span> <span class="s2">&quot;Ilya&quot;</span>
 </pre></div>
 </div>
 </div>
@@ -647,20 +653,20 @@ We’ve done the first row for you.</p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../lecture/Class2_GGR274_DL_IM.html"
+       href="Lab_2.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Lecture 2: Introduction to Python Programming, Part 1</p>
+        <p class="prev-next-title">GGR274 Lab 2: Introduction to Programming, Part 1</p>
       </div>
     </a>
     <a class="right-next"
-       href="Lab_2_solutions.html"
+       href="../homework/Homework_2.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">GGR274 Lab 2: Introduction to Programming, Part 1</p>
+        <p class="prev-next-title">GGR274 Homework 2</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

@@ -1,0 +1,679 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>GGR274 Homework 3 &#8212; Computation and Data Science for Social Sciences</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'weekly-materials/week03/homework/Homework_3';</script>
+    <link rel="shortcut icon" href="../../../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="prev" title="GGR274 Lab 3: Introduction to Programming, Part 2" href="../lab/Lab_3.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../jupyter-book/index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Computation and Data Science for Social Sciences</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../jupyter-book/index.html">
+                    👋 Course Website for GGR274H1-S Winter 2024
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Quick Links</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../syllabus/ggr274_syllabus.html">Course Syllabus</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://q.utoronto.ca/courses/338580/announcements">Announcements</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://piazza.com/utoronto.ca/winter2024/ggr274h1">Piazza</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://forms.office.com/Pages/ResponsePage.aspx?id=JsKqeAMvTUuQN7RtVsVSEF-wqptfr85NieT8UyliaxxUOUtMSVFUQkFTNVdRTlVJNkZFQU84NldYUi4u">Course Feedback Form</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Resources</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../guides/jupyterhub_guide.html">JupyterHub Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../guides/markus_guide.html">MarkUs Guide</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 1</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://q.utoronto.ca/courses/338580/files?preview=29750629">Prof. Li's Slides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week01/lecture/Class1_GGR274_MM.html">Prof. Moon's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week01/lecture/Class1_GGR274_IM.html">Prof. Musabirov's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week01/lab/Lab_1.html">Lab 01 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week01/lab/Lab_1_solutions.html">Lab 1 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week01/homework/Homework_1.html">Homework 01 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week01/homework/Homework_1_solution.html">Homework 01 Notebook</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 2</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../week02/lecture/Class2_GGR274_DL_IM.html">Prof. Musabirov's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week02/lab/Lab_2.html">GGR274 Lab 2: Introduction to Programming, Part 1</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../week02/lab/Lab_2_solutions.html">GGR274 Lab 2: Introduction to Programming, Part 1</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../week02/homework/Homework_2.html">Homework 02 Notebook</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 3</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../lecture/Class3_GGR274_DL_IM.html">Prof. Musabirov's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lab/Lab_3.html">GGR274 Lab 3: Introduction to Programming, Part 2</a></li>
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Homework 03 Notebook</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://jupyter.utoronto.ca/hub/user-redirect/git-pull?repo=https%3A//github.com/UofTCompDSci/ggr274-20241&urlpath=tree/ggr274-20241/weekly-materials/week03/homework/Homework_3.ipynb&branch=main" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onJupyterHub"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">JupyterHub</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/weekly-materials/week03/homework/Homework_3.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>GGR274 Homework 3</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logistics">Logistics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1-reading-in-a-data-set">Task 1: Reading in a data set</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-2-basic-statistics">Task 2: Basic statistics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-number-of-reviews">2a. Number of reviews</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-total-and-average-review-length-counting-characters">2b. Total and average review length (counting characters)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-total-and-average-review-lengths-words">2c. Total and average review lengths (words)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-3-identifying-positive-and-negative-reviews">Task 3: Identifying positive and negative reviews</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-categorizing-reviews">3a. Categorizing reviews</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-analysis">3b. Analysis</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="ggr274-homework-3">
+<h1>GGR274 Homework 3<a class="headerlink" href="#ggr274-homework-3" title="Permalink to this heading">#</a></h1>
+<section id="logistics">
+<h2>Logistics<a class="headerlink" href="#logistics" title="Permalink to this heading">#</a></h2>
+<p><strong>Due date</strong>: The homework is due 23:59 on Monday, January 30.</p>
+<p>You will submit your work on <a class="reference external" href="https://markus-ds.teach.cs.toronto.edu">MarkUs</a>.
+To submit your work:</p>
+<ol class="arabic simple">
+<li><p>Download this file (<code class="docutils literal notranslate"><span class="pre">Homework_3.ipynb</span></code>) from JupyterHub. (See <a class="reference internal" href="../../../guides/jupyterhub_guide.html"><span class="doc std std-doc">our JupyterHub Guide</span></a> for detailed instructions.)</p></li>
+<li><p>Submit this file to MarkUs under the <strong>hw3</strong> assignment. (See <a class="reference internal" href="../../../guides/markus_guide.html"><span class="doc std std-doc">our MarkUs Guide</span></a> for detailed instructions.)
+All homeworks will take place in a Jupyter notebook (like this one). When you are done, you will download this notebook and submit it to MarkUs.</p></li>
+</ol>
+</section>
+<section id="task-1-reading-in-a-data-set">
+<h2>Task 1: Reading in a data set<a class="headerlink" href="#task-1-reading-in-a-data-set" title="Permalink to this heading">#</a></h2>
+<p>In this lab, you’ll work with <strong>movie reviews from IMDB</strong>, part of a larger data set which was curated in 2011 by AI researchers at Stanford University (<a class="reference external" href="https://ai.stanford.edu/~amaas/data/sentiment/">source</a>).</p>
+<p>Since we covered in lecture how to read data from files, you’ll start by doing that here.
+In the code cell below, write code to open the movie review dataset file, called <strong>reviews.txt</strong>, and then use the <code class="docutils literal notranslate"><span class="pre">readlines</span></code> file method to read the lines of the file. Store the list of lines in a variable called <code class="docutils literal notranslate"><span class="pre">reviews</span></code>.</p>
+<p><em>Note</em>: remember to pass the <code class="docutils literal notranslate"><span class="pre">encoding=&quot;utf-8&quot;</span></code> argument to <code class="docutils literal notranslate"><span class="pre">open()</span></code> to ensure that all characters are read without error.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here</span>
+
+
+<span class="c1"># The following code is provided to help you check your work</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The first movie review:</span><span class="se">\n\n</span><span class="si">{</span><span class="n">reviews</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="task-2-basic-statistics">
+<h2>Task 2: Basic statistics<a class="headerlink" href="#task-2-basic-statistics" title="Permalink to this heading">#</a></h2>
+<p>As you can probably guess, this is likely a fairly large dataset!
+Let’s use Python to help make sense of it.</p>
+<section id="a-number-of-reviews">
+<h3>2a. Number of reviews<a class="headerlink" href="#a-number-of-reviews" title="Permalink to this heading">#</a></h3>
+<p>The dataset stores each review on a single line.
+Using this fact and how you read in the data above (with <code class="docutils literal notranslate"><span class="pre">readlines</span></code>), compute the <em>number of reviews</em> in the dataset and store the result in a variable called <code class="docutils literal notranslate"><span class="pre">num_reviews</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here</span>
+
+
+<span class="c1"># The following code is provided to help you check your work</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;There are </span><span class="si">{</span><span class="n">num_reviews</span><span class="si">}</span><span class="s2"> reviews in the dataset.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="b-total-and-average-review-length-counting-characters">
+<h3>2b. Total and average review length (counting characters)<a class="headerlink" href="#b-total-and-average-review-length-counting-characters" title="Permalink to this heading">#</a></h3>
+<p>Now let’s start computing on the individual reviews.</p>
+<p>First, use the approach from lecture to create a new list called <code class="docutils literal notranslate"><span class="pre">review_lengths</span></code> that contains the length, in terms of number of characters, of each review in the data set. (<em>Hint</em>: start with <code class="docutils literal notranslate"><span class="pre">review_lengths</span> <span class="pre">=</span> <span class="pre">[]</span></code> and then use a for loop.)</p>
+<p>Then using <code class="docutils literal notranslate"><span class="pre">review_lengths</span></code>, define the following variables with the described values:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">total_length</span></code>: the total number of characters across all of the reviews</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max_length</span></code>: the length of the longest review</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min_length</span></code> the length of the <em>shortest</em> review</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">average_length</span></code>: the average number of characters per review</p></li>
+</ul>
+<p><em>Hint</em>: use the functions <code class="docutils literal notranslate"><span class="pre">len</span></code>/<code class="docutils literal notranslate"><span class="pre">sum</span></code>/<code class="docutils literal notranslate"><span class="pre">max</span></code>/<code class="docutils literal notranslate"><span class="pre">min</span></code> to compute these values.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here</span>
+
+
+
+<span class="c1"># The following code is provided to help you check your work</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The length of the first review is </span><span class="si">{</span><span class="n">review_lengths</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The total review length is </span><span class="si">{</span><span class="n">total_length</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The maximum review length is </span><span class="si">{</span><span class="n">max_length</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The minimum review length is </span><span class="si">{</span><span class="n">min_length</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The average review length is </span><span class="si">{</span><span class="n">average_length</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="c-total-and-average-review-lengths-words">
+<h3>2c. Total and average review lengths (words)<a class="headerlink" href="#c-total-and-average-review-lengths-words" title="Permalink to this heading">#</a></h3>
+<p>Now you’ll repeat part 2b, except counting words instead of characters.</p>
+<p>Specifically, define a new list variable called <code class="docutils literal notranslate"><span class="pre">review_word_lengths</span></code> that contains the length, in terms of number of words, of each review in the data set.
+Use the <code class="docutils literal notranslate"><span class="pre">str.split</span></code> method to split the reviews by spaces; don’t worry about punctuation marks appearing in the words, that’s expected.</p>
+<p>Then using <code class="docutils literal notranslate"><span class="pre">review_word_lengths</span></code>, define the following variables with the described values:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">total_word_length</span></code>: the total number of words across all of the reviews</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max_word_length</span></code>: the length of the longest review (in words)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min_word_length</span></code> the length of the <em>shortest</em> review (in words)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">average_word_length</span></code>: the average number of words per review</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here</span>
+
+
+<span class="c1"># The following code is provided to help you check your work</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The length (in words) of the first review is </span><span class="si">{</span><span class="n">review_word_lengths</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The total review length (in words) is </span><span class="si">{</span><span class="n">total_word_length</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The maximum review length (in words) is </span><span class="si">{</span><span class="n">max_word_length</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The minimum review length (in words) is </span><span class="si">{</span><span class="n">min_word_length</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The average review length (in words) is </span><span class="si">{</span><span class="n">average_word_length</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="task-3-identifying-positive-and-negative-reviews">
+<h2>Task 3: Identifying positive and negative reviews<a class="headerlink" href="#task-3-identifying-positive-and-negative-reviews" title="Permalink to this heading">#</a></h2>
+<p>The original movie review dataset was originally curated for performing <em>sentiment analysis</em>, which is “natural language processing, text analysis, computational linguistics, and biometrics to systematically identify, extract, quantify, and study affective states and subjective information.” (<a class="reference external" href="https://en.wikipedia.org/wiki/Sentiment_analysis">Wikipedia</a>)</p>
+<p>In this task, you’ll perform a <em>very rudimentary</em> sentiment analysis on the movie reviews in our dataset. After writing the code and looking at the results, we’ll also ask you to reflect on the limitations of our current process and how we might improve it.</p>
+<section id="a-categorizing-reviews">
+<h3>3a. Categorizing reviews<a class="headerlink" href="#a-categorizing-reviews" title="Permalink to this heading">#</a></h3>
+<p>Create three new empty lists: <code class="docutils literal notranslate"><span class="pre">positive_reviews</span></code>, <code class="docutils literal notranslate"><span class="pre">negative_reviews</span></code>, and <code class="docutils literal notranslate"><span class="pre">ambiguous_reviews</span></code>.
+Then loop through the <code class="docutils literal notranslate"><span class="pre">reviews</span></code> and for each review:</p>
+<ul class="simple">
+<li><p>If the review contains the string <code class="docutils literal notranslate"><span class="pre">&quot;best&quot;</span></code> but not the string <code class="docutils literal notranslate"><span class="pre">&quot;worst&quot;</span></code>, append it to <code class="docutils literal notranslate"><span class="pre">positive_reviews</span></code>.</p></li>
+<li><p>If the review contains the string <code class="docutils literal notranslate"><span class="pre">&quot;worst&quot;</span></code> but not the string <code class="docutils literal notranslate"><span class="pre">&quot;best&quot;</span></code>, append it to <code class="docutils literal notranslate"><span class="pre">negative_reviews</span></code>.</p></li>
+<li><p>If the review contains <em>both</em> the strings <code class="docutils literal notranslate"><span class="pre">&quot;best&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">&quot;worst&quot;</span></code>, append it to <code class="docutils literal notranslate"><span class="pre">ambiguous_reviews</span></code>.</p></li>
+<li><p>If the review doesn’t contain either of the strings, don’t append it to any list.</p></li>
+</ul>
+<p>Use <code class="docutils literal notranslate"><span class="pre">____</span> <span class="pre">in</span> <span class="pre">____</span> </code> and <code class="docutils literal notranslate"><span class="pre">____</span> <span class="pre">not</span> <span class="pre">in</span> <span class="pre">____</span></code> to check whether one string is contained inside another string (or not). These comparisons are case-sensitive, so for example a review containing <code class="docutils literal notranslate"><span class="pre">&quot;BEST&quot;</span></code> but not <code class="docutils literal notranslate"><span class="pre">&quot;best&quot;</span></code> won’t be categorized as positive.</p>
+<p>It is possible to complete this task using one for loop or multiple for loops (do whatever makes the most sense to you).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here</span>
+
+
+<span class="c1"># The following code is provided to help you check your work</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Here is the first positive review:</span><span class="se">\n\n</span><span class="si">{</span><span class="n">positive_reviews</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Here is the first negative review:</span><span class="se">\n\n</span><span class="si">{</span><span class="n">negative_reviews</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Here is the first ambiguous review:</span><span class="se">\n\n</span><span class="si">{</span><span class="n">ambiguous_reviews</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="b-analysis">
+<h3>3b. Analysis<a class="headerlink" href="#b-analysis" title="Permalink to this heading">#</a></h3>
+<p>Read through some of the reviews in each category list (you can modify the <code class="docutils literal notranslate"><span class="pre">print</span></code> calls we provided to display more of them). Decide whether you agree with the categorization of these reviews.</p>
+<p>Then, create a new Markdown cell below this one, and write one or two paragraphs responding to the following prompt:</p>
+<blockquote>
+<div><p>Describe <strong>two different limitations</strong> of our very basic review categorization. What problems are caused by these limitations, and for what kinds of reviews might these problems occur? Using just what you’ve learned in the course so far, are there ways we could address these limitations, at least partially?</p>
+</div></blockquote>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./weekly-materials/week03/homework"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../lab/Lab_3.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">GGR274 Lab 3: Introduction to Programming, Part 2</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logistics">Logistics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1-reading-in-a-data-set">Task 1: Reading in a data set</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-2-basic-statistics">Task 2: Basic statistics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-number-of-reviews">2a. Number of reviews</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-total-and-average-review-length-counting-characters">2b. Total and average review length (counting characters)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-total-and-average-review-lengths-words">2c. Total and average review lengths (words)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-3-identifying-positive-and-negative-reviews">Task 3: Identifying positive and negative reviews</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-categorizing-reviews">3a. Categorizing reviews</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-analysis">3b. Analysis</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By GGR274 Instructors
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

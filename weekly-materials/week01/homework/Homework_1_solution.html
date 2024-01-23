@@ -62,12 +62,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'weekly-materials/week01/homework/Homework_1';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'weekly-materials/week01/homework/Homework_1_solution';</script>
     <link rel="shortcut icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="GG274 Homework 1: A Python Intro" href="Homework_1_solution.html" />
-    <link rel="prev" title="GGR274 Lab 1: Intro to Data Science Tools" href="../lab/Lab_1_solutions.html" />
+    <link rel="next" title="Lecture 2: Introduction to Python Programming, Part 1" href="../../week02/lecture/Class2_GGR274_DL_IM.html" />
+    <link rel="prev" title="GG274 Homework 1: A Python Intro" href="Homework_1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -184,8 +184,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../lecture/Class1_GGR274_IM.html">Prof. Musabirov's Notebook</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lab/Lab_1.html">Lab 01 Notebook</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lab/Lab_1_solutions.html">Lab 1 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Homework_1.html">Homework 01 Notebook</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Homework 01 Notebook</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Homework_1_solution.html">Homework 01 Notebook</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 2</span></p>
 <ul class="nav bd-sidenav">
@@ -256,7 +256,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://jupyter.utoronto.ca/hub/user-redirect/git-pull?repo=https%3A//github.com/UofTCompDSci/ggr274-20241&urlpath=tree/ggr274-20241/weekly-materials/week01/homework/Homework_1.ipynb&branch=main" target="_blank"
+      <li><a href="https://jupyter.utoronto.ca/hub/user-redirect/git-pull?repo=https%3A//github.com/UofTCompDSci/ggr274-20241&urlpath=tree/ggr274-20241/weekly-materials/week01/homework/Homework_1_solution.ipynb&branch=main" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onJupyterHub"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -287,7 +287,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../../_sources/weekly-materials/week01/homework/Homework_1.ipynb" target="_blank"
+      <li><a href="../../../_sources/weekly-materials/week01/homework/Homework_1_solution.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -407,7 +407,7 @@ document.write(`
 </section>
 <section id="logistics">
 <h2>Logistics<a class="headerlink" href="#logistics" title="Permalink to this heading">#</a></h2>
-<p><strong>Due date</strong>: The homework is due 23:59 on Monday, January 15.</p>
+<p><strong>Due date</strong>: The homework is due 23:59 on Monday, January 17.</p>
 <p>You will submit your work on <a class="reference external" href="https://markus-ds.teach.cs.toronto.edu">MarkUs</a>.
 To submit your work:</p>
 <ol class="arabic simple">
@@ -423,7 +423,7 @@ For this homework, we’re going to keep things short and ask you to fill in som
 <p>In the cell below, replace the ellipsis (<code class="docutils literal notranslate"><span class="pre">...</span></code>) with the number of courses you’re taking this semester.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_courses</span> <span class="o">=</span> <span class="o">...</span>  <span class="c1"># Replace the ... with your number of courses</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_courses</span> <span class="o">=</span> <span class="mi">5</span>  <span class="c1"># Replace the ... with your number of courses</span>
 
 <span class="c1"># We&#39;ve provided this code to check your work. Try running this cell!</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;You are taking </span><span class="si">{</span><span class="n">num_courses</span><span class="si">}</span><span class="s2"> course(s).&quot;</span><span class="p">)</span>
@@ -438,8 +438,8 @@ Replace each <code class="docutils literal notranslate"><span class="pre">...</s
 This tells Python that your name should be interpreted as data (i.e., a name) rather than code or a variable.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">first_name</span> <span class="o">=</span> <span class="o">...</span>  <span class="c1"># Replace the ... with your first name, surrounded by quotes</span>
-<span class="n">last_name</span> <span class="o">=</span> <span class="o">...</span>   <span class="c1"># Replace the ... with your last name, surrounded by quotes</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">first_name</span> <span class="o">=</span> <span class="s1">&#39;David&#39;</span>  <span class="c1"># Replace the ... with your first name, surrounded by quotes</span>
+<span class="n">last_name</span> <span class="o">=</span> <span class="s1">&#39;Liu&#39;</span>   <span class="c1"># Replace the ... with your last name, surrounded by quotes</span>
 
 <span class="c1"># We&#39;ve provided this code to check your work. Try running this cell!</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hello </span><span class="si">{</span><span class="n">first_name</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">last_name</span><span class="si">}</span><span class="s2">, and welcome to GGR274!&quot;</span><span class="p">)</span>
@@ -495,7 +495,7 @@ Remember from the lab that you can perform a calculation and store the result in
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Replace the ... with an arithmetic expression to calculate the desired percentage</span>
-<span class="n">ontario_percentage</span> <span class="o">=</span> <span class="o">...</span>
+<span class="n">ontario_percentage</span> <span class="o">=</span> <span class="mi">15308317</span> <span class="o">/</span> <span class="mi">39395674</span> <span class="o">*</span> <span class="mi">100</span>
 
 
 <span class="c1"># We&#39;ve provided this code to check your work. Try running this cell!</span>
@@ -514,8 +514,6 @@ Remember from the lab that you can perform a calculation and store the result in
 <li><p>What kinds of data are you interested in working with this semester?</p></li>
 <li><p>What are your first impressions of our course software: Python, Jupyter notebooks, and JupyterHub?</p></li>
 <li><p>What are you looking forward to in GGR274?</p></li>
-<li><p>What are you looking forward to be able to do after you complete GGR274?</p></li>
-<li><p>What are three music artists or groups you like? (Important question!)</p></li>
 </ol>
 </section>
 </section>
@@ -551,20 +549,20 @@ Remember from the lab that you can perform a calculation and store the result in
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../lab/Lab_1_solutions.html"
+       href="Homework_1.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">GGR274 Lab 1: Intro to Data Science Tools</p>
+        <p class="prev-next-title">GG274 Homework 1: A Python Intro</p>
       </div>
     </a>
     <a class="right-next"
-       href="Homework_1_solution.html"
+       href="../../week02/lecture/Class2_GGR274_DL_IM.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">GG274 Homework 1: A Python Intro</p>
+        <p class="prev-next-title">Lecture 2: Introduction to Python Programming, Part 1</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
