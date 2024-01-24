@@ -1,0 +1,1436 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Class 4 - Introduction to pandas and Data Wrangling &#8212; Computation and Data Science for Social Sciences</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'weekly-materials/week04/lecture/Class4_GGR274_MM';</script>
+    <link rel="shortcut icon" href="../../../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="prev" title="GGR274 Homework 3" href="../../week03/homework/Homework_3.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../jupyter-book/index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Computation and Data Science for Social Sciences</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../jupyter-book/index.html">
+                    👋 Course Website for GGR274H1-S Winter 2024
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Quick Links</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../syllabus/ggr274_syllabus.html">Course Syllabus</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://q.utoronto.ca/courses/338580/announcements">Announcements</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://piazza.com/utoronto.ca/winter2024/ggr274h1">Piazza</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://forms.office.com/Pages/ResponsePage.aspx?id=JsKqeAMvTUuQN7RtVsVSEF-wqptfr85NieT8UyliaxxUOUtMSVFUQkFTNVdRTlVJNkZFQU84NldYUi4u">Course Feedback Form</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Resources</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../guides/jupyterhub_guide.html">JupyterHub Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../guides/markus_guide.html">MarkUs Guide</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 1</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://q.utoronto.ca/courses/338580/files?preview=29750629">Prof. Li's Slides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week01/lecture/Class1_GGR274_MM.html">Prof. Moon's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week01/lecture/Class1_GGR274_IM.html">Prof. Musabirov's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week01/lab/Lab_1.html">Lab 01 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week01/lab/Lab_1_solutions.html">Lab 1 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week01/homework/Homework_1.html">Homework 01 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week01/homework/Homework_1_solution.html">Homework 01 Notebook</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 2</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../week02/lecture/Class2_GGR274_DL_IM.html">Prof. Musabirov's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week02/lab/Lab_2.html">GGR274 Lab 2: Introduction to Programming, Part 1</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../week02/lab/Lab_2_solutions.html">GGR274 Lab 2: Solutions</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../week02/homework/Homework_2.html">Homework 02 Notebook</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 3</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../week03/lecture/Class3_GGR274_DL_IM.html">Prof. Musabirov's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week03/lab/Lab_3.html">GGR274 Lab 3: Introduction to Programming, Part 2</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../week03/homework/Homework_3.html">Homework 03 Notebook</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 4</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Prof. Moon's Notebook</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://jupyter.utoronto.ca/hub/user-redirect/git-pull?repo=https%3A//github.com/UofTCompDSci/ggr274-20241&urlpath=tree/ggr274-20241/weekly-materials/week04/lecture/Class4_GGR274_MM.ipynb&branch=main" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onJupyterHub"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">JupyterHub</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/weekly-materials/week04/lecture/Class4_GGR274_MM.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Class 4 - Introduction to pandas and Data Wrangling</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pandas"><code class="docutils literal notranslate"><span class="pre">pandas</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-example-1">Data Example 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-example-2">Data Example 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-example-3">Data Example 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-data">Raw Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comma-separated-value-csv-files">Comma Separated Value (csv) Files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">pandas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-pandas-series">Create a pandas <code class="docutils literal notranslate"><span class="pre">Series</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-pandas">import pandas</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-pandas-series-from-a-list">Create a pandas Series from a List</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-boolean-series-based-on-a-condition">Creating a Boolean Series based on a Condition</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#boolean-logic-with-pandas-series">Boolean logic with pandas <code class="docutils literal notranslate"><span class="pre">Series</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-pandas-dataframe-using-a-dictionary">Create a pandas <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> using a dictionary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#select-rows-of-a-dataframe-using-a-list-of-true-false-values-a-ka-boolean-values">Select rows of a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> using a list of  <code class="docutils literal notranslate"><span class="pre">True</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">False</span></code> values (a.ka. Boolean values)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#select-columns-of-a-dataframe-using-a-list-of-column-names">Select columns of a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> using a list of Column Names</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#select-rows-of-a-dataframe">Select rows of a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#select-rows-and-columns-of-a-dataframe">Select rows and columns of a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise">Exercise</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-pandas-dataframe-from-a-csv-file">Create a <code class="docutils literal notranslate"><span class="pre">pandas</span></code> <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> from a csv file</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#time-use-dataset">Time Use dataset</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-time-use-survey-data-using-pandas">Import Time Use Survey Data using pandas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question">Question</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wrangle-the-time-use-survey-data">Wrangle the Time Use Survey Data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#selecting-columns-from-a-dataframe">Selecting columns from a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rename-columns">Rename columns</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#select-respondents-that-live-in-urban-areas">Select respondents that live in urban areas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#define-a-dataframe-with-only-urban-respondents-and-relevant-columns">Define a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> with only urban respondents and relevant columns</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examine-the-distributions-of-each-column-using-value-counts">Examine the <em>distributions</em> of each column using <code class="docutils literal notranslate"><span class="pre">value_counts()</span></code></a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="class-4-introduction-to-pandas-and-data-wrangling">
+<h1>Class 4 - Introduction to <code class="docutils literal notranslate"><span class="pre">pandas</span></code> and Data Wrangling<a class="headerlink" href="#class-4-introduction-to-pandas-and-data-wrangling" title="Permalink to this heading">#</a></h1>
+<ul class="simple">
+<li><p>Introduction to working with (tabular) data using <code class="docutils literal notranslate"><span class="pre">pandas</span></code></p>
+<ul>
+<li><p>Import a csv file into a <code class="docutils literal notranslate"><span class="pre">pandas</span></code> <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code></p></li>
+</ul>
+</li>
+<li><p>Selecting rows of a DataFrame</p></li>
+<li><p>Selecting columns of a DataFrame</p></li>
+<li><p>Computing summary statistics on a DataFrame</p></li>
+</ul>
+<section id="pandas">
+<h2><code class="docutils literal notranslate"><span class="pre">pandas</span></code><a class="headerlink" href="#pandas" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pandas</span></code> is a python package that makes it easy to work with tabular data.</p></li>
+<li><p>What is tabular data?</p></li>
+</ul>
+</section>
+<section id="data-example-1">
+<h2>Data Example 1<a class="headerlink" href="#data-example-1" title="Permalink to this heading">#</a></h2>
+<p>Is this data tabular?</p>
+<p><img alt="" src="../../../_images/excel_screenshot.png" /></p>
+</section>
+<section id="data-example-2">
+<h2>Data Example 2<a class="headerlink" href="#data-example-2" title="Permalink to this heading">#</a></h2>
+<p>Is this data tabular?</p>
+<p><img alt="" src="../../../_images/platodata.png" /></p>
+<p>Text is taken from the <a class="reference external" href="https://plato.stanford.edu/entries/plato-ethics-shorter/">Stanford Encyclopedia of Philosophy.</a></p>
+</section>
+<section id="data-example-3">
+<h2>Data Example 3<a class="headerlink" href="#data-example-3" title="Permalink to this heading">#</a></h2>
+<p>Is this data tabular?</p>
+<p><img alt="" src="../../../_images/policesearchdata.png" /></p>
+</section>
+<section id="raw-data">
+<h2>Raw Data<a class="headerlink" href="#raw-data" title="Permalink to this heading">#</a></h2>
+<p>The data from Example 3 is from</p>
+<p><a class="reference external" href="https://open.toronto.ca/dataset/police-race-and-identity-based-data-collection-arrests-strip-searches/">https://open.toronto.ca/dataset/police-race-and-identity-based-data-collection-arrests-strip-searches/</a></p>
+<p>Is this <strong>raw data</strong>?</p>
+<p>What is this data’s provenance?</p>
+</section>
+<section id="comma-separated-value-csv-files">
+<h2>Comma Separated Value (csv) Files<a class="headerlink" href="#comma-separated-value-csv-files" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>A csv file is a text file that uses a comma (this is an example of a <em>delimiter</em>) to separate values.</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">id</span><span class="p">,</span> <span class="n">person</span><span class="p">,</span> <span class="n">department</span>
+<span class="mi">0</span><span class="p">,</span> <span class="n">MM</span><span class="p">,</span> <span class="n">STA</span>
+<span class="mi">1</span><span class="p">,</span> <span class="n">IM</span><span class="p">,</span> <span class="n">DCS</span> 
+<span class="mi">2</span><span class="p">,</span> <span class="n">CL</span><span class="p">,</span> <span class="n">GGR</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>csv files often have a “.csv” extension as part of the file name.  For example, <code class="docutils literal notranslate"><span class="pre">GGR274faculty.csv</span></code>.</p></li>
+<li><p>Spreadsheet programs such as Excel are often used to create, read, and store csv files.  But, any program (e.g., Jupyter notebooks) that can manage text files can do the same.</p></li>
+</ul>
+</section>
+<section id="id1">
+<h2>pandas<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pandas</span></code> is a Python package and is the “fundamental high-level building block for doing practical, real-world data analysis in Python” (<a class="reference external" href="https://pandas.pydata.org/docs/getting_started/overview.html">see pandas Getting started</a>).</p></li>
+<li><p>We will study and use the primary data structures of pandas, <code class="docutils literal notranslate"><span class="pre">Series</span></code> (1-dimensional) and <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> (2-dimensional).</p></li>
+</ul>
+</section>
+<section id="create-a-pandas-series">
+<h2>Create a pandas <code class="docutils literal notranslate"><span class="pre">Series</span></code><a class="headerlink" href="#create-a-pandas-series" title="Permalink to this heading">#</a></h2>
+<section id="import-pandas">
+<h3>import pandas<a class="headerlink" href="#import-pandas" title="Permalink to this heading">#</a></h3>
+<p>First <code class="docutils literal notranslate"><span class="pre">import</span></code> the <code class="docutils literal notranslate"><span class="pre">pandas</span></code> package.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>This will allow us to access functions and methods in the pandas package in our Jupyter notebook.  But, we can use the Python keyword <code class="docutils literal notranslate"><span class="pre">as</span></code> to abbreviate <code class="docutils literal notranslate"><span class="pre">pandas</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="create-a-pandas-series-from-a-list">
+<h2>Create a pandas Series from a List<a class="headerlink" href="#create-a-pandas-series-from-a-list" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">people</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;MM&#39;</span><span class="p">,</span> <span class="s1">&#39;IM&#39;</span><span class="p">,</span> <span class="s1">&#39;CL&#39;</span><span class="p">]</span>
+
+<span class="n">faculty_series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">people</span><span class="p">)</span>
+
+<span class="n">faculty_series</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dept</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;STA&#39;</span><span class="p">,</span> <span class="s1">&#39;DCS&#39;</span><span class="p">,</span> <span class="s1">&#39;GGR&#39;</span><span class="p">]</span>
+
+<span class="n">department_series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">dept</span><span class="p">)</span>
+
+<span class="n">department_series</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="creating-a-boolean-series-based-on-a-condition">
+<h2>Creating a Boolean Series based on a Condition<a class="headerlink" href="#creating-a-boolean-series-based-on-a-condition" title="Permalink to this heading">#</a></h2>
+<p>Create a Series where the element is <code class="docutils literal notranslate"><span class="pre">True</span></code> if <code class="docutils literal notranslate"><span class="pre">department_series</span></code> is equal to <code class="docutils literal notranslate"><span class="pre">STA</span></code> and <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">department_series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">dept</span><span class="p">)</span>
+
+<span class="n">department_series</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">department_series</span> <span class="o">==</span> <span class="s1">&#39;STA&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Create a Series where the element is <code class="docutils literal notranslate"><span class="pre">True</span></code> if <code class="docutils literal notranslate"><span class="pre">department_series</span></code> is equal to <code class="docutils literal notranslate"><span class="pre">GGR</span></code> and <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">department_series</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Create a Series where the element is <code class="docutils literal notranslate"><span class="pre">True</span></code> if <code class="docutils literal notranslate"><span class="pre">department_series</span></code> is equal to <code class="docutils literal notranslate"><span class="pre">STA</span></code> <strong>OR</strong> <code class="docutils literal notranslate"><span class="pre">GGR</span></code> and <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">department_series</span><span class="p">)</span>
+
+<span class="p">(</span><span class="n">department_series</span> <span class="o">==</span> <span class="s1">&#39;STA&#39;</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">department_series</span> <span class="o">==</span> <span class="s1">&#39;GGR&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Create a Series where the element is <code class="docutils literal notranslate"><span class="pre">True</span></code> if <code class="docutils literal notranslate"><span class="pre">department_series</span></code> is equal to <code class="docutils literal notranslate"><span class="pre">STA</span></code> <strong>AND</strong> <code class="docutils literal notranslate"><span class="pre">GGR</span></code> and <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">department_series</span><span class="p">)</span>
+
+<span class="p">(</span><span class="n">department_series</span> <span class="o">==</span> <span class="s1">&#39;STA&#39;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">department_series</span> <span class="o">==</span> <span class="s1">&#39;GGR&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Create a Series where the element is<br />
+<code class="docutils literal notranslate"><span class="pre">True</span></code> if <code class="docutils literal notranslate"><span class="pre">department_series</span></code> equal to <code class="docutils literal notranslate"><span class="pre">STA</span></code> is <strong>NOT EQUAL</strong> to <code class="docutils literal notranslate"><span class="pre">department_series</span></code> equal to <code class="docutils literal notranslate"><span class="pre">GGR</span></code>,<br />
+and <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise (this is tricky 😨)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">department_series</span><span class="p">)</span>
+
+<span class="c1"># TRY!</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="boolean-logic-with-pandas-series">
+<h2>Boolean logic with pandas <code class="docutils literal notranslate"><span class="pre">Series</span></code><a class="headerlink" href="#boolean-logic-with-pandas-series" title="Permalink to this heading">#</a></h2>
+<p>When comparing Boolean Series in pandas we use different logical operators</p>
+<p><code class="docutils literal notranslate"><span class="pre">Series1</span> <span class="pre">=</span> <span class="pre">pd.Series([True,</span> <span class="pre">False,</span> <span class="pre">True])</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">Series2</span> <span class="pre">=</span> <span class="pre">pd.Series([False,</span> <span class="pre">False,</span> <span class="pre">True])</span></code></p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Operation</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Result of operation in a list</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Series1</span> <span class="pre">&amp;</span> <span class="pre">Series2</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Series1</span></code> and <code class="docutils literal notranslate"><span class="pre">Series</span> <span class="pre">2</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">[False,</span> <span class="pre">False,</span> <span class="pre">True]</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Series1</span> <span class="pre">|</span> <span class="pre">Series2</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Series1</span></code> or <code class="docutils literal notranslate"><span class="pre">Series</span> <span class="pre">2</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">[True,</span> <span class="pre">False,</span> <span class="pre">True]</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Series1</span> <span class="pre">!=</span> <span class="pre">Series2</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Series1</span></code> not equal to <code class="docutils literal notranslate"><span class="pre">Series</span> <span class="pre">2</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">[True,</span> <span class="pre">False,</span> <span class="pre">False]</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="create-a-pandas-dataframe-using-a-dictionary">
+<h2>Create a pandas <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> using a dictionary<a class="headerlink" href="#create-a-pandas-dataframe-using-a-dictionary" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>A dictionary store data in key-value pairs.</p></li>
+<li><p>A popular way to create a dictionary is to use curly braces {} and colons <code class="docutils literal notranslate"><span class="pre">:</span></code> to separate keys and values (<code class="docutils literal notranslate"><span class="pre">key:values</span></code>)</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">candy_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;candy&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;fuzzy peach&#39;</span><span class="p">,</span> <span class="s1">&#39;gummy bear&#39;</span><span class="p">,</span> <span class="s1">&#39;chocolate&#39;</span><span class="p">]}</span>
+
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>the <em>key</em> of <code class="docutils literal notranslate"><span class="pre">candy_dict</span></code> is <code class="docutils literal notranslate"><span class="pre">candy</span></code></p></li>
+<li><p>the  <em>values</em> of <code class="docutils literal notranslate"><span class="pre">candy</span></code> are: <code class="docutils literal notranslate"><span class="pre">'fuzzy</span> <span class="pre">peach',</span> <span class="pre">'gummy</span> <span class="pre">bear',</span> <span class="pre">'chocolate'</span></code></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">candy_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;candy&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;fuzzy peach&#39;</span><span class="p">,</span> <span class="s1">&#39;gummy bear&#39;</span><span class="p">,</span> <span class="s1">&#39;chocolate&#39;</span><span class="p">]}</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">candy_dict</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can create a <code class="docutils literal notranslate"><span class="pre">dict</span></code> of GGR274 course faculty.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;academic department&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;STA&#39;</span><span class="p">,</span> <span class="s1">&#39;DCS&#39;</span><span class="p">,</span> <span class="s1">&#39;GGR&#39;</span><span class="p">],</span> 
+        <span class="s1">&#39;faculty&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;MM&#39;</span><span class="p">,</span> <span class="s1">&#39;IM&#39;</span><span class="p">,</span> <span class="s1">&#39;CL&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;favourite candy&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;nurungji&#39;</span><span class="p">,</span> <span class="s1">&#39;gummy bear&#39;</span><span class="p">,</span> <span class="s1">&#39;chocolate&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;name length&#39;</span><span class="p">:</span> <span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="s1">&#39;Michael Moon&#39;</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="s1">&#39;Ilya Musabirov&#39;</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="s1">&#39;Chunjiang Li&#39;</span><span class="p">)]}</span>
+
+<span class="n">data</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s store <code class="docutils literal notranslate"><span class="pre">data</span></code> in a pandas <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now, let’s store the pandas <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> above in a variable called <code class="docutils literal notranslate"><span class="pre">GGR274fac_df</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">GGR274fac_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="n">GGR274fac_df</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="select-rows-of-a-dataframe-using-a-list-of-true-false-values-a-ka-boolean-values">
+<h2>Select rows of a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> using a list of  <code class="docutils literal notranslate"><span class="pre">True</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">False</span></code> values (a.ka. Boolean values)<a class="headerlink" href="#select-rows-of-a-dataframe-using-a-list-of-true-false-values-a-ka-boolean-values" title="Permalink to this heading">#</a></h2>
+<p>Let’s remove the second row.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">GGR274fac_df</span><span class="p">)</span>
+
+<span class="n">GGR274fac_df</span><span class="p">[[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>What happened?</p></li>
+<li><p>How can I remove the first row?</p></li>
+</ul>
+<p>GGR274fac_df[[True, False, False]]</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">IFrame</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://forms.office.com/Pages/ResponsePage.aspx?id=JsKqeAMvTUuQN7RtVsVSEC-tsJgdMo9KmhgqULaAHJxUMDVXRUM1VEI2TlVRS0IwVTNaSUIwS0VMQi4u&amp;embed=true&quot;</span>
+
+<span class="n">IFrame</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">width</span> <span class="o">=</span> <span class="mi">640</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="mi">480</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="select-columns-of-a-dataframe-using-a-list-of-column-names">
+<h2>Select columns of a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> using a list of Column Names<a class="headerlink" href="#select-columns-of-a-dataframe-using-a-list-of-column-names" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>The column names in the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> <code class="docutils literal notranslate"><span class="pre">GGR274fac_df</span></code> can be obtained using <code class="docutils literal notranslate"><span class="pre">list()</span></code>.</p></li>
+<li><p>There are other ways to get the column names, but we will focus on this for now.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="n">GGR274fac_df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>To select the column <code class="docutils literal notranslate"><span class="pre">favourite</span> <span class="pre">candy</span></code> we can add it in quotation marks inside the square brackets <code class="docutils literal notranslate"><span class="pre">[]</span></code> at the end of the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> name.</p></li>
+<li><p>For example: <span class="math notranslate nohighlight">\(\underbrace{\texttt{GGR274fac_df}}_\text{DataFrame Name}\underbrace{\texttt{['favourite candy']}}_\text{Column Name}\)</span></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">GGR274fac_df</span><span class="p">[</span><span class="s1">&#39;favourite candy&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_list_of_column_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;favourite candy&#39;</span><span class="p">,</span> <span class="s1">&#39;name length&#39;</span><span class="p">]</span>
+
+<span class="n">GGR274fac_df</span><span class="p">[</span><span class="n">my_list_of_column_names</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">GGR274fac_df</span><span class="p">[[</span><span class="s1">&#39;favourite candy&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">GGR274fac_df_column_names</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">GGR274fac_df</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The list of column names is: </span><span class="si">{</span><span class="n">GGR274fac_df_column_names</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">GGR274fac_df_column_names</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">GGR274fac_df</span><span class="p">[</span><span class="n">GGR274fac_df_column_names</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Which column number will be selected using:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">GGR274fac_df[GGR274fac_df_column_names[0]]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">GGR274fac_df[GGR274fac_df_column_names[3]]</span></code></p></li>
+</ul>
+</section>
+<section id="select-rows-of-a-dataframe">
+<h2>Select rows of a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code><a class="headerlink" href="#select-rows-of-a-dataframe" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Rows can be selected from a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> using a list of Boolean values.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\underbrace{\texttt{GGR274fac_df}}_\text{DataFrame Name}\underbrace{\texttt{[[True, False, True]]}}_\text{List of Boolean values}\)</span></p>
+<ul>
+<li><p>selects the first and third rows of the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> since the first and third values are <code class="docutils literal notranslate"><span class="pre">True</span></code>.  The second row is not selected since the second element of the list is <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_important_condition</span> <span class="o">=</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">]</span>
+
+<span class="n">my_important_condition</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">GGR274fac_cond</span> <span class="o">=</span> <span class="n">GGR274fac_df</span><span class="p">[</span><span class="n">my_important_condition</span><span class="p">]</span> <span class="c1"># select rows</span>
+
+<span class="n">my_important_columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;academic department&#39;</span><span class="p">,</span> <span class="s1">&#39;faculty&#39;</span><span class="p">]</span>
+
+<span class="n">GGR274fac_cond</span><span class="p">[</span><span class="n">my_important_columns</span><span class="p">]</span> <span class="c1"># select columns</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="select-rows-and-columns-of-a-dataframe">
+<h2>Select rows and columns of a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code><a class="headerlink" href="#select-rows-and-columns-of-a-dataframe" title="Permalink to this heading">#</a></h2>
+<p>Combine these two lines of code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">GGR274fac_cond</span> <span class="o">=</span> <span class="n">GGR274fac_df</span><span class="p">[</span><span class="n">my_important_condition</span><span class="p">]</span> <span class="c1"># select rows</span>
+
+<span class="n">GGR274fac_cond</span><span class="p">[</span><span class="n">mycolumns</span><span class="p">]</span> <span class="c1"># select columns</span>
+</pre></div>
+</div>
+<p>to select rows and columns.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">GGR274fac_df</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="exercise">
+<h2>Exercise<a class="headerlink" href="#exercise" title="Permalink to this heading">#</a></h2>
+<p>Create a pandas <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> with three columns:</p>
+<ol class="arabic simple">
+<li><p>Your first name and two people sitting close to you – your (new??) friends.</p></li>
+<li><p>The distance from home to the U of T St. George campus for you and your two (new?) friends.</p></li>
+<li><p>The month and day of you and your two (new?) friends’ birthday.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create your DataFrame here.</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="create-a-pandas-dataframe-from-a-csv-file">
+<h2>Create a <code class="docutils literal notranslate"><span class="pre">pandas</span></code> <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> from a csv file<a class="headerlink" href="#create-a-pandas-dataframe-from-a-csv-file" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Data will usually be stored in a file such as a csv.</p></li>
+<li><p>It’s very <strong>convenient</strong> to “read” the file into a pandas <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>, since pandas has many methods that can manipulate <em>tabular</em> data.  Otherwise, we could use base python to do these manipulations.</p></li>
+</ul>
+</section>
+<section id="time-use-dataset">
+<h2>Time Use dataset<a class="headerlink" href="#time-use-dataset" title="Permalink to this heading">#</a></h2>
+<p>Dataset: Statistics Canada General Social Survey’s (GSS) Time Use (TU) Survey</p>
+<ul class="simple">
+<li><p>Tracks how people spend their time</p></li>
+<li><p>two parts:</p>
+<ul>
+<li><p>an <em>episode</em> file where each row describes an event for one person; each person has one row per event (like “make coffee”) that they experienced.</p></li>
+<li><p>a <em>main</em> file that includes meta-information about the individuals and also includes summary information from the <em>episode</em> file; there is 1 row of information per person.</p></li>
+</ul>
+</li>
+<li><p>we will stick to the ‘main’ file for now</p></li>
+</ul>
+<p>The data are stored in file <code class="docutils literal notranslate"><span class="pre">gss_tu2016_main_file.csv</span></code>. The name uses abbreviations:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">GSS</span></code>: general social survey</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tu2016</span></code>: time use from the year 2016</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">csv</span></code>: comma-separated values</p></li>
+</ul>
+</section>
+<section id="import-time-use-survey-data-using-pandas">
+<h2>Import Time Use Survey Data using pandas<a class="headerlink" href="#import-time-use-survey-data-using-pandas" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">timeuse_filename</span> <span class="o">=</span> <span class="s1">&#39;gss_tu2016_main_file.csv&#39;</span>
+
+<span class="n">time_use_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">timeuse_filename</span><span class="p">)</span>
+
+<span class="n">time_use_data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="question">
+<h2>Question<a class="headerlink" href="#question" title="Permalink to this heading">#</a></h2>
+<p><strong><em>Do urban residents with more children report feeling more rushed than those with fewer children?</em></strong></p>
+<p>Let’s narrow the question even further …</p>
+<p><strong><em>Do urban residents with one or more children report feeling more rushed every day versus never feeling rushed than those with no children?</em></strong></p>
+<p>Among <strong>urban respondents</strong> that <strong>feel rushed daily or never feel rushed</strong> our data analysis will consist of computing the two proportions:</p>
+<div class="math notranslate nohighlight">
+\[\text{Proportion}_\text{at least one kid} = \frac{\text{Number of respondents that feel rushed daily}}{\text{Number  of respondents with at least one kid that never feel rushed or feel rushed daily}}\]</div>
+<div class="math notranslate nohighlight">
+\[\text{Proportion}_\text{no kids} = \frac{\text{Number of respondents that feel rushed daily}}{\text{Number  of respondents with no kids that never feel rushed or feel rushed daily}}\]</div>
+</section>
+<section id="wrangle-the-time-use-survey-data">
+<h2>Wrangle the Time Use Survey Data<a class="headerlink" href="#wrangle-the-time-use-survey-data" title="Permalink to this heading">#</a></h2>
+<p>Create a new DataFrame with only the relevant columns needed for the data analysis.  In other words, create a subset of <code class="docutils literal notranslate"><span class="pre">time_use_data</span></code>.</p>
+<section id="selecting-columns-from-a-dataframe">
+<h3>Selecting columns from a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code><a class="headerlink" href="#selecting-columns-from-a-dataframe" title="Permalink to this heading">#</a></h3>
+<p>What columns are relevant?</p>
+<p>To create an easy to use data set we will only keep the following columns:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">CASEID</span></code>:     participant ID</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">luc_rst</span></code>:    large urban centre vs rural and small towns</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">chh0014c</span></code>:   number of kids 14 or under</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gtu_110</span></code>:    feeling rushed</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">important_columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;CASEID&quot;</span><span class="p">,</span><span class="s2">&quot;luc_rst&quot;</span><span class="p">,</span><span class="s2">&quot;chh0014c&quot;</span><span class="p">,</span><span class="s2">&quot;gtu_110&quot;</span><span class="p">]</span> 
+
+<span class="n">subset_time_use_data</span> <span class="o">=</span> <span class="n">time_use_data</span><span class="p">[</span><span class="n">important_columns</span><span class="p">]</span>
+<span class="n">subset_time_use_data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="rename-columns">
+<h2>Rename columns<a class="headerlink" href="#rename-columns" title="Permalink to this heading">#</a></h2>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">rename</span></code> function to rename columns.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">columnnames</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;CASEID&#39;</span><span class="p">:</span> <span class="s1">&#39;Participant ID&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;luc_rst&#39;</span><span class="p">:</span> <span class="s1">&#39;Urban/Rural&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;chh0014c&#39;</span><span class="p">:</span> <span class="s1">&#39;Kids under 14&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;gtu_110&#39;</span><span class="p">:</span> <span class="s1">&#39;Feeling Rushed&#39;</span><span class="p">}</span>
+
+<span class="n">subset_time_use_data_colnames</span> <span class="o">=</span> <span class="n">subset_time_use_data</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">columnnames</span><span class="p">)</span>
+
+<span class="nb">list</span><span class="p">(</span><span class="n">subset_time_use_data_colnames</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>From the code book</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="n">luc_rst</span>            <span class="n">Population</span> <span class="n">centre</span> <span class="n">indicator</span>
+
+           <span class="n">VALUE</span>  <span class="n">LABEL</span>
+               <span class="mi">1</span>  <span class="n">Larger</span> <span class="n">urban</span> <span class="n">population</span> <span class="n">centres</span> <span class="p">(</span><span class="n">CMA</span><span class="o">/</span><span class="n">CA</span><span class="p">)</span>
+               <span class="mi">2</span>  <span class="n">Rural</span> <span class="n">areas</span> <span class="ow">and</span> <span class="n">small</span> <span class="n">population</span> <span class="n">centres</span> <span class="p">(</span><span class="n">non</span> <span class="n">CMA</span><span class="o">/</span><span class="n">CA</span><span class="p">)</span>
+               <span class="mi">3</span>  <span class="n">Prince</span> <span class="n">Edward</span> <span class="n">Island</span>
+               <span class="mi">6</span>  <span class="n">Valid</span> <span class="n">skip</span>
+               <span class="mi">7</span>  <span class="n">Don</span><span class="s1">&#39;t know</span>
+               <span class="mi">8</span>  <span class="n">Refusal</span>
+               <span class="mi">9</span>  <span class="n">Not</span> <span class="n">stated</span>
+
+           <span class="n">Data</span> <span class="nb">type</span><span class="p">:</span> <span class="n">numeric</span>
+           <span class="n">Missing</span><span class="o">-</span><span class="n">data</span> <span class="n">codes</span><span class="p">:</span> <span class="mi">6</span><span class="o">-</span><span class="mi">9</span>
+           <span class="n">Record</span><span class="o">/</span><span class="n">column</span><span class="p">:</span> <span class="mi">1</span><span class="o">/</span><span class="mi">59</span>
+
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="n">chh0014c</span>           <span class="n">Child</span><span class="p">(</span><span class="n">ren</span><span class="p">)</span> <span class="ow">in</span> <span class="n">household</span> <span class="o">-</span> <span class="mi">0</span> <span class="n">to</span> <span class="mi">14</span> <span class="n">years</span>
+
+           <span class="n">VALUE</span>  <span class="n">LABEL</span>
+               <span class="mi">0</span>  <span class="kc">None</span>
+               <span class="mi">1</span>  <span class="n">One</span>
+               <span class="mi">2</span>  <span class="n">Two</span>
+               <span class="mi">3</span>  <span class="n">Three</span> <span class="ow">or</span> <span class="n">more</span>
+               <span class="mi">6</span>  <span class="n">Valid</span> <span class="n">skip</span>
+               <span class="mi">7</span>  <span class="n">Don</span><span class="s1">&#39;t know</span>
+               <span class="mi">8</span>  <span class="n">Refusal</span>
+               <span class="mi">9</span>  <span class="n">Not</span> <span class="n">stated</span>
+
+           <span class="n">Data</span> <span class="nb">type</span><span class="p">:</span> <span class="n">numeric</span>
+           <span class="n">Missing</span><span class="o">-</span><span class="n">data</span> <span class="n">codes</span><span class="p">:</span> <span class="mi">6</span><span class="o">-</span><span class="mi">9</span>
+           <span class="n">Record</span><span class="o">/</span><span class="n">column</span><span class="p">:</span> <span class="mi">1</span><span class="o">/</span><span class="mi">40</span>
+
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+      <span class="n">gtu_110</span>            <span class="n">General</span> <span class="n">time</span> <span class="n">use</span> <span class="o">-</span> <span class="n">Feel</span> <span class="n">rushed</span>
+
+           <span class="n">VALUE</span>  <span class="n">LABEL</span>
+               <span class="mi">1</span>  <span class="n">Every</span> <span class="n">day</span>
+               <span class="mi">2</span>  <span class="n">A</span> <span class="n">few</span> <span class="n">times</span> <span class="n">a</span> <span class="n">week</span>
+               <span class="mi">3</span>  <span class="n">About</span> <span class="n">once</span> <span class="n">a</span> <span class="n">week</span>
+               <span class="mi">4</span>  <span class="n">About</span> <span class="n">once</span> <span class="n">a</span> <span class="n">month</span>
+               <span class="mi">5</span>  <span class="n">Less</span> <span class="n">than</span> <span class="n">once</span> <span class="n">a</span> <span class="n">month</span>
+               <span class="mi">6</span>  <span class="n">Never</span>
+              <span class="mi">96</span>  <span class="n">Valid</span> <span class="n">skip</span>
+              <span class="mi">97</span>  <span class="n">Don</span><span class="s1">&#39;t know</span>
+              <span class="mi">98</span>  <span class="n">Refusal</span>
+              <span class="mi">99</span>  <span class="n">Not</span> <span class="n">stated</span>
+
+           <span class="n">Data</span> <span class="nb">type</span><span class="p">:</span> <span class="n">numeric</span>
+           <span class="n">Missing</span><span class="o">-</span><span class="n">data</span> <span class="n">codes</span><span class="p">:</span> <span class="mi">96</span><span class="o">-</span><span class="mi">99</span>
+           <span class="n">Record</span><span class="o">/</span><span class="n">columns</span><span class="p">:</span> <span class="mi">1</span><span class="o">/</span><span class="mi">60</span><span class="o">-</span><span class="mi">61</span>
+
+</pre></div>
+</div>
+</section>
+<section id="select-respondents-that-live-in-urban-areas">
+<h2>Select respondents that live in urban areas<a class="headerlink" href="#select-respondents-that-live-in-urban-areas" title="Permalink to this heading">#</a></h2>
+<p>Select the <code class="docutils literal notranslate"><span class="pre">Urban/Rural</span></code> column.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="n">luc_rst</span>            <span class="n">Population</span> <span class="n">centre</span> <span class="n">indicator</span>
+
+           <span class="n">VALUE</span>  <span class="n">LABEL</span>
+               <span class="mi">1</span>  <span class="n">Larger</span> <span class="n">urban</span> <span class="n">population</span> <span class="n">centres</span> <span class="p">(</span><span class="n">CMA</span><span class="o">/</span><span class="n">CA</span><span class="p">)</span>
+               <span class="mi">2</span>  <span class="n">Rural</span> <span class="n">areas</span> <span class="ow">and</span> <span class="n">small</span> <span class="n">population</span> <span class="n">centres</span> <span class="p">(</span><span class="n">non</span> <span class="n">CMA</span><span class="o">/</span><span class="n">CA</span><span class="p">)</span>
+               <span class="mi">3</span>  <span class="n">Prince</span> <span class="n">Edward</span> <span class="n">Island</span>
+               <span class="mi">6</span>  <span class="n">Valid</span> <span class="n">skip</span>
+               <span class="mi">7</span>  <span class="n">Don</span><span class="s1">&#39;t know</span>
+               <span class="mi">8</span>  <span class="n">Refusal</span>
+               <span class="mi">9</span>  <span class="n">Not</span> <span class="n">stated</span>
+
+           <span class="n">Data</span> <span class="nb">type</span><span class="p">:</span> <span class="n">numeric</span>
+           <span class="n">Missing</span><span class="o">-</span><span class="n">data</span> <span class="n">codes</span><span class="p">:</span> <span class="mi">6</span><span class="o">-</span><span class="mi">9</span>
+           <span class="n">Record</span><span class="o">/</span><span class="n">column</span><span class="p">:</span> <span class="mi">1</span><span class="o">/</span><span class="mi">59</span>
+
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">urbanrural_col</span> <span class="o">=</span> <span class="n">subset_time_use_data_colnames</span><span class="p">[</span><span class="s2">&quot;Urban/Rural&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Create a Boolean variable that is <code class="docutils literal notranslate"><span class="pre">True</span></code> if respondent lives in urban area and <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">urban</span> <span class="c1"># crate the Boolean variable</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Look at the <code class="docutils literal notranslate"><span class="pre">head</span></code> (first 5 rows) of the Series using <code class="docutils literal notranslate"><span class="pre">.head()</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">urban</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can combine</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">urbanrural_col</span> <span class="o">=</span> <span class="n">subset_time_use_data_colnames</span><span class="p">[</span><span class="s2">&quot;Urban/Rural&quot;</span><span class="p">]</span>
+
+<span class="n">urban</span> <span class="o">=</span> <span class="n">urbanrural_col</span> <span class="o">==</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>into one line of code</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">urban</span> <span class="o">=</span> <span class="p">(</span><span class="n">subset_time_use_data_colnames</span><span class="p">[</span><span class="s2">&quot;Urban/Rural&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">urban</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="c1"># add up the total number of `True` values</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Select all the participants (rows) who live in urban areas in <code class="docutils literal notranslate"><span class="pre">subset_time_use_data_colnames</span></code> using the Boolean series <code class="docutils literal notranslate"><span class="pre">urban</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">subset_time_use_data_colnames</span><span class="p">[</span><span class="n">urban</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">subset_time_use_data_colnames</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>There are 17 390 rows and 4 columns in <code class="docutils literal notranslate"><span class="pre">subset_time_use_data_colnames</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DataFrame.shape</span></code> returns a <em>tuple</em> (a Python data type that stores multiple values).</p></li>
+<li><p>Items in a tuple can be accessed in a similar way to a list.</p></li>
+</ul>
+</section>
+<section id="define-a-dataframe-with-only-urban-respondents-and-relevant-columns">
+<h2>Define a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> with only urban respondents and relevant columns<a class="headerlink" href="#define-a-dataframe-with-only-urban-respondents-and-relevant-columns" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">urban_df</span> <span class="o">=</span> <span class="n">subset_time_use_data_colnames</span><span class="p">[</span><span class="n">urban</span><span class="p">]</span>
+
+<span class="n">urban_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="examine-the-distributions-of-each-column-using-value-counts">
+<h2>Examine the <em>distributions</em> of each column using <code class="docutils literal notranslate"><span class="pre">value_counts()</span></code><a class="headerlink" href="#examine-the-distributions-of-each-column-using-value-counts" title="Permalink to this heading">#</a></h2>
+<p>Distribution of <code class="docutils literal notranslate"><span class="pre">Kids</span> <span class="pre">under</span> <span class="pre">14</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">urban_df</span><span class="p">[</span><span class="s1">&#39;Kids under 14&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="n">chh0014c</span>           <span class="n">Child</span><span class="p">(</span><span class="n">ren</span><span class="p">)</span> <span class="ow">in</span> <span class="n">household</span> <span class="o">-</span> <span class="mi">0</span> <span class="n">to</span> <span class="mi">14</span> <span class="n">years</span>
+
+           <span class="n">VALUE</span>  <span class="n">LABEL</span>
+               <span class="mi">0</span>  <span class="kc">None</span>
+               <span class="mi">1</span>  <span class="n">One</span>
+               <span class="mi">2</span>  <span class="n">Two</span>
+               <span class="mi">3</span>  <span class="n">Three</span> <span class="ow">or</span> <span class="n">more</span>
+               <span class="mi">6</span>  <span class="n">Valid</span> <span class="n">skip</span>
+               <span class="mi">7</span>  <span class="n">Don</span><span class="s1">&#39;t know</span>
+               <span class="mi">8</span>  <span class="n">Refusal</span>
+               <span class="mi">9</span>  <span class="n">Not</span> <span class="n">stated</span>
+
+           <span class="n">Data</span> <span class="nb">type</span><span class="p">:</span> <span class="n">numeric</span>
+           <span class="n">Missing</span><span class="o">-</span><span class="n">data</span> <span class="n">codes</span><span class="p">:</span> <span class="mi">6</span><span class="o">-</span><span class="mi">9</span>
+           <span class="n">Record</span><span class="o">/</span><span class="n">column</span><span class="p">:</span> <span class="mi">1</span><span class="o">/</span><span class="mi">40</span>
+
+</pre></div>
+</div>
+<p>Distribution of <code class="docutils literal notranslate"><span class="pre">Feeling</span> <span class="pre">Rushed</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">urban_df</span><span class="p">[</span><span class="s1">&#39;Feeling Rushed&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+      <span class="n">gtu_110</span>            <span class="n">General</span> <span class="n">time</span> <span class="n">use</span> <span class="o">-</span> <span class="n">Feel</span> <span class="n">rushed</span>
+
+           <span class="n">VALUE</span>  <span class="n">LABEL</span>
+               <span class="mi">1</span>  <span class="n">Every</span> <span class="n">day</span>
+               <span class="mi">2</span>  <span class="n">A</span> <span class="n">few</span> <span class="n">times</span> <span class="n">a</span> <span class="n">week</span>
+               <span class="mi">3</span>  <span class="n">About</span> <span class="n">once</span> <span class="n">a</span> <span class="n">week</span>
+               <span class="mi">4</span>  <span class="n">About</span> <span class="n">once</span> <span class="n">a</span> <span class="n">month</span>
+               <span class="mi">5</span>  <span class="n">Less</span> <span class="n">than</span> <span class="n">once</span> <span class="n">a</span> <span class="n">month</span>
+               <span class="mi">6</span>  <span class="n">Never</span>
+              <span class="mi">96</span>  <span class="n">Valid</span> <span class="n">skip</span>
+              <span class="mi">97</span>  <span class="n">Don</span><span class="s1">&#39;t know</span>
+              <span class="mi">98</span>  <span class="n">Refusal</span>
+              <span class="mi">99</span>  <span class="n">Not</span> <span class="n">stated</span>
+
+           <span class="n">Data</span> <span class="nb">type</span><span class="p">:</span> <span class="n">numeric</span>
+           <span class="n">Missing</span><span class="o">-</span><span class="n">data</span> <span class="n">codes</span><span class="p">:</span> <span class="mi">96</span><span class="o">-</span><span class="mi">99</span>
+           <span class="n">Record</span><span class="o">/</span><span class="n">columns</span><span class="p">:</span> <span class="mi">1</span><span class="o">/</span><span class="mi">60</span><span class="o">-</span><span class="mi">61</span>
+
+</pre></div>
+</div>
+<p>Distribution of <code class="docutils literal notranslate"><span class="pre">Urban/Rural</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">urban_df</span><span class="p">[</span><span class="s1">&#39;Urban/Rural&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s compute</p>
+<div class="math notranslate nohighlight">
+\[\text{Proportion}_\text{at least one kid} = \frac{\text{Number of respondents that feel rushed daily}}{\text{Number  of respondents with at least one kid that never feel rushed or feel rushed daily}}\]</div>
+<div class="math notranslate nohighlight">
+\[\text{Proportion}_\text{no kids} = \frac{\text{Number of respondents that feel rushed daily}}{\text{Number  of respondents with no kids that never feel rushed or feel rushed daily}}\]</div>
+<p>to answer</p>
+<p><strong><em>Do urban residents with one or more children report feeling more rushed every day versus never feeling rushed than those with no children?</em></strong></p>
+<p>Let’s start with the denominator of <span class="math notranslate nohighlight">\(\text{Proportion}_\text{at least one kid}\)</span>:</p>
+<p><span class="math notranslate nohighlight">\({\text{Number  of respondents with at least one kid that never feel rushed or feel rushed daily}}\)</span></p>
+<p>Define a Boolean variable <code class="docutils literal notranslate"><span class="pre">kids_norush</span></code> that is:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if:</p>
+<ul>
+<li><p>a respondent has at least one kid (<code class="docutils literal notranslate"><span class="pre">urban_df['Kids</span> <span class="pre">under</span> <span class="pre">14']</span> <span class="pre">&gt;=</span> <span class="pre">1</span></code>) <strong>and</strong></p></li>
+<li><p>never feels rushed (<code class="docutils literal notranslate"><span class="pre">urban_df['Feeling</span> <span class="pre">Rushed']</span> <span class="pre">==</span> <span class="pre">6</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">kids_norush</span> <span class="o">=</span> <span class="p">(</span><span class="n">urban_df</span><span class="p">[</span><span class="s1">&#39;Kids under 14&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">urban_df</span><span class="p">[</span><span class="s1">&#39;Feeling Rushed&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">6</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Define a Boolean variable <code class="docutils literal notranslate"><span class="pre">kids_rush</span></code> that is:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if:</p>
+<ul>
+<li><p>a respondent has at least one kid (<code class="docutils literal notranslate"><span class="pre">urban_df['Kids</span> <span class="pre">under</span> <span class="pre">14']</span> <span class="pre">&gt;=</span> <span class="pre">1</span></code>) <strong>and</strong></p></li>
+<li><p>never feels rushed (<code class="docutils literal notranslate"><span class="pre">urban_df['Feeling</span> <span class="pre">Rushed']</span> <span class="pre">==</span> <span class="pre">1</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">kids_rush</span> <span class="o">=</span> <span class="p">((</span><span class="n">urban_df</span><span class="p">[</span><span class="s1">&#39;Kids under 14&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">urban_df</span><span class="p">[</span><span class="s1">&#39;Feeling Rushed&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Compute the total number respondents with <code class="docutils literal notranslate"><span class="pre">urban_df[Kids</span> <span class="pre">under</span> <span class="pre">14]</span> <span class="pre">&gt;=</span> <span class="pre">1</span></code> that feel rushed daily or never feel rushed.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Total_kids_norush</span> <span class="o">=</span> <span class="n">kids_norush</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> 
+
+<span class="n">Total_kids_rush</span> <span class="o">=</span> <span class="n">kids_rush</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+<span class="n">Total_kids_norush</span> <span class="o">+</span> <span class="n">Total_kids_rush</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now compute the proportion that feel rushed among those with at least one kid.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">prop_kids</span> <span class="o">=</span> <span class="n">Total_kids_rush</span> <span class="o">/</span> <span class="p">(</span><span class="n">Total_kids_norush</span> <span class="o">+</span> <span class="n">Total_kids_rush</span><span class="p">)</span>
+
+<span class="n">prop_kids</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s do the same for respondents with no kids</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nokids_norush</span> <span class="o">=</span> <span class="p">((</span><span class="n">urban_df</span><span class="p">[</span><span class="s1">&#39;Kids under 14&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">urban_df</span><span class="p">[</span><span class="s1">&#39;Feeling Rushed&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="n">nokids_rush</span> <span class="o">=</span> <span class="p">((</span><span class="n">urban_df</span><span class="p">[</span><span class="s1">&#39;Kids under 14&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">urban_df</span><span class="p">[</span><span class="s1">&#39;Feeling Rushed&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">))</span>
+
+<span class="n">Total_nokids_norush</span> <span class="o">=</span> <span class="n">nokids_norush</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> 
+
+<span class="n">Total_nokids_rush</span> <span class="o">=</span> <span class="n">nokids_rush</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+<span class="n">prop_nokids</span> <span class="o">=</span> <span class="n">Total_nokids_rush</span><span class="o">/</span><span class="p">(</span><span class="n">Total_nokids_norush</span> <span class="o">+</span> <span class="n">Total_nokids_rush</span><span class="p">)</span>
+
+<span class="n">prop_nokids</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s multiply by 100 and round to decimal places to express as a percentage and print out an informative description of the statistic.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">percent_kids</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">prop_kids</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="n">percent_nokids</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">prop_nokids</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">percent_kids</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">percent_nokids</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s add a more detailed description.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nokidstext</span> <span class="o">=</span> <span class="s1">&#39;The percentage of respondents with kids that feel rushed is&#39;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">nokidstext</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">percent_kids</span><span class="si">}</span><span class="s2">%.&quot;</span><span class="p">)</span> <span class="c1"># print interpretation of percent with kids</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span> <span class="c1"># add a blank line</span>
+
+<span class="n">kidstext</span> <span class="o">=</span> <span class="s1">&#39;The percentage of respondents with no kids that feel rushed is&#39;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">kidstext</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">percent_nokids</span><span class="si">}</span><span class="s2">%.&quot;</span><span class="p">)</span> <span class="c1"># print interpretation of percent with no kids</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>  <span class="c1"># add a blank line</span>
+
+<span class="n">difftext</span> <span class="o">=</span> <span class="s1">&#39;more respondents with kids feel rushed compared to respondents without kids.&#39;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">percent_kids</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">percent_nokids</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s2">% </span><span class="si">{</span><span class="n">difftext</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># feel free to further experiment with the DataFrame</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./weekly-materials/week04/lecture"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../../week03/homework/Homework_3.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">GGR274 Homework 3</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pandas"><code class="docutils literal notranslate"><span class="pre">pandas</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-example-1">Data Example 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-example-2">Data Example 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-example-3">Data Example 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-data">Raw Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comma-separated-value-csv-files">Comma Separated Value (csv) Files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">pandas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-pandas-series">Create a pandas <code class="docutils literal notranslate"><span class="pre">Series</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-pandas">import pandas</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-pandas-series-from-a-list">Create a pandas Series from a List</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-boolean-series-based-on-a-condition">Creating a Boolean Series based on a Condition</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#boolean-logic-with-pandas-series">Boolean logic with pandas <code class="docutils literal notranslate"><span class="pre">Series</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-pandas-dataframe-using-a-dictionary">Create a pandas <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> using a dictionary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#select-rows-of-a-dataframe-using-a-list-of-true-false-values-a-ka-boolean-values">Select rows of a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> using a list of  <code class="docutils literal notranslate"><span class="pre">True</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">False</span></code> values (a.ka. Boolean values)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#select-columns-of-a-dataframe-using-a-list-of-column-names">Select columns of a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> using a list of Column Names</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#select-rows-of-a-dataframe">Select rows of a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#select-rows-and-columns-of-a-dataframe">Select rows and columns of a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise">Exercise</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-pandas-dataframe-from-a-csv-file">Create a <code class="docutils literal notranslate"><span class="pre">pandas</span></code> <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> from a csv file</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#time-use-dataset">Time Use dataset</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-time-use-survey-data-using-pandas">Import Time Use Survey Data using pandas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question">Question</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wrangle-the-time-use-survey-data">Wrangle the Time Use Survey Data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#selecting-columns-from-a-dataframe">Selecting columns from a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rename-columns">Rename columns</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#select-respondents-that-live-in-urban-areas">Select respondents that live in urban areas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#define-a-dataframe-with-only-urban-respondents-and-relevant-columns">Define a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> with only urban respondents and relevant columns</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examine-the-distributions-of-each-column-using-value-counts">Examine the <em>distributions</em> of each column using <code class="docutils literal notranslate"><span class="pre">value_counts()</span></code></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By GGR274 Instructors
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
