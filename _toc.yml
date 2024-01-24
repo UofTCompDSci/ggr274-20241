@@ -58,3 +58,7 @@ parts:
     #  title: Lab 3 Solutions
     - file: weekly-materials/week03/homework/Homework_3.ipynb
       title: Homework 03 Notebook
+  - caption: Week 4
+    chapters:
+    - file: weekly-materials/week04/lecture/Class4_GGR274_MM.ipynb
+      title: Prof. Moon's Notebook
