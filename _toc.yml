@@ -37,7 +37,7 @@ parts:
     - file: weekly-materials/week01/homework/Homework_1.ipynb
       title: Homework 01 Notebook
     - file: weekly-materials/week01/homework/Homework_1_solution.ipynb
-      title: Homework 01 Notebook
+      title: Homework 01 Solutions
   - caption: Week 2
     chapters:
     - file: weekly-materials/week02/lecture/Class2_GGR274_DL_IM.ipynb
@@ -62,3 +62,12 @@ parts:
     chapters:
     - file: weekly-materials/week04/lecture/Class4_GGR274_MM.ipynb
       title: Prof. Moon's Notebook
+    - file: weekly-materials/week04/lab/Lab_4.ipynb
+      title: Lab 04 Notebook
+    # - file: weekly-materials/week04/lab/Lab_4_solutions.ipynb
+    #   title: Lab 04 Solutions
+    - file: weekly-materials/week04/homework/Homework_4.ipynb
+      title: Homework 04 Notebook
+    # - file: weekly-materials/week04/homework/Homework_4_solution.ipynb
+    #   title: Homework 04 Solutions
+    
