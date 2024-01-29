@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>GGR274 Week 1: Computation, Python, and JupyterHub &#8212; Computation and Data Science for Social Sciences</title>
   
@@ -29,41 +28,45 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
   <script src="../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
-    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=afe5de03"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'weekly-materials/week01/lecture/Class1_GGR274_IM';</script>
-    <link rel="shortcut icon" href="../../../_static/favicon.png"/>
+    <link rel="icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="GGR274 Lab 1: Intro to Data Science Tools" href="../lab/Lab_1.html" />
@@ -155,7 +158,18 @@ const thebe_selector_output = ".output, .cell_output"
     <p class="title logo__title">Computation and Data Science for Social Sciences</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -420,20 +434,20 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="ggr274-week-1-computation-python-and-jupyterhub">
-<h1>GGR274 Week 1: Computation, Python, and JupyterHub<a class="headerlink" href="#ggr274-week-1-computation-python-and-jupyterhub" title="Permalink to this heading">#</a></h1>
+<h1>GGR274 Week 1: Computation, Python, and JupyterHub<a class="headerlink" href="#ggr274-week-1-computation-python-and-jupyterhub" title="Link to this heading">#</a></h1>
 <p>David Liu, Ilya Musabirov</p>
 <section id="what-is-programming">
-<h2>What is programming?<a class="headerlink" href="#what-is-programming" title="Permalink to this heading">#</a></h2>
+<h2>What is programming?<a class="headerlink" href="#what-is-programming" title="Link to this heading">#</a></h2>
 <p>A <strong>computer program</strong> is a set of instructions for a computer to execute.</p>
 <p>Just as humans have languages like English to communicate with each other, a <strong>programming language</strong> is a language that allows humans to communicate these instructions to a computer.</p>
 </section>
 <section id="python">
-<h2>Python!<a class="headerlink" href="#python" title="Permalink to this heading">#</a></h2>
+<h2>Python!<a class="headerlink" href="#python" title="Link to this heading">#</a></h2>
 <p>In this course, we’ll be using the <strong>Python</strong> programming language.</p>
 <a class="reference internal image-reference" href="https://www.python.org/static/community_logos/python-logo-master-v3-TM.png"><img alt="Python logo" src="https://www.python.org/static/community_logos/python-logo-master-v3-TM.png" style="width: 600px;" /></a>
 </section>
 <section id="why-python">
-<h2>Why Python?<a class="headerlink" href="#why-python" title="Permalink to this heading">#</a></h2>
+<h2>Why Python?<a class="headerlink" href="#why-python" title="Link to this heading">#</a></h2>
 <p>Python is…</p>
 <ul class="simple">
 <li><p>beginner friendly (code looks a lot like English)</p></li>
@@ -443,7 +457,7 @@ document.write(`
 </ul>
 </section>
 <section id="writing-python-code">
-<h2>Writing Python code<a class="headerlink" href="#writing-python-code" title="Permalink to this heading">#</a></h2>
+<h2>Writing Python code<a class="headerlink" href="#writing-python-code" title="Link to this heading">#</a></h2>
 <p>You’ve seen examples of Python code earlier this lecture. Next week, we’ll start going over the basics of Python programming, but for now, think of Python code as a <em>sequence of very precise instructions that your computer can understand</em>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -467,12 +481,12 @@ Wow Ilya, you&#39;re already 39 years old? You should be resting more!
 </div>
 </section>
 <section id="notebooks">
-<h2>Notebooks!<a class="headerlink" href="#notebooks" title="Permalink to this heading">#</a></h2>
+<h2>Notebooks!<a class="headerlink" href="#notebooks" title="Link to this heading">#</a></h2>
 <p>Traditionally, Python code was written in <code class="docutils literal notranslate"><span class="pre">.py</span></code> files, called <strong>Python modules</strong>.</p>
 <center><img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Python_Code.png" alt="Image of Python code" width="500"></center>
 </section>
 <section id="id1">
-<h2>Notebooks!<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<h2>Notebooks!<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
 <p>In this course, we’ll use <strong>Jupyter notebooks</strong> to write Python code.</p>
 <p>Notebooks let us mix:</p>
 <ul class="simple">
@@ -484,15 +498,15 @@ Wow Ilya, you&#39;re already 39 years old? You should be resting more!
 </ul>
 </section>
 <section id="id2">
-<h2>Notebooks!<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<h2>Notebooks!<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
 <p><strong>Fun fact</strong>: Jupyter, the software that lets us create notebooks, is written in Python!</p>
 <a class="reference internal image-reference" href="https://jupyter.org/assets/logos/rectanglelogo-greytext-orangebody-greymoons.svg"><img alt="Jupyter logo" src="https://jupyter.org/assets/logos/rectanglelogo-greytext-orangebody-greymoons.svg" width="500" /></a>
 </section>
 <section id="do-i-need-to-download-and-install-python-and-jupyter">
-<h2>Do I need to download and install Python and Jupyter?<a class="headerlink" href="#do-i-need-to-download-and-install-python-and-jupyter" title="Permalink to this heading">#</a></h2>
+<h2>Do I need to download and install Python and Jupyter?<a class="headerlink" href="#do-i-need-to-download-and-install-python-and-jupyter" title="Link to this heading">#</a></h2>
 <center><img src="https://underdefense.com/wp-content/uploads/2018/02/1uVYPjj-KTqigXjGC-w7L-7f_4jPtZ00-uzL4iUo-1.jpeg" alt="Meme about software installation wizard" width="500"></center></section>
 <section id="no-software-installation-required">
-<h2>No software installation required!<a class="headerlink" href="#no-software-installation-required" title="Permalink to this heading">#</a></h2>
+<h2>No software installation required!<a class="headerlink" href="#no-software-installation-required" title="Link to this heading">#</a></h2>
 <p>In this course, we’ll be using <strong>JupyterHub</strong> (<a class="reference external" href="https://jupyter.utoronto.ca">https://jupyter.utoronto.ca</a>), which runs Python and Jupyter for us online.</p>
 <ul class="simple">
 <li><p>You can login to JupyterHub from anywhere with an Internet collection</p></li>
@@ -501,7 +515,7 @@ Wow Ilya, you&#39;re already 39 years old? You should be resting more!
 </ul>
 </section>
 <section id="jupyterhub-demo">
-<h2>JupyterHub Demo!<a class="headerlink" href="#jupyterhub-demo" title="Permalink to this heading">#</a></h2>
+<h2>JupyterHub Demo!<a class="headerlink" href="#jupyterhub-demo" title="Link to this heading">#</a></h2>
 <p>Two ways of accessing JupyterHub:</p>
 <ol class="arabic">
 <li><p>Go to <a class="reference external" href="https://jupyter.utoronto.ca">https://jupyter.utoronto.ca</a></p></li>
@@ -511,7 +525,7 @@ Wow Ilya, you&#39;re already 39 years old? You should be resting more!
 </ol>
 </section>
 <section id="learning-and-learning-to-program-some-things-to-remember">
-<h2>Learning and Learning to Program. Some things to remember<a class="headerlink" href="#learning-and-learning-to-program-some-things-to-remember" title="Permalink to this heading">#</a></h2>
+<h2>Learning and Learning to Program. Some things to remember<a class="headerlink" href="#learning-and-learning-to-program-some-things-to-remember" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Computer programming languages are actually for people, not for computers :)</p></li>
 <li><p>To some extent, learning a new programming language is quite like learning a new (written) human language, but … easier</p>
@@ -533,7 +547,7 @@ Wow Ilya, you&#39;re already 39 years old? You should be resting more!
 </li>
 </ul>
 <section id="why-learning-is-difficult">
-<h3>Why learning is difficult?<a class="headerlink" href="#why-learning-is-difficult" title="Permalink to this heading">#</a></h3>
+<h3>Why learning is difficult?<a class="headerlink" href="#why-learning-is-difficult" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://theeducationhub.org.nz/an-introduction-to-cognitive-load-theory/">An Intro to Cognitive Load Theory (TheEducation Hub)</a></p></li>
 <li><p><a class="reference external" href="https://cdn.theeducationhub.org.nz/wp-content/uploads/2021/02/Cognitive-load-theory-fig1-1024x566.png">Cognitive Load Theory Memory Model</a></p></li>
@@ -541,7 +555,7 @@ Wow Ilya, you&#39;re already 39 years old? You should be resting more!
 </section>
 </section>
 <section id="coding-example-ai-edited">
-<h2>Coding Example (AI-edited)<a class="headerlink" href="#coding-example-ai-edited" title="Permalink to this heading">#</a></h2>
+<h2>Coding Example (AI-edited)<a class="headerlink" href="#coding-example-ai-edited" title="Link to this heading">#</a></h2>
 <p>Example 1:</p>
 <div class="highlight-perl notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="w"> </span><span class="nb">join</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">map</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nb">scalar</span><span class="w"> </span><span class="nb">reverse</span><span class="w"> </span><span class="nv">$_</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="nb">split</span><span class="w"> </span><span class="sr">/ /</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Hello, this is a sample sentence.&quot;</span><span class="p">;</span>
 </pre></div>
@@ -630,7 +644,7 @@ Wow Ilya, you&#39;re already 39 years old? You should be resting more!
 </pre></div>
 </div>
 <section id="some-active-self-learning-strategies">
-<h3>Some Active (Self-)Learning Strategies<a class="headerlink" href="#some-active-self-learning-strategies" title="Permalink to this heading">#</a></h3>
+<h3>Some Active (Self-)Learning Strategies<a class="headerlink" href="#some-active-self-learning-strategies" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Activating Prior Knowledge</p></li>
 <li><p>Distributing Practice (not cramming!) and Interleaving (not creating interruptions!)</p></li>
@@ -638,7 +652,7 @@ Wow Ilya, you&#39;re already 39 years old? You should be resting more!
 </ul>
 </section>
 <section id="from-strategies-to-tactics">
-<h3>From strategies to tactics<a class="headerlink" href="#from-strategies-to-tactics" title="Permalink to this heading">#</a></h3>
+<h3>From strategies to tactics<a class="headerlink" href="#from-strategies-to-tactics" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Reading your own code and the code of others, highlight and annotate it (notebooks are perfect for that)</p>
 <ul>

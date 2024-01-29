@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>GGR274 Lab 3: Introduction to Programming, Part 2 &#8212; Computation and Data Science for Social Sciences</title>
   
@@ -29,41 +28,45 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
   <script src="../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
-    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=afe5de03"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'weekly-materials/week03/lab/Lab_3';</script>
-    <link rel="shortcut icon" href="../../../_static/favicon.png"/>
+    <link rel="icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="GGR274 Homework 3" href="../homework/Homework_3.html" />
@@ -155,7 +158,18 @@ const thebe_selector_output = ".output, .cell_output"
     <p class="title logo__title">Computation and Data Science for Social Sciences</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -417,24 +431,24 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="ggr274-lab-3-introduction-to-programming-part-2">
-<h1>GGR274 Lab 3: Introduction to Programming, Part 2<a class="headerlink" href="#ggr274-lab-3-introduction-to-programming-part-2" title="Permalink to this heading">#</a></h1>
+<h1>GGR274 Lab 3: Introduction to Programming, Part 2<a class="headerlink" href="#ggr274-lab-3-introduction-to-programming-part-2" title="Link to this heading">#</a></h1>
 <section id="logistics">
-<h2>Logistics<a class="headerlink" href="#logistics" title="Permalink to this heading">#</a></h2>
+<h2>Logistics<a class="headerlink" href="#logistics" title="Link to this heading">#</a></h2>
 <p>Like last week, our lab grade will be based on attendance and submission of a few small tasks to MarkUs during the lab session (or by 23:59 on Thursday).</p>
 <p>Complete the tasks in this Jupyter notebook and submit your completed file to <a class="reference external" href="https://markus-ds.teach.cs.toronto.edu">MarkUs</a>.
 Here are the instructions for submitting to MarkUs (same as last week):</p>
 <ol class="arabic simple">
-<li><p>Download this file (<code class="docutils literal notranslate"><span class="pre">Lab_3.ipynb</span></code>) from JupyterHub. (See <a class="reference internal" href="../../../guides/jupyterhub_guide.html"><span class="doc std std-doc">our JupyterHub Guide</span></a> for detailed instructions.)</p></li>
-<li><p>Submit this file to MarkUs under the <strong>lab3</strong> assignment. (See <a class="reference internal" href="../../../guides/markus_guide.html"><span class="doc std std-doc">our MarkUs Guide</span></a> for detailed instructions.)</p></li>
+<li><p>Download this file (<code class="docutils literal notranslate"><span class="pre">Lab_3.ipynb</span></code>) from JupyterHub. (See <a class="reference internal" href="../../../guides/jupyterhub_guide.html"><span class="std std-doc">our JupyterHub Guide</span></a> for detailed instructions.)</p></li>
+<li><p>Submit this file to MarkUs under the <strong>lab3</strong> assignment. (See <a class="reference internal" href="../../../guides/markus_guide.html"><span class="std std-doc">our MarkUs Guide</span></a> for detailed instructions.)</p></li>
 </ol>
 <p>Note: there’s no autograding set up for this week’s lab, but your TA will be checking that your submitted lab file is complete as part of your “lab attendance” grade.</p>
 </section>
 <section id="running-example-canadian-elections">
-<h2>Running example: Canadian Elections<a class="headerlink" href="#running-example-canadian-elections" title="Permalink to this heading">#</a></h2>
-<p>Today we’ll work with a small dataset of Canada’s 338 electoral districts, sourced from <a class="reference external" href="https://www.elections.ca/content.aspx?section=res&amp;dir=cir/list&amp;document=index338&amp;lang=e#list">Elections Canada</a> and containing the names and populations of Canada’s 338 electoral ridings.</p>
+<h2>Running example: Canadian Elections<a class="headerlink" href="#running-example-canadian-elections" title="Link to this heading">#</a></h2>
+<p>Today we’ll work with a small dataset of Canada’s 338 electoral districts, sourced from <a class="reference external" href="https://www.elections.ca/content.aspx?section=res&amp;amp;dir=cir/list&amp;amp;document=index338&amp;amp;lang=e#list">Elections Canada</a> and containing the names and populations of Canada’s 338 electoral ridings.</p>
 <p>We’ve placed a copy of this dataset in the same folder as this lab notebook (you can see this in JupyterHub by going to <strong>File -&gt; Open</strong>).</p>
 <section id="reading-file-data-open-and-readlines">
-<h3>Reading file data: <code class="docutils literal notranslate"><span class="pre">open</span></code> and <code class="docutils literal notranslate"><span class="pre">readlines</span></code><a class="headerlink" href="#reading-file-data-open-and-readlines" title="Permalink to this heading">#</a></h3>
+<h3>Reading file data: <code class="docutils literal notranslate"><span class="pre">open</span></code> and <code class="docutils literal notranslate"><span class="pre">readlines</span></code><a class="headerlink" href="#reading-file-data-open-and-readlines" title="Link to this heading">#</a></h3>
 <p>Now that we’ve seen the file, let’s learn how to read the file’s contents into Python.</p>
 <p>Formally, we do this in two steps:</p>
 <ol class="arabic simple">
@@ -462,7 +476,7 @@ Here are the instructions for submitting to MarkUs (same as last week):</p>
 </div>
 </section>
 <section id="data-processing">
-<h3>Data processing<a class="headerlink" href="#data-processing" title="Permalink to this heading">#</a></h3>
+<h3>Data processing<a class="headerlink" href="#data-processing" title="Link to this heading">#</a></h3>
 <p>Let’s look at just the first line from the file:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -497,7 +511,7 @@ Here are the instructions for submitting to MarkUs (same as last week):</p>
 </div>
 </section>
 <section id="now-we-can-compute">
-<h3>Now we can compute!<a class="headerlink" href="#now-we-can-compute" title="Permalink to this heading">#</a></h3>
+<h3>Now we can compute!<a class="headerlink" href="#now-we-can-compute" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_populations</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">populations</span><span class="p">)</span>
@@ -512,7 +526,7 @@ Here are the instructions for submitting to MarkUs (same as last week):</p>
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="task-1-calculations">
-<h1>Task 1: Calculations<a class="headerlink" href="#task-1-calculations" title="Permalink to this heading">#</a></h1>
+<h1>Task 1: Calculations<a class="headerlink" href="#task-1-calculations" title="Link to this heading">#</a></h1>
 <p>Compute <strong>average</strong> population.
 Print total, max, min population, including relevant variable in <code class="docutils literal notranslate"><span class="pre">f-string</span></code>. An example f-string for number of entries <code class="docutils literal notranslate"><span class="pre">f&quot;Number</span> <span class="pre">of</span> <span class="pre">population</span> <span class="pre">entries:</span> <span class="pre">{num_populations}.&quot;</span></code></p>
 <div class="cell docutils container">
@@ -523,7 +537,7 @@ Print total, max, min population, including relevant variable in <code class="do
 </div>
 </div>
 <section id="task-2-extracting-district-names">
-<h2>Task 2: Extracting district names<a class="headerlink" href="#task-2-extracting-district-names" title="Permalink to this heading">#</a></h2>
+<h2>Task 2: Extracting district names<a class="headerlink" href="#task-2-extracting-district-names" title="Link to this heading">#</a></h2>
 <p>Next, create a empty list called <code class="docutils literal notranslate"><span class="pre">district_names</span></code>. Then, use a loop and the <code class="docutils literal notranslate"><span class="pre">str.split(&quot;,&quot;)</span></code> method to calculate just the name of each district, and add each name to <code class="docutils literal notranslate"><span class="pre">district_names</span></code>.</p>
 <p>(This again follows what we did lecture quite closely, so you might want to take a few minutes to review that.)</p>
 <div class="cell docutils container">
@@ -536,7 +550,7 @@ Print total, max, min population, including relevant variable in <code class="do
 <p><strong>Comprehension Question</strong>: after you complete this task, try changing <code class="docutils literal notranslate"><span class="pre">str.split(&quot;,&quot;)</span></code> to <code class="docutils literal notranslate"><span class="pre">str.split()</span></code> and re-run the cell. What happens in this case, and why does this occur?</p>
 </section>
 <section id="task-3-filtering-names">
-<h2>Task 3: Filtering names<a class="headerlink" href="#task-3-filtering-names" title="Permalink to this heading">#</a></h2>
+<h2>Task 3: Filtering names<a class="headerlink" href="#task-3-filtering-names" title="Link to this heading">#</a></h2>
 <p>Compute a list of the names of electoral districts that contain the string <code class="docutils literal notranslate"><span class="pre">&quot;Toronto&quot;</span></code>.</p>
 <p>To do so, you should use a for loop that iterates over <code class="docutils literal notranslate"><span class="pre">district_names</span></code>, and whose body contains an if statement.</p>
 <div class="cell docutils container">

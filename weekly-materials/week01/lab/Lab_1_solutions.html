@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>GGR274 Lab 1: Intro to Data Science Tools &#8212; Computation and Data Science for Social Sciences</title>
   
@@ -29,41 +28,45 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
   <script src="../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
-    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=afe5de03"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'weekly-materials/week01/lab/Lab_1_solutions';</script>
-    <link rel="shortcut icon" href="../../../_static/favicon.png"/>
+    <link rel="icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="GG274 Homework 1: A Python Intro" href="../homework/Homework_1.html" />
@@ -155,7 +158,18 @@ const thebe_selector_output = ".output, .cell_output"
     <p class="title logo__title">Computation and Data Science for Social Sciences</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -435,13 +449,13 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="ggr274-lab-1-intro-to-data-science-tools">
-<h1>GGR274 Lab 1: Intro to Data Science Tools<a class="headerlink" href="#ggr274-lab-1-intro-to-data-science-tools" title="Permalink to this heading">#</a></h1>
+<h1>GGR274 Lab 1: Intro to Data Science Tools<a class="headerlink" href="#ggr274-lab-1-intro-to-data-science-tools" title="Link to this heading">#</a></h1>
 <section id="first-step-open-this-notebook-in-jupyterhub">
-<h2>FIRST STEP: open this notebook in JupyterHub!<a class="headerlink" href="#first-step-open-this-notebook-in-jupyterhub" title="Permalink to this heading">#</a></h2>
+<h2>FIRST STEP: open this notebook in JupyterHub!<a class="headerlink" href="#first-step-open-this-notebook-in-jupyterhub" title="Link to this heading">#</a></h2>
 <p>Before doing anything else, please <strong>open this notebook in JupyterHub</strong> by clicking on the “Rocket ship” icon at the top of this page, and selecting “JupyterHub”.</p>
 </section>
 <section id="lab-introduction-and-learning-objectives">
-<h2>Lab Introduction and Learning Objectives<a class="headerlink" href="#lab-introduction-and-learning-objectives" title="Permalink to this heading">#</a></h2>
+<h2>Lab Introduction and Learning Objectives<a class="headerlink" href="#lab-introduction-and-learning-objectives" title="Link to this heading">#</a></h2>
 <p>In this lab, you will:</p>
 <ul class="simple">
 <li><p>Explore the features and interface of a Jupyter Notebook in JupyterHub</p></li>
@@ -459,38 +473,38 @@ document.write(`
 <p>If you get stuck, ask your TA for help!</p>
 </section>
 <section id="logistics">
-<h2>Logistics<a class="headerlink" href="#logistics" title="Permalink to this heading">#</a></h2>
-<p>Your lab grade will be based on attendance and submission of a few small tasks (see <span class="xref myst">Task-1A</span> and <span class="xref myst">Task-1B</span> below) to MarkUs during the lab session (or by 23:59 of the day of your lab).</p>
-<p>Complete the tasks in this Jupyter notebook and check your work on <a class="reference external" href="https://markus-ds.teach.cs.toronto.edu">MarkUs</a>.  Instructions on how to upload this Jupyter notebook to MarkUs are in the <span class="xref myst">upload to MarkUs section</span> below.</p>
+<h2>Logistics<a class="headerlink" href="#logistics" title="Link to this heading">#</a></h2>
+<p>Your lab grade will be based on attendance and submission of a few small tasks (see <a class="reference internal" href="#Task-1A"><span class="xref myst">Task-1A</span></a> and <a class="reference internal" href="#Task-1B"><span class="xref myst">Task-1B</span></a> below) to MarkUs during the lab session (or by 23:59 of the day of your lab).</p>
+<p>Complete the tasks in this Jupyter notebook and check your work on <a class="reference external" href="https://markus-ds.teach.cs.toronto.edu">MarkUs</a>.  Instructions on how to upload this Jupyter notebook to MarkUs are in the <a class="reference internal" href="#Task:-upload-to-MarkUs"><span class="xref myst">upload to MarkUs section</span></a> below.</p>
 <p>We have set up autograding on MarkUs to give you automated feedback on these lab exercises to help make sure you’re on track and ready for this week’s homework, so take advantage of it!</p>
 <p>To submit your work on MarkUs for autograding:</p>
 <ol class="arabic simple">
-<li><p>Download this file (<code class="docutils literal notranslate"><span class="pre">Lab_1.ipynb</span></code>) from JupyterHub. (See <a class="reference internal" href="../../../guides/jupyterhub_guide.html"><span class="doc std std-doc">our JupyterHub Guide</span></a> for detailed instructions.)</p></li>
-<li><p>Submit this file to MarkUs under the <strong>lab1</strong> assignment. (See <a class="reference internal" href="../../../guides/markus_guide.html"><span class="doc std std-doc">our MarkUs Guide</span></a> for detailed instructions.)</p></li>
-<li><p>Run the autograding for this lab on MarkUs and view the results. <em>You can resubmit to MarkUs and re-run the autograder as many times as you like.</em> (See <a class="reference internal" href="../../../guides/markus_guide.html"><span class="doc std std-doc">our MarkUs Guide</span></a> for detailed instructions.)</p></li>
+<li><p>Download this file (<code class="docutils literal notranslate"><span class="pre">Lab_1.ipynb</span></code>) from JupyterHub. (See <a class="reference internal" href="../../../guides/jupyterhub_guide.html"><span class="std std-doc">our JupyterHub Guide</span></a> for detailed instructions.)</p></li>
+<li><p>Submit this file to MarkUs under the <strong>lab1</strong> assignment. (See <a class="reference internal" href="../../../guides/markus_guide.html"><span class="std std-doc">our MarkUs Guide</span></a> for detailed instructions.)</p></li>
+<li><p>Run the autograding for this lab on MarkUs and view the results. <em>You can resubmit to MarkUs and re-run the autograder as many times as you like.</em> (See <a class="reference internal" href="../../../guides/markus_guide.html"><span class="std std-doc">our MarkUs Guide</span></a> for detailed instructions.)</p></li>
 </ol>
 </section>
 <section id="what-is-jupyterhub-notebook">
-<h2>What is JupyterHub Notebook?<a class="headerlink" href="#what-is-jupyterhub-notebook" title="Permalink to this heading">#</a></h2>
+<h2>What is JupyterHub Notebook?<a class="headerlink" href="#what-is-jupyterhub-notebook" title="Link to this heading">#</a></h2>
 <p>The tool you’re currently using to read this document is called a Jupyter Notebook, and you will be using this to complete labs and homeworks throughout the course as you write, document, and edit Python code to examine and work with data. You can also embed text and plots in notebooks, which makes it a great medium for combining code and analysis. JupyterHub is the server on which we store Jupyter Notebooks.</p>
 <p>Much like having to learn how to use a lab for a chemistry course, you will need to learn how to use data science equipment; JupyterHub and Jupyter notebooks are important data science lab tools. This first lab will take you on a tour of this Jupyter notebook.</p>
 <p>Without further ado, let’s explore.</p>
 </section>
 <section id="cells">
-<h2>Cells<a class="headerlink" href="#cells" title="Permalink to this heading">#</a></h2>
+<h2>Cells<a class="headerlink" href="#cells" title="Link to this heading">#</a></h2>
 <p>A Jupyter notebook page has cells that contain a Python program or formatted text. Each of the sections so far has been in a separate cell. You’ll learn how to create both kinds of cells and, soon, how to make useful graphs from data using Python.</p>
 <p>Some cells are “rich text”, like this one — bold text and large titles and so on. That’s Markdown, which is a markup language. We’ll start to explore that in the next cell.</p>
 <p>Some cells are code cells. You’ll type Python code to do data science, then you’ll run (and debug) it.</p>
 </section>
 <section id="markdown">
-<h2>Markdown<a class="headerlink" href="#markdown" title="Permalink to this heading">#</a></h2>
+<h2>Markdown<a class="headerlink" href="#markdown" title="Link to this heading">#</a></h2>
 <p>Jupyter notebooks allow you to edit code and text in one file, structured in ‘blocks’. Within a block, you can either run and edit code or rich text, but not both.</p>
 <p>Double-click on this sentence. It changes the cell to a text editor. To go back to the first view, click the <code class="docutils literal notranslate"><span class="pre">Run</span></code> button above, as seen in the Control Panel diagram below.</p>
 <p>Notice that the drop-down button says <code class="docutils literal notranslate"><span class="pre">Markdown</span></code>. Markdown is the format this cell is written in. You’ll learn how to use Markdown over the coming weeks.</p>
 <p>Your web browser is showing you the <a class="reference external" href="https://jupyter.utoronto.ca">JupyterHub&#64;UofT</a> website. That’s where your files, including this JupyterHub notebook, are stored. You are using your very own virtual computer running there, and only you have access to your files.</p>
 </section>
 <section id="control-panel">
-<h2>Control Panel<a class="headerlink" href="#control-panel" title="Permalink to this heading">#</a></h2>
+<h2>Control Panel<a class="headerlink" href="#control-panel" title="Link to this heading">#</a></h2>
 <p>Let’s get acquainted with the Jupyter notebook control panel. We will explore only the toolbar buttons, but feel free to explore the drop down menus (ex. ‘File’, ‘Edit’, …)</p>
 <p><img alt="test" src="../../../_images/JupyterControlPanel1.png" />
 <strong>Fig 1.1 - The control panel of the Jupyter Notebook</strong></p>
@@ -515,7 +529,7 @@ For a Markdown cell, the <strong>Run</strong> button will show the rich text vie
 Perhaps one of the more important functions, this dropdown menu lets you set the type of block you want (Markdown for text, Code for Python code).</p>
 </section>
 <section id="task-view-your-jupyterhub-files-and-folders">
-<h2>Task: view your JupyterHub files and folders<a class="headerlink" href="#task-view-your-jupyterhub-files-and-folders" title="Permalink to this heading">#</a></h2>
+<h2>Task: view your JupyterHub files and folders<a class="headerlink" href="#task-view-your-jupyterhub-files-and-folders" title="Link to this heading">#</a></h2>
 <p>Throughout the labs and homeworks, you will have tasks to do. Each cell containing a task will be labelled like this one.</p>
 <p>The program your web browser is running is talking to the <a class="reference external" href="https://jupyter.utoronto.ca">JupyterHub&#64;UofT</a> website. That’s where your files, including this Jupyter notebook, are stored. You are using your very own virtual computer running there, and only you have access to your files.</p>
 <p>To see all of your files on JupyterHub:</p>
@@ -529,15 +543,15 @@ Perhaps one of the more important functions, this dropdown menu lets you set the
 <p>When you’re done poking around, come back here.</p>
 </section>
 <section id="task-edit-a-markdown-cell-to-learn-some-formatting-tricks">
-<h2>Task: edit a Markdown cell to learn some formatting tricks<a class="headerlink" href="#task-edit-a-markdown-cell-to-learn-some-formatting-tricks" title="Permalink to this heading">#</a></h2>
+<h2>Task: edit a Markdown cell to learn some formatting tricks<a class="headerlink" href="#task-edit-a-markdown-cell-to-learn-some-formatting-tricks" title="Link to this heading">#</a></h2>
 <p>We use hashtags (#) to create titles and headings. Particularly, the <em>fewer</em> the hashtags, the larger the text. So we use ‘#’ to create our titles, then ‘##’ or ‘###’ or ‘####’, etc. to make our headings and sub-headings. Double click to open the Markdown editor to see how these are specified</p>
 </section>
 <section id="sub-heading">
-<h2>Sub-heading<a class="headerlink" href="#sub-heading" title="Permalink to this heading">#</a></h2>
+<h2>Sub-heading<a class="headerlink" href="#sub-heading" title="Link to this heading">#</a></h2>
 <section id="sub-sub-headings">
-<h3>sub-sub headings<a class="headerlink" href="#sub-sub-headings" title="Permalink to this heading">#</a></h3>
+<h3>sub-sub headings<a class="headerlink" href="#sub-sub-headings" title="Link to this heading">#</a></h3>
 <section id="sub-sub-sub-heading-do-we-really-need-more-than-3">
-<h4>sub-sub-sub heading (do we really need more than 3?)<a class="headerlink" href="#sub-sub-sub-heading-do-we-really-need-more-than-3" title="Permalink to this heading">#</a></h4>
+<h4>sub-sub-sub heading (do we really need more than 3?)<a class="headerlink" href="#sub-sub-sub-heading-do-we-really-need-more-than-3" title="Link to this heading">#</a></h4>
 <p>Markdown supports some rich text features, such as bolding, italics, and lists:</p>
 <p><strong>BOLD</strong> text is ‘wrapped’ by two opening and two closing underscores or by surrounding with two <strong>asterisks</strong>.</p>
 <p>Same for <em>italics!</em> or, with a single asterisk, <em>italics, perhaps?</em></p>
@@ -567,13 +581,13 @@ Perhaps one of the more important functions, this dropdown menu lets you set the
 </section>
 </section>
 <section id="embedding-images">
-<h2>Embedding images<a class="headerlink" href="#embedding-images" title="Permalink to this heading">#</a></h2>
+<h2>Embedding images<a class="headerlink" href="#embedding-images" title="Link to this heading">#</a></h2>
 <p>It’s fun and straightforward to embed images from the web. In this case, we will need to know the URL of the image. Go find your favourite cat picture and get the URL, or use this one if you can’t decide:</p>
 <p><code class="docutils literal notranslate"><span class="pre">https://images.pexels.com/photos/2061057/pexels-photo-2061057.jpeg</span></code></p>
 <p>We need to specify a title for the image, followed by the file path (computer location) of the image. We start by adding an exclamation mark, followed by square brackets which wrap an image title of our choosing. Then, in round brackets, we specify the location of the URL.</p>
 </section>
 <section id="task-say-aww">
-<h2>Task: say aww<a class="headerlink" href="#task-say-aww" title="Permalink to this heading">#</a></h2>
+<h2>Task: say aww<a class="headerlink" href="#task-say-aww" title="Link to this heading">#</a></h2>
 <p>The Markdown to show an image looks like this:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>![cat.png](https://images.pexels.com/photos/2061057/pexels-photo-2061057.jpeg)
 </pre></div>
@@ -581,33 +595,33 @@ Perhaps one of the more important functions, this dropdown menu lets you set the
 <p>Notice that line is indented, so it appears in fixed width font. Un-indent it: delete the spaces before the <code class="docutils literal notranslate"><span class="pre">!</span></code>, then Run the cell to see the image. You are welcome to use your own image URL.</p>
 </section>
 <section id="task-see-what-a-link-to-a-webpage-looks-like">
-<h2>Task: See what a link to a webpage looks like<a class="headerlink" href="#task-see-what-a-link-to-a-webpage-looks-like" title="Permalink to this heading">#</a></h2>
+<h2>Task: See what a link to a webpage looks like<a class="headerlink" href="#task-see-what-a-link-to-a-webpage-looks-like" title="Link to this heading">#</a></h2>
 <p>You’ll often want to add links to other webpages, especially once you’ve started working on your project. It looks just like embedding an image, but you leave off the initial exclamation mark. Double-click this cell to see what it looks like.</p>
-<p><a class="reference external" href="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.reactiongifs.com%2Fwp-content%2Fgallery%2Fno%2Fjohn-cleese-no.gif&amp;f=1&amp;nofb=1">Is this a rickroll?</a></p>
+<p><a class="reference external" href="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.reactiongifs.com%2Fwp-content%2Fgallery%2Fno%2Fjohn-cleese-no.gif&amp;amp;f=1&amp;amp;nofb=1">Is this a rickroll?</a></p>
 </section>
 <section id="task-create-your-own-markdown-and-code-cells">
-<h2>Task: create your own Markdown and Code cells<a class="headerlink" href="#task-create-your-own-markdown-and-code-cells" title="Permalink to this heading">#</a></h2>
+<h2>Task: create your own Markdown and Code cells<a class="headerlink" href="#task-create-your-own-markdown-and-code-cells" title="Link to this heading">#</a></h2>
 <p>You can create your own cells. Click on this cell to select it (it should be highlighted compared to the other cells), then click the <code class="docutils literal notranslate"><span class="pre">+</span></code> button in the button bar above. This creates a Code cell by default.</p>
 <p>To change its type, click the cell and then click the drop-down menu where it says <code class="docutils literal notranslate"><span class="pre">Code</span></code>. Make it a <code class="docutils literal notranslate"><span class="pre">Markdown</span></code> cell, type anything you like in it, then click <code class="docutils literal notranslate"><span class="pre">Run</span></code>.</p>
 </section>
 <section id="task-save-your-work">
-<h2>Task: save your work!<a class="headerlink" href="#task-save-your-work" title="Permalink to this heading">#</a></h2>
+<h2>Task: save your work!<a class="headerlink" href="#task-save-your-work" title="Link to this heading">#</a></h2>
 <p>The Jupyter notebook you are interacting with right now is saved as a file on your JupyterHub virtual computer. It has a <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> extension.</p>
 <p>Make sure you save frequently by clicking the floppy disk icon in the button bar. Please do so now.</p>
 </section>
 <section id="select-and-move-multiple-cells">
-<h2>Select and move multiple cells<a class="headerlink" href="#select-and-move-multiple-cells" title="Permalink to this heading">#</a></h2>
+<h2>Select and move multiple cells<a class="headerlink" href="#select-and-move-multiple-cells" title="Link to this heading">#</a></h2>
 <p>You can swap the order of a cell by clicking on it and then clicking the up and down arrows in the button bar.</p>
 <p>You can select a sequence of cells by clicking the first cell you want, then holding down your shift key and clicking the last cell in the sequence. The up and down arrows move all of them at once.</p>
 <p>You don’t have to do this as a task, but you’re welcome to try it!</p>
 <section id="task-explore-the-menus">
-<h3>Task: explore the menus<a class="headerlink" href="#task-explore-the-menus" title="Permalink to this heading">#</a></h3>
+<h3>Task: explore the menus<a class="headerlink" href="#task-explore-the-menus" title="Link to this heading">#</a></h3>
 <p>Click on the <code class="docutils literal notranslate"><span class="pre">File</span></code> menu and skim the options.</p>
 <p>Do the same for the rest of the menus. You’ll use them a lot during the course.</p>
 </section>
 </section>
 <section id="task-1a">
-<h2>Task 1A<a class="headerlink" href="#task-1a" title="Permalink to this heading">#</a></h2>
+<h2>Task 1A<a class="headerlink" href="#task-1a" title="Link to this heading">#</a></h2>
 <p>Some tasks are labeled with a week number and a letter, like this one. These will be required to get your lab participation mark. This task is your first graded (submitted/not submitted) piece of work in the course! The “1” is the week number, and the “A” is used to identify the task within week 1.</p>
 <p>Create a <strong>Markdown</strong> cell below this cell. In your cell, add a heading titled <code class="docutils literal notranslate"><span class="pre">Task</span> <span class="pre">1A</span> <span class="pre">answer</span></code> (any heading level is fine). We will look for this title when we mark.</p>
 <p>In the new cell:</p>
@@ -618,14 +632,14 @@ Perhaps one of the more important functions, this dropdown menu lets you set the
 </ol>
 </section>
 <section id="task-1a-solution">
-<h2>Task 1A solution<a class="headerlink" href="#task-1a-solution" title="Permalink to this heading">#</a></h2>
+<h2>Task 1A solution<a class="headerlink" href="#task-1a-solution" title="Link to this heading">#</a></h2>
 <p>We learned that data science is very cool and opens up a lot of possibilities.
 Here is a picture of puppies:</p>
 <p><img alt="Puppies" src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=1" /></p>
 <p>This is a link to <a class="reference external" href="https://q.utoronto.ca/">Quercus</a>.</p>
 </section>
 <section id="task-1b">
-<h2>Task 1B<a class="headerlink" href="#task-1b" title="Permalink to this heading">#</a></h2>
+<h2>Task 1B<a class="headerlink" href="#task-1b" title="Link to this heading">#</a></h2>
 <p>Now, create a new <strong>Code</strong> cell below this cell. In it, write the following two lines of Python code:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">five</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">2</span>
 <span class="n">five</span> <span class="o">*</span> <span class="n">five</span>
@@ -652,14 +666,14 @@ Here is a picture of puppies:</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">Out</span></code> line shows the output from the last expression in the Code cell. You’ll learn how to control what gets displayed later.</p>
 </section>
 <section id="task-download-this-notebook">
-<h2>Task: download this notebook<a class="headerlink" href="#task-download-this-notebook" title="Permalink to this heading">#</a></h2>
+<h2>Task: download this notebook<a class="headerlink" href="#task-download-this-notebook" title="Link to this heading">#</a></h2>
 <p>Each week, you will submit notebooks from JupyterHub to MarkUs for grading.</p>
 <ol class="arabic simple">
 <li><p>Download this Jupyter notebook file to your computer: <code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">—&gt;</span> <span class="pre">Download</span> <span class="pre">as</span> <span class="pre">—&gt;</span> <span class="pre">Notebook</span> <span class="pre">(.ipynb)</span></code>.</p></li>
 </ol>
 <p><img alt="Download As" src="../../../_images/download1.png" /></p>
 <section id="warning-if-you-download-twice-you-need-to-rename-the-file">
-<h3>WARNING: if you download twice, you need to rename the file<a class="headerlink" href="#warning-if-you-download-twice-you-need-to-rename-the-file" title="Permalink to this heading">#</a></h3>
+<h3>WARNING: if you download twice, you need to rename the file<a class="headerlink" href="#warning-if-you-download-twice-you-need-to-rename-the-file" title="Link to this heading">#</a></h3>
 <p>If you download a second time, you’ll get a new file with a number appended. “Lab_1-1.ipynb” is used the second time you download, then “Lab_1-2.ipynb”, and so on. Before you submit, you need to:</p>
 <ol class="arabic simple">
 <li><p>Delete the old “Lab_1.ipynb” download.</p></li>
@@ -668,7 +682,7 @@ Here is a picture of puppies:</p>
 </section>
 </section>
 <section id="task-upload-to-markus">
-<h2>Task: upload to MarkUs<a class="headerlink" href="#task-upload-to-markus" title="Permalink to this heading">#</a></h2>
+<h2>Task: upload to MarkUs<a class="headerlink" href="#task-upload-to-markus" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p>Log in here: <a class="reference external" href="https://markus-ds.teach.cs.toronto.edu">https://markus-ds.teach.cs.toronto.edu</a> (Tip: Control/Command-click to open it in a new tab so you can still see these instructions.)</p></li>
 <li><p>Choose the <code class="docutils literal notranslate"><span class="pre">GGR274-2024-01</span></code> course.</p></li>
@@ -681,7 +695,7 @@ Here is a picture of puppies:</p>
 <p>You just submitted your lab 1 notebook!</p>
 </section>
 <section id="task-run-the-automated-tests">
-<h2>Task: run the automated tests<a class="headerlink" href="#task-run-the-automated-tests" title="Permalink to this heading">#</a></h2>
+<h2>Task: run the automated tests<a class="headerlink" href="#task-run-the-automated-tests" title="Link to this heading">#</a></h2>
 <p>We have an automated test that checks whether you’ve assigned the value <code class="docutils literal notranslate"><span class="pre">5</span></code> to variable <code class="docutils literal notranslate"><span class="pre">five</span></code> in your notebook, and you can (and should) run this test.</p>
 <ol class="arabic simple">
 <li><p>Click the <code class="docutils literal notranslate"><span class="pre">Automated</span> <span class="pre">Testing</span></code> tab.</p></li>

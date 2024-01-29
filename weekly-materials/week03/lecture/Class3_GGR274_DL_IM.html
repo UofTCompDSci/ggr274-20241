@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>GGR274 Lecture 3: Introduction to Programming, Part 2 &#8212; Computation and Data Science for Social Sciences</title>
   
@@ -29,43 +28,47 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
   <script src="../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
-    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=afe5de03"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'weekly-materials/week03/lecture/Class3_GGR274_DL_IM';</script>
-    <link rel="shortcut icon" href="../../../_static/favicon.png"/>
+    <link rel="icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="GGR274 Lab 3: Introduction to Programming, Part 2" href="../lab/Lab_3.html" />
@@ -157,7 +160,18 @@ const thebe_selector_output = ".output, .cell_output"
     <p class="title logo__title">Computation and Data Science for Social Sciences</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -394,12 +408,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recap">Recap</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning Objectives</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-example-music-preferences">Running Example: Music Preferences</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Recap:</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#q1-how-comparatively-enthusiastic-about-music-you-and-your-friend-are">Q1: How (comparatively) enthusiastic about music you and your friend are?</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise">Exercise:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#now-imagine-we-want-python-to-actually-tell-us-who-is-more-enthusiastic-about-music">Now imagine we want Python to actually tell us who is more enthusiastic about music.</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#if-statements">If statements</a><ul class="nav section-nav flex-column">
@@ -414,7 +423,6 @@ document.write(`
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#back-to-q2-how-would-you-approach-comparing-music-tastes-between-two-people">Back to Q2: How would you approach comparing music tastes between two people?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operating-on-collection-elements-for-loops">Operating on collection elements: For loops</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#for-loop-terminology">For loop terminology</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-loops-compute-and-print">Using loops: compute and print</a></li>
@@ -464,9 +472,9 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="ggr274-lecture-3-introduction-to-programming-part-2">
-<h1>GGR274 Lecture 3: Introduction to Programming, Part 2<a class="headerlink" href="#ggr274-lecture-3-introduction-to-programming-part-2" title="Permalink to this heading">#</a></h1>
+<h1>GGR274 Lecture 3: Introduction to Programming, Part 2<a class="headerlink" href="#ggr274-lecture-3-introduction-to-programming-part-2" title="Link to this heading">#</a></h1>
 <section id="recap">
-<h2>Recap<a class="headerlink" href="#recap" title="Permalink to this heading">#</a></h2>
+<h2>Recap<a class="headerlink" href="#recap" title="Link to this heading">#</a></h2>
 <p>Last lecture, we learned about:</p>
 <ul>
 <li><p>Five basic Python <strong>data types</strong>:</p>
@@ -538,7 +546,7 @@ document.write(`
 </ul>
 </section>
 <section id="learning-objectives">
-<h2>Learning Objectives<a class="headerlink" href="#learning-objectives" title="Permalink to this heading">#</a></h2>
+<h2>Learning Objectives<a class="headerlink" href="#learning-objectives" title="Link to this heading">#</a></h2>
 <p>Today’s lecture will be structured around the music preferences example you had in the previous lab. We will:</p>
 <ul class="simple">
 <li><p>introduce some additional types and Python constructs as we go and</p></li>
@@ -559,10 +567,10 @@ document.write(`
 </ul>
 </section>
 <section id="running-example-music-preferences">
-<h2>Running Example: Music Preferences<a class="headerlink" href="#running-example-music-preferences" title="Permalink to this heading">#</a></h2>
-<section id="id1">
-<h3>Recap:<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
-</section>
+<h2>Running Example: Music Preferences<a class="headerlink" href="#running-example-music-preferences" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><h3 class="rubric" id="id1">Recap:</h3>
+</div></blockquote>
 <blockquote>
 <div><p>In the cell below:</p>
 <ul class="simple">
@@ -596,6 +604,9 @@ Experiment more!</p></li>
 </div>
 </div>
 </div>
+<blockquote>
+<div><h2 class="rubric" id="q1-how-comparatively-enthusiastic-about-music-you-and-your-friend-are">Q1: How (comparatively) enthusiastic about music you and your friend are?</h2>
+</div></blockquote>
 <p>Potential approaches:</p>
 <ul class="simple">
 <li><p>E.g. mean of preferences:
@@ -617,11 +628,8 @@ Experiment more!</p></li>
 </div>
 </div>
 </div>
-</section>
-<section id="q1-how-comparatively-enthusiastic-about-music-you-and-your-friend-are">
-<h2>Q1: How (comparatively) enthusiastic about music you and your friend are?<a class="headerlink" href="#q1-how-comparatively-enthusiastic-about-music-you-and-your-friend-are" title="Permalink to this heading">#</a></h2>
 <section id="exercise">
-<h3>Exercise:<a class="headerlink" href="#exercise" title="Permalink to this heading">#</a></h3>
+<h3>Exercise:<a class="headerlink" href="#exercise" title="Link to this heading">#</a></h3>
 <p>What are other potential solutions and limitations?
 E.g. Do we consider hating some music as being enthusiastic/passionate?
 How we can change our solution to account for that?</p>
@@ -636,15 +644,15 @@ If you need some operations but don’t know how to do them yet, write in the ce
 </div>
 </div>
 <blockquote>
+<div><h3 class="rubric" id="now-imagine-we-want-python-to-actually-tell-us-who-is-more-enthusiastic-about-music">Now imagine we want Python to actually tell us who is more enthusiastic about music.</h3>
+</div></blockquote>
+<blockquote>
 <div><p>We are going to use one powerful Python language construct for that: <strong>If</strong> statements</p>
 </div></blockquote>
 </section>
-<section id="now-imagine-we-want-python-to-actually-tell-us-who-is-more-enthusiastic-about-music">
-<h3>Now imagine we want Python to actually tell us who is more enthusiastic about music.<a class="headerlink" href="#now-imagine-we-want-python-to-actually-tell-us-who-is-more-enthusiastic-about-music" title="Permalink to this heading">#</a></h3>
-</section>
 </section>
 <section id="if-statements">
-<h2>If statements<a class="headerlink" href="#if-statements" title="Permalink to this heading">#</a></h2>
+<h2>If statements<a class="headerlink" href="#if-statements" title="Link to this heading">#</a></h2>
 <p>An <strong>if statement</strong> is a kind of Python code that lets us <em>only execute some code if a specific condition is met</em>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -689,7 +697,7 @@ Expressions outside <strong>if branch</strong> will always be executed.</p>
 </div>
 </div>
 <section id="if-statement-terminology">
-<h3>If statement terminology<a class="headerlink" href="#if-statement-terminology" title="Permalink to this heading">#</a></h3>
+<h3>If statement terminology<a class="headerlink" href="#if-statement-terminology" title="Link to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="o">&lt;</span><span class="n">condition</span><span class="o">&gt;</span><span class="p">:</span>
     <span class="o">&lt;</span><span class="n">statement1</span><span class="o">&gt;</span>
     <span class="o">&lt;</span><span class="n">statement2</span><span class="o">&gt;</span>
@@ -700,7 +708,7 @@ Expressions outside <strong>if branch</strong> will always be executed.</p>
 <p>We call the statements indented on the line(s) after the colon the <strong>if branch</strong>.</p>
 <p><strong>Repeated Warning</strong>: indentation matters! Python uses indentation to determine what code is part of an if statement vs. what’s after the if statement.</p>
 <section id="id2">
-<h4>Exercise<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h4>
+<h4>Exercise<a class="headerlink" href="#id2" title="Link to this heading">#</a></h4>
 <p>Change the code so that Python would tell Toodle-oo independent of my tastes:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -722,7 +730,7 @@ Expressions outside <strong>if branch</strong> will always be executed.</p>
 </section>
 </section>
 <section id="if-elif-else">
-<h3><code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">elif</span></code>, <code class="docutils literal notranslate"><span class="pre">else</span></code><a class="headerlink" href="#if-elif-else" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">elif</span></code>, <code class="docutils literal notranslate"><span class="pre">else</span></code><a class="headerlink" href="#if-elif-else" title="Link to this heading">#</a></h3>
 <p>We can use an optional <strong>else block</strong> after the if block to execute code only when the if condition is False.</p>
 <p>Old code so we can see all of the variables we need. Mind you, this is a Markdown cell, so the code would not be executed and the values will come from previous cells</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_name</span> <span class="o">=</span> <span class="s2">&quot;Ilya&quot;</span>
@@ -781,7 +789,7 @@ Goodbye Ilya, nice to meet you. :)
 </div>
 </div>
 <section id="id3">
-<h4>Exercise<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h4>
+<h4>Exercise<a class="headerlink" href="#id3" title="Link to this heading">#</a></h4>
 <p>Change <code class="docutils literal notranslate"><span class="pre">my_average</span></code> to 4. Think which branch is going to be executed. Copy the code and test yourself</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -813,7 +821,7 @@ Goodbye Ilya, nice to meet you. :)
 </div>
 </section>
 <section id="id4">
-<h4>Exercise<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h4>
+<h4>Exercise<a class="headerlink" href="#id4" title="Link to this heading">#</a></h4>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_name</span> <span class="o">=</span> <span class="s2">&quot;Ilya&quot;</span>
 <span class="n">my_tastes</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
 <span class="n">friend_tastes</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">]</span>
@@ -823,6 +831,9 @@ Goodbye Ilya, nice to meet you. :)
 </div>
 <p>Change <code class="docutils literal notranslate"><span class="pre">my_name</span></code> to yours if you have not done that yet. Assign <code class="docutils literal notranslate"><span class="pre">friend_name</span></code>.
 Define <strong>if statement</strong> printing who likes music more, you or your friend.</p>
+<blockquote>
+<div><h2 class="rubric" id="back-to-q2-how-would-you-approach-comparing-music-tastes-between-two-people">Back to Q2: How would you approach comparing music tastes between two people?</h2>
+</div></blockquote>
 <p>Spend 10 seconds to recall your ideas</p>
 <blockquote>
 <div><p>It is clear that comparing average tastes does not make much sense to answer Q2.
@@ -837,11 +848,8 @@ It matters who exactly do we like/dislike and how strongly, so we need to do som
 </section>
 </section>
 </section>
-<section id="back-to-q2-how-would-you-approach-comparing-music-tastes-between-two-people">
-<h2>Back to Q2: How would you approach comparing music tastes between two people?<a class="headerlink" href="#back-to-q2-how-would-you-approach-comparing-music-tastes-between-two-people" title="Permalink to this heading">#</a></h2>
-</section>
 <section id="operating-on-collection-elements-for-loops">
-<h2>Operating on collection elements: For loops<a class="headerlink" href="#operating-on-collection-elements-for-loops" title="Permalink to this heading">#</a></h2>
+<h2>Operating on collection elements: For loops<a class="headerlink" href="#operating-on-collection-elements-for-loops" title="Link to this heading">#</a></h2>
 <p>If we want to execute a piece of code <em>once per element in a collection</em>,
 we can do this using a <strong>for loop</strong>.</p>
 <div class="cell docutils container">
@@ -864,7 +872,7 @@ we can do this using a <strong>for loop</strong>.</p>
 </div>
 </div>
 <section id="for-loop-terminology">
-<h3>For loop terminology<a class="headerlink" href="#for-loop-terminology" title="Permalink to this heading">#</a></h3>
+<h3>For loop terminology<a class="headerlink" href="#for-loop-terminology" title="Link to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="o">&lt;</span><span class="n">variable</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">collection</span><span class="o">&gt;</span><span class="p">:</span>
     <span class="o">&lt;</span><span class="n">statement1</span><span class="o">&gt;</span>
     <span class="o">&lt;</span><span class="n">statement2</span><span class="o">&gt;</span>
@@ -881,7 +889,7 @@ we can do this using a <strong>for loop</strong>.</p>
 </ul>
 </section>
 <section id="using-loops-compute-and-print">
-<h3>Using loops: compute and print<a class="headerlink" href="#using-loops-compute-and-print" title="Permalink to this heading">#</a></h3>
+<h3>Using loops: compute and print<a class="headerlink" href="#using-loops-compute-and-print" title="Link to this heading">#</a></h3>
 <p><em>Problem</em>: Add <code class="docutils literal notranslate"><span class="pre">1</span></code> to every preference value and print it</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -902,7 +910,7 @@ we can do this using a <strong>for loop</strong>.</p>
 </div>
 </section>
 <section id="using-loops-compute-and-save">
-<h3>Using loops: compute and save<a class="headerlink" href="#using-loops-compute-and-save" title="Permalink to this heading">#</a></h3>
+<h3>Using loops: compute and save<a class="headerlink" href="#using-loops-compute-and-save" title="Link to this heading">#</a></h3>
 <p><em>Problem</em>: Given a list of preferences, add <code class="docutils literal notranslate"><span class="pre">2</span></code> to every preference value and store it</p>
 <p>To accomplish this, we will:</p>
 <ol class="arabic simple">
@@ -929,10 +937,10 @@ we can do this using a <strong>for loop</strong>.</p>
 </div>
 </section>
 <section id="using-loops-filtering">
-<h3>Using loops: filtering<a class="headerlink" href="#using-loops-filtering" title="Permalink to this heading">#</a></h3>
+<h3>Using loops: filtering<a class="headerlink" href="#using-loops-filtering" title="Link to this heading">#</a></h3>
 <p>We can combine a <strong>for loop</strong> and an <strong>if statement</strong> to iterate over a collection, decide what to do based on whether the current value satisifies a condition.</p>
 <section id="id5">
-<h4>Exercise:<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h4>
+<h4>Exercise:<a class="headerlink" href="#id5" title="Link to this heading">#</a></h4>
 <p>Update the code to add <code class="docutils literal notranslate"><span class="pre">3</span></code> to each preference.
 Check if resulting preference is &gt; 5. If yes, use value 5, if no, use updated value</p>
 <div class="cell docutils container">
@@ -964,7 +972,7 @@ Check if resulting preference is &gt; 5. If yes, use value 5, if no, use updated
 </div>
 </section>
 <section id="id6">
-<h4>Exercise:<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h4>
+<h4>Exercise:<a class="headerlink" href="#id6" title="Link to this heading">#</a></h4>
 <p>Given a list of artists, compute the length of each name <strong>that contains an <code class="docutils literal notranslate"><span class="pre">&quot;e&quot;</span></code></strong>, and store each result.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1041,7 +1049,7 @@ comparison.append(a == b)</p>
 <p>What are problems of such a measure and how to improve it?</p>
 </section>
 <section id="id7">
-<h4>Exercise<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h4>
+<h4>Exercise<a class="headerlink" href="#id7" title="Link to this heading">#</a></h4>
 <p>Modify the code above to calculate absolute differences (ignoring the sign) and their sum</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1060,7 +1068,7 @@ comparison.append(a == b)</p>
 </section>
 </section>
 <section id="other-approaches">
-<h3>Other approaches<a class="headerlink" href="#other-approaches" title="Permalink to this heading">#</a></h3>
+<h3>Other approaches<a class="headerlink" href="#other-approaches" title="Link to this heading">#</a></h3>
 <p>E.g. treat lists as vectors and apply vector distances.similarities:</p>
 <ul class="simple">
 <li><p>Euclidean <span class="math notranslate nohighlight">\(d(\mathbf{a}, \mathbf{b}) = \sqrt{\sum_{i=1}^{n} (a_i - b_i)^2}\)</span></p></li>
@@ -1068,7 +1076,7 @@ comparison.append(a == b)</p>
 </section>
 </section>
 <section id="functions">
-<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this heading">#</a></h2>
+<h2>Functions<a class="headerlink" href="#functions" title="Link to this heading">#</a></h2>
 <p>note that I define my own function in the following code which we can then use as any built in function (e.g. <code class="docutils literal notranslate"><span class="pre">sum</span></code>, <code class="docutils literal notranslate"><span class="pre">len</span></code>, <code class="docutils literal notranslate"><span class="pre">zip</span></code>)  You will get back to it later.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1109,7 +1117,7 @@ comparison.append(a == b)</p>
 </div>
 </div>
 <section id="id8">
-<h3>Exercise<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
+<h3>Exercise<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
 <p>Create two other lists with diverging tastes and test our function. Think about edge cases</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1146,7 +1154,7 @@ comparison.append(a == b)</p>
 </section>
 </section>
 <section id="storing-complex-data-dictionaries-dict-and-lists">
-<h2>Storing complex data: dictionaries (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) and lists<a class="headerlink" href="#storing-complex-data-dictionaries-dict-and-lists" title="Permalink to this heading">#</a></h2>
+<h2>Storing complex data: dictionaries (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) and lists<a class="headerlink" href="#storing-complex-data-dictionaries-dict-and-lists" title="Link to this heading">#</a></h2>
 <p>A <strong>dictionary</strong> is another type of Python collection (we already learned one - <code class="docutils literal notranslate"><span class="pre">list</span></code>).
 Python lists are very good at storing <em>one-dimensional data</em> (one “column” of data).
 Dictionary lets you created associated pairs of data (<strong>keys</strong> and <strong>values</strong>).</p>
@@ -1375,7 +1383,7 @@ so something like:</p>
 </ul>
 </section>
 <section id="preview-from-lists-and-dictionaries-to-data-frames-pandas">
-<h2>Preview: From lists and dictionaries to data frames (Pandas)<a class="headerlink" href="#preview-from-lists-and-dictionaries-to-data-frames-pandas" title="Permalink to this heading">#</a></h2>
+<h2>Preview: From lists and dictionaries to data frames (Pandas)<a class="headerlink" href="#preview-from-lists-and-dictionaries-to-data-frames-pandas" title="Link to this heading">#</a></h2>
 <p>Starting from the next lecture you are going to quite often work with tabular data in Pandas.
 There is a special type <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> to represent such tabular (two-dimensional) data which is a part of <code class="docutils literal notranslate"><span class="pre">pandas</span></code> library.</p>
 <p>Let us quickly explore how to convert data from basic Python to <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code></p>
@@ -1388,12 +1396,12 @@ There is a special type <code class="docutils literal notranslate"><span class="
 </div>
 </div>
 <section id="creating-your-own-data-frame">
-<h3>Creating your own data frame<a class="headerlink" href="#creating-your-own-data-frame" title="Permalink to this heading">#</a></h3>
+<h3>Creating your own data frame<a class="headerlink" href="#creating-your-own-data-frame" title="Link to this heading">#</a></h3>
 <p>Some of the examples you’ll look at will involve creating small data frames “by hand”, since they’re easier to conceptualize than large data frames.</p>
 <p>Creating a data frame manually consists of two steps.</p>
 </section>
 <section id="step-1-create-a-dictionary-of-your-data">
-<h3>Step 1: Create a dictionary of your data<a class="headerlink" href="#step-1-create-a-dictionary-of-your-data" title="Permalink to this heading">#</a></h3>
+<h3>Step 1: Create a dictionary of your data<a class="headerlink" href="#step-1-create-a-dictionary-of-your-data" title="Link to this heading">#</a></h3>
 <p>For us, a dictionary can map <em>column names</em> (strings) to <em>column values</em> (lists) in a table.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1475,7 +1483,7 @@ Maybe we will need student names.</p>
 </div>
 </section>
 <section id="step-2-turn-the-dictionary-into-a-data-frame">
-<h3>Step 2: Turn the dictionary into a data frame<a class="headerlink" href="#step-2-turn-the-dictionary-into-a-data-frame" title="Permalink to this heading">#</a></h3>
+<h3>Step 2: Turn the dictionary into a data frame<a class="headerlink" href="#step-2-turn-the-dictionary-into-a-data-frame" title="Link to this heading">#</a></h3>
 <p>Now, we can turn that dictionary into a pandas <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1657,20 +1665,20 @@ Maybe we will need student names.</p>
 </section>
 </section>
 <section id="reading-data-from-files">
-<h2>Reading data from files<a class="headerlink" href="#reading-data-from-files" title="Permalink to this heading">#</a></h2>
+<h2>Reading data from files<a class="headerlink" href="#reading-data-from-files" title="Link to this heading">#</a></h2>
 <p>So far, we’ve been working entirely with data we defined inside our notebook.</p>
 <p>But in practice, we’ll be reading in large quantities of data from files.
 Let’s learn how to do this in JupyterHub and Python and in the end we will see how to do that in pandas.</p>
 </section>
 <section id="example-canadian-elections">
-<h2>Example: Canadian Elections<a class="headerlink" href="#example-canadian-elections" title="Permalink to this heading">#</a></h2>
-<p>This week you will work with a small dataset of Canada’s 338 electoral districts, sourced from <a class="reference external" href="https://www.elections.ca/content.aspx?section=res&amp;dir=cir/list&amp;document=index338&amp;lang=e#list">Elections Canada</a> and containing the names and populations of Canada’s 338 electoral ridings.</p>
+<h2>Example: Canadian Elections<a class="headerlink" href="#example-canadian-elections" title="Link to this heading">#</a></h2>
+<p>This week you will work with a small dataset of Canada’s 338 electoral districts, sourced from <a class="reference external" href="https://www.elections.ca/content.aspx?section=res&amp;amp;dir=cir/list&amp;amp;document=index338&amp;amp;lang=e#list">Elections Canada</a> and containing the names and populations of Canada’s 338 electoral ridings.</p>
 <p>We’ve placed a copy of this dataset in the same folder as this lab notebook (you can see this in JupyterHub by going to <strong>File -&gt; Open</strong>).
 We’ve downloaded this data in a file called <code class="docutils literal notranslate"><span class="pre">ED-Canada_2016.csv</span></code> and added it to course website in the same folder as this notebook.</p>
 <p>Let’s take a look now. The easiest way to get to the file is to go to <strong>File -&gt; Open…</strong> in the menu. Demo time!</p>
 </section>
 <section id="csv-files">
-<h2>CSV files<a class="headerlink" href="#csv-files" title="Permalink to this heading">#</a></h2>
+<h2>CSV files<a class="headerlink" href="#csv-files" title="Link to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">ED-Canada_2016.csv</span></code> is a type of file called a <strong>comma-separated values (CSV)</strong> file, which is a common way of storing tabular data.</p>
 <p>In a CSV file:</p>
 <ul class="simple">
@@ -1678,7 +1686,7 @@ We’ve downloaded this data in a file called <code class="docutils literal notr
 <li><p>Within one line, each column entry is separated by a <em>comma</em></p></li>
 </ul>
 <section id="reading-file-data-open-and-readlines">
-<h3>Reading file data: <code class="docutils literal notranslate"><span class="pre">open</span></code> and <code class="docutils literal notranslate"><span class="pre">readlines</span></code><a class="headerlink" href="#reading-file-data-open-and-readlines" title="Permalink to this heading">#</a></h3>
+<h3>Reading file data: <code class="docutils literal notranslate"><span class="pre">open</span></code> and <code class="docutils literal notranslate"><span class="pre">readlines</span></code><a class="headerlink" href="#reading-file-data-open-and-readlines" title="Link to this heading">#</a></h3>
 <p>Now that we’ve seen the file, let’s learn how to read the file’s contents into Python.</p>
 <p>Formally, we do this in two steps:</p>
 <ol class="arabic simple">
@@ -1706,7 +1714,7 @@ We’ve downloaded this data in a file called <code class="docutils literal notr
 </div>
 </section>
 <section id="data-processing">
-<h3>Data processing<a class="headerlink" href="#data-processing" title="Permalink to this heading">#</a></h3>
+<h3>Data processing<a class="headerlink" href="#data-processing" title="Link to this heading">#</a></h3>
 <p>Let’s look at just the first line from the file:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1741,7 +1749,7 @@ We’ve downloaded this data in a file called <code class="docutils literal notr
 </div>
 </section>
 <section id="now-we-can-compute">
-<h3>Now we can compute!<a class="headerlink" href="#now-we-can-compute" title="Permalink to this heading">#</a></h3>
+<h3>Now we can compute!<a class="headerlink" href="#now-we-can-compute" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_populations</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">populations</span><span class="p">)</span>
@@ -1762,7 +1770,7 @@ We’ve downloaded this data in a file called <code class="docutils literal notr
 </section>
 </section>
 <section id="bridge-to-pandas">
-<h2>Bridge to <code class="docutils literal notranslate"><span class="pre">pandas</span></code><a class="headerlink" href="#bridge-to-pandas" title="Permalink to this heading">#</a></h2>
+<h2>Bridge to <code class="docutils literal notranslate"><span class="pre">pandas</span></code><a class="headerlink" href="#bridge-to-pandas" title="Link to this heading">#</a></h2>
 <p>Reading the same data in pandas using<code class="docutils literal notranslate"><span class="pre">pd.read_csv</span></code> function:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">district_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;ED-Canada_2016.csv&quot;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 <span class="n">district_df</span>
@@ -1775,7 +1783,7 @@ Reading it into python can help you to automate cleaning up or transforming it.
 Strange text files or json and many other types often require changing them before you can make a perfect <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code></p>
 </section>
 <section id="jupyter-notebook-tips">
-<h2>Jupyter Notebook Tips<a class="headerlink" href="#jupyter-notebook-tips" title="Permalink to this heading">#</a></h2>
+<h2>Jupyter Notebook Tips<a class="headerlink" href="#jupyter-notebook-tips" title="Link to this heading">#</a></h2>
 <p>If Python seems to be behaving strangely or you’ve run a bunch of cells and lost track of what you’re doing, don’t panic!</p>
 <p><strong>Reset</strong> Python your notebook by doing the following:</p>
 <ol class="arabic">
@@ -1786,7 +1794,7 @@ Strange text files or json and many other types often require changing them befo
 </li>
 </ol>
 <section id="common-pitfall-changing-variables-and-running-cells-out-of-order">
-<h3>Common pitfall: changing variables and running cells out of order<a class="headerlink" href="#common-pitfall-changing-variables-and-running-cells-out-of-order" title="Permalink to this heading">#</a></h3>
+<h3>Common pitfall: changing variables and running cells out of order<a class="headerlink" href="#common-pitfall-changing-variables-and-running-cells-out-of-order" title="Link to this heading">#</a></h3>
 <p>Demo!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1895,12 +1903,7 @@ Strange text files or json and many other types often require changing them befo
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recap">Recap</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning Objectives</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-example-music-preferences">Running Example: Music Preferences</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Recap:</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#q1-how-comparatively-enthusiastic-about-music-you-and-your-friend-are">Q1: How (comparatively) enthusiastic about music you and your friend are?</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise">Exercise:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#now-imagine-we-want-python-to-actually-tell-us-who-is-more-enthusiastic-about-music">Now imagine we want Python to actually tell us who is more enthusiastic about music.</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#if-statements">If statements</a><ul class="nav section-nav flex-column">
@@ -1915,7 +1918,6 @@ Strange text files or json and many other types often require changing them befo
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#back-to-q2-how-would-you-approach-comparing-music-tastes-between-two-people">Back to Q2: How would you approach comparing music tastes between two people?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operating-on-collection-elements-for-loops">Operating on collection elements: For loops</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#for-loop-terminology">For loop terminology</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-loops-compute-and-print">Using loops: compute and print</a></li>

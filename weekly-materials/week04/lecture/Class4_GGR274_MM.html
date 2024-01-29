@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Lecture 4: Introduction to pandas and Data Wrangling &#8212; Computation and Data Science for Social Sciences</title>
   
@@ -29,43 +28,47 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
   <script src="../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
-    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=afe5de03"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'weekly-materials/week04/lecture/Class4_GGR274_MM';</script>
-    <link rel="shortcut icon" href="../../../_static/favicon.png"/>
+    <link rel="icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="GGR274 Lab 4: Introduction to Data Wrangling, Part 1" href="../lab/Lab_4.html" />
@@ -157,7 +160,18 @@ const thebe_selector_output = ".output, .cell_output"
     <p class="title logo__title">Computation and Data Science for Social Sciences</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -435,7 +449,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="lecture-4-introduction-to-pandas-and-data-wrangling">
-<h1>Lecture 4: Introduction to <code class="docutils literal notranslate"><span class="pre">pandas</span></code> and Data Wrangling<a class="headerlink" href="#lecture-4-introduction-to-pandas-and-data-wrangling" title="Permalink to this heading">#</a></h1>
+<h1>Lecture 4: Introduction to <code class="docutils literal notranslate"><span class="pre">pandas</span></code> and Data Wrangling<a class="headerlink" href="#lecture-4-introduction-to-pandas-and-data-wrangling" title="Link to this heading">#</a></h1>
 <ul class="simple">
 <li><p>Introduction to working with (tabular) data using <code class="docutils literal notranslate"><span class="pre">pandas</span></code></p>
 <ul>
@@ -447,37 +461,37 @@ document.write(`
 <li><p>Computing summary statistics on a DataFrame</p></li>
 </ul>
 <section id="pandas">
-<h2><code class="docutils literal notranslate"><span class="pre">pandas</span></code><a class="headerlink" href="#pandas" title="Permalink to this heading">#</a></h2>
+<h2><code class="docutils literal notranslate"><span class="pre">pandas</span></code><a class="headerlink" href="#pandas" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">pandas</span></code> is a python package that makes it easy to work with tabular data.</p></li>
 <li><p>What is tabular data?</p></li>
 </ul>
 </section>
 <section id="data-example-1">
-<h2>Data Example 1<a class="headerlink" href="#data-example-1" title="Permalink to this heading">#</a></h2>
+<h2>Data Example 1<a class="headerlink" href="#data-example-1" title="Link to this heading">#</a></h2>
 <p>Is this data tabular?</p>
 <p><img alt="" src="../../../_images/excel_screenshot.png" /></p>
 </section>
 <section id="data-example-2">
-<h2>Data Example 2<a class="headerlink" href="#data-example-2" title="Permalink to this heading">#</a></h2>
+<h2>Data Example 2<a class="headerlink" href="#data-example-2" title="Link to this heading">#</a></h2>
 <p>Is this data tabular?</p>
 <p><img alt="" src="../../../_images/platodata.png" /></p>
 <p>Text is taken from the <a class="reference external" href="https://plato.stanford.edu/entries/plato-ethics-shorter/">Stanford Encyclopedia of Philosophy.</a></p>
 </section>
 <section id="data-example-3">
-<h2>Data Example 3<a class="headerlink" href="#data-example-3" title="Permalink to this heading">#</a></h2>
+<h2>Data Example 3<a class="headerlink" href="#data-example-3" title="Link to this heading">#</a></h2>
 <p>Is this data tabular?</p>
 <p><img alt="" src="../../../_images/policesearchdata.png" /></p>
 </section>
 <section id="raw-data">
-<h2>Raw Data<a class="headerlink" href="#raw-data" title="Permalink to this heading">#</a></h2>
+<h2>Raw Data<a class="headerlink" href="#raw-data" title="Link to this heading">#</a></h2>
 <p>The data from Example 3 is from</p>
 <p><a class="reference external" href="https://open.toronto.ca/dataset/police-race-and-identity-based-data-collection-arrests-strip-searches/">https://open.toronto.ca/dataset/police-race-and-identity-based-data-collection-arrests-strip-searches/</a></p>
 <p>Is this <strong>raw data</strong>?</p>
 <p>What is this data’s provenance?</p>
 </section>
 <section id="comma-separated-value-csv-files">
-<h2>Comma Separated Value (csv) Files<a class="headerlink" href="#comma-separated-value-csv-files" title="Permalink to this heading">#</a></h2>
+<h2>Comma Separated Value (csv) Files<a class="headerlink" href="#comma-separated-value-csv-files" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>A csv file is a text file that uses a comma (this is an example of a <em>delimiter</em>) to separate values.</p></li>
 </ul>
@@ -493,16 +507,16 @@ document.write(`
 </ul>
 </section>
 <section id="id1">
-<h2>pandas<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<h2>pandas<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">pandas</span></code> is a Python package and is the “fundamental high-level building block for doing practical, real-world data analysis in Python” (<a class="reference external" href="https://pandas.pydata.org/docs/getting_started/overview.html">see pandas Getting started</a>).</p></li>
 <li><p>We will study and use the primary data structures of pandas, <code class="docutils literal notranslate"><span class="pre">Series</span></code> (1-dimensional) and <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> (2-dimensional).</p></li>
 </ul>
 </section>
 <section id="create-a-pandas-series">
-<h2>Create a pandas <code class="docutils literal notranslate"><span class="pre">Series</span></code><a class="headerlink" href="#create-a-pandas-series" title="Permalink to this heading">#</a></h2>
+<h2>Create a pandas <code class="docutils literal notranslate"><span class="pre">Series</span></code><a class="headerlink" href="#create-a-pandas-series" title="Link to this heading">#</a></h2>
 <section id="import-pandas">
-<h3>import pandas<a class="headerlink" href="#import-pandas" title="Permalink to this heading">#</a></h3>
+<h3>import pandas<a class="headerlink" href="#import-pandas" title="Link to this heading">#</a></h3>
 <p>First <code class="docutils literal notranslate"><span class="pre">import</span></code> the <code class="docutils literal notranslate"><span class="pre">pandas</span></code> package.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -522,7 +536,7 @@ document.write(`
 </section>
 </section>
 <section id="create-a-pandas-series-from-a-list">
-<h2>Create a pandas Series from a List<a class="headerlink" href="#create-a-pandas-series-from-a-list" title="Permalink to this heading">#</a></h2>
+<h2>Create a pandas Series from a List<a class="headerlink" href="#create-a-pandas-series-from-a-list" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">people</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;MM&#39;</span><span class="p">,</span> <span class="s1">&#39;IM&#39;</span><span class="p">,</span> <span class="s1">&#39;CL&#39;</span><span class="p">]</span>
@@ -547,7 +561,7 @@ document.write(`
 </div>
 </section>
 <section id="creating-a-boolean-series-based-on-a-condition">
-<h2>Creating a Boolean Series based on a Condition<a class="headerlink" href="#creating-a-boolean-series-based-on-a-condition" title="Permalink to this heading">#</a></h2>
+<h2>Creating a Boolean Series based on a Condition<a class="headerlink" href="#creating-a-boolean-series-based-on-a-condition" title="Link to this heading">#</a></h2>
 <p>Create a Series where the element is <code class="docutils literal notranslate"><span class="pre">True</span></code> if <code class="docutils literal notranslate"><span class="pre">department_series</span></code> is equal to <code class="docutils literal notranslate"><span class="pre">STA</span></code> and <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -607,7 +621,7 @@ and <code class="docutils literal notranslate"><span class="pre">False</span></c
 </div>
 </section>
 <section id="boolean-logic-with-pandas-series">
-<h2>Boolean logic with pandas <code class="docutils literal notranslate"><span class="pre">Series</span></code><a class="headerlink" href="#boolean-logic-with-pandas-series" title="Permalink to this heading">#</a></h2>
+<h2>Boolean logic with pandas <code class="docutils literal notranslate"><span class="pre">Series</span></code><a class="headerlink" href="#boolean-logic-with-pandas-series" title="Link to this heading">#</a></h2>
 <p>When comparing Boolean Series in pandas we use different logical operators</p>
 <p><code class="docutils literal notranslate"><span class="pre">Series1</span> <span class="pre">=</span> <span class="pre">pd.Series([True,</span> <span class="pre">False,</span> <span class="pre">True])</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">Series2</span> <span class="pre">=</span> <span class="pre">pd.Series([False,</span> <span class="pre">False,</span> <span class="pre">True])</span></code></p>
@@ -635,7 +649,7 @@ and <code class="docutils literal notranslate"><span class="pre">False</span></c
 </table>
 </section>
 <section id="create-a-pandas-dataframe-using-a-dictionary">
-<h2>Create a pandas <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> using a dictionary<a class="headerlink" href="#create-a-pandas-dataframe-using-a-dictionary" title="Permalink to this heading">#</a></h2>
+<h2>Create a pandas <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> using a dictionary<a class="headerlink" href="#create-a-pandas-dataframe-using-a-dictionary" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>A dictionary store data in key-value pairs.</p></li>
 <li><p>A popular way to create a dictionary is to use curly braces {} and colons <code class="docutils literal notranslate"><span class="pre">:</span></code> to separate keys and values (<code class="docutils literal notranslate"><span class="pre">key:values</span></code>)</p></li>
@@ -689,7 +703,7 @@ and <code class="docutils literal notranslate"><span class="pre">False</span></c
 </div>
 </section>
 <section id="select-rows-of-a-dataframe-using-a-list-of-true-false-values-a-ka-boolean-values">
-<h2>Select rows of a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> using a list of  <code class="docutils literal notranslate"><span class="pre">True</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">False</span></code> values (a.ka. Boolean values)<a class="headerlink" href="#select-rows-of-a-dataframe-using-a-list-of-true-false-values-a-ka-boolean-values" title="Permalink to this heading">#</a></h2>
+<h2>Select rows of a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> using a list of  <code class="docutils literal notranslate"><span class="pre">True</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">False</span></code> values (a.ka. Boolean values)<a class="headerlink" href="#select-rows-of-a-dataframe-using-a-list-of-true-false-values-a-ka-boolean-values" title="Link to this heading">#</a></h2>
 <p>Let’s remove the second row.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -718,7 +732,7 @@ and <code class="docutils literal notranslate"><span class="pre">False</span></c
 </div>
 </section>
 <section id="select-columns-of-a-dataframe-using-a-list-of-column-names">
-<h2>Select columns of a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> using a list of Column Names<a class="headerlink" href="#select-columns-of-a-dataframe-using-a-list-of-column-names" title="Permalink to this heading">#</a></h2>
+<h2>Select columns of a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> using a list of Column Names<a class="headerlink" href="#select-columns-of-a-dataframe-using-a-list-of-column-names" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>The column names in the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> <code class="docutils literal notranslate"><span class="pre">GGR274fac_df</span></code> can be obtained using <code class="docutils literal notranslate"><span class="pre">list()</span></code>.</p></li>
 <li><p>There are other ways to get the column names, but we will focus on this for now.</p></li>
@@ -787,7 +801,7 @@ and <code class="docutils literal notranslate"><span class="pre">False</span></c
 </ul>
 </section>
 <section id="select-rows-of-a-dataframe">
-<h2>Select rows of a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code><a class="headerlink" href="#select-rows-of-a-dataframe" title="Permalink to this heading">#</a></h2>
+<h2>Select rows of a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code><a class="headerlink" href="#select-rows-of-a-dataframe" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Rows can be selected from a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> using a list of Boolean values.</p></li>
 <li><p><span class="math notranslate nohighlight">\(\underbrace{\texttt{GGR274fac_df}}_\text{DataFrame Name}\underbrace{\texttt{[[True, False, True]]}}_\text{List of Boolean values}\)</span></p>
@@ -818,7 +832,7 @@ and <code class="docutils literal notranslate"><span class="pre">False</span></c
 </div>
 </section>
 <section id="select-rows-and-columns-of-a-dataframe">
-<h2>Select rows and columns of a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code><a class="headerlink" href="#select-rows-and-columns-of-a-dataframe" title="Permalink to this heading">#</a></h2>
+<h2>Select rows and columns of a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code><a class="headerlink" href="#select-rows-and-columns-of-a-dataframe" title="Link to this heading">#</a></h2>
 <p>Combine these two lines of code:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">GGR274fac_cond</span> <span class="o">=</span> <span class="n">GGR274fac_df</span><span class="p">[</span><span class="n">my_important_condition</span><span class="p">]</span> <span class="c1"># select rows</span>
 
@@ -835,7 +849,7 @@ and <code class="docutils literal notranslate"><span class="pre">False</span></c
 </div>
 </section>
 <section id="exercise">
-<h2>Exercise<a class="headerlink" href="#exercise" title="Permalink to this heading">#</a></h2>
+<h2>Exercise<a class="headerlink" href="#exercise" title="Link to this heading">#</a></h2>
 <p>Create a pandas <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> with three columns:</p>
 <ol class="arabic simple">
 <li><p>Your first name and two people sitting close to you – your (new??) friends.</p></li>
@@ -851,14 +865,14 @@ and <code class="docutils literal notranslate"><span class="pre">False</span></c
 </div>
 </section>
 <section id="create-a-pandas-dataframe-from-a-csv-file">
-<h2>Create a <code class="docutils literal notranslate"><span class="pre">pandas</span></code> <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> from a csv file<a class="headerlink" href="#create-a-pandas-dataframe-from-a-csv-file" title="Permalink to this heading">#</a></h2>
+<h2>Create a <code class="docutils literal notranslate"><span class="pre">pandas</span></code> <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> from a csv file<a class="headerlink" href="#create-a-pandas-dataframe-from-a-csv-file" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Data will usually be stored in a file such as a csv.</p></li>
 <li><p>It’s very <strong>convenient</strong> to “read” the file into a pandas <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>, since pandas has many methods that can manipulate <em>tabular</em> data.  Otherwise, we could use base python to do these manipulations.</p></li>
 </ul>
 </section>
 <section id="time-use-dataset">
-<h2>Time Use dataset<a class="headerlink" href="#time-use-dataset" title="Permalink to this heading">#</a></h2>
+<h2>Time Use dataset<a class="headerlink" href="#time-use-dataset" title="Link to this heading">#</a></h2>
 <p>Dataset: Statistics Canada General Social Survey’s (GSS) Time Use (TU) Survey</p>
 <ul class="simple">
 <li><p>Tracks how people spend their time</p></li>
@@ -878,7 +892,7 @@ and <code class="docutils literal notranslate"><span class="pre">False</span></c
 </ul>
 </section>
 <section id="import-time-use-survey-data-using-pandas">
-<h2>Import Time Use Survey Data using pandas<a class="headerlink" href="#import-time-use-survey-data-using-pandas" title="Permalink to this heading">#</a></h2>
+<h2>Import Time Use Survey Data using pandas<a class="headerlink" href="#import-time-use-survey-data-using-pandas" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -894,7 +908,7 @@ and <code class="docutils literal notranslate"><span class="pre">False</span></c
 </div>
 </section>
 <section id="question">
-<h2>Question<a class="headerlink" href="#question" title="Permalink to this heading">#</a></h2>
+<h2>Question<a class="headerlink" href="#question" title="Link to this heading">#</a></h2>
 <p><strong><em>Do urban residents with more children report feeling more rushed than those with fewer children?</em></strong></p>
 <p>Let’s narrow the question even further …</p>
 <p><strong><em>Do urban residents with one or more children report feeling more rushed every day versus never feeling rushed than those with no children?</em></strong></p>
@@ -905,10 +919,10 @@ and <code class="docutils literal notranslate"><span class="pre">False</span></c
 \[\text{Proportion}_\text{no kids} = \frac{\text{Number of respondents that feel rushed daily}}{\text{Number  of respondents with no kids that never feel rushed or feel rushed daily}}\]</div>
 </section>
 <section id="wrangle-the-time-use-survey-data">
-<h2>Wrangle the Time Use Survey Data<a class="headerlink" href="#wrangle-the-time-use-survey-data" title="Permalink to this heading">#</a></h2>
+<h2>Wrangle the Time Use Survey Data<a class="headerlink" href="#wrangle-the-time-use-survey-data" title="Link to this heading">#</a></h2>
 <p>Create a new DataFrame with only the relevant columns needed for the data analysis.  In other words, create a subset of <code class="docutils literal notranslate"><span class="pre">time_use_data</span></code>.</p>
 <section id="selecting-columns-from-a-dataframe">
-<h3>Selecting columns from a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code><a class="headerlink" href="#selecting-columns-from-a-dataframe" title="Permalink to this heading">#</a></h3>
+<h3>Selecting columns from a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code><a class="headerlink" href="#selecting-columns-from-a-dataframe" title="Link to this heading">#</a></h3>
 <p>What columns are relevant?</p>
 <p>To create an easy to use data set we will only keep the following columns:</p>
 <ul class="simple">
@@ -930,7 +944,7 @@ and <code class="docutils literal notranslate"><span class="pre">False</span></c
 </section>
 </section>
 <section id="rename-columns">
-<h2>Rename columns<a class="headerlink" href="#rename-columns" title="Permalink to this heading">#</a></h2>
+<h2>Rename columns<a class="headerlink" href="#rename-columns" title="Link to this heading">#</a></h2>
 <p>Use the <code class="docutils literal notranslate"><span class="pre">rename</span></code> function to rename columns.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1005,7 +1019,7 @@ and <code class="docutils literal notranslate"><span class="pre">False</span></c
 </div>
 </section>
 <section id="select-respondents-that-live-in-urban-areas">
-<h2>Select respondents that live in urban areas<a class="headerlink" href="#select-respondents-that-live-in-urban-areas" title="Permalink to this heading">#</a></h2>
+<h2>Select respondents that live in urban areas<a class="headerlink" href="#select-respondents-that-live-in-urban-areas" title="Link to this heading">#</a></h2>
 <p>Select the <code class="docutils literal notranslate"><span class="pre">Urban/Rural</span></code> column.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="n">luc_rst</span>            <span class="n">Population</span> <span class="n">centre</span> <span class="n">indicator</span>
 
@@ -1092,7 +1106,7 @@ and <code class="docutils literal notranslate"><span class="pre">False</span></c
 </ul>
 </section>
 <section id="define-a-dataframe-with-only-urban-respondents-and-relevant-columns">
-<h2>Define a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> with only urban respondents and relevant columns<a class="headerlink" href="#define-a-dataframe-with-only-urban-respondents-and-relevant-columns" title="Permalink to this heading">#</a></h2>
+<h2>Define a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> with only urban respondents and relevant columns<a class="headerlink" href="#define-a-dataframe-with-only-urban-respondents-and-relevant-columns" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">urban_df</span> <span class="o">=</span> <span class="n">subset_time_use_data_colnames</span><span class="p">[</span><span class="n">urban</span><span class="p">]</span>
@@ -1104,7 +1118,7 @@ and <code class="docutils literal notranslate"><span class="pre">False</span></c
 </div>
 </section>
 <section id="examine-the-distributions-of-each-column-using-value-counts">
-<h2>Examine the <em>distributions</em> of each column using <code class="docutils literal notranslate"><span class="pre">value_counts()</span></code><a class="headerlink" href="#examine-the-distributions-of-each-column-using-value-counts" title="Permalink to this heading">#</a></h2>
+<h2>Examine the <em>distributions</em> of each column using <code class="docutils literal notranslate"><span class="pre">value_counts()</span></code><a class="headerlink" href="#examine-the-distributions-of-each-column-using-value-counts" title="Link to this heading">#</a></h2>
 <p>Distribution of <code class="docutils literal notranslate"><span class="pre">Kids</span> <span class="pre">under</span> <span class="pre">14</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">

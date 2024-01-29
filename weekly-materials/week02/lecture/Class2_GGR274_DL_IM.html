@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Lecture 2: Introduction to Python Programming, Part 1 &#8212; Computation and Data Science for Social Sciences</title>
   
@@ -29,41 +28,45 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
   <script src="../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
-    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=afe5de03"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'weekly-materials/week02/lecture/Class2_GGR274_DL_IM';</script>
-    <link rel="shortcut icon" href="../../../_static/favicon.png"/>
+    <link rel="icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="GGR274 Lab 2: Introduction to Programming, Part 1" href="../lab/Lab_2.html" />
@@ -155,7 +158,18 @@ const thebe_selector_output = ".output, .cell_output"
     <p class="title logo__title">Computation and Data Science for Social Sciences</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -438,9 +452,9 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="lecture-2-introduction-to-python-programming-part-1">
-<h1>Lecture 2: Introduction to Python Programming, Part 1<a class="headerlink" href="#lecture-2-introduction-to-python-programming-part-1" title="Permalink to this heading">#</a></h1>
+<h1>Lecture 2: Introduction to Python Programming, Part 1<a class="headerlink" href="#lecture-2-introduction-to-python-programming-part-1" title="Link to this heading">#</a></h1>
 <section id="logistics-check">
-<h2>Logistics check<a class="headerlink" href="#logistics-check" title="Permalink to this heading">#</a></h2>
+<h2>Logistics check<a class="headerlink" href="#logistics-check" title="Link to this heading">#</a></h2>
 <p>At this point it is time:</p>
 <ul class="simple">
 <li><p>To know how to <strong>open class notebook</strong> in <a class="reference external" href="https://jupyter.utoronto.ca/">JupyterHub</a></p></li>
@@ -451,7 +465,7 @@ document.write(`
 <p>If you are not there yet, please make sure you get help during the lab/office hours or ask on Piazza</p>
 </section>
 <section id="context-some-things-to-remember">
-<h2>Context: Some things to remember<a class="headerlink" href="#context-some-things-to-remember" title="Permalink to this heading">#</a></h2>
+<h2>Context: Some things to remember<a class="headerlink" href="#context-some-things-to-remember" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Computer programming languages are actually for people, not for computers :)</p></li>
 <li><p>To some extent, learning a new programming language is quite like learning a new (written) human language, but … easier</p>
@@ -466,7 +480,7 @@ document.write(`
 <p>Part of that is being able to explain the data and the task you are dealing with in a specific way so that you can use rich instruments provided by Python environment.</p>
 </section>
 <section id="learning-objectives">
-<h2>Learning objectives<a class="headerlink" href="#learning-objectives" title="Permalink to this heading">#</a></h2>
+<h2>Learning objectives<a class="headerlink" href="#learning-objectives" title="Link to this heading">#</a></h2>
 <p>In this lecture, you will learn to:</p>
 <ul class="simple">
 <li><p>Identify and describe values of different types in Python code</p></li>
@@ -476,7 +490,7 @@ document.write(`
 </ul>
 </section>
 <section id="representing-data-in-python-numbers">
-<h2>Representing Data in Python: numbers<a class="headerlink" href="#representing-data-in-python-numbers" title="Permalink to this heading">#</a></h2>
+<h2>Representing Data in Python: numbers<a class="headerlink" href="#representing-data-in-python-numbers" title="Link to this heading">#</a></h2>
 <p>Python can represent both integer and fractional numbers by writing them the same way you would in text:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -503,13 +517,13 @@ document.write(`
 </div>
 </div>
 <section id="int-and-float">
-<h3><code class="docutils literal notranslate"><span class="pre">int</span></code> and <code class="docutils literal notranslate"><span class="pre">float</span></code><a class="headerlink" href="#int-and-float" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">int</span></code> and <code class="docutils literal notranslate"><span class="pre">float</span></code><a class="headerlink" href="#int-and-float" title="Link to this heading">#</a></h3>
 <p>Python defines two <strong>data types</strong> to categorize numbers: <code class="docutils literal notranslate"><span class="pre">int</span></code> and <code class="docutils literal notranslate"><span class="pre">float</span></code>.</p>
 <p>An <code class="docutils literal notranslate"><span class="pre">int</span></code> represents an integer like <code class="docutils literal notranslate"><span class="pre">3</span></code> or <code class="docutils literal notranslate"><span class="pre">-4</span></code>.</p>
 <p>A <code class="docutils literal notranslate"><span class="pre">float</span></code>, short for <em>floating point number</em>, represents a fractional number like <code class="docutils literal notranslate"><span class="pre">3.5</span></code> or <code class="docutils literal notranslate"><span class="pre">-4.5</span></code>.</p>
 </section>
 <section id="arithmetic-in-python">
-<h3>Arithmetic in Python<a class="headerlink" href="#arithmetic-in-python" title="Permalink to this heading">#</a></h3>
+<h3>Arithmetic in Python<a class="headerlink" href="#arithmetic-in-python" title="Link to this heading">#</a></h3>
 <p>We can combine numbers using basic arithmetic operations like <code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code>, and <code class="docutils literal notranslate"><span class="pre">/</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -573,7 +587,7 @@ document.write(`
 </div>
 </section>
 <section id="exercise-1">
-<h3>Exercise 1<a class="headerlink" href="#exercise-1" title="Permalink to this heading">#</a></h3>
+<h3>Exercise 1<a class="headerlink" href="#exercise-1" title="Link to this heading">#</a></h3>
 <p>Suppose you go out to eat at a restaurant, and your before-tax total is $15.99.</p>
 <p>Assuming there is a 13% tax and 15% tip (on the <em>before-tax</em> price), use Python to calculate the total amount that you pay.</p>
 <div class="cell docutils container">
@@ -599,7 +613,7 @@ document.write(`
 </section>
 </section>
 <section id="rounding-and-the-round-function">
-<h2>Rounding and the <code class="docutils literal notranslate"><span class="pre">round</span></code> function<a class="headerlink" href="#rounding-and-the-round-function" title="Permalink to this heading">#</a></h2>
+<h2>Rounding and the <code class="docutils literal notranslate"><span class="pre">round</span></code> function<a class="headerlink" href="#rounding-and-the-round-function" title="Link to this heading">#</a></h2>
 <p>Python provides <strong>functions</strong>, which are named blocks of code that perform a specific computation.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">round</span></code> function lets us round <code class="docutils literal notranslate"><span class="pre">float</span></code>s to a specific number of decimal places.</p>
 <div class="cell docutils container">
@@ -615,7 +629,7 @@ document.write(`
 </div>
 </div>
 <section id="function-terminology">
-<h3>Function terminology<a class="headerlink" href="#function-terminology" title="Permalink to this heading">#</a></h3>
+<h3>Function terminology<a class="headerlink" href="#function-terminology" title="Link to this heading">#</a></h3>
 <p>The expression <code class="docutils literal notranslate"><span class="pre">round(3.6789,</span> <span class="pre">2)</span></code> is called a <strong>function call</strong>.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">round</span></code> is the <strong>name</strong> of the function</p></li>
@@ -650,7 +664,7 @@ document.write(`
 </section>
 </section>
 <section id="comparisons-and-the-bool-data-type">
-<h2>Comparisons and the <code class="docutils literal notranslate"><span class="pre">bool</span></code> data type<a class="headerlink" href="#comparisons-and-the-bool-data-type" title="Permalink to this heading">#</a></h2>
+<h2>Comparisons and the <code class="docutils literal notranslate"><span class="pre">bool</span></code> data type<a class="headerlink" href="#comparisons-and-the-bool-data-type" title="Link to this heading">#</a></h2>
 <p>We can compare numbers using the following comparison operators:</p>
 <table class="table">
 <thead>
@@ -712,7 +726,7 @@ document.write(`
 <li><p>Is every student in this lecture paying attention right now?</p></li>
 </ul>
 <section id="manipulating-booleans">
-<h3>Manipulating booleans<a class="headerlink" href="#manipulating-booleans" title="Permalink to this heading">#</a></h3>
+<h3>Manipulating booleans<a class="headerlink" href="#manipulating-booleans" title="Link to this heading">#</a></h3>
 <p>We can perform three operations on booleans: <code class="docutils literal notranslate"><span class="pre">not</span></code>, <code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code>.</p>
 <p><code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">b</span></code> negates the value of <code class="docutils literal notranslate"><span class="pre">b</span></code>, so <code class="docutils literal notranslate"><span class="pre">True</span></code> becomes <code class="docutils literal notranslate"><span class="pre">False</span></code> and vice versa.</p>
 <div class="cell docutils container">
@@ -768,7 +782,7 @@ document.write(`
 </section>
 </section>
 <section id="text-data-and-the-str-data-type">
-<h2>Text data and the <code class="docutils literal notranslate"><span class="pre">str</span></code> data type<a class="headerlink" href="#text-data-and-the-str-data-type" title="Permalink to this heading">#</a></h2>
+<h2>Text data and the <code class="docutils literal notranslate"><span class="pre">str</span></code> data type<a class="headerlink" href="#text-data-and-the-str-data-type" title="Link to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">str</span></code>, short for <strong>string</strong>, is a type of data for representing text.
 A string is a sequence of <em>characters</em>, where each character could be:</p>
 <ul class="simple">
@@ -920,7 +934,7 @@ A string is a sequence of <em>characters</em>, where each character could be:</p
 </div>
 </div>
 <section id="exercise-2">
-<h3>Exercise 2<a class="headerlink" href="#exercise-2" title="Permalink to this heading">#</a></h3>
+<h3>Exercise 2<a class="headerlink" href="#exercise-2" title="Link to this heading">#</a></h3>
 <p>Write a Python expression to compute whether the word <code class="docutils literal notranslate"><span class="pre">&quot;hippopotamus&quot;</span></code> is longer than <code class="docutils literal notranslate"><span class="pre">&quot;elephant&quot;</span></code>.</p>
 <p>(The word “whether” signals that the output should be a <em>boolean</em>, i.e., either <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>.)</p>
 <div class="cell docutils container">
@@ -953,7 +967,7 @@ A string is a sequence of <em>characters</em>, where each character could be:</p
 </div>
 </section>
 <section id="summary-of-this-part-use-that-at-home-to-revise">
-<h3>Summary of this part (use that at home to revise):<a class="headerlink" href="#summary-of-this-part-use-that-at-home-to-revise" title="Permalink to this heading">#</a></h3>
+<h3>Summary of this part (use that at home to revise):<a class="headerlink" href="#summary-of-this-part-use-that-at-home-to-revise" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>We now know some Python data types, allowing us to represent our data:</p>
 <ul>
@@ -1001,7 +1015,7 @@ Can some functions or operators be aplied to other types?
 </section>
 </section>
 <section id="variables">
-<h2>Variables<a class="headerlink" href="#variables" title="Permalink to this heading">#</a></h2>
+<h2>Variables<a class="headerlink" href="#variables" title="Link to this heading">#</a></h2>
 <p>As our code gets more complex, we’ll use <strong>variables</strong> to keep track of our values.</p>
 <p>A <strong>variable</strong> is a piece of code that <em>refers</em> to a value.</p>
 <p>We create variables using code called an <strong>assignment statement</strong>, which looks like:</p>
@@ -1082,7 +1096,7 @@ This lets us write one block of code where we define variables and use them in t
 </div>
 </div>
 <section id="naming-variables">
-<h3>Naming variables<a class="headerlink" href="#naming-variables" title="Permalink to this heading">#</a></h3>
+<h3>Naming variables<a class="headerlink" href="#naming-variables" title="Link to this heading">#</a></h3>
 <p>Even though Python lets us name variables whatever we want, it is important to pick meaningful variable names!</p>
 <p>If you don’t, you might end up reading code that looks like this:</p>
 <div class="cell docutils container">
@@ -1111,7 +1125,7 @@ This lets us write one block of code where we define variables and use them in t
 </section>
 </section>
 <section id="the-print-function">
-<h2>The <code class="docutils literal notranslate"><span class="pre">print</span></code> function<a class="headerlink" href="#the-print-function" title="Permalink to this heading">#</a></h2>
+<h2>The <code class="docutils literal notranslate"><span class="pre">print</span></code> function<a class="headerlink" href="#the-print-function" title="Link to this heading">#</a></h2>
 <p>Normally when we execute a notebook cell with multiple expressions/statements, only the value of the last one is displayed.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1146,7 +1160,7 @@ This lets us write one block of code where we define variables and use them in t
 </div>
 </section>
 <section id="f-strings">
-<h2>f-strings<a class="headerlink" href="#f-strings" title="Permalink to this heading">#</a></h2>
+<h2>f-strings<a class="headerlink" href="#f-strings" title="Link to this heading">#</a></h2>
 <p>Suppose have have a student’s name and a course’ code, and want to compute a welcome message like <code class="docutils literal notranslate"><span class="pre">&quot;Hello</span> <span class="pre">Ilya,</span> <span class="pre">you</span> <span class="pre">are</span> <span class="pre">currently</span> <span class="pre">in</span> <span class="pre">GGR274!&quot;</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1181,7 +1195,7 @@ This lets us write one block of code where we define variables and use them in t
 </div>
 </section>
 <section id="string-methods">
-<h2>String Methods<a class="headerlink" href="#string-methods" title="Permalink to this heading">#</a></h2>
+<h2>String Methods<a class="headerlink" href="#string-methods" title="Link to this heading">#</a></h2>
 <p>Strings are the most complex form of data we’ve studied so far, and there are a lot more operations we can perform on them beyond <code class="docutils literal notranslate"><span class="pre">==</span></code>, <code class="docutils literal notranslate"><span class="pre">in</span></code>, and <code class="docutils literal notranslate"><span class="pre">len</span></code>.</p>
 <p>Most of these operations are implemented as string <strong>methods</strong>.</p>
 <p>A <strong>method</strong> is a function that is defined as part of a data type.</p>
@@ -1245,7 +1259,7 @@ This lets us write one block of code where we define variables and use them in t
 <p><img alt="dalek-experiment" src="https://uoftcompdsci.github.io/ggr274-20241/_images/dalek.png" /></p>
 </section>
 <section id="str-split-and-the-python-list-data-type">
-<h2><code class="docutils literal notranslate"><span class="pre">str.split</span></code> and the Python <code class="docutils literal notranslate"><span class="pre">list</span></code> data type<a class="headerlink" href="#str-split-and-the-python-list-data-type" title="Permalink to this heading">#</a></h2>
+<h2><code class="docutils literal notranslate"><span class="pre">str.split</span></code> and the Python <code class="docutils literal notranslate"><span class="pre">list</span></code> data type<a class="headerlink" href="#str-split-and-the-python-list-data-type" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_string</span> <span class="o">=</span> <span class="s2">&quot;I am cool&quot;</span>
@@ -1280,7 +1294,7 @@ This lets us write one block of code where we define variables and use them in t
 <p>Okay! <code class="docutils literal notranslate"><span class="pre">['I',</span> <span class="pre">'am',</span> <span class="pre">'cool']</span></code> is a <code class="docutils literal notranslate"><span class="pre">list</span></code>.</p>
 <p>In Python, <code class="docutils literal notranslate"><span class="pre">list</span></code> are used to store <strong>multiple values</strong> in a <strong>sequence</strong> (i.e., with a defined order).</p>
 <section id="list-examples">
-<h3>List examples<a class="headerlink" href="#list-examples" title="Permalink to this heading">#</a></h3>
+<h3>List examples<a class="headerlink" href="#list-examples" title="Link to this heading">#</a></h3>
 <p>Python <code class="docutils literal notranslate"><span class="pre">list</span></code>s are very versatile, and can be used to store different kinds of values. We write lists by using square brackets: <code class="docutils literal notranslate"><span class="pre">[...]</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1323,7 +1337,7 @@ This lets us write one block of code where we define variables and use them in t
 </div>
 </section>
 <section id="list-operations">
-<h3>List operations<a class="headerlink" href="#list-operations" title="Permalink to this heading">#</a></h3>
+<h3>List operations<a class="headerlink" href="#list-operations" title="Link to this heading">#</a></h3>
 <p>Lists support many of the same operations as strings, since both are “sequences”.</p>
 <p>Lists can be compared using <code class="docutils literal notranslate"><span class="pre">==</span></code>. Note: order matters!</p>
 <div class="cell docutils container">
@@ -1379,7 +1393,7 @@ This lets us write one block of code where we define variables and use them in t
 </section>
 </section>
 <section id="exercise-3-putting-it-all-together">
-<h2>Exercise 3: Putting it all together<a class="headerlink" href="#exercise-3-putting-it-all-together" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 3: Putting it all together<a class="headerlink" href="#exercise-3-putting-it-all-together" title="Link to this heading">#</a></h2>
 <p>Given the list of numbers defined in the variable <code class="docutils literal notranslate"><span class="pre">my_numbers</span></code>, do the following:</p>
 <ol class="arabic simple">
 <li><p>Calculate the <em>length</em> of the list (i.e., number of numbers in the list). Call this number <code class="docutils literal notranslate"><span class="pre">my_len</span></code>.</p></li>
@@ -1418,7 +1432,7 @@ This lets us write one block of code where we define variables and use them in t
 </div>
 </section>
 <section id="exercise-4">
-<h2>Exercise 4:<a class="headerlink" href="#exercise-4" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 4:<a class="headerlink" href="#exercise-4" title="Link to this heading">#</a></h2>
 <p>Experiment more!</p>
 <p><img alt="dalek-experiment" src="https://uoftcompdsci.github.io/ggr274-20241/_images/dalek.png" /></p>
 <ul class="simple">
@@ -1438,7 +1452,7 @@ This lets us write one block of code where we define variables and use them in t
 </ul>
 </section>
 <section id="id1">
-<h2>Learning objectives<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<h2>Learning objectives<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
 <p>In this lecture, you learned to:</p>
 <ul class="simple">
 <li><p>Identify and describe values of different types in Python code</p>

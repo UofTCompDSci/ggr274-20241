@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>GG274 Homework 1: A Python Intro &#8212; Computation and Data Science for Social Sciences</title>
   
@@ -29,41 +28,45 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
   <script src="../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
-    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=afe5de03"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'weekly-materials/week01/homework/Homework_1';</script>
-    <link rel="shortcut icon" href="../../../_static/favicon.png"/>
+    <link rel="icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="GG274 Homework 1: A Python Intro" href="Homework_1_solution.html" />
@@ -155,7 +158,18 @@ const thebe_selector_output = ".output, .cell_output"
     <p class="title logo__title">Computation and Data Science for Social Sciences</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -406,26 +420,26 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="gg274-homework-1-a-python-intro">
-<h1>GG274 Homework 1: A Python Intro<a class="headerlink" href="#gg274-homework-1-a-python-intro" title="Permalink to this heading">#</a></h1>
+<h1>GG274 Homework 1: A Python Intro<a class="headerlink" href="#gg274-homework-1-a-python-intro" title="Link to this heading">#</a></h1>
 <section id="purpose-of-homework">
-<h2>Purpose of Homework<a class="headerlink" href="#purpose-of-homework" title="Permalink to this heading">#</a></h2>
+<h2>Purpose of Homework<a class="headerlink" href="#purpose-of-homework" title="Link to this heading">#</a></h2>
 <p>Welcome to your first weekly homework assignment! You are encouraged to refer to lecture content and liberally use course resources such as the discussion board and office hours.</p>
 <p>Homeworks build off of content explored in lecture and in lab and give you an opportunity to practice with the material. Homeworks will contain tasks that focus on tools and knowledge described in lecture and lab that week. Data science knowledge is often cumulative, and you will be asked to refer to prior weeks’ content (such as loading in datasets, which is something you’re going to do a lot of in this course).</p>
 <p>Homeworks may also be continuations of the shorter labs done during that week, and will feature a relatively greater emphasis on application of tools, inquiry of concepts, and interpretation of your data science findings. Homeworks will feature a mix of coding and written response questions.</p>
 </section>
 <section id="logistics">
-<h2>Logistics<a class="headerlink" href="#logistics" title="Permalink to this heading">#</a></h2>
+<h2>Logistics<a class="headerlink" href="#logistics" title="Link to this heading">#</a></h2>
 <p><strong>Due date</strong>: The homework is due 23:59 on Monday, January 15.</p>
 <p>You will submit your work on <a class="reference external" href="https://markus-ds.teach.cs.toronto.edu">MarkUs</a>.
 To submit your work:</p>
 <ol class="arabic simple">
-<li><p>Download this file (<code class="docutils literal notranslate"><span class="pre">Homework_1.ipynb</span></code>) from JupyterHub. (See <a class="reference internal" href="../../../guides/jupyterhub_guide.html"><span class="doc std std-doc">our JupyterHub Guide</span></a> for detailed instructions.)</p></li>
-<li><p>Submit this file to MarkUs under the <strong>hw1</strong> assignment. (See <a class="reference internal" href="../../../guides/markus_guide.html"><span class="doc std std-doc">our MarkUs Guide</span></a> for detailed instructions.)
+<li><p>Download this file (<code class="docutils literal notranslate"><span class="pre">Homework_1.ipynb</span></code>) from JupyterHub. (See <a class="reference internal" href="../../../guides/jupyterhub_guide.html"><span class="std std-doc">our JupyterHub Guide</span></a> for detailed instructions.)</p></li>
+<li><p>Submit this file to MarkUs under the <strong>hw1</strong> assignment. (See <a class="reference internal" href="../../../guides/markus_guide.html"><span class="std std-doc">our MarkUs Guide</span></a> for detailed instructions.)
 All homeworks will take place in a Jupyter notebook (like this one). When you are done, you will download this notebook and submit it to MarkUs.</p></li>
 </ol>
 </section>
 <section id="task-1-filling-in-some-python-code">
-<h2>Task 1: Filling in some Python code<a class="headerlink" href="#task-1-filling-in-some-python-code" title="Permalink to this heading">#</a></h2>
+<h2>Task 1: Filling in some Python code<a class="headerlink" href="#task-1-filling-in-some-python-code" title="Link to this heading">#</a></h2>
 <p>Next week, we’ll be introducing the Python programming language more formally.
 For this homework, we’re going to keep things short and ask you to fill in some bits of code and run it, just to get used to the process.</p>
 <p>In the cell below, replace the ellipsis (<code class="docutils literal notranslate"><span class="pre">...</span></code>) with the number of courses you’re taking this semester.</p>
@@ -459,7 +473,7 @@ This tells Python that your name should be interpreted as data (i.e., a name) ra
 If not, please ask for help if you get stuck!</p>
 </section>
 <section id="task-2-a-bit-of-computing">
-<h2>Task 2: A bit of computing<a class="headerlink" href="#task-2-a-bit-of-computing" title="Permalink to this heading">#</a></h2>
+<h2>Task 2: A bit of computing<a class="headerlink" href="#task-2-a-bit-of-computing" title="Link to this heading">#</a></h2>
 <p>Now, let’s see how we can use Python like a calculator, where we write <em>code</em> instead of pushing buttons.
 Consider the following problem:</p>
 <blockquote>
@@ -515,7 +529,7 @@ Remember from the lab that you can perform a calculation and store the result in
 <p><strong>Note</strong>: you should see a percentage with lots of decimal places. Don’t worry about rounding for this problem; we’ll discuss how to round numbers in Python next week.</p>
 </section>
 <section id="task-3-written-response">
-<h2>Task 3: Written Response<a class="headerlink" href="#task-3-written-response" title="Permalink to this heading">#</a></h2>
+<h2>Task 3: Written Response<a class="headerlink" href="#task-3-written-response" title="Link to this heading">#</a></h2>
 <p>Finally, we want to give you practice using Markdown to create text inside a Jupyter notebook.</p>
 <p><strong>Create a new Markdown cell</strong> (same process as Lab 1), and inside the cell write answers to the following questions:</p>
 <ol class="arabic simple">

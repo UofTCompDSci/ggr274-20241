@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>GGR274 Homework 4: Time Use Survey Data &#8212; Computation and Data Science for Social Sciences</title>
   
@@ -29,43 +28,47 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
   <script src="../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
-    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=afe5de03"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'weekly-materials/week04/homework/Homework_4';</script>
-    <link rel="shortcut icon" href="../../../_static/favicon.png"/>
+    <link rel="icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="prev" title="GGR274 Lab 4: Introduction to Data Wrangling, Part 1" href="../lab/Lab_4.html" />
@@ -156,7 +159,18 @@ const thebe_selector_output = ".output, .cell_output"
     <p class="title logo__title">Computation and Data Science for Social Sciences</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -418,31 +432,31 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="ggr274-homework-4-time-use-survey-data">
-<h1>GGR274 Homework 4: Time Use Survey Data<a class="headerlink" href="#ggr274-homework-4-time-use-survey-data" title="Permalink to this heading">#</a></h1>
+<h1>GGR274 Homework 4: Time Use Survey Data<a class="headerlink" href="#ggr274-homework-4-time-use-survey-data" title="Link to this heading">#</a></h1>
 <section id="logistics">
-<h2>Logistics<a class="headerlink" href="#logistics" title="Permalink to this heading">#</a></h2>
+<h2>Logistics<a class="headerlink" href="#logistics" title="Link to this heading">#</a></h2>
 <p><strong>Due date</strong>: The homework is due 23:59 on Monday, February 05.</p>
 <p>You will submit your work on <a class="reference external" href="https://markus-ds.teach.cs.toronto.edu">MarkUs</a>.
 To submit your work:</p>
 <ol class="arabic simple">
-<li><p>Download this file (<code class="docutils literal notranslate"><span class="pre">Homework_4.ipynb</span></code>) from JupyterHub. (See <a class="reference internal" href="../../../guides/jupyterhub_guide.html"><span class="doc std std-doc">our JupyterHub Guide</span></a> for detailed instructions.)</p></li>
-<li><p>Submit this file to MarkUs under the <strong>hw4</strong> assignment. (See <a class="reference internal" href="../../../guides/markus_guide.html"><span class="doc std std-doc">our MarkUs Guide</span></a> for detailed instructions.)
+<li><p>Download this file (<code class="docutils literal notranslate"><span class="pre">Homework_4.ipynb</span></code>) from JupyterHub. (See <a class="reference internal" href="../../../guides/jupyterhub_guide.html"><span class="std std-doc">our JupyterHub Guide</span></a> for detailed instructions.)</p></li>
+<li><p>Submit this file to MarkUs under the <strong>hw4</strong> assignment. (See <a class="reference internal" href="../../../guides/markus_guide.html"><span class="std std-doc">our MarkUs Guide</span></a> for detailed instructions.)
 All homeworks will take place in a Jupyter notebook (like this one). When you are done, you will download this notebook and submit it to MarkUs.</p></li>
 </ol>
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="introduction">
-<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h1>
+<h1>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h1>
 <p>For this week’s homework, you will use the Statistics Canada GSS Time Use Dataset. This time, we’re going to dig into some of the well-being variables (feeling rushed) and respondent characteristic variables (how people commute to work).</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="question">
-<h1>Question<a class="headerlink" href="#question" title="Permalink to this heading">#</a></h1>
+<h1>Question<a class="headerlink" href="#question" title="Link to this heading">#</a></h1>
 <p>The question you’re answering in this homework:</p>
 <blockquote>
 <div><p>Among Canadians that live in rural communities, is it less common for people to feel rushed and take transit to work or feel rushed and not take transit to work?</p>
 </div></blockquote>
 <section id="homework-instructions-and-learning-objectives">
-<h2>Homework Instructions and Learning Objectives<a class="headerlink" href="#homework-instructions-and-learning-objectives" title="Permalink to this heading">#</a></h2>
+<h2>Homework Instructions and Learning Objectives<a class="headerlink" href="#homework-instructions-and-learning-objectives" title="Link to this heading">#</a></h2>
 <p>The goal of this homework is to answer the question above performing these steps:</p>
 <ul class="simple">
 <li><p>Read the Time Use Dataset into a pandas <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>.</p></li>
@@ -452,7 +466,7 @@ All homeworks will take place in a Jupyter notebook (like this one). When you ar
 </ul>
 </section>
 <section id="task-1">
-<h2>Task 1<a class="headerlink" href="#task-1" title="Permalink to this heading">#</a></h2>
+<h2>Task 1<a class="headerlink" href="#task-1" title="Link to this heading">#</a></h2>
 <p>a) Read the time use data set stored in the csv file <code class="docutils literal notranslate"><span class="pre">gss_tu2016_main_file.csv</span></code> into a pandas <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> and store the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> in a variable named <code class="docutils literal notranslate"><span class="pre">time_use_data_raw</span></code>.</p>
 <p><em>The file is located in the same folder as the notebook.</em></p>
 <div class="cell docutils container">
@@ -481,7 +495,7 @@ All homeworks will take place in a Jupyter notebook (like this one). When you ar
 </div>
 </section>
 <section id="task-2">
-<h2>Task 2<a class="headerlink" href="#task-2" title="Permalink to this heading">#</a></h2>
+<h2>Task 2<a class="headerlink" href="#task-2" title="Link to this heading">#</a></h2>
 <p>a) Use the codebook for the Time Use Survey in the file <code class="docutils literal notranslate"><span class="pre">gss_tu2016_codebook.txt</span></code> to guide you in creating boolean variables using <code class="docutils literal notranslate"><span class="pre">clean_time_use_data</span></code> that correspond the the following conditions and store the results in the variable names specified below.</p>
 <table class="table">
 <thead>
@@ -524,7 +538,7 @@ All homeworks will take place in a Jupyter notebook (like this one). When you ar
 </div>
 </section>
 <section id="id1">
-<h2>Task 2<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<h2>Task 2<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
 <p>a) Use the code book for the Time Use Survey in the file <code class="docutils literal notranslate"><span class="pre">gss_tu2016_codebook.txt</span></code> to guide you in creating boolean variables using <code class="docutils literal notranslate"><span class="pre">clean_time_use_data</span></code> that correspond the the following conditions and store the results in the variable names specified below.</p>
 <table class="table">
 <thead>
@@ -571,9 +585,9 @@ All homeworks will take place in a Jupyter notebook (like this one). When you ar
 </div></blockquote>
 </section>
 <section id="task-3">
-<h2>Task 3<a class="headerlink" href="#task-3" title="Permalink to this heading">#</a></h2>
+<h2>Task 3<a class="headerlink" href="#task-3" title="Link to this heading">#</a></h2>
 <p>In this section you will write a program in a series of steps to analyse the data.</p>
-<p>Use the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> <code class="docutils literal notranslate"><span class="pre">clean_time_use_data</span></code> and the variables that you created in <span class="xref myst">Task 2 a)</span>.</p>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> <code class="docutils literal notranslate"><span class="pre">clean_time_use_data</span></code> and the variables that you created in <a class="reference internal" href="#Task-2"><span class="xref myst">Task 2 a)</span></a>.</p>
 <p>The data analysis will be implemented by writing a Python program to compute two proportions that you will express as percentages (i.e., multiplying by 100).</p>
 <div class="math notranslate nohighlight">
 \[{\text{Percent}_\text{Transit}} = \frac{\text{Total number of respondents in rural areas that take transit and feel rushed}}{\text{Total number of respondents in rural areas}}\times 100 \]</div>
@@ -662,7 +676,7 @@ This is the value of: <span class="math notranslate nohighlight">\(\text{Total n
 </div>
 </section>
 <section id="task-4">
-<h2>Task 4<a class="headerlink" href="#task-4" title="Permalink to this heading">#</a></h2>
+<h2>Task 4<a class="headerlink" href="#task-4" title="Link to this heading">#</a></h2>
 <p>Answer the following questions.</p>
 <p>a) Is the data analysis above sufficient to answer the original question?  If yes then explain why it’s sufficient, otherwise explain what type of analysis would have provided appropriate information to help answer the question. Briefly explain your reasoning.</p>
 <blockquote>
@@ -674,7 +688,7 @@ This is the value of: <span class="math notranslate nohighlight">\(\text{Total n
 </div></blockquote>
 </section>
 <section id="marking-rubric">
-<h2>Marking Rubric<a class="headerlink" href="#marking-rubric" title="Permalink to this heading">#</a></h2>
+<h2>Marking Rubric<a class="headerlink" href="#marking-rubric" title="Link to this heading">#</a></h2>
 <table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Section</p></th>
