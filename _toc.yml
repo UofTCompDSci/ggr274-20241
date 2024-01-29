@@ -60,6 +60,8 @@ parts:
       title: Homework 03 Notebook
   - caption: Week 4
     chapters:
+    - url: https://q.utoronto.ca/courses/338580/files?preview=30071956
+      title: Prof. Li's Slides
     - file: weekly-materials/week04/lecture/Class4_GGR274_MM.ipynb
       title: Prof. Moon's Notebook
     - file: weekly-materials/week04/lab/Lab_4.ipynb
