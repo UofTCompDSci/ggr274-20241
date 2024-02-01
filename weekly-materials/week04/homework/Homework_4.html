@@ -485,7 +485,45 @@ All homeworks will take place in a Jupyter notebook (like this one). When you ar
 <li><p><code class="docutils literal notranslate"><span class="pre">gtu_110</span></code>: How often does one feel rushed?</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ctw_140c</span></code>: Commute to work - Public transit</p></li>
 </ul>
-<p>Create a new <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> using <code class="docutils literal notranslate"><span class="pre">time_use_data_raw</span></code> that only contains the four columns in the order listed above.  The first column should be <code class="docutils literal notranslate"><span class="pre">CASEID</span></code>, the second column should be <code class="docutils literal notranslate"><span class="pre">luc_rst</span></code>, etc.  Store this new <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> in a variable called <code class="docutils literal notranslate"><span class="pre">clean_time_use_data</span></code>.</p>
+<p>Create a new <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> using <code class="docutils literal notranslate"><span class="pre">time_use_data_raw</span></code> that only contains the four columns in the order listed above.  The first column should be <code class="docutils literal notranslate"><span class="pre">CASEID</span></code>, the second column should be <code class="docutils literal notranslate"><span class="pre">luc_rst</span></code>, etc.  This new <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> should be stored in a variable named <code class="docutils literal notranslate"><span class="pre">time_use_data</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>c) Create a Python dictionary stored in a variable called <code class="docutils literal notranslate"><span class="pre">new_column_names</span></code>, that maps old column name to new column name according to the following table:</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>old name</p></th>
+<th class="head"><p>new name</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">CASEID</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">case_ID</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">luc_rst</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">urban_rural</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">gtu_110</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">feeling_rushed</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">ctw_140c</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">public_transit</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<p>You’ll use this dictionary to rename the columns in part (d) below.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>d) Use the dictionary <code class="docutils literal notranslate"><span class="pre">new_column_names</span></code> created in the previous step to rename the columns of the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> stored in <code class="docutils literal notranslate"><span class="pre">time_use_data</span></code>.  Store this new <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> in a variable called <code class="docutils literal notranslate"><span class="pre">clean_time_use_data</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here</span>
