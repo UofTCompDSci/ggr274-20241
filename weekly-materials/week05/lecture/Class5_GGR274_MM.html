@@ -1,0 +1,3110 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Class 5: Data Transformations, Grouped Data, and Data Visualization &#8212; Computation and Data Science for Social Sciences</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=afe5de03"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'weekly-materials/week05/lecture/Class5_GGR274_MM';</script>
+    <link rel="icon" href="../../../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="GGR274 midterm test" href="../../../practice/sample_midterm/GGR274_Midterm.html" />
+    <link rel="prev" title="GGR274 Homework 4: Time Use Survey Data" href="../../week04/homework/Homework_4.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../jupyter-book/index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Computation and Data Science for Social Sciences</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../jupyter-book/index.html">
+                    👋 Course Website for GGR274H1-S Winter 2024
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Quick Links</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../syllabus/ggr274_syllabus.html">Course Syllabus</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://q.utoronto.ca/courses/338580/announcements">Announcements</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://piazza.com/utoronto.ca/winter2024/ggr274h1">Piazza</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://forms.office.com/Pages/ResponsePage.aspx?id=JsKqeAMvTUuQN7RtVsVSEF-wqptfr85NieT8UyliaxxUOUtMSVFUQkFTNVdRTlVJNkZFQU84NldYUi4u">Course Feedback Form</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Resources</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../guides/jupyterhub_guide.html">JupyterHub Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../guides/markus_guide.html">MarkUs Guide</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 1</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://q.utoronto.ca/courses/338580/files?preview=29750629">Prof. Li's Slides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week01/lecture/Class1_GGR274_MM.html">Prof. Moon's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week01/lecture/Class1_GGR274_IM.html">Prof. Musabirov's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week01/lab/Lab_1.html">Lab 01 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week01/lab/Lab_1_solutions.html">Lab 01 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week01/homework/Homework_1.html">Homework 01 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week01/homework/Homework_1_solution.html">Homework 01 Solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 2</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../week02/lecture/Class2_GGR274_DL_IM.html">Prof. Musabirov's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week02/lab/Lab_2.html">Lab 02 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week02/lab/Lab_2_solutions.html">Lab 02 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week02/homework/Homework_2.html">Homework 02 Notebook</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 3</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../week03/lecture/Class3_GGR274_DL_IM.html">Prof. Musabirov's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week03/lab/Lab_3.html">Lab 03 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week03/homework/Homework_3.html">Homework 03 Notebook</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 4</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://q.utoronto.ca/courses/338580/files?preview=30071956">Prof. Li's Slides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week04/lecture/Class4_GGR274_MM.html">Prof. Moon's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week04/lab/Lab_4.html">Lab 04 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week04/lab/Lab_4_solutions.html">Lab 04 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week04/homework/Homework_4.html">Homework 04 Notebook</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 5</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Prof. Moon's Notebook</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Practice Midterm</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../practice/sample_midterm/GGR274_Midterm.html">2022 Midterm Notebook</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://jupyter.utoronto.ca/hub/user-redirect/git-pull?repo=https%3A//github.com/UofTCompDSci/ggr274-20241&urlpath=tree/ggr274-20241/weekly-materials/week05/lecture/Class5_GGR274_MM.ipynb&branch=main" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onJupyterHub"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">JupyterHub</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/weekly-materials/week05/lecture/Class5_GGR274_MM.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Class 5: Data Transformations, Grouped Data, and Data Visualization</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#last-class">Last class</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#this-class">This class</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#midterm-information">Midterm Information</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-transformations">Data Transformations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#time-use-survey">Time use survey</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subset-the-data">Subset the data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rename-columns-so-that-they-are-meaningful">Rename columns so that they are meaningful</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-new-column-in-a-pandas-dataframe">Create a new column in a pandas DataFrame</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-happened">What happened?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transform-a-column-using-if-then">Transform a column using if-then</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">What happened?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#to-create-a-new-column-in-a-pandas-dataframe-using-if-then-if-then-else-logic">To create a new column in a pandas DataFrame using if-then/if-then-else logic</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#merging-pandas-dataframes">Merging pandas DataFrames</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#is-time-spent-resting-different-by-province">Is time spent resting different by province?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grouped-summaries-of-data">Grouped summaries of data</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataframe-index">DataFrame Index</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summing-across-rows-of-a-dataframe">Summing across rows of a DataFrame</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#two-different-ways-to-calulate-row-totals">Two different ways to calulate row totals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#statistical-variables">Statistical Variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-s-the-difference-between-a-statistical-variable-and-a-variable-in-python">What’s the difference between a Statistical Variable and a Variable in python?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-of-implementing-statistical-variables-in-python">Examples of implementing statistical variables in python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#statistical-distributions">Statistical Distributions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-distribution-of-kids-under-14-in-ontario">What is the distribution of kids under 14 in Ontario?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-bar-plot-of-the-distribution-of-kids-under-14-in-ontario">A bar plot of the distribution of kids under 14 in Ontario</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summarizing-the-distribution-of-an-interval-variable">Summarizing the distribution of an interval variable</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quantiles">Quantiles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variation">Variation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question">Question</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#histograms">Histograms</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#boxplots">Boxplots</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#anatomy-of-a-boxplot">Anatomy of a Boxplot</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="class-5-data-transformations-grouped-data-and-data-visualization">
+<h1>Class 5: Data Transformations, Grouped Data, and Data Visualization<a class="headerlink" href="#class-5-data-transformations-grouped-data-and-data-visualization" title="Link to this heading">#</a></h1>
+<section id="last-class">
+<h2>Last class<a class="headerlink" href="#last-class" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>read in a csv file to <code class="docutils literal notranslate"><span class="pre">pandas</span></code></p></li>
+<li><p>select rows and columns from a <code class="docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code></p></li>
+<li><p>rename columns of a <code class="docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code></p></li>
+</ul>
+</section>
+<section id="this-class">
+<h2>This class<a class="headerlink" href="#this-class" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Transformations: create a new column in a <code class="docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code></p></li>
+<li><p>Data summaries: mean, median, and measures of variation</p></li>
+<li><p>Data visualization: boxplots, histograms, and bar charts</p></li>
+</ul>
+</section>
+<section id="midterm-information">
+<h2>Midterm Information<a class="headerlink" href="#midterm-information" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Covers all the content we have covered up until this class.</p></li>
+<li><p>2022’s test is available on the course website.</p></li>
+<li><p>The test was designed to be completed in 90 minutes.</p></li>
+<li><p>The teaching team will post a link to the test by 09:00 AM, Feb. 13 on the course website.</p></li>
+<li><p>You can submit anytime up until 11:00 AM on February 13.</p></li>
+<li><p>The instructors will be available on a <a class="reference external" href="https://utoronto.zoom.us/j/86707766870">zoom link</a> in case you have any questions from 09:00 AM - 11:00 AM. We will also be in the classroom, SS2117 for those who would like to use the space and in-person support.</p></li>
+<li><p>If you have received an accommodation and are writing the test with Accommodated Testing Services, you will receive a separate link from them when you start your test.</p></li>
+</ul>
+</section>
+<section id="data-transformations">
+<h2>Data Transformations<a class="headerlink" href="#data-transformations" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Time in the time use survey is measured in minutes, but it’s not easy to interpret when the numbers get very large.</p></li>
+</ul>
+<blockquote>
+<div><p><em>I worked four thousand six hundred thirty two minutes last week!</em></p>
+</div></blockquote>
+<ul class="simple">
+<li><p>It would be easier if time was reported in hours.</p></li>
+</ul>
+<blockquote>
+<div><p><em>I worked over seventy seven hours last week!</em></p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Converting time measured in minutes to time measured in hours is an example of a <strong>data transformation</strong>.</p></li>
+</ul>
+</section>
+<section id="time-use-survey">
+<h2>Time use survey<a class="headerlink" href="#time-use-survey" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">time_use_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;gss_tu2016_main_file.csv&#39;</span><span class="p">)</span>
+
+<span class="n">time_use_data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/0j/ybsv4ncn5w50v40vdh5jjlww0000gn/T/ipykernel_57351/4017176398.py:1: DeprecationWarning: 
+Pyarrow will become a required dependency of pandas in the next major release of pandas (pandas 3.0),
+(to allow more performant data types, such as the Arrow string type, and better interoperability with other libraries)
+but was not found to be installed on your system.
+If this would cause problems for you,
+please provide us feedback at https://github.com/pandas-dev/pandas/issues/54466
+        
+  import pandas as pd
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>CASEID</th>
+      <th>pumfid</th>
+      <th>wght_per</th>
+      <th>survmnth</th>
+      <th>wtbs_001</th>
+      <th>agecxryg</th>
+      <th>agegr10</th>
+      <th>agehsdyc</th>
+      <th>ageprgrd</th>
+      <th>chh0014c</th>
+      <th>...</th>
+      <th>ree_02</th>
+      <th>ree_03</th>
+      <th>rlr_110</th>
+      <th>lan_01</th>
+      <th>lanhome</th>
+      <th>lanhmult</th>
+      <th>lanmt</th>
+      <th>lanmtmul</th>
+      <th>incg1</th>
+      <th>hhincg1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>10000</td>
+      <td>10000</td>
+      <td>616.6740</td>
+      <td>7</td>
+      <td>305.1159</td>
+      <td>96</td>
+      <td>5</td>
+      <td>62</td>
+      <td>96</td>
+      <td>0</td>
+      <td>...</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>10001</td>
+      <td>10001</td>
+      <td>8516.6140</td>
+      <td>7</td>
+      <td>0.0000</td>
+      <td>6</td>
+      <td>5</td>
+      <td>32</td>
+      <td>5</td>
+      <td>0</td>
+      <td>...</td>
+      <td>5</td>
+      <td>6</td>
+      <td>3</td>
+      <td>1</td>
+      <td>5</td>
+      <td>2</td>
+      <td>5</td>
+      <td>2</td>
+      <td>5</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>10002</td>
+      <td>10002</td>
+      <td>371.7520</td>
+      <td>1</td>
+      <td>362.7057</td>
+      <td>2</td>
+      <td>4</td>
+      <td>9</td>
+      <td>10</td>
+      <td>3</td>
+      <td>...</td>
+      <td>5</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>3</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>10003</td>
+      <td>10003</td>
+      <td>1019.3135</td>
+      <td>3</td>
+      <td>0.0000</td>
+      <td>96</td>
+      <td>6</td>
+      <td>65</td>
+      <td>96</td>
+      <td>0</td>
+      <td>...</td>
+      <td>3</td>
+      <td>2</td>
+      <td>2</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>2</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>10004</td>
+      <td>10004</td>
+      <td>1916.0708</td>
+      <td>9</td>
+      <td>11388.9706</td>
+      <td>96</td>
+      <td>2</td>
+      <td>25</td>
+      <td>96</td>
+      <td>0</td>
+      <td>...</td>
+      <td>9</td>
+      <td>99</td>
+      <td>9</td>
+      <td>9</td>
+      <td>99</td>
+      <td>9</td>
+      <td>99</td>
+      <td>9</td>
+      <td>2</td>
+      <td>4</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 350 columns</p>
+</div></div></div>
+</div>
+</section>
+<section id="subset-the-data">
+<h2>Subset the data<a class="headerlink" href="#subset-the-data" title="Link to this heading">#</a></h2>
+<p>In this class we will explore some of these columns, so let’s create a subset of <code class="docutils literal notranslate"><span class="pre">time_use_data</span></code> with only the following columns:</p>
+<p><em>(columns from last week)</em></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">CASEID</span></code>: participant ID</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">luc_rst</span></code>: large urban centre vs rural and small towns</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">chh0014c</span></code>: number of kids 14 or under</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gtu_110</span></code>: feeling rushed</p></li>
+</ul>
+<p><em>(plus…)</em></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">agegr10</span></code>: age group</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">marstat</span></code>: marital status</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sex</span></code>: sex</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dur01</span></code>: duration spent sleeping</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dur08</span></code>: duration spent working</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prv</span></code>: province of residence</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">important_columns</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;CASEID&quot;</span><span class="p">,</span> <span class="s2">&quot;prv&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;luc_rst&quot;</span><span class="p">,</span> <span class="s2">&quot;agegr10&quot;</span><span class="p">,</span> <span class="s2">&quot;marstat&quot;</span><span class="p">,</span> <span class="s2">&quot;sex&quot;</span><span class="p">,</span> <span class="s2">&quot;chh0014c&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;gtu_110&quot;</span><span class="p">,</span> <span class="s2">&quot;dur01&quot;</span><span class="p">,</span> <span class="s2">&quot;dur08&quot;</span>
+<span class="p">]</span>
+
+<span class="n">subset_time_use_data</span> <span class="o">=</span> <span class="n">time_use_data</span><span class="p">[</span><span class="n">important_columns</span><span class="p">]</span>
+
+<span class="n">subset_time_use_data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>CASEID</th>
+      <th>prv</th>
+      <th>luc_rst</th>
+      <th>agegr10</th>
+      <th>marstat</th>
+      <th>sex</th>
+      <th>chh0014c</th>
+      <th>gtu_110</th>
+      <th>dur01</th>
+      <th>dur08</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>10000</td>
+      <td>46</td>
+      <td>1</td>
+      <td>5</td>
+      <td>5</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>510</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>10001</td>
+      <td>59</td>
+      <td>1</td>
+      <td>5</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>3</td>
+      <td>420</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>10002</td>
+      <td>47</td>
+      <td>1</td>
+      <td>4</td>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>1</td>
+      <td>570</td>
+      <td>480</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>10003</td>
+      <td>35</td>
+      <td>1</td>
+      <td>6</td>
+      <td>5</td>
+      <td>2</td>
+      <td>0</td>
+      <td>2</td>
+      <td>510</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>10004</td>
+      <td>35</td>
+      <td>1</td>
+      <td>2</td>
+      <td>6</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>525</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="rename-columns-so-that-they-are-meaningful">
+<h2>Rename columns so that they are meaningful<a class="headerlink" href="#rename-columns-so-that-they-are-meaningful" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">rename</span></code> function to rename columns.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># dictionary of &#39;old name&#39;:&#39;new name&#39;</span>
+
+<span class="n">newnames</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;CASEID&#39;</span><span class="p">:</span> <span class="s1">&#39;Participant ID&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;luc_rst&#39;</span><span class="p">:</span> <span class="s1">&#39;Urban/Rural&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;agegr10&#39;</span><span class="p">:</span> <span class="s1">&#39;Age Group&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;marstat&#39;</span><span class="p">:</span> <span class="s1">&#39;Marital Status&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;sex&#39;</span><span class="p">:</span> <span class="s1">&#39;sex&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;chh0014c&#39;</span><span class="p">:</span> <span class="s1">&#39;Kids under 14&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;gtu_110&#39;</span><span class="p">:</span> <span class="s1">&#39;Feeling Rushed&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;dur01&#39;</span><span class="p">:</span> <span class="s1">&#39;Sleep duration&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;dur08&#39;</span><span class="p">:</span> <span class="s1">&#39;Work duration&#39;</span>
+    <span class="p">}</span>
+
+<span class="n">subset_time_use_data_colnames</span> <span class="o">=</span> <span class="n">subset_time_use_data</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="n">newnames</span><span class="p">)</span>
+
+<span class="n">subset_time_use_data_colnames</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Participant ID</th>
+      <th>prv</th>
+      <th>Urban/Rural</th>
+      <th>Age Group</th>
+      <th>Marital Status</th>
+      <th>sex</th>
+      <th>Kids under 14</th>
+      <th>Feeling Rushed</th>
+      <th>Sleep duration</th>
+      <th>Work duration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>10000</td>
+      <td>46</td>
+      <td>1</td>
+      <td>5</td>
+      <td>5</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>510</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>10001</td>
+      <td>59</td>
+      <td>1</td>
+      <td>5</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>3</td>
+      <td>420</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>10002</td>
+      <td>47</td>
+      <td>1</td>
+      <td>4</td>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>1</td>
+      <td>570</td>
+      <td>480</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>10003</td>
+      <td>35</td>
+      <td>1</td>
+      <td>6</td>
+      <td>5</td>
+      <td>2</td>
+      <td>0</td>
+      <td>2</td>
+      <td>510</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>10004</td>
+      <td>35</td>
+      <td>1</td>
+      <td>2</td>
+      <td>6</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>525</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="create-a-new-column-in-a-pandas-dataframe">
+<h2>Create a new column in a pandas DataFrame<a class="headerlink" href="#create-a-new-column-in-a-pandas-dataframe" title="Link to this heading">#</a></h2>
+<p>Create a new numeric column derived from another numeric column.</p>
+<p>The code below creates a new column <code class="docutils literal notranslate"><span class="pre">Sleep</span> <span class="pre">duration</span> <span class="pre">(hours)</span></code> by dividing <code class="docutils literal notranslate"><span class="pre">Sleep</span> <span class="pre">duration</span></code> by 60, since 1 hour = 60 minutes.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">subset_time_use_data_colnames</span><span class="p">[</span><span class="s1">&#39;Sleep duration (hours)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">subset_time_use_data_colnames</span><span class="p">[</span><span class="s1">&#39;Sleep duration&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="mi">60</span>
+
+<span class="n">subset_time_use_data_colnames</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Participant ID</th>
+      <th>prv</th>
+      <th>Urban/Rural</th>
+      <th>Age Group</th>
+      <th>Marital Status</th>
+      <th>sex</th>
+      <th>Kids under 14</th>
+      <th>Feeling Rushed</th>
+      <th>Sleep duration</th>
+      <th>Work duration</th>
+      <th>Sleep duration (hours)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>10000</td>
+      <td>46</td>
+      <td>1</td>
+      <td>5</td>
+      <td>5</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>510</td>
+      <td>0</td>
+      <td>8.50</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>10001</td>
+      <td>59</td>
+      <td>1</td>
+      <td>5</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>3</td>
+      <td>420</td>
+      <td>0</td>
+      <td>7.00</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>10002</td>
+      <td>47</td>
+      <td>1</td>
+      <td>4</td>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>1</td>
+      <td>570</td>
+      <td>480</td>
+      <td>9.50</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>10003</td>
+      <td>35</td>
+      <td>1</td>
+      <td>6</td>
+      <td>5</td>
+      <td>2</td>
+      <td>0</td>
+      <td>2</td>
+      <td>510</td>
+      <td>20</td>
+      <td>8.50</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>10004</td>
+      <td>35</td>
+      <td>1</td>
+      <td>2</td>
+      <td>6</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>525</td>
+      <td>0</td>
+      <td>8.75</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="what-happened">
+<h2>What happened?<a class="headerlink" href="#what-happened" title="Link to this heading">#</a></h2>
+<p>To create a new column, use the <code class="docutils literal notranslate"><span class="pre">[]</span></code> brackets with the new column name at the left side of the assignment.</p>
+<p>The calculation of the values is done <strong>element-wise</strong>. This means all values in the given column are divided by the value 60 at once. You do not need to use a loop to iterate each of the rows!</p>
+<p><img alt="" src="../../../_images/min-to-hr.png" /></p>
+<p>Reference is available <a class="reference external" href="https://pandas.pydata.org/docs/getting_started/intro_tutorials/05_add_columns.html">here</a>.</p>
+</section>
+<section id="transform-a-column-using-if-then">
+<h2>Transform a column using if-then<a class="headerlink" href="#transform-a-column-using-if-then" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">Age</span> <span class="pre">Group</span></code> column has the following distribution.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">subset_time_use_data_colnames</span><span class="p">[</span><span class="s1">&#39;Age Group&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Age Group
+5    3741
+6    2958
+4    2789
+3    2597
+2    2127
+7    1875
+1    1303
+Name: count, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<p>It would be easier to interpret if the labels were used.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>           Age group of respondent (groups of 10)
+
+       VALUE  LABEL
+           1  15 to 24 years
+           2  25 to 34 years
+           3  35 to 44 years
+           4  45 to 54 years
+           5  55 to 64 years
+           6  65 to 74 years
+           7  75 years and over
+          96  Valid skip
+          97  Don&#39;t know
+          98  Refusal
+          99  Not stated
+
+       Data type: numeric
+       Missing-data codes: 96-99
+       Record/column: 1/35
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># make a copy of the dataframe</span>
+<span class="n">subset_time_df</span> <span class="o">=</span> <span class="n">subset_time_use_data_colnames</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="c1"># create a new column called &#39;Age group label&#39;</span>
+
+<span class="n">subset_time_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">subset_time_df</span><span class="p">[</span><span class="s1">&#39;Age Group&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Age group label&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;15-24&#39;</span>
+
+<span class="n">subset_time_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">subset_time_df</span><span class="p">[</span><span class="s1">&#39;Age Group&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;Age group label&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;25-34&#39;</span>
+
+<span class="n">subset_time_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">subset_time_df</span><span class="p">[</span><span class="s1">&#39;Age Group&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;Age group label&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;35-44&#39;</span>
+
+<span class="n">subset_time_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">subset_time_df</span><span class="p">[</span><span class="s1">&#39;Age Group&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;Age group label&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;45-54&#39;</span>
+
+<span class="n">subset_time_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">subset_time_df</span><span class="p">[</span><span class="s1">&#39;Age Group&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;Age group label&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;55-64&#39;</span>
+
+<span class="n">subset_time_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">subset_time_df</span><span class="p">[</span><span class="s1">&#39;Age Group&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;Age group label&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;65-74&#39;</span>
+
+<span class="n">subset_time_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">subset_time_df</span><span class="p">[</span><span class="s1">&#39;Age Group&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">7</span><span class="p">,</span> <span class="s1">&#39;Age group label&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;75+&#39;</span>
+
+<span class="n">subset_time_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Participant ID</th>
+      <th>prv</th>
+      <th>Urban/Rural</th>
+      <th>Age Group</th>
+      <th>Marital Status</th>
+      <th>sex</th>
+      <th>Kids under 14</th>
+      <th>Feeling Rushed</th>
+      <th>Sleep duration</th>
+      <th>Work duration</th>
+      <th>Sleep duration (hours)</th>
+      <th>Age group label</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>10000</td>
+      <td>46</td>
+      <td>1</td>
+      <td>5</td>
+      <td>5</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>510</td>
+      <td>0</td>
+      <td>8.50</td>
+      <td>55-64</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>10001</td>
+      <td>59</td>
+      <td>1</td>
+      <td>5</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>3</td>
+      <td>420</td>
+      <td>0</td>
+      <td>7.00</td>
+      <td>55-64</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>10002</td>
+      <td>47</td>
+      <td>1</td>
+      <td>4</td>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>1</td>
+      <td>570</td>
+      <td>480</td>
+      <td>9.50</td>
+      <td>45-54</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>10003</td>
+      <td>35</td>
+      <td>1</td>
+      <td>6</td>
+      <td>5</td>
+      <td>2</td>
+      <td>0</td>
+      <td>2</td>
+      <td>510</td>
+      <td>20</td>
+      <td>8.50</td>
+      <td>65-74</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>10004</td>
+      <td>35</td>
+      <td>1</td>
+      <td>2</td>
+      <td>6</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>525</td>
+      <td>0</td>
+      <td>8.75</td>
+      <td>25-34</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="id1">
+<h2>What happened?<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<p><img alt="" src="../../../_images/min-to-hr.png" /></p>
+</section>
+<section id="to-create-a-new-column-in-a-pandas-dataframe-using-if-then-if-then-else-logic">
+<h2>To create a new column in a pandas DataFrame using if-then/if-then-else logic<a class="headerlink" href="#to-create-a-new-column-in-a-pandas-dataframe-using-if-then-if-then-else-logic" title="Link to this heading">#</a></h2>
+<p>This line</p>
+<p><code class="docutils literal notranslate"><span class="pre">subset_time_df.loc[subset_time_df['Age</span> <span class="pre">Group']</span> <span class="pre">==</span> <span class="pre">1,</span> <span class="pre">'Age</span> <span class="pre">group</span> <span class="pre">label']</span> <span class="pre">=</span> <span class="pre">'15-24'</span></code></p>
+<p>creates a new column in <code class="docutils literal notranslate"><span class="pre">subset_time_df</span></code> called <code class="docutils literal notranslate"><span class="pre">Age</span> <span class="pre">group</span> <span class="pre">label</span></code> according to the <em>if-then (conditional)</em> logic:</p>
+<p><strong>If</strong> <code class="docutils literal notranslate"><span class="pre">subset_time_df['Age</span> <span class="pre">Group']</span> <span class="pre">==</span> <span class="pre">1</span></code> <strong>then</strong>  <code class="docutils literal notranslate"><span class="pre">Age</span> <span class="pre">group</span> <span class="pre">label</span></code> is assigned the value <code class="docutils literal notranslate"><span class="pre">15-24</span></code>.</p>
+<p>This line</p>
+<p><code class="docutils literal notranslate"><span class="pre">subset_time_df.loc[subset_time_df['Age</span> <span class="pre">Group']</span> <span class="pre">==</span> <span class="pre">2,</span> <span class="pre">'Age</span> <span class="pre">group</span> <span class="pre">label']</span> <span class="pre">=</span> <span class="pre">'25-34'</span></code></p>
+<p>does the <em>else if</em> logic.  Namely,</p>
+<p><strong>If</strong> <code class="docutils literal notranslate"><span class="pre">subset_time_df['Age</span> <span class="pre">Group']</span> <span class="pre">==</span> <span class="pre">2</span></code> <strong>then</strong>  <code class="docutils literal notranslate"><span class="pre">Age</span> <span class="pre">group</span> <span class="pre">label</span></code> is assigned the value <code class="docutils literal notranslate"><span class="pre">25-34</span></code>.</p>
+<p>This line</p>
+<p><code class="docutils literal notranslate"><span class="pre">subset_time_df.loc[subset_time_df['Age</span> <span class="pre">Group']</span> <span class="pre">==</span> <span class="pre">3,</span> <span class="pre">'Age</span> <span class="pre">group</span> <span class="pre">label']</span> <span class="pre">=</span> <span class="pre">'35-44'</span></code></p>
+<p>does the <em>else if</em> logic. Namely,</p>
+<p><strong>If</strong> <code class="docutils literal notranslate"><span class="pre">subset_time_df['Age</span> <span class="pre">Group']</span> <span class="pre">==</span> <span class="pre">3</span></code> <strong>then</strong>  <code class="docutils literal notranslate"><span class="pre">Age</span> <span class="pre">group</span> <span class="pre">label</span></code> is assigned the value <code class="docutils literal notranslate"><span class="pre">35-44</span></code>.</p>
+<p>etc …</p>
+<p>See <a class="reference external" href="https://pandas.pydata.org/docs/user_guide/cookbook.html#idioms">idioms in the Pandas cookbook</a> and <a class="reference external" href="https://pandas.pydata.org/pandas-docs/version/1.0/getting_started/intro_tutorials/03_subset_data.html">a reference on different ways to subset a pandas DataFrame</a>.</p>
+</section>
+<section id="merging-pandas-dataframes">
+<h2>Merging pandas DataFrames<a class="headerlink" href="#merging-pandas-dataframes" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>We want would like to look at the relationship between sleeping and working, on different aspects of time use at the provincial level.  In addition we would like to add provincial level data of on income and housing.</p></li>
+<li><p>The data is in <code class="docutils literal notranslate"><span class="pre">provincial_data.csv</span></code>.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">prov_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;provincial_data.csv&#39;</span><span class="p">)</span>
+<span class="n">prov_data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>COL0</th>
+      <th>COL1</th>
+      <th>COL2</th>
+      <th>COL3</th>
+      <th>COL4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>60.2</td>
+      <td>70336.0</td>
+      <td>2.4</td>
+      <td>16.6</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>10</td>
+      <td>49.5</td>
+      <td>67272.0</td>
+      <td>2.3</td>
+      <td>10.6</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>11</td>
+      <td>58.2</td>
+      <td>61163.0</td>
+      <td>2.3</td>
+      <td>11.1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>12</td>
+      <td>55.2</td>
+      <td>60764.0</td>
+      <td>2.3</td>
+      <td>12.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>13</td>
+      <td>54.6</td>
+      <td>59347.0</td>
+      <td>2.3</td>
+      <td>10.3</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>24</td>
+      <td>59.5</td>
+      <td>59822.0</td>
+      <td>2.3</td>
+      <td>12.9</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>35</td>
+      <td>59.9</td>
+      <td>74287.0</td>
+      <td>2.6</td>
+      <td>19.8</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>46</td>
+      <td>61.7</td>
+      <td>68147.0</td>
+      <td>2.5</td>
+      <td>11.4</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>47</td>
+      <td>63.5</td>
+      <td>75412.0</td>
+      <td>2.5</td>
+      <td>12.1</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>48</td>
+      <td>65.4</td>
+      <td>93835.0</td>
+      <td>2.6</td>
+      <td>15.1</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>59</td>
+      <td>59.6</td>
+      <td>69995.0</td>
+      <td>2.4</td>
+      <td>20.7</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>60</td>
+      <td>68.5</td>
+      <td>84521.0</td>
+      <td>2.3</td>
+      <td>12.7</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>61</td>
+      <td>66.2</td>
+      <td>117688.0</td>
+      <td>2.7</td>
+      <td>9.0</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>62</td>
+      <td>53.6</td>
+      <td>97441.0</td>
+      <td>3.6</td>
+      <td>7.9</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>COL0 - GEO UID
+COL1 - Labour - Total Sex / Employment rate
+COL2 - Income - Total Sex / Total - Income statistics in 2015 for private households by household size - 100% data / Median total income of households in 2015 ($)
+COL3 - Dwelling characteristics / Average household size
+
+COL4 - Housing - Total Sex / Total - Owner households in non-farm, non-reserve private dwellings - 25% sample data / % of owner households spending 30% or more of its income on shelter costs
+</pre></div>
+</div>
+<p>Let’s give the columns meaningful names.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">colnames</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;COL0&#39;</span><span class="p">:</span><span class="s1">&#39;Prov&#39;</span><span class="p">,</span> 
+            <span class="s1">&#39;COL1&#39;</span><span class="p">:</span><span class="s1">&#39;Employment Rate&#39;</span><span class="p">,</span> 
+            <span class="s1">&#39;COL2&#39;</span><span class="p">:</span><span class="s1">&#39;Income&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;COL3&#39;</span><span class="p">:</span> <span class="s1">&#39;Household Size&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;COL4&#39;</span><span class="p">:</span> <span class="s1">&#39;Pct house over 30&#39;</span><span class="p">}</span>
+
+<span class="n">prov_data</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="n">colnames</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">prov_data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Prov</th>
+      <th>Employment Rate</th>
+      <th>Income</th>
+      <th>Household Size</th>
+      <th>Pct house over 30</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>60.2</td>
+      <td>70336.0</td>
+      <td>2.4</td>
+      <td>16.6</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>10</td>
+      <td>49.5</td>
+      <td>67272.0</td>
+      <td>2.3</td>
+      <td>10.6</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>11</td>
+      <td>58.2</td>
+      <td>61163.0</td>
+      <td>2.3</td>
+      <td>11.1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>12</td>
+      <td>55.2</td>
+      <td>60764.0</td>
+      <td>2.3</td>
+      <td>12.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>13</td>
+      <td>54.6</td>
+      <td>59347.0</td>
+      <td>2.3</td>
+      <td>10.3</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>24</td>
+      <td>59.5</td>
+      <td>59822.0</td>
+      <td>2.3</td>
+      <td>12.9</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>35</td>
+      <td>59.9</td>
+      <td>74287.0</td>
+      <td>2.6</td>
+      <td>19.8</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>46</td>
+      <td>61.7</td>
+      <td>68147.0</td>
+      <td>2.5</td>
+      <td>11.4</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>47</td>
+      <td>63.5</td>
+      <td>75412.0</td>
+      <td>2.5</td>
+      <td>12.1</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>48</td>
+      <td>65.4</td>
+      <td>93835.0</td>
+      <td>2.6</td>
+      <td>15.1</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>59</td>
+      <td>59.6</td>
+      <td>69995.0</td>
+      <td>2.4</td>
+      <td>20.7</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>60</td>
+      <td>68.5</td>
+      <td>84521.0</td>
+      <td>2.3</td>
+      <td>12.7</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>61</td>
+      <td>66.2</td>
+      <td>117688.0</td>
+      <td>2.7</td>
+      <td>9.0</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>62</td>
+      <td>53.6</td>
+      <td>97441.0</td>
+      <td>3.6</td>
+      <td>7.9</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Now, we are ready to use the <code class="docutils literal notranslate"><span class="pre">merge</span></code> function in <code class="docutils literal notranslate"><span class="pre">pandas</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">prov_data_df</span> <span class="o">=</span> <span class="n">subset_time_df</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span>
+    <span class="n">prov_data</span><span class="p">,</span> 
+    <span class="n">right_on</span> <span class="o">=</span> <span class="s1">&#39;Prov&#39;</span><span class="p">,</span> <span class="c1"># the right data frame is prov_data </span>
+    <span class="n">left_on</span> <span class="o">=</span> <span class="s1">&#39;prv&#39;</span>    <span class="c1"># the left data frame is subset_time_df</span>
+<span class="p">)</span>   
+
+
+<span class="n">prov_data_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Participant ID</th>
+      <th>prv</th>
+      <th>Urban/Rural</th>
+      <th>Age Group</th>
+      <th>Marital Status</th>
+      <th>sex</th>
+      <th>Kids under 14</th>
+      <th>Feeling Rushed</th>
+      <th>Sleep duration</th>
+      <th>Work duration</th>
+      <th>Sleep duration (hours)</th>
+      <th>Age group label</th>
+      <th>Prov</th>
+      <th>Employment Rate</th>
+      <th>Income</th>
+      <th>Household Size</th>
+      <th>Pct house over 30</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>10000</td>
+      <td>46</td>
+      <td>1</td>
+      <td>5</td>
+      <td>5</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>510</td>
+      <td>0</td>
+      <td>8.50</td>
+      <td>55-64</td>
+      <td>46</td>
+      <td>61.7</td>
+      <td>68147.0</td>
+      <td>2.5</td>
+      <td>11.4</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>10001</td>
+      <td>59</td>
+      <td>1</td>
+      <td>5</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>3</td>
+      <td>420</td>
+      <td>0</td>
+      <td>7.00</td>
+      <td>55-64</td>
+      <td>59</td>
+      <td>59.6</td>
+      <td>69995.0</td>
+      <td>2.4</td>
+      <td>20.7</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>10002</td>
+      <td>47</td>
+      <td>1</td>
+      <td>4</td>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>1</td>
+      <td>570</td>
+      <td>480</td>
+      <td>9.50</td>
+      <td>45-54</td>
+      <td>47</td>
+      <td>63.5</td>
+      <td>75412.0</td>
+      <td>2.5</td>
+      <td>12.1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>10003</td>
+      <td>35</td>
+      <td>1</td>
+      <td>6</td>
+      <td>5</td>
+      <td>2</td>
+      <td>0</td>
+      <td>2</td>
+      <td>510</td>
+      <td>20</td>
+      <td>8.50</td>
+      <td>65-74</td>
+      <td>35</td>
+      <td>59.9</td>
+      <td>74287.0</td>
+      <td>2.6</td>
+      <td>19.8</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>10004</td>
+      <td>35</td>
+      <td>1</td>
+      <td>2</td>
+      <td>6</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>525</td>
+      <td>0</td>
+      <td>8.75</td>
+      <td>25-34</td>
+      <td>35</td>
+      <td>59.9</td>
+      <td>74287.0</td>
+      <td>2.6</td>
+      <td>19.8</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Create a new column <code class="docutils literal notranslate"><span class="pre">Prov</span> <span class="pre">label</span></code> that <strong>recodes</strong> <code class="docutils literal notranslate"><span class="pre">Prov</span></code> by it’s label in the code book.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">prov_data_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">prov_data_df</span><span class="p">[</span><span class="s1">&#39;Prov&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;Prov label&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;NL&#39;</span>
+
+<span class="n">prov_data_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">prov_data_df</span><span class="p">[</span><span class="s1">&#39;Prov&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">11</span><span class="p">,</span> <span class="s1">&#39;Prov label&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Prince Edward Island&#39;</span>
+
+<span class="n">prov_data_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">prov_data_df</span><span class="p">[</span><span class="s1">&#39;Prov&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">12</span><span class="p">,</span> <span class="s1">&#39;Prov label&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Nova Scotia&#39;</span>
+
+<span class="n">prov_data_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">prov_data_df</span><span class="p">[</span><span class="s1">&#39;Prov&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">13</span><span class="p">,</span> <span class="s1">&#39;Prov label&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;New Brunswick&#39;</span>
+
+<span class="n">prov_data_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">prov_data_df</span><span class="p">[</span><span class="s1">&#39;Prov&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">24</span><span class="p">,</span> <span class="s1">&#39;Prov label&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Quebec&#39;</span>
+
+<span class="n">prov_data_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">prov_data_df</span><span class="p">[</span><span class="s1">&#39;Prov&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">35</span><span class="p">,</span> <span class="s1">&#39;Prov label&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Ontario&#39;</span>
+
+<span class="n">prov_data_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">prov_data_df</span><span class="p">[</span><span class="s1">&#39;Prov&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">46</span><span class="p">,</span> <span class="s1">&#39;Prov label&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Manitoba&#39;</span>
+
+<span class="n">prov_data_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">prov_data_df</span><span class="p">[</span><span class="s1">&#39;Prov&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">47</span><span class="p">,</span> <span class="s1">&#39;Prov label&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Saskatchewan&#39;</span>
+
+<span class="n">prov_data_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">prov_data_df</span><span class="p">[</span><span class="s1">&#39;Prov&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">48</span><span class="p">,</span> <span class="s1">&#39;Prov label&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Alberta&#39;</span>
+
+<span class="n">prov_data_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">prov_data_df</span><span class="p">[</span><span class="s1">&#39;Prov&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">59</span><span class="p">,</span> <span class="s1">&#39;Prov label&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;British Columbia&#39;</span>
+
+<span class="n">prov_data_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">prov_data_df</span><span class="p">[</span><span class="s1">&#39;Prov&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">96</span><span class="p">,</span> <span class="s1">&#39;Prov label&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+
+<span class="n">prov_data_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Participant ID</th>
+      <th>prv</th>
+      <th>Urban/Rural</th>
+      <th>Age Group</th>
+      <th>Marital Status</th>
+      <th>sex</th>
+      <th>Kids under 14</th>
+      <th>Feeling Rushed</th>
+      <th>Sleep duration</th>
+      <th>Work duration</th>
+      <th>Sleep duration (hours)</th>
+      <th>Age group label</th>
+      <th>Prov</th>
+      <th>Employment Rate</th>
+      <th>Income</th>
+      <th>Household Size</th>
+      <th>Pct house over 30</th>
+      <th>Prov label</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>10000</td>
+      <td>46</td>
+      <td>1</td>
+      <td>5</td>
+      <td>5</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>510</td>
+      <td>0</td>
+      <td>8.50</td>
+      <td>55-64</td>
+      <td>46</td>
+      <td>61.7</td>
+      <td>68147.0</td>
+      <td>2.5</td>
+      <td>11.4</td>
+      <td>Manitoba</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>10001</td>
+      <td>59</td>
+      <td>1</td>
+      <td>5</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>3</td>
+      <td>420</td>
+      <td>0</td>
+      <td>7.00</td>
+      <td>55-64</td>
+      <td>59</td>
+      <td>59.6</td>
+      <td>69995.0</td>
+      <td>2.4</td>
+      <td>20.7</td>
+      <td>British Columbia</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>10002</td>
+      <td>47</td>
+      <td>1</td>
+      <td>4</td>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>1</td>
+      <td>570</td>
+      <td>480</td>
+      <td>9.50</td>
+      <td>45-54</td>
+      <td>47</td>
+      <td>63.5</td>
+      <td>75412.0</td>
+      <td>2.5</td>
+      <td>12.1</td>
+      <td>Saskatchewan</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>10003</td>
+      <td>35</td>
+      <td>1</td>
+      <td>6</td>
+      <td>5</td>
+      <td>2</td>
+      <td>0</td>
+      <td>2</td>
+      <td>510</td>
+      <td>20</td>
+      <td>8.50</td>
+      <td>65-74</td>
+      <td>35</td>
+      <td>59.9</td>
+      <td>74287.0</td>
+      <td>2.6</td>
+      <td>19.8</td>
+      <td>Ontario</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>10004</td>
+      <td>35</td>
+      <td>1</td>
+      <td>2</td>
+      <td>6</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>525</td>
+      <td>0</td>
+      <td>8.75</td>
+      <td>25-34</td>
+      <td>35</td>
+      <td>59.9</td>
+      <td>74287.0</td>
+      <td>2.6</td>
+      <td>19.8</td>
+      <td>Ontario</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="is-time-spent-resting-different-by-province">
+<h2>Is time spent resting different by province?<a class="headerlink" href="#is-time-spent-resting-different-by-province" title="Link to this heading">#</a></h2>
+<section id="grouped-summaries-of-data">
+<h3>Grouped summaries of data<a class="headerlink" href="#grouped-summaries-of-data" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Many times we will want to calculate means, proportions, and other statistics by group membership.</p></li>
+<li><p>This is so common that <code class="docutils literal notranslate"><span class="pre">pandas</span></code> has a built-in function called <code class="docutils literal notranslate"><span class="pre">groupby</span></code> that groups a data frame by another variable.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">prov_data_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Participant ID</th>
+      <th>prv</th>
+      <th>Urban/Rural</th>
+      <th>Age Group</th>
+      <th>Marital Status</th>
+      <th>sex</th>
+      <th>Kids under 14</th>
+      <th>Feeling Rushed</th>
+      <th>Sleep duration</th>
+      <th>Work duration</th>
+      <th>Sleep duration (hours)</th>
+      <th>Age group label</th>
+      <th>Prov</th>
+      <th>Employment Rate</th>
+      <th>Income</th>
+      <th>Household Size</th>
+      <th>Pct house over 30</th>
+      <th>Prov label</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>10000</td>
+      <td>46</td>
+      <td>1</td>
+      <td>5</td>
+      <td>5</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>510</td>
+      <td>0</td>
+      <td>8.50</td>
+      <td>55-64</td>
+      <td>46</td>
+      <td>61.7</td>
+      <td>68147.0</td>
+      <td>2.5</td>
+      <td>11.4</td>
+      <td>Manitoba</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>10001</td>
+      <td>59</td>
+      <td>1</td>
+      <td>5</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>3</td>
+      <td>420</td>
+      <td>0</td>
+      <td>7.00</td>
+      <td>55-64</td>
+      <td>59</td>
+      <td>59.6</td>
+      <td>69995.0</td>
+      <td>2.4</td>
+      <td>20.7</td>
+      <td>British Columbia</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>10002</td>
+      <td>47</td>
+      <td>1</td>
+      <td>4</td>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>1</td>
+      <td>570</td>
+      <td>480</td>
+      <td>9.50</td>
+      <td>45-54</td>
+      <td>47</td>
+      <td>63.5</td>
+      <td>75412.0</td>
+      <td>2.5</td>
+      <td>12.1</td>
+      <td>Saskatchewan</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>10003</td>
+      <td>35</td>
+      <td>1</td>
+      <td>6</td>
+      <td>5</td>
+      <td>2</td>
+      <td>0</td>
+      <td>2</td>
+      <td>510</td>
+      <td>20</td>
+      <td>8.50</td>
+      <td>65-74</td>
+      <td>35</td>
+      <td>59.9</td>
+      <td>74287.0</td>
+      <td>2.6</td>
+      <td>19.8</td>
+      <td>Ontario</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>10004</td>
+      <td>35</td>
+      <td>1</td>
+      <td>2</td>
+      <td>6</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>525</td>
+      <td>0</td>
+      <td>8.75</td>
+      <td>25-34</td>
+      <td>35</td>
+      <td>59.9</td>
+      <td>74287.0</td>
+      <td>2.6</td>
+      <td>19.8</td>
+      <td>Ontario</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grouped_by_prov</span> <span class="o">=</span> <span class="n">prov_data_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Prov&#39;</span><span class="p">)</span> <span class="c1">#group the dataframe by prov</span>
+
+<span class="nb">type</span><span class="p">(</span><span class="n">grouped_by_prov</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pandas.core.groupby.generic.DataFrameGroupBy
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rest_by_prov_mean</span> <span class="o">=</span> <span class="n">grouped_by_prov</span><span class="p">[</span><span class="s1">&#39;Sleep duration (hours)&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="n">rest_by_prov_mean</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Prov
+10    8.651739
+11    8.901090
+12    8.500917
+13    8.722338
+24    8.759245
+35    8.612381
+46    8.829857
+47    8.824515
+48    8.710498
+59    8.808136
+Name: Sleep duration (hours), dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">rest_by_prov_mean</span></code> is a pandas Series with indexed by <code class="docutils literal notranslate"><span class="pre">Prov</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">rest_by_prov_mean</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pandas.core.series.Series
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="dataframe-index">
+<h2>DataFrame Index<a class="headerlink" href="#dataframe-index" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rest_by_prov_mean</span><span class="o">.</span><span class="n">index</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([10, 11, 12, 13, 24, 35, 46, 47, 48, 59], dtype=&#39;int64&#39;, name=&#39;Prov&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<p>From the</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">prv</span>                <span class="n">Province</span> <span class="n">of</span> <span class="n">residence</span>
+
+           <span class="n">VALUE</span>  <span class="n">LABEL</span>
+              <span class="mi">10</span>  <span class="n">Newfoundland</span> <span class="ow">and</span> <span class="n">Labroador</span>
+              <span class="mi">11</span>  <span class="n">Prince</span> <span class="n">Edward</span> <span class="n">Island</span>
+              <span class="mi">12</span>  <span class="n">Nova</span> <span class="n">Scotia</span>
+              <span class="mi">13</span>  <span class="n">New</span> <span class="n">Brunswick</span>
+              <span class="mi">24</span>  <span class="n">Quebec</span>
+              <span class="mi">35</span>  <span class="n">Ontario</span>
+              <span class="mi">46</span>  <span class="n">Manitoba</span>
+              <span class="mi">47</span>  <span class="n">Saskatchewan</span>
+              <span class="mi">48</span>  <span class="n">Alberta</span>
+              <span class="mi">59</span>  <span class="n">British</span> <span class="n">Columbia</span>
+              <span class="mi">96</span>  <span class="n">Valid</span> <span class="n">skip</span>
+              <span class="mi">97</span>  <span class="n">Don</span><span class="s1">&#39;t know</span>
+              <span class="mi">98</span>  <span class="n">Refusal</span>
+              <span class="mi">99</span>  <span class="n">Not</span> <span class="n">stated</span>
+
+           <span class="n">Data</span> <span class="nb">type</span><span class="p">:</span> <span class="n">numeric</span>
+           <span class="n">Missing</span><span class="o">-</span><span class="n">data</span> <span class="n">codes</span><span class="p">:</span> <span class="mi">96</span><span class="o">-</span><span class="mi">99</span>
+           <span class="n">Record</span><span class="o">/</span><span class="n">columns</span><span class="p">:</span> <span class="mi">1</span><span class="o">/</span><span class="mi">57</span><span class="o">-</span><span class="mi">58</span>
+
+</pre></div>
+</div>
+<p>We can reindex <code class="docutils literal notranslate"><span class="pre">rest_by_prov_mean</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">index_new</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;Newfoundland and Labrador&#39;</span><span class="p">,</span> 
+    <span class="s1">&#39;Prince Edward Island&#39;</span><span class="p">,</span> 
+    <span class="s1">&#39;Nova Scotia&#39;</span><span class="p">,</span> 
+    <span class="s1">&#39;New Brunswick&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Quebec&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Ontario&#39;</span><span class="p">,</span> 
+    <span class="s1">&#39;Manitoba&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Saskatchewan&#39;</span><span class="p">,</span> 
+    <span class="s1">&#39;Alberta&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;British Columbia&#39;</span>
+<span class="p">]</span>
+
+<span class="n">rest_by_prov_mean</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">index_new</span>
+
+<span class="n">rest_by_prov_mean</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Newfoundland and Labrador    8.651739
+Prince Edward Island         8.901090
+Nova Scotia                  8.500917
+New Brunswick                8.722338
+Quebec                       8.759245
+Ontario                      8.612381
+Manitoba                     8.829857
+Saskatchewan                 8.824515
+Alberta                      8.710498
+British Columbia             8.808136
+Name: Sleep duration (hours), dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="summing-across-rows-of-a-dataframe">
+<h2>Summing across rows of a DataFrame<a class="headerlink" href="#summing-across-rows-of-a-dataframe" title="Link to this heading">#</a></h2>
+<p>How much time is spent by each respondent sleeping and working?</p>
+<p>The average time spent sleeping and working by province is:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">restwork_by_prov_mean</span> <span class="o">=</span> <span class="n">grouped_by_prov</span><span class="p">[[</span><span class="s1">&#39;Sleep duration&#39;</span><span class="p">,</span> <span class="s1">&#39;Work duration&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="n">restwork_by_prov_mean</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Sleep duration</th>
+      <th>Work duration</th>
+    </tr>
+    <tr>
+      <th>Prov</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>10</th>
+      <td>519.104339</td>
+      <td>133.946281</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>534.065385</td>
+      <td>134.126923</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>510.055019</td>
+      <td>158.398649</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>523.340265</td>
+      <td>148.428166</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>525.554724</td>
+      <td>159.450461</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td>516.742869</td>
+      <td>177.705566</td>
+    </tr>
+    <tr>
+      <th>46</th>
+      <td>529.791411</td>
+      <td>175.156442</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td>529.470905</td>
+      <td>182.572198</td>
+    </tr>
+    <tr>
+      <th>48</th>
+      <td>522.629888</td>
+      <td>199.491620</td>
+    </tr>
+    <tr>
+      <th>59</th>
+      <td>528.488161</td>
+      <td>165.233753</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="two-different-ways-to-calulate-row-totals">
+<h2>Two different ways to calulate row totals<a class="headerlink" href="#two-different-ways-to-calulate-row-totals" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><p>There are more but we will focus on the two methods.</p>
+</div></blockquote>
+<p>We would like to calculate the total mean time spent sleeping and working.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">restwork_by_prov_mean</span><span class="p">[</span><span class="s1">&#39;Total1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">restwork_by_prov_mean</span><span class="p">[</span><span class="s1">&#39;Sleep duration&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">restwork_by_prov_mean</span><span class="p">[</span><span class="s1">&#39;Work duration&#39;</span><span class="p">]</span>
+
+<span class="n">restwork_by_prov_mean</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Sleep duration</th>
+      <th>Work duration</th>
+      <th>Total1</th>
+    </tr>
+    <tr>
+      <th>Prov</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>10</th>
+      <td>519.104339</td>
+      <td>133.946281</td>
+      <td>653.050620</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>534.065385</td>
+      <td>134.126923</td>
+      <td>668.192308</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>510.055019</td>
+      <td>158.398649</td>
+      <td>668.453668</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>523.340265</td>
+      <td>148.428166</td>
+      <td>671.768431</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>525.554724</td>
+      <td>159.450461</td>
+      <td>685.005184</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">restwork_by_prov_mean</span><span class="p">[</span><span class="s1">&#39;Total2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">restwork_by_prov_mean</span><span class="p">[[</span><span class="s1">&#39;Sleep duration&#39;</span><span class="p">,</span><span class="s1">&#39;Work duration&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span>
+    <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># sum across all columns</span>
+<span class="p">)</span>
+
+<span class="n">restwork_by_prov_mean</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Sleep duration</th>
+      <th>Work duration</th>
+      <th>Total1</th>
+      <th>Total2</th>
+    </tr>
+    <tr>
+      <th>Prov</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>10</th>
+      <td>519.104339</td>
+      <td>133.946281</td>
+      <td>653.050620</td>
+      <td>653.050620</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>534.065385</td>
+      <td>134.126923</td>
+      <td>668.192308</td>
+      <td>668.192308</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>510.055019</td>
+      <td>158.398649</td>
+      <td>668.453668</td>
+      <td>668.453668</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>523.340265</td>
+      <td>148.428166</td>
+      <td>671.768431</td>
+      <td>671.768431</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>525.554724</td>
+      <td>159.450461</td>
+      <td>685.005184</td>
+      <td>685.005184</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<ul class="simple">
+<li><p>In pandas <code class="docutils literal notranslate"><span class="pre">axis</span> <span class="pre">=</span> <span class="pre">1</span></code> refers to columns and <code class="docutils literal notranslate"><span class="pre">axis</span> <span class="pre">=</span> <span class="pre">0</span></code> refers to rows.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DataFrame.sum(axis</span> <span class="pre">=</span> <span class="pre">1)</span></code>: sum across columns</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DataFrame.sum(axis</span> <span class="pre">=</span> <span class="pre">0)</span></code>: sum across rows.</p></li>
+</ul>
+</section>
+<section id="statistical-variables">
+<h2>Statistical Variables<a class="headerlink" href="#statistical-variables" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>A <strong>categorical variable</strong> is a variable for which the measurement scale consists of a set of categories.  For example, time use has ten categories or <strong>levels</strong>.  These types of variables are very common in social and biomedical sciences, and many other areas.</p></li>
+</ul>
+<ul class="simple">
+<li><p>Categorical variables that don’t have a natural ordering is called a <strong>nominal variable</strong>.</p></li>
+</ul>
+<blockquote>
+<div><p>e.g. names</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>If a categorical variable has a natural ordering it is called an <strong>ordinal variable</strong>.  For example, if <strong>levels</strong> <code class="docutils literal notranslate"><span class="pre">96</span></code> (valid skip), <code class="docutils literal notranslate"><span class="pre">97</span></code> (Don’t know), <code class="docutils literal notranslate"><span class="pre">98</span></code> (Refusal), <code class="docutils literal notranslate"><span class="pre">99</span></code> (Not stated) are removed from <code class="docutils literal notranslate"><span class="pre">gtu_110</span></code> then time use would be considered an ordinal variable since it’s ordered from feeling rushed <code class="docutils literal notranslate"><span class="pre">Every</span> <span class="pre">day</span></code> (<code class="docutils literal notranslate"><span class="pre">1</span></code>) to feeling rushed <code class="docutils literal notranslate"><span class="pre">Never</span></code> (<code class="docutils literal notranslate"><span class="pre">6</span></code>).</p></li>
+</ul>
+<ul class="simple">
+<li><p><strong>Ordinal variables</strong> clearly order categories, but the “distance” between categories are unknown. A person categorized as feeling rushed <code class="docutils literal notranslate"><span class="pre">About</span> <span class="pre">once</span> <span class="pre">a</span> <span class="pre">week</span></code> feels more rushed than someone who feels rushed <code class="docutils literal notranslate"><span class="pre">About</span> <span class="pre">once</span> <span class="pre">a</span> <span class="pre">month</span></code>, although we cannot give a numnerical value for how much more rushed that person is.</p></li>
+</ul>
+<ul class="simple">
+<li><p>An <strong>interval variable</strong> is one that does have numerical distances between any two levels of the measurement scale.  For example, age measured in years is an interval variable.</p></li>
+</ul>
+<ul class="simple">
+<li><p>Time use is an example of an <strong>interval (statistical) variable</strong>.</p></li>
+</ul>
+</section>
+<section id="what-s-the-difference-between-a-statistical-variable-and-a-variable-in-python">
+<h2>What’s the difference between a Statistical Variable and a Variable in python?<a class="headerlink" href="#what-s-the-difference-between-a-statistical-variable-and-a-variable-in-python" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>A variable in python is a location in computer memory to store a value.</p></li>
+<li><p>A statistical variable is essentially a mathematical representation of data.</p></li>
+</ul>
+</section>
+<section id="examples-of-implementing-statistical-variables-in-python">
+<h2>Examples of implementing statistical variables in python<a class="headerlink" href="#examples-of-implementing-statistical-variables-in-python" title="Link to this heading">#</a></h2>
+<p>If 10 people are <em>randomly</em> selected, and asked how many minutes they slept last night, then this data could be represented by an <strong>interval variable</strong>.</p>
+<ul class="simple">
+<li><p>In python the data could be represented in <code class="docutils literal notranslate"><span class="pre">pandas.Series</span></code>, where the <code class="docutils literal notranslate"><span class="pre">Series</span></code> data type is float.</p></li>
+</ul>
+<p>If 10 people are <em>randomly</em> selected, and asked if they live in urban or rural areas, then this data could be represented by an <strong>categorical variable</strong>.</p>
+<ul class="simple">
+<li><p>In python the data could be represented in <code class="docutils literal notranslate"><span class="pre">pandas.Series</span></code>, where the <code class="docutils literal notranslate"><span class="pre">Series</span></code> data type is Boolean (<code class="docutils literal notranslate"><span class="pre">True</span></code> if urban, and <code class="docutils literal notranslate"><span class="pre">False</span></code> if not urban).</p></li>
+</ul>
+</section>
+<section id="statistical-distributions">
+<h2>Statistical Distributions<a class="headerlink" href="#statistical-distributions" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>What is a statistical distribution?</p></li>
+<li><p>How can a distribution be summarized?</p></li>
+<li><p>What questions can we answer using a distribution?</p></li>
+</ul>
+</section>
+<section id="what-is-the-distribution-of-kids-under-14-in-ontario">
+<h2>What is the distribution of kids under 14 in Ontario?<a class="headerlink" href="#what-is-the-distribution-of-kids-under-14-in-ontario" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Select rows in <code class="docutils literal notranslate"><span class="pre">prov_data_df</span></code> where <code class="docutils literal notranslate"><span class="pre">Prov</span> <span class="pre">label</span></code> is <code class="docutils literal notranslate"><span class="pre">Ontario</span></code></p></li>
+<li><p>Select the column <code class="docutils literal notranslate"><span class="pre">Kids</span> <span class="pre">under</span> <span class="pre">14</span></code></p></li>
+<li><p>Compute the number of respondents who have 0 kids, 1 kid, etc. using <code class="docutils literal notranslate"><span class="pre">.value_counts()</span></code></p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Ontkidsdist</span> <span class="o">=</span> <span class="n">prov_data_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span>
+    <span class="n">prov_data_df</span><span class="p">[</span><span class="s1">&#39;Prov label&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Ontario&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Kids under 14&#39;</span>
+<span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+
+<span class="n">Ontkidsdist</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Kids under 14
+0    3918
+1     508
+2     430
+3     157
+Name: count, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">Ontkidsdist</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.series.Series&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<section id="a-bar-plot-of-the-distribution-of-kids-under-14-in-ontario">
+<h3>A bar plot of the distribution of kids under 14 in Ontario<a class="headerlink" href="#a-bar-plot-of-the-distribution-of-kids-under-14-in-ontario" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Ontkidsdist</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/cfde237607e489a1126586f679d32c26f5083aeb4c1161ea3472a0d005a62130.png" src="../../../_images/cfde237607e489a1126586f679d32c26f5083aeb4c1161ea3472a0d005a62130.png" />
+</div>
+</div>
+<p>If we want to plot proportions instead of counts then we can transform <code class="docutils literal notranslate"><span class="pre">Ontkidsdist</span></code> by dividing by the total number of observations.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Ontkidsdist_prop</span> <span class="o">=</span> <span class="n">Ontkidsdist</span> <span class="o">/</span> <span class="n">Ontkidsdist</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">Ontkidsdist_prop</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Kids under 14
+0    0.781568
+1    0.101337
+2    0.085777
+3    0.031319
+Name: count, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Ontkidsdist_prop</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/aee9cb1ea4962a8950494826024e6470f0925194f2d31505ab8114576f474a73.png" src="../../../_images/aee9cb1ea4962a8950494826024e6470f0925194f2d31505ab8114576f474a73.png" />
+</div>
+</div>
+<p>Distribution of counts by province</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">prov_data_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Prov label&#39;</span><span class="p">])[</span><span class="s1">&#39;Kids under 14&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Prov label            Kids under 14
+Alberta               0                1077
+                      1                 152
+                      2                 145
+                      3                  58
+British Columbia      0                1672
+                      1                 145
+                      2                 132
+                      3                  36
+Manitoba              0                 763
+                      1                  93
+                      2                  88
+                      3                  34
+NL                    0                 766
+                      1                 103
+                      2                  84
+                      3                  15
+New Brunswick         0                 875
+                      2                  79
+                      1                  77
+                      3                  27
+Nova Scotia           0                 858
+                      2                  86
+                      1                  77
+                      3                  15
+Ontario               0                3918
+                      1                 508
+                      2                 430
+                      3                 157
+Prince Edward Island  0                 432
+                      1                  43
+                      2                  30
+                      3                  15
+Quebec                0                2755
+                      2                 305
+                      1                 300
+                      3                 112
+Saskatchewan          0                 716
+                      1                  89
+                      2                  79
+                      3                  44
+Name: count, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="summarizing-the-distribution-of-an-interval-variable">
+<h2>Summarizing the distribution of an interval variable<a class="headerlink" href="#summarizing-the-distribution-of-an-interval-variable" title="Link to this heading">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">dur01</span></code> is time spent sleeping, resting, etc.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dur01</span>              <span class="n">Duration</span> <span class="o">-</span> <span class="n">Sleeping</span><span class="p">,</span> <span class="n">resting</span><span class="p">,</span> <span class="n">relaxing</span><span class="p">,</span> <span class="n">sick</span> <span class="ow">in</span> <span class="n">bed</span>
+
+           <span class="n">VALUE</span>  <span class="n">LABEL</span>
+               <span class="mi">0</span>  <span class="n">No</span> <span class="n">time</span> <span class="n">spent</span> <span class="n">doing</span> <span class="n">this</span> <span class="n">activity</span>
+            <span class="mi">9996</span>  <span class="n">Valid</span> <span class="n">skip</span>
+            <span class="mi">9997</span>  <span class="n">Don</span><span class="s1">&#39;t know</span>
+            <span class="mi">9998</span>  <span class="n">Refusal</span>
+            <span class="mi">9999</span>  <span class="n">Not</span> <span class="n">stated</span>
+
+           <span class="n">Data</span> <span class="nb">type</span><span class="p">:</span> <span class="n">numeric</span>
+           <span class="n">Missing</span><span class="o">-</span><span class="n">data</span> <span class="n">codes</span><span class="p">:</span> <span class="mi">9996</span><span class="o">-</span><span class="mi">9999</span>
+           <span class="n">Record</span><span class="o">/</span><span class="n">columns</span><span class="p">:</span> <span class="mi">1</span><span class="o">/</span><span class="mi">65</span><span class="o">-</span><span class="mi">68</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Sleepduration</span> <span class="o">=</span> <span class="n">prov_data_df</span><span class="p">[</span><span class="s1">&#39;Sleep duration (hours)&#39;</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">Sleepduration</span><span class="p">))</span>
+
+<span class="n">Sleepduration</span><span class="o">.</span><span class="n">dtypes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.series.Series&#39;&gt;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dtype(&#39;float64&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Sleepduration</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    17390.000000
+mean         8.706552
+std          2.217733
+min          0.000000
+25%          7.500000
+50%          8.500000
+75%          9.750000
+max         24.000000
+Name: Sleep duration (hours), dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p>The distribution of an interval variable are often described as:</p>
+<ul class="simple">
+<li><p>a measure of centre such as mean, median, mode</p></li>
+<li><p>a measure of spread such as standard deviation, inter-quartile range</p></li>
+<li><p>a measure of range such as the largest value minus the smallest value (or max - min)</p></li>
+</ul>
+</section>
+<section id="quantiles">
+<h2>Quantiles<a class="headerlink" href="#quantiles" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>The median value is the 50% quantile.  50% of the values fall below this value.  The median is also called the second quartile.</p></li>
+<li><p>The 25% quantile is the value where 25% of the values fall below.  This is often the first quartile (Q1)</p></li>
+<li><p>The 75% quantile is the value where 75% of the values fall below.  This is often the third quartile (Q3)</p></li>
+<li><p>There are 17390 values.  If we sort sleep duration values from largest to smallest then find the value in the middle (17390 / 2 = 8695) then that value is the median.</p></li>
+</ul>
+</section>
+<section id="variation">
+<h2>Variation<a class="headerlink" href="#variation" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>One of the most important concepts in statistical reasoning.</p></li>
+<li><p>Standard deviation is average deviation from the mean.  <strong>Large</strong> values mean large variation and <strong>small</strong> values mean small variation.</p></li>
+<li><p>Small samples often have large variation, so estimating a statistic from a small sample is usually less reliable.</p></li>
+</ul>
+</section>
+<section id="question">
+<h2>Question<a class="headerlink" href="#question" title="Link to this heading">#</a></h2>
+<p>A certain town is served by two hospitals. In the larger hospital about 45 babies are born each day, and in the smaller hospital about 15 babies are born each day. As you know, about 50% of all babies are boys. However, the exact percentage varies from day to day. Sometimes it may be higher than 50%, sometimes lower.</p>
+<p>For a period of 1 year, each hospital recorded the days on which more than 60% of the babies born were boys. Which hospital do you think recorded more such days?</p>
+<ul class="simple">
+<li><p>The larger hospital</p></li>
+<li><p>The smaller hospital</p></li>
+<li><p>About the same (that is, within 5% of each other)</p></li>
+</ul>
+</section>
+<section id="histograms">
+<h2>Histograms<a class="headerlink" href="#histograms" title="Link to this heading">#</a></h2>
+<p>Histograms display the frequency distribution of an interval variable.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Sleepduration_hist</span> <span class="o">=</span>  <span class="n">Sleepduration</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span>
+    <span class="n">bins</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> 
+    <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> 
+    <span class="n">color</span><span class="o">=</span><span class="s1">&#39;grey&#39;</span><span class="p">,</span> 
+    <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+<span class="p">);</span>
+
+<span class="n">Sleepduration_hist</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Sleep duration (hours)&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/79c602c64e7ba8b0d76c2d6a7b6eb3d69d49b750ca109a64d1912ed349943673.png" src="../../../_images/79c602c64e7ba8b0d76c2d6a7b6eb3d69d49b750ca109a64d1912ed349943673.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">Sleepduration</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0          (7.2, 9.6]
+1          (4.8, 7.2]
+2          (7.2, 9.6]
+3          (7.2, 9.6]
+4          (7.2, 9.6]
+             ...     
+17385      (7.2, 9.6]
+17386     (9.6, 12.0]
+17387      (7.2, 9.6]
+17388    (12.0, 14.4]
+17389      (7.2, 9.6]
+Name: Sleep duration (hours), Length: 17390, dtype: category
+Categories (10, interval[float64, right]): [(-0.024, 2.4] &lt; (2.4, 4.8] &lt; (4.8, 7.2] &lt; (7.2, 9.6] ... (14.4, 16.8] &lt; (16.8, 19.2] &lt; (19.2, 21.6] &lt; (21.6, 24.0]]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="boxplots">
+<h2>Boxplots<a class="headerlink" href="#boxplots" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Another way to visualize the distribution of an interval variable</p></li>
+<li><p>A box plot is a method for graphically depicting groups of numerical data through their quartiles.</p></li>
+<li><p>The box extends from the Q1 to Q3 quartile values of the data, with a line at the median (Q2).</p></li>
+<li><p>The whiskers extend from the edges of box to show the range of the data.</p></li>
+<li><p>By default, they extend no more than 1.5 * IQR (IQR = Q3 - Q1) from the edges of the box, ending at the farthest data point within that interval. Outliers are plotted as separate dots.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Sleepduration_boxplot</span> <span class="o">=</span> <span class="n">Sleepduration</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">box</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">8</span><span class="p">));</span>
+
+<span class="n">Sleepduration_boxplot</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/c128e4d2f28ee5bd81f8184ecf6b8a3d8f5565dc70bb366da52e52023ccffdb3.png" src="../../../_images/c128e4d2f28ee5bd81f8184ecf6b8a3d8f5565dc70bb366da52e52023ccffdb3.png" />
+</div>
+</div>
+</section>
+<section id="anatomy-of-a-boxplot">
+<h2>Anatomy of a Boxplot<a class="headerlink" href="#anatomy-of-a-boxplot" title="Link to this heading">#</a></h2>
+<p><img alt="" src="../../../_images/boxplot_anatomy.png" /></p>
+<p>Two pandas methods to create a boxplot are:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pandas.DataFrame.plot.box</span></code>: plot a Series or columns of a DataFrame</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pandas.DataFrame.boxplot</span></code>: plot the columns of a DataFrame with easy to use syntax for boxplots by a group.</p></li>
+</ol>
+<p>Boxplots are helpful for comparing the distributions between groups.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Sleephours_boxplot</span> <span class="o">=</span> <span class="n">prov_data_df</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span>
+    <span class="n">column</span><span class="o">=</span><span class="s1">&#39;Sleep duration (hours)&#39;</span><span class="p">,</span> 
+    <span class="n">by</span><span class="o">=</span><span class="s1">&#39;Prov label&#39;</span><span class="p">,</span> 
+    <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span>
+    <span class="n">rot</span> <span class="o">=</span> <span class="mi">45</span><span class="p">,</span> 
+    <span class="n">grid</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="p">);</span>
+
+<span class="n">Sleephours_boxplot</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/c0460755135f7a4bc72ffb3c8ff80da8d45f451b08a94969bcb0a620ffdd862f.png" src="../../../_images/c0460755135f7a4bc72ffb3c8ff80da8d45f451b08a94969bcb0a620ffdd862f.png" />
+</div>
+</div>
+<p>Compare the distribution of <code class="docutils literal notranslate"><span class="pre">Sleep</span> <span class="pre">duration</span></code> and <code class="docutils literal notranslate"><span class="pre">Work</span> <span class="pre">duration</span></code> by specifying the <code class="docutils literal notranslate"><span class="pre">column</span></code> parameter of <code class="docutils literal notranslate"><span class="pre">DataFrame.boxplot</span></code> as a list.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Sleepwork_boxplot</span> <span class="o">=</span> <span class="n">prov_data_df</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span>
+    <span class="n">column</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Sleep duration&#39;</span><span class="p">,</span> <span class="s1">&#39;Work duration&#39;</span><span class="p">],</span> 
+    <span class="n">by</span> <span class="o">=</span> <span class="s1">&#39;Prov label&#39;</span><span class="p">,</span> 
+    <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span> 
+    <span class="n">rot</span> <span class="o">=</span> <span class="mi">90</span><span class="p">,</span> 
+    <span class="n">grid</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> 
+    <span class="n">layout</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="p">);</span>
+
+<span class="n">Sleepwork_boxplot</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/25eff693d5d9d2bca48db7dbb005ac6622cdb717ed56aefa05ddaefd182e366c.png" src="../../../_images/25eff693d5d9d2bca48db7dbb005ac6622cdb717ed56aefa05ddaefd182e366c.png" />
+</div>
+</div>
+<p>To further customize the look of your plots, see the <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.boxplot.html">documentation</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">prov_data_df</span><span class="p">[</span><span class="s1">&#39;Prov label&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;Manitoba&#39;, &#39;British Columbia&#39;, &#39;Saskatchewan&#39;, &#39;Ontario&#39;,
+       &#39;Quebec&#39;, &#39;Prince Edward Island&#39;, &#39;Alberta&#39;, &#39;Nova Scotia&#39;,
+       &#39;New Brunswick&#39;, &#39;NL&#39;], dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">prov_data_df</span><span class="p">[</span><span class="s1">&#39;Province ordered&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Categorical</span><span class="p">(</span>
+    <span class="n">prov_data_df</span><span class="p">[</span><span class="s1">&#39;Prov label&#39;</span><span class="p">],</span> <span class="n">categories</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s1">&#39;NL&#39;</span><span class="p">,</span> 
+        <span class="s1">&#39;Prince Edward Island&#39;</span><span class="p">,</span> 
+        <span class="s1">&#39;Nova Scotia&#39;</span><span class="p">,</span> 
+        <span class="s1">&#39;New Brunswick&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;Quebec&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;Ontario&#39;</span><span class="p">,</span> 
+        <span class="s1">&#39;Manitoba&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;Saskatchewan&#39;</span><span class="p">,</span> 
+        <span class="s1">&#39;Alberta&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;British Columbia&#39;</span>
+    <span class="p">],</span>
+    <span class="n">ordered</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="p">)</span>
+<span class="n">Sleepwork_boxplot</span> <span class="o">=</span> <span class="n">prov_data_df</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span>
+    <span class="n">column</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Sleep duration&#39;</span><span class="p">,</span> <span class="s1">&#39;Work duration&#39;</span><span class="p">],</span> 
+    <span class="n">by</span> <span class="o">=</span> <span class="s1">&#39;Province ordered&#39;</span><span class="p">,</span> 
+    <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span> 
+    <span class="n">rot</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> 
+    <span class="n">grid</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> 
+    <span class="n">layout</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
+    <span class="n">vert</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="p">);</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">Sleepwork_boxplot</span><span class="p">[</span><span class="mi">0</span><span class="p">]));</span>
+<span class="n">Sleepwork_boxplot</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="kc">None</span><span class="p">);</span>
+<span class="n">Sleepwork_boxplot</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;matplotlib.axes._axes.Axes&#39;&gt;
+</pre></div>
+</div>
+<img alt="../../../_images/878b2e648c8d7f923624d8409adf82ba066235102635b474edf2b77b593401a5.png" src="../../../_images/878b2e648c8d7f923624d8409adf82ba066235102635b474edf2b77b593401a5.png" />
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./weekly-materials/week05/lecture"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../../week04/homework/Homework_4.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">GGR274 Homework 4: Time Use Survey Data</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../../../practice/sample_midterm/GGR274_Midterm.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">GGR274 midterm test</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#last-class">Last class</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#this-class">This class</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#midterm-information">Midterm Information</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-transformations">Data Transformations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#time-use-survey">Time use survey</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subset-the-data">Subset the data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rename-columns-so-that-they-are-meaningful">Rename columns so that they are meaningful</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-new-column-in-a-pandas-dataframe">Create a new column in a pandas DataFrame</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-happened">What happened?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transform-a-column-using-if-then">Transform a column using if-then</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">What happened?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#to-create-a-new-column-in-a-pandas-dataframe-using-if-then-if-then-else-logic">To create a new column in a pandas DataFrame using if-then/if-then-else logic</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#merging-pandas-dataframes">Merging pandas DataFrames</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#is-time-spent-resting-different-by-province">Is time spent resting different by province?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grouped-summaries-of-data">Grouped summaries of data</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataframe-index">DataFrame Index</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summing-across-rows-of-a-dataframe">Summing across rows of a DataFrame</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#two-different-ways-to-calulate-row-totals">Two different ways to calulate row totals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#statistical-variables">Statistical Variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-s-the-difference-between-a-statistical-variable-and-a-variable-in-python">What’s the difference between a Statistical Variable and a Variable in python?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-of-implementing-statistical-variables-in-python">Examples of implementing statistical variables in python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#statistical-distributions">Statistical Distributions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-distribution-of-kids-under-14-in-ontario">What is the distribution of kids under 14 in Ontario?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-bar-plot-of-the-distribution-of-kids-under-14-in-ontario">A bar plot of the distribution of kids under 14 in Ontario</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summarizing-the-distribution-of-an-interval-variable">Summarizing the distribution of an interval variable</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quantiles">Quantiles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variation">Variation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question">Question</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#histograms">Histograms</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#boxplots">Boxplots</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#anatomy-of-a-boxplot">Anatomy of a Boxplot</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By GGR274 Instructors
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

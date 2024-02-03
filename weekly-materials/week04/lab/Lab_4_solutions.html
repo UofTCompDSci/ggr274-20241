@@ -65,12 +65,12 @@ const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'weekly-materials/week04/lab/Lab_4';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'weekly-materials/week04/lab/Lab_4_solutions';</script>
     <link rel="icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="GGR274 Lab 4: Introduction to Data Wrangling, Part 1" href="Lab_4_solutions.html" />
-    <link rel="prev" title="Lecture 4: Introduction to pandas and Data Wrangling" href="../lecture/Class4_GGR274_MM.html" />
+    <link rel="next" title="GGR274 Homework 4: Time Use Survey Data" href="../homework/Homework_4.html" />
+    <link rel="prev" title="GGR274 Lab 4: Introduction to Data Wrangling, Part 1" href="Lab_4.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -218,8 +218,8 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference external" href="https://q.utoronto.ca/courses/338580/files?preview=30071956">Prof. Li's Slides</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lecture/Class4_GGR274_MM.html">Prof. Moon's Notebook</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lab 04 Notebook</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Lab_4_solutions.html">Lab 04 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lab_4.html">Lab 04 Notebook</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lab 04 Solutions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../homework/Homework_4.html">Homework 04 Notebook</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 5</span></p>
@@ -283,7 +283,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://jupyter.utoronto.ca/hub/user-redirect/git-pull?repo=https%3A//github.com/UofTCompDSci/ggr274-20241&urlpath=tree/ggr274-20241/weekly-materials/week04/lab/Lab_4.ipynb&branch=main" target="_blank"
+      <li><a href="https://jupyter.utoronto.ca/hub/user-redirect/git-pull?repo=https%3A//github.com/UofTCompDSci/ggr274-20241&urlpath=tree/ggr274-20241/weekly-materials/week04/lab/Lab_4_solutions.ipynb&branch=main" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onJupyterHub"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -314,7 +314,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../../_sources/weekly-materials/week04/lab/Lab_4.ipynb" target="_blank"
+      <li><a href="../../../_sources/weekly-materials/week04/lab/Lab_4_solutions.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -448,10 +448,189 @@ Here are the instructions for submitting to MarkUs (same as last week):</p>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
-<span class="c1"># Write your code here</span>
+<span class="n">police_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;ArrestsStripSearches.csv&#39;</span><span class="p">)</span>
+
+<span class="n">police_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/0j/ybsv4ncn5w50v40vdh5jjlww0000gn/T/ipykernel_79053/1181357276.py:1: DeprecationWarning: 
+Pyarrow will become a required dependency of pandas in the next major release of pandas (pandas 3.0),
+(to allow more performant data types, such as the Arrow string type, and better interoperability with other libraries)
+but was not found to be installed on your system.
+If this would cause problems for you,
+please provide us feedback at https://github.com/pandas-dev/pandas/issues/54466
+        
+  import pandas as pd
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>_id</th>
+      <th>Arrest_Year</th>
+      <th>Arrest_Month</th>
+      <th>EventID</th>
+      <th>ArrestID</th>
+      <th>PersonID</th>
+      <th>Perceived_Race</th>
+      <th>Sex</th>
+      <th>Age_group__at_arrest_</th>
+      <th>Youth_at_arrest__under_18_years</th>
+      <th>...</th>
+      <th>Actions_at_arrest___Resisted__d</th>
+      <th>Actions_at_arrest___Mental_inst</th>
+      <th>Actions_at_arrest___Assaulted_o</th>
+      <th>Actions_at_arrest___Cooperative</th>
+      <th>SearchReason_CauseInjury</th>
+      <th>SearchReason_AssistEscape</th>
+      <th>SearchReason_PossessWeapons</th>
+      <th>SearchReason_PossessEvidence</th>
+      <th>ItemsFound</th>
+      <th>ObjectId</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>2020</td>
+      <td>July-Sept</td>
+      <td>1005907</td>
+      <td>6017884.0</td>
+      <td>326622</td>
+      <td>White</td>
+      <td>M</td>
+      <td>Aged 35 to 44 years</td>
+      <td>Not a youth</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>2020</td>
+      <td>July-Sept</td>
+      <td>1014562</td>
+      <td>6056669.0</td>
+      <td>326622</td>
+      <td>White</td>
+      <td>M</td>
+      <td>Aged 35 to 44 years</td>
+      <td>Not a youth</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>2020</td>
+      <td>Oct-Dec</td>
+      <td>1029922</td>
+      <td>6057065.0</td>
+      <td>326622</td>
+      <td>Unknown or Legacy</td>
+      <td>M</td>
+      <td>Aged 35 to 44 years</td>
+      <td>Not a youth</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>2021</td>
+      <td>Jan-Mar</td>
+      <td>1052190</td>
+      <td>6029059.0</td>
+      <td>327535</td>
+      <td>Black</td>
+      <td>M</td>
+      <td>Aged 25 to 34 years</td>
+      <td>Not a youth</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>2021</td>
+      <td>Jan-Mar</td>
+      <td>1015512</td>
+      <td>6040372.0</td>
+      <td>327535</td>
+      <td>South Asian</td>
+      <td>M</td>
+      <td>Aged 25 to 34 years</td>
+      <td>Not a youth</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>5</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 26 columns</p>
+</div></div></div>
 </div>
 </section>
 <section id="task-2-create-a-dataframe-of-arrests-in-2021">
@@ -464,10 +643,181 @@ Here are the instructions for submitting to MarkUs (same as last week):</p>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Arrests_2021</span> <span class="o">=</span> <span class="n">police_df</span><span class="p">[</span><span class="s1">&#39;Arrest_Year&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2021</span>
+
+<span class="n">police_2021_df</span> <span class="o">=</span> <span class="n">police_df</span><span class="p">[</span><span class="n">Arrests_2021</span><span class="p">]</span>
+
+<span class="n">police_2021_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>_id</th>
+      <th>Arrest_Year</th>
+      <th>Arrest_Month</th>
+      <th>EventID</th>
+      <th>ArrestID</th>
+      <th>PersonID</th>
+      <th>Perceived_Race</th>
+      <th>Sex</th>
+      <th>Age_group__at_arrest_</th>
+      <th>Youth_at_arrest__under_18_years</th>
+      <th>...</th>
+      <th>Actions_at_arrest___Resisted__d</th>
+      <th>Actions_at_arrest___Mental_inst</th>
+      <th>Actions_at_arrest___Assaulted_o</th>
+      <th>Actions_at_arrest___Cooperative</th>
+      <th>SearchReason_CauseInjury</th>
+      <th>SearchReason_AssistEscape</th>
+      <th>SearchReason_PossessWeapons</th>
+      <th>SearchReason_PossessEvidence</th>
+      <th>ItemsFound</th>
+      <th>ObjectId</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>2021</td>
+      <td>Jan-Mar</td>
+      <td>1052190</td>
+      <td>6029059.0</td>
+      <td>327535</td>
+      <td>Black</td>
+      <td>M</td>
+      <td>Aged 25 to 34 years</td>
+      <td>Not a youth</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>2021</td>
+      <td>Jan-Mar</td>
+      <td>1015512</td>
+      <td>6040372.0</td>
+      <td>327535</td>
+      <td>South Asian</td>
+      <td>M</td>
+      <td>Aged 25 to 34 years</td>
+      <td>Not a youth</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>6</td>
+      <td>2021</td>
+      <td>Apr-June</td>
+      <td>1019145</td>
+      <td>6060688.0</td>
+      <td>327535</td>
+      <td>South Asian</td>
+      <td>M</td>
+      <td>Aged 25 to 34 years</td>
+      <td>Not a youth</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>7</td>
+      <td>2021</td>
+      <td>Jan-Mar</td>
+      <td>1035445</td>
+      <td>6053833.0</td>
+      <td>330778</td>
+      <td>Black</td>
+      <td>M</td>
+      <td>Aged 25 to 34 years</td>
+      <td>Not a youth</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>8</td>
+      <td>2021</td>
+      <td>Jan-Mar</td>
+      <td>1050464</td>
+      <td>6063477.0</td>
+      <td>330778</td>
+      <td>Black</td>
+      <td>M</td>
+      <td>Aged 25 to 34 years</td>
+      <td>Not a youth</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>8</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 26 columns</p>
+</div></div></div>
 </div>
 </section>
 <section id="b-inspect-columns-of-the-tabular-data">
@@ -477,7 +827,39 @@ Here are the instructions for submitting to MarkUs (same as last week):</p>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Arrest_column_names</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">police_2021_df</span><span class="p">)</span>
+
+<span class="n">Arrest_column_names</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;_id&#39;,
+ &#39;Arrest_Year&#39;,
+ &#39;Arrest_Month&#39;,
+ &#39;EventID&#39;,
+ &#39;ArrestID&#39;,
+ &#39;PersonID&#39;,
+ &#39;Perceived_Race&#39;,
+ &#39;Sex&#39;,
+ &#39;Age_group__at_arrest_&#39;,
+ &#39;Youth_at_arrest__under_18_years&#39;,
+ &#39;ArrestLocDiv&#39;,
+ &#39;StripSearch&#39;,
+ &#39;Booked&#39;,
+ &#39;Occurrence_Category&#39;,
+ &#39;Actions_at_arrest___Concealed_i&#39;,
+ &#39;Actions_at_arrest___Combative__&#39;,
+ &#39;Actions_at_arrest___Resisted__d&#39;,
+ &#39;Actions_at_arrest___Mental_inst&#39;,
+ &#39;Actions_at_arrest___Assaulted_o&#39;,
+ &#39;Actions_at_arrest___Cooperative&#39;,
+ &#39;SearchReason_CauseInjury&#39;,
+ &#39;SearchReason_AssistEscape&#39;,
+ &#39;SearchReason_PossessWeapons&#39;,
+ &#39;SearchReason_PossessEvidence&#39;,
+ &#39;ItemsFound&#39;,
+ &#39;ObjectId&#39;]
 </pre></div>
 </div>
 </div>
@@ -492,7 +874,125 @@ Here are the instructions for submitting to MarkUs (same as last week):</p>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">police_2021_raceweapons</span> <span class="o">=</span> <span class="n">police_2021_df</span><span class="p">[[</span><span class="s1">&#39;_id&#39;</span><span class="p">,</span> <span class="s1">&#39;Sex&#39;</span><span class="p">,</span> <span class="s1">&#39;Perceived_Race&#39;</span><span class="p">,</span> <span class="s1">&#39;SearchReason_PossessWeapons&#39;</span><span class="p">]]</span>
+
+<span class="n">police_2021_raceweapons</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>_id</th>
+      <th>Sex</th>
+      <th>Perceived_Race</th>
+      <th>SearchReason_PossessWeapons</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>M</td>
+      <td>Black</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>M</td>
+      <td>South Asian</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>6</td>
+      <td>M</td>
+      <td>South Asian</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>7</td>
+      <td>M</td>
+      <td>Black</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>8</td>
+      <td>M</td>
+      <td>Black</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">police_2021_df</span><span class="p">[</span><span class="s1">&#39;Sex&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sex
+M    26815
+F     6479
+U        3
+Name: count, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">police_2021_df</span><span class="p">[</span><span class="s1">&#39;Perceived_Race&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Perceived_Race
+White                   14116
+Black                    8878
+Unknown or Legacy        2444
+East/Southeast Asian     2361
+South Asian              1871
+Middle-Eastern           1730
+Latino                    960
+Indigenous                935
+Name: count, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">police_2021_df</span><span class="p">[</span><span class="s1">&#39;SearchReason_PossessWeapons&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SearchReason_PossessWeapons
+0.0    478
+1.0    208
+Name: count, dtype: int64
 </pre></div>
 </div>
 </div>
@@ -531,20 +1031,20 @@ Here are the instructions for submitting to MarkUs (same as last week):</p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../lecture/Class4_GGR274_MM.html"
+       href="Lab_4.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Lecture 4: Introduction to <code class="docutils literal notranslate"><span class="pre">pandas</span></code> and Data Wrangling</p>
+        <p class="prev-next-title">GGR274 Lab 4: Introduction to Data Wrangling, Part 1</p>
       </div>
     </a>
     <a class="right-next"
-       href="Lab_4_solutions.html"
+       href="../homework/Homework_4.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">GGR274 Lab 4: Introduction to Data Wrangling, Part 1</p>
+        <p class="prev-next-title">GGR274 Homework 4: Time Use Survey Data</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
