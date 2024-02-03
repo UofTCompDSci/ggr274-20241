@@ -204,17 +204,14 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 2</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../week02/lecture/Class2_GGR274_DL_IM.html">Prof. Musabirov's Notebook</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../week02/lab/Lab_2.html">GGR274 Lab 2: Introduction to Programming, Part 1</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="../../week02/lab/Lab_2_solutions.html">GGR274 Lab 2: Solutions</a></li>
-
+<li class="toctree-l1"><a class="reference internal" href="../../week02/lab/Lab_2.html">Lab 02 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week02/lab/Lab_2_solutions.html">Lab 1 Solutions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../week02/homework/Homework_2.html">Homework 02 Notebook</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 3</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../lecture/Class3_GGR274_DL_IM.html">Prof. Musabirov's Notebook</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">GGR274 Lab 3: Introduction to Programming, Part 2</a></li>
-
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lab 03 Notebook</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../homework/Homework_3.html">Homework 03 Notebook</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 4</span></p>
@@ -222,9 +219,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference external" href="https://q.utoronto.ca/courses/338580/files?preview=30071956">Prof. Li's Slides</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../week04/lecture/Class4_GGR274_MM.html">Prof. Moon's Notebook</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../week04/lab/Lab_4.html">Lab 04 Notebook</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../week04/homework/Homework_4.html">GGR274 Homework 4: Time Use Survey Data</a></li>
-
-
+<li class="toctree-l1"><a class="reference internal" href="../../week04/homework/Homework_4.html">Homework 04 Notebook</a></li>
 </ul>
 
     </div>
@@ -404,7 +399,6 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">GGR274 Lab 3: Introduction to Programming, Part 2</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logistics">Logistics</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-example-canadian-elections">Running example: Canadian Elections</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-file-data-open-and-readlines">Reading file data: <code class="docutils literal notranslate"><span class="pre">open</span></code> and <code class="docutils literal notranslate"><span class="pre">readlines</span></code></a></li>
@@ -412,15 +406,10 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#now-we-can-compute">Now we can compute!</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1-calculations">Task 1: Calculations</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1-calculations">Task 1: Calculations</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-2-extracting-district-names">Task 2: Extracting district names</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-3-filtering-names">Task 3: Filtering names</a></li>
 </ul>
-</li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -525,9 +514,8 @@ Here are the instructions for submitting to MarkUs (same as last week):</p>
 </div>
 </section>
 </section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="task-1-calculations">
-<h1>Task 1: Calculations<a class="headerlink" href="#task-1-calculations" title="Link to this heading">#</a></h1>
+<section id="task-1-calculations">
+<h2>Task 1: Calculations<a class="headerlink" href="#task-1-calculations" title="Link to this heading">#</a></h2>
 <p>Compute <strong>average</strong> population.
 Print total, max, min population, including relevant variable in <code class="docutils literal notranslate"><span class="pre">f-string</span></code>. An example f-string for number of entries <code class="docutils literal notranslate"><span class="pre">f&quot;Number</span> <span class="pre">of</span> <span class="pre">population</span> <span class="pre">entries:</span> <span class="pre">{num_populations}.&quot;</span></code></p>
 <div class="cell docutils container">
@@ -537,6 +525,7 @@ Print total, max, min population, including relevant variable in <code class="do
 </div>
 </div>
 </div>
+</section>
 <section id="task-2-extracting-district-names">
 <h2>Task 2: Extracting district names<a class="headerlink" href="#task-2-extracting-district-names" title="Link to this heading">#</a></h2>
 <p>Next, create a empty list called <code class="docutils literal notranslate"><span class="pre">district_names</span></code>. Then, use a loop and the <code class="docutils literal notranslate"><span class="pre">str.split(&quot;,&quot;)</span></code> method to calculate just the name of each district, and add each name to <code class="docutils literal notranslate"><span class="pre">district_names</span></code>.</p>
@@ -636,7 +625,6 @@ Print total, max, min population, including relevant variable in <code class="do
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">GGR274 Lab 3: Introduction to Programming, Part 2</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logistics">Logistics</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-example-canadian-elections">Running example: Canadian Elections</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-file-data-open-and-readlines">Reading file data: <code class="docutils literal notranslate"><span class="pre">open</span></code> and <code class="docutils literal notranslate"><span class="pre">readlines</span></code></a></li>
@@ -644,15 +632,10 @@ Print total, max, min population, including relevant variable in <code class="do
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#now-we-can-compute">Now we can compute!</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1-calculations">Task 1: Calculations</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1-calculations">Task 1: Calculations</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-2-extracting-district-names">Task 2: Extracting district names</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-3-filtering-names">Task 3: Filtering names</a></li>
 </ul>
-</li>
-</ul>
-
   </nav></div>
 
 </div></div>
