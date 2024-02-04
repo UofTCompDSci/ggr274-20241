@@ -80,10 +80,10 @@ parts:
     chapters:
     - file: weekly-materials/week05/lecture/Class5_GGR274_MM.ipynb
       title: Prof. Moon's Notebook
-    # - file: weekly-materials/week05/lab/Lab_5.ipynb
-    #   title: Lab 05 Notebook
-    # - file: weekly-materials/week05/homework/Homework_5.ipynb
-    #   title: Homework 05 Notebook
+    - file: weekly-materials/week05/lab/Lab_5.ipynb
+      title: Lab 05 Notebook
+    - file: weekly-materials/week05/homework/Homework_5.ipynb
+      title: Homework 05 Notebook
 
   - caption: Practice Midterm
     chapters:
