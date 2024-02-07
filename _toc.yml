@@ -73,8 +73,8 @@ parts:
       title: Lab 04 Solutions
     - file: weekly-materials/week04/homework/Homework_4.ipynb
       title: Homework 04 Notebook
-    # - file: weekly-materials/week04/homework/Homework_4_solution.ipynb
-    #   title: Homework 04 Solutions
+    - file: weekly-materials/week04/homework/marking/Homework_4_solution.ipynb
+      title: Homework 04 Solutions
 
   - caption: Week 5
     chapters:
