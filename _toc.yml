@@ -91,3 +91,5 @@ parts:
     chapters:
     - file: practice/sample_midterm/GGR274_Midterm.ipynb
       title: 2022 Midterm Notebook
+    - file: practice/review_w1-3.ipynb
+      title: Review of frequent errors and extra examples for weeks 1-3
