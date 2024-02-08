@@ -49,18 +49,20 @@ parts:
       title: Lab 02 Solutions
     - file: weekly-materials/week02/homework/Homework_2.ipynb
       title: Homework 02 Notebook
-  
+    - file: weekly-materials/week02/homework/Homework_2_solution.ipynb
+      title: Homework 02 Solutions  
   - caption: Week 3
     chapters:
     - file: weekly-materials/week03/lecture/Class3_GGR274_DL_IM.ipynb
       title: Prof. Musabirov's Notebook
     - file: weekly-materials/week03/lab/Lab_3.ipynb
       title: Lab 03 Notebook
-    # - file: weekly-materials/week03/lab/Lab_3_solutions.ipynb
-    #   title: Lab 03 Solutions
+    - file: weekly-materials/week03/lab/Lab_3_solutions.ipynb
+      title: Lab 03 Solutions
     - file: weekly-materials/week03/homework/Homework_3.ipynb
       title: Homework 03 Notebook
-  
+    - file: weekly-materials/week03/homework/Homework_3_solution.ipynb
+      title: Homework 03 Solutions 
   - caption: Week 4
     chapters:
     - url: https://q.utoronto.ca/courses/338580/files?preview=30071956
