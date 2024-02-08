@@ -57,12 +57,12 @@
     <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'weekly-materials/week03/homework/Homework_3';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'weekly-materials/week03/homework/Homework_3_solution';</script>
     <link rel="icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="GGR274 Homework 3" href="Homework_3_solution.html" />
-    <link rel="prev" title="GGR274 Lab 3: Introduction to Programming, Part 2" href="../lab/Lab_3_solutions.html" />
+    <link rel="next" title="Lecture 4: Introduction to pandas and Data Wrangling" href="../../week04/lecture/Class4_GGR274_MM.html" />
+    <link rel="prev" title="GGR274 Homework 3" href="Homework_3.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -206,8 +206,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../lecture/Class3_GGR274_DL_IM.html">Prof. Musabirov's Notebook</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lab/Lab_3.html">Lab 03 Notebook</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lab/Lab_3_solutions.html">Lab 03 Solutions</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Homework 03 Notebook</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Homework_3_solution.html">Homework 03 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Homework_3.html">Homework 03 Notebook</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Homework 03 Solutions</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 4</span></p>
 <ul class="nav bd-sidenav">
@@ -281,7 +281,7 @@
       
       
       
-      <li><a href="https://jupyter.utoronto.ca/hub/user-redirect/git-pull?repo=https%3A//github.com/UofTCompDSci/ggr274-20241&urlpath=tree/ggr274-20241/weekly-materials/week03/homework/Homework_3.ipynb&branch=main" target="_blank"
+      <li><a href="https://jupyter.utoronto.ca/hub/user-redirect/git-pull?repo=https%3A//github.com/UofTCompDSci/ggr274-20241&urlpath=tree/ggr274-20241/weekly-materials/week03/homework/Homework_3_solution.ipynb&branch=main" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onJupyterHub"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -312,7 +312,7 @@
       
       
       
-      <li><a href="../../../_sources/weekly-materials/week03/homework/Homework_3.ipynb" target="_blank"
+      <li><a href="../../../_sources/weekly-materials/week03/homework/Homework_3_solution.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -453,9 +453,18 @@ In the code cell below, write code to open the movie review dataset file, called
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here</span>
 
+<span class="n">review_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;reviews.txt&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
+<span class="n">reviews</span> <span class="o">=</span> <span class="n">review_file</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
 
 <span class="c1"># The following code is provided to help you check your work</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The first movie review:</span><span class="se">\n\n</span><span class="si">{</span><span class="n">reviews</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The first movie review:
+
+I just watched it last night and it was great.I can see why some ppl have ill feelings towards it from a rugby fan and maori culture point of view but other than that I have no idea what&#39;s so negative about it. The movie is great. It has a lot of heart. Very inspiring and encouraging to all ages. Great family movie! They did a pretty good job considering that it was a budget movie. I love movies based on true stories/events. I was raised around rugby all my life, it is a great game but I was never really taken to it because (please forgive me if I offend anyone, nothing personal this is just how I saw it) I thought, their trainings are not as ruthless or hard, the players are not as disciplined and don&#39;t seemed as serious like other sportmen and it looked like it&#39;s all just muscle and blooming tackling each other etc. But after watching Forever strong, I was like, wow! I was proud! It did good things for rugby (well it changed my view of rugby) and also the New Zealnd Haka. I actually cried. I am not even New Zealander and I was proud of their culture. Didn&#39;t even know what the chant meant until this movie. The movie is NOT about rugby techniques or rugby, it&#39;s not even about New Zealand All Blacks or the Haka or etc......Mother of pearls!!!!! hahaha SHUX!&lt;br /&gt;&lt;br /&gt;So to all you beautiful negative ppl, You are missing the point! I am sure if they had the means, it would have been better, the haka is in there because that was part of Highland Rugby culture, tradition or what ever you want to call it. &lt;br /&gt;&lt;br /&gt;So any new members on this site such as myself, please don&#39;t be put off by those negative comments. See it for yourself! Must see movie! There is a lot you can learn from this movie, ppl of all ages. It definitely makes you want to be a better person and be humble! This movie reminded me of a lot of things that I already know and was raised with but I kinda lost along the way! Loved it! Happy reading ppls and All the best!&lt;br /&gt;&lt;br /&gt;Muawha!
 </pre></div>
 </div>
 </div>
@@ -472,10 +481,15 @@ Using this fact and how you read in the data above (with <code class="docutils l
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here</span>
-
+<span class="n">num_reviews</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">reviews</span><span class="p">)</span>
 
 <span class="c1"># The following code is provided to help you check your work</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;There are </span><span class="si">{</span><span class="n">num_reviews</span><span class="si">}</span><span class="s2"> reviews in the dataset.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>There are 2000 reviews in the dataset.
 </pre></div>
 </div>
 </div>
@@ -496,7 +510,15 @@ Using this fact and how you read in the data above (with <code class="docutils l
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here</span>
+<span class="n">review_lengths</span> <span class="o">=</span> <span class="p">[]</span>
 
+<span class="k">for</span> <span class="n">review</span> <span class="ow">in</span> <span class="n">reviews</span><span class="p">:</span>
+    <span class="n">review_lengths</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">review</span><span class="p">))</span>
+
+<span class="n">total_length</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">review_lengths</span><span class="p">)</span>
+<span class="n">max_length</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">review_lengths</span><span class="p">)</span>
+<span class="n">min_length</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">review_lengths</span><span class="p">)</span>
+<span class="n">average_length</span> <span class="o">=</span> <span class="n">total_length</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">review_lengths</span><span class="p">)</span>
 
 
 <span class="c1"># The following code is provided to help you check your work</span>
@@ -505,6 +527,15 @@ Using this fact and how you read in the data above (with <code class="docutils l
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The maximum review length is </span><span class="si">{</span><span class="n">max_length</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The minimum review length is </span><span class="si">{</span><span class="n">min_length</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The average review length is </span><span class="si">{</span><span class="n">average_length</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The length of the first review is 1985.
+The total review length is 2657205.
+The maximum review length is 7127.
+The minimum review length is 91.
+The average review length is 1328.6025.
 </pre></div>
 </div>
 </div>
@@ -525,6 +556,15 @@ Use the <code class="docutils literal notranslate"><span class="pre">str.split</
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here</span>
+<span class="n">review_word_lengths</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">review</span> <span class="ow">in</span> <span class="n">reviews</span><span class="p">:</span>
+    <span class="n">review_word_lengths</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">review</span><span class="o">.</span><span class="n">split</span><span class="p">()))</span>
+
+<span class="n">total_word_length</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">review_word_lengths</span><span class="p">)</span>
+<span class="n">max_word_length</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">review_word_lengths</span><span class="p">)</span>
+<span class="n">min_word_length</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">review_word_lengths</span><span class="p">)</span>
+<span class="n">average_word_length</span> <span class="o">=</span> <span class="n">total_word_length</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">review_word_lengths</span><span class="p">)</span>
 
 
 <span class="c1"># The following code is provided to help you check your work</span>
@@ -533,6 +573,15 @@ Use the <code class="docutils literal notranslate"><span class="pre">str.split</
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The maximum review length (in words) is </span><span class="si">{</span><span class="n">max_word_length</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The minimum review length (in words) is </span><span class="si">{</span><span class="n">min_word_length</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The average review length (in words) is </span><span class="si">{</span><span class="n">average_word_length</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The length (in words) of the first review is 380.
+The total review length (in words) is 468849.
+The maximum review length (in words) is 1167.
+The minimum review length (in words) is 16.
+The average review length (in words) is 234.4245.
 </pre></div>
 </div>
 </div>
@@ -558,12 +607,40 @@ Then loop through the <code class="docutils literal notranslate"><span class="pr
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here</span>
+<span class="n">positive_reviews</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">negative_reviews</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">ambiguous_reviews</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">review</span> <span class="ow">in</span> <span class="n">reviews</span><span class="p">:</span>
+    <span class="k">if</span> <span class="s2">&quot;best&quot;</span> <span class="ow">in</span> <span class="n">review</span> <span class="ow">and</span> <span class="s2">&quot;worst&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">review</span><span class="p">:</span>
+        <span class="n">positive_reviews</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">review</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="s2">&quot;best&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">review</span> <span class="ow">and</span> <span class="s2">&quot;worst&quot;</span> <span class="ow">in</span> <span class="n">review</span><span class="p">:</span>
+        <span class="n">negative_reviews</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">review</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="s2">&quot;best&quot;</span> <span class="ow">in</span> <span class="n">review</span> <span class="ow">and</span> <span class="s2">&quot;worst&quot;</span> <span class="ow">in</span> <span class="n">review</span><span class="p">:</span>
+        <span class="n">ambiguous_reviews</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">review</span><span class="p">)</span>
 
 
 <span class="c1"># The following code is provided to help you check your work</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Here is the first positive review:</span><span class="se">\n\n</span><span class="si">{</span><span class="n">positive_reviews</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Here is the first negative review:</span><span class="se">\n\n</span><span class="si">{</span><span class="n">negative_reviews</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Here is the first ambiguous review:</span><span class="se">\n\n</span><span class="si">{</span><span class="n">ambiguous_reviews</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Here is the first positive review:
+
+I just watched it last night and it was great.I can see why some ppl have ill feelings towards it from a rugby fan and maori culture point of view but other than that I have no idea what&#39;s so negative about it. The movie is great. It has a lot of heart. Very inspiring and encouraging to all ages. Great family movie! They did a pretty good job considering that it was a budget movie. I love movies based on true stories/events. I was raised around rugby all my life, it is a great game but I was never really taken to it because (please forgive me if I offend anyone, nothing personal this is just how I saw it) I thought, their trainings are not as ruthless or hard, the players are not as disciplined and don&#39;t seemed as serious like other sportmen and it looked like it&#39;s all just muscle and blooming tackling each other etc. But after watching Forever strong, I was like, wow! I was proud! It did good things for rugby (well it changed my view of rugby) and also the New Zealnd Haka. I actually cried. I am not even New Zealander and I was proud of their culture. Didn&#39;t even know what the chant meant until this movie. The movie is NOT about rugby techniques or rugby, it&#39;s not even about New Zealand All Blacks or the Haka or etc......Mother of pearls!!!!! hahaha SHUX!&lt;br /&gt;&lt;br /&gt;So to all you beautiful negative ppl, You are missing the point! I am sure if they had the means, it would have been better, the haka is in there because that was part of Highland Rugby culture, tradition or what ever you want to call it. &lt;br /&gt;&lt;br /&gt;So any new members on this site such as myself, please don&#39;t be put off by those negative comments. See it for yourself! Must see movie! There is a lot you can learn from this movie, ppl of all ages. It definitely makes you want to be a better person and be humble! This movie reminded me of a lot of things that I already know and was raised with but I kinda lost along the way! Loved it! Happy reading ppls and All the best!&lt;br /&gt;&lt;br /&gt;Muawha!
+
+
+Here is the first negative review:
+
+Not having seen the film in its commercial debut, we just caught with it via DVD. Expecting the worst, &quot;Hitch&quot; proved to be a pleasant experience because of the three principals in it. Thanks to Andy Tenant&#39;s direction, the film has an easy pace, and while predictable, the comedy has some winning moments.&lt;br /&gt;&lt;br /&gt;Hitch is a sort of &quot;date coordinator&quot; for losers like Albert, who is not exactly what one would consider a hunk. Yet, Albert is a genuine guy who, without some professional help would go unnoticed by the same women he would like to take out. Enter Hitch, to prepare him to overcome the obstacles that he can&#39;t overcome, and even though Albert stays overweight and never gets to master social graces, he conquers us because he is a real, in sharp contrast with all the phonies making the rounds in Manhattan.&lt;br /&gt;&lt;br /&gt;The basic mistake most production designers make, when preparing locales for Hollywood films, is how out of touch with reality they are. The apartments in which they situate these characters are so rare to find that only by the magic of the movies can these people live in places likes these. Evidently most of the movie people are dealing with fantasy since most city dwellers would kill for spaces so fabulous as the ones they show in the movies, let alone these same people depicted in the film would not be able to afford them.&lt;br /&gt;&lt;br /&gt;Will Smith is a charismatic actor. He has a disarming way to charm without doing much. The surprise of the movie though, is Kevin James, who as the overweight Albert, not only win us over, but he proves he can hold his own in his scenes with Mr. Smith. Eva Mendez is fine as the main interest of Hitch. In minor roles we see Adam Arkin, Amber Valletta, Michael Rappaport, and Phillip Bosco, among others.&lt;br /&gt;&lt;br /&gt;&quot;Hitch&quot; is a fun film to watch thanks to the inspired direction by Andy Tenant.
+
+
+Here is the first ambiguous review:
+
+In my personal opinion - «The Patriot» is one of the best Steven Seagal movies.&lt;br /&gt;&lt;br /&gt;I&#39;ve heard people say it&#39;s the worst one ever, it&#39;s not like SS etc. I disagree. As a highly spiritual person, a great master Seagal established a good tradition in action movies. He always has a good background, great action, high professionalism and a clever message. This movie has it all. You have good shooting scenes, great aikido. Although there isn&#39;t a lot of it, it shows us its peaceful side. This change in his film making only proves his spiritual growth (he doesn&#39;t kill Chisolm&#39;s buddy in the end).&lt;br /&gt;&lt;br /&gt;«The Patriot» is definitely one of the best films from the «filmmaker&#39;s» point of view which I have seen lately. You have great panoramic shots of Montana, we see real American nature and beautiful wildlife(among others - horses and flowers). The soundtrack also deserves a few words. During the film I had a great opportunity to listen to classical American-cowboy-western music(not Country though). Similar music was heard in «Back to the Future Prt.3». SS&#39;s acting has greatly improved since his last films. His role is unfamiliar to him(unlike cops &amp; commandos), but he does a good job playing the-retired-doctor-from-the-government. His acting is convincing and his lines are good.&lt;br /&gt;&lt;br /&gt;I was really pleased with the cast. LQ Jones proves that life &amp; death walk the Earth together, Whitney Yellow Robe plays a beautiful and clever scientist, Camilla Belle makes a great appearance as McClaren&#39;s daughter.&lt;br /&gt;&lt;br /&gt;Mr.Seagal discusses the much debated «Real American» tradition and the militia squads, providing his own point of view(he likes the Constitution just fine, but chubby bearded men have nothing to do with it). Also good points are raised regarding the Eastern-Western Medicine system and nature.&lt;br /&gt;&lt;br /&gt;Seagal&#39;s best. And opening new horizons in his film career.&lt;br /&gt;&lt;br /&gt;
 </pre></div>
 </div>
 </div>
@@ -611,20 +688,20 @@ Then loop through the <code class="docutils literal notranslate"><span class="pr
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../lab/Lab_3_solutions.html"
+       href="Homework_3.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">GGR274 Lab 3: Introduction to Programming, Part 2</p>
+        <p class="prev-next-title">GGR274 Homework 3</p>
       </div>
     </a>
     <a class="right-next"
-       href="Homework_3_solution.html"
+       href="../../week04/lecture/Class4_GGR274_MM.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">GGR274 Homework 3</p>
+        <p class="prev-next-title">Lecture 4: Introduction to <code class="docutils literal notranslate"><span class="pre">pandas</span></code> and Data Wrangling</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

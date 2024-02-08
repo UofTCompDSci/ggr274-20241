@@ -57,12 +57,12 @@
     <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'weekly-materials/week03/lab/Lab_3';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'weekly-materials/week03/lab/Lab_3_solutions';</script>
     <link rel="icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="GGR274 Lab 3: Introduction to Programming, Part 2" href="Lab_3_solutions.html" />
-    <link rel="prev" title="GGR274 Lecture 3: Introduction to Programming, Part 2" href="../lecture/Class3_GGR274_DL_IM.html" />
+    <link rel="next" title="GGR274 Homework 3" href="../homework/Homework_3.html" />
+    <link rel="prev" title="GGR274 Lab 3: Introduction to Programming, Part 2" href="Lab_3.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -204,8 +204,8 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 3</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../lecture/Class3_GGR274_DL_IM.html">Prof. Musabirov's Notebook</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lab 03 Notebook</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Lab_3_solutions.html">Lab 03 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lab_3.html">Lab 03 Notebook</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lab 03 Solutions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../homework/Homework_3.html">Homework 03 Notebook</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../homework/Homework_3_solution.html">Homework 03 Solutions</a></li>
 </ul>
@@ -281,7 +281,7 @@
       
       
       
-      <li><a href="https://jupyter.utoronto.ca/hub/user-redirect/git-pull?repo=https%3A//github.com/UofTCompDSci/ggr274-20241&urlpath=tree/ggr274-20241/weekly-materials/week03/lab/Lab_3.ipynb&branch=main" target="_blank"
+      <li><a href="https://jupyter.utoronto.ca/hub/user-redirect/git-pull?repo=https%3A//github.com/UofTCompDSci/ggr274-20241&urlpath=tree/ggr274-20241/weekly-materials/week03/lab/Lab_3_solutions.ipynb&branch=main" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onJupyterHub"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -312,7 +312,7 @@
       
       
       
-      <li><a href="../../../_sources/weekly-materials/week03/lab/Lab_3.ipynb" target="_blank"
+      <li><a href="../../../_sources/weekly-materials/week03/lab/Lab_3_solutions.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -527,7 +527,13 @@ Here are the instructions for submitting to MarkUs (same as last week):</p>
 Print total, max, min population, including relevant variable in <code class="docutils literal notranslate"><span class="pre">f-string</span></code>. An example f-string for number of entries <code class="docutils literal notranslate"><span class="pre">f&quot;Number</span> <span class="pre">of</span> <span class="pre">population</span> <span class="pre">entries:</span> <span class="pre">{num_populations}.&quot;</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">avg_population</span> <span class="o">=</span> <span class="n">total_population</span> <span class="o">/</span> <span class="n">num_populations</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Number of population entries: </span><span class="si">{</span><span class="n">num_populations</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Sum of populations: </span><span class="si">{</span><span class="n">total_population</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Maximum district population: </span><span class="si">{</span><span class="n">max_population</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Minimum district population: </span><span class="si">{</span><span class="n">min_population</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Average district population: </span><span class="si">{</span><span class="n">avg_population</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -540,6 +546,14 @@ Print total, max, min population, including relevant variable in <code class="do
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here</span>
+<span class="n">district_names</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">district_data</span><span class="p">:</span>
+    <span class="n">entries</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="n">entries</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">district_names</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+
+<span class="n">district_names</span>
 </pre></div>
 </div>
 </div>
@@ -553,6 +567,13 @@ Print total, max, min population, including relevant variable in <code class="do
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Write your code here</span>
+<span class="n">toronto_names</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">district_names</span><span class="p">:</span>
+    <span class="k">if</span> <span class="s2">&quot;Toronto&quot;</span> <span class="ow">in</span> <span class="n">name</span><span class="p">:</span>
+        <span class="n">toronto_names</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+
+<span class="n">toronto_names</span>
 </pre></div>
 </div>
 </div>
@@ -561,6 +582,13 @@ Print total, max, min population, including relevant variable in <code class="do
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Write your code here</span>
+<span class="n">long_names</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">district_names</span><span class="p">:</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">30</span><span class="p">:</span>
+        <span class="n">long_names</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+
+<span class="n">long_names</span>
 </pre></div>
 </div>
 </div>
@@ -599,20 +627,20 @@ Print total, max, min population, including relevant variable in <code class="do
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../lecture/Class3_GGR274_DL_IM.html"
+       href="Lab_3.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">GGR274 Lecture 3: Introduction to Programming, Part 2</p>
+        <p class="prev-next-title">GGR274 Lab 3: Introduction to Programming, Part 2</p>
       </div>
     </a>
     <a class="right-next"
-       href="Lab_3_solutions.html"
+       href="../homework/Homework_3.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">GGR274 Lab 3: Introduction to Programming, Part 2</p>
+        <p class="prev-next-title">GGR274 Homework 3</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
