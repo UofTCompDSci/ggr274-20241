@@ -57,12 +57,12 @@
     <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'weekly-materials/week05/lab/Lab_5';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'weekly-materials/week05/lab/Lab_5_solutions';</script>
     <link rel="icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="GGR274 Lab 5: Data Transformations, Grouped Data, and Data Visualization" href="Lab_5_solutions.html" />
-    <link rel="prev" title="Class 5: Data Transformations, Grouped Data, and Data Visualization" href="../lecture/Class5_GGR274_MM.html" />
+    <link rel="next" title="Homework 5" href="../homework/Homework_5.html" />
+    <link rel="prev" title="GGR274 Lab 5: Data Transformations, Grouped Data, and Data Visualization" href="Lab_5.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -221,8 +221,8 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 5</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../lecture/Class5_GGR274_MM.html">Prof. Moon's Notebook</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lab 05 Notebook</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Lab_5_solutions.html">Lab 05 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lab_5.html">Lab 05 Notebook</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lab 05 Solutions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../homework/Homework_5.html">Homework 05 Notebook</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Practice Midterm</span></p>
@@ -283,7 +283,7 @@
       
       
       
-      <li><a href="https://jupyter.utoronto.ca/hub/user-redirect/git-pull?repo=https%3A//github.com/UofTCompDSci/ggr274-20241&urlpath=tree/ggr274-20241/weekly-materials/week05/lab/Lab_5.ipynb&branch=main" target="_blank"
+      <li><a href="https://jupyter.utoronto.ca/hub/user-redirect/git-pull?repo=https%3A//github.com/UofTCompDSci/ggr274-20241&urlpath=tree/ggr274-20241/weekly-materials/week05/lab/Lab_5_solutions.ipynb&branch=main" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onJupyterHub"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -314,7 +314,7 @@
       
       
       
-      <li><a href="../../../_sources/weekly-materials/week05/lab/Lab_5.ipynb" target="_blank"
+      <li><a href="../../../_sources/weekly-materials/week05/lab/Lab_5_solutions.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -449,10 +449,152 @@ Here are the instructions for submitting to MarkUs (same as last week):</p>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
-<span class="c1"># Write your code here</span>
+<span class="n">prov_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;time_use_prov.csv&#39;</span><span class="p">)</span>
+
+<span class="n">prov_data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/0j/ybsv4ncn5w50v40vdh5jjlww0000gn/T/ipykernel_61212/3599942435.py:1: DeprecationWarning: 
+Pyarrow will become a required dependency of pandas in the next major release of pandas (pandas 3.0),
+(to allow more performant data types, such as the Arrow string type, and better interoperability with other libraries)
+but was not found to be installed on your system.
+If this would cause problems for you,
+please provide us feedback at https://github.com/pandas-dev/pandas/issues/54466
+        
+  import pandas as pd
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Unnamed: 0</th>
+      <th>Participant ID</th>
+      <th>Urban/Rural</th>
+      <th>Age Group</th>
+      <th>Marital Status</th>
+      <th>sex</th>
+      <th>Kids under 14</th>
+      <th>Feeling Rushed</th>
+      <th>Sleep duration</th>
+      <th>Work duration</th>
+      <th>Prov_ab</th>
+      <th>Employment Rate</th>
+      <th>Pct house over 30</th>
+      <th>region</th>
+      <th>Income</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>10000</td>
+      <td>1</td>
+      <td>5</td>
+      <td>5</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>510</td>
+      <td>0</td>
+      <td>MB</td>
+      <td>61.7</td>
+      <td>11.4</td>
+      <td>Prairies</td>
+      <td>68147.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>10009</td>
+      <td>1</td>
+      <td>6</td>
+      <td>3</td>
+      <td>1</td>
+      <td>0</td>
+      <td>6</td>
+      <td>540</td>
+      <td>0</td>
+      <td>MB</td>
+      <td>61.7</td>
+      <td>11.4</td>
+      <td>Prairies</td>
+      <td>68147.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>10016</td>
+      <td>2</td>
+      <td>7</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>6</td>
+      <td>660</td>
+      <td>0</td>
+      <td>MB</td>
+      <td>61.7</td>
+      <td>11.4</td>
+      <td>Prairies</td>
+      <td>68147.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>10023</td>
+      <td>1</td>
+      <td>6</td>
+      <td>1</td>
+      <td>2</td>
+      <td>0</td>
+      <td>3</td>
+      <td>330</td>
+      <td>0</td>
+      <td>MB</td>
+      <td>61.7</td>
+      <td>11.4</td>
+      <td>Prairies</td>
+      <td>68147.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4</td>
+      <td>10047</td>
+      <td>2</td>
+      <td>7</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>3</td>
+      <td>510</td>
+      <td>0</td>
+      <td>MB</td>
+      <td>61.7</td>
+      <td>11.4</td>
+      <td>Prairies</td>
+      <td>68147.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 </section>
 <section id="task-2">
@@ -483,7 +625,19 @@ Here are the instructions for submitting to MarkUs (same as last week):</p>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Solution</span>
+
+<span class="n">age</span> <span class="o">=</span> <span class="n">prov_data</span><span class="p">[</span><span class="s1">&#39;Age Group&#39;</span><span class="p">]</span>
+
+<span class="n">youth</span> <span class="o">=</span> <span class="p">(</span><span class="n">age</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">young</span> <span class="o">=</span> <span class="p">(</span><span class="n">age</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">age</span> <span class="o">==</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">middle</span> <span class="o">=</span> <span class="p">(</span><span class="n">age</span> <span class="o">==</span> <span class="mi">4</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">age</span> <span class="o">==</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">senior</span> <span class="o">=</span> <span class="p">(</span><span class="n">age</span> <span class="o">==</span> <span class="mi">6</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">age</span> <span class="o">==</span> <span class="mi">7</span><span class="p">)</span>
+
+<span class="n">prov_data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">youth</span><span class="p">,</span> <span class="s1">&#39;age_bin&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;youth&#39;</span>
+<span class="n">prov_data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">young</span><span class="p">,</span> <span class="s1">&#39;age_bin&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;young&#39;</span>
+<span class="n">prov_data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">middle</span><span class="p">,</span> <span class="s1">&#39;age_bin&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;middle&#39;</span>
+<span class="n">prov_data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">senior</span><span class="p">,</span> <span class="s1">&#39;age_bin&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;senior&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -491,7 +645,38 @@ Here are the instructions for submitting to MarkUs (same as last week):</p>
 <p>b) Compute the distribution of <code class="docutils literal notranslate"><span class="pre">age_bin</span></code> as a count, and store this in <code class="docutils literal notranslate"><span class="pre">age_bin_count_dist</span></code>. Then compute <code class="docutils literal notranslate"><span class="pre">age_bin</span></code> as a proportion of the total population, and store this in <code class="docutils literal notranslate"><span class="pre">age_bin_prop_dist</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">age_bin_count_dist</span> <span class="o">=</span> <span class="n">prov_data</span><span class="p">[</span><span class="s1">&#39;age_bin&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+
+<span class="n">age_bin_count_dist</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>age_bin
+middle    6530
+senior    4833
+young     4724
+youth     1303
+Name: count, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">age_bin_prop_dist</span> <span class="o">=</span> <span class="n">age_bin_count_dist</span> <span class="o">/</span> <span class="n">age_bin_count_dist</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+<span class="n">age_bin_prop_dist</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>age_bin
+middle    0.375503
+senior    0.277918
+young     0.271650
+youth     0.074928
+Name: count, dtype: float64
 </pre></div>
 </div>
 </div>
@@ -503,7 +688,19 @@ Here are the instructions for submitting to MarkUs (same as last week):</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">inplace</span> <span class="pre">=</span> <span class="pre">True</span></code> parameter in <code class="docutils literal notranslate"><span class="pre">sort_values</span></code> modifies <code class="docutils literal notranslate"><span class="pre">age_bin_prop_dist</span></code>.  What do you predict would happen to <code class="docutils literal notranslate"><span class="pre">age_bin_prop_dist</span></code> if we used <code class="docutils literal notranslate"><span class="pre">age_bin_prop_dist.sort_values(ascending=True,</span> <span class="pre">inplace</span> <span class="pre">=</span> <span class="pre">False)</span></code> instead?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">age_bin_prop_dist</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+
+<span class="n">age_bin_prop_dist</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>age_bin
+youth     0.074928
+young     0.271650
+senior    0.277918
+middle    0.375503
+Name: count, dtype: float64
 </pre></div>
 </div>
 </div>
@@ -512,9 +709,20 @@ Here are the instructions for submitting to MarkUs (same as last week):</p>
 <p><em>Feel free to explore different aesthetic options by changing paramters for the plotting function. (See the documentation <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.plot.bar.html">here</a>.)</em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">age_bin_prop_dist</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">()</span>
+<span class="n">age_bin_prop_dist</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span>
+    <span class="n">rot</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> 
+    <span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;Distribution of age groups&#39;</span><span class="p">,</span> 
+    <span class="n">xlabel</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: title={&#39;center&#39;: &#39;Distribution of age groups&#39;}&gt;
+</pre></div>
+</div>
+<img alt="../../../_images/fb6639a7cafff57ed4344de18040cea227d48b7f20dc22cfb10c34c603c639b7.png" src="../../../_images/fb6639a7cafff57ed4344de18040cea227d48b7f20dc22cfb10c34c603c639b7.png" />
 </div>
 </div>
 </section>
@@ -528,9 +736,57 @@ Here are the instructions for submitting to MarkUs (same as last week):</p>
 <p><em>Feel free to customize the plot further to your liking with the help of the <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.boxplot.html">documention</a>.</em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sleep_by_age_boxplots</span> <span class="o">=</span> <span class="n">prov_data</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span>
+    <span class="n">column</span> <span class="o">=</span> <span class="s1">&#39;Sleep duration&#39;</span><span class="p">,</span> 
+    <span class="n">by</span> <span class="o">=</span> <span class="s1">&#39;age_bin&#39;</span><span class="p">,</span> 
+    <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="p">)</span>
+<span class="p">);</span>
+
+<span class="n">sleep_by_age_boxplots</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Sleep duration&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Sleep duration&#39;)
+</pre></div>
+</div>
+<img alt="../../../_images/87c1e5e4e8aeb25ec00747c906072298c02a4e734bc6775ea146e825a7e82dfb.png" src="../../../_images/87c1e5e4e8aeb25ec00747c906072298c02a4e734bc6775ea146e825a7e82dfb.png" />
+</div>
+</div>
+<p>Further customization. See <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.Categorical.html">documentation on <code class="docutils literal notranslate"><span class="pre">pandas.Categorical</span></code></a> for more information on the method.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">prov_data</span><span class="p">[</span><span class="s1">&#39;age_bin ordered&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Categorical</span><span class="p">(</span>
+    <span class="n">prov_data</span><span class="p">[</span><span class="s1">&#39;age_bin&#39;</span><span class="p">],</span>
+    <span class="n">categories</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s1">&#39;youth&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;young&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;middle&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;senior&#39;</span>
+    <span class="p">],</span>
+    <span class="n">ordered</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="p">)</span>
+
+<span class="n">sleep_by_age_boxplots</span> <span class="o">=</span> <span class="n">prov_data</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span>
+    <span class="n">column</span> <span class="o">=</span> <span class="s1">&#39;Sleep duration&#39;</span><span class="p">,</span> 
+    <span class="n">by</span> <span class="o">=</span> <span class="s1">&#39;age_bin ordered&#39;</span><span class="p">,</span> 
+    <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span>
+    <span class="n">vert</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="p">);</span>
+
+<span class="n">sleep_by_age_boxplots</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">);</span>
+<span class="n">sleep_by_age_boxplots</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">);</span>
+<span class="n">sleep_by_age_boxplots</span><span class="o">.</span><span class="n">set_yticklabels</span><span class="p">([</span>
+    <span class="s1">&#39;Youth&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Young adult&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Middle age&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Senior&#39;</span>
+<span class="p">]);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/664231801e72fc0b4391813e194b919a4496aca42def15ba16bfaaed812da4df.png" src="../../../_images/664231801e72fc0b4391813e194b919a4496aca42def15ba16bfaaed812da4df.png" />
 </div>
 </div>
 </section>
@@ -567,20 +823,20 @@ Here are the instructions for submitting to MarkUs (same as last week):</p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../lecture/Class5_GGR274_MM.html"
+       href="Lab_5.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Class 5: Data Transformations, Grouped Data, and Data Visualization</p>
+        <p class="prev-next-title">GGR274 Lab 5: Data Transformations, Grouped Data, and Data Visualization</p>
       </div>
     </a>
     <a class="right-next"
-       href="Lab_5_solutions.html"
+       href="../homework/Homework_5.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">GGR274 Lab 5: Data Transformations, Grouped Data, and Data Visualization</p>
+        <p class="prev-next-title">Homework 5</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
