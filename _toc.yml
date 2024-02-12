@@ -84,6 +84,8 @@ parts:
       title: Prof. Moon's Notebook
     - file: weekly-materials/week05/lab/Lab_5.ipynb
       title: Lab 05 Notebook
+    - file: weekly-materials/week05/lab/Lab_5_solutions.ipynb
+      title: Lab 05 Solutions
     - file: weekly-materials/week05/homework/Homework_5.ipynb
       title: Homework 05 Notebook
 
@@ -93,3 +95,8 @@ parts:
       title: 2022 Midterm Notebook
     - file: practice/review_w1-3.ipynb
       title: Review of frequent errors and extra examples for weeks 1-3
+
+  # - caption: Midterm
+  #   chapters:
+  #   - file: tests/midterm/Midterm.ipynb
+  #     title: Midterm Notebook
