@@ -100,5 +100,5 @@ parts:
     chapters:
     - file: tests/midterm/Midterm.ipynb
       title: Midterm Notebook
-    # - file: tests/midterm-makeup/Midterm_makeup.ipynb
-    #   title: Midterm (makeup) Notebook
+    - file: tests/midterm-makeup/Midterm_makeup.ipynb
+      title: Midterm (makeup) Notebook
