@@ -88,6 +88,8 @@ parts:
       title: Lab 05 Solutions
     - file: weekly-materials/week05/homework/Homework_5.ipynb
       title: Homework 05 Notebook
+    - file: weekly-materials/week05/homework/marking/Homework_5_solution.ipynb
+      title: Homework 05 Solutions
 
   - caption: Practice Midterm
     chapters:
@@ -103,7 +105,6 @@ parts:
     - file: tests/midterm-makeup/Midterm_makeup.ipynb
       title: Midterm (makeup) Notebook
 
-
   # - caption: Course Project
   #   chapters:
   #   - file: project/proposal/GGR274_Project_Proposal.ipynb
@@ -115,7 +116,17 @@ parts:
   #   - file: project/presentation/extras/Tipsandtricksforslides.ipynb
   #     title: Additional Tips and Tricks for Creating Slides in a Jupyter Notebook
 
-  # - caption: Week 7
-  #   chapters:
-  #   - url: https://q.utoronto.ca/courses/338580/files?preview=30627394
-  #     title: Prof. Li's Slides
+  - caption: Week 7
+    chapters:
+    # - url: https://q.utoronto.ca/courses/338580/files?preview=30627394
+    #   title: Prof. Li's Slides
+    - file: weekly-materials/week07/lecture/Class7_GGR274_MM.ipynb
+      title: Prof. Moon's Notebook
+    - file: weekly-materials/week07/lab/Lab_7.ipynb
+      title: Lab 07 Notebook
+    # - file: weekly-materials/week07/lab/Lab_7_solutions.ipynb
+    #   title: Lab 07 Solutions
+    - file: weekly-materials/week07/homework/Homework_7.ipynb
+      title: Homework 07 Notebook
+    # - file: weekly-materials/week07/homework/marking/Homework_7_solution.ipynb
+    #   title: Homework 07 Solutions
