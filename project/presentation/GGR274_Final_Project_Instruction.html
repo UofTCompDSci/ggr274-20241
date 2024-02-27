@@ -1,0 +1,934 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>GGR274H1 Final Project Instructions &#8212; Computation and Data Science for Social Sciences</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'project/presentation/GGR274_Final_Project_Instruction';</script>
+    <link rel="icon" href="../../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Some Useful Information on creating Markdown Cells and a Slideshow" href="extras/GGR274DSconfslides.html" />
+    <link rel="prev" title="GGR274H1 Final Project Proposal" href="../proposal/GGR274_Project_Proposal.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../jupyter-book/index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Computation and Data Science for Social Sciences</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../jupyter-book/index.html">
+                    👋 Course Website for GGR274H1-S Winter 2024
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Quick Links</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../syllabus/ggr274_syllabus.html">Course Syllabus</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://q.utoronto.ca/courses/338580/announcements">Announcements</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://piazza.com/utoronto.ca/winter2024/ggr274h1">Piazza</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://forms.office.com/Pages/ResponsePage.aspx?id=JsKqeAMvTUuQN7RtVsVSEF-wqptfr85NieT8UyliaxxUOUtMSVFUQkFTNVdRTlVJNkZFQU84NldYUi4u">Course Feedback Form</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Resources</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../guides/jupyterhub_guide.html">JupyterHub Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../guides/markus_guide.html">MarkUs Guide</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 1</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://q.utoronto.ca/courses/338580/files?preview=29750629">Prof. Li's Slides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week01/lecture/Class1_GGR274_MM.html">Prof. Moon's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week01/lecture/Class1_GGR274_IM.html">Prof. Musabirov's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week01/lab/Lab_1.html">Lab 01 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week01/lab/Lab_1_solutions.html">Lab 01 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week01/homework/Homework_1.html">Homework 01 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week01/homework/Homework_1_solution.html">Homework 01 Solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 2</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week02/lecture/Class2_GGR274_DL_IM.html">Prof. Musabirov's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week02/lab/Lab_2.html">Lab 02 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week02/lab/Lab_2_solutions.html">Lab 02 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week02/homework/Homework_2.html">Homework 02 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week02/homework/Homework_2_solution.html">Homework 02 Solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 3</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week03/lecture/Class3_GGR274_DL_IM.html">Prof. Musabirov's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week03/lab/Lab_3.html">Lab 03 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week03/lab/Lab_3_solutions.html">Lab 03 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week03/homework/Homework_3.html">Homework 03 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week03/homework/Homework_3_solution.html">Homework 03 Solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 4</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://q.utoronto.ca/courses/338580/files?preview=30071956">Prof. Li's Slides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week04/lecture/Class4_GGR274_MM.html">Prof. Moon's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week04/lab/Lab_4.html">Lab 04 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week04/lab/Lab_4_solutions.html">Lab 04 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week04/homework/Homework_4.html">Homework 04 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week04/homework/marking/Homework_4_solution.html">Homework 04 Solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 5</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week05/lecture/Class5_GGR274_MM.html">Prof. Moon's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week05/lab/Lab_5.html">Lab 05 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week05/lab/Lab_5_solutions.html">Lab 05 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week05/homework/Homework_5.html">Homework 05 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week05/homework/marking/Homework_5_solution.html">Homework 05 Solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Practice Midterm</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../practice/sample_midterm/GGR274_Midterm.html">2022 Midterm Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../practice/review_w1-3.html">Review of frequent errors and extra examples for weeks 1-3</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Midterm</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../tests/midterm/Midterm.html">Midterm Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tests/midterm-makeup/Midterm_makeup.html">Midterm (makeup) Notebook</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Course Project</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../proposal/GGR274_Project_Proposal.html">Project Proposal</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Final Project Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extras/GGR274DSconfslides.html">Final Project Presentation Slides Template</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extras/Tipsandtricksforslides.html">Additional Tips and Tricks for Creating Slides in a Jupyter Notebook</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 7</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://q.utoronto.ca/courses/338580/files?preview=30627394">Prof. Li's Slides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week07/lecture/Class7_GGR274_MM.html">Prof. Moon's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week07/lab/Lab_7.html">Lab 07 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week07/homework/Homework_7.html">Homework 07 Notebook</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://jupyter.utoronto.ca/hub/user-redirect/git-pull?repo=https%3A//github.com/UofTCompDSci/ggr274-20241&urlpath=tree/ggr274-20241/project/presentation/GGR274_Final_Project_Instruction.ipynb&branch=main" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onJupyterHub"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">JupyterHub</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/project/presentation/GGR274_Final_Project_Instruction.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>GGR274H1 Final Project Instructions</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deliverables">Deliverables</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conference-slides">Conference Slides</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#oral-presentation">Oral Presentation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#video-recording-and-submission-instructions">Video Recording and Submission Instructions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluation">Evaluation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#content-of-slides">Content of slides</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reproducibility-of-conference-slides">Reproducibility of Conference Slides</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#oral-video-presentation">Oral Video Presentation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-analysis-expectations">Data Analysis Expectations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-data">The Data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-we-give-you">What we give you</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-questions">Project Questions</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="ggr274h1-final-project-instructions">
+<h1>GGR274H1 Final Project Instructions<a class="headerlink" href="#ggr274h1-final-project-instructions" title="Link to this heading">#</a></h1>
+<p>The final project for this course will use data science methods including programming and statistical analysis of data from <a class="reference external" href="https://www.ontariohealthprofiles.ca/dataTablesON.php?varTab=HPDtbl&amp;amp;select1=7">Ontario Community Health Profiles</a> on one of the topics below.  You will present your findings via a five minute pre-recorded video, where you will present your work in the style of an oral presentation at an academic Data Science Conference (DSC).</p>
+<section id="deliverables">
+<h2>Deliverables<a class="headerlink" href="#deliverables" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>The Jupyter notebook (.ipynb) and related data files that produced the slides for the pre-recorded video presentation, to be submitted before by <strong>April 8, 23:59 (11:59 PM)</strong> (extended from April 5). Submission details to follow.</p></li>
+<li><p>A 5 minute pre-recorded video presentation summarizing the work that you will give at the Data Science Conference (DSC).</p></li>
+</ol>
+<ul class="simple">
+<li><p>If the Jupyter notebook and other files are submitted after the deadline you will lose 10% of your overall final project mark as long as they are submitted at most 24 hours after the deadline. The project files will not be accepted more than 24 hours after the deadline.</p></li>
+</ul>
+<section id="conference-slides">
+<h3>Conference Slides<a class="headerlink" href="#conference-slides" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>You should produce your conference slides using the Jupyter notebook Slideshow Extension RISE which is available on the <a class="reference external" href="https://jupyter.utoronto.ca">UofT Jupyterhub</a>. The template of a Jupyter notebook document to produce the slides for your presentation is <a class="reference internal" href="extras/GGR274DSconfslides.html"><span class="std std-doc">here</span></a>.  You will be allowed to present <strong>five</strong> content slides (i.e., does not include slides to break up sections described below).</p></li>
+<li><p>Your presentation slides should include reproducible Python output (i.e., graphs, tables should be produced by Python code but not not hard-coded or inserted as an image), but not Python code unless it’s directly related to one of the sections below.  See the <a class="reference internal" href="extras/GGR274DSconfslides.html"><span class="std std-doc">template</span></a> and <a class="reference internal" href="extras/Tipsandtricksforslides.html"><span class="std std-doc">tips</span></a> for an example of how to write code chunks to do this.</p></li>
+<li><p>Your title slide must include your name, tutorial section (e.g., TUTXXXX), and the link to your presentation video.</p></li>
+<li><p>Your slides should include the following sections:</p>
+<ul>
+<li><p>Introduction</p></li>
+<li><p>Methods</p></li>
+<li><p>Results</p></li>
+<li><p>Conclusion</p></li>
+</ul>
+</li>
+</ul>
+<p>A few guidelines for an effective video presentation:</p>
+<ul class="simple">
+<li><p>Your slides should be clear, concise, and easy to read quickly.</p></li>
+<li><p>Do not use small fonts.</p></li>
+<li><p>Figures often display information more efficiently than text.</p></li>
+<li><p>Numbered or bulleted lists convey points in slides more effectively than blocks of text.</p></li>
+</ul>
+</section>
+<section id="oral-presentation">
+<h3>Oral Presentation<a class="headerlink" href="#oral-presentation" title="Link to this heading">#</a></h3>
+<p>You will be asked to present your slides in a 5 minute pre-recorded video presentation that summarizes your work.  This time limit is firm and we will not view any content past 5 minutes.</p>
+<ul class="simple">
+<li><p>You may not work with others in the class, as this is an individual project.  You may discuss the project with professors and the course TAs using office hours.</p></li>
+</ul>
+</section>
+<section id="video-recording-and-submission-instructions">
+<h3>Video Recording and Submission Instructions<a class="headerlink" href="#video-recording-and-submission-instructions" title="Link to this heading">#</a></h3>
+<ol class="arabic">
+<li><p>First, record your video presentation.</p>
+<ul class="simple">
+<li><p>You can refer to this <a class="reference external" href="https://web.microsoftstream.com/video/a974698e-fc08-4139-bc55-9462fc995d5e">demo video</a> regarding how to make this recording.</p></li>
+</ul>
+</li>
+<li><p>Upload your video recording to the University of Toronto MyMedia platform, <a class="reference external" href="https://mymedia.library.utoronto.ca">https://mymedia.library.utoronto.ca</a>.</p>
+<ul class="simple">
+<li><p>Martin has made another <a class="reference external" href="https://web.microsoftstream.com/video/6984e115-7220-4ded-a8ba-73104152ccae?list=user&amp;amp;userId=0d2753fa-ab3f-4d15-9ce3-ebdec2290b82">demo video</a> for this step.</p></li>
+</ul>
+</li>
+<li><p>After uploading the video, obtain the “Permanent Link” to the video but clicking on the “Share” button.
+This link should look something like</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">play</span><span class="o">.</span><span class="n">library</span><span class="o">.</span><span class="n">utoronto</span><span class="o">.</span><span class="n">ca</span><span class="o">/</span><span class="n">watch</span><span class="o">/</span><span class="mi">1234567</span><span class="n">abcdefg</span><span class="o">...</span>
+</pre></div>
+</div>
+</li>
+<li><p>Add this URL to the top cell of your Jupyter notebook file, and clearly label it as the link to your presentation recording.</p></li>
+<li><p>Then, submit your Jupyter notebook file and all data used in your Jupyter notebook file to MarkUs under <em>project-submission: Project Final Submission</em>.</p>
+<p><strong>Your TA will need to be able to see your full notebook file, run the code, and access the video URL, so please double-check notebook, data, and video before making your final submission!</strong></p>
+</li>
+</ol>
+</section>
+</section>
+<section id="evaluation">
+<h2>Evaluation<a class="headerlink" href="#evaluation" title="Link to this heading">#</a></h2>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Grade component</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Content of slides</p></td>
+<td><p>50%</p></td>
+</tr>
+<tr class="row-odd"><td><p>Reproducibility of slide content</p></td>
+<td><p>10%</p></td>
+</tr>
+<tr class="row-even"><td><p>Video Presentation</p></td>
+<td><p>40%</p></td>
+</tr>
+</tbody>
+</table>
+<section id="content-of-slides">
+<h3>Content of slides<a class="headerlink" href="#content-of-slides" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>The rubric for the content of the conference slides evaluation is below.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">slidesrubric</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;confrenceslidesrubric.csv&#39;</span><span class="p">,</span> <span class="n">keep_default_na</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">slidesrubric</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">hide</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;index&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+</style>
+<table id="T_68e0f">
+  <thead>
+    <tr>
+      <th id="T_68e0f_level0_col0" class="col_heading level0 col0" >Criteria</th>
+      <th id="T_68e0f_level0_col1" class="col_heading level0 col1" >Category</th>
+      <th id="T_68e0f_level0_col2" class="col_heading level0 col2" >Excellent</th>
+      <th id="T_68e0f_level0_col3" class="col_heading level0 col3" >Good</th>
+      <th id="T_68e0f_level0_col4" class="col_heading level0 col4" >Adequate</th>
+      <th id="T_68e0f_level0_col5" class="col_heading level0 col5" >Poor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td id="T_68e0f_row0_col0" class="data row0 col0" >Content</td>
+      <td id="T_68e0f_row0_col1" class="data row0 col1" >Reasonable scope</td>
+      <td id="T_68e0f_row0_col2" class="data row0 col2" >The scope of the analysis is clear and questions can be fully addressed using the available data.</td>
+      <td id="T_68e0f_row0_col3" class="data row0 col3" >The scope of the analysis is clear and questions can be reasonably addressed using the available data.</td>
+      <td id="T_68e0f_row0_col4" class="data row0 col4" >The scope of the analysis is less clear, the questions can somewhat be addressed using the available data with slight modifications.</td>
+      <td id="T_68e0f_row0_col5" class="data row0 col5" >The questions are beyond the scope, cannot be reasonably addressed with the available data; need to resort to additional data or complete modification.</td>
+    </tr>
+    <tr>
+      <td id="T_68e0f_row1_col0" class="data row1 col0" ></td>
+      <td id="T_68e0f_row1_col1" class="data row1 col1" >Data wrangling</td>
+      <td id="T_68e0f_row1_col2" class="data row1 col2" >Creative use of data wrangling to produce informative variables. </td>
+      <td id="T_68e0f_row1_col3" class="data row1 col3" >Appropriate use of data wrangling to create sensible variables.</td>
+      <td id="T_68e0f_row1_col4" class="data row1 col4" >Some use of data wrangling to create new variables.</td>
+      <td id="T_68e0f_row1_col5" class="data row1 col5" >No evidence of data wrangling to create any variables.</td>
+    </tr>
+    <tr>
+      <td id="T_68e0f_row2_col0" class="data row2 col0" ></td>
+      <td id="T_68e0f_row2_col1" class="data row2 col1" >Graphical display</td>
+      <td id="T_68e0f_row2_col2" class="data row2 col2" >Choice of graphs are appropriate and creative; graphs reveal useful information and tell a story. Meaningful captions and titles.</td>
+      <td id="T_68e0f_row2_col3" class="data row2 col3" >Choice of graphs are appropriate; graphs reveal useful information, but are not self-sufficient. Might require some explaining.</td>
+      <td id="T_68e0f_row2_col4" class="data row2 col4" >Choice of graphs are appropriate; graphs reveal some useful information.  Might require some explaining and minor changes to titles/axes/labels, etc.</td>
+      <td id="T_68e0f_row2_col5" class="data row2 col5" >A lack of visual aid; graphs are inappropriate, reveal no information.</td>
+    </tr>
+    <tr>
+      <td id="T_68e0f_row3_col0" class="data row3 col0" ></td>
+      <td id="T_68e0f_row3_col1" class="data row3 col1" >Statistical methods</td>
+      <td id="T_68e0f_row3_col2" class="data row3 col2" >The choice of method is appropriate; analyses are complete; diverse and creative use of more than one approach.</td>
+      <td id="T_68e0f_row3_col3" class="data row3 col3" >The choice of method is appropriate; some  non-essential analyses are missing</td>
+      <td id="T_68e0f_row3_col4" class="data row3 col4" >The choice of method is somewhat appropriate; some analyses are missing.</td>
+      <td id="T_68e0f_row3_col5" class="data row3 col5" >The choice of method is inappropriate; essential analyses are missing.</td>
+    </tr>
+    <tr>
+      <td id="T_68e0f_row4_col0" class="data row4 col0" ></td>
+      <td id="T_68e0f_row4_col1" class="data row4 col1" >Appropriate conclusion</td>
+      <td id="T_68e0f_row4_col2" class="data row4 col2" >Results are clearly and completely summarized. Appropriate limitations and concerned clearly stated.</td>
+      <td id="T_68e0f_row4_col3" class="data row4 col3" >Results are completely summarized. Some limitations and concerned are stated.</td>
+      <td id="T_68e0f_row4_col4" class="data row4 col4" >Some results are summarized. The conclusion is not appropriate and no mentioning of any limitations.</td>
+      <td id="T_68e0f_row4_col5" class="data row4 col5" >Results are not summarized and conclusion is missing.</td>
+    </tr>
+    <tr>
+      <td id="T_68e0f_row5_col0" class="data row5 col0" >Writing</td>
+      <td id="T_68e0f_row5_col1" class="data row5 col1" >Organization</td>
+      <td id="T_68e0f_row5_col2" class="data row5 col2" >Contents are very well organized under the appropriate section and subsection headings.</td>
+      <td id="T_68e0f_row5_col3" class="data row5 col3" >Contents are organized under the appropriate section and subsection headings.</td>
+      <td id="T_68e0f_row5_col4" class="data row5 col4" >Contents are somewhat organized under section and subsection headings. </td>
+      <td id="T_68e0f_row5_col5" class="data row5 col5" >Contents are poorly organized under section and subsection headings.</td>
+    </tr>
+    <tr>
+      <td id="T_68e0f_row6_col0" class="data row6 col0" ></td>
+      <td id="T_68e0f_row6_col1" class="data row6 col1" >Overall Writing</td>
+      <td id="T_68e0f_row6_col2" class="data row6 col2" >Very polished and well written.  </td>
+      <td id="T_68e0f_row6_col3" class="data row6 col3" >Few errors in spelling, punctuation, and/or grammar. Mostly clear and understandable.</td>
+      <td id="T_68e0f_row6_col4" class="data row6 col4" >Partly unclear, but mostly understandable. Several errors in spelling, punctuation, and/or grammar. </td>
+      <td id="T_68e0f_row6_col5" class="data row6 col5" >Too many errors in spelling, punctuation, and/or grammar, which make it unclear and difficult to follow. </td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+</section>
+<section id="reproducibility-of-conference-slides">
+<h3>Reproducibility of Conference Slides<a class="headerlink" href="#reproducibility-of-conference-slides" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>You will submit the Jupyter notebook that was used to produce your conference slides.</p></li>
+<li><p>Your TA will attempt to reproduce your conference slides using the Jupyter notebook (.ipynb) and data files you submit.</p></li>
+<li><p>If your TA cannot run the .ipynb file you submit to reproduce your conference slide content then you will receive 0; if the TA has to make minor changes to get it to run then you will receive 1; and if it runs with no changes then you will receive 2.</p></li>
+</ul>
+</section>
+<section id="oral-video-presentation">
+<h3>Oral Video Presentation<a class="headerlink" href="#oral-video-presentation" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>You will give a 5 minute presentation about your work.</p></li>
+<li><p>In the beginning of the video, you must clearly present your student ID along with the camera on your face. The grading TA must be able to identify you and your student ID number. <strong>Failure to present your student ID will result in a 0 grade for the video presentation.</strong>  We recommend that you update your Quercus profile with a picture where your face is clearly identifable.</p></li>
+<li><p>The presentation should show you speaking on one part of the screen and your slides on another part of the screen.</p></li>
+<li><p>The presentation should not exceed 5 minutes. Any video beyond 5 minutes will not be viewed by the grading TA, and will not be considered when marking.</p></li>
+<li><p>In the video you should describe your project’s:</p>
+<ul>
+<li><p>Introduction</p></li>
+<li><p>Data</p></li>
+<li><p>Methods</p></li>
+<li><p>Results</p></li>
+<li><p>Conclusion</p></li>
+</ul>
+</li>
+<li><p>The rubric for the oral video presentation is below.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">oralrubric</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;Oralpresrubric.csv&#39;</span><span class="p">,</span> <span class="n">keep_default_na</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">oralrubric</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">hide</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;index&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+</style>
+<table id="T_71849">
+  <thead>
+    <tr>
+      <th id="T_71849_level0_col0" class="col_heading level0 col0" >Criteria</th>
+      <th id="T_71849_level0_col1" class="col_heading level0 col1" >Excellent (Rare)</th>
+      <th id="T_71849_level0_col2" class="col_heading level0 col2" >Good (Common)</th>
+      <th id="T_71849_level0_col3" class="col_heading level0 col3" >Adequate (Common)</th>
+      <th id="T_71849_level0_col4" class="col_heading level0 col4" >Poor (Very rare)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td id="T_71849_row0_col0" class="data row0 col0" > Speech clarity</td>
+      <td id="T_71849_row0_col1" class="data row0 col1" >Words were articulated clearly and distinctly, and very easy to understand.</td>
+      <td id="T_71849_row0_col2" class="data row0 col2" >Words were articulated clearly and distinctly most of the time, easy to understand.</td>
+      <td id="T_71849_row0_col3" class="data row0 col3" >Clear attempts to enunciate, with some occasional mumbling, but still understandable. </td>
+      <td id="T_71849_row0_col4" class="data row0 col4" >A lot of word slurring or mumbling, barely understandable.</td>
+    </tr>
+    <tr>
+      <td id="T_71849_row1_col0" class="data row1 col0" >Content Clarity</td>
+      <td id="T_71849_row1_col1" class="data row1 col1" >Just the right amount of explanation and details were given, the presentation effectively achieved its points.</td>
+      <td id="T_71849_row1_col2" class="data row1 col2" >Sufficient explanation and details were given, the presentation achieved most points.</td>
+      <td id="T_71849_row1_col3" class="data row1 col3" >Some explanation, too little or too much details were given, the presentation achieved some points.</td>
+      <td id="T_71849_row1_col4" class="data row1 col4" >No explanation, insufficient or too many unnecessary details, the presentation was confusing and had no clear objectives.</td>
+    </tr>
+    <tr>
+      <td id="T_71849_row2_col0" class="data row2 col0" >Transitional Phrases</td>
+      <td id="T_71849_row2_col1" class="data row2 col1" >Effective use of words and phrases to enhance the flow and signal transitions.</td>
+      <td id="T_71849_row2_col2" class="data row2 col2" >Good use of words and phrases to control the flow and signal transitions.</td>
+      <td id="T_71849_row2_col3" class="data row2 col3" >Some use of transitional words and phrases to signal transitions.</td>
+      <td id="T_71849_row2_col4" class="data row2 col4" >Lack of transitions and a poor progression of flow.</td>
+    </tr>
+    <tr>
+      <td id="T_71849_row3_col0" class="data row3 col0" >Vocabulary</td>
+      <td id="T_71849_row3_col1" class="data row3 col1" >Accurate use of statistical terms and phrases, and the presentation was professional and polished.</td>
+      <td id="T_71849_row3_col2" class="data row3 col2" >Good use of statistical terms and phrases whenever necessary. </td>
+      <td id="T_71849_row3_col3" class="data row3 col3" >Demonstrated efforts to incorporate statistical terms and phrases, but some were used inaccurately.</td>
+      <td id="T_71849_row3_col4" class="data row3 col4" >Completely inaccurate and wrong use of statistical terms and phrases and signals a lack of understanding.</td>
+    </tr>
+    <tr>
+      <td id="T_71849_row4_col0" class="data row4 col0" >Delivery</td>
+      <td id="T_71849_row4_col1" class="data row4 col1" >Well-paced, good volume, and the presenter was confident.</td>
+      <td id="T_71849_row4_col2" class="data row4 col2" >Good pace, and the presenter seemed confident.</td>
+      <td id="T_71849_row4_col3" class="data row4 col3" >Pacing could be improved, volume was not consistent.</td>
+      <td id="T_71849_row4_col4" class="data row4 col4" >Poor pacing, barely audible.</td>
+    </tr>
+    <tr>
+      <td id="T_71849_row5_col0" class="data row5 col0" >The wow factor </td>
+      <td id="T_71849_row5_col1" class="data row5 col1" >Overall an excellent and impressive presentation.</td>
+      <td id="T_71849_row5_col2" class="data row5 col2" ></td>
+      <td id="T_71849_row5_col3" class="data row5 col3" ></td>
+      <td id="T_71849_row5_col4" class="data row5 col4" ></td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+</section>
+</section>
+<section id="data-analysis-expectations">
+<h2>Data Analysis Expectations<a class="headerlink" href="#data-analysis-expectations" title="Link to this heading">#</a></h2>
+<p>You will carry out a data analysis on data from <a class="reference external" href="https://www.ontariohealthprofiles.ca/dataTablesON.php?varTab=HPDtbl&amp;amp;select1=7">Ontario Community Health Profiles</a> using Python to address the topic below.</p>
+<p>We expect that your analysis will require data wrangling, exploratory data analysis (plots and summary statistics), statistical tests and modeling.  Your project does not need to include all of these statistical methods nor does it need to include all of the variables in the data set.  You might also choose not to include all observations, or to make new variables from the data that may be more suitable for answering your questions of interest.</p>
+<p>The goal is not to carry out an exhaustive analysis, nor to apply everything you have learned in the course.  The goal is to demonstrate that you have learned how to use Python, that you can appropriately apply the methods we have covered in class to address a question, and that you can effectively interpret and present the results.</p>
+</section>
+<section id="the-data">
+<h2>The Data<a class="headerlink" href="#the-data" title="Link to this heading">#</a></h2>
+<p>Information about data from the <a class="reference external" href="https://www.ontariohealthprofiles.ca/aboutUsON.php">About Page from the Ontario Community Health Profiles website</a>:</p>
+<blockquote>
+<div><p>“Our overall goal is to support action to reduce health inequities in Ontario.</p>
+<p>How we achieve our goal:
+Through our open-access, freely accessible website, we provide free health and socio-demographic data and maps for everyone to use, download, customize and share. Interactive functionality allows users the ability to view multiple variables on one map. A user guide provides guidance on navigation while methods documents fully describe data sources and analyses.</p>
+<p>Our strategy:</p>
+<ul class="simple">
+<li><p>Provide health profiles of Ontario communities for Ontario communities with relevant and timely information in user-friendly format;</p></li>
+<li><p>Provide technical support and mechanisms for communities to access data;</p></li>
+<li><p>Conduct a series of workshops to foster access to and use of health data for decision-making, advocacy and policy, and to stimulate collaboration;</p></li>
+<li><p>Respond to the needs of users and adapt to new ways of providing data.”</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><p>There is a wealth of information about health outcomes and socioeconomic characteristics, all summarized at the neighborhood level. These data come from a number of sources - e.g., socioeconomic data come from the Census, hospital admission data come from the Canadian Institute for Health Information, and chronic disease data come from the Institute for Clinical Evaluative Sciences.</p>
+</div></blockquote>
+<section id="what-we-give-you">
+<h3>What we give you<a class="headerlink" href="#what-we-give-you" title="Link to this heading">#</a></h3>
+<p>You are provided with a number of datasets with health and socioeconomic data at the Toronto Neighbourhood level.</p>
+<p>The health data include a dataset on adult health outcome (<code class="docutils literal notranslate"><span class="pre">AHD_2018-19_RPDB2019_neighb_Toronto.xlsx</span></code>), a dataset on preventive health care measures (<code class="docutils literal notranslate"><span class="pre">PR_2018-20_RPDB2019_neighb_TOR.xlsx</span></code>), and a dataset on emergency department visits (<code class="docutils literal notranslate"><span class="pre">EDC_2018-20_RPDB2019_neighb_All_HU_LU_TOR.xlsx</span></code>).</p>
+<p>The socioeconomic data include a dataset on income (<code class="docutils literal notranslate"><span class="pre">income_Toronto_2021_7.xlsx</span></code>), population characterstics(<code class="docutils literal notranslate"><span class="pre">population_characteristics_Toronto_2021_7.xlsx</span></code>), and a dataset on the households and dwellings characterstics (<code class="docutils literal notranslate"><span class="pre">housing_dwellings_Toronto_2021_7.xlsx</span></code>).</p>
+<p>These data sets are available in the <code class="docutils literal notranslate"><span class="pre">data</span></code> directory. To complete your project, you only <em>need</em> to “wrangle” and analyze two of the above mentioned datasets, but you are also welcome to incorporate more than two datasets and to explore spatial patterns using the tools we learned in the last few weeks of class. A spatial file of Toronto Neighbourhoods that can be joined to the previously mentioned data is available as <code class="docutils literal notranslate"><span class="pre">Neighbourhoods.geojson</span></code>.</p>
+<p>You are welcome to think about the data we have presented you and come up with your own question to answer, but a few questions are also provided below to help get you started. There are many ways you can address these questions in the data.  You will need to focus on your unique research question and make choices about what variables are important to <em>your</em> question. You do not need to consider every variable in the data set.</p>
+</section>
+</section>
+<section id="project-questions">
+<h2>Project Questions<a class="headerlink" href="#project-questions" title="Link to this heading">#</a></h2>
+<p>Below are a few example questions that can inspire your project topics. These general questions will require you to decide which data to use to answer these questions.</p>
+<ol class="arabic simple">
+<li><p>What are the relationships between sociodemographic and income variables and health outcomes? Using the dataset on emergency department visits, explore the following:</p>
+<ul class="simple">
+<li><p>Classify neighbourhoods based on their income quintiles (5 groups, 20% each), and explore the demographics (e.g., living alone, language) within each group.</p></li>
+<li><p>Repeat the above by classifying neighbourhoods as quintiles by a sociodemographic variable of your choice, and summarize income.</p></li>
+<li><p>Analzye how high urgency and low urgency emergency department visits are associated with income and  sociodemographic variables. Is there an association between income and high (or low) urgency ED visits?</p></li>
+<li><p>If they exist, discuss why these relationships do or do not make sense; and if they don’t exist what might be missing? You may need to do a little research to figure this part out. Cite your sources.</p></li>
+</ul>
+</li>
+<li><p>Do certain adult health conditions (like asthma) have similar spatial patterns? (NB: some of the methods mentioned in this question will be covered later in the course)</p>
+<ul class="simple">
+<li><p>Explore the geography of the adult asthma prevalence by mapping them using the libpysal and geopandas libraries.</p></li>
+<li><p>Use a measure of global spatial autocorrelation (for example Moran’s I) to determine if the outcomes are actually spatially clustered.</p></li>
+<li><p>Use a spatial clustering tool (e.g., the Local G or LISA statistics we covered in class) to map where hot spots and cold spots of the diseases are.</p></li>
+<li><p>Compare the patterns and state whether you think there is significant overlap. If you can do this using code, all the better :).</p></li>
+<li><p>To go one step further, use the sociodemographic data to explore whether the disease maps correspond to patterns in sociodemographic variables (of your choosing).</p></li>
+</ul>
+</li>
+<li><p>Are differences in the number of preventive procedures (e.g., mammograms, pap smears, etc.) by age group (as classified in the preventive health care measures dataset) related to different sociodemographic variables?</p>
+<ul class="simple">
+<li><p>The various preventive procedures in the dataset are broken down by various age groups (which vary some depending on the preventive procedures). Select the two procedures outlined in the dataset, and explore if older people participate in more preventive procedures than younger people.</p></li>
+<li><p>For the two procedures, calculate the differences in percent (e.g., % who had a mammogram) by age group for each neighbourhood. How different are these percentages, on average, for the procedures you picked?</p></li>
+<li><p>For each procedure, identify the neighbourhoods with the biggest absolute differences (use the top 10th percentile). How do sociodemographic variables in these neighbourhoods differ from neighbourhoods with smaller differences (aka the bottom 90th percentile)?</p></li>
+<li><p>Given what you’ve learned, discuss why you think these differences might exist. Feel free to create a map to help justify your explanation.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./project/presentation"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../proposal/GGR274_Project_Proposal.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">GGR274H1 Final Project Proposal</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="extras/GGR274DSconfslides.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Some Useful Information on creating Markdown Cells and a Slideshow</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deliverables">Deliverables</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conference-slides">Conference Slides</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#oral-presentation">Oral Presentation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#video-recording-and-submission-instructions">Video Recording and Submission Instructions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluation">Evaluation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#content-of-slides">Content of slides</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reproducibility-of-conference-slides">Reproducibility of Conference Slides</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#oral-video-presentation">Oral Video Presentation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-analysis-expectations">Data Analysis Expectations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-data">The Data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-we-give-you">What we give you</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-questions">Project Questions</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By GGR274 Instructors
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
