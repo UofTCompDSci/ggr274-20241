@@ -114,3 +114,8 @@ parts:
   #     title: Final Project Presentation Slides Template
   #   - file: project/presentation/extras/Tipsandtricksforslides.ipynb
   #     title: Additional Tips and Tricks for Creating Slides in a Jupyter Notebook
+
+  # - caption: Week 7
+  #   chapters:
+  #   - url: https://q.utoronto.ca/courses/338580/files?preview=30627394
+  #     title: Prof. Li's Slides
