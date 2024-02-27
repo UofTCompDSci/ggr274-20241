@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>GGR274 Lab 3: Introduction to Programming, Part 2 &#8212; Computation and Data Science for Social Sciences</title>
+    <title>GGR274 Lab 7: Functions &#8212; Computation and Data Science for Social Sciences</title>
   
   
   
@@ -57,12 +57,12 @@
     <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'weekly-materials/week03/lab/Lab_3_solutions';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'weekly-materials/week07/lab/Lab_7';</script>
     <link rel="icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="GGR274 Homework 3" href="../homework/Homework_3.html" />
-    <link rel="prev" title="GGR274 Lab 3: Introduction to Programming, Part 2" href="Lab_3.html" />
+    <link rel="next" title="GG274 Homework 7: Summary Statistics, Histograms and Simulation" href="../homework/Homework_7.html" />
+    <link rel="prev" title="Class 6" href="../lecture/Class7_GGR274_MM.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -202,12 +202,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../../week02/homework/Homework_2_solution.html">Homework 02 Solutions</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 3</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../lecture/Class3_GGR274_DL_IM.html">Prof. Musabirov's Notebook</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Lab_3.html">Lab 03 Notebook</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lab 03 Solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../homework/Homework_3.html">Homework 03 Notebook</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../homework/Homework_3_solution.html">Homework 03 Solutions</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../week03/lecture/Class3_GGR274_DL_IM.html">Prof. Musabirov's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week03/lab/Lab_3.html">Lab 03 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week03/lab/Lab_3_solutions.html">Lab 03 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week03/homework/Homework_3.html">Homework 03 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week03/homework/Homework_3_solution.html">Homework 03 Solutions</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 4</span></p>
 <ul class="nav bd-sidenav">
@@ -237,10 +237,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../tests/midterm-makeup/Midterm_makeup.html">Midterm (makeup) Notebook</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 7</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../week07/lecture/Class7_GGR274_MM.html">Prof. Moon's Notebook</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../week07/lab/Lab_7.html">Lab 07 Notebook</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../week07/homework/Homework_7.html">Homework 07 Notebook</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../lecture/Class7_GGR274_MM.html">Prof. Moon's Notebook</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lab 07 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../homework/Homework_7.html">Homework 07 Notebook</a></li>
 </ul>
 
     </div>
@@ -295,7 +295,7 @@
       
       
       
-      <li><a href="https://jupyter.utoronto.ca/hub/user-redirect/git-pull?repo=https%3A//github.com/UofTCompDSci/ggr274-20241&urlpath=tree/ggr274-20241/weekly-materials/week03/lab/Lab_3_solutions.ipynb&branch=main" target="_blank"
+      <li><a href="https://jupyter.utoronto.ca/hub/user-redirect/git-pull?repo=https%3A//github.com/UofTCompDSci/ggr274-20241&urlpath=tree/ggr274-20241/weekly-materials/week07/lab/Lab_7.ipynb&branch=main" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onJupyterHub"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -326,7 +326,7 @@
       
       
       
-      <li><a href="../../../_sources/weekly-materials/week03/lab/Lab_3_solutions.ipynb" target="_blank"
+      <li><a href="../../../_sources/weekly-materials/week07/lab/Lab_7.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -410,7 +410,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>GGR274 Lab 3: Introduction to Programming, Part 2</h1>
+    <h1>GGR274 Lab 7: Functions</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -420,16 +420,22 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logistics">Logistics</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-example-canadian-elections">Running example: Canadian Elections</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-file-data-open-and-readlines">Reading file data: <code class="docutils literal notranslate"><span class="pre">open</span></code> and <code class="docutils literal notranslate"><span class="pre">readlines</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-processing">Data processing</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#now-we-can-compute">Now we can compute!</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logistics">Logistics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#piloting-markus-jupyterhub-extension-optional">Piloting MarkUs JupyterHub Extension (optional)</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1-calculations">Task 1: Calculations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-2-extracting-district-names">Task 2: Extracting district names</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-3-filtering-names">Task 3: Filtering names</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lab-instructions-and-learning-objectives">Lab Instructions and Learning Objectives</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#accumulating-information-in-a-dictionary">Accumulating information in a dictionary</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1">Task 1</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#steps-to-create-simulated-means">Steps to create simulated means:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-2-store-the-simulated-means-in-a-dictionary">Task 2 - Store the simulated means in a dictionary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-3-repeat-the-steps-to-create-simulated-means-for-sample-size-1">Task 3 - Repeat the steps to create simulated means for <code class="docutils literal notranslate"><span class="pre">sample_size[1]</span></code>.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-4-store-the-simulated-means-in-a-dictionary">Task 4 - Store the simulated means in a dictionary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-5-store-the-data-in-sim-dict-in-a-pandas-dataframe-called-sim-df">Task 5 - Store the data in <code class="docutils literal notranslate"><span class="pre">sim_dict</span></code> in a <code class="docutils literal notranslate"><span class="pre">pandas</span></code> <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> called <code class="docutils literal notranslate"><span class="pre">sim_df</span></code>.</a></li>
 </ul>
             </nav>
         </div>
@@ -441,168 +447,155 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="ggr274-lab-3-introduction-to-programming-part-2">
-<h1>GGR274 Lab 3: Introduction to Programming, Part 2<a class="headerlink" href="#ggr274-lab-3-introduction-to-programming-part-2" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="ggr274-lab-7-functions">
+<h1>GGR274 Lab 7: Functions<a class="headerlink" href="#ggr274-lab-7-functions" title="Link to this heading">#</a></h1>
 <section id="logistics">
 <h2>Logistics<a class="headerlink" href="#logistics" title="Link to this heading">#</a></h2>
-<p>Like last week, our lab grade will be based on attendance and submission of a few small tasks to MarkUs during the lab session (or by 23:59 on Thursday).</p>
+<p>Like previous weeks, our lab grade will be based on attendance and submission of a few small tasks to MarkUs during the lab session (or by 23:59 on Thursday).</p>
 <p>Complete the tasks in this Jupyter notebook and submit your completed file to <a class="reference external" href="https://markus-ds.teach.cs.toronto.edu">MarkUs</a>.
 Here are the instructions for submitting to MarkUs (same as last week):</p>
 <ol class="arabic simple">
-<li><p>Download this file (<code class="docutils literal notranslate"><span class="pre">Lab_3.ipynb</span></code>) from JupyterHub. (See <a class="reference internal" href="../../../guides/jupyterhub_guide.html"><span class="std std-doc">our JupyterHub Guide</span></a> for detailed instructions.)</p></li>
-<li><p>Submit this file to MarkUs under the <strong>lab3</strong> assignment. (See <a class="reference internal" href="../../../guides/markus_guide.html"><span class="std std-doc">our MarkUs Guide</span></a> for detailed instructions.)</p></li>
+<li><p>Download this file (<code class="docutils literal notranslate"><span class="pre">Lab_7.ipynb</span></code>) from JupyterHub. (See <a class="reference internal" href="../../../guides/jupyterhub_guide.html"><span class="std std-doc">our JupyterHub Guide</span></a> for detailed instructions.)</p></li>
+<li><p>Submit this file to MarkUs under the <strong>lab7</strong> assignment. (See <a class="reference internal" href="../../../guides/markus_guide.html"><span class="std std-doc">our MarkUs Guide</span></a> for detailed instructions.)</p></li>
 </ol>
 <p>Note: there’s no autograding set up for this week’s lab, but your TA will be checking that your submitted lab file is complete as part of your “lab attendance” grade.</p>
+<section id="piloting-markus-jupyterhub-extension-optional">
+<h3>Piloting MarkUs JupyterHub Extension (optional)<a class="headerlink" href="#piloting-markus-jupyterhub-extension-optional" title="Link to this heading">#</a></h3>
+<p>Starting with this week’s lab and homework, we’re piloting a new way to submit files to MarkUs directly from JupyterHub (without needing to download them). This is <strong>optional</strong> so you can still submit your work the usual way, but if you have some time please try it out by following the instructions on the <a class="reference internal" href="../../../guides/markus_guide.html"><span class="std std-doc">MarkUs Guide</span></a>.</p>
 </section>
-<section id="running-example-canadian-elections">
-<h2>Running example: Canadian Elections<a class="headerlink" href="#running-example-canadian-elections" title="Link to this heading">#</a></h2>
-<p>Today we’ll work with a small dataset of Canada’s 338 electoral districts, sourced from <a class="reference external" href="https://www.elections.ca/content.aspx?section=res&amp;amp;dir=cir/list&amp;amp;document=index338&amp;amp;lang=e#list">Elections Canada</a> and containing the names and populations of Canada’s 338 electoral ridings.</p>
-<p>We’ve placed a copy of this dataset in the same folder as this lab notebook (you can see this in JupyterHub by going to <strong>File -&gt; Open</strong>).</p>
-<section id="reading-file-data-open-and-readlines">
-<h3>Reading file data: <code class="docutils literal notranslate"><span class="pre">open</span></code> and <code class="docutils literal notranslate"><span class="pre">readlines</span></code><a class="headerlink" href="#reading-file-data-open-and-readlines" title="Link to this heading">#</a></h3>
-<p>Now that we’ve seen the file, let’s learn how to read the file’s contents into Python.</p>
-<p>Formally, we do this in two steps:</p>
-<ol class="arabic simple">
-<li><p><strong>Open</strong> the file.</p></li>
-<li><p><strong>Read</strong> the file data into Python, line by line.</p></li>
+</section>
+<section id="lab-instructions-and-learning-objectives">
+<h2>Lab Instructions and Learning Objectives<a class="headerlink" href="#lab-instructions-and-learning-objectives" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Learn how to use Python dictionaries to store data.</p></li>
+<li><p>Learn how to use Python to create simulated means.</p></li>
+</ul>
+<section id="accumulating-information-in-a-dictionary">
+<h3>Accumulating information in a dictionary<a class="headerlink" href="#accumulating-information-in-a-dictionary" title="Link to this heading">#</a></h3>
+<p>Remember in lecture we used a for loop to add up a series of numbers? And then we used a for loop to accumulate a list of means? As it turns out, you can use the same technique to make a dictionary.</p>
+<p>Here’s how you add a key/value pair to a dictionary (this is also called “inserting”):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="p">{}</span> <span class="c1"># empty dictionary</span>
+<span class="n">d</span><span class="p">[</span><span class="s1">&#39;key1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;value1&#39;</span>
+<span class="n">d</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;key2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;value2&#39;</span>
+<span class="n">d</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;key1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;new_value&#39;</span>
+<span class="n">d</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can accumulate a new dictionary using a for loop:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ta_to_course</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Amber&#39;</span><span class="p">,</span> <span class="s1">&#39;Martin&#39;</span><span class="p">,</span> <span class="s1">&#39;Davia&#39;</span><span class="p">,</span> <span class="s1">&#39;KP&#39;</span><span class="p">,</span> <span class="s1">&#39;Ilan&#39;</span><span class="p">]:</span>
+    <span class="n">ta_to_course</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;GGR274&#39;</span>
+
+<span class="n">ta_to_course</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Matt&#39;</span><span class="p">,</span> <span class="s1">&#39;Fiona&#39;</span><span class="p">]:</span>
+    <span class="n">ta_to_course</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;EEB125&#39;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">ta_to_course</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ta_to_course</span><span class="p">[</span><span class="s1">&#39;Matt&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">time_use_data_raw</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;gss_tu2016_main_file.csv&#39;</span><span class="p">)</span>
+
+<span class="n">time_use_dur</span> <span class="o">=</span> <span class="n">time_use_data_raw</span><span class="p">[[</span><span class="s2">&quot;CASEID&quot;</span><span class="p">,</span> <span class="s2">&quot;dur44&quot;</span><span class="p">]]</span>
+
+<span class="n">time_use_dur</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="task-1">
+<h2>Task 1<a class="headerlink" href="#task-1" title="Link to this heading">#</a></h2>
+<p>Take 5 random samples from the column <code class="docutils literal notranslate"><span class="pre">dur44</span></code> with replacement, and calculate the mean of each random sample.  Set the parameter <code class="docutils literal notranslate"><span class="pre">n</span></code> in <code class="docutils literal notranslate"><span class="pre">.sample</span></code> to the first element of <code class="docutils literal notranslate"><span class="pre">sample_size</span></code>  and store the means in a list called <code class="docutils literal notranslate"><span class="pre">simulated_means10</span></code>.</p>
+<section id="steps-to-create-simulated-means">
+<h3>Steps to create simulated means:<a class="headerlink" href="#steps-to-create-simulated-means" title="Link to this heading">#</a></h3>
+<ol class="arabic simple" start="0">
+<li><p>Create a list called <code class="docutils literal notranslate"><span class="pre">sample_size</span></code> with the values 10, 20.</p></li>
+<li><p>Create an empty list called <code class="docutils literal notranslate"><span class="pre">simulated_means10</span></code></p></li>
+<li><p>Create a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop</p></li>
+<li><p>within the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop take a random sample with replacement from the <code class="docutils literal notranslate"><span class="pre">dur44</span></code> column of <code class="docutils literal notranslate"><span class="pre">time_use_dur</span></code> of size <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">=</span> <span class="pre">sample_size[0]</span></code> with <code class="docutils literal notranslate"><span class="pre">replace</span> <span class="pre">=</span> <span class="pre">True</span></code> and calculate the mean of this sample.  Store this value in <code class="docutils literal notranslate"><span class="pre">rsample</span></code></p></li>
+<li><p>append <code class="docutils literal notranslate"><span class="pre">rsample</span></code> to <code class="docutils literal notranslate"><span class="pre">simulated_means10</span></code>.</p></li>
 </ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Step 1</span>
-<span class="n">district_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;ED-Canada_2016.csv&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
-
-<span class="n">district_file</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">district_data</span> <span class="o">=</span> <span class="n">district_file</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
-
-<span class="n">district_data</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="data-processing">
-<h3>Data processing<a class="headerlink" href="#data-processing" title="Link to this heading">#</a></h3>
-<p>Let’s look at just the first line from the file:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">district_data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>There’s two annoying parts about this line:</p>
-<ol class="arabic simple">
-<li><p>It’s a single string, but really stores two pieces of data.</p></li>
-<li><p>There’s a strange <code class="docutils literal notranslate"><span class="pre">\n</span></code> at the end of the string, representing a <em>line break</em>.</p></li>
-</ol>
-<p><strong>Goal</strong>: take the list <code class="docutils literal notranslate"><span class="pre">district_data</span></code> and extract just the population counts, converting to <code class="docutils literal notranslate"><span class="pre">int</span></code>. We’ll develop this one together!</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">populations</span> <span class="o">=</span> <span class="p">[]</span>
-
-<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">district_data</span><span class="p">:</span>
-    <span class="n">entries</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
-    
-    <span class="n">population_entry</span> <span class="o">=</span> <span class="n">entries</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
-    
-    <span class="n">population_int</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">population_entry</span><span class="p">)</span>
-    
-    <span class="n">populations</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">population_int</span><span class="p">)</span>
-    
-<span class="n">populations</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="now-we-can-compute">
-<h3>Now we can compute!<a class="headerlink" href="#now-we-can-compute" title="Link to this heading">#</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_populations</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">populations</span><span class="p">)</span>
-<span class="n">total_population</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">populations</span><span class="p">)</span>
-<span class="n">max_population</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">populations</span><span class="p">)</span>
-<span class="n">min_population</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">populations</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># add your code below</span>
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 </section>
-<section id="task-1-calculations">
-<h2>Task 1: Calculations<a class="headerlink" href="#task-1-calculations" title="Link to this heading">#</a></h2>
-<p>Compute <strong>average</strong> population.
-Print total, max, min population, including relevant variable in <code class="docutils literal notranslate"><span class="pre">f-string</span></code>. An example f-string for number of entries <code class="docutils literal notranslate"><span class="pre">f&quot;Number</span> <span class="pre">of</span> <span class="pre">population</span> <span class="pre">entries:</span> <span class="pre">{num_populations}.&quot;</span></code></p>
+<section id="task-2-store-the-simulated-means-in-a-dictionary">
+<h2>Task 2 - Store the simulated means in a dictionary<a class="headerlink" href="#task-2-store-the-simulated-means-in-a-dictionary" title="Link to this heading">#</a></h2>
+<p>Create an empty dictionary called <code class="docutils literal notranslate"><span class="pre">sim_dict</span></code>.  Add the key <code class="docutils literal notranslate"><span class="pre">sample_size[0]</span></code> with values <code class="docutils literal notranslate"><span class="pre">simulated_means10</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">avg_population</span> <span class="o">=</span> <span class="n">total_population</span> <span class="o">/</span> <span class="n">num_populations</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Number of population entries: </span><span class="si">{</span><span class="n">num_populations</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Sum of populations: </span><span class="si">{</span><span class="n">total_population</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Maximum district population: </span><span class="si">{</span><span class="n">max_population</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Minimum district population: </span><span class="si">{</span><span class="n">min_population</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Average district population: </span><span class="si">{</span><span class="n">avg_population</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># add your code below</span>
 </pre></div>
 </div>
 </div>
 </div>
 </section>
-<section id="task-2-extracting-district-names">
-<h2>Task 2: Extracting district names<a class="headerlink" href="#task-2-extracting-district-names" title="Link to this heading">#</a></h2>
-<p>Next, create a empty list called <code class="docutils literal notranslate"><span class="pre">district_names</span></code>. Then, use a loop and the <code class="docutils literal notranslate"><span class="pre">str.split(&quot;,&quot;)</span></code> method to calculate just the name of each district, and add each name to <code class="docutils literal notranslate"><span class="pre">district_names</span></code>.</p>
-<p>(This again follows what we did lecture quite closely, so you might want to take a few minutes to review that.)</p>
+<section id="task-3-repeat-the-steps-to-create-simulated-means-for-sample-size-1">
+<h2>Task 3 - Repeat the steps to create simulated means for <code class="docutils literal notranslate"><span class="pre">sample_size[1]</span></code>.<a class="headerlink" href="#task-3-repeat-the-steps-to-create-simulated-means-for-sample-size-1" title="Link to this heading">#</a></h2>
+<p>Store the results in <code class="docutils literal notranslate"><span class="pre">simpulated_means20</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here</span>
-<span class="n">district_names</span> <span class="o">=</span> <span class="p">[]</span>
-
-<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">district_data</span><span class="p">:</span>
-    <span class="n">entries</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
-    <span class="n">name</span> <span class="o">=</span> <span class="n">entries</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="n">district_names</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
-
-<span class="n">district_names</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># add your code below</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p><strong>Comprehension Question</strong>: after you complete this task, try changing <code class="docutils literal notranslate"><span class="pre">str.split(&quot;,&quot;)</span></code> to <code class="docutils literal notranslate"><span class="pre">str.split()</span></code> and re-run the cell. What happens in this case, and why does this occur?</p>
 </section>
-<section id="task-3-filtering-names">
-<h2>Task 3: Filtering names<a class="headerlink" href="#task-3-filtering-names" title="Link to this heading">#</a></h2>
-<p>Compute a list of the names of electoral districts that contain the string <code class="docutils literal notranslate"><span class="pre">&quot;Toronto&quot;</span></code>.</p>
-<p>To do so, you should use a for loop that iterates over <code class="docutils literal notranslate"><span class="pre">district_names</span></code>, and whose body contains an if statement.</p>
+<section id="task-4-store-the-simulated-means-in-a-dictionary">
+<h2>Task 4 - Store the simulated means in a dictionary<a class="headerlink" href="#task-4-store-the-simulated-means-in-a-dictionary" title="Link to this heading">#</a></h2>
+<p>Add <code class="docutils literal notranslate"><span class="pre">sample_size[1]</span></code> as a key with values <code class="docutils literal notranslate"><span class="pre">simulated_means20</span></code> to <code class="docutils literal notranslate"><span class="pre">sim_dict</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Write your code here</span>
-<span class="n">toronto_names</span> <span class="o">=</span> <span class="p">[]</span>
-
-<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">district_names</span><span class="p">:</span>
-    <span class="k">if</span> <span class="s2">&quot;Toronto&quot;</span> <span class="ow">in</span> <span class="n">name</span><span class="p">:</span>
-        <span class="n">toronto_names</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
-
-<span class="n">toronto_names</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># add your code below</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>Finally, compute a list of tne names of electoral districts that are at least 30 characters long.</p>
+</section>
+<section id="task-5-store-the-data-in-sim-dict-in-a-pandas-dataframe-called-sim-df">
+<h2>Task 5 - Store the data in <code class="docutils literal notranslate"><span class="pre">sim_dict</span></code> in a <code class="docutils literal notranslate"><span class="pre">pandas</span></code> <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> called <code class="docutils literal notranslate"><span class="pre">sim_df</span></code>.<a class="headerlink" href="#task-5-store-the-data-in-sim-dict-in-a-pandas-dataframe-called-sim-df" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Write your code here</span>
-<span class="n">long_names</span> <span class="o">=</span> <span class="p">[]</span>
-
-<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">district_names</span><span class="p">:</span>
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">30</span><span class="p">:</span>
-        <span class="n">long_names</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
-
-<span class="n">long_names</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># add your code below</span>
 </pre></div>
 </div>
 </div>
@@ -623,7 +616,7 @@ Print total, max, min population, including relevant variable in <code class="do
         },
         kernelOptions: {
             name: "python3",
-            path: "./weekly-materials/week03/lab"
+            path: "./weekly-materials/week07/lab"
         },
         predefinedOutput: true
     }
@@ -641,20 +634,20 @@ Print total, max, min population, including relevant variable in <code class="do
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="Lab_3.html"
+       href="../lecture/Class7_GGR274_MM.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">GGR274 Lab 3: Introduction to Programming, Part 2</p>
+        <p class="prev-next-title">Class 6</p>
       </div>
     </a>
     <a class="right-next"
-       href="../homework/Homework_3.html"
+       href="../homework/Homework_7.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">GGR274 Homework 3</p>
+        <p class="prev-next-title">GG274 Homework 7: Summary Statistics, Histograms and Simulation</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -674,16 +667,22 @@ Print total, max, min population, including relevant variable in <code class="do
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logistics">Logistics</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-example-canadian-elections">Running example: Canadian Elections</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-file-data-open-and-readlines">Reading file data: <code class="docutils literal notranslate"><span class="pre">open</span></code> and <code class="docutils literal notranslate"><span class="pre">readlines</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-processing">Data processing</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#now-we-can-compute">Now we can compute!</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logistics">Logistics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#piloting-markus-jupyterhub-extension-optional">Piloting MarkUs JupyterHub Extension (optional)</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1-calculations">Task 1: Calculations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-2-extracting-district-names">Task 2: Extracting district names</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-3-filtering-names">Task 3: Filtering names</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lab-instructions-and-learning-objectives">Lab Instructions and Learning Objectives</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#accumulating-information-in-a-dictionary">Accumulating information in a dictionary</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1">Task 1</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#steps-to-create-simulated-means">Steps to create simulated means:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-2-store-the-simulated-means-in-a-dictionary">Task 2 - Store the simulated means in a dictionary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-3-repeat-the-steps-to-create-simulated-means-for-sample-size-1">Task 3 - Repeat the steps to create simulated means for <code class="docutils literal notranslate"><span class="pre">sample_size[1]</span></code>.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-4-store-the-simulated-means-in-a-dictionary">Task 4 - Store the simulated means in a dictionary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-5-store-the-data-in-sim-dict-in-a-pandas-dataframe-called-sim-df">Task 5 - Store the data in <code class="docutils literal notranslate"><span class="pre">sim_dict</span></code> in a <code class="docutils literal notranslate"><span class="pre">pandas</span></code> <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> called <code class="docutils literal notranslate"><span class="pre">sim_df</span></code>.</a></li>
 </ul>
   </nav></div>
 

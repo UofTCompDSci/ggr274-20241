@@ -1,0 +1,978 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>GG274 Homework 7: Summary Statistics, Histograms and Simulation &#8212; Computation and Data Science for Social Sciences</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'weekly-materials/week07/homework/Homework_7';</script>
+    <link rel="icon" href="../../../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="prev" title="GGR274 Lab 7: Functions" href="../lab/Lab_7.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../jupyter-book/index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Computation and Data Science for Social Sciences</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../jupyter-book/index.html">
+                    👋 Course Website for GGR274H1-S Winter 2024
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Quick Links</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../syllabus/ggr274_syllabus.html">Course Syllabus</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://q.utoronto.ca/courses/338580/announcements">Announcements</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://piazza.com/utoronto.ca/winter2024/ggr274h1">Piazza</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://forms.office.com/Pages/ResponsePage.aspx?id=JsKqeAMvTUuQN7RtVsVSEF-wqptfr85NieT8UyliaxxUOUtMSVFUQkFTNVdRTlVJNkZFQU84NldYUi4u">Course Feedback Form</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Resources</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../guides/jupyterhub_guide.html">JupyterHub Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../guides/markus_guide.html">MarkUs Guide</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 1</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://q.utoronto.ca/courses/338580/files?preview=29750629">Prof. Li's Slides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week01/lecture/Class1_GGR274_MM.html">Prof. Moon's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week01/lecture/Class1_GGR274_IM.html">Prof. Musabirov's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week01/lab/Lab_1.html">Lab 01 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week01/lab/Lab_1_solutions.html">Lab 01 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week01/homework/Homework_1.html">Homework 01 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week01/homework/Homework_1_solution.html">Homework 01 Solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 2</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../week02/lecture/Class2_GGR274_DL_IM.html">Prof. Musabirov's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week02/lab/Lab_2.html">Lab 02 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week02/lab/Lab_2_solutions.html">Lab 02 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week02/homework/Homework_2.html">Homework 02 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week02/homework/Homework_2_solution.html">Homework 02 Solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 3</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../week03/lecture/Class3_GGR274_DL_IM.html">Prof. Musabirov's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week03/lab/Lab_3.html">Lab 03 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week03/lab/Lab_3_solutions.html">Lab 03 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week03/homework/Homework_3.html">Homework 03 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week03/homework/Homework_3_solution.html">Homework 03 Solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 4</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://q.utoronto.ca/courses/338580/files?preview=30071956">Prof. Li's Slides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week04/lecture/Class4_GGR274_MM.html">Prof. Moon's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week04/lab/Lab_4.html">Lab 04 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week04/lab/Lab_4_solutions.html">Lab 04 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week04/homework/Homework_4.html">Homework 04 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week04/homework/marking/Homework_4_solution.html">Homework 04 Solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 5</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../week05/lecture/Class5_GGR274_MM.html">Prof. Moon's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week05/lab/Lab_5.html">Lab 05 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week05/lab/Lab_5_solutions.html">Lab 05 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week05/homework/Homework_5.html">Homework 05 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week05/homework/marking/Homework_5_solution.html">Homework 05 Solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Practice Midterm</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../practice/sample_midterm/GGR274_Midterm.html">2022 Midterm Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../practice/review_w1-3.html">Review of frequent errors and extra examples for weeks 1-3</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Midterm</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../tests/midterm/Midterm.html">Midterm Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tests/midterm-makeup/Midterm_makeup.html">Midterm (makeup) Notebook</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 7</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../lecture/Class7_GGR274_MM.html">Prof. Moon's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lab/Lab_7.html">Lab 07 Notebook</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Homework 07 Notebook</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://jupyter.utoronto.ca/hub/user-redirect/git-pull?repo=https%3A//github.com/UofTCompDSci/ggr274-20241&urlpath=tree/ggr274-20241/weekly-materials/week07/homework/Homework_7.ipynb&branch=main" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onJupyterHub"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">JupyterHub</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/weekly-materials/week07/homework/Homework_7.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>GG274 Homework 7: Summary Statistics, Histograms and Simulation</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logistics">Logistics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#piloting-markus-jupyterhub-extension-optional">Piloting MarkUs JupyterHub Extension (optional)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question">Question</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions-and-learning-objectives">Instructions and Learning Objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1-read-in-data">Task 1 - Read in data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1">Step 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2">Step 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-2-compute-and-visualize-distribution">Task 2 - Compute and Visualize Distribution</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Step 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Step 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3">Step 3</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-3-compute-the-empirical-mean">Task 3: Compute the empirical mean</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-4-set-up-a-simulation-experiment">Task 4: Set up a Simulation Experiment</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-specify-sample-sizes">Step 1 - Specify Sample Sizes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-simulating-sample-means">Step 2 - Simulating Sample Means</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-5-simulate-sample-means">Task 5 - Simulate Sample Means</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#accumulating-information-in-a-dictionary">Accumulating information in a dictionary</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-create-a-dictionary-of-simulated-means-for-each-sample-size">Step 1 - Create a dictionary of simulated means for each sample size</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-answer-this-question">Step 2 - Answer this question</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-6-plot-the-results">Task 6 - Plot the results</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-create-data-for-plotting">Step 1: Create Data for Plotting</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-plot-the-data">Step 2: Plot the data</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-7-answer-the-following-questions">Task 7 - Answer the following Questions</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="gg274-homework-7-summary-statistics-histograms-and-simulation">
+<h1>GG274 Homework 7: Summary Statistics, Histograms and Simulation<a class="headerlink" href="#gg274-homework-7-summary-statistics-histograms-and-simulation" title="Link to this heading">#</a></h1>
+<section id="logistics">
+<h2>Logistics<a class="headerlink" href="#logistics" title="Link to this heading">#</a></h2>
+<p><strong>Due date</strong>: The homework is due 23:59 on Monday, March 04.</p>
+<p>You will submit your work on <a class="reference external" href="https://markus-ds.teach.cs.toronto.edu">MarkUs</a>.
+To submit your work:</p>
+<ol class="arabic simple">
+<li><p>Download this file (<code class="docutils literal notranslate"><span class="pre">Homework_7.ipynb</span></code>) from JupyterHub. (See <a class="reference internal" href="../../../guides/jupyterhub_guide.html"><span class="std std-doc">our JupyterHub Guide</span></a> for detailed instructions.)</p></li>
+<li><p>Submit this file to MarkUs under the <strong>hw7</strong> assignment. (See <a class="reference internal" href="../../../guides/markus_guide.html"><span class="std std-doc">our MarkUs Guide</span></a> for detailed instructions.)
+All homeworks will take place in a Jupyter notebook (like this one). When you are done, you will download this notebook and submit it to MarkUs.</p></li>
+</ol>
+<section id="piloting-markus-jupyterhub-extension-optional">
+<h3>Piloting MarkUs JupyterHub Extension (optional)<a class="headerlink" href="#piloting-markus-jupyterhub-extension-optional" title="Link to this heading">#</a></h3>
+<p>Starting with this week’s lab and homework, we’re piloting a new way to submit files to MarkUs directly from JupyterHub (without needing to download them). This is <strong>optional</strong> so you can still submit your work the usual way, but if you have some time please try it out by following the instructions on the <a class="reference internal" href="../../../guides/markus_guide.html"><span class="std std-doc">MarkUs Guide</span></a>.</p>
+</section>
+</section>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<p>For this week’s homework, we’ll investigate the behaviour of sample statistics and distributions as we vary our sample size. Specifically, we’ll be investigating the mean amount of time spent cleaning by respondents. Furthermore, we will extend our analysis by studying how our sample mean estimate tends to change when we take samples of increasing sizes.</p>
+</section>
+<section id="question">
+<h2>Question<a class="headerlink" href="#question" title="Link to this heading">#</a></h2>
+<p><em>Question: How much time on average do respondents spend on indoor house cleaning?  How does our estimate of a sample mean change as we take increasingly larger samples?</em></p>
+</section>
+<section id="instructions-and-learning-objectives">
+<h2>Instructions and Learning Objectives<a class="headerlink" href="#instructions-and-learning-objectives" title="Link to this heading">#</a></h2>
+<p>In this homework, you will:</p>
+<ul class="simple">
+<li><p>Work with the Time Use dataset from lecture to investigate properties of sampling means as the sample size changes</p></li>
+<li><p>Create and modify for loops and functions to run sampling simulations</p></li>
+<li><p>Visualize data using histograms and scatter plots</p></li>
+</ul>
+</section>
+<section id="task-1-read-in-data">
+<h2>Task 1 - Read in data<a class="headerlink" href="#task-1-read-in-data" title="Link to this heading">#</a></h2>
+<p>The Data part of your notebook should read the raw data, extract a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> containing the important columns, rename the columns, and filter out missing values.</p>
+<p>You might find it helpful to name intermediate values in your algorithms. That way you can examine them to make sure they have the type you expect and that they look like what you expect. Very helpful when debugging!</p>
+</section>
+<section id="step-1">
+<h2>Step 1<a class="headerlink" href="#step-1" title="Link to this heading">#</a></h2>
+<p>Create the following pandas <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>s:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">time_use_data_raw</span></code>: the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> created by reading the <code class="docutils literal notranslate"><span class="pre">gss_tu2016_main_file.csv</span></code> file. <strong>(1 mark)</strong></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">time_use_dur</span></code>: the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> containing the following columns from <code class="docutils literal notranslate"><span class="pre">time_use_data_raw</span></code>: <code class="docutils literal notranslate"><span class="pre">'CASEID'</span></code>, <code class="docutils literal notranslate"><span class="pre">'dur18'</span></code>. <strong>(1 mark)</strong> (We test this after any changes are made to it. We do not check the initial value.)</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># add your code below</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="step-2">
+<h2>Step 2<a class="headerlink" href="#step-2" title="Link to this heading">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">time_use_dur</span></code> could use more informative column names.</p>
+<p>Replace <code class="docutils literal notranslate"><span class="pre">CASEID</span></code> and <code class="docutils literal notranslate"><span class="pre">dur18</span></code> in <code class="docutils literal notranslate"><span class="pre">time_use_dur</span></code> by</p>
+<ul class="simple">
+<li><p>creating a dictionary <code class="docutils literal notranslate"><span class="pre">new_column_names</span></code> that maps the column names from <code class="docutils literal notranslate"><span class="pre">time_use_dur</span></code> to the values <code class="docutils literal notranslate"><span class="pre">'participant_id'</span></code> and <code class="docutils literal notranslate"><span class="pre">'time_spent_cleaning'</span></code>. <strong>(1 mark)</strong></p></li>
+<li><p>create a new <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> stored in <code class="docutils literal notranslate"><span class="pre">time_use_data</span></code> that is a copy of <code class="docutils literal notranslate"><span class="pre">time_use_dur</span></code>, but with the columns renamed using <code class="docutils literal notranslate"><span class="pre">new_column_names</span></code>. <strong>(1 mark)</strong></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># add your code below</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Step 2 check that you have the correct column names</span>
+
+<span class="n">expected_columnnames</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;participant_id&#39;</span><span class="p">,</span> <span class="s1">&#39;time_spent_cleaning&#39;</span><span class="p">]</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="k">assert</span> <span class="n">expected_columnnames</span> <span class="o">==</span> <span class="nb">list</span><span class="p">(</span><span class="n">time_use_data</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Column names are correct!&#39;</span><span class="p">)</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Something is wrong, check your column names&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="task-2-compute-and-visualize-distribution">
+<h2>Task 2 - Compute and Visualize Distribution<a class="headerlink" href="#task-2-compute-and-visualize-distribution" title="Link to this heading">#</a></h2>
+<section id="id1">
+<h3>Step 1<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<p>Compute the distribution of the column <code class="docutils literal notranslate"><span class="pre">time_spent_cleaning</span></code> for respondents that spent at least some time cleaning (i.e., had a non-zero value of <code class="docutils literal notranslate"><span class="pre">time_spent_cleaning</span></code>) in <code class="docutils literal notranslate"><span class="pre">time_use_data</span></code> using the <code class="docutils literal notranslate"><span class="pre">describe</span></code> function.  To do this</p>
+<ul class="simple">
+<li><p>Create a pandas <code class="docutils literal notranslate"><span class="pre">Series</span></code> called <code class="docutils literal notranslate"><span class="pre">clean_nonzero</span></code> that only has respondents with non-zero values of <code class="docutils literal notranslate"><span class="pre">time_spent_cleaning</span></code>.</p></li>
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">describe</span></code> function to describe the distribution of <code class="docutils literal notranslate"><span class="pre">time_spent_cleaning</span></code>, and store the results in a variable called <code class="docutils literal notranslate"><span class="pre">summary_stats</span></code>.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># add your code below</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id2">
+<h3>Step 2<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<p>Visualize <code class="docutils literal notranslate"><span class="pre">clean_nonzero</span></code> column by creating a histogram using <code class="docutils literal notranslate"><span class="pre">maptplotlib</span></code> with the following parameters:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bins</span> <span class="o">=</span> <span class="mi">25</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mf">1.3</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;lightgrey&#39;</span>
+
+</pre></div>
+</div>
+<p>Label the horizontal axis (x-axis) <code class="docutils literal notranslate"><span class="pre">Time</span> <span class="pre">spent</span> <span class="pre">cleaning</span> <span class="pre">(minutes)</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Add your code below</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="step-3">
+<h3>Step 3<a class="headerlink" href="#step-3" title="Link to this heading">#</a></h3>
+<p>In a markdown cell, describe the distribution of data, pointing out features like mode (where most observations lie), skew, and potential outliers. Do our results make sense given what we know about time spent on daily cleaning?</p>
+<p>Are there any strange values? Specifically, does it make sense for people to spend 0 mins cleaning?  Briefly explain.
+<strong>(2 marks)</strong></p>
+<p><strong>Answer goes here …</strong></p>
+</section>
+</section>
+<section id="task-3-compute-the-empirical-mean">
+<h2>Task 3: Compute the empirical mean<a class="headerlink" href="#task-3-compute-the-empirical-mean" title="Link to this heading">#</a></h2>
+<p>The <strong>empirical mean</strong> as the mean of all observed data. We distinguish this from the <strong>sample mean</strong> which is the mean of a sample or portion of all data.</p>
+<p>Compute the empirical mean time spent cleaning by respondents and name it <code class="docutils literal notranslate"><span class="pre">empirical_mean_time_spent_cleaning</span></code>. <strong>(1 mark)</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># add your code below</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="task-4-set-up-a-simulation-experiment">
+<h2>Task 4: Set up a Simulation Experiment<a class="headerlink" href="#task-4-set-up-a-simulation-experiment" title="Link to this heading">#</a></h2>
+<p>You will investigate the behaviour of sample means for the following sample sizes:</p>
+<p>5, 10, 20, 50, 100, 200, 500, and 1000.</p>
+<section id="step-1-specify-sample-sizes">
+<h3>Step 1 - Specify Sample Sizes<a class="headerlink" href="#step-1-specify-sample-sizes" title="Link to this heading">#</a></h3>
+<p>Create a <code class="docutils literal notranslate"><span class="pre">list</span></code> named <code class="docutils literal notranslate"><span class="pre">sample_sizes</span></code> with the aforementioned values in the specified order. <strong>(1 mark)</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># add your code below</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="step-2-simulating-sample-means">
+<h3>Step 2 - Simulating Sample Means<a class="headerlink" href="#step-2-simulating-sample-means" title="Link to this heading">#</a></h3>
+<p>In this part, you will complete a function that creates and returns a list of the sample means of the sample draws.</p>
+<p>Name the function <code class="docutils literal notranslate"><span class="pre">simulate_sample_means</span></code>.</p>
+<p>The function will have two arguments:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">data</span></code>: a <code class="docutils literal notranslate"><span class="pre">pandas</span></code> <code class="docutils literal notranslate"><span class="pre">Series</span></code> or column of a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> that we are sampling</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">N</span></code>: an <code class="docutils literal notranslate"><span class="pre">int</span></code>, the size of the sample we draw</p></li>
+</ul>
+<p>Your function should make and return a list of 100 sample means of size <code class="docutils literal notranslate"><span class="pre">N</span></code> from <code class="docutils literal notranslate"><span class="pre">data</span></code>.</p>
+<p>Sample <em>without</em> replacement.</p>
+<p>The function will return a list, <code class="docutils literal notranslate"><span class="pre">sample_means</span></code>. The list will be of size 100, with each element in the list representing the sample <em>mean</em> from the sample of size N. <em>Hint: Initialize an empty list used to store the sample means. Inside your for loop generate a sample from the data, calculate the sample mean, and append it to your list.</em></p>
+<p>Wherever there is a commented chunk of code of the form <code class="docutils literal notranslate"><span class="pre">var_name</span> <span class="pre">=</span> <span class="pre">...</span></code>, replace the <code class="docutils literal notranslate"><span class="pre">...</span></code> with the appropriate value or expression.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Finish the function header and complete the function body.</span>
+<span class="c1"># </span>
+<span class="k">def</span> 
+
+    <span class="s1">&#39;&#39;&#39;Return a list of 100 sample means from a sample of size N from data.&#39;&#39;&#39;</span>
+    
+    
+    <span class="c1"># This next statement is for reproducability: each random number is generated</span>
+    <span class="c1"># mathematically based on the previous random number, and we can say which</span>
+    <span class="c1"># number to start with when we call sample. This allows us to have reproducability</span>
+    <span class="c1"># with &quot;random&quot; numbers and so we can autotest! Yay!</span>
+    <span class="n">seed</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="c1"># Create any variables you need here, such as the list of sample means you are</span>
+    <span class="c1"># accumulating.</span>
+
+    
+    <span class="c1"># In the next few lines, we will write a for loop to:</span>
+    <span class="c1"># - generate a sample of size N and compute sample mean.</span>
+    <span class="c1"># - append the sample mean to the list of sample means.</span>
+    <span class="c1"># repeat 100 times.</span>
+
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
+        <span class="n">seed</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1"># Don&#39;t change this line</span>
+        
+        
+        <span class="c1"># Here, write code to:</span>
+        <span class="c1"># 1) Take a sample of data, and calculate the sample mean.</span>
+        <span class="c1">#    When you call .sample, make sure you use random_state=seed as one of the</span>
+        <span class="c1">#    arguments.</span>
+        <span class="c1"># 2) Append the sample mean to the list of sample means.</span>
+        
+        
+         
+    <span class="k">return</span> <span class="err">?</span><span class="o">??</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#check your work</span>
+<span class="n">simulate_sample_means</span><span class="p">(</span><span class="n">clean_nonzero</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="task-5-simulate-sample-means">
+<h2>Task 5 - Simulate Sample Means<a class="headerlink" href="#task-5-simulate-sample-means" title="Link to this heading">#</a></h2>
+<p>In this part, you will complete a code block that computes and compiles simulated means for each sample size.</p>
+<p>For each sample size in <code class="docutils literal notranslate"><span class="pre">sample_sizes</span></code>, call function <code class="docutils literal notranslate"><span class="pre">simulate_sample_means</span></code> from the previous step to calculate 100 sample means at that sample size. You’re going to build a dictionary where each key is a sample size and each value is the corresponding list of means that <code class="docutils literal notranslate"><span class="pre">simulate_sample_means</span></code> returned.</p>
+<section id="accumulating-information-in-a-dictionary">
+<h3>Accumulating information in a dictionary<a class="headerlink" href="#accumulating-information-in-a-dictionary" title="Link to this heading">#</a></h3>
+<p>Remember in lecture we used a for loop to add up a series of numbers? And then we used a for loop to accumulate a list of means? As it turns out, you can use the same technique to make a dictionary.</p>
+<p>Here’s how you add a key/value pair to a dictionary (this is also called “inserting”):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">d</span><span class="p">[</span><span class="s1">&#39;key1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;value1&#39;</span>
+<span class="n">d</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;key2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;value2&#39;</span>
+<span class="n">d</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;key1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;new_value&#39;</span>
+<span class="n">d</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can accumulate a new dictionary using a for loop:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ta_to_course</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Amber&#39;</span><span class="p">,</span><span class="s1">&#39;Martin&#39;</span><span class="p">,</span> <span class="s1">&#39;Davia&#39;</span><span class="p">,</span> <span class="s1">&#39;KP&#39;</span><span class="p">,</span> <span class="s1">&#39;Ilan&#39;</span><span class="p">]:</span>
+    <span class="n">ta_to_course</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;GGR274&#39;</span>
+
+<span class="n">ta_to_course</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Matt&#39;</span><span class="p">,</span> <span class="s1">&#39;Fiona&#39;</span><span class="p">]:</span>
+    <span class="n">ta_to_course</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;EEB125&#39;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">ta_to_course</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ta_to_course</span><span class="p">[</span><span class="s1">&#39;Matt&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="step-1-create-a-dictionary-of-simulated-means-for-each-sample-size">
+<h3>Step 1 - Create a dictionary of simulated means for each sample size<a class="headerlink" href="#step-1-create-a-dictionary-of-simulated-means-for-each-sample-size" title="Link to this heading">#</a></h3>
+<p>As you loop through each element in <code class="docutils literal notranslate"><span class="pre">sample_sizes</span></code>, you will pass the current sample size to the function <code class="docutils literal notranslate"><span class="pre">simulate_sample_means</span></code> (specifically, the argument <code class="docutils literal notranslate"><span class="pre">N</span></code>). You will be sampling from the cleaned dataset, so make sure to pass the value of <code class="docutils literal notranslate"><span class="pre">clean_nonzero</span></code> to the <code class="docutils literal notranslate"><span class="pre">data</span></code> parameter.</p>
+<p>The result of calling <code class="docutils literal notranslate"><span class="pre">simulate_sample_means</span></code> is a list of means. Add a new key/value pair to <code class="docutils literal notranslate"><span class="pre">all_sample_means_by_sample_size</span></code>. The key is the current sample size and the value is the list of means.</p>
+<p>Finally we will be checking this in the autotester:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">all_sample_means_by_sample_size</span></code>: a dictionary mapping the sample sizes to a list of sample means of a size 100. (Because we’ll use the same random seed, we’ll get the same “random” sequence. That means that we can autotest it. Yay!) <strong>(2 marks)</strong></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fill in your code below</span>
+<span class="c1"># Start with an empty dictionary</span>
+<span class="n">all_sample_means_by_sample_size</span> <span class="o">=</span> <span class="o">...</span>
+
+<span class="c1"># # Finish the code</span>
+
+<span class="k">for</span> <span class="o">...</span> 
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="step-2-answer-this-question">
+<h2>Step 2 - Answer this question<a class="headerlink" href="#step-2-answer-this-question" title="Link to this heading">#</a></h2>
+<p>Briefly explain what the keys and values represent in the dictionary <code class="docutils literal notranslate"><span class="pre">all_sample_means_by_sample_size</span></code>.  You can obtain the keys by using the <code class="docutils literal notranslate"><span class="pre">keys</span></code> method <code class="docutils literal notranslate"><span class="pre">all_sample_means_by_sample_size.keys()</span></code>.</p>
+<blockquote>
+<div><p><strong>answer to question …</strong></p>
+</div></blockquote>
+</section>
+<section id="task-6-plot-the-results">
+<h2>Task 6 - Plot the results<a class="headerlink" href="#task-6-plot-the-results" title="Link to this heading">#</a></h2>
+<section id="step-1-create-data-for-plotting">
+<h3>Step 1: Create Data for Plotting<a class="headerlink" href="#step-1-create-data-for-plotting" title="Link to this heading">#</a></h3>
+<p>In this section you will calculate the mean of simulation.</p>
+<p>Create the following variables:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">sample_means_by_sample_size</span></code>: a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> created from the dictionary <code class="docutils literal notranslate"><span class="pre">all_sample_means_by_sample_size</span></code>. <strong>(1 mark)</strong></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mean_of_sample_means_by_sample_size</span></code>: compute the column means of <code class="docutils literal notranslate"><span class="pre">sample_means_by_sample_size</span></code>, that is the mean sample means at each sample size. <strong>(1 mark)</strong></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">diff_sample_mean_empirical_means_by_sample_size</span></code>: the difference between mean of sample means and the empirical mean at each sample size. <strong>(1 mark)</strong></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># add your code below</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="step-2-plot-the-data">
+<h3>Step 2: Plot the data<a class="headerlink" href="#step-2-plot-the-data" title="Link to this heading">#</a></h3>
+<p>In this section you will plot the results.</p>
+<p>Create a scatter plot using <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> with</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">diff_sample_mean_empirical_means_by_sample_size.index</span></code> on the horizontal axis (x-axis) and</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">diff_sample_mean_empirical_means_by_sample_size</span></code> on the vertical axis (y-axis).</p></li>
+</ul>
+<p>Label the horizontal axis with the text <code class="docutils literal notranslate"><span class="pre">Sample</span> <span class="pre">size</span></code> and the vertical axis with the text <code class="docutils literal notranslate"><span class="pre">Difference</span> <span class="pre">between</span> <span class="pre">sample</span> <span class="pre">mean</span> <span class="pre">and</span> <span class="pre">population</span> <span class="pre">mean</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># add your code below</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="task-7-answer-the-following-questions">
+<h2>Task 7 - Answer the following Questions<a class="headerlink" href="#task-7-answer-the-following-questions" title="Link to this heading">#</a></h2>
+<p>Include cells with your answers to each of these questions:</p>
+<ol class="arabic simple">
+<li><p>What is the empirical mean time spent cleaning by respondents per day (in minutes). Does this value make sense? Why or why not? Answer in one line. <strong>(1 mark)</strong></p></li>
+</ol>
+<blockquote>
+<div><p><strong>Answer goes here …</strong></p>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>Based on your final scatter plot, what trend or pattern do you notice between sample size and difference between the mean of sample means and empirical mean? Does the difference decrease or increase with sample size? Explain why this trend is seen, drawing on your understanding of randomness of sampling. <strong>(2 marks)</strong></p></li>
+</ol>
+<blockquote>
+<div><p><strong>Answer goes here …</strong></p>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p>If you were to do further analysis to study how the time spent cleaning is different for various subpopulations, which additional sociodemographic variables might you consider? Why? Write 3-5 sentences identifying 1-2 variables (e.g. age - don’t pick this!) of interest and what differences in cleaning time you might expect to find.</p></li>
+</ol>
+<blockquote>
+<div><p><strong>Answer goes here …</strong></p>
+</div></blockquote>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./weekly-materials/week07/homework"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../lab/Lab_7.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">GGR274 Lab 7: Functions</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logistics">Logistics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#piloting-markus-jupyterhub-extension-optional">Piloting MarkUs JupyterHub Extension (optional)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question">Question</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions-and-learning-objectives">Instructions and Learning Objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1-read-in-data">Task 1 - Read in data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1">Step 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2">Step 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-2-compute-and-visualize-distribution">Task 2 - Compute and Visualize Distribution</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Step 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Step 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3">Step 3</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-3-compute-the-empirical-mean">Task 3: Compute the empirical mean</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-4-set-up-a-simulation-experiment">Task 4: Set up a Simulation Experiment</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-specify-sample-sizes">Step 1 - Specify Sample Sizes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-simulating-sample-means">Step 2 - Simulating Sample Means</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-5-simulate-sample-means">Task 5 - Simulate Sample Means</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#accumulating-information-in-a-dictionary">Accumulating information in a dictionary</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-create-a-dictionary-of-simulated-means-for-each-sample-size">Step 1 - Create a dictionary of simulated means for each sample size</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-answer-this-question">Step 2 - Answer this question</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-6-plot-the-results">Task 6 - Plot the results</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-create-data-for-plotting">Step 1: Create Data for Plotting</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-plot-the-data">Step 2: Plot the data</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-7-answer-the-following-questions">Task 7 - Answer the following Questions</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By GGR274 Instructors
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

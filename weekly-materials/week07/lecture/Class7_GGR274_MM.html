@@ -1,0 +1,1881 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Class 6 &#8212; Computation and Data Science for Social Sciences</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'weekly-materials/week07/lecture/Class7_GGR274_MM';</script>
+    <link rel="icon" href="../../../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="GGR274 Lab 7: Functions" href="../lab/Lab_7.html" />
+    <link rel="prev" title="GGR274 Midterm Test" href="../../../tests/midterm-makeup/Midterm_makeup.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../jupyter-book/index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Computation and Data Science for Social Sciences</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../jupyter-book/index.html">
+                    👋 Course Website for GGR274H1-S Winter 2024
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Quick Links</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../syllabus/ggr274_syllabus.html">Course Syllabus</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://q.utoronto.ca/courses/338580/announcements">Announcements</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://piazza.com/utoronto.ca/winter2024/ggr274h1">Piazza</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://forms.office.com/Pages/ResponsePage.aspx?id=JsKqeAMvTUuQN7RtVsVSEF-wqptfr85NieT8UyliaxxUOUtMSVFUQkFTNVdRTlVJNkZFQU84NldYUi4u">Course Feedback Form</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Resources</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../guides/jupyterhub_guide.html">JupyterHub Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../guides/markus_guide.html">MarkUs Guide</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 1</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://q.utoronto.ca/courses/338580/files?preview=29750629">Prof. Li's Slides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week01/lecture/Class1_GGR274_MM.html">Prof. Moon's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week01/lecture/Class1_GGR274_IM.html">Prof. Musabirov's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week01/lab/Lab_1.html">Lab 01 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week01/lab/Lab_1_solutions.html">Lab 01 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week01/homework/Homework_1.html">Homework 01 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week01/homework/Homework_1_solution.html">Homework 01 Solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 2</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../week02/lecture/Class2_GGR274_DL_IM.html">Prof. Musabirov's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week02/lab/Lab_2.html">Lab 02 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week02/lab/Lab_2_solutions.html">Lab 02 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week02/homework/Homework_2.html">Homework 02 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week02/homework/Homework_2_solution.html">Homework 02 Solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 3</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../week03/lecture/Class3_GGR274_DL_IM.html">Prof. Musabirov's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week03/lab/Lab_3.html">Lab 03 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week03/lab/Lab_3_solutions.html">Lab 03 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week03/homework/Homework_3.html">Homework 03 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week03/homework/Homework_3_solution.html">Homework 03 Solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 4</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://q.utoronto.ca/courses/338580/files?preview=30071956">Prof. Li's Slides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week04/lecture/Class4_GGR274_MM.html">Prof. Moon's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week04/lab/Lab_4.html">Lab 04 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week04/lab/Lab_4_solutions.html">Lab 04 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week04/homework/Homework_4.html">Homework 04 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week04/homework/marking/Homework_4_solution.html">Homework 04 Solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 5</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../week05/lecture/Class5_GGR274_MM.html">Prof. Moon's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week05/lab/Lab_5.html">Lab 05 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week05/lab/Lab_5_solutions.html">Lab 05 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week05/homework/Homework_5.html">Homework 05 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week05/homework/marking/Homework_5_solution.html">Homework 05 Solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Practice Midterm</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../practice/sample_midterm/GGR274_Midterm.html">2022 Midterm Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../practice/review_w1-3.html">Review of frequent errors and extra examples for weeks 1-3</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Midterm</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../tests/midterm/Midterm.html">Midterm Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tests/midterm-makeup/Midterm_makeup.html">Midterm (makeup) Notebook</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 7</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Prof. Moon's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lab/Lab_7.html">Lab 07 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../homework/Homework_7.html">Homework 07 Notebook</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://jupyter.utoronto.ca/hub/user-redirect/git-pull?repo=https%3A//github.com/UofTCompDSci/ggr274-20241&urlpath=tree/ggr274-20241/weekly-materials/week07/lecture/Class7_GGR274_MM.ipynb&branch=main" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onJupyterHub"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">JupyterHub</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/weekly-materials/week07/lecture/Class7_GGR274_MM.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Class 6</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feb-27-2023">Feb. 27, 2023</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#so-what-s-a-function">So, what’s a function?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-function-is-a-value">A function is a value</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#platonic-solids-octahedrons-and-dodecahedrons-and-icosahdrons">Platonic solids: octahedrons and dodecahedrons and icosahdrons</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#local-variables">Local variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#values-go-in-a-value-comes-out">Values go in, a value comes out</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#when-do-you-write-a-function">When do you write a function?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#you-try-it">You try it</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iteration">Iteration</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#do-the-same-thing-to-each-item-in-a-list">Do the same thing to each item in a list</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iterate-through-a-series">Iterate through a <code class="docutils literal notranslate"><span class="pre">Series</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#an-algorithm-for-summing-a-series-or-list-of-numbers">An algorithm for Summing a Series or list of numbers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iterating-a-constant-amount-of-times">Iterating a constant amount of times</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#roll-a-die">Roll a die</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question">Question</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#empirical-distributions">Empirical Distributions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#toss-a-die-ten-times">Toss a die ten times</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-values-of-the-die-should-we-expect">What values of the die should we expect?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-in-matplotlib">Plotting in matplotlib</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probability">Probability</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-law-of-averages">The Law of Averages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive-exploration-of-simulating-a-die-roll">Interactive exploration of simulating a die roll</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions">Questions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sampling-from-a-population">Sampling from a Population</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#empirical-distribution-of-the-sample">Empirical Distribution of the Sample</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive-exploration-of-empirical-distribution-of-a-sample">Interactive exploration of empirical distribution of a sample</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Questions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#empirical-distribution-of-a-statistic">Empirical Distribution of a Statistic</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#statistical-parameter">Statistical Parameter</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#statistic">Statistic</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simulating-a-statistic">Simulating a Statistic</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Empirical Distribution of a Statistic</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-can-we-learn-from-simulation">What can we learn from simulation?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#review-of-today-s-class">Review of today’s class</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="class-6">
+<h1>Class 6<a class="headerlink" href="#class-6" title="Link to this heading">#</a></h1>
+<section id="feb-27-2023">
+<h2>Feb. 27, 2023<a class="headerlink" href="#feb-27-2023" title="Link to this heading">#</a></h2>
+<p>By the end of this class you should be able to:</p>
+<ul class="simple">
+<li><p>understand how to write a function in Python;</p></li>
+<li><p>understand the role of empirical distributions (sample and statistic) and simulation; and</p></li>
+<li><p>understand the law of averages and it’s relationship to empirical distributions.</p></li>
+</ul>
+</section>
+<section id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>We’ve seen many functions: <code class="docutils literal notranslate"><span class="pre">sum()</span></code>, <code class="docutils literal notranslate"><span class="pre">max()</span></code>, <code class="docutils literal notranslate"><span class="pre">groupby()</span></code>, and so on. We’re going to explore how to create our own functions.</p></li>
+<li><p>We’re going to use Python’s <code class="docutils literal notranslate"><span class="pre">random</span></code> module, and in particular function <code class="docutils literal notranslate"><span class="pre">randint()</span></code>.</p></li>
+<li><p>Later in the lecture, we’re going to do it another way entirely.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<span class="n">help</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on method randint in module random:
+
+randint(a, b) method of random.Random instance
+    Return random integer in range [a, b], including both end points.
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here we call function <code class="docutils literal notranslate"><span class="pre">randint()</span></code>, asking for a number in the range <code class="docutils literal notranslate"><span class="pre">1</span></code> to <code class="docutils literal notranslate"><span class="pre">6</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="so-what-s-a-function">
+<h2>So, what’s a function?<a class="headerlink" href="#so-what-s-a-function" title="Link to this heading">#</a></h2>
+<p>Here is our first function definition. It has three parts:</p>
+<ol class="arabic simple">
+<li><p>Function header</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">&lt;function</span> <span class="pre">name&gt;():</span></code>.</p></li>
+</ul>
+</li>
+<li><p>Documentation string — “docstring” for short. (This is sometimes omitted.)</p></li>
+<li><p>Function body</p>
+<ul class="simple">
+<li><p>A sequence of Python statements that perform a computation.</p></li>
+<li><p>If it ends with <code class="docutils literal notranslate"><span class="pre">return</span></code>, that announces the value of the function call.</p></li>
+</ul>
+</li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">roll_die</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Simulate a die roll by returning a number between 1 and 6.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">roll</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">roll</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s call it:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">roll_die</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">roll_die</span></code> is a variable. So … what is its value?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">roll_die</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;function __main__.roll_die()&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">roll_die</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on function roll_die in module __main__:
+
+roll_die()
+    Simulate a die roll by returning a number between 1 and 6.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">dir</span><span class="p">(</span><span class="n">roll_die</span><span class="p">))</span> <span class="c1"># print out all the properties and methods of roll_die</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;__annotations__&#39;, &#39;__builtins__&#39;, &#39;__call__&#39;, &#39;__class__&#39;, &#39;__closure__&#39;, &#39;__code__&#39;, &#39;__defaults__&#39;, &#39;__delattr__&#39;, &#39;__dict__&#39;, &#39;__dir__&#39;, &#39;__doc__&#39;, &#39;__eq__&#39;, &#39;__format__&#39;, &#39;__ge__&#39;, &#39;__get__&#39;, &#39;__getattribute__&#39;, &#39;__globals__&#39;, &#39;__gt__&#39;, &#39;__hash__&#39;, &#39;__init__&#39;, &#39;__init_subclass__&#39;, &#39;__kwdefaults__&#39;, &#39;__le__&#39;, &#39;__lt__&#39;, &#39;__module__&#39;, &#39;__name__&#39;, &#39;__ne__&#39;, &#39;__new__&#39;, &#39;__qualname__&#39;, &#39;__reduce__&#39;, &#39;__reduce_ex__&#39;, &#39;__repr__&#39;, &#39;__setattr__&#39;, &#39;__sizeof__&#39;, &#39;__str__&#39;, &#39;__subclasshook__&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">roll_die</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Simulate a die roll by returning a number between 1 and 6.
+    
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">roll_die</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>roll_die
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="a-function-is-a-value">
+<h2>A function is a value<a class="headerlink" href="#a-function-is-a-value" title="Link to this heading">#</a></h2>
+<p>A function is a value, so can we make an alias for <code class="docutils literal notranslate"><span class="pre">roll_die</span></code>?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">waffles</span> <span class="o">=</span> <span class="n">roll_die</span>
+<span class="n">waffles</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">waffles</span><span class="o">.</span><span class="vm">__name__</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;roll_die&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="platonic-solids-octahedrons-and-dodecahedrons-and-icosahdrons">
+<h2>Platonic solids: octahedrons and dodecahedrons and icosahdrons<a class="headerlink" href="#platonic-solids-octahedrons-and-dodecahedrons-and-icosahdrons" title="Link to this heading">#</a></h2>
+<p>Fun reading: <a class="reference external" href="https://skullsinthestars.com/2017/03/09/the-geometry-of-weird-shaped-dice/">The geometry of weird-shaped dice</a>.</p>
+<p><img alt="dice.jpg" src="https://skullsinthestars.files.wordpress.com/2017/03/platonicsolids.jpg?w=457&amp;h=343" /></p>
+<ul class="simple">
+<li><p>Often, we want to ask a function to calculate some information for us based on data we give it.</p></li>
+<li><p>Below is a function that allows us to simulate any shape of dice.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">roll_die</span><span class="p">(</span><span class="n">num_sides</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Simulate a die roll by returning a number between 1 and num_sides.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">roll</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">num_sides</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">roll</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">roll_die</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>18
+</pre></div>
+</div>
+</div>
+</div>
+<p>In this function call, we’re passing <code class="docutils literal notranslate"><span class="pre">20</span></code> in, and <code class="docutils literal notranslate"><span class="pre">num_sides</span></code> is a <em>temporary</em> name for that value.</p>
+</section>
+<section id="local-variables">
+<h2>Local variables<a class="headerlink" href="#local-variables" title="Link to this heading">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">num_sides</span></code> and <code class="docutils literal notranslate"><span class="pre">roll</span></code> are <em>local</em> to the function. They only exist while the function is being called.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">num_sides</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">23</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">print</span><span class="p">(</span><span class="n">num_sides</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;num_sides&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<p>The only place you can use <code class="docutils literal notranslate"><span class="pre">print(num_sides)</span></code> is in the function body for <code class="docutils literal notranslate"><span class="pre">roll_die</span></code>.</p>
+</section>
+<section id="values-go-in-a-value-comes-out">
+<h2>Values go in, a value comes out<a class="headerlink" href="#values-go-in-a-value-comes-out" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>When we <strong>call</strong> a function, the arguments need to be evaluated before we can do the function call.</p></li>
+<li><p>When a function <strong>returns</strong>, the return value is used as the value of the function call.</p></li>
+</ul>
+</section>
+<section id="when-do-you-write-a-function">
+<h2>When do you write a function?<a class="headerlink" href="#when-do-you-write-a-function" title="Link to this heading">#</a></h2>
+<p>If you find yourself copying and pasting code, it’s time to write a function that does the same thing.</p>
+<p>If you think of a good domain-specific name for a computation or simulation you’re doing, make a function so the rest of your code is more readable.</p>
+</section>
+<section id="you-try-it">
+<h2>You try it<a class="headerlink" href="#you-try-it" title="Link to this heading">#</a></h2>
+<p>Write a function that takes in the number of minutes and returns the equivalent number of hours.</p>
+<ol class="arabic simple">
+<li><p>What’s a good name for the function? It helps to think of a short verb phrase, because the function does something.</p></li>
+<li><p>There are 60 minutes in an hour, so divide the number of minutes by 60 to get the equivalent number of hours.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now call it and check whether you get the right answer:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Call your function here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="iteration">
+<h2>Iteration<a class="headerlink" href="#iteration" title="Link to this heading">#</a></h2>
+<section id="do-the-same-thing-to-each-item-in-a-list">
+<h3>Do the same thing to each item in a list<a class="headerlink" href="#do-the-same-thing-to-each-item-in-a-list" title="Link to this heading">#</a></h3>
+<p>Python lets you step through a list one item at a time using a for loop:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">minutes</span> <span class="o">=</span> <span class="p">[</span><span class="mi">60</span><span class="p">,</span> <span class="mi">58</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">93</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">minute</span> <span class="ow">in</span> <span class="n">minutes</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">minute</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Each <em>iteration</em> of the loop makes <code class="docutils literal notranslate"><span class="pre">minute</span></code> the name of the next number, in order from left to right.</p>
+<p>This works with any iterable, like <code class="docutils literal notranslate"><span class="pre">str</span></code> and <code class="docutils literal notranslate"><span class="pre">Series</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="s1">&#39;GGR274&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="iterate-through-a-series">
+<h2>Iterate through a <code class="docutils literal notranslate"><span class="pre">Series</span></code><a class="headerlink" href="#iterate-through-a-series" title="Link to this heading">#</a></h2>
+<p>Here’s a <code class="docutils literal notranslate"><span class="pre">Series</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">timeuse</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;gss_tu2016_main_file.csv&#39;</span><span class="p">)</span>
+
+<span class="n">persdur</span> <span class="o">=</span> <span class="n">timeuse</span><span class="p">[</span><span class="s1">&#39;persdur&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/0j/ybsv4ncn5w50v40vdh5jjlww0000gn/T/ipykernel_97266/4210486247.py:1: DeprecationWarning: 
+Pyarrow will become a required dependency of pandas in the next major release of pandas (pandas 3.0),
+(to allow more performant data types, such as the Arrow string type, and better interoperability with other libraries)
+but was not found to be installed on your system.
+If this would cause problems for you,
+please provide us feedback at https://github.com/pandas-dev/pandas/issues/54466
+        
+  import pandas as pd
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p><strong>Goal:</strong> calculate the sum of the numbers using a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop (rather than calling <code class="docutils literal notranslate"><span class="pre">sum</span></code>).</p></li>
+<li><p>Once we have this basic structure, we can start to get fancy with it.</p></li>
+<li><p>We’ll start with keeping a running total. What’s in <code class="docutils literal notranslate"><span class="pre">Series</span></code> <code class="docutils literal notranslate"><span class="pre">persdur</span></code>?</p></li>
+</ul>
+<p>We can access values of <code class="docutils literal notranslate"><span class="pre">persdur</span></code> by indexing with <code class="docutils literal notranslate"><span class="pre">[]</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">persdur</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    30
+1    30
+2    30
+3    75
+4    15
+Name: persdur, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">running_sum</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># this will be a variable for storing a running total</span>
+<span class="n">persdur</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># the first value</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>30
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">running_sum</span> <span class="o">=</span> <span class="n">running_sum</span> <span class="o">+</span> <span class="n">persdur</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># add first value in series to running_sum</span>
+<span class="n">running_sum</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>30
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># add second value in series to running_sum</span>
+<span class="c1"># running_sum is now first value plus second value of persdur</span>
+
+<span class="n">running_sum</span> <span class="o">=</span> <span class="n">running_sum</span> <span class="o">+</span> <span class="n">persdur</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> 
+<span class="n">running_sum</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>60
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># add third value in series to running_sum</span>
+<span class="c1"># running_sum is now first plus second plus third values of persdur</span>
+
+<span class="n">running_sum</span> <span class="o">=</span> <span class="n">running_sum</span> <span class="o">+</span> <span class="n">persdur</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">running_sum</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>90
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># add fourth value in series to running_sum</span>
+<span class="c1"># running_sum is now first plus second plus third values </span>
+<span class="c1"># plus fourth values of persdur</span>
+
+<span class="n">running_sum</span> <span class="o">=</span> <span class="n">running_sum</span> <span class="o">+</span> <span class="n">persdur</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">running_sum</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>165
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># add fifth value in series to running_sum</span>
+<span class="c1"># running_sum is now first plus second plus third values </span>
+<span class="c1"># plus fourth plus fifth values of persdur</span>
+
+<span class="n">running_sum</span> <span class="o">=</span> <span class="n">running_sum</span> <span class="o">+</span> <span class="n">persdur</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+<span class="n">running_sum</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>180
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="an-algorithm-for-summing-a-series-or-list-of-numbers">
+<h2>An algorithm for Summing a Series or list of numbers<a class="headerlink" href="#an-algorithm-for-summing-a-series-or-list-of-numbers" title="Link to this heading">#</a></h2>
+<p>Step 1. Store a running total of the values that have been processed by the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop.</p>
+<p>Step 2. Start the running total at 0.</p>
+<p>Step 3. Each iteration adds the current value to the running total.</p>
+<p>Step 4. Return the running total.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">running_sum</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">pdur</span> <span class="ow">in</span> <span class="n">persdur</span><span class="p">:</span>
+    <span class="n">running_sum</span> <span class="o">=</span> <span class="n">running_sum</span> <span class="o">+</span> <span class="n">pdur</span>
+
+<span class="n">running_sum</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Create a function for summing a list or <code class="docutils literal notranslate"><span class="pre">Series</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sum_number</span><span class="p">(</span><span class="n">numbers</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;Sum a list or pandas Series:</span>
+<span class="sd">       numbers: list, Series, or column of a DataFrame</span>
+<span class="sd">    </span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">running_sum</span> <span class="o">=</span> <span class="mi">0</span>
+    
+    <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
+        <span class="n">running_sum</span> <span class="o">=</span> <span class="n">running_sum</span> <span class="o">+</span> <span class="n">num</span>
+        
+    <span class="k">return</span> <span class="n">running_sum</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">sum_number</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
+
+<span class="n">sum_number</span><span class="p">(</span><span class="n">persdur</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sum a list or pandas Series:
+       numbers: list, Series, or column of a DataFrame
+    
+    
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>831829
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="iterating-a-constant-amount-of-times">
+<h2>Iterating a constant amount of times<a class="headerlink" href="#iterating-a-constant-amount-of-times" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Sometimes we want to repeat something an exact number of times rather than once for each item in a list.</p></li>
+<li><p>To do this, The Python function <code class="docutils literal notranslate"><span class="pre">range</span></code> generates a sequence of numbers that is <em>iterable</em>, so we can use it in a for loop.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+1
+2
+3
+4
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">range(stopnumber)</span></code> returns a sequence of numbers starting from 0 to <code class="docutils literal notranslate"><span class="pre">stopnumber-1</span></code> increasing by <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+2
+3
+4
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">range(startnumber,</span> <span class="pre">stopnumber)</span></code> returns a sequence of numbers starting from <code class="docutils literal notranslate"><span class="pre">startnumber</span></code> to <code class="docutils literal notranslate"><span class="pre">stopnumber-1</span></code> increasing by <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
+</section>
+<section id="roll-a-die">
+<h2>Roll a die<a class="headerlink" href="#roll-a-die" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>This example will put all the concepts together.</p></li>
+<li><p>Let’s create a function that rolls a die with an arbitrary number of sides an arbitrary number of times.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rolladie</span><span class="p">(</span><span class="n">numrolls</span><span class="p">,</span> <span class="n">numsides</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;Roll a die with an arbitrary number of sides an arbitrary number of times.</span>
+<span class="sd">       returns the total of all roll values.</span>
+<span class="sd">       numrolls: number of die rolls</span>
+<span class="sd">       numsides: number of sides of the die</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">diesum</span> <span class="o">=</span> <span class="mi">0</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;You are rolling a </span><span class="si">{</span><span class="n">numsides</span><span class="si">}</span><span class="s1">-sided die </span><span class="si">{</span><span class="n">numrolls</span><span class="si">}</span><span class="s1"> times!  Good luck.</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">numrolls</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;This is roll number: </span><span class="si">{</span><span class="n">_</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="n">rollvalue</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">numsides</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Value of die on this roll is: </span><span class="si">{</span><span class="n">rollvalue</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="n">diesum</span> <span class="o">=</span> <span class="n">rollvalue</span> <span class="o">+</span> <span class="n">diesum</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Running total so far is: </span><span class="si">{</span><span class="n">diesum</span><span class="si">}</span><span class="s1"> </span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">diesum</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rolladie</span><span class="p">(</span><span class="n">numsides</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span> <span class="n">numrolls</span> <span class="o">=</span> <span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>You are rolling a 6-sided die 5 times!  Good luck.
+
+This is roll number: 1
+Value of die on this roll is: 5
+Running total so far is: 5 
+
+This is roll number: 2
+Value of die on this roll is: 1
+Running total so far is: 6 
+
+This is roll number: 3
+Value of die on this roll is: 5
+Running total so far is: 11 
+
+This is roll number: 4
+Value of die on this roll is: 6
+Running total so far is: 17 
+
+This is roll number: 5
+Value of die on this roll is: 4
+Running total so far is: 21 
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>21
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="question">
+<h2>Question<a class="headerlink" href="#question" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Explain what each line of <code class="docutils literal notranslate"><span class="pre">rolladie</span></code> does.</p></li>
+</ul>
+</section>
+<section id="empirical-distributions">
+<h2>Empirical Distributions<a class="headerlink" href="#empirical-distributions" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>In data science, the word “empirical” means “observed”.</p></li>
+<li><p>Empirical distributions are distributions of observed data, such as data in the time use survey.</p></li>
+<li><p>We can simulate data and see what the empirical distribution looks like.</p></li>
+</ul>
+</section>
+<section id="toss-a-die-ten-times">
+<h2>Toss a die ten times<a class="headerlink" href="#toss-a-die-ten-times" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Our setting is a simple experiment: rolling a die multiple times and keeping track of which face appears. The table <code class="docutils literal notranslate"><span class="pre">die</span></code> contains the numbers of spots on the faces of a die. All the numbers appear exactly once, as we are assuming that the die is fair.</p></li>
+</ul>
+<ul class="simple">
+<li><p>We will use the <code class="docutils literal notranslate"><span class="pre">numpy</span></code> library to create a <em>simulated</em> six sided die.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">arange()</span></code> function returns evenly spaced values within an interval.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">die_sides</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">start</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">stop</span> <span class="o">=</span> <span class="mi">7</span><span class="p">,</span> <span class="n">step</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">die_sides</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1, 2, 3, 4, 5, 6])
+</pre></div>
+</div>
+</div>
+</div>
+<p>NB: this returns a <code class="docutils literal notranslate"><span class="pre">numpy</span></code> array which is a different python object. It is also iterable.</p>
+<p>Alternatively, we could have used the <code class="docutils literal notranslate"><span class="pre">array()</span></code> function in <code class="docutils literal notranslate"><span class="pre">numpy</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now, we can create a <code class="docutils literal notranslate"><span class="pre">pandas</span></code> <code class="docutils literal notranslate"><span class="pre">Series</span></code> with <code class="docutils literal notranslate"><span class="pre">die_sides</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">die</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">die_sides</span><span class="p">)</span>
+<span class="n">die</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    1
+1    2
+2    3
+3    4
+4    5
+5    6
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Now, we can use the <code class="docutils literal notranslate"><span class="pre">pandas</span></code> <code class="docutils literal notranslate"><span class="pre">sample()</span></code> function to take a random <em>sample</em> of <code class="docutils literal notranslate"><span class="pre">die</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replace</span> <span class="pre">=</span> <span class="pre">False</span></code> means that values that are already selected cannot be selected again.  This is the default for this parameter.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">die</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">n</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">replace</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1    2
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">die.sample(n</span> <span class="pre">=</span> <span class="pre">1,</span> <span class="pre">replace</span> <span class="pre">=</span> <span class="pre">False)</span></code> is a <strong>simulation</strong> of tossing a six-sided die once.</p></li>
+<li><p>How can we toss the die, say, 10 times?</p></li>
+<li><p>Change <code class="docutils literal notranslate"><span class="pre">n</span></code> to 10 and the <code class="docutils literal notranslate"><span class="pre">replace</span></code> parameter in <code class="docutils literal notranslate"><span class="pre">sample()</span></code> to <code class="docutils literal notranslate"><span class="pre">True</span></code>, so that we sample <code class="docutils literal notranslate"><span class="pre">die</span></code> with replacement.  In other words, we allow the scenario of rolling, say, a value of 1, then on the next roll we can allow a roll of 1.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># using pandas sample function</span>
+
+<span class="n">roll_10</span> <span class="o">=</span> <span class="n">die</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">n</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">replace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">roll_10</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2    3
+2    3
+2    3
+3    4
+0    1
+2    3
+3    4
+1    2
+4    5
+3    4
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># using base python random.choice</span>
+<span class="c1"># use builtin pandas functions instead</span>
+<span class="c1"># of base python since we will be working in </span>
+<span class="c1"># pandas most of the time</span>
+
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">roll</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">die</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">roll</span><span class="p">)</span>
+    
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+6
+2
+1
+3
+5
+5
+1
+5
+3
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">np.arange(start</span> <span class="pre">=</span> <span class="pre">0.5,</span> <span class="pre">stop</span> <span class="pre">=</span> <span class="pre">6.6,</span> <span class="pre">step</span> <span class="pre">=</span> <span class="pre">1)</span></code> will create a <code class="docutils literal notranslate"><span class="pre">numpy</span></code> array with elements 0.5, 0.5 + 1, 0.5 + 1 + 1, 0.5 + 1 + 1 + 1, etc. that will use to create the histogram bins.</p>
+</section>
+<section id="what-values-of-the-die-should-we-expect">
+<h2>What values of the die should we expect?<a class="headerlink" href="#what-values-of-the-die-should-we-expect" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>If the die is fair then we would expect each side of the die (1 through 6) to have an equal chance (1/6) of appearing.</p></li>
+<li><p>So, in 10 rolls of the die we would expect each side to appear approximately 10/6 (~ 2) times.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">die_bins</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">start</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">stop</span> <span class="o">=</span> <span class="mf">6.6</span><span class="p">,</span> <span class="n">step</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">roll_10</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span> <span class="o">=</span> <span class="n">die_bins</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;grey&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: ylabel=&#39;Frequency&#39;&gt;
+</pre></div>
+</div>
+<img alt="../../../_images/b228f6ccd96a5dd8762aef3376e2870d19c5c18bb31f3fe0b3dec309360e034e.png" src="../../../_images/b228f6ccd96a5dd8762aef3376e2870d19c5c18bb31f3fe0b3dec309360e034e.png" />
+</div>
+</div>
+<ul class="simple">
+<li><p>The histogram above is called the <strong>Empirical Distribution</strong> of 10 rolls of a fair die.</p></li>
+<li><p>What happens if the die is rolled 10,000 times?</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">roll_10000</span> <span class="o">=</span> <span class="n">die</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">n</span> <span class="o">=</span> <span class="mi">10000</span><span class="p">,</span> <span class="n">replace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">roll_10000</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span> <span class="o">=</span> <span class="n">die_bins</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;grey&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: ylabel=&#39;Frequency&#39;&gt;
+</pre></div>
+</div>
+<img alt="../../../_images/42d4403bbee132668c35e826dbf12a77ade0920e2389b924d7b0c26eee4a07ed.png" src="../../../_images/42d4403bbee132668c35e826dbf12a77ade0920e2389b924d7b0c26eee4a07ed.png" />
+</div>
+</div>
+</section>
+<section id="plotting-in-matplotlib">
+<h2>Plotting in matplotlib<a class="headerlink" href="#plotting-in-matplotlib" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>We can create the histogram using <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot()</span></code> directly (<code class="docutils literal notranslate"><span class="pre">pandas</span></code> plotting functions use this library).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot()</span></code> gives us greater flexibility in the types of plots we can create.</p></li>
+<li><p>the syntax is similar to <code class="docutils literal notranslate"><span class="pre">pandas.DataFrame.plot.hist()</span></code></p></li>
+<li><p>If the widths of the histogram bins are 1 then the setting the parameter <code class="docutils literal notranslate"><span class="pre">density</span> <span class="pre">=</span> <span class="pre">True</span></code> will display values on the vertical axis of the that correspond to the probability of a value falling into a bin. NB: if the width of the bins is not equal to 1 then <code class="docutils literal notranslate"><span class="pre">density</span> <span class="pre">=</span> <span class="pre">True</span></code> will not produce probabilities on the vertical axis.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ylabel()</span></code> and <code class="docutils literal notranslate"><span class="pre">xlabel()</span></code> allow us to label the vertical and horizontal axes.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">roll_10000</span><span class="p">,</span> <span class="n">bins</span> <span class="o">=</span> <span class="n">die_bins</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;grey&#39;</span><span class="p">,</span> <span class="n">density</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Proportion&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Die value&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0, &#39;Die value&#39;)
+</pre></div>
+</div>
+<img alt="../../../_images/0d1c0a800e58668109f68af893253ea06c3f5a06ed5dbc2608d16b1b672dc7cf.png" src="../../../_images/0d1c0a800e58668109f68af893253ea06c3f5a06ed5dbc2608d16b1b672dc7cf.png" />
+</div>
+</div>
+</section>
+<section id="probability">
+<h2>Probability<a class="headerlink" href="#probability" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Since the widths of the histogram bins are 1 the values on the vertical axis of the histogram are probabilities.</p></li>
+<li><p>The probability of rolling a 1, 2, 3, 4, 5, or 6 in 10,000 rolls of a six-sided fair die is approximately 0.17 (= 1/6).</p></li>
+<li><p>The observed probabilities can be directly calculated using <code class="docutils literal notranslate"><span class="pre">value_counts()</span></code> then dividing by the number of die rolls (or in general the number of simulations).</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">roll_10000</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">roll_10000</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3    0.1708
+2    0.1705
+6    0.1700
+1    0.1659
+5    0.1627
+4    0.1601
+Name: count, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p>As we increase the number of rolls in the simulation, the area of each bar gets closer to 16.67%, which is the area of each bar in the probability histogram.</p>
+</section>
+<section id="the-law-of-averages">
+<h2>The Law of Averages<a class="headerlink" href="#the-law-of-averages" title="Link to this heading">#</a></h2>
+<p>What we have observed above is an instance of a general rule called the <em>law of averages</em>:</p>
+<p>If a chance experiment is repeated independently and under identical conditions, then, in the long run, the proportion of times that an event occurs gets closer and closer to the theoretical probability of the event.</p>
+<p>For example, in the long run, the proportion of times the face with four spots appears gets closer and closer to 1/6.</p>
+<p>Here “independently and under identical conditions” means that every repetition is performed in the same way regardless of the results of all the other repetitions.</p>
+<p>Under these conditions, the law above implies that if the chance experiment is repeated a large number of times then the proportion of times that an event occurs is very likely to be close to the theoretical probability of the event.</p>
+<p>The function <code class="docutils literal notranslate"><span class="pre">rolldie()</span></code> has one argument <code class="docutils literal notranslate"><span class="pre">numrolls</span></code> that represents the number of times a die is rolled.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rolldie</span><span class="p">(</span><span class="n">numrolls</span><span class="p">):</span>
+    <span class="n">die_results</span> <span class="o">=</span> <span class="n">die</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">n</span> <span class="o">=</span> <span class="n">numrolls</span><span class="p">,</span> <span class="n">replace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">die_results</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>The function <code class="docutils literal notranslate"><span class="pre">empirical_hist()</span></code> has one argument <code class="docutils literal notranslate"><span class="pre">obsdievals</span></code> that represents the observed values of rolling a single-sided die.</p></li>
+<li><p>The function produces the quantitative distribution of a die, and a histogram.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">empirical_hist</span><span class="p">(</span><span class="n">obsdievals</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">obsdievals</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">obsdievals</span><span class="p">))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">obsdievals</span><span class="p">,</span> <span class="n">bins</span> <span class="o">=</span> <span class="n">die_bins</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;grey&#39;</span><span class="p">,</span> <span class="n">density</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Proportion&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Die value&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>The parameter value for <code class="docutils literal notranslate"><span class="pre">empirical_hist()</span></code> can be obtained by using the function <code class="docutils literal notranslate"><span class="pre">rolldie</span></code> above.</p></li>
+<li><p>This can be used directly as the parameter value for <code class="docutils literal notranslate"><span class="pre">empirical_hist()</span></code>.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># this is a long version of the code below</span>
+<span class="c1"># rollvalues = rolldie(10)</span>
+<span class="c1"># empirical_hist(rollvalues)</span>
+
+<span class="n">empirical_hist</span><span class="p">(</span><span class="n">rolldie</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4    0.4
+3    0.2
+5    0.1
+1    0.1
+2    0.1
+6    0.1
+Name: count, dtype: float64
+</pre></div>
+</div>
+<img alt="../../../_images/d158b4dbadda5ab6970a0d778dcff33cd0d68645f06b0033cd14f4755a249455.png" src="../../../_images/d158b4dbadda5ab6970a0d778dcff33cd0d68645f06b0033cd14f4755a249455.png" />
+</div>
+</div>
+</section>
+<section id="interactive-exploration-of-simulating-a-die-roll">
+<h2>Interactive exploration of simulating a die roll<a class="headerlink" href="#interactive-exploration-of-simulating-a-die-roll" title="Link to this heading">#</a></h2>
+<p>We can use the <code class="docutils literal notranslate"><span class="pre">interact()</span></code> function from <code class="docutils literal notranslate"><span class="pre">ipywidgets</span></code> library to interact directly with distribution.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">interact</span>
+<span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>
+
+<span class="k">def</span> <span class="nf">die_sim_plot</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">rolldie</span> <span class="o">=</span> <span class="n">die</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">rolldie</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span> <span class="o">/</span> <span class="n">n</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">rolldie</span><span class="p">,</span> <span class="n">bins</span> <span class="o">=</span> <span class="n">die_bins</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;grey&#39;</span><span class="p">,</span> <span class="n">density</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+
+
+<span class="n">interact</span><span class="p">(</span><span class="n">die_sim_plot</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">IntSlider</span><span class="p">(</span><span class="nb">min</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="nb">max</span> <span class="o">=</span> <span class="mi">500</span><span class="p">,</span> <span class="n">step</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="mi">10</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="questions">
+<h2>Questions<a class="headerlink" href="#questions" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>What does the value <code class="docutils literal notranslate"><span class="pre">n</span></code> on the slider represent?</p></li>
+<li><p>What do the numbers above the histogram represent?</p></li>
+<li><p>Describe what the histogram represents.</p></li>
+<li><p>Describe the pattern in the histogram as <code class="docutils literal notranslate"><span class="pre">n</span></code> gets larger.</p></li>
+</ul>
+</section>
+<section id="sampling-from-a-population">
+<h2>Sampling from a Population<a class="headerlink" href="#sampling-from-a-population" title="Link to this heading">#</a></h2>
+<p>The law of averages also holds when the random sample is drawn from individuals in a large population.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="n">persdur</span>            <span class="n">Duration</span> <span class="o">-</span> <span class="n">Personal</span> <span class="n">activities</span>
+
+           <span class="n">VALUE</span>  <span class="n">LABEL</span>
+               <span class="mi">0</span>  <span class="n">No</span> <span class="n">time</span> <span class="n">spent</span> <span class="n">doing</span> <span class="n">this</span> <span class="n">activity</span>
+            <span class="mi">9996</span>  <span class="n">Valid</span> <span class="n">skip</span>
+            <span class="mi">9997</span>  <span class="n">Don</span><span class="s1">&#39;t know</span>
+            <span class="mi">9998</span>  <span class="n">Refusal</span>
+            <span class="mi">9999</span>  <span class="n">Not</span> <span class="n">stated</span>
+
+
+ <span class="n">luc_rst</span>            <span class="n">Population</span> <span class="n">centre</span> <span class="n">indicator</span>
+
+           <span class="n">VALUE</span>  <span class="n">LABEL</span>
+               <span class="mi">1</span>  <span class="n">Larger</span> <span class="n">urban</span> <span class="n">population</span> <span class="n">centres</span> <span class="p">(</span><span class="n">CMA</span><span class="o">/</span><span class="n">CA</span><span class="p">)</span>
+               <span class="mi">2</span>  <span class="n">Rural</span> <span class="n">areas</span> <span class="ow">and</span> <span class="n">small</span> <span class="n">population</span> <span class="n">centres</span> <span class="p">(</span><span class="n">non</span> <span class="n">CMA</span><span class="o">/</span><span class="n">CA</span><span class="p">)</span>
+               <span class="mi">3</span>  <span class="n">Prince</span> <span class="n">Edward</span> <span class="n">Island</span>
+               <span class="mi">6</span>  <span class="n">Valid</span> <span class="n">skip</span>
+               <span class="mi">7</span>  <span class="n">Don</span><span class="s1">&#39;t know</span>
+               <span class="mi">8</span>  <span class="n">Refusal</span>
+               <span class="mi">9</span>  <span class="n">Not</span> <span class="n">stated</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">timeuse</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;gss_tu2016_main_file.csv&#39;</span><span class="p">)</span>
+
+<span class="n">importantcols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CASEID&#39;</span><span class="p">,</span> <span class="s1">&#39;persdur&#39;</span><span class="p">,</span> <span class="s1">&#39;luc_rst&#39;</span><span class="p">]</span>
+
+<span class="n">timeuse_subset</span> <span class="o">=</span> <span class="n">timeuse</span><span class="p">[</span><span class="n">importantcols</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">timeuse_subset</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">timeuse_subset</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Transform time spent on personal activities from minutes to hours, and add this new column called <code class="docutils literal notranslate"><span class="pre">'persdur_hour'</span></code> to <code class="docutils literal notranslate"><span class="pre">timeuse_subset</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">timeuse_subset</span> <span class="o">=</span> <span class="n">timeuse_subset</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">timeuse_subset</span><span class="p">[</span><span class="s1">&#39;persdur_hour&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">timeuse_subset</span><span class="p">[</span><span class="s1">&#39;persdur&#39;</span><span class="p">]</span><span class="o">/</span><span class="mi">60</span><span class="p">)</span>
+<span class="n">timeuse_subset</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Compute a summary of the distribution of <code class="docutils literal notranslate"><span class="pre">'persdur_hour'</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">timeuse_subset</span><span class="p">[</span><span class="s1">&#39;persdur_hour&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s zoom in on respondents that had a personal activities time between 0.25 and 3 hours.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">zoom</span> <span class="o">=</span> <span class="p">(</span><span class="n">timeuse_subset</span><span class="p">[</span><span class="s1">&#39;persdur_hour&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mf">0.25</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">timeuse_subset</span><span class="p">[</span><span class="s1">&#39;persdur_hour&#39;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">3</span><span class="p">)</span>
+
+<span class="n">timeuse_subset</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">zoom</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="empirical-distribution-of-the-sample">
+<h2>Empirical Distribution of the Sample<a class="headerlink" href="#empirical-distribution-of-the-sample" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Let’s think of the 13,004 respondent times (hours) as a population, and draw random samples from it with replacement.</p></li>
+<li><p>Below is a histogram of the distribution.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">persdur_zoom</span> <span class="o">=</span> <span class="n">timeuse_subset</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">zoom</span><span class="p">,</span> <span class="s1">&#39;persdur_hour&#39;</span><span class="p">]</span>
+
+<span class="n">persdur_zoom</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;grey&#39;</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>A random sample of 10 …</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">persdur_zoom</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">replace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;grey&#39;</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>A random sample of 100 …</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">persdur_zoom</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="n">replace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;grey&#39;</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>A random sample of 1000 …</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">persdur_zoom</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="n">replace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;grey&#39;</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>The values that occur with the least frequency are less likely to occur in small random samples.</p></li>
+<li><p>As the size of the random sample increases the sample will resemble the population, with high probability.</p></li>
+</ul>
+</section>
+<section id="interactive-exploration-of-empirical-distribution-of-a-sample">
+<h2>Interactive exploration of empirical distribution of a sample<a class="headerlink" href="#interactive-exploration-of-empirical-distribution-of-a-sample" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">emp_hist_plot</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">persdur_zoom</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">replace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;grey&#39;</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+
+<span class="n">interact</span><span class="p">(</span><span class="n">emp_hist_plot</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">IntSlider</span><span class="p">(</span><span class="nb">min</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span> <span class="mi">500</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">10</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The histogram of the “population”.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">persdur_zoom</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;grey&#39;</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id1">
+<h2>Questions<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Describe how the empirical histogram changes as the the value <code class="docutils literal notranslate"><span class="pre">n</span></code> gets larger.</p></li>
+</ul>
+</section>
+<section id="empirical-distribution-of-a-statistic">
+<h2>Empirical Distribution of a Statistic<a class="headerlink" href="#empirical-distribution-of-a-statistic" title="Link to this heading">#</a></h2>
+<p>The Law of Averages implies that with high probability, the empirical distribution of a large random sample will resemble the distribution of the population from which the sample was drawn.</p>
+<p>The resemblance is visible in two histograms: the empirical histogram of a large random sample is likely to resemble the histogram of the population.</p>
+</section>
+<section id="statistical-parameter">
+<h2>Statistical Parameter<a class="headerlink" href="#statistical-parameter" title="Link to this heading">#</a></h2>
+<p>Frequently, we are interested in numerical quantities associated with a population.</p>
+<ul class="simple">
+<li><p>In a population of voters, what percent will vote for Candidate A?</p></li>
+<li><p>In a population of Facebook users, what is the largest number of Facebook friends that the users have?</p></li>
+<li><p>In a population of Air Canada flights, what is the median departure delay?</p></li>
+</ul>
+<p>Numerical quantities associated with a (statistical) population are called <em>statistical parameters</em> or <em>parameters</em>. For the population of respondents in <code class="docutils literal notranslate"><span class="pre">persdur_zoom</span></code>, we know the value of the parameter “median time (hours) spent on personal activities”:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">persdur_zoom</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="statistic">
+<h2>Statistic<a class="headerlink" href="#statistic" title="Link to this heading">#</a></h2>
+<p>In many situations, we will be interested in figuring out the value of an unknown parameter. For this, we will rely on data from a large random sample drawn from the population.</p>
+<p>A <em>statistic</em> (note the singular!) is any number computed using the data in a sample. The sample median, therefore, is a statistic.</p>
+<p>Remember that <code class="docutils literal notranslate"><span class="pre">persdur_zoom.sample(100)</span></code> contains a random sample of 100 respondents from <code class="docutils literal notranslate"><span class="pre">persdur_zoom</span></code>. The observed value of the sample median is:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">persdur_zoom</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Our sample – one set of 100 people – gave us one observed value of the statistic. This raises an important problem of inference:</p>
+<p><strong>The statistic could have been different.</strong>
+A fundamental consideration in using any statistic based on a random sample is that <em>the sample could have come out differently</em>, and therefore the statistic could have come out differently too.</p>
+<p>Run the cell above a few times to see how the answer varies. Often it is equal to 0.75, the same value as the population parameter. But sometimes it is different.</p>
+<p><strong>Just how different could the statistic have been?</strong> One way to answer this is to simulate the statistic many times and note the values. A histogram of those values will tell us about the <strong>distribution of the statistic</strong>.</p>
+</section>
+<section id="simulating-a-statistic">
+<h2>Simulating a Statistic<a class="headerlink" href="#simulating-a-statistic" title="Link to this heading">#</a></h2>
+<p>We will simulate the sample median using the steps below.  You can replace the sample size of 1000 by any other sample size, and the sample median by any other statistic.</p>
+<p><strong>Step 1: Decide which statistic to simulate.</strong> We have already decided that: we are going to simulate the median of a random sample of size 1000 drawn from the population of time use survey respondents that had a median time spent on personal activities between 0.25 and 3.0 hours.</p>
+<p><strong>Step 2: Define a function that returns one simulated value of the statistic.</strong> Draw a random sample of size 1000 and compute the median of the sample. We did this in the code cell above. Here it is again, encapsulated in a function.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">random_sample_median</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">persdur_zoom</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">random_sample_median</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Step 3: Decide how many simulated values to generate.</strong> Let’s do 5,000 repetitions.</p>
+<p><strong>Step 4: Use a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop to generate a list of simulated values.</strong> Start by creating an empty list in which to collect our results. We will then set up a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop for generating all the simulated values. The body of the loop will consist of generating one simulated value of the sample median, and appending it to our collection list.</p>
+<p>The simulation takes a noticeable amount of time to run. That is because it is performing 5000 repetitions of the process of drawing a sample of size 1000 and computing its median. That’s a lot of sampling and repeating!</p>
+<p>Let’s break down this step a bit further:</p>
+<ul class="simple">
+<li><p>set up an empty list called <code class="docutils literal notranslate"><span class="pre">sim_medians</span></code>.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sim_medians</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1"># empty list</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">append</span></code> function to append values to <code class="docutils literal notranslate"><span class="pre">sim_medians</span></code>.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sim_medians</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">random_sample_median</span><span class="p">())</span>
+<span class="n">sim_medians</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Run the cell above several times and you will see that values keep getting appended to <code class="docutils literal notranslate"><span class="pre">sim_medians</span></code>.</p></li>
+<li><p>Each time the cell is run a random sample of 100 is drawn, the median is calculated then appended to the list.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sim_medians</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="n">num_sims</span> <span class="o">=</span> <span class="mi">5000</span> 
+
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_sims</span><span class="p">):</span>
+    <span class="n">sim_medians</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">random_sample_median</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id2">
+<h2>Empirical Distribution of a Statistic<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>We can now examine the <strong>empirical frequency distribution</strong> of the median statistic.</p>
+<p>Create a <code class="docutils literal notranslate"><span class="pre">pandas</span></code> series using the list <code class="docutils literal notranslate"><span class="pre">sim_medians</span></code> then use the <code class="docutils literal notranslate"><span class="pre">describe</span></code> function to describe the distribution.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">sim_medians</span><span class="p">)</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>The distribution of the median can be visualized using a histogram.</p></li>
+<li><p>The histogram can tell us how frequent certain values of the median occur in random samples.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create bins of length 0.1 </span>
+<span class="c1"># starting at 0.5 and ending at 1.1</span>
+
+<span class="n">median_bins</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span> 
+
+<span class="c1"># use the bins to plot empirical distribution of medians</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">sim_medians</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;grey&#39;</span><span class="p">,</span> <span class="n">bins</span> <span class="o">=</span> <span class="n">median_bins</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The exact counts of medians in each interval can be examined using <code class="docutils literal notranslate"><span class="pre">pd.cut</span></code> and <code class="docutils literal notranslate"><span class="pre">value_counts</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create a pandas series so we can use cut function</span>
+<span class="n">sim_means_series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">sim_medians</span><span class="p">)</span>
+
+<span class="c1"># frequency of values in each bin</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">sim_means_series</span><span class="p">,</span> <span class="n">median_bins</span><span class="p">)</span><span class="o">.</span><span class="n">value_counts</span><span class="p">())</span>
+
+<span class="c1"># relative frequency (proportion) of values in each bin</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">sim_means_series</span><span class="p">,</span> <span class="n">median_bins</span><span class="p">)</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">/</span><span class="n">num_sims</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>The histogram shows that the median values between 0.70 and 0.80 have the highest probability of occurring (viz. 0.5314).</p></li>
+<li><p>This means that a random sample would rarely yield a median value in the range of 0.5 - 0.6 or 1.0 - 1.1.</p></li>
+</ul>
+</section>
+<section id="what-can-we-learn-from-simulation">
+<h2>What can we learn from simulation?<a class="headerlink" href="#what-can-we-learn-from-simulation" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>If we could generate all possible random samples of size 1000, we would know all possible values of the statistic (the sample median), as well as the probabilities of all those values. We could visualize all the values and probabilities in the probability histogram of the statistic.</p></li>
+</ul>
+<ul class="simple">
+<li><p>But in many situations including this one, the number of all possible samples is large enough to exceed the capacity of the computer, and purely mathematical calculations of the probabilities can be intractably difficult.</p></li>
+</ul>
+<ul class="simple">
+<li><p>This is where empirical histograms come in.</p></li>
+</ul>
+<ul class="simple">
+<li><p>We know that by the Law of Averages, the empirical histogram of the statistic is likely to resemble the probability histogram of the statistic, if the sample size is large and if you repeat the random sampling process numerous times.</p></li>
+</ul>
+<ul class="simple">
+<li><p>This means that simulating random processes repeatedly is a way of approximating probability distributions <em>without figuring out the probabilities mathematically or generating all possible random samples</em>.</p></li>
+</ul>
+<ul class="simple">
+<li><p>Thus computer simulations become a powerful tool in data science. They can help data scientists understand the properties of random quantities that would be complicated to analyze in other ways.</p></li>
+</ul>
+</section>
+<section id="review-of-today-s-class">
+<h2>Review of today’s class<a class="headerlink" href="#review-of-today-s-class" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>understand that a function definition creates a function object and a variable name for that object</p></li>
+<li><p>understand how to write a function call in Python</p></li>
+<li><p>understand that a function call is an expression that produces a value, just like mathematical expressions</p></li>
+<li><p>explain how a function call works: how it passes information to the parameters</p></li>
+<li><p>understand that any variables created during function execution are local to the current function call, and when the function ends the variables disappear</p></li>
+<li><p>understand that the return statement announces the value of the function call</p></li>
+<li><p>describe the parts of a function: name, parameters, body</p></li>
+<li><p>understand how to write a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop in Python</p></li>
+<li><p>understand the role of empirical distributions (sample and statistic) and simulation</p></li>
+<li><p>understand the law of averages and it’s relationship to empirical distributions</p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./weekly-materials/week07/lecture"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../../../tests/midterm-makeup/Midterm_makeup.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">GGR274 Midterm Test</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../lab/Lab_7.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">GGR274 Lab 7: Functions</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feb-27-2023">Feb. 27, 2023</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#so-what-s-a-function">So, what’s a function?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-function-is-a-value">A function is a value</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#platonic-solids-octahedrons-and-dodecahedrons-and-icosahdrons">Platonic solids: octahedrons and dodecahedrons and icosahdrons</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#local-variables">Local variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#values-go-in-a-value-comes-out">Values go in, a value comes out</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#when-do-you-write-a-function">When do you write a function?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#you-try-it">You try it</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iteration">Iteration</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#do-the-same-thing-to-each-item-in-a-list">Do the same thing to each item in a list</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iterate-through-a-series">Iterate through a <code class="docutils literal notranslate"><span class="pre">Series</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#an-algorithm-for-summing-a-series-or-list-of-numbers">An algorithm for Summing a Series or list of numbers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iterating-a-constant-amount-of-times">Iterating a constant amount of times</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#roll-a-die">Roll a die</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question">Question</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#empirical-distributions">Empirical Distributions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#toss-a-die-ten-times">Toss a die ten times</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-values-of-the-die-should-we-expect">What values of the die should we expect?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-in-matplotlib">Plotting in matplotlib</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probability">Probability</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-law-of-averages">The Law of Averages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive-exploration-of-simulating-a-die-roll">Interactive exploration of simulating a die roll</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions">Questions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sampling-from-a-population">Sampling from a Population</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#empirical-distribution-of-the-sample">Empirical Distribution of the Sample</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive-exploration-of-empirical-distribution-of-a-sample">Interactive exploration of empirical distribution of a sample</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Questions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#empirical-distribution-of-a-statistic">Empirical Distribution of a Statistic</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#statistical-parameter">Statistical Parameter</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#statistic">Statistic</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simulating-a-statistic">Simulating a Statistic</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Empirical Distribution of a Statistic</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-can-we-learn-from-simulation">What can we learn from simulation?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#review-of-today-s-class">Review of today’s class</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By GGR274 Instructors
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

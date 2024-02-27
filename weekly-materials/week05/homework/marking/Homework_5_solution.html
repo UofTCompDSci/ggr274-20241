@@ -1,0 +1,1762 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Homework 5 &#8212; Computation and Data Science for Social Sciences</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'weekly-materials/week05/homework/marking/Homework_5_solution';</script>
+    <link rel="icon" href="../../../../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="GGR274 midterm test" href="../../../../practice/sample_midterm/GGR274_Midterm.html" />
+    <link rel="prev" title="Homework 5" href="../Homework_5.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../../jupyter-book/index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Computation and Data Science for Social Sciences</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../../jupyter-book/index.html">
+                    👋 Course Website for GGR274H1-S Winter 2024
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Quick Links</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../../syllabus/ggr274_syllabus.html">Course Syllabus</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://q.utoronto.ca/courses/338580/announcements">Announcements</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://piazza.com/utoronto.ca/winter2024/ggr274h1">Piazza</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://forms.office.com/Pages/ResponsePage.aspx?id=JsKqeAMvTUuQN7RtVsVSEF-wqptfr85NieT8UyliaxxUOUtMSVFUQkFTNVdRTlVJNkZFQU84NldYUi4u">Course Feedback Form</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Resources</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../../guides/jupyterhub_guide.html">JupyterHub Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../guides/markus_guide.html">MarkUs Guide</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 1</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://q.utoronto.ca/courses/338580/files?preview=29750629">Prof. Li's Slides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week01/lecture/Class1_GGR274_MM.html">Prof. Moon's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week01/lecture/Class1_GGR274_IM.html">Prof. Musabirov's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week01/lab/Lab_1.html">Lab 01 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week01/lab/Lab_1_solutions.html">Lab 01 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week01/homework/Homework_1.html">Homework 01 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week01/homework/Homework_1_solution.html">Homework 01 Solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 2</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../week02/lecture/Class2_GGR274_DL_IM.html">Prof. Musabirov's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week02/lab/Lab_2.html">Lab 02 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week02/lab/Lab_2_solutions.html">Lab 02 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week02/homework/Homework_2.html">Homework 02 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week02/homework/Homework_2_solution.html">Homework 02 Solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 3</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../week03/lecture/Class3_GGR274_DL_IM.html">Prof. Musabirov's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week03/lab/Lab_3.html">Lab 03 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week03/lab/Lab_3_solutions.html">Lab 03 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week03/homework/Homework_3.html">Homework 03 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week03/homework/Homework_3_solution.html">Homework 03 Solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 4</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://q.utoronto.ca/courses/338580/files?preview=30071956">Prof. Li's Slides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week04/lecture/Class4_GGR274_MM.html">Prof. Moon's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week04/lab/Lab_4.html">Lab 04 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week04/lab/Lab_4_solutions.html">Lab 04 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week04/homework/Homework_4.html">Homework 04 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week04/homework/marking/Homework_4_solution.html">Homework 04 Solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 5</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../lecture/Class5_GGR274_MM.html">Prof. Moon's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../lab/Lab_5.html">Lab 05 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../lab/Lab_5_solutions.html">Lab 05 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Homework_5.html">Homework 05 Notebook</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Homework 05 Solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Practice Midterm</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../../practice/sample_midterm/GGR274_Midterm.html">2022 Midterm Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../practice/review_w1-3.html">Review of frequent errors and extra examples for weeks 1-3</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Midterm</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../../tests/midterm/Midterm.html">Midterm Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../tests/midterm-makeup/Midterm_makeup.html">Midterm (makeup) Notebook</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 7</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../week07/lecture/Class7_GGR274_MM.html">Prof. Moon's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week07/lab/Lab_7.html">Lab 07 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week07/homework/Homework_7.html">Homework 07 Notebook</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://jupyter.utoronto.ca/hub/user-redirect/git-pull?repo=https%3A//github.com/UofTCompDSci/ggr274-20241&urlpath=tree/ggr274-20241/weekly-materials/week05/homework/marking/Homework_5_solution.ipynb&branch=main" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onJupyterHub"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">JupyterHub</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../../_sources/weekly-materials/week05/homework/marking/Homework_5_solution.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Homework 5</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logistics">Logistics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1">Task 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-2">Task 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-3">Task 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-4">Task 4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-5">Task 5</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-6-written-discussion">Task 6 (Written Discussion)</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="homework-5">
+<h1>Homework 5<a class="headerlink" href="#homework-5" title="Link to this heading">#</a></h1>
+<section id="logistics">
+<h2>Logistics<a class="headerlink" href="#logistics" title="Link to this heading">#</a></h2>
+<p><strong>Due date</strong>: The homework is due 23:59 on Monday, February 12.</p>
+<p>You will submit your work on <a class="reference external" href="https://markus-ds.teach.cs.toronto.edu">MarkUs</a>.
+To submit your work:</p>
+<ol class="arabic simple">
+<li><p>Download this file (<code class="docutils literal notranslate"><span class="pre">Homework_5.ipynb</span></code>) from JupyterHub. (See <a class="reference internal" href="#../../../guides/jupyterhub_guide.ipynb"><span class="xref myst">our JupyterHub Guide</span></a> for detailed instructions.)</p></li>
+<li><p>Submit this file to MarkUs under the <strong>hw5</strong> assignment. (See <a class="reference internal" href="#../../../guides/markus_guide.ipynb"><span class="xref myst">our MarkUs Guide</span></a> for detailed instructions.)
+All homeworks will take place in a Jupyter notebook (like this one). When you are done, you will download this notebook and submit it to MarkUs.</p></li>
+</ol>
+</section>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<p>In this homework we explore:</p>
+<ul class="simple">
+<li><p>row, column selection</p></li>
+<li><p>create new columns</p></li>
+<li><p>grouping</p></li>
+<li><p>summary statistics</p></li>
+<li><p>visualizing distributions</p></li>
+</ul>
+<p><strong>Question:</strong> Explore sleeping, exercising, and socializing among Canadians.</p>
+</section>
+<section id="task-1">
+<h2>Task 1<a class="headerlink" href="#task-1" title="Link to this heading">#</a></h2>
+<p>a) Use the <code class="docutils literal notranslate"><span class="pre">pandas</span></code> method <code class="docutils literal notranslate"><span class="pre">read_csv</span></code> to read the file <code class="docutils literal notranslate"><span class="pre">gss_tu2016_main_file.csv</span></code> into a DataFrame.  Store this <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> in a variable called <code class="docutils literal notranslate"><span class="pre">time_use_df</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">time_use_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;gss_tu2016_main_file.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>b) Create a subset of <code class="docutils literal notranslate"><span class="pre">time_use_df</span></code> with only the following columns: <code class="docutils literal notranslate"><span class="pre">dur41</span></code>, <code class="docutils literal notranslate"><span class="pre">dur47</span></code>, <code class="docutils literal notranslate"><span class="pre">sleepdur</span></code>, <code class="docutils literal notranslate"><span class="pre">agegr10</span></code>, <code class="docutils literal notranslate"><span class="pre">prv</span></code>.  To do this follow these steps:</p>
+<ul class="simple">
+<li><p>Create a list called <code class="docutils literal notranslate"><span class="pre">analysis_columns</span></code> with the column names.</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">analysis_columns</span></code> to select these columns from <code class="docutils literal notranslate"><span class="pre">time_use_df</span></code> and store this <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> in a variable called <code class="docutils literal notranslate"><span class="pre">time_use_subset_df</span></code>.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">analysis_columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;dur41&#39;</span><span class="p">,</span> <span class="s1">&#39;dur47&#39;</span><span class="p">,</span> <span class="s1">&#39;sleepdur&#39;</span><span class="p">,</span> <span class="s1">&#39;agegr10&#39;</span><span class="p">,</span> <span class="s1">&#39;prv&#39;</span><span class="p">]</span>
+
+<span class="n">time_use_subset_df</span> <span class="o">=</span> <span class="n">time_use_df</span><span class="p">[</span><span class="n">analysis_columns</span><span class="p">]</span>
+
+<span class="n">time_use_subset_df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>dur41</th>
+      <th>dur47</th>
+      <th>sleepdur</th>
+      <th>agegr10</th>
+      <th>prv</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>0</td>
+      <td>510</td>
+      <td>5</td>
+      <td>46</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>90</td>
+      <td>0</td>
+      <td>420</td>
+      <td>5</td>
+      <td>59</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0</td>
+      <td>0</td>
+      <td>570</td>
+      <td>4</td>
+      <td>47</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>395</td>
+      <td>60</td>
+      <td>510</td>
+      <td>6</td>
+      <td>35</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0</td>
+      <td>0</td>
+      <td>525</td>
+      <td>2</td>
+      <td>35</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>17385</th>
+      <td>0</td>
+      <td>0</td>
+      <td>560</td>
+      <td>1</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <th>17386</th>
+      <td>0</td>
+      <td>0</td>
+      <td>600</td>
+      <td>5</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <th>17387</th>
+      <td>125</td>
+      <td>77</td>
+      <td>510</td>
+      <td>7</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <th>17388</th>
+      <td>0</td>
+      <td>0</td>
+      <td>785</td>
+      <td>6</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <th>17389</th>
+      <td>15</td>
+      <td>0</td>
+      <td>450</td>
+      <td>5</td>
+      <td>35</td>
+    </tr>
+  </tbody>
+</table>
+<p>17390 rows × 5 columns</p>
+</div></div></div>
+</div>
+<p>c) In the next steps you will rename the columns of <code class="docutils literal notranslate"><span class="pre">time_use_subset_df</span></code> according to the following table:</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Old name</p></th>
+<th class="head"><p>New name</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">dur41</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Socializing</span> <span class="pre">time</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">dur47</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Exercising</span> <span class="pre">time</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">sleepdur</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Sleep</span> <span class="pre">time</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">agegr10</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Age</span> <span class="pre">group</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">prv</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Province</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<p>Step 1: Create a dictionary called <code class="docutils literal notranslate"><span class="pre">new_col_names</span></code> with each <em>Old name</em> as a key and each <em>New name</em> as the corresponding value.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">new_col_names</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;dur41&#39;</span><span class="p">:</span> <span class="s1">&#39;Socializing time&#39;</span><span class="p">,</span> 
+    <span class="s1">&#39;dur47&#39;</span><span class="p">:</span> <span class="s1">&#39;Exercising time&#39;</span><span class="p">,</span> 
+    <span class="s1">&#39;sleepdur&#39;</span><span class="p">:</span> <span class="s1">&#39;Sleep time&#39;</span><span class="p">,</span> 
+    <span class="s1">&#39;agegr10&#39;</span><span class="p">:</span> <span class="s1">&#39;Age group&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;prv&#39;</span><span class="p">:</span> <span class="s1">&#39;Province&#39;</span>
+<span class="p">}</span>
+
+<span class="n">new_col_names</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;dur41&#39;: &#39;Socializing time&#39;,
+ &#39;dur47&#39;: &#39;Exercising time&#39;,
+ &#39;sleepdur&#39;: &#39;Sleep time&#39;,
+ &#39;agegr10&#39;: &#39;Age group&#39;,
+ &#39;prv&#39;: &#39;Province&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<p>Step 2: Use <code class="docutils literal notranslate"><span class="pre">new_col_names</span></code> to rename the columns of <code class="docutils literal notranslate"><span class="pre">time_use_subset_df</span></code> and store the DataFrame with renamed columns in a variable called <code class="docutils literal notranslate"><span class="pre">time_use_subset_renamed_df</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">time_use_subset_renamed_df</span> <span class="o">=</span> <span class="n">time_use_subset_df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">new_col_names</span><span class="p">)</span>
+
+<span class="n">time_use_subset_renamed_df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Socializing time</th>
+      <th>Exercising time</th>
+      <th>Sleep time</th>
+      <th>Age group</th>
+      <th>Province</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>0</td>
+      <td>510</td>
+      <td>5</td>
+      <td>46</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>90</td>
+      <td>0</td>
+      <td>420</td>
+      <td>5</td>
+      <td>59</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0</td>
+      <td>0</td>
+      <td>570</td>
+      <td>4</td>
+      <td>47</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>395</td>
+      <td>60</td>
+      <td>510</td>
+      <td>6</td>
+      <td>35</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0</td>
+      <td>0</td>
+      <td>525</td>
+      <td>2</td>
+      <td>35</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>17385</th>
+      <td>0</td>
+      <td>0</td>
+      <td>560</td>
+      <td>1</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <th>17386</th>
+      <td>0</td>
+      <td>0</td>
+      <td>600</td>
+      <td>5</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <th>17387</th>
+      <td>125</td>
+      <td>77</td>
+      <td>510</td>
+      <td>7</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <th>17388</th>
+      <td>0</td>
+      <td>0</td>
+      <td>785</td>
+      <td>6</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <th>17389</th>
+      <td>15</td>
+      <td>0</td>
+      <td>450</td>
+      <td>5</td>
+      <td>35</td>
+    </tr>
+  </tbody>
+</table>
+<p>17390 rows × 5 columns</p>
+</div></div></div>
+</div>
+</section>
+<section id="task-2">
+<h2>Task 2<a class="headerlink" href="#task-2" title="Link to this heading">#</a></h2>
+<p>Create columns in <code class="docutils literal notranslate"><span class="pre">time_use_subset_renamed_df</span></code> that converts time use from minutes to hours.  Since 60 minutes is equal to 1 hour we can divide the time use columns by 60 to compute the time in hours.</p>
+<p>To do this create new columns in <code class="docutils literal notranslate"><span class="pre">time_use_subset_renamed_df</span></code> called</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Socializing</span> <span class="pre">time</span> <span class="pre">(hour)</span></code>,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Exercising</span> <span class="pre">time</span> <span class="pre">(hour)</span></code>, and</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Sleep</span> <span class="pre">time</span> <span class="pre">(hour)</span></code></p></li>
+</ul>
+<p>these columns are (respectively) <code class="docutils literal notranslate"><span class="pre">Socializing</span> <span class="pre">time</span></code>, <code class="docutils literal notranslate"><span class="pre">Exercising</span> <span class="pre">time</span></code>, and <code class="docutils literal notranslate"><span class="pre">Sleep</span> <span class="pre">time</span></code> in hours.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">time_use_subset_renamed_df</span><span class="p">[</span><span class="s1">&#39;Socializing time (hour)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">time_use_subset_renamed_df</span><span class="p">[</span><span class="s1">&#39;Socializing time&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="mi">60</span>
+
+<span class="n">time_use_subset_renamed_df</span><span class="p">[</span><span class="s1">&#39;Exercising time (hour)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">time_use_subset_renamed_df</span><span class="p">[</span><span class="s1">&#39;Exercising time&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="mi">60</span>
+
+<span class="n">time_use_subset_renamed_df</span><span class="p">[</span><span class="s1">&#39;Sleep time (hour)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">time_use_subset_renamed_df</span><span class="p">[</span><span class="s1">&#39;Sleep time&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="mi">60</span>
+
+<span class="n">time_use_subset_renamed_df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Socializing time</th>
+      <th>Exercising time</th>
+      <th>Sleep time</th>
+      <th>Age group</th>
+      <th>Province</th>
+      <th>Socializing time (hour)</th>
+      <th>Exercising time (hour)</th>
+      <th>Sleep time (hour)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>0</td>
+      <td>510</td>
+      <td>5</td>
+      <td>46</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>8.500000</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>90</td>
+      <td>0</td>
+      <td>420</td>
+      <td>5</td>
+      <td>59</td>
+      <td>1.500000</td>
+      <td>0.000000</td>
+      <td>7.000000</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0</td>
+      <td>0</td>
+      <td>570</td>
+      <td>4</td>
+      <td>47</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>9.500000</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>395</td>
+      <td>60</td>
+      <td>510</td>
+      <td>6</td>
+      <td>35</td>
+      <td>6.583333</td>
+      <td>1.000000</td>
+      <td>8.500000</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0</td>
+      <td>0</td>
+      <td>525</td>
+      <td>2</td>
+      <td>35</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>8.750000</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>17385</th>
+      <td>0</td>
+      <td>0</td>
+      <td>560</td>
+      <td>1</td>
+      <td>24</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>9.333333</td>
+    </tr>
+    <tr>
+      <th>17386</th>
+      <td>0</td>
+      <td>0</td>
+      <td>600</td>
+      <td>5</td>
+      <td>24</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>10.000000</td>
+    </tr>
+    <tr>
+      <th>17387</th>
+      <td>125</td>
+      <td>77</td>
+      <td>510</td>
+      <td>7</td>
+      <td>24</td>
+      <td>2.083333</td>
+      <td>1.283333</td>
+      <td>8.500000</td>
+    </tr>
+    <tr>
+      <th>17388</th>
+      <td>0</td>
+      <td>0</td>
+      <td>785</td>
+      <td>6</td>
+      <td>24</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>13.083333</td>
+    </tr>
+    <tr>
+      <th>17389</th>
+      <td>15</td>
+      <td>0</td>
+      <td>450</td>
+      <td>5</td>
+      <td>35</td>
+      <td>0.250000</td>
+      <td>0.000000</td>
+      <td>7.500000</td>
+    </tr>
+  </tbody>
+</table>
+<p>17390 rows × 8 columns</p>
+</div></div></div>
+</div>
+</section>
+<section id="task-3">
+<h2>Task 3<a class="headerlink" href="#task-3" title="Link to this heading">#</a></h2>
+<p>Some respondents in the time use survey spent no time exercising, socializing, and sleeping.  In this section we will create a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> that only has respondents who spent time sleeping, exercising, and socializing.  In other words respondents that spent no time on these activities will be excluded.</p>
+<p>a) Create a boolean <code class="docutils literal notranslate"><span class="pre">Series</span></code> called <code class="docutils literal notranslate"><span class="pre">well_balanced</span></code> that is <code class="docutils literal notranslate"><span class="pre">True</span></code> if time spent exercising <strong>and</strong> time spent sleeping <strong>and</strong> time spent socializing are all greater than 0, and <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">well_balanced</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="p">(</span><span class="n">time_use_subset_renamed_df</span><span class="p">[</span><span class="s1">&#39;Sleep time (hour)&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&amp;</span> 
+    <span class="p">(</span><span class="n">time_use_subset_renamed_df</span><span class="p">[</span><span class="s1">&#39;Exercising time (hour)&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&amp;</span> 
+    <span class="p">(</span><span class="n">time_use_subset_renamed_df</span><span class="p">[</span><span class="s1">&#39;Socializing time (hour)&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>b) Use <code class="docutils literal notranslate"><span class="pre">well_balanced</span></code> to filter (i.e. select) the rows of <code class="docutils literal notranslate"><span class="pre">time_use_subset_renamed_df</span></code> where respondents had non-zero times of sleeping, exercising, and socializing.  Store this filtered DataFrame in <code class="docutils literal notranslate"><span class="pre">well_balanced_df</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">well_balanced_df</span> <span class="o">=</span> <span class="n">time_use_subset_renamed_df</span><span class="p">[</span><span class="n">well_balanced</span><span class="p">]</span>
+
+<span class="n">well_balanced_df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Socializing time</th>
+      <th>Exercising time</th>
+      <th>Sleep time</th>
+      <th>Age group</th>
+      <th>Province</th>
+      <th>Socializing time (hour)</th>
+      <th>Exercising time (hour)</th>
+      <th>Sleep time (hour)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>3</th>
+      <td>395</td>
+      <td>60</td>
+      <td>510</td>
+      <td>6</td>
+      <td>35</td>
+      <td>6.583333</td>
+      <td>1.000000</td>
+      <td>8.500000</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>180</td>
+      <td>60</td>
+      <td>440</td>
+      <td>5</td>
+      <td>59</td>
+      <td>3.000000</td>
+      <td>1.000000</td>
+      <td>7.333333</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>80</td>
+      <td>230</td>
+      <td>330</td>
+      <td>6</td>
+      <td>46</td>
+      <td>1.333333</td>
+      <td>3.833333</td>
+      <td>5.500000</td>
+    </tr>
+    <tr>
+      <th>48</th>
+      <td>455</td>
+      <td>15</td>
+      <td>270</td>
+      <td>6</td>
+      <td>35</td>
+      <td>7.583333</td>
+      <td>0.250000</td>
+      <td>4.500000</td>
+    </tr>
+    <tr>
+      <th>54</th>
+      <td>130</td>
+      <td>185</td>
+      <td>670</td>
+      <td>1</td>
+      <td>12</td>
+      <td>2.166667</td>
+      <td>3.083333</td>
+      <td>11.166667</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>17325</th>
+      <td>25</td>
+      <td>15</td>
+      <td>640</td>
+      <td>6</td>
+      <td>47</td>
+      <td>0.416667</td>
+      <td>0.250000</td>
+      <td>10.666667</td>
+    </tr>
+    <tr>
+      <th>17336</th>
+      <td>105</td>
+      <td>100</td>
+      <td>525</td>
+      <td>6</td>
+      <td>59</td>
+      <td>1.750000</td>
+      <td>1.666667</td>
+      <td>8.750000</td>
+    </tr>
+    <tr>
+      <th>17351</th>
+      <td>40</td>
+      <td>90</td>
+      <td>540</td>
+      <td>5</td>
+      <td>46</td>
+      <td>0.666667</td>
+      <td>1.500000</td>
+      <td>9.000000</td>
+    </tr>
+    <tr>
+      <th>17366</th>
+      <td>120</td>
+      <td>90</td>
+      <td>490</td>
+      <td>6</td>
+      <td>59</td>
+      <td>2.000000</td>
+      <td>1.500000</td>
+      <td>8.166667</td>
+    </tr>
+    <tr>
+      <th>17387</th>
+      <td>125</td>
+      <td>77</td>
+      <td>510</td>
+      <td>7</td>
+      <td>24</td>
+      <td>2.083333</td>
+      <td>1.283333</td>
+      <td>8.500000</td>
+    </tr>
+  </tbody>
+</table>
+<p>741 rows × 8 columns</p>
+</div></div></div>
+</div>
+<p>c) The number of rows in a <code class="docutils literal notranslate"><span class="pre">pandas</span></code> <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> can be computed by <code class="docutils literal notranslate"><span class="pre">len()</span></code>.  For example, <code class="docutils literal notranslate"><span class="pre">len(well_balanced_df)</span></code> is the number of rows in <code class="docutils literal notranslate"><span class="pre">well_balanced_df</span></code>.  Compute the number of respondents who were <em>removed</em> from <code class="docutils literal notranslate"><span class="pre">time_use_subset_renamed_df</span></code> when it was filtered using <code class="docutils literal notranslate"><span class="pre">well_balanced</span></code> and store this number in a variable called <code class="docutils literal notranslate"><span class="pre">diff</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">diff</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">time_use_subset_renamed_df</span><span class="p">)</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">well_balanced_df</span><span class="p">)</span>
+
+<span class="n">diff</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>16649
+</pre></div>
+</div>
+</div>
+</div>
+<p>d) Use <code class="docutils literal notranslate"><span class="pre">diff</span></code> to compute the percentage of respondents removed from <code class="docutils literal notranslate"><span class="pre">time_use_subset_renamed_df</span></code>. Round the percentage to two decimal places, and store the result value in a variable called <code class="docutils literal notranslate"><span class="pre">pct_lost</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pct_lost</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">diff</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">time_use_subset_renamed_df</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="n">pct_lost</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>95.74
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="task-4">
+<h2>Task 4<a class="headerlink" href="#task-4" title="Link to this heading">#</a></h2>
+<p>In this section you will explore the distributions of time spent socializing, exercising, and sleeping by age group and province.</p>
+<p>a) Compute the mean hours spent sleeping, socializing, and exercising by age group using <code class="docutils literal notranslate"><span class="pre">.groupby</span></code> on <code class="docutils literal notranslate"><span class="pre">well_balanced_df</span></code>.  Store this DataFrame in a variable called <code class="docutils literal notranslate"><span class="pre">group_means</span></code>.</p>
+<p>b) Create a new column in <code class="docutils literal notranslate"><span class="pre">group_means</span></code> called <code class="docutils literal notranslate"><span class="pre">Total</span> <span class="pre">time</span> <span class="pre">(hour)</span></code> that is the sum of the time (in hours) spent sleeping, exercising, and socializing.</p>
+<p>c) Create a new index for <code class="docutils literal notranslate"><span class="pre">group_means</span></code> using the labels of Age group found in the code book (<code class="docutils literal notranslate"><span class="pre">gss_tu2016_codebook.txt</span></code>) and store the values in a list called <code class="docutils literal notranslate"><span class="pre">index_new</span></code>.</p>
+<p>d) Change the index of <code class="docutils literal notranslate"><span class="pre">group_means</span></code> to correspond to <code class="docutils literal notranslate"><span class="pre">index_new</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">group_means</span> <span class="o">=</span> <span class="n">well_balanced_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Age group&#39;</span><span class="p">)[[</span>
+    <span class="s1">&#39;Socializing time (hour)&#39;</span><span class="p">,</span> 
+    <span class="s1">&#39;Exercising time (hour)&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Sleep time (hour)&#39;</span>
+<span class="p">]]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="n">group_means</span><span class="p">[</span><span class="s1">&#39;Total time (hour)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">group_means</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">index_new</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;15-24&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;25-34&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;35-44&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;45-54&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;55-64&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;65-74&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;75+&#39;</span>
+<span class="p">]</span>
+
+<span class="n">group_means</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">index_new</span>
+
+
+<span class="c1"># Display group_means to check that the index has been updated.</span>
+<span class="c1"># On the left-hand side you should see the Age group labels, from &quot;15-24&quot; to &quot;75+&quot;.</span>
+<span class="n">group_means</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Socializing time (hour)</th>
+      <th>Exercising time (hour)</th>
+      <th>Sleep time (hour)</th>
+      <th>Total time (hour)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>15-24</th>
+      <td>2.707031</td>
+      <td>1.372917</td>
+      <td>8.918750</td>
+      <td>12.998698</td>
+    </tr>
+    <tr>
+      <th>25-34</th>
+      <td>2.127004</td>
+      <td>1.321730</td>
+      <td>8.060338</td>
+      <td>11.509072</td>
+    </tr>
+    <tr>
+      <th>35-44</th>
+      <td>1.802305</td>
+      <td>1.254433</td>
+      <td>8.079787</td>
+      <td>11.136525</td>
+    </tr>
+    <tr>
+      <th>45-54</th>
+      <td>1.754045</td>
+      <td>1.121359</td>
+      <td>8.249191</td>
+      <td>11.124595</td>
+    </tr>
+    <tr>
+      <th>55-64</th>
+      <td>2.236025</td>
+      <td>1.150311</td>
+      <td>8.266046</td>
+      <td>11.652381</td>
+    </tr>
+    <tr>
+      <th>65-74</th>
+      <td>2.073184</td>
+      <td>1.221688</td>
+      <td>8.342949</td>
+      <td>11.637821</td>
+    </tr>
+    <tr>
+      <th>75+</th>
+      <td>2.068452</td>
+      <td>1.016270</td>
+      <td>8.640873</td>
+      <td>11.725595</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>e) Sort <code class="docutils literal notranslate"><span class="pre">group_means</span></code> in descending order of <code class="docutils literal notranslate"><span class="pre">Total</span> <span class="pre">time</span> <span class="pre">(hour)</span></code>.  Store this sorted <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> in a variable called <code class="docutils literal notranslate"><span class="pre">group_means_sorted</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">group_means_sorted</span> <span class="o">=</span> <span class="n">group_means</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;Total time (hour)&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="n">group_means_sorted</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Socializing time (hour)</th>
+      <th>Exercising time (hour)</th>
+      <th>Sleep time (hour)</th>
+      <th>Total time (hour)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>15-24</th>
+      <td>2.707031</td>
+      <td>1.372917</td>
+      <td>8.918750</td>
+      <td>12.998698</td>
+    </tr>
+    <tr>
+      <th>75+</th>
+      <td>2.068452</td>
+      <td>1.016270</td>
+      <td>8.640873</td>
+      <td>11.725595</td>
+    </tr>
+    <tr>
+      <th>55-64</th>
+      <td>2.236025</td>
+      <td>1.150311</td>
+      <td>8.266046</td>
+      <td>11.652381</td>
+    </tr>
+    <tr>
+      <th>65-74</th>
+      <td>2.073184</td>
+      <td>1.221688</td>
+      <td>8.342949</td>
+      <td>11.637821</td>
+    </tr>
+    <tr>
+      <th>25-34</th>
+      <td>2.127004</td>
+      <td>1.321730</td>
+      <td>8.060338</td>
+      <td>11.509072</td>
+    </tr>
+    <tr>
+      <th>35-44</th>
+      <td>1.802305</td>
+      <td>1.254433</td>
+      <td>8.079787</td>
+      <td>11.136525</td>
+    </tr>
+    <tr>
+      <th>45-54</th>
+      <td>1.754045</td>
+      <td>1.121359</td>
+      <td>8.249191</td>
+      <td>11.124595</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>f) Use <code class="docutils literal notranslate"><span class="pre">well_balanced_df</span></code> to create three side-by-side boxplots using <code class="docutils literal notranslate"><span class="pre">layout</span> <span class="pre">=</span> <span class="pre">(1,</span> <span class="pre">3)</span></code> and <code class="docutils literal notranslate"><span class="pre">figsize</span> <span class="pre">=</span> <span class="pre">(20,</span> <span class="pre">10)</span></code> of time spent (in hours) socializing, exercising, and sleeping for each age group. Store these boxplots in a variable called <code class="docutils literal notranslate"><span class="pre">time_boxplots</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">time_boxplots</span> <span class="o">=</span> <span class="n">well_balanced_df</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span>
+    <span class="n">column</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Socializing time (hour)&#39;</span><span class="p">,</span> <span class="s1">&#39;Exercising time (hour)&#39;</span><span class="p">,</span><span class="s1">&#39;Sleep time (hour)&#39;</span><span class="p">],</span> 
+    <span class="n">by</span> <span class="o">=</span> <span class="s1">&#39;Age group&#39;</span><span class="p">,</span> 
+    <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span>
+    <span class="n">layout</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../_images/1e1a3c962be30d6d565450c1010798ee7313c333e3ff33673c0423cd8b4c74bb.png" src="../../../../_images/1e1a3c962be30d6d565450c1010798ee7313c333e3ff33673c0423cd8b4c74bb.png" />
+</div>
+</div>
+</section>
+<section id="task-5">
+<h2>Task 5<a class="headerlink" href="#task-5" title="Link to this heading">#</a></h2>
+<p>The tick marks on the horizontal axes of <code class="docutils literal notranslate"><span class="pre">time_boxplots</span></code> are not informative unless the viewer knows which age group each value represents.  Fix labels of boxplot by recoding <code class="docutils literal notranslate"><span class="pre">Age</span> <span class="pre">group</span></code> using the labels in the code book (see <code class="docutils literal notranslate"><span class="pre">gss_tu2016_codebook.txt</span></code>).</p>
+<p>a) First, create a copy of <code class="docutils literal notranslate"><span class="pre">well_balanced_df</span></code> (using the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> <code class="docutils literal notranslate"><span class="pre">.copy()</span></code> method), and store it in a variable called <code class="docutils literal notranslate"><span class="pre">well_balanced_age_label_df</span></code>. For that new <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>, recode <code class="docutils literal notranslate"><span class="pre">Age</span> <span class="pre">group</span></code> by adding a column called <code class="docutils literal notranslate"><span class="pre">Age</span> <span class="pre">group</span> <span class="pre">label</span></code> with the Age group labels found in the code book.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">well_balanced_age_label_df</span> <span class="o">=</span> <span class="n">well_balanced_df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="n">well_balanced_age_label_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">well_balanced_age_label_df</span><span class="p">[</span><span class="s1">&#39;Age group&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Age group label&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;15-24&#39;</span>
+
+<span class="n">well_balanced_age_label_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">well_balanced_age_label_df</span><span class="p">[</span><span class="s1">&#39;Age group&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;Age group label&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;25-34&#39;</span>
+
+<span class="n">well_balanced_age_label_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">well_balanced_age_label_df</span><span class="p">[</span><span class="s1">&#39;Age group&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;Age group label&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;35-44&#39;</span>
+
+<span class="n">well_balanced_age_label_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">well_balanced_age_label_df</span><span class="p">[</span><span class="s1">&#39;Age group&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;Age group label&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;45-54&#39;</span>
+
+<span class="n">well_balanced_age_label_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">well_balanced_age_label_df</span><span class="p">[</span><span class="s1">&#39;Age group&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;Age group label&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;55-64&#39;</span>
+
+<span class="n">well_balanced_age_label_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">well_balanced_age_label_df</span><span class="p">[</span><span class="s1">&#39;Age group&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;Age group label&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;65-74&#39;</span>
+
+<span class="n">well_balanced_age_label_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">well_balanced_age_label_df</span><span class="p">[</span><span class="s1">&#39;Age group&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">7</span><span class="p">,</span> <span class="s1">&#39;Age group label&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;75+&#39;</span>
+
+<span class="n">well_balanced_age_label_df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Socializing time</th>
+      <th>Exercising time</th>
+      <th>Sleep time</th>
+      <th>Age group</th>
+      <th>Province</th>
+      <th>Socializing time (hour)</th>
+      <th>Exercising time (hour)</th>
+      <th>Sleep time (hour)</th>
+      <th>Age group label</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>3</th>
+      <td>395</td>
+      <td>60</td>
+      <td>510</td>
+      <td>6</td>
+      <td>35</td>
+      <td>6.583333</td>
+      <td>1.000000</td>
+      <td>8.500000</td>
+      <td>65-74</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>180</td>
+      <td>60</td>
+      <td>440</td>
+      <td>5</td>
+      <td>59</td>
+      <td>3.000000</td>
+      <td>1.000000</td>
+      <td>7.333333</td>
+      <td>55-64</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>80</td>
+      <td>230</td>
+      <td>330</td>
+      <td>6</td>
+      <td>46</td>
+      <td>1.333333</td>
+      <td>3.833333</td>
+      <td>5.500000</td>
+      <td>65-74</td>
+    </tr>
+    <tr>
+      <th>48</th>
+      <td>455</td>
+      <td>15</td>
+      <td>270</td>
+      <td>6</td>
+      <td>35</td>
+      <td>7.583333</td>
+      <td>0.250000</td>
+      <td>4.500000</td>
+      <td>65-74</td>
+    </tr>
+    <tr>
+      <th>54</th>
+      <td>130</td>
+      <td>185</td>
+      <td>670</td>
+      <td>1</td>
+      <td>12</td>
+      <td>2.166667</td>
+      <td>3.083333</td>
+      <td>11.166667</td>
+      <td>15-24</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>17325</th>
+      <td>25</td>
+      <td>15</td>
+      <td>640</td>
+      <td>6</td>
+      <td>47</td>
+      <td>0.416667</td>
+      <td>0.250000</td>
+      <td>10.666667</td>
+      <td>65-74</td>
+    </tr>
+    <tr>
+      <th>17336</th>
+      <td>105</td>
+      <td>100</td>
+      <td>525</td>
+      <td>6</td>
+      <td>59</td>
+      <td>1.750000</td>
+      <td>1.666667</td>
+      <td>8.750000</td>
+      <td>65-74</td>
+    </tr>
+    <tr>
+      <th>17351</th>
+      <td>40</td>
+      <td>90</td>
+      <td>540</td>
+      <td>5</td>
+      <td>46</td>
+      <td>0.666667</td>
+      <td>1.500000</td>
+      <td>9.000000</td>
+      <td>55-64</td>
+    </tr>
+    <tr>
+      <th>17366</th>
+      <td>120</td>
+      <td>90</td>
+      <td>490</td>
+      <td>6</td>
+      <td>59</td>
+      <td>2.000000</td>
+      <td>1.500000</td>
+      <td>8.166667</td>
+      <td>65-74</td>
+    </tr>
+    <tr>
+      <th>17387</th>
+      <td>125</td>
+      <td>77</td>
+      <td>510</td>
+      <td>7</td>
+      <td>24</td>
+      <td>2.083333</td>
+      <td>1.283333</td>
+      <td>8.500000</td>
+      <td>75+</td>
+    </tr>
+  </tbody>
+</table>
+<p>741 rows × 9 columns</p>
+</div></div></div>
+</div>
+<p>b) Create the same boxplots as in Task 4 f) using <code class="docutils literal notranslate"><span class="pre">layout</span> <span class="pre">=</span> <span class="pre">(1,</span> <span class="pre">3)</span></code> and <code class="docutils literal notranslate"><span class="pre">figsize</span> <span class="pre">=</span> <span class="pre">(20,</span> <span class="pre">10)</span></code>, but use <code class="docutils literal notranslate"><span class="pre">Age</span> <span class="pre">group</span> <span class="pre">label</span></code> to create the boxplot, so that the ticks on horizontal axes of the boxplot are informative. Store this boxplot in a variable called <code class="docutils literal notranslate"><span class="pre">time_boxplots_age_label</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">time_boxplots_age_label</span> <span class="o">=</span> <span class="n">well_balanced_age_label_df</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span>
+    <span class="n">column</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Socializing time (hour)&#39;</span><span class="p">,</span> <span class="s1">&#39;Exercising time (hour)&#39;</span><span class="p">,</span> <span class="s1">&#39;Sleep time (hour)&#39;</span><span class="p">],</span> 
+    <span class="n">by</span> <span class="o">=</span> <span class="s1">&#39;Age group label&#39;</span><span class="p">,</span> 
+    <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span>
+    <span class="n">layout</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../_images/d8405320b6ff01b87531fba3309904a0da6e0294ee7c643edb41cc0ab75a41d1.png" src="../../../../_images/d8405320b6ff01b87531fba3309904a0da6e0294ee7c643edb41cc0ab75a41d1.png" />
+</div>
+</div>
+</section>
+<section id="task-6-written-discussion">
+<h2>Task 6 (Written Discussion)<a class="headerlink" href="#task-6-written-discussion" title="Link to this heading">#</a></h2>
+<p>a) Which age group spends the most time sleeping, exercising, and socializing?  Does your ranking change if you use mean or median as a summary measure of time?  Briefly explain why or why not your ranking changes, and which ranking is the best representation.</p>
+<p>b) Which age group shows the most variability in time spent socializing?  Provide a brief explanation of why this group shows the most variability.</p>
+<p>c) State one limitations of basing this data analysis on only respondents that spent more than zero time sleeping, exercising, and socializing.  Briefly explain why it’s a limitation to your findings in Tasks 4 and 5.</p>
+<blockquote>
+<div><p><em>Sample solutions</em></p>
+<p>a)</p>
+<ul class="simple">
+<li><p>Yes, the rankings change for the total if the mean or median is used.</p></li>
+<li><p>If the median is used then the rankings are: 15-24, 25-34, 75+ ,…</p></li>
+<li><p>If the mean is used then the rankings are: 15-25, 75+, 55-64, …</p></li>
+<li><p>There are outliers in sleep and socializing that we can see on the boxplots that are pushing the mean higher, but the median is not influenced by these observations.</p></li>
+<li><p>The median would be a more suitable choice since it’s not influenced by outliers.</p></li>
+</ul>
+<p>b) The length of the boxplot is longest for 15-24 age group.</p>
+<p>c) 96% of the data is excluded so results might be different if these observations are included.</p>
+</div></blockquote>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./weekly-materials/week05/homework/marking"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../Homework_5.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Homework 5</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../../../../practice/sample_midterm/GGR274_Midterm.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">GGR274 midterm test</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logistics">Logistics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1">Task 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-2">Task 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-3">Task 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-4">Task 4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-5">Task 5</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-6-written-discussion">Task 6 (Written Discussion)</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By GGR274 Instructors
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
