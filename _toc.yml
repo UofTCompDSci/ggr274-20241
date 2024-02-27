@@ -102,3 +102,15 @@ parts:
       title: Midterm Notebook
     - file: tests/midterm-makeup/Midterm_makeup.ipynb
       title: Midterm (makeup) Notebook
+
+
+  # - caption: Course Project
+  #   chapters:
+  #   - file: project/proposal/GGR274_Project_Proposal.ipynb
+  #     title: Project Proposal
+  #   - file: project/presentation/GGR274_Final_Project_Instruction.ipynb
+  #     title: Final Project Information
+  #   - file: project/presentation/extras/GGR274DSconfslides.ipynb
+  #     title: Final Project Presentation Slides Template
+  #   - file: project/presentation/extras/Tipsandtricksforslides.ipynb
+  #     title: Additional Tips and Tricks for Creating Slides in a Jupyter Notebook
