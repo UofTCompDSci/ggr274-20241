@@ -124,8 +124,8 @@ parts:
       title: Prof. Moon's Notebook
     - file: weekly-materials/week07/lab/Lab_7.ipynb
       title: Lab 07 Notebook
-    # - file: weekly-materials/week07/lab/Lab_7_solutions.ipynb
-    #   title: Lab 07 Solutions
+    - file: weekly-materials/week07/lab/Lab_7_solutions.ipynb
+      title: Lab 07 Solutions
     - file: weekly-materials/week07/homework/Homework_7.ipynb
       title: Homework 07 Notebook
     # - file: weekly-materials/week07/homework/marking/Homework_7_solution.ipynb
