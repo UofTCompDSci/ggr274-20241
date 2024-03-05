@@ -130,3 +130,14 @@ parts:
       title: Homework 07 Notebook
     # - file: weekly-materials/week07/homework/marking/Homework_7_solution.ipynb
     #   title: Homework 07 Solutions
+  
+  - caption: Week 8
+    chapters:
+    - file: weekly-materials/week08/lecture/Class8_GGR274_MM.ipynb
+      title: Prof. Moon's Notebook
+    - file: weekly-materials/week08/lab/Lab_8.ipynb
+      title: Lab 08 Notebook
+    # - file: weekly-materials/week08/lab/marking/Lab_8_solution.ipynb
+    #   title: Lab 08 Solution
+    - file: weekly-materials/week08/homework/Homework_8.ipynb
+      title: Homework 08 Notebook
