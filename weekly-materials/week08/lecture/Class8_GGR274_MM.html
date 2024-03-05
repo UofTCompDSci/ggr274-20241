@@ -1,0 +1,1903 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Class 7 &#8212; Computation and Data Science for Social Sciences</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'weekly-materials/week08/lecture/Class8_GGR274_MM';</script>
+    <link rel="icon" href="../../../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="GGR274 Lab 8: Project Proposal and Comparing Two-samples" href="../lab/Lab_8.html" />
+    <link rel="prev" title="GG274 Homework 7: Summary Statistics, Histograms and Simulation" href="../../week07/homework/Homework_7.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../jupyter-book/index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Computation and Data Science for Social Sciences</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../jupyter-book/index.html">
+                    👋 Course Website for GGR274H1-S Winter 2024
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Quick Links</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../syllabus/ggr274_syllabus.html">Course Syllabus</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://q.utoronto.ca/courses/338580/announcements">Announcements</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://piazza.com/utoronto.ca/winter2024/ggr274h1">Piazza</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://forms.office.com/Pages/ResponsePage.aspx?id=JsKqeAMvTUuQN7RtVsVSEF-wqptfr85NieT8UyliaxxUOUtMSVFUQkFTNVdRTlVJNkZFQU84NldYUi4u">Course Feedback Form</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Resources</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../guides/jupyterhub_guide.html">JupyterHub Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../guides/markus_guide.html">MarkUs Guide</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 1</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://q.utoronto.ca/courses/338580/files?preview=29750629">Prof. Li's Slides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week01/lecture/Class1_GGR274_MM.html">Prof. Moon's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week01/lecture/Class1_GGR274_IM.html">Prof. Musabirov's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week01/lab/Lab_1.html">Lab 01 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week01/lab/Lab_1_solutions.html">Lab 01 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week01/homework/Homework_1.html">Homework 01 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week01/homework/Homework_1_solution.html">Homework 01 Solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 2</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../week02/lecture/Class2_GGR274_DL_IM.html">Prof. Musabirov's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week02/lab/Lab_2.html">Lab 02 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week02/lab/Lab_2_solutions.html">Lab 02 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week02/homework/Homework_2.html">Homework 02 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week02/homework/Homework_2_solution.html">Homework 02 Solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 3</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../week03/lecture/Class3_GGR274_DL_IM.html">Prof. Musabirov's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week03/lab/Lab_3.html">Lab 03 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week03/lab/Lab_3_solutions.html">Lab 03 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week03/homework/Homework_3.html">Homework 03 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week03/homework/Homework_3_solution.html">Homework 03 Solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 4</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://q.utoronto.ca/courses/338580/files?preview=30071956">Prof. Li's Slides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week04/lecture/Class4_GGR274_MM.html">Prof. Moon's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week04/lab/Lab_4.html">Lab 04 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week04/lab/Lab_4_solutions.html">Lab 04 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week04/homework/Homework_4.html">Homework 04 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week04/homework/marking/Homework_4_solution.html">Homework 04 Solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 5</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../week05/lecture/Class5_GGR274_MM.html">Prof. Moon's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week05/lab/Lab_5.html">Lab 05 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week05/lab/Lab_5_solutions.html">Lab 05 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week05/homework/Homework_5.html">Homework 05 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week05/homework/marking/Homework_5_solution.html">Homework 05 Solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Practice Midterm</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../practice/sample_midterm/GGR274_Midterm.html">2022 Midterm Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../practice/review_w1-3.html">Review of frequent errors and extra examples for weeks 1-3</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Midterm</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../tests/midterm/Midterm.html">Midterm Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tests/midterm-makeup/Midterm_makeup.html">Midterm (makeup) Notebook</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Course Project</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../project/proposal/GGR274_Project_Proposal.html">Project Proposal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../project/presentation/GGR274_Final_Project_Instruction.html">Final Project Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../project/presentation/extras/GGR274DSconfslides.html">Final Project Presentation Slides Template</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../project/presentation/extras/Tipsandtricksforslides.html">Additional Tips and Tricks for Creating Slides in a Jupyter Notebook</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 7</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://q.utoronto.ca/courses/338580/files?preview=30627394">Prof. Li's Slides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week07/lecture/Class7_GGR274_MM.html">Prof. Moon's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week07/lab/Lab_7.html">Lab 07 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week07/lab/Lab_7_solutions.html">Lab 07 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week07/homework/Homework_7.html">Homework 07 Notebook</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 8</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Prof. Moon's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lab/Lab_8.html">Lab 08 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../homework/Homework_8.html">Homework 08 Notebook</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://jupyter.utoronto.ca/hub/user-redirect/git-pull?repo=https%3A//github.com/UofTCompDSci/ggr274-20241&urlpath=tree/ggr274-20241/weekly-materials/week08/lecture/Class8_GGR274_MM.ipynb&branch=main" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onJupyterHub"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">JupyterHub</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/weekly-materials/week08/lecture/Class8_GGR274_MM.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Class 7</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mar-5-2024">Mar. 5, 2024</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sampling-from-a-population">Sampling from a Population</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#empirical-distribution-of-the-sample">Empirical Distribution of the Sample</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive-exploration-of-empirical-distribution-of-a-sample">Interactive exploration of empirical distribution of a sample</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions">Questions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#empirical-distribution-of-a-statistic">Empirical Distribution of a Statistic</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#statistical-parameter">Statistical Parameter</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#statistic">Statistic</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simulating-a-statistic">Simulating a Statistic</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Empirical Distribution of a Statistic</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-can-we-learn-from-simulation">What can we learn from simulation?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#models">Models</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#goals-of-data-science">Goals of Data Science</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jury-selection">Jury Selection</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-model-of-random-selection">A model of random selection</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1-rolling-a-six-sided-die-20-times">Example 1: rolling a six-sided die 20 times</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2-rolling-a-loaded-six-side-100-times-more-likely-to-land-on-6-repeated-3-times">Example 2: rolling a loaded six-side 100 times more likely to land on 6 - repeated 3 times</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-side-note-on-indexing-a-pandas-dataframe">Quick side note on Indexing a <code class="docutils literal notranslate"><span class="pre">pandas</span></code> <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#back-to-simulation-simulate-one-value">Back to simulation … Simulate one value</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simulate-multiple-values">Simulate multiple values</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion-of-the-data-analysis">Conclusion of the data analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparing-two-samples">Comparing two samples</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#are-mental-health-visit-rates-higher-in-toronto-neighbourhoods-with-higher-material-deprivation">Are mental health visit rates higher in Toronto Neighbourhoods with higher material deprivation?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-wrangling">Data wrangling</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#neighbourhood-deprivation-scores">Neighbourhood deprivation scores</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rename-the-columns-of-depriv">Rename the columns of  <code class="docutils literal notranslate"><span class="pre">depriv</span> </code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mental-health-visit-rates">Mental health visit rates</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#merging-mental-health-visits-and-deprivation-score">Merging mental health visits and deprivation score</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#do-neighbourhoods-with-high-deprivation-have-more-mental-health-visits-compared-to-neighbourhoods-with-low-deprivation">Do Neighbourhoods with high deprivation have more mental health visits compared to Neighbourhoods with low deprivation?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-logic-of-hypothesis-testing">The Logic of Hypothesis Testing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hypotheses">1. Hypotheses</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-statistic">2. Test statistic</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#simulate-what-the-null-hypothesis-predicts-will-happen">3. Simulate what the null hypothesis predicts will happen</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shuffling">Shuffling</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quiz">Quiz</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#random-shuffling">Random shuffling</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#set-up-the-simulation-in-python">Set up the simulation in python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#distribution-of-simulated-values-of-the-mean-difference-assuming-the-null-hypothesis-is-true">Distribution of simulated values of the mean difference assuming the null hypothesis is true</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#p-value">p-value</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusions">Conclusions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#history-of-significance-testing">History of Significance Testing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#causality">Causality</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#potential-outcomes-and-randomized-control-trials">Potential outcomes and randomized control trials</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#does-material-deprivation-cause-increases-in-mental-health-visits">Does Material Deprivation Cause increases in mental health visits?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#just-in-case-you-have-seen-a-two-sample-t-test">Just in case you have seen a two-sample t-test …</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#review-of-this-class">Review of this class</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="class-7">
+<h1>Class 7<a class="headerlink" href="#class-7" title="Link to this heading">#</a></h1>
+<section id="mar-5-2024">
+<h2>Mar. 5, 2024<a class="headerlink" href="#mar-5-2024" title="Link to this heading">#</a></h2>
+<p><em>Where we left off last week</em></p>
+<ul class="simple">
+<li><p>understand the role of empirical distributions (sample and statistic) and simulation</p></li>
+</ul>
+<p><em>New topics for today</em></p>
+<ul class="simple">
+<li><p>Models</p></li>
+<li><p>Comparing two samples</p></li>
+<li><p>Causality</p></li>
+</ul>
+</section>
+<section id="sampling-from-a-population">
+<h2>Sampling from a Population<a class="headerlink" href="#sampling-from-a-population" title="Link to this heading">#</a></h2>
+<p>The law of averages also holds when the random sample is drawn from individuals in a large population.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="n">persdur</span>            <span class="n">Duration</span> <span class="o">-</span> <span class="n">Personal</span> <span class="n">activities</span>
+
+           <span class="n">VALUE</span>  <span class="n">LABEL</span>
+               <span class="mi">0</span>  <span class="n">No</span> <span class="n">time</span> <span class="n">spent</span> <span class="n">doing</span> <span class="n">this</span> <span class="n">activity</span>
+            <span class="mi">9996</span>  <span class="n">Valid</span> <span class="n">skip</span>
+            <span class="mi">9997</span>  <span class="n">Don</span><span class="s1">&#39;t know</span>
+            <span class="mi">9998</span>  <span class="n">Refusal</span>
+            <span class="mi">9999</span>  <span class="n">Not</span> <span class="n">stated</span>
+
+
+ <span class="n">luc_rst</span>            <span class="n">Population</span> <span class="n">centre</span> <span class="n">indicator</span>
+
+           <span class="n">VALUE</span>  <span class="n">LABEL</span>
+               <span class="mi">1</span>  <span class="n">Larger</span> <span class="n">urban</span> <span class="n">population</span> <span class="n">centres</span> <span class="p">(</span><span class="n">CMA</span><span class="o">/</span><span class="n">CA</span><span class="p">)</span>
+               <span class="mi">2</span>  <span class="n">Rural</span> <span class="n">areas</span> <span class="ow">and</span> <span class="n">small</span> <span class="n">population</span> <span class="n">centres</span> <span class="p">(</span><span class="n">non</span> <span class="n">CMA</span><span class="o">/</span><span class="n">CA</span><span class="p">)</span>
+               <span class="mi">3</span>  <span class="n">Prince</span> <span class="n">Edward</span> <span class="n">Island</span>
+               <span class="mi">6</span>  <span class="n">Valid</span> <span class="n">skip</span>
+               <span class="mi">7</span>  <span class="n">Don</span><span class="s1">&#39;t know</span>
+               <span class="mi">8</span>  <span class="n">Refusal</span>
+               <span class="mi">9</span>  <span class="n">Not</span> <span class="n">stated</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">timeuse</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;gss_tu2016_main_file.csv&#39;</span><span class="p">)</span>
+
+<span class="n">importantcols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CASEID&#39;</span><span class="p">,</span> <span class="s1">&#39;persdur&#39;</span><span class="p">,</span> <span class="s1">&#39;luc_rst&#39;</span><span class="p">]</span>
+
+<span class="n">timeuse_subset</span> <span class="o">=</span> <span class="n">timeuse</span><span class="p">[</span><span class="n">importantcols</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">timeuse_subset</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">timeuse_subset</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Transform time spent on personal activities from minutes to hours, and add this new column called <code class="docutils literal notranslate"><span class="pre">'persdur_hour'</span></code> to <code class="docutils literal notranslate"><span class="pre">timeuse_subset</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">timeuse_subset</span> <span class="o">=</span> <span class="n">timeuse_subset</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">timeuse_subset</span><span class="p">[</span><span class="s1">&#39;persdur_hour&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">timeuse_subset</span><span class="p">[</span><span class="s1">&#39;persdur&#39;</span><span class="p">]</span><span class="o">/</span><span class="mi">60</span><span class="p">)</span>
+<span class="n">timeuse_subset</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s zoom in on respondents that had a personal activities time between 0.25 and 3 hours.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">zoom</span> <span class="o">=</span> <span class="p">(</span><span class="n">timeuse_subset</span><span class="p">[</span><span class="s1">&#39;persdur_hour&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mf">0.25</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">timeuse_subset</span><span class="p">[</span><span class="s1">&#39;persdur_hour&#39;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">3</span><span class="p">)</span>
+
+<span class="n">timeuse_subset</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">zoom</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="empirical-distribution-of-the-sample">
+<h2>Empirical Distribution of the Sample<a class="headerlink" href="#empirical-distribution-of-the-sample" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Let’s think of the 13,004 respondent times (hours) as a population, and draw random samples from it with replacement.</p></li>
+<li><p>Below is a histogram of the distribution.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">persdur_zoom</span> <span class="o">=</span> <span class="n">timeuse_subset</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">zoom</span><span class="p">,</span> <span class="s1">&#39;persdur_hour&#39;</span><span class="p">]</span>
+
+<span class="n">persdur_zoom</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;grey&#39;</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>A random sample of 100 …</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">persdur_zoom</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="n">replace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;grey&#39;</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>The values that occur with the least frequency are less likely to occur in small random samples.</p></li>
+<li><p>As the size of the random sample increases the sample will resemble the population, with high probability.</p></li>
+</ul>
+</section>
+<section id="interactive-exploration-of-empirical-distribution-of-a-sample">
+<h2>Interactive exploration of empirical distribution of a sample<a class="headerlink" href="#interactive-exploration-of-empirical-distribution-of-a-sample" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">interact</span>
+<span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>
+
+<span class="k">def</span> <span class="nf">emp_hist_plot</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">persdur_zoom</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">replace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;grey&#39;</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+
+<span class="n">interact</span><span class="p">(</span><span class="n">emp_hist_plot</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">IntSlider</span><span class="p">(</span><span class="nb">min</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span> <span class="mi">500</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">10</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The histogram of the “population”.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">persdur_zoom</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;grey&#39;</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="questions">
+<h2>Questions<a class="headerlink" href="#questions" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Describe how the empirical histogram changes as the the value <code class="docutils literal notranslate"><span class="pre">n</span></code> gets larger.</p></li>
+</ul>
+</section>
+<section id="empirical-distribution-of-a-statistic">
+<h2>Empirical Distribution of a Statistic<a class="headerlink" href="#empirical-distribution-of-a-statistic" title="Link to this heading">#</a></h2>
+<p>The Law of Averages implies that with high probability, the empirical distribution of a large random sample will resemble the distribution of the population from which the sample was drawn.</p>
+<p>The resemblance is visible in two histograms: the empirical histogram of a large random sample is likely to resemble the histogram of the population.</p>
+</section>
+<section id="statistical-parameter">
+<h2>Statistical Parameter<a class="headerlink" href="#statistical-parameter" title="Link to this heading">#</a></h2>
+<p>Frequently, we are interested in numerical quantities associated with a population.</p>
+<ul class="simple">
+<li><p>In a population of voters, what percent will vote for Candidate A?</p></li>
+<li><p>In a population of Facebook users, what is the largest number of Facebook friends that the users have?</p></li>
+<li><p>In a population of Air Canada flights, what is the median departure delay?</p></li>
+</ul>
+<p>Numerical quantities associated with a (statistical) population are called <em>statistical parameters</em> or <em>parameters</em>. For the population of respondents in <code class="docutils literal notranslate"><span class="pre">persdur_zoom</span></code>, we know the value of the parameter “median time (hours) spent on personal activities”:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">persdur_zoom</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="statistic">
+<h2>Statistic<a class="headerlink" href="#statistic" title="Link to this heading">#</a></h2>
+<p>In many situations, we will be interested in figuring out the value of an unknown parameter. For this, we will rely on data from a large random sample drawn from the population.</p>
+<p>A <em>statistic</em> (note the singular!) is any number computed using the data in a sample. The sample median, therefore, is a statistic.</p>
+<p>Remember that <code class="docutils literal notranslate"><span class="pre">persdur_zoom.sample(100)</span></code> contains a random sample of 100 respondents from <code class="docutils literal notranslate"><span class="pre">persdur_zoom</span></code>. The observed value of the sample median is:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">persdur_zoom</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Our sample – one set of 100 people – gave us one observed value of the statistic. This raises an important problem of inference:</p>
+<p><strong>The statistic could have been different.</strong>
+A fundamental consideration in using any statistic based on a random sample is that <em>the sample could have come out differently</em>, and therefore the statistic could have come out differently too.</p>
+<p>Run the cell above a few times to see how the answer varies. Often it is equal to 0.75, the same value as the population parameter. But sometimes it is different.</p>
+<p><strong>Just how different could the statistic have been?</strong> One way to answer this is to simulate the statistic many times and note the values. A histogram of those values will tell us about the <strong>distribution of the statistic</strong>.</p>
+</section>
+<section id="simulating-a-statistic">
+<h2>Simulating a Statistic<a class="headerlink" href="#simulating-a-statistic" title="Link to this heading">#</a></h2>
+<p>We will simulate the sample median using the steps below.  You can replace the sample size of 1000 by any other sample size, and the sample median by any other statistic.</p>
+<p><strong>Step 1: Decide which statistic to simulate.</strong> We have already decided that: we are going to simulate the median of a random sample of size 1000 drawn from the population of time use survey respondents that had a median time spent on personal activities between 0.25 and 3.0 hours.</p>
+<p><strong>Step 2: Define a function that returns one simulated value of the statistic.</strong> Draw a random sample of size 1000 and compute the median of the sample. We did this in the code cell above. Here it is again, encapsulated in a function.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">random_sample_median</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">persdur_zoom</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">random_sample_median</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Step 3: Decide how many simulated values to generate.</strong> Let’s do 5,000 repetitions.</p>
+<p><strong>Step 4: Use a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop to generate a list of simulated values.</strong> Start by creating an empty list in which to collect our results. We will then set up a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop for generating all the simulated values. The body of the loop will consist of generating one simulated value of the sample median, and appending it to our collection list.</p>
+<p>The simulation takes a noticeable amount of time to run. That is because it is performing 5000 repetitions of the process of drawing a sample of size 1000 and computing its median. That’s a lot of sampling and repeating!</p>
+<p>Let’s break down this step a bit further:</p>
+<ul class="simple">
+<li><p>set up an empty list called <code class="docutils literal notranslate"><span class="pre">sim_medians</span></code>.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sim_medians</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1"># empty list</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">append</span></code> function to append values to <code class="docutils literal notranslate"><span class="pre">sim_medians</span></code>.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sim_medians</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">random_sample_median</span><span class="p">())</span>
+<span class="n">sim_medians</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Run the cell above several times and you will see that values keep getting appended to <code class="docutils literal notranslate"><span class="pre">sim_medians</span></code>.</p></li>
+<li><p>Each time the cell is run a random sample of 100 is drawn, the median is calculated then appended to the list.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sim_medians</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="n">num_sims</span> <span class="o">=</span> <span class="mi">5000</span> 
+
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_sims</span><span class="p">):</span>
+    <span class="n">sim_medians</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">random_sample_median</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id1">
+<h2>Empirical Distribution of a Statistic<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<p>We can now examine the <strong>empirical frequency distribution</strong> of the median statistic.</p>
+<p>Create a <code class="docutils literal notranslate"><span class="pre">pandas</span></code> series using the list <code class="docutils literal notranslate"><span class="pre">sim_medians</span></code> then use the <code class="docutils literal notranslate"><span class="pre">describe</span></code> function to describe the distribution.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">sim_medians</span><span class="p">)</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>The distribution of the median can be visualized using a histogram.</p></li>
+<li><p>The histogram can tell us how frequent certain values of the median occur in random samples.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create bins of length 0.1 </span>
+<span class="c1"># starting at 0.5 and ending at 1.1</span>
+
+<span class="n">median_bins</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span> 
+
+<span class="c1"># use the bins to plot empirical distribution of medians</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">sim_medians</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;grey&#39;</span><span class="p">,</span> <span class="n">bins</span> <span class="o">=</span> <span class="n">median_bins</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The exact counts of medians in each interval can be examined using <code class="docutils literal notranslate"><span class="pre">pd.cut</span></code> and <code class="docutils literal notranslate"><span class="pre">value_counts</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create a pandas series so we can use cut function</span>
+<span class="n">sim_means_series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">sim_medians</span><span class="p">)</span>
+
+<span class="c1"># frequency of values in each bin</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">sim_means_series</span><span class="p">,</span> <span class="n">median_bins</span><span class="p">)</span><span class="o">.</span><span class="n">value_counts</span><span class="p">())</span>
+
+<span class="c1"># relative frequency (proportion) of values in each bin</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">sim_means_series</span><span class="p">,</span> <span class="n">median_bins</span><span class="p">)</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">/</span><span class="n">num_sims</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>The histogram shows that the median values between 0.70 and 0.80 have the highest probability of occurring (viz. 0.5314).</p></li>
+<li><p>This means that a random sample would rarely yield a median value in the range of 0.5 - 0.6 or 1.0 - 1.1.</p></li>
+</ul>
+</section>
+<section id="what-can-we-learn-from-simulation">
+<h2>What can we learn from simulation?<a class="headerlink" href="#what-can-we-learn-from-simulation" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>If we could generate all possible random samples of size 1000, we would know all possible values of the statistic (the sample median), as well as the probabilities of all those values. We could visualize all the values and probabilities in the probability histogram of the statistic.</p></li>
+</ul>
+<ul class="simple">
+<li><p>But in many situations including this one, the number of all possible samples is large enough to exceed the capacity of the computer, and purely mathematical calculations of the probabilities can be intractably difficult.</p></li>
+</ul>
+<ul class="simple">
+<li><p>This is where empirical histograms come in.</p></li>
+</ul>
+<ul class="simple">
+<li><p>We know that by the Law of Averages, the empirical histogram of the statistic is likely to resemble the probability histogram of the statistic, if the sample size is large and if you repeat the random sampling process numerous times.</p></li>
+</ul>
+<ul class="simple">
+<li><p>This means that simulating random processes repeatedly is a way of approximating probability distributions <em>without figuring out the probabilities mathematically or generating all possible random samples</em>.</p></li>
+</ul>
+<ul class="simple">
+<li><p>Thus computer simulations become a powerful tool in data science. They can help data scientists understand the properties of random quantities that would be complicated to analyze in other ways.</p></li>
+</ul>
+</section>
+<section id="models">
+<h2>Models<a class="headerlink" href="#models" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>A model is a set of assumptions about the data.  In many cases models include assumptions about random (stochastic) processes used to generate the data.</p></li>
+<li><p>Data scientists are often in a position of formulating and assessing models.</p></li>
+</ul>
+</section>
+<section id="goals-of-data-science">
+<h2>Goals of Data Science<a class="headerlink" href="#goals-of-data-science" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Deeper understanding of the world.</p></li>
+<li><p>Make the world a better place to live.</p></li>
+<li><p>For example, help expose injustice.</p></li>
+<li><p>The skills you are learning help empower you to do this.</p></li>
+</ul>
+</section>
+<section id="jury-selection">
+<h2>Jury Selection<a class="headerlink" href="#jury-selection" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>U.S. Constitution grants equal protection under the law</p></li>
+</ul>
+<ul class="simple">
+<li><p>All defendants have the right to due process</p></li>
+</ul>
+<ul class="simple">
+<li><p>Robert Swain, a Black man, was convicted in Talladega County, AL</p></li>
+</ul>
+<ul class="simple">
+<li><p>He appealed to the U.S. Supreme Court</p></li>
+<li><p>Main reason: Unfair jury selection in the County’s trials</p></li>
+</ul>
+<ul class="simple">
+<li><p>At the time of the trial, only men aged 21 or more were eligible to serve on juries in Talladega County. In that population, 26% of the men were Black.</p></li>
+<li><p>But only eight men among the panel of 100 men (that is, 8%) were Black.</p></li>
+</ul>
+<ul class="simple">
+<li><p>The U.S. Supreme Court reviewed the appeal and concluded, “the overall percentage disparity has been small.” But was this assertion reasonable?</p></li>
+</ul>
+<ul class="simple">
+<li><p>If jury panelists were selected at random from the county’s eligible population, there would be some chance variation. We wouldn’t get exactly 26 Black panelists on every 100-person panel. But would we expect as few as eight?</p></li>
+</ul>
+</section>
+<section id="a-model-of-random-selection">
+<h2>A model of random selection<a class="headerlink" href="#a-model-of-random-selection" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>A model of the data is that the panel was selected at random and ended up with a small number of Black panelists just due to chance.</p></li>
+<li><p>Since the panel was supposed to resemble the population of all eligible jurors, the model of random selection is important to assess. Let’s see if it stands up to scrutiny.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">numpy.random</span></code> function <code class="docutils literal notranslate"><span class="pre">multinomial(n,</span> <span class="pre">pvals,</span> <span class="pre">size)</span></code> can be used to simulate sample proportions or counts with two or more categories.</p></li>
+</ul>
+</section>
+<section id="example-1-rolling-a-six-sided-die-20-times">
+<h2>Example 1: rolling a six-sided die 20 times<a class="headerlink" href="#example-1-rolling-a-six-sided-die-20-times" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># number of times die is rolled</span>
+<span class="n">sample_size</span> <span class="o">=</span> <span class="mi">20</span>
+
+<span class="c1"># number of experiments</span>
+<span class="n">num_simulations</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="c1"># probability of each side</span>
+<span class="n">true_probabilities</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="o">/</span><span class="mi">6</span><span class="p">]</span><span class="o">*</span><span class="mi">6</span>
+
+<span class="c1"># number of times each side appears</span>
+<span class="n">counts</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">multinomial</span><span class="p">(</span><span class="n">sample_size</span><span class="p">,</span> <span class="n">true_probabilities</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="n">num_simulations</span><span class="p">)</span>
+
+<span class="n">counts</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">proportions</span> <span class="o">=</span> <span class="n">counts</span> <span class="o">/</span> <span class="n">sample_size</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Sample counts: </span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">counts</span><span class="p">)</span> 
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Sample proportions: </span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">proportions</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="example-2-rolling-a-loaded-six-side-100-times-more-likely-to-land-on-6-repeated-3-times">
+<h2>Example 2: rolling a loaded six-side 100 times more likely to land on 6 - repeated 3 times<a class="headerlink" href="#example-2-rolling-a-loaded-six-side-100-times-more-likely-to-land-on-6-repeated-3-times" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sample_size</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="n">num_simulations</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="n">true_probabilities</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="o">/</span><span class="mi">7</span><span class="p">]</span><span class="o">*</span><span class="mi">5</span> <span class="o">+</span> <span class="p">[</span><span class="mi">2</span><span class="o">/</span><span class="mi">7</span><span class="p">]</span>
+
+<span class="n">counts</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">multinomial</span><span class="p">(</span><span class="n">sample_size</span><span class="p">,</span> <span class="n">true_probabilities</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="n">num_simulations</span><span class="p">)</span>
+
+<span class="n">proportions</span> <span class="o">=</span> <span class="n">counts</span> <span class="o">/</span> <span class="n">sample_size</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Sample counts:</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">counts</span><span class="p">)</span> 
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Sample proportions: </span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">proportions</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Let’s use this to simulate the jury selection process.</p></li>
+<li><p>The size of the jury panel is 100, so <code class="docutils literal notranslate"><span class="pre">sample_size</span></code> is 100.</p></li>
+<li><p>The distribution from which we will draw the sample is the distribution in the population of eligible jurors: 26% of them were Black, so 100% - 26% = 74% are white (very simplistic assumption, but let’s go with it for now).</p></li>
+<li><p>This means <code class="docutils literal notranslate"><span class="pre">true_pobabilities</span></code> is <code class="docutils literal notranslate"><span class="pre">[0.26,</span> <span class="pre">0.74]</span></code>.</p></li>
+<li><p>One simulation is below.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">sample_size</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="n">true_probabilities</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.26</span><span class="p">,</span> <span class="mf">0.74</span><span class="p">]</span>
+
+<span class="n">num_simulations</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="n">counts</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">multinomial</span><span class="p">(</span><span class="n">sample_size</span><span class="p">,</span> <span class="n">true_probabilities</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="n">num_simulations</span><span class="p">)</span>
+
+<span class="n">counts</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">proportions</span> <span class="o">=</span> <span class="n">counts</span> <span class="o">/</span> <span class="n">sample_size</span>
+
+<span class="n">sim_counts</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">proportions</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Black&#39;</span><span class="p">,</span> <span class="s1">&#39;White&#39;</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">sim_counts</span><span class="p">)</span>
+
+<span class="n">sim_counts</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="quick-side-note-on-indexing-a-pandas-dataframe">
+<h2>Quick side note on Indexing a <code class="docutils literal notranslate"><span class="pre">pandas</span></code> <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code><a class="headerlink" href="#quick-side-note-on-indexing-a-pandas-dataframe" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">iloc</span></code> and <code class="docutils literal notranslate"><span class="pre">loc</span></code> are functions that can access data in a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">loc</span></code> uses labels to access rows and columns.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iloc</span></code> uses integers to access rows and columns.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">sim_counts</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">sim_counts</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">sim_counts</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># row 0 column 1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sim_counts</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+
+<span class="c1"># access row 0 column 1 using label names</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sim_counts</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;White&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">sim_counts</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">sim_counts</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="s1">&#39;Black&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="back-to-simulation-simulate-one-value">
+<h2>Back to simulation … Simulate one value<a class="headerlink" href="#back-to-simulation-simulate-one-value" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Let’s write a function to simulate one value.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">simulate_one_count</span><span class="p">():</span>
+    <span class="n">sample_size</span> <span class="o">=</span> <span class="mi">100</span> <span class="c1"># jury size</span>
+
+    <span class="n">true_probabilities</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.26</span><span class="p">,</span> <span class="mf">0.74</span><span class="p">]</span> <span class="c1">#true prob of race</span>
+    
+    <span class="n">num_simulations</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># number of simulations</span>
+    <span class="c1"># get the random counts</span>
+    <span class="n">counts</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">multinomial</span><span class="p">(</span><span class="n">sample_size</span><span class="p">,</span> <span class="n">true_probabilities</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="n">num_simulations</span><span class="p">)</span> 
+    
+    <span class="c1"># store in data frame</span>
+    <span class="n">sim_counts</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">counts</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Black&#39;</span><span class="p">,</span> <span class="s1">&#39;White&#39;</span><span class="p">])</span>
+    
+    <span class="k">return</span> <span class="n">sim_counts</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">simulate_one_count</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="simulate-multiple-values">
+<h2>Simulate multiple values<a class="headerlink" href="#simulate-multiple-values" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Our analysis is focused on the variability in the counts.</p></li>
+<li><p>Let’s generate 10,000 simulated values of the count and see how they vary.</p></li>
+<li><p>We will do this by using a for loop and collecting all the simulated counts in a list called <code class="docutils literal notranslate"><span class="pre">sim_counts</span></code></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sim_counts</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="n">number_sims</span> <span class="o">=</span> <span class="mi">10000</span>
+
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">number_sims</span><span class="p">):</span>
+    <span class="n">sim_counts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">simulate_one_count</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">sim_counts</span><span class="p">,</span> <span class="n">bins</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">5.5</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span> 
+         <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;grey&#39;</span><span class="p">,</span> <span class="n">density</span> <span class="o">=</span> <span class="kc">True</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Count in random sample&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Frequency&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span><span class="mi">50</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="conclusion-of-the-data-analysis">
+<h2>Conclusion of the data analysis<a class="headerlink" href="#conclusion-of-the-data-analysis" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>The histogram shows that if we select a panel of size 100 at random from the eligible population, we are very unlikely to get counts of Black panelists that are as low as the eight that were observed on the panel in the trial.</p></li>
+<li><p>This is evidence that the model of random selection of the jurors in the panel is not consistent with the data from the panel. While it is possible that the panel could have been generated by chance, our simulation demonstrates that it is hugely unlikely.</p></li>
+<li><p>Therefore the most <em>reasonable</em> conclusion is that the assumption of random selection is unjustified for this jury panel.</p></li>
+</ul>
+<ul class="simple">
+<li><p>The simulation also could have been done using <code class="docutils literal notranslate"><span class="pre">np.random.multinomial</span></code>.</p></li>
+<li><p>This is an example of a ‘vectorized’ computation, and are usually faster than non-vectorized computations.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sample_size</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="n">true_probabilities</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.26</span><span class="p">,</span> <span class="mf">0.74</span><span class="p">]</span>
+
+<span class="n">num_simulations</span> <span class="o">=</span> <span class="mi">10000</span>
+
+<span class="n">counts</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">multinomial</span><span class="p">(</span><span class="n">sample_size</span><span class="p">,</span> <span class="n">true_probabilities</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="n">num_simulations</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">counts</span><span class="p">))</span>
+
+<span class="n">counts</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="comparing-two-samples">
+<h2>Comparing two samples<a class="headerlink" href="#comparing-two-samples" title="Link to this heading">#</a></h2>
+<section id="are-mental-health-visit-rates-higher-in-toronto-neighbourhoods-with-higher-material-deprivation">
+<h3>Are mental health visit rates higher in Toronto Neighbourhoods with higher material deprivation?<a class="headerlink" href="#are-mental-health-visit-rates-higher-in-toronto-neighbourhoods-with-higher-material-deprivation" title="Link to this heading">#</a></h3>
+<blockquote>
+<div><p>Material deprivation is closely connected to poverty and it refers to inability for individuals and communities to access and attain basic material needs. The indicators included in this dimension measure income, quality of housing, educational attainment, and family structure characteristics.</p>
+</div></blockquote>
+<p><a class="reference external" href="https://www.publichealthontario.ca/-/media/Documents/O/2017/on-marg-technical.pdf?la=en%E2%89%BBlang=en&amp;amp;hash=EED54DF437EDEDA2DFE1A00A4B14A50A">See 2011 Ontario Marginalization Index Documentation</a></p>
+</section>
+</section>
+<section id="data-wrangling">
+<h2>Data wrangling<a class="headerlink" href="#data-wrangling" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>The next few slides involve reading the data into pandas and getting it ready for analysis.</p></li>
+<li><p>This won’t be covered in detail in class, but we have already covered this process in previous classes.</p></li>
+</ul>
+<ul class="simple">
+<li><p>The data is stored in <code class="docutils literal notranslate"><span class="pre">1_marg_neighb_toronto_2006_OnMarg.xls</span></code> - a Microsoft Excel file format with file extension <code class="docutils literal notranslate"><span class="pre">.xls</span></code>.</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">pandas</span></code> function <code class="docutils literal notranslate"><span class="pre">read_excel</span></code> with <code class="docutils literal notranslate"><span class="pre">sheet_name</span></code> parameter.</p></li>
+</ul>
+<section id="neighbourhood-deprivation-scores">
+<h3>Neighbourhood deprivation scores<a class="headerlink" href="#neighbourhood-deprivation-scores" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># this python library is not pre-installed</span>
+<span class="c1"># and is required to use `pandas` `read_excel`</span>
+<span class="o">%</span><span class="k">pip</span> install xlrd
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">marg_neighb</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s1">&#39;1_marg_neighb_toronto_2006_OnMarg.xls&#39;</span><span class="p">,</span> 
+                            <span class="n">sheet_name</span><span class="o">=</span><span class="s1">&#39;Neighbourhood_Toronto_OnMarg&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">marg_neighb</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>If we specify <code class="docutils literal notranslate"><span class="pre">header</span></code> parameter then it will include column names.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">marg_neighb</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s1">&#39;1_marg_neighb_toronto_2006_OnMarg.xls&#39;</span><span class="p">,</span> 
+                            <span class="n">sheet_name</span><span class="o">=</span><span class="s1">&#39;Neighbourhood_Toronto_OnMarg&#39;</span><span class="p">,</span> 
+                            <span class="n">header</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">marg_neighb</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Get the column names of <code class="docutils literal notranslate"><span class="pre">marg_neighb</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">marg_neighb</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># the elements can be accessed</span>
+<span class="c1"># similar to a list</span>
+
+<span class="n">marg_neighb</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Select the columns corresponding to <code class="docutils literal notranslate"><span class="pre">Neighb</span> <span class="pre">id</span> </code> (column 0), <code class="docutils literal notranslate"><span class="pre">Neighbourhood</span> <span class="pre">name</span></code> (column 1), and <code class="docutils literal notranslate"><span class="pre">DEPRIVATION</span></code> (deprivation score - column 5).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">marg_neighb</span><span class="p">[</span><span class="n">marg_neighb</span><span class="o">.</span><span class="n">columns</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">]]]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Create a new <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> called <code class="docutils literal notranslate"><span class="pre">depriv</span></code> with only those columns.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">depriv</span> <span class="o">=</span> <span class="n">marg_neighb</span><span class="p">[</span><span class="n">marg_neighb</span><span class="o">.</span><span class="n">columns</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">]]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="rename-the-columns-of-depriv">
+<h2>Rename the columns of  <code class="docutils literal notranslate"><span class="pre">depriv</span> </code><a class="headerlink" href="#rename-the-columns-of-depriv" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">colnames</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Neighb id &#39;</span><span class="p">:</span> <span class="s1">&#39;Neighbid&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;DEPRIVATION&#39;</span> <span class="p">:</span> <span class="s1">&#39;DEPRIVATION&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;Neighbourhood name &#39;</span><span class="p">:</span> <span class="s1">&#39;name&#39;</span><span class="p">}</span>
+
+<span class="n">depriv</span> <span class="o">=</span> <span class="n">depriv</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="n">depriv</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="n">colnames</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">depriv</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="mental-health-visit-rates">
+<h3>Mental health visit rates<a class="headerlink" href="#mental-health-visit-rates" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Read in data on rates of mental health visits stored in <code class="docutils literal notranslate"><span class="pre">2_ahd_neighb_db_ast_hbp_mhv_copd_2012.xls</span></code>.</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">read_excel</span></code> with <code class="docutils literal notranslate"><span class="pre">sheet_name</span></code> parameter</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mentalhealth_neighb</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s1">&#39;2_ahd_neighb_db_ast_hbp_mhv_copd_2012.xls&#39;</span><span class="p">,</span> 
+                                    <span class="n">sheet_name</span> <span class="o">=</span> <span class="s1">&#39;2_MentalHealthV_2012&#39;</span><span class="p">,</span> 
+                                    <span class="n">header</span> <span class="o">=</span> <span class="mi">11</span><span class="p">)</span>
+<span class="n">mentalhealth_neighb</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mentalhealth_neighb</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mhvisitrates</span> <span class="o">=</span> <span class="n">mentalhealth_neighb</span><span class="p">[</span><span class="n">mentalhealth_neighb</span><span class="o">.</span><span class="n">columns</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">]]]</span>
+<span class="n">mhvisitrates</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Unamed:</span> <span class="pre">0</span></code> corresponds to <code class="docutils literal notranslate"><span class="pre">Neighbid</span></code> in <code class="docutils literal notranslate"><span class="pre">depriv</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Unamed:</span> <span class="pre">0</span></code> corresponds to <code class="docutils literal notranslate"><span class="pre">name</span></code> in <code class="docutils literal notranslate"><span class="pre">depriv</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Both</span> <span class="pre">sexes.2</span></code> (column 10) corresponds to Age-Standardized rate of Mental Health Visits (2012), All Ages 20+ for both sexes</p></li>
+<li><p>rename the columns of <code class="docutils literal notranslate"><span class="pre">mhvisitrates</span></code> so that identical columns in <code class="docutils literal notranslate"><span class="pre">depriv</span></code> have the same name.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">colnames</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Unnamed: 0&#39;</span><span class="p">:</span> <span class="s1">&#39;Neighbid&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;Both sexes.2&#39;</span> <span class="p">:</span> <span class="s1">&#39;mhvisitrates_mf&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;Unnamed: 1&#39;</span> <span class="p">:</span> <span class="s1">&#39;name&#39;</span><span class="p">}</span>
+
+<span class="n">mhvisitrates</span> <span class="o">=</span> <span class="n">mhvisitrates</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="n">mhvisitrates</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="n">colnames</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">mhvisitrates</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="merging-mental-health-visits-and-deprivation-score">
+<h2>Merging mental health visits and deprivation score<a class="headerlink" href="#merging-mental-health-visits-and-deprivation-score" title="Link to this heading">#</a></h2>
+<p>merge <code class="docutils literal notranslate"><span class="pre">mhvisitrates</span></code> and <code class="docutils literal notranslate"><span class="pre">depriv</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mhvisitdepriv</span> <span class="o">=</span> <span class="n">mhvisitrates</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">depriv</span><span class="p">,</span> <span class="n">on</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Neighbid&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">])</span>
+<span class="n">mhvisitdepriv</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>We will create a variable that categorizes neighbourhoods above and below the median deprivation score.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">median_depriv</span> <span class="o">=</span> <span class="n">mhvisitdepriv</span><span class="p">[</span><span class="s1">&#39;DEPRIVATION&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+<span class="n">median_depriv</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mhvisitdepriv</span> <span class="o">=</span> <span class="n">mhvisitdepriv</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="c1"># create a new column in mhvisitdepric called depriv_HL</span>
+<span class="c1"># classify neighbourhoods at or above the median as High</span>
+
+<span class="n">mhvisitdepriv</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">mhvisitdepriv</span><span class="p">[</span><span class="s1">&#39;DEPRIVATION&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">median_depriv</span><span class="p">,</span> <span class="s1">&#39;depriv_HL&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;High&#39;</span>
+
+<span class="c1"># classify neighbourhoods below the median as Low</span>
+<span class="n">mhvisitdepriv</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">mhvisitdepriv</span><span class="p">[</span><span class="s1">&#39;DEPRIVATION&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">median_depriv</span><span class="p">,</span> <span class="s1">&#39;depriv_HL&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Low&#39;</span>
+
+<span class="n">mhvisitdepriv</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># print last 3 rows of mhvisitdepriv</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="do-neighbourhoods-with-high-deprivation-have-more-mental-health-visits-compared-to-neighbourhoods-with-low-deprivation">
+<h2>Do Neighbourhoods with high deprivation have more mental health visits compared to Neighbourhoods with low deprivation?<a class="headerlink" href="#do-neighbourhoods-with-high-deprivation-have-more-mental-health-visits-compared-to-neighbourhoods-with-low-deprivation" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>The mean rate of mental health visits in the high poverty neighbourhoods is 8.80 and the mean rate in the low poverty neighbourhoods is 7.48.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mean_table</span> <span class="o">=</span> <span class="n">mhvisitdepriv</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;depriv_HL&#39;</span><span class="p">)[</span><span class="s1">&#39;mhvisitrates_mf&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">mean_table</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">observed_mean_difference</span> <span class="o">=</span> <span class="n">mean_table</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">mean_table</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">observed_mean_difference</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Let’s compare the distribution of mental health visit rates by high/low deprivation.</p></li>
+</ul>
+</section>
+<section id="the-logic-of-hypothesis-testing">
+<h2>The Logic of Hypothesis Testing<a class="headerlink" href="#the-logic-of-hypothesis-testing" title="Link to this heading">#</a></h2>
+<section id="hypotheses">
+<h3>1. Hypotheses<a class="headerlink" href="#hypotheses" title="Link to this heading">#</a></h3>
+<p>Two claims:</p>
+<ol class="arabic simple">
+<li><p>There is no difference in the mean mental health visit rates between high and low deprivation neighbourhoods.  This is called the null hypothesis.</p></li>
+<li><p>There is a difference in the mean mental health visit rates between high and low deprivation neighbourhoods.  This is called the alternative hypothesis.</p></li>
+</ol>
+</section>
+<section id="test-statistic">
+<h3>2. Test statistic<a class="headerlink" href="#test-statistic" title="Link to this heading">#</a></h3>
+<p>The test statistic is a number, calculated from the data, that captures what we’re interested in.</p>
+<p>What would be a useful test statistic for this study?</p>
+</section>
+<section id="simulate-what-the-null-hypothesis-predicts-will-happen">
+<h3>3. Simulate what the null hypothesis predicts will happen<a class="headerlink" href="#simulate-what-the-null-hypothesis-predicts-will-happen" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>If the null hypothesis is true then the mean values of high and low deprivation neighbourhoods will be the same regardless of how they are named or labelled.</p></li>
+<li><p>That means we can randomly assign (or shuffle) the neigbourhood names to high and low deprivation and the mean difference should be close to 0.</p></li>
+</ul>
+<ul class="simple">
+<li><p>Imagine we have 68 playing cards labelled <code class="docutils literal notranslate"><span class="pre">High</span></code> and 68 cards labelled <code class="docutils literal notranslate"><span class="pre">Low</span></code>.</p></li>
+</ul>
+<ul class="simple">
+<li><p>Shuffle the cards …</p></li>
+</ul>
+<ul class="simple">
+<li><p>Assign the cards to the 136 neighbourhoods then calculate the mean difference between high and low.  This is one simulated value of the test statistic.</p></li>
+</ul>
+<ul class="simple">
+<li><p>Shuffle the cards again …</p></li>
+</ul>
+<ul class="simple">
+<li><p>Assign the cards to the 136 neighbourhoods then calculate the mean difference between high and low.  This is another simulated value of the test statistic.</p></li>
+</ul>
+<ul class="simple">
+<li><p>Continue shuffling, assigning to neigbourhoods, and computing the mean difference.</p></li>
+</ul>
+</section>
+</section>
+<section id="shuffling">
+<h2>Shuffling<a class="headerlink" href="#shuffling" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>The <em>observed</em> difference in mean rate of mental health visits between high and low deprivation is 0.75.</p></li>
+<li><p>Could this difference be due to chance?</p></li>
+<li><p>Let’s repeat this study <strong>assuming that the difference is due to chance</strong>.</p></li>
+<li><p>Suppose that the (true) mean mental health visit rates in high deprivation neigbourhoods is equal to the (true) mean mental health visit rates in low deprivation neigbourhoods. Then the <strong>labels</strong> of <code class="docutils literal notranslate"><span class="pre">'depriv_HL'</span></code> <code class="docutils literal notranslate"><span class="pre">High</span></code> and <code class="docutils literal notranslate"><span class="pre">Low</span></code> are …</p></li>
+</ul>
+</section>
+<section id="quiz">
+<h2>Quiz<a class="headerlink" href="#quiz" title="Link to this heading">#</a></h2>
+<p>If the (true) mean mental health visit rates in high deprivation neigbourhoods is equal to the (true) mean mental health visit rates in low deprivation neigbourhoods. Then the <strong>labels</strong> of <code class="docutils literal notranslate"><span class="pre">'depriv_HL'</span></code> <code class="docutils literal notranslate"><span class="pre">High</span></code> and <code class="docutils literal notranslate"><span class="pre">Low</span></code> on neighbourhoods are …</p>
+<p>A. interchangable (<code class="docutils literal notranslate"><span class="pre">High</span></code> can be changed for <code class="docutils literal notranslate"><span class="pre">Low</span></code> without effecting the mean mental health visit rates)</p>
+<p>B. not interchangable</p>
+<p>C. random</p>
+<p>D. the same, but different on average.</p>
+<p>E. different, but the same on average.</p>
+<p>So, if</p>
+<p>(1) (The true) mean mental health visit rates in high deprivation neigbourhoods are equal to the (true) mean mental health visit rates in low deprivation neigbourhoods.</p>
+<p>(2) the <strong>labels</strong> <code class="docutils literal notranslate"><span class="pre">High</span></code> and <code class="docutils literal notranslate"><span class="pre">Low</span></code> are randomly shuffled.</p>
+<p>(3) the mean mental health rates for <code class="docutils literal notranslate"><span class="pre">High</span></code> and <code class="docutils literal notranslate"><span class="pre">Low</span></code> deprivation are re-calculated using the shuffled labels.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mhvisitdepriv</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">,[</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="random-shuffling">
+<h2>Random shuffling<a class="headerlink" href="#random-shuffling" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>We can randlomly shuffle using the <code class="docutils literal notranslate"><span class="pre">sample</span></code> function in <code class="docutils literal notranslate"><span class="pre">pandas</span></code>.</p></li>
+<li><p>The parameter <code class="docutils literal notranslate"><span class="pre">frac</span></code> in the <code class="docutils literal notranslate"><span class="pre">pandas</span></code> <code class="docutils literal notranslate"><span class="pre">sample</span></code> function refers to the fraction of rows to return.  <code class="docutils literal notranslate"><span class="pre">frac</span> <span class="pre">=</span> <span class="pre">1</span></code> means all the rows are returned.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span> <span class="c1"># for reproducability</span>
+
+<span class="n">mhvisitdepriv</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">frac</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">replace</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">reset_index</span></code> resets the index.</p></li>
+<li><p>the parameter <code class="docutils literal notranslate"><span class="pre">drop</span> <span class="pre">=</span> <span class="pre">True</span></code> in <code class="docutils literal notranslate"><span class="pre">reset_index</span></code> indicates not to save the index after running <code class="docutils literal notranslate"><span class="pre">sample</span></code> as a column.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+
+<span class="n">mhvisitdepriv</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">frac</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">replace</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can investigate what happens if the labels for <code class="docutils literal notranslate"><span class="pre">High</span></code> and <code class="docutils literal notranslate"><span class="pre">Low</span></code> are randomly shuffled for the first 10 rows.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># mental health visit rates for first 10 rows</span>
+
+<span class="n">visits</span> <span class="o">=</span> <span class="n">mhvisitdepriv</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;mhvisitrates_mf&#39;</span><span class="p">]</span>
+
+<span class="c1"># randomly shuffle depriv_HL </span>
+<span class="c1"># previous index is dropped because we don&#39;t need it</span>
+
+<span class="n">shuffled_depriv</span> <span class="o">=</span> <span class="n">mhvisitdepriv</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;depriv_HL&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">frac</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">replace</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># put two dataframes in a list as input to</span>
+<span class="c1"># pd.concat</span>
+
+<span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="n">visits</span><span class="p">,</span> <span class="n">shuffled_depriv</span><span class="p">]</span>
+
+<span class="c1"># combine two columns</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="set-up-the-simulation-in-python">
+<h2>Set up the simulation in python<a class="headerlink" href="#set-up-the-simulation-in-python" title="Link to this heading">#</a></h2>
+<p><strong>Step 1:</strong> Shuffle the column <code class="docutils literal notranslate"><span class="pre">'depriv_HL'</span></code></p>
+<ul class="simple">
+<li><p>To do this we will use <code class="docutils literal notranslate"><span class="pre">pandas</span></code> <code class="docutils literal notranslate"><span class="pre">sample</span></code> with the following parameters for the sample function:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">frac</span> <span class="pre">=</span> <span class="pre">1</span></code> (sample 100% of values)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replace</span> <span class="pre">=</span> <span class="pre">True</span></code> (we want the same number of <code class="docutils literal notranslate"><span class="pre">High</span></code> <code class="docutils literal notranslate"><span class="pre">Low</span></code> as original sample)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">reset_index(drop</span> <span class="pre">=</span> <span class="pre">True)</span></code> (use the dafault index - row labels in <code class="docutils literal notranslate"><span class="pre">pandas</span></code> so that we can assign shuffled labels to )</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">depriv_HL_shuffle</span> <span class="o">=</span> <span class="n">mhvisitdepriv</span><span class="p">[</span><span class="s1">&#39;depriv_HL&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">frac</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Step 2:</strong> Assign the shuffled labels to the neighbourhoods and compute the mean rate of mental health visits</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">visitrate_low_shuffle</span> <span class="o">=</span> <span class="n">mhvisitdepriv</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">depriv_HL_shuffle</span> <span class="o">==</span> <span class="s1">&#39;High&#39;</span><span class="p">,</span> <span class="s1">&#39;mhvisitrates_mf&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="n">visitrate_high_shuffle</span>  <span class="o">=</span> <span class="n">mhvisitdepriv</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">depriv_HL_shuffle</span> <span class="o">==</span> <span class="s1">&#39;Low&#39;</span><span class="p">,</span> <span class="s1">&#39;mhvisitrates_mf&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Step 3:</strong> Compute the mean difference between the groups</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">visitrate_high_shuffle</span> <span class="o">-</span> <span class="n">visitrate_low_shuffle</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Steps 1 - 3 is an algorithm for computing one simulated value of the mean difference when the null hypothesis is true.</p></li>
+<li><p>Let’s create a function to do Steps 1 - 3 that returns a simulated value of the mean difference (a simulated value of the test statistic).</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">random_shuffle_mean</span><span class="p">():</span>
+    <span class="c1"># step 1</span>
+    <span class="n">depriv_HL_shuffle</span> <span class="o">=</span> <span class="n">mhvisitdepriv</span><span class="p">[</span><span class="s1">&#39;depriv_HL&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">frac</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+    
+    <span class="c1">#step 2</span>
+    <span class="n">visitrate_low_shuffle</span> <span class="o">=</span> <span class="n">mhvisitdepriv</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">depriv_HL_shuffle</span> <span class="o">==</span> <span class="s1">&#39;High&#39;</span><span class="p">,</span> <span class="s1">&#39;mhvisitrates_mf&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+    <span class="n">visitrate_high_shuffle</span>  <span class="o">=</span> <span class="n">mhvisitdepriv</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">depriv_HL_shuffle</span> <span class="o">==</span> <span class="s1">&#39;Low&#39;</span><span class="p">,</span> <span class="s1">&#39;mhvisitrates_mf&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+    
+    <span class="c1">#step 3</span>
+    <span class="n">shuffled_diff</span> <span class="o">=</span> <span class="n">visitrate_high_shuffle</span> <span class="o">-</span> <span class="n">visitrate_low_shuffle</span> 
+    
+    <span class="k">return</span> <span class="n">shuffled_diff</span>    
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">random_shuffle_mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="distribution-of-simulated-values-of-the-mean-difference-assuming-the-null-hypothesis-is-true">
+<h2>Distribution of simulated values of the mean difference assuming the null hypothesis is true<a class="headerlink" href="#distribution-of-simulated-values-of-the-mean-difference-assuming-the-null-hypothesis-is-true" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Statistical tests based on shuffles or permutations of the data are called permutation tests.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shuffled_diffs</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5000</span><span class="p">):</span>
+    <span class="n">shuffled_diffs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">random_shuffle_mean</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">shuffled_diffs</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;grey&#39;</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">observed_mean_difference</span><span class="p">,</span> <span class="n">ymin</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ymax</span> <span class="o">=</span> <span class="mi">1600</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="o">*</span><span class="n">observed_mean_difference</span><span class="p">,</span> <span class="n">ymin</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ymax</span> <span class="o">=</span> <span class="mi">1600</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="p-value">
+<h2>p-value<a class="headerlink" href="#p-value" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Assuming that the null hypothesis is true, the p-value gives a measure of the probability of getting data that are <em>at least</em> as unusual or extreme as the sample data.</p></li>
+<li><p>What does “at least as unusual” mean?</p></li>
+<li><p>An unusual value would be a mean difference (<code class="docutils literal notranslate"><span class="pre">High</span></code> minus <code class="docutils literal notranslate"><span class="pre">Low</span></code>) greater than what we observed or a mean difference (<code class="docutils literal notranslate"><span class="pre">Low</span></code> minus <code class="docutils literal notranslate"><span class="pre">High</span></code>) less than what we observed.</p></li>
+<li><p>Values that are larger than the observed value mean difference (the test statistic) 0.75 (<code class="docutils literal notranslate"><span class="pre">High</span></code> minus <code class="docutils literal notranslate"><span class="pre">Low</span></code>) or smaller than - 0.75 (<code class="docutils literal notranslate"><span class="pre">Low</span></code> minus <code class="docutils literal notranslate"><span class="pre">High</span></code>).</p></li>
+</ul>
+<p>The number of simulated mean differences that are greater than the observed mean difference can be computed using:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rightextreme</span> <span class="o">=</span> <span class="n">shuffled_diffs</span> <span class="o">&gt;=</span> <span class="n">observed_mean_difference</span>
+
+<span class="n">rightextreme</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The number of simulated mean differences that are less than the -1 times observed mean difference can be computed using:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">leftextreme</span> <span class="o">=</span> <span class="n">shuffled_diffs</span> <span class="o">&lt;=</span> <span class="o">-</span><span class="mi">1</span><span class="o">*</span><span class="n">observed_mean_difference</span>
+
+<span class="n">leftextreme</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The proportion of simulations that are unusual or extreme are:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">rightextreme</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">+</span> <span class="n">leftextreme</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span> <span class="o">/</span> <span class="mi">5000</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can also write a function to carry out this computation.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">pvalue2</span><span class="p">(</span><span class="n">shuff_diffs</span><span class="p">,</span> <span class="n">obs_diffs</span><span class="p">):</span>
+    
+    <span class="n">rightextreme_count</span> <span class="o">=</span> <span class="p">(</span><span class="n">shuff_diffs</span> <span class="o">&gt;=</span> <span class="n">obs_diffs</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+    
+    <span class="n">leftextreme_count</span> <span class="o">=</span> <span class="p">(</span><span class="n">shuff_diffs</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">1</span><span class="o">*</span><span class="n">obs_diffs</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+    
+    <span class="n">allextreme</span> <span class="o">=</span> <span class="n">rightextreme_count</span> <span class="o">+</span> <span class="n">leftextreme_count</span>
+    
+    <span class="n">pval</span> <span class="o">=</span> <span class="n">allextreme</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">shuff_diffs</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">pval</span>  
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pvalue2</span><span class="p">(</span><span class="n">shuff_diffs</span> <span class="o">=</span> <span class="n">shuffled_diffs</span><span class="p">,</span> <span class="n">obs_diffs</span> <span class="o">=</span> <span class="n">observed_mean_difference</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>This is called the <strong>P-value</strong>.</p></li>
+<li><p>The entire procedure is often referred to as <strong>significance testing</strong>.</p></li>
+<li><p>None of the permuted 5000 samples resulted in a mean difference more extreme than what we observed.</p></li>
+</ul>
+</section>
+<section id="conclusions">
+<h2>Conclusions<a class="headerlink" href="#conclusions" title="Link to this heading">#</a></h2>
+<p>So, there are two possibilities:</p>
+<ol class="arabic simple">
+<li><p>The null hypothesis of no difference is true, but we have observed a very rare value of the mean difference in our study.</p></li>
+<li><p>The null hypothesis is false, and there is a difference between high and low deprivation.</p></li>
+</ol>
+<p>It’s scientific convention to assume that a small p-value is evidence in favour of 2 (i.e., the null hypothesis is false, and there is evidence of a difference in the means).</p>
+</section>
+<section id="history-of-significance-testing">
+<h2>History of Significance Testing<a class="headerlink" href="#history-of-significance-testing" title="Link to this heading">#</a></h2>
+<p>R.A. Fisher made many scientific contributions including developing significance testing.</p>
+<blockquote>
+<div><p>“<em>He was from an early age a supporter of certain eugenic ideas, and it is for this reason that he has been accused of being a racist and an advocate of forced sterilisation (Evans 2020). His promotion of eugenics has recently caused various organisations to remove his name from awards and dedications of buildings.</em>” (<a class="reference external" href="https://www.nature.com/articles/s41437-020-00394-6">Bodmer et al, 2021</a>)</p>
+</div></blockquote>
+</section>
+<section id="causality">
+<h2>Causality<a class="headerlink" href="#causality" title="Link to this heading">#</a></h2>
+<p>Imagine the following hypothetical scenario:</p>
+<ul class="simple">
+<li><p>you have a headache</p></li>
+<li><p>you take an Aspirin at 11:00 to relieve your pain. your pain goes away after 30 minutes.</p></li>
+</ul>
+<p>Now, you go back in time to 11:00 …</p>
+<ul class="simple">
+<li><p>you don’t take an Aspirin at 11:00 to relieve your pain. your pain goes away after 48 minutes.</p></li>
+</ul>
+<p>The <strong>causal effect</strong> of taking an Aspirin is 18 minutes (48 minutes - 30 minutes).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%HTML</span>
+
+<span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;560&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;315&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://www.youtube.com/embed/Da-Mizk86AE&quot;</span> 
+<span class="na">title</span><span class="o">=</span><span class="s">&quot;YouTube video player&quot;</span> <span class="na">frameborder</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">allow</span><span class="o">=</span><span class="s">&quot;accelerometer; autoplay; clipboard-write; </span>
+<span class="s">encrypted-media; gyroscope; picture-in-picture; web-share&quot;</span> <span class="na">allowfullscreen</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="potential-outcomes-and-randomized-control-trials">
+<h2>Potential outcomes and randomized control trials<a class="headerlink" href="#potential-outcomes-and-randomized-control-trials" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Establishing causality involves comparing these <strong>potential outcomes</strong>.</p></li>
+</ul>
+<ul class="simple">
+<li><p>The problem is that we can never observe both taking an Aspirin and not taking as Aspirin (in the same person at the same time under the same conditions).</p></li>
+</ul>
+<ul class="simple">
+<li><p>A close approximation to comparing potential outcomes is to compare two groups of people that are similar on average (age, sex, income, etc.) except one group is allowed to take Aspirin after a headache and the other group takes a fake Aspirin (sugar pill/placebo) after a headache.  This is an example of a randomized control trial.</p></li>
+</ul>
+<ul class="simple">
+<li><p>Then the mean difference between time to pain relief should be due to Aspirin and not other factors related to why people may or may not take an Aspirin.</p></li>
+</ul>
+</section>
+<section id="does-material-deprivation-cause-increases-in-mental-health-visits">
+<h2>Does Material Deprivation Cause increases in mental health visits?<a class="headerlink" href="#does-material-deprivation-cause-increases-in-mental-health-visits" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Neighbourhoods can’t be randomly assigned to high or low deprivationdepravity, like people could be randomized to take a real or fake Aspirin.</p></li>
+<li><p>There could be many other factors related to why a neighbourhood has a low or high deprivation score.</p></li>
+<li><p>This mean that when we are comparing neighbourhoods with low deprivation to high deprivation the differences in a certain outcome such as mental health visit rates could be due to factors other than deprivation such as genetic or environmental factors that are associated with mental illness, but happen to be more or less prevalent in one of the deprivation groups.</p></li>
+</ul>
+</section>
+<section id="just-in-case-you-have-seen-a-two-sample-t-test">
+<h2>Just in case you have seen a two-sample t-test …<a class="headerlink" href="#just-in-case-you-have-seen-a-two-sample-t-test" title="Link to this heading">#</a></h2>
+<p>This is similar to a two-sample t-test (we won’t cover in this course except here) except not as flexible.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
+
+<span class="n">mhvisits_low</span> <span class="o">=</span> <span class="n">mhvisitdepriv</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">mhvisitdepriv</span><span class="p">[</span><span class="s1">&#39;depriv_HL&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Low&#39;</span><span class="p">,</span> <span class="s1">&#39;mhvisitrates_mf&#39;</span><span class="p">]</span>
+
+<span class="n">mhvisits_high</span> <span class="o">=</span> <span class="n">mhvisitdepriv</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">mhvisitdepriv</span><span class="p">[</span><span class="s1">&#39;depriv_HL&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;High&#39;</span><span class="p">,</span> <span class="s1">&#39;mhvisitrates_mf&#39;</span><span class="p">]</span>
+
+<span class="n">statistic</span><span class="p">,</span> <span class="n">pvalue</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">ttest_ind</span><span class="p">(</span><span class="n">mhvisits_high</span><span class="p">,</span> <span class="n">mhvisits_low</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The p-value from the two-sample t-test is: &#39;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">pvalue</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The two-sample t-test involves:</p>
+<ol class="arabic simple">
+<li><p>Computing <span class="math notranslate nohighlight">\(t_{\text observed} = \frac{\bar{x_{\text Low}} - \bar{x_{\text High}}}{SD}\)</span>, where <span class="math notranslate nohighlight">\(SD\)</span> is an estimate of the standard deviation of the mean difference.</p></li>
+<li><p>Computing the p-value using <span class="math notranslate nohighlight">\(t_{\text observed}\)</span> and the appropriate <span class="math notranslate nohighlight">\(t\)</span>-distribution.</p></li>
+<li><p>Assessing several statistical assumptions about the data to ensure the accuracy of the p-value.</p></li>
+</ol>
+</section>
+<section id="review-of-this-class">
+<h2>Review of this class<a class="headerlink" href="#review-of-this-class" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Comparing two samples by simulating the distribution of a test statistic (e.g., the difference in two means) assuming the null hypothesis is true (i.e., there is no difference in the means).</p></li>
+<li><p>Simulated the values of the test statistic when the null hypothesis is true we:</p>
+<ul>
+<li><p>Stated the null and alternative hypotheses.</p></li>
+<li><p>Randomly shuffled the group labels (e.g., high/low deprivation)</p></li>
+<li><p>Calculated the test statistic in the shuffled data set</p></li>
+<li><p>Repeat the previous three steps a large number of times (e.g., 5,000)</p></li>
+</ul>
+</li>
+<li><p>Compute the p-value as a measure of how consistent the data are with the null hypothesis.</p></li>
+<li><p>The p-value is computed by summing the number of simulated values that are more extreme in the positive or negative direction.</p></li>
+<li><p>If the p-value is small then the data are inconsistent with the null hypothesis and there is evidence in support of the alternative hypothesis.</p></li>
+<li><p>A small p-value may not be <strong>causal</strong> evidence that for the alternative hypothesis unless random assignment was used part of the study design.</p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./weekly-materials/week08/lecture"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../../week07/homework/Homework_7.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">GG274 Homework 7: Summary Statistics, Histograms and Simulation</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../lab/Lab_8.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">GGR274 Lab 8: Project Proposal and Comparing Two-samples</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mar-5-2024">Mar. 5, 2024</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sampling-from-a-population">Sampling from a Population</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#empirical-distribution-of-the-sample">Empirical Distribution of the Sample</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive-exploration-of-empirical-distribution-of-a-sample">Interactive exploration of empirical distribution of a sample</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions">Questions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#empirical-distribution-of-a-statistic">Empirical Distribution of a Statistic</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#statistical-parameter">Statistical Parameter</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#statistic">Statistic</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simulating-a-statistic">Simulating a Statistic</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Empirical Distribution of a Statistic</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-can-we-learn-from-simulation">What can we learn from simulation?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#models">Models</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#goals-of-data-science">Goals of Data Science</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jury-selection">Jury Selection</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-model-of-random-selection">A model of random selection</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1-rolling-a-six-sided-die-20-times">Example 1: rolling a six-sided die 20 times</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2-rolling-a-loaded-six-side-100-times-more-likely-to-land-on-6-repeated-3-times">Example 2: rolling a loaded six-side 100 times more likely to land on 6 - repeated 3 times</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-side-note-on-indexing-a-pandas-dataframe">Quick side note on Indexing a <code class="docutils literal notranslate"><span class="pre">pandas</span></code> <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#back-to-simulation-simulate-one-value">Back to simulation … Simulate one value</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simulate-multiple-values">Simulate multiple values</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion-of-the-data-analysis">Conclusion of the data analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparing-two-samples">Comparing two samples</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#are-mental-health-visit-rates-higher-in-toronto-neighbourhoods-with-higher-material-deprivation">Are mental health visit rates higher in Toronto Neighbourhoods with higher material deprivation?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-wrangling">Data wrangling</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#neighbourhood-deprivation-scores">Neighbourhood deprivation scores</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rename-the-columns-of-depriv">Rename the columns of  <code class="docutils literal notranslate"><span class="pre">depriv</span> </code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mental-health-visit-rates">Mental health visit rates</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#merging-mental-health-visits-and-deprivation-score">Merging mental health visits and deprivation score</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#do-neighbourhoods-with-high-deprivation-have-more-mental-health-visits-compared-to-neighbourhoods-with-low-deprivation">Do Neighbourhoods with high deprivation have more mental health visits compared to Neighbourhoods with low deprivation?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-logic-of-hypothesis-testing">The Logic of Hypothesis Testing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hypotheses">1. Hypotheses</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-statistic">2. Test statistic</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#simulate-what-the-null-hypothesis-predicts-will-happen">3. Simulate what the null hypothesis predicts will happen</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shuffling">Shuffling</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quiz">Quiz</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#random-shuffling">Random shuffling</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#set-up-the-simulation-in-python">Set up the simulation in python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#distribution-of-simulated-values-of-the-mean-difference-assuming-the-null-hypothesis-is-true">Distribution of simulated values of the mean difference assuming the null hypothesis is true</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#p-value">p-value</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusions">Conclusions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#history-of-significance-testing">History of Significance Testing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#causality">Causality</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#potential-outcomes-and-randomized-control-trials">Potential outcomes and randomized control trials</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#does-material-deprivation-cause-increases-in-mental-health-visits">Does Material Deprivation Cause increases in mental health visits?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#just-in-case-you-have-seen-a-two-sample-t-test">Just in case you have seen a two-sample t-test …</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#review-of-this-class">Review of this class</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By GGR274 Instructors
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
