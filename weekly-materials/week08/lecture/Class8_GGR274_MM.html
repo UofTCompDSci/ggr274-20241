@@ -464,9 +464,6 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-wrangling">Data wrangling</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#neighbourhood-deprivation-scores">Neighbourhood deprivation scores</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rename-the-columns-of-depriv">Rename the columns of  <code class="docutils literal notranslate"><span class="pre">depriv</span> </code></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mental-health-visit-rates">Mental health visit rates</a></li>
 </ul>
 </li>
@@ -754,7 +751,9 @@ A fundamental consideration in using any statistic based on a random sample is t
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create bins of length 0.1 </span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="c1"># create bins of length 0.1 </span>
 <span class="c1"># starting at 0.5 and ending at 1.1</span>
 
 <span class="n">median_bins</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span> 
@@ -870,7 +869,7 @@ A fundamental consideration in using any statistic based on a random sample is t
 <span class="n">num_simulations</span> <span class="o">=</span> <span class="mi">1</span>
 
 <span class="c1"># probability of each side</span>
-<span class="n">true_probabilities</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="o">/</span><span class="mi">6</span><span class="p">]</span><span class="o">*</span><span class="mi">6</span>
+<span class="n">true_probabilities</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span> <span class="o">/</span> <span class="mi">6</span><span class="p">]</span> <span class="o">*</span> <span class="mi">6</span>
 
 <span class="c1"># number of times each side appears</span>
 <span class="n">counts</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">multinomial</span><span class="p">(</span><span class="n">sample_size</span><span class="p">,</span> <span class="n">true_probabilities</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="n">num_simulations</span><span class="p">)</span>
@@ -899,7 +898,7 @@ A fundamental consideration in using any statistic based on a random sample is t
 
 <span class="n">num_simulations</span> <span class="o">=</span> <span class="mi">3</span>
 
-<span class="n">true_probabilities</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="o">/</span><span class="mi">7</span><span class="p">]</span><span class="o">*</span><span class="mi">5</span> <span class="o">+</span> <span class="p">[</span><span class="mi">2</span><span class="o">/</span><span class="mi">7</span><span class="p">]</span>
+<span class="n">true_probabilities</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span> <span class="o">/</span> <span class="mi">7</span><span class="p">]</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">+</span> <span class="p">[</span><span class="mi">2</span> <span class="o">/</span> <span class="mi">7</span><span class="p">]</span>
 
 <span class="n">counts</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">multinomial</span><span class="p">(</span><span class="n">sample_size</span><span class="p">,</span> <span class="n">true_probabilities</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="n">num_simulations</span><span class="p">)</span>
 
@@ -1058,7 +1057,7 @@ A fundamental consideration in using any statistic based on a random sample is t
          <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;grey&#39;</span><span class="p">,</span> <span class="n">density</span> <span class="o">=</span> <span class="kc">True</span><span class="p">);</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Count in random sample&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Frequency&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span><span class="mi">50</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">150</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
@@ -1190,10 +1189,7 @@ A fundamental consideration in using any statistic based on a random sample is t
 </div>
 </div>
 </div>
-</section>
-</section>
-<section id="rename-the-columns-of-depriv">
-<h2>Rename the columns of  <code class="docutils literal notranslate"><span class="pre">depriv</span> </code><a class="headerlink" href="#rename-the-columns-of-depriv" title="Link to this heading">#</a></h2>
+<p>Rename the columns of  <code class="docutils literal notranslate"><span class="pre">depriv</span> </code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">colnames</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Neighb id &#39;</span><span class="p">:</span> <span class="s1">&#39;Neighbid&#39;</span><span class="p">,</span>
@@ -1214,6 +1210,7 @@ A fundamental consideration in using any statistic based on a random sample is t
 </div>
 </div>
 </div>
+</section>
 <section id="mental-health-visit-rates">
 <h3>Mental health visit rates<a class="headerlink" href="#mental-health-visit-rates" title="Link to this heading">#</a></h3>
 <ul class="simple">
@@ -1648,17 +1645,6 @@ A fundamental consideration in using any statistic based on a random sample is t
 <li><p>you don’t take an Aspirin at 11:00 to relieve your pain. your pain goes away after 48 minutes.</p></li>
 </ul>
 <p>The <strong>causal effect</strong> of taking an Aspirin is 18 minutes (48 minutes - 30 minutes).</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%HTML</span>
-
-<span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;560&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;315&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://www.youtube.com/embed/Da-Mizk86AE&quot;</span> 
-<span class="na">title</span><span class="o">=</span><span class="s">&quot;YouTube video player&quot;</span> <span class="na">frameborder</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">allow</span><span class="o">=</span><span class="s">&quot;accelerometer; autoplay; clipboard-write; </span>
-<span class="s">encrypted-media; gyroscope; picture-in-picture; web-share&quot;</span> <span class="na">allowfullscreen</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
-</pre></div>
-</div>
-</div>
-</div>
 </section>
 <section id="potential-outcomes-and-randomized-control-trials">
 <h2>Potential outcomes and randomized control trials<a class="headerlink" href="#potential-outcomes-and-randomized-control-trials" title="Link to this heading">#</a></h2>
@@ -1819,9 +1805,6 @@ A fundamental consideration in using any statistic based on a random sample is t
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-wrangling">Data wrangling</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#neighbourhood-deprivation-scores">Neighbourhood deprivation scores</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rename-the-columns-of-depriv">Rename the columns of  <code class="docutils literal notranslate"><span class="pre">depriv</span> </code></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mental-health-visit-rates">Mental health visit rates</a></li>
 </ul>
 </li>
