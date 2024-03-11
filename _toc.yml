@@ -144,11 +144,11 @@ parts:
 
   - caption: Week 9
     chapters:
-    # - file: weekly-materials/week09/lecture/Class9_GGR274_CL.ipynb
-      # title: Prof. Li's Notebook
+    - file: weekly-materials/week09/lecture/Class9_GGR274_CL.ipynb
+      title: Prof. Li's Notebook
     - file: weekly-materials/week09/lab/Lab_9.ipynb
       title: Lab 09 Notebook
-    # - file: weekly-materials/week09/homework/Homework_9.ipynb
-      # title: Homework 09 Notebook
+    - file: weekly-materials/week09/homework/Homework_9.ipynb
+      title: Homework 09 Notebook
     # - file: weekly-materials/week09/homework/marking/Homework_9_solution.ipynb.ipynb
       # title: Homework 09 Solutions
