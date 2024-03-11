@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Homework 5 &#8212; Computation and Data Science for Social Sciences</title>
+    <title>GGR274 Lab 9: Project proposal feedback, data pre-processing &#8212; Computation and Data Science for Social Sciences</title>
   
   
   
@@ -57,12 +57,11 @@
     <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'weekly-materials/week05/homework/Homework_5';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'weekly-materials/week09/lab/Lab_9';</script>
     <link rel="icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Homework 5" href="marking/Homework_5_solution.html" />
-    <link rel="prev" title="GGR274 Lab 5: Data Transformations, Grouped Data, and Data Visualization" href="../lab/Lab_5_solutions.html" />
+    <link rel="prev" title="GG274 Homework 8: Hypothesis Testing" href="../../week08/homework/Homework_8.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -219,12 +218,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../../week04/homework/marking/Homework_4_solution.html">Homework 04 Solutions</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 5</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../lecture/Class5_GGR274_MM.html">Prof. Moon's Notebook</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lab/Lab_5.html">Lab 05 Notebook</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lab/Lab_5_solutions.html">Lab 05 Solutions</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Homework 05 Notebook</a></li>
-<li class="toctree-l1"><a class="reference internal" href="marking/Homework_5_solution.html">Homework 05 Solutions</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../week05/lecture/Class5_GGR274_MM.html">Prof. Moon's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week05/lab/Lab_5.html">Lab 05 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week05/lab/Lab_5_solutions.html">Lab 05 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week05/homework/Homework_5.html">Homework 05 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week05/homework/marking/Homework_5_solution.html">Homework 05 Solutions</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Practice Midterm</span></p>
 <ul class="nav bd-sidenav">
@@ -258,8 +257,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../../week08/homework/Homework_8.html">Homework 08 Notebook</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 9</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../week09/lab/Lab_9.html">Lab 09 Notebook</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lab 09 Notebook</a></li>
 </ul>
 
     </div>
@@ -314,7 +313,7 @@
       
       
       
-      <li><a href="https://jupyter.utoronto.ca/hub/user-redirect/git-pull?repo=https%3A//github.com/UofTCompDSci/ggr274-20241&urlpath=tree/ggr274-20241/weekly-materials/week05/homework/Homework_5.ipynb&branch=main" target="_blank"
+      <li><a href="https://jupyter.utoronto.ca/hub/user-redirect/git-pull?repo=https%3A//github.com/UofTCompDSci/ggr274-20241&urlpath=tree/ggr274-20241/weekly-materials/week09/lab/Lab_9.ipynb&branch=main" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onJupyterHub"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -345,7 +344,7 @@
       
       
       
-      <li><a href="../../../_sources/weekly-materials/week05/homework/Homework_5.ipynb" target="_blank"
+      <li><a href="../../../_sources/weekly-materials/week09/lab/Lab_9.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -429,7 +428,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Homework 5</h1>
+    <h1>GGR274 Lab 9: Project proposal feedback, data pre-processing</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -440,13 +439,8 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logistics">Logistics</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1">Task 1</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-2">Task 2</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-3">Task 3</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-4">Task 4</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-5">Task 5</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-6-written-discussion">Task 6 (Written Discussion)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lab-9-introduction">Lab 9 Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#let-s-start">Let’s start!</a></li>
 </ul>
             </nav>
         </div>
@@ -458,215 +452,82 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="homework-5">
-<h1>Homework 5<a class="headerlink" href="#homework-5" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="ggr274-lab-9-project-proposal-feedback-data-pre-processing">
+<h1>GGR274 Lab 9: Project proposal feedback, data pre-processing<a class="headerlink" href="#ggr274-lab-9-project-proposal-feedback-data-pre-processing" title="Link to this heading">#</a></h1>
 <section id="logistics">
 <h2>Logistics<a class="headerlink" href="#logistics" title="Link to this heading">#</a></h2>
-<p><strong>Due date</strong>: The homework is due 23:59 on Monday, February 12.</p>
-<p>You will submit your work on <a class="reference external" href="https://markus-ds.teach.cs.toronto.edu">MarkUs</a>.
-To submit your work:</p>
+<p>Like previous weeks, our lab grade will be based on attendance and submission of this notebook to MarkUs during the lab session (or by 23:59 on Thursday).</p>
+<p>You do not have to answer every question, but your notebook should be submitted as usual for attendance. Submit your completed file to <a class="reference external" href="https://markus-ds.teach.cs.toronto.edu">MarkUs</a>.
+Here are the instructions for submitting to MarkUs (same as last week):</p>
 <ol class="arabic simple">
-<li><p>Download this file (<code class="docutils literal notranslate"><span class="pre">Homework_5.ipynb</span></code>) from JupyterHub. (See <a class="reference internal" href="../../../guides/jupyterhub_guide.html"><span class="std std-doc">our JupyterHub Guide</span></a> for detailed instructions.)</p></li>
-<li><p>Submit this file to MarkUs under the <strong>hw5</strong> assignment. (See <a class="reference internal" href="../../../guides/markus_guide.html"><span class="std std-doc">our MarkUs Guide</span></a> for detailed instructions.)
-All homeworks will take place in a Jupyter notebook (like this one). When you are done, you will download this notebook and submit it to MarkUs.</p></li>
+<li><p>Download this file (<code class="docutils literal notranslate"><span class="pre">Lab_9.ipynb</span></code>) from JupyterHub. (See <a class="reference internal" href="../../../guides/jupyterhub_guide.html"><span class="std std-doc">our JupyterHub Guide</span></a> for detailed instructions.)</p></li>
+<li><p>Submit this file to MarkUs under the <strong>lab9</strong> assignment. (See <a class="reference internal" href="../../../guides/markus_guide.html"><span class="std std-doc">our MarkUs Guide</span></a> for detailed instructions.)</p></li>
 </ol>
+<p>Note: there’s no autograding set up for this week’s lab, but your TA will be checking that your submitted lab file is complete as part of your “lab attendance” grade.</p>
 </section>
-<section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
-<p>In this homework we explore:</p>
-<ul class="simple">
-<li><p>row, column selection</p></li>
-<li><p>create new columns</p></li>
-<li><p>grouping</p></li>
-<li><p>summary statistics</p></li>
-<li><p>visualizing distributions</p></li>
-</ul>
-<p><strong>Question:</strong> Explore sleeping, exercising, and socializing among Canadians.</p>
+<section id="lab-9-introduction">
+<h2>Lab 9 Introduction<a class="headerlink" href="#lab-9-introduction" title="Link to this heading">#</a></h2>
+<p>This lab is intended to give you some structured work time for your project. Since your projects are all different, there are no prescribed tasks in this lab, instead, the questions in this lab are designed to encourage you to think deeper on which functions you will use to start your data preprocessing. Futhermore, your TA will give you feedback on your project proposals which you can note down here to refer back to later.</p>
+<p>What you write in this and the following labs are for your own reference. You may answer the questions in either words or code, but whenever possible, you should give the function you intend to use. This will help you think about your project.</p>
 </section>
-<section id="task-1">
-<h2>Task 1<a class="headerlink" href="#task-1" title="Link to this heading">#</a></h2>
-<p>a) Use the <code class="docutils literal notranslate"><span class="pre">pandas</span></code> method <code class="docutils literal notranslate"><span class="pre">read_csv</span></code> to read the file <code class="docutils literal notranslate"><span class="pre">gss_tu2016_main_file.csv</span></code> into a DataFrame.  Store this <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> in a variable called <code class="docutils literal notranslate"><span class="pre">time_use_df</span></code>.</p>
+<section id="let-s-start">
+<h2>Let’s start!<a class="headerlink" href="#let-s-start" title="Link to this heading">#</a></h2>
+<p>What are the strengths and weaknesses of your project proposal? Are there potential issues raised by your TA? Feel free to discuss with your fellow classmates.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-
-<span class="c1"># Write your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your notes here using comments</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>b) Create a subset of <code class="docutils literal notranslate"><span class="pre">time_use_df</span></code> with only the following columns: <code class="docutils literal notranslate"><span class="pre">dur41</span></code>, <code class="docutils literal notranslate"><span class="pre">dur47</span></code>, <code class="docutils literal notranslate"><span class="pre">sleepdur</span></code>, <code class="docutils literal notranslate"><span class="pre">agegr10</span></code>, <code class="docutils literal notranslate"><span class="pre">prv</span></code>.  To do this follow these steps:</p>
-<ul class="simple">
-<li><p>Create a list called <code class="docutils literal notranslate"><span class="pre">analysis_columns</span></code> with the column names.</p></li>
-<li><p>Use <code class="docutils literal notranslate"><span class="pre">analysis_columns</span></code> to select these columns from <code class="docutils literal notranslate"><span class="pre">time_use_df</span></code> and store this <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> in a variable called <code class="docutils literal notranslate"><span class="pre">time_use_subset_df</span></code>.</p></li>
-</ul>
+<p>What functions will you use to import your data?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your notes here using comments</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>c) In the next steps you will rename the columns of <code class="docutils literal notranslate"><span class="pre">time_use_subset_df</span></code> according to the following table:</p>
-<table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Old name</p></th>
-<th class="head"><p>New name</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">dur41</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">Socializing</span> <span class="pre">time</span></code></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">dur47</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">Exercising</span> <span class="pre">time</span></code></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">sleepdur</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">Sleep</span> <span class="pre">time</span></code></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">agegr10</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">Age</span> <span class="pre">group</span></code></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">prv</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">Province</span></code></p></td>
-</tr>
-</tbody>
-</table>
-<p>Step 1: Create a dictionary called <code class="docutils literal notranslate"><span class="pre">new_col_names</span></code> with each <em>Old name</em> as a key and each <em>New name</em> as the corresponding value.</p>
+<p>Do you have any missing values? If so, how do you plan to analyze rows/columns with missing values?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your notes here using comments</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>Step 2: Use <code class="docutils literal notranslate"><span class="pre">new_col_names</span></code> to rename the columns of <code class="docutils literal notranslate"><span class="pre">time_use_subset_df</span></code> and store the DataFrame with renamed columns in a variable called <code class="docutils literal notranslate"><span class="pre">time_use_subset_renamed_df</span></code>.</p>
+<p>Which variables/columns will you use for your analysis? What function will you use to select those variables/columns?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your notes here using comments</span>
 </pre></div>
 </div>
 </div>
 </div>
-</section>
-<section id="task-2">
-<h2>Task 2<a class="headerlink" href="#task-2" title="Link to this heading">#</a></h2>
-<p>Create columns in <code class="docutils literal notranslate"><span class="pre">time_use_subset_renamed_df</span></code> that converts time use from minutes to hours.  Since 60 minutes is equal to 1 hour we can divide the time use columns by 60 to compute the time in hours.</p>
-<p>To do this create new columns in <code class="docutils literal notranslate"><span class="pre">time_use_subset_renamed_df</span></code> called</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">Socializing</span> <span class="pre">time</span> <span class="pre">(hour)</span></code>,</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Exercising</span> <span class="pre">time</span> <span class="pre">(hour)</span></code>, and</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Sleep</span> <span class="pre">time</span> <span class="pre">(hour)</span></code></p></li>
-</ul>
-<p>these columns are (respectively) <code class="docutils literal notranslate"><span class="pre">Socializing</span> <span class="pre">time</span></code>, <code class="docutils literal notranslate"><span class="pre">Exercising</span> <span class="pre">time</span></code>, and <code class="docutils literal notranslate"><span class="pre">Sleep</span> <span class="pre">time</span></code> in hours.</p>
+<p>Do you need to filter your data for specific conditions? If so, what are those conditions?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your notes here using comments</span>
 </pre></div>
 </div>
 </div>
 </div>
-</section>
-<section id="task-3">
-<h2>Task 3<a class="headerlink" href="#task-3" title="Link to this heading">#</a></h2>
-<p>Some respondents in the time use survey spent no time exercising, socializing, and sleeping.  In this section we will create a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> that only has respondents who spent time sleeping, exercising, and socializing.  In other words respondents that spent no time on these activities will be excluded.</p>
-<p>a) Create a boolean <code class="docutils literal notranslate"><span class="pre">Series</span></code> called <code class="docutils literal notranslate"><span class="pre">well_balanced</span></code> that is <code class="docutils literal notranslate"><span class="pre">True</span></code> if time spent exercising <strong>and</strong> time spent sleeping <strong>and</strong> time spent socializing are all greater than 0, and <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise.</p>
+<p>Do you plan to create new variable(s) based on existing data? How will you create the new variable(s)?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your notes here using comments</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>b) Use <code class="docutils literal notranslate"><span class="pre">well_balanced</span></code> to filter (i.e. select) the rows of <code class="docutils literal notranslate"><span class="pre">time_use_subset_renamed_df</span></code> where respondents had non-zero times of sleeping, exercising, and socializing.  Store this filtered DataFrame in <code class="docutils literal notranslate"><span class="pre">well_balanced_df</span></code>.</p>
+<p>Create a barplot of a column of your data to explore its shape (refer to <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.bar.html">documentation</a>). Does your distribution look like a normal distribution? If not, how might this information impact your analysis?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your notes here using comments</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>c) The number of rows in a <code class="docutils literal notranslate"><span class="pre">pandas</span></code> <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> can be computed by <code class="docutils literal notranslate"><span class="pre">len()</span></code>.  For example, <code class="docutils literal notranslate"><span class="pre">len(well_balanced_df)</span></code> is the number of rows in <code class="docutils literal notranslate"><span class="pre">well_balanced_df</span></code>.  Compute the number of respondents who were <em>removed</em> from <code class="docutils literal notranslate"><span class="pre">time_use_subset_renamed_df</span></code> when it was filtered using <code class="docutils literal notranslate"><span class="pre">well_balanced</span></code> and store this number in a variable called <code class="docutils literal notranslate"><span class="pre">diff</span></code>.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>d) Use <code class="docutils literal notranslate"><span class="pre">diff</span></code> to compute the percentage of respondents removed from <code class="docutils literal notranslate"><span class="pre">time_use_subset_renamed_df</span></code>. Round the percentage to two decimal places, and store the result value in a variable called <code class="docutils literal notranslate"><span class="pre">pct_lost</span></code>.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="task-4">
-<h2>Task 4<a class="headerlink" href="#task-4" title="Link to this heading">#</a></h2>
-<p>In this section you will explore the distributions of time spent socializing, exercising, and sleeping by age group and province.</p>
-<p>a) Compute the mean hours spent sleeping, socializing, and exercising by age group using <code class="docutils literal notranslate"><span class="pre">.groupby</span></code> on <code class="docutils literal notranslate"><span class="pre">well_balanced_df</span></code>.  Store this DataFrame in a variable called <code class="docutils literal notranslate"><span class="pre">group_means</span></code>.</p>
-<p>b) Create a new column in <code class="docutils literal notranslate"><span class="pre">group_means</span></code> called <code class="docutils literal notranslate"><span class="pre">Total</span> <span class="pre">time</span> <span class="pre">(hour)</span></code> that is the sum of the time (in hours) spent sleeping, exercising, and socializing.</p>
-<p>c) Create a new index for <code class="docutils literal notranslate"><span class="pre">group_means</span></code> using the labels of Age group found in the code book (<code class="docutils literal notranslate"><span class="pre">gss_tu2016_codebook.txt</span></code>) and store the values in a list called <code class="docutils literal notranslate"><span class="pre">index_new</span></code>.</p>
-<p>d) Change the index of <code class="docutils literal notranslate"><span class="pre">group_means</span></code> to correspond to <code class="docutils literal notranslate"><span class="pre">index_new</span></code>.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here</span>
-
-
-<span class="c1"># Display group_means to check that the index has been updated.</span>
-<span class="c1"># On the left-hand side you should see the Age group labels, from &quot;15-24&quot; to &quot;75+&quot;.</span>
-<span class="n">group_means</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>e) Sort <code class="docutils literal notranslate"><span class="pre">group_means</span></code> in descending order of <code class="docutils literal notranslate"><span class="pre">Total</span> <span class="pre">time</span> <span class="pre">(hour)</span></code>.  Store this sorted <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> in a variable called <code class="docutils literal notranslate"><span class="pre">group_means_sorted</span></code></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>f) Use <code class="docutils literal notranslate"><span class="pre">well_balanced_df</span></code> to create three side-by-side boxplots using <code class="docutils literal notranslate"><span class="pre">layout</span> <span class="pre">=</span> <span class="pre">(1,</span> <span class="pre">3)</span></code> and <code class="docutils literal notranslate"><span class="pre">figsize</span> <span class="pre">=</span> <span class="pre">(20,</span> <span class="pre">10)</span></code> of time spent (in hours) socializing, exercising, and sleeping for each age group. Store these boxplots in a variable called <code class="docutils literal notranslate"><span class="pre">time_boxplots</span></code>.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="task-5">
-<h2>Task 5<a class="headerlink" href="#task-5" title="Link to this heading">#</a></h2>
-<p>The tick marks on the horizontal axes of <code class="docutils literal notranslate"><span class="pre">time_boxplots</span></code> are not informative unless the viewer knows which age group each value represents.  Fix labels of boxplot by recoding <code class="docutils literal notranslate"><span class="pre">Age</span> <span class="pre">group</span></code> using the labels in the code book (see <code class="docutils literal notranslate"><span class="pre">gss_tu2016_codebook.txt</span></code>).</p>
-<p>a) First, create a copy of <code class="docutils literal notranslate"><span class="pre">well_balanced_df</span></code> (using the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> <code class="docutils literal notranslate"><span class="pre">.copy()</span></code> method), and store it in a variable called <code class="docutils literal notranslate"><span class="pre">well_balanced_age_label_df</span></code>. For that new <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>, recode <code class="docutils literal notranslate"><span class="pre">Age</span> <span class="pre">group</span></code> by adding a column called <code class="docutils literal notranslate"><span class="pre">Age</span> <span class="pre">group</span> <span class="pre">label</span></code> with the Age group labels found in the code book.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>b) Create the same boxplots as in Task 4 f) using <code class="docutils literal notranslate"><span class="pre">layout</span> <span class="pre">=</span> <span class="pre">(1,</span> <span class="pre">3)</span></code> and <code class="docutils literal notranslate"><span class="pre">figsize</span> <span class="pre">=</span> <span class="pre">(20,</span> <span class="pre">10)</span></code>, but use <code class="docutils literal notranslate"><span class="pre">Age</span> <span class="pre">group</span> <span class="pre">label</span></code> to create the boxplot, so that the ticks on horizontal axes of the boxplot are informative. Store this boxplot in a variable called <code class="docutils literal notranslate"><span class="pre">time_boxplots_age_label</span></code>.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="task-6-written-discussion">
-<h2>Task 6 (Written Discussion)<a class="headerlink" href="#task-6-written-discussion" title="Link to this heading">#</a></h2>
-<p>a) Which age group spends the most time sleeping, exercising, and socializing?  Does your ranking change if you use mean or median as a summary measure of time?  Briefly explain why or why not your ranking changes, and which ranking is the best representation.</p>
-<p>b) Which age group shows the most variability in time spent socializing?  Provide a brief explanation of why this group shows the most variability.</p>
-<p>c) State one limitations of basing this data analysis on only respondents that spent more than zero time sleeping, exercising, and socializing.  Briefly explain why it’s a limitation to your findings in Tasks 4 and 5.</p>
-<blockquote>
-<div><p><em>Answer Task 6 here.</em></p>
-</div></blockquote>
 </section>
 </section>
 
@@ -683,7 +544,7 @@ All homeworks will take place in a Jupyter notebook (like this one). When you ar
         },
         kernelOptions: {
             name: "python3",
-            path: "./weekly-materials/week05/homework"
+            path: "./weekly-materials/week09/lab"
         },
         predefinedOutput: true
     }
@@ -701,22 +562,13 @@ All homeworks will take place in a Jupyter notebook (like this one). When you ar
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../lab/Lab_5_solutions.html"
+       href="../../week08/homework/Homework_8.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">GGR274 Lab 5: Data Transformations, Grouped Data, and Data Visualization</p>
+        <p class="prev-next-title">GG274 Homework 8: Hypothesis Testing</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="marking/Homework_5_solution.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Homework 5</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -735,13 +587,8 @@ All homeworks will take place in a Jupyter notebook (like this one). When you ar
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logistics">Logistics</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1">Task 1</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-2">Task 2</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-3">Task 3</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-4">Task 4</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-5">Task 5</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-6-written-discussion">Task 6 (Written Discussion)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lab-9-introduction">Lab 9 Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#let-s-start">Let’s start!</a></li>
 </ul>
   </nav></div>
 
