@@ -151,4 +151,4 @@ parts:
     - file: weekly-materials/week09/homework/Homework_9.ipynb
       title: Homework 09 Notebook
     # - file: weekly-materials/week09/homework/marking/Homework_9_solution.ipynb.ipynb
-      # title: Homework 09 Solutions
+    #   title: Homework 09 Solutions
