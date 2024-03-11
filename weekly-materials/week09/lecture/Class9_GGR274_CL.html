@@ -265,8 +265,6 @@
 
 
 
-
-
 <li class="toctree-l1"><a class="reference internal" href="../lab/Lab_9.html">Lab 09 Notebook</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../homework/Homework_9.html">Homework 09 Notebook</a></li>
 </ul>
@@ -460,25 +458,28 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-bootstrap-confidence-intervals-to-compare-samples">Using Bootstrap confidence intervals to compare samples</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#do-people-with-no-children-under-14-spend-more-time-resting">Do people with no children under 14 spend more time resting?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hypothesis-testing">Hypothesis testing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-divide-the-samples-with-two-subsamples-with-and-without-children">Step 1: divide the samples with two subsamples (with and without children)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-create-a-function-to-create-one-bootstrap-sample-of-the-mean-difference">Step 2: Create a function to create one bootstrap sample of the mean difference.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-compute-bootstrap-distribution">Step 3: Compute bootstrap distribution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-obtain-a-95-confidence-interval-for-the-mean-difference">Step 4: obtain a 95% confidence interval for the mean difference</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#in-class-exercise">In-class exercise</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#another-method-to-compare-two-samples-a-review-of-shuffling">Another method to compare two samples (A review of shuffling)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#in-class-exercise">In-class exercise</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#another-method-to-compare-two-samples-a-review-of-shuffling">Another method to compare two samples (A review of shuffling)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Hypothesis testing</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#a-thought-expriement-shuffling-process">A thought expriement: shuffling process</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-shuffling-the-children-label-and-assignment-to-the-samples">Step 1: shuffling the children label and assignment to the samples</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-compute-the-mean-resting-time-difference-between-people-with-and-without-children">Step 2: compute the mean resting time difference between people with and without children</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-repeat-steps-1-and-2-a-large-number-of-times-e-g-5000-to-get-the-distribution-of-mean-differences">Step 3: Repeat Steps 1 and 2 a large number of times (e.g., 5000) to get the distribution of mean differences.</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-compare-the-simulate-mean-differences-to-the-observed-mean-difference-and-calculate-p-value">Step 4: Compare the simulate mean differences to the observed mean difference and calculate p-value</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-interpretation">Step 5: Interpretation</a></li>
 </ul>
 </li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-shuffling-the-children-label-and-assignment-to-the-samples">Step 1: shuffling the children label and assignment to the samples</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-compute-the-mean-resting-time-difference-between-people-with-and-without-children">Step 2: compute the mean resting time difference between people with and without children</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-repeat-steps-1-and-2-a-large-number-of-times-e-g-5000-to-get-the-distribution-of-mean-differences">Step 3: Repeat Steps 1 and 2 a large number of times (e.g., 5000) to get the distribution of mean differences.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-compare-the-simulate-mean-differences-to-the-observed-mean-difference-and-calculate-p-value">Step 4: Compare the simulate mean differences to the observed mean difference and calculate p-value</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-interpretation">Step 5: Interpretation</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#think-about-what-is-the-difference-between-bootstrap-and-shuffling">Think about: what is the difference between bootstrap and shuffling?</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#think-about">Think about:</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-difference-between-bootstrap-and-shuffling">what is the difference between bootstrap and shuffling?</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-regression">Linear Regression</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-idea">Basic idea</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1-perfect-linear-relationship-between-dependent-and-independent-variables">Example 1: perfect linear relationship between dependent and independent variables</a><ul class="nav section-nav flex-column">
@@ -844,6 +845,9 @@ document.write(`
 <ul class="simple">
 <li><p>2a. Alternative hypothesis: People with children with children under 14 have less resting time than the people with no children under 14.</p></li>
 </ul>
+</section>
+<section id="step-1-divide-the-samples-with-two-subsamples-with-and-without-children">
+<h3>Step 1: divide the samples with two subsamples (with and without children)<a class="headerlink" href="#step-1-divide-the-samples-with-two-subsamples-with-and-without-children" title="Link to this heading">#</a></h3>
 <p>Create a new column <code class="docutils literal notranslate"><span class="pre">'Child_in_house'</span></code> that indicates if a child is in the house.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -944,7 +948,9 @@ Mean difference: 16.77919133837969
 <img alt="../../../_images/bddee6e933cf3697f7c432ac3263f8d90ff2049b5c365ab5bc068646968618c4.png" src="../../../_images/bddee6e933cf3697f7c432ac3263f8d90ff2049b5c365ab5bc068646968618c4.png" />
 </div>
 </div>
-<p>Create a function to create one bootstrap sample of the mean difference.</p>
+</section>
+<section id="step-2-create-a-function-to-create-one-bootstrap-sample-of-the-mean-difference">
+<h3>Step 2: Create a function to create one bootstrap sample of the mean difference.<a class="headerlink" href="#step-2-create-a-function-to-create-one-bootstrap-sample-of-the-mean-difference" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">child</span> <span class="o">=</span> <span class="n">restchild_df</span><span class="p">[</span><span class="s1">&#39;Child_in_house&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Yes&#39;</span>
@@ -970,9 +976,9 @@ Mean difference: 16.77919133837969
 </div>
 </div>
 </div>
-<ul class="simple">
-<li><p>Compute bootstrap distribution.</p></li>
-</ul>
+</section>
+<section id="step-3-compute-bootstrap-distribution">
+<h3>Step 3: Compute bootstrap distribution<a class="headerlink" href="#step-3-compute-bootstrap-distribution" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bootst_mean_diffs</span> <span class="o">=</span> <span class="p">[]</span>
@@ -993,7 +999,9 @@ Mean difference: 16.77919133837969
 <img alt="../../../_images/9b910f9dae424b758f702c1e88dbec9a3c01321545f6aa25b24fc573f691feac.png" src="../../../_images/9b910f9dae424b758f702c1e88dbec9a3c01321545f6aa25b24fc573f691feac.png" />
 </div>
 </div>
-<p>A 95% confidence interval for the mean difference is:</p>
+</section>
+<section id="step-4-obtain-a-95-confidence-interval-for-the-mean-difference">
+<h3>Step 4: obtain a 95% confidence interval for the mean difference<a class="headerlink" href="#step-4-obtain-a-95-confidence-interval-for-the-mean-difference" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">bootst_mean_diffs</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">bootst_mean_diffs</span><span class="p">,</span> <span class="mf">97.5</span><span class="p">)</span> 
@@ -1048,9 +1056,9 @@ Mean difference: 16.77919133837969
 <ul class="simple">
 <li><p>Less likely (5% v.s. 10%) to be wrong to reject the null hypothesis</p></li>
 </ul>
-<section id="another-method-to-compare-two-samples-a-review-of-shuffling">
-<h3>Another method to compare two samples (A review of shuffling)<a class="headerlink" href="#another-method-to-compare-two-samples-a-review-of-shuffling" title="Link to this heading">#</a></h3>
 </section>
+<section id="another-method-to-compare-two-samples-a-review-of-shuffling">
+<h2>Another method to compare two samples (A review of shuffling)<a class="headerlink" href="#another-method-to-compare-two-samples-a-review-of-shuffling" title="Link to this heading">#</a></h2>
 <section id="id1">
 <h3>Hypothesis testing<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <p>Two claims:</p>
@@ -1138,8 +1146,9 @@ Mean difference: 16.77919133837969
 </div></div></div>
 </div>
 </section>
+</section>
 <section id="step-1-shuffling-the-children-label-and-assignment-to-the-samples">
-<h4>Step 1: shuffling the children label and assignment to the samples<a class="headerlink" href="#step-1-shuffling-the-children-label-and-assignment-to-the-samples" title="Link to this heading">#</a></h4>
+<h3>Step 1: shuffling the children label and assignment to the samples<a class="headerlink" href="#step-1-shuffling-the-children-label-and-assignment-to-the-samples" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shuffle_df</span> <span class="o">=</span> <span class="n">restchild_df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -1161,7 +1170,7 @@ Name: Child_in_house, dtype: object
 </div>
 </section>
 <section id="step-2-compute-the-mean-resting-time-difference-between-people-with-and-without-children">
-<h4>Step 2: compute the mean resting time difference between people with and without children<a class="headerlink" href="#step-2-compute-the-mean-resting-time-difference-between-people-with-and-without-children" title="Link to this heading">#</a></h4>
+<h3>Step 2: compute the mean resting time difference between people with and without children<a class="headerlink" href="#step-2-compute-the-mean-resting-time-difference-between-people-with-and-without-children" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mean_child</span> <span class="o">=</span> <span class="n">shuffle_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">restchild_sim</span> <span class="o">==</span> <span class="s1">&#39;Yes&#39;</span><span class="p">,</span> <span class="s1">&#39;resttime&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
@@ -1180,7 +1189,7 @@ Name: Child_in_house, dtype: object
 </div>
 </section>
 <section id="step-3-repeat-steps-1-and-2-a-large-number-of-times-e-g-5000-to-get-the-distribution-of-mean-differences">
-<h4>Step 3: Repeat Steps 1 and 2 a large number of times (e.g., 5000) to get the distribution of mean differences.<a class="headerlink" href="#step-3-repeat-steps-1-and-2-a-large-number-of-times-e-g-5000-to-get-the-distribution-of-mean-differences" title="Link to this heading">#</a></h4>
+<h3>Step 3: Repeat Steps 1 and 2 a large number of times (e.g., 5000) to get the distribution of mean differences.<a class="headerlink" href="#step-3-repeat-steps-1-and-2-a-large-number-of-times-e-g-5000-to-get-the-distribution-of-mean-differences" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">simulated_diffs</span> <span class="o">=</span> <span class="p">[]</span>
@@ -1209,7 +1218,7 @@ Name: Child_in_house, dtype: object
 </div>
 </section>
 <section id="step-4-compare-the-simulate-mean-differences-to-the-observed-mean-difference-and-calculate-p-value">
-<h4>Step 4: Compare the simulate mean differences to the observed mean difference and calculate p-value<a class="headerlink" href="#step-4-compare-the-simulate-mean-differences-to-the-observed-mean-difference-and-calculate-p-value" title="Link to this heading">#</a></h4>
+<h3>Step 4: Compare the simulate mean differences to the observed mean difference and calculate p-value<a class="headerlink" href="#step-4-compare-the-simulate-mean-differences-to-the-observed-mean-difference-and-calculate-p-value" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">obs_mean_nochild</span> <span class="o">=</span> <span class="n">restchild_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">restchild_df</span><span class="p">[</span><span class="s1">&#39;Child_in_house&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;No&#39;</span><span class="p">,</span> <span class="s1">&#39;resttime&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
@@ -1252,7 +1261,7 @@ The p-value is: 0.0
 </div>
 </section>
 <section id="step-5-interpretation">
-<h4>Step 5: Interpretation<a class="headerlink" href="#step-5-interpretation" title="Link to this heading">#</a></h4>
+<h3>Step 5: Interpretation<a class="headerlink" href="#step-5-interpretation" title="Link to this heading">#</a></h3>
 <p>None of the simulated differences is greater or smaller than the observed differences.</p>
 <ul class="simple">
 <li><p>The null hypothesis is rejected.</p></li>
@@ -1263,13 +1272,8 @@ The p-value is: 0.0
 </ul>
 </section>
 </section>
-</section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="think-about">
-<h1>Think about:<a class="headerlink" href="#think-about" title="Link to this heading">#</a></h1>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="what-is-the-difference-between-bootstrap-and-shuffling">
-<h1>what is the difference between bootstrap and shuffling?<a class="headerlink" href="#what-is-the-difference-between-bootstrap-and-shuffling" title="Link to this heading">#</a></h1>
+<section id="think-about-what-is-the-difference-between-bootstrap-and-shuffling">
+<h2>Think about: what is the difference between bootstrap and shuffling?<a class="headerlink" href="#think-about-what-is-the-difference-between-bootstrap-and-shuffling" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p>Both bootstrap and shuffling can be applied to compare two samples, but their logics are different.</p></li>
 </ol>
@@ -1284,6 +1288,7 @@ The p-value is: 0.0
 <ol class="arabic simple" start="2">
 <li><p>Bootstrap can be applied to many other situations in order to obtain robust results (e.g., regression), while shuffling can only applied in comparison between samples.</p></li>
 </ol>
+</section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="linear-regression">
 <h1>Linear Regression<a class="headerlink" href="#linear-regression" title="Link to this heading">#</a></h1>
@@ -3565,25 +3570,28 @@ Name: asthma_pct, dtype: float64
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-bootstrap-confidence-intervals-to-compare-samples">Using Bootstrap confidence intervals to compare samples</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#do-people-with-no-children-under-14-spend-more-time-resting">Do people with no children under 14 spend more time resting?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hypothesis-testing">Hypothesis testing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-divide-the-samples-with-two-subsamples-with-and-without-children">Step 1: divide the samples with two subsamples (with and without children)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-create-a-function-to-create-one-bootstrap-sample-of-the-mean-difference">Step 2: Create a function to create one bootstrap sample of the mean difference.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-compute-bootstrap-distribution">Step 3: Compute bootstrap distribution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-obtain-a-95-confidence-interval-for-the-mean-difference">Step 4: obtain a 95% confidence interval for the mean difference</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#in-class-exercise">In-class exercise</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#another-method-to-compare-two-samples-a-review-of-shuffling">Another method to compare two samples (A review of shuffling)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#in-class-exercise">In-class exercise</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#another-method-to-compare-two-samples-a-review-of-shuffling">Another method to compare two samples (A review of shuffling)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Hypothesis testing</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#a-thought-expriement-shuffling-process">A thought expriement: shuffling process</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-shuffling-the-children-label-and-assignment-to-the-samples">Step 1: shuffling the children label and assignment to the samples</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-compute-the-mean-resting-time-difference-between-people-with-and-without-children">Step 2: compute the mean resting time difference between people with and without children</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-repeat-steps-1-and-2-a-large-number-of-times-e-g-5000-to-get-the-distribution-of-mean-differences">Step 3: Repeat Steps 1 and 2 a large number of times (e.g., 5000) to get the distribution of mean differences.</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-compare-the-simulate-mean-differences-to-the-observed-mean-difference-and-calculate-p-value">Step 4: Compare the simulate mean differences to the observed mean difference and calculate p-value</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-interpretation">Step 5: Interpretation</a></li>
 </ul>
 </li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-shuffling-the-children-label-and-assignment-to-the-samples">Step 1: shuffling the children label and assignment to the samples</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-compute-the-mean-resting-time-difference-between-people-with-and-without-children">Step 2: compute the mean resting time difference between people with and without children</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-repeat-steps-1-and-2-a-large-number-of-times-e-g-5000-to-get-the-distribution-of-mean-differences">Step 3: Repeat Steps 1 and 2 a large number of times (e.g., 5000) to get the distribution of mean differences.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-compare-the-simulate-mean-differences-to-the-observed-mean-difference-and-calculate-p-value">Step 4: Compare the simulate mean differences to the observed mean difference and calculate p-value</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-interpretation">Step 5: Interpretation</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#think-about-what-is-the-difference-between-bootstrap-and-shuffling">Think about: what is the difference between bootstrap and shuffling?</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#think-about">Think about:</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-difference-between-bootstrap-and-shuffling">what is the difference between bootstrap and shuffling?</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-regression">Linear Regression</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-idea">Basic idea</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1-perfect-linear-relationship-between-dependent-and-independent-variables">Example 1: perfect linear relationship between dependent and independent variables</a><ul class="nav section-nav flex-column">
