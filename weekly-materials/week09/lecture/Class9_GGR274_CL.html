@@ -567,6 +567,7 @@ document.write(`
 <h2>Arrangment of the last 3 tutorials<a class="headerlink" href="#arrangment-of-the-last-3-tutorials" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>You will think about and start to do your course projects in tutorials.</p></li>
+<li><p>You will still need to be present in your tutorials and submit the lab notebook.</p></li>
 <li><p>Take the chance to discuss with your colleagues and TA!</p></li>
 </ul>
 </section>
@@ -2306,7 +2307,7 @@ dtype: float64
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fname</span> <span class="o">=</span> <span class="s1">&#39;1_socdem_neighb_2006-2.xls&#39;</span>
 <span class="n">sname</span> <span class="o">=</span> <span class="s1">&#39;socdem_2006&#39;</span>
-<span class="n">socdem_neighb</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">sheet_name</span> <span class="o">=</span> <span class="n">sname</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span> <span class="c1"># the table starts in row #10</span>
+<span class="n">socdem_neighb</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">sheet_name</span> <span class="o">=</span> <span class="n">sname</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span> <span class="c1"># the table starts in row #11</span>
 <span class="n">socdem_neighb</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -2639,7 +2640,7 @@ dtype: float64
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fname</span> <span class="o">=</span> <span class="s1">&#39;1_ahd_neighb_db_ast_hbp_mhv_copd_2007.xls&#39;</span>
 <span class="n">sname</span> <span class="o">=</span> <span class="s1">&#39;1_ahd_neighb_asthma_2007&#39;</span>
 
-<span class="n">asthma_neighb</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">sheet_name</span> <span class="o">=</span> <span class="n">sname</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="mi">11</span><span class="p">)</span> <span class="c1">#the table starts with row #11</span>
+<span class="n">asthma_neighb</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">sheet_name</span> <span class="o">=</span> <span class="n">sname</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="mi">11</span><span class="p">)</span> <span class="c1">#the table starts with row #12</span>
 <span class="n">asthma_neighb</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -3067,7 +3068,7 @@ dtype: float64
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">reg_asthmaimm</span> <span class="o">=</span> <span class="n">ols</span><span class="p">(</span><span class="s1">&#39;asthma_pct ~ immigration5&#39;</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">asthma_socdem</span><span class="p">)</span> <span class="c1"># setup the model</span>
 
-<span class="n">reg_asthmaimm_fit</span> <span class="o">=</span> <span class="n">regmod</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span> <span class="c1"># estimate/fit the model </span>
+<span class="n">reg_asthmaimm_fit</span> <span class="o">=</span> <span class="n">reg_asthmaimm</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span> <span class="c1"># estimate/fit the model </span>
 </pre></div>
 </div>
 </div>
@@ -3086,16 +3087,13 @@ dtype: float64
 <div class="cell_output docutils container">
 <div class="output text_html"><table class="simpletable">
 <tr>
-      <td></td>         <th>coef</th>     <th>std err</th>      <th>t</th>      <th>P>|t|</th>  <th>[0.025</th>    <th>0.975]</th>  
+        <td></td>          <th>coef</th>     <th>std err</th>      <th>t</th>      <th>P>|t|</th>  <th>[0.025</th>    <th>0.975]</th>  
 </tr>
 <tr>
-  <th>Intercept</th> <td>    1.8925</td> <td>    0.201</td> <td>    9.432</td> <td> 0.000</td> <td>    1.377</td> <td>    2.408</td>
+  <th>Intercept</th>    <td>   11.8266</td> <td>    0.218</td> <td>   54.328</td> <td> 0.000</td> <td>   11.396</td> <td>   12.257</td>
 </tr>
 <tr>
-  <th>indvar1</th>   <td>    0.5493</td> <td>    0.102</td> <td>    5.411</td> <td> 0.003</td> <td>    0.288</td> <td>    0.810</td>
-</tr>
-<tr>
-  <th>indvar2</th>   <td>    0.3852</td> <td>    0.097</td> <td>    3.984</td> <td> 0.010</td> <td>    0.137</td> <td>    0.634</td>
+  <th>immigration5</th> <td>   -0.1597</td> <td>    0.019</td> <td>   -8.475</td> <td> 0.000</td> <td>   -0.197</td> <td>   -0.122</td>
 </tr>
 </table></div></div>
 </div>
@@ -3113,20 +3111,20 @@ dtype: float64
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">asthma_socdem</span><span class="p">[</span><span class="s1">&#39;asthma_pct&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">asthma_socdem</span><span class="p">[</span><span class="s1">&#39;immigration5&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    140.000000
-mean      10.251429
-std        1.647692
-min        6.000000
-25%        9.200000
-50%       10.450000
-75%       11.400000
-max       14.000000
-Name: asthma_pct, dtype: float64
+mean       9.864286
+std        6.037045
+min        1.200000
+25%        4.975000
+50%        8.650000
+75%       13.100000
+max       32.800000
+Name: immigration5, dtype: float64
 </pre></div>
 </div>
 </div>
@@ -3143,7 +3141,7 @@ Name: asthma_pct, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.991410032226906
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.342332397042001
 </pre></div>
 </div>
 </div>
@@ -3161,12 +3159,12 @@ Name: asthma_pct, dtype: float64
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;residuals&#39;)
 </pre></div>
 </div>
-<img alt="../../../_images/002e804599d7c3e4b420f09cd8f35b636da07d63879ab13ee118f98b7c55212f.png" src="../../../_images/002e804599d7c3e4b420f09cd8f35b636da07d63879ab13ee118f98b7c55212f.png" />
+<img alt="../../../_images/bd0b4e15217751ef5c3338559baea3ef15936b868b1119ac48b541b4f4cf079d.png" src="../../../_images/bd0b4e15217751ef5c3338559baea3ef15936b868b1119ac48b541b4f4cf079d.png" />
 </div>
 </div>
 <ul class="simple">
-<li><p>The R-squared statistics indicates a very good explanation of the model (close to 1)</p></li>
-<li><p>The residuals seem randomly distributed, indicating the model is appropriate.</p></li>
+<li><p>The R-squared statistics indicates a relatively good explanation of the model (quite larger than 0)</p></li>
+<li><p>The residual plot indicates some important variables are missing, as we can see larger abolute values as fitted values increase (not a random distributed pattern)</p></li>
 </ul>
 <section id="summary">
 <h3>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h3>
