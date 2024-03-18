@@ -152,3 +152,14 @@ parts:
       title: Homework 09 Notebook
     # - file: weekly-materials/week09/homework/marking/Homework_9_solution.ipynb.ipynb
     #   title: Homework 09 Solutions
+
+  - caption: Week 10
+    chapters:
+    # - file: weekly-materials/week10/lecture/Class10_GGR274_CL.ipynb
+    #   title: Prof. Li's Notebook
+    - file: weekly-materials/week10/lab/Lab_10.ipynb
+      title: Lab 10 Notebook
+    # - file: weekly-materials/week10/homework/Homework_10.ipynb
+    #   title: Homework 10 Notebook
+    # - file: weekly-materials/week10/homework/marking/Homework_10_solution.ipynb.ipynb
+    #   title: Homework 10 Solutions
