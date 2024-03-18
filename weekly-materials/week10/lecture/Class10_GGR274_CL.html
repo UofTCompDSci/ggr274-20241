@@ -461,10 +461,6 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mar-19-2024">Mar. 19, 2024</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#week-10-spatial-data-analysis">Week 10 - Spatial Data Analysis</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview-of-class">Overview of Class</a></li>
-</ul>
-</li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#review-of-linear-regression">Review of linear regression</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-effect-of-recent-immigration-on-asthma-rates-in-toronto-neighbourhoods">What is the effect of recent immigration on asthma rates in Toronto neighbourhoods?</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a><ul class="nav section-nav flex-column">
@@ -553,20 +549,20 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#to-dig-into-this-more-let-s-classify-the-data-using-quartiles">To dig into this more, let’s classify the data using quartiles…</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#first-steps-into-spatial-analysis">First steps into “spatial analysis”…</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-might-be-related-to-these-areas-with-higher-asthma">What might be related to these areas with higher asthma?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#coordinate-systems-and-projections">Coordinate systems and projections</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#now-that-our-two-geodataframe-spatial-layers-are-in-the-same-projection-we-can-plot-them-together">Now that our two geodataframe spatial layers are in the same projection, we can plot them together</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hmm-could-there-be-something-there">Hmm - could there be something there?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#let-s-do-a-spatial-join">Let’s do a “spatial join”</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#woah">Woah!</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#let-s-check-this-new-no-duplicate-geodataframe-to-see-if-looks-right">Let’s check this new, no duplicate geodataframe to see if looks right.</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#this-looks-good-based-on-visual-inspection">This looks good, based on visual inspection</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#let-s-clean-things-up-a-little-and-create-the-final-geodataframe-we-want-to-work-with">Let’s clean things up a little and create the final geodataframe we want to work with</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#first-steps-into-spatial-analysis">First steps into “spatial analysis”…</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-might-be-related-to-these-areas-with-higher-asthma">What might be related to these areas with higher asthma?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coordinate-systems-and-projections">Coordinate systems and projections</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#now-that-our-two-geodataframe-spatial-layers-are-in-the-same-projection-we-can-plot-them-together">Now that our two geodataframe spatial layers are in the same projection, we can plot them together</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hmm-could-there-be-something-there">Hmm - could there be something there?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#let-s-do-a-spatial-join">Let’s do a “spatial join”</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#woah">Woah!</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#let-s-check-this-new-no-duplicate-geodataframe-to-see-if-looks-right">Let’s check this new, no duplicate geodataframe to see if looks right.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#this-looks-good-based-on-visual-inspection">This looks good, based on visual inspection</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#let-s-clean-things-up-a-little-and-create-the-final-geodataframe-we-want-to-work-with">Let’s clean things up a little and create the final geodataframe we want to work with</a></li>
 </ul>
 </li>
 </ul>
@@ -591,39 +587,6 @@ document.write(`
 <li><p>Know what is spatial data;</p></li>
 <li><p>Learn a new package geopandas;</p></li>
 <li><p>Do some basic spatial analysis (we’ll learn more in next 2 weeks!)</p></li>
-</ul>
-</section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="week-10-spatial-data-analysis">
-<h1>Week 10 - Spatial Data Analysis<a class="headerlink" href="#week-10-spatial-data-analysis" title="Link to this heading">#</a></h1>
-<section id="overview-of-class">
-<h2>Overview of Class<a class="headerlink" href="#overview-of-class" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>intro to spatial data</p>
-<ul>
-<li><p>why spatial data matters</p></li>
-<li><p>types of spatial data (point, polyline, polygon)</p></li>
-<li><p>what data look like in files</p></li>
-</ul>
-</li>
-<li><p>intro geopandas</p>
-<ul>
-<li><p>review geodataframes</p></li>
-<li><p>simple plots</p></li>
-</ul>
-</li>
-<li><p>how do we get info into our maps?</p>
-<ul>
-<li><p>joins</p></li>
-<li><p>plotting joined info</p></li>
-</ul>
-</li>
-<li><p>how do we do spatial analysis?</p>
-<ul>
-<li><p>spatial joins</p></li>
-<li><p>exploratory data analysis using geographic data</p></li>
-</ul>
-</li>
 </ul>
 </section>
 </section>
@@ -1519,11 +1482,12 @@ document.write(`
 </div>
 </section>
 </section>
-<section id="first-steps-into-spatial-analysis">
-<h2>First steps into “spatial analysis”…<a class="headerlink" href="#first-steps-into-spatial-analysis" title="Link to this heading">#</a></h2>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="first-steps-into-spatial-analysis">
+<h1>First steps into “spatial analysis”…<a class="headerlink" href="#first-steps-into-spatial-analysis" title="Link to this heading">#</a></h1>
 <p>OK great! That chart is interesting and gets us thinking. But one of the powers of spatial analysis is relating environments to spatial phenomena.</p>
 <section id="what-might-be-related-to-these-areas-with-higher-asthma">
-<h3>What might be related to these areas with higher asthma?<a class="headerlink" href="#what-might-be-related-to-these-areas-with-higher-asthma" title="Link to this heading">#</a></h3>
+<h2>What might be related to these areas with higher asthma?<a class="headerlink" href="#what-might-be-related-to-these-areas-with-higher-asthma" title="Link to this heading">#</a></h2>
 <p>Let’s make a map with multiple layers of info…</p>
 <p>To do this, we need a second spatial data file. We know there is research that relates asthma to being near railroads. Let’s see if being near a railway in Toronto is associated to patterns of asthma.</p>
 <div class="cell docutils container">
@@ -1538,7 +1502,7 @@ document.write(`
 </div>
 </section>
 <section id="coordinate-systems-and-projections">
-<h3>Coordinate systems and projections<a class="headerlink" href="#coordinate-systems-and-projections" title="Link to this heading">#</a></h3>
+<h2>Coordinate systems and projections<a class="headerlink" href="#coordinate-systems-and-projections" title="Link to this heading">#</a></h2>
 <p>When working with spatial data, you may need to think about coordinate systems and geographic projections.</p>
 <p>Because we are taking data that exist on a sphere and laying them out flat on a plane, all spatial data is projected.</p>
 <p><img alt="projections" src="https://cdn-images-1.medium.com/fit/t/1600/480/1*H96H7Gn9EcfZH5tEmMoSXg.gif" /></p>
@@ -1562,7 +1526,7 @@ document.write(`
 </div>
 </section>
 <section id="now-that-our-two-geodataframe-spatial-layers-are-in-the-same-projection-we-can-plot-them-together">
-<h3>Now that our two geodataframe spatial layers are in the same projection, we can plot them together<a class="headerlink" href="#now-that-our-two-geodataframe-spatial-layers-are-in-the-same-projection-we-can-plot-them-together" title="Link to this heading">#</a></h3>
+<h2>Now that our two geodataframe spatial layers are in the same projection, we can plot them together<a class="headerlink" href="#now-that-our-two-geodataframe-spatial-layers-are-in-the-same-projection-we-can-plot-them-together" title="Link to this heading">#</a></h2>
 <p>We want to create 1 map and tell geopandas to put the two spatial layers in the same axes cell:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1581,12 +1545,12 @@ document.write(`
 </div>
 </section>
 <section id="hmm-could-there-be-something-there">
-<h3>Hmm - could there be something there?<a class="headerlink" href="#hmm-could-there-be-something-there" title="Link to this heading">#</a></h3>
+<h2>Hmm - could there be something there?<a class="headerlink" href="#hmm-could-there-be-something-there" title="Link to this heading">#</a></h2>
 <p>Maybe!</p>
 <p>But what are the things that might be happening here?</p>
 </section>
 <section id="let-s-do-a-spatial-join">
-<h3>Let’s do a “spatial join”<a class="headerlink" href="#let-s-do-a-spatial-join" title="Link to this heading">#</a></h3>
+<h2>Let’s do a “spatial join”<a class="headerlink" href="#let-s-do-a-spatial-join" title="Link to this heading">#</a></h2>
 <p>What is a spatial join?</p>
 <p><img alt="alt text" src="https://web.natur.cuni.cz/~langhamr/lectures/vtfg1/mapinfo_1/about_gis/Image23.gif" /></p>
 <p>Basically, we are relating information from two tables that share a spatial relationship.</p>
@@ -1603,7 +1567,7 @@ document.write(`
 </div>
 </section>
 <section id="woah">
-<h3>Woah!<a class="headerlink" href="#woah" title="Link to this heading">#</a></h3>
+<h2>Woah!<a class="headerlink" href="#woah" title="Link to this heading">#</a></h2>
 <p>Now we have 2528 rows… that’s way more rows than neighbourhoods. What happened?</p>
 <p>Spatial join creates a new row for every instance of ‘intersection’. So if railway 1 and railway 2 both go through neighbourhood a, then there will be two rows with neighbourhood a with one row joined with railway a data and the other joined with railway b data.</p>
 <p>Also, notice that neighbourhoods that didn’t have any railway go through them were appended with NaNs. This is saying there is no data about railways for these neighbourhoods because there were none there.</p>
@@ -1618,7 +1582,7 @@ document.write(`
 </div>
 </div>
 <section id="let-s-check-this-new-no-duplicate-geodataframe-to-see-if-looks-right">
-<h4>Let’s check this new, no duplicate geodataframe to see if looks right.<a class="headerlink" href="#let-s-check-this-new-no-duplicate-geodataframe-to-see-if-looks-right" title="Link to this heading">#</a></h4>
+<h3>Let’s check this new, no duplicate geodataframe to see if looks right.<a class="headerlink" href="#let-s-check-this-new-no-duplicate-geodataframe-to-see-if-looks-right" title="Link to this heading">#</a></h3>
 <p>We can plot the map using “index_right” which is the index from the railway layer. The values are meaningless, but it shows us where there ARE values and where there are not.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1629,7 +1593,7 @@ document.write(`
 </div>
 </section>
 <section id="this-looks-good-based-on-visual-inspection">
-<h4>This looks good, based on visual inspection<a class="headerlink" href="#this-looks-good-based-on-visual-inspection" title="Link to this heading">#</a></h4>
+<h3>This looks good, based on visual inspection<a class="headerlink" href="#this-looks-good-based-on-visual-inspection" title="Link to this heading">#</a></h3>
 <p>But we need a column that tells us there IS or there IS NOT a railway in each neighbourhood. We can go back to some of the skills we learned earlier in the course to do this.</p>
 <p>We will first create two series of TRUE and FALSE values to show where a value exists in the “index_right” column.</p>
 <p>The series <code class="docutils literal notranslate"><span class="pre">rail_present</span></code> will be true if there is a value in the column - implying a railway goes through the neighbourhood, and false otherwise.</p>
@@ -1653,7 +1617,7 @@ document.write(`
 </section>
 </section>
 <section id="let-s-clean-things-up-a-little-and-create-the-final-geodataframe-we-want-to-work-with">
-<h3>Let’s clean things up a little and create the final geodataframe we want to work with<a class="headerlink" href="#let-s-clean-things-up-a-little-and-create-the-final-geodataframe-we-want-to-work-with" title="Link to this heading">#</a></h3>
+<h2>Let’s clean things up a little and create the final geodataframe we want to work with<a class="headerlink" href="#let-s-clean-things-up-a-little-and-create-the-final-geodataframe-we-want-to-work-with" title="Link to this heading">#</a></h2>
 <p>We can clean things up and then create a map and a descriptive statistics plot to show our findings.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1742,7 +1706,6 @@ document.write(`
 <p>But is this a causal relationship?</p>
 </section>
 </section>
-</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1810,10 +1773,6 @@ document.write(`
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Class 10</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mar-19-2024">Mar. 19, 2024</a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#week-10-spatial-data-analysis">Week 10 - Spatial Data Analysis</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview-of-class">Overview of Class</a></li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#review-of-linear-regression">Review of linear regression</a><ul class="visible nav section-nav flex-column">
@@ -1904,20 +1863,20 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#to-dig-into-this-more-let-s-classify-the-data-using-quartiles">To dig into this more, let’s classify the data using quartiles…</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#first-steps-into-spatial-analysis">First steps into “spatial analysis”…</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-might-be-related-to-these-areas-with-higher-asthma">What might be related to these areas with higher asthma?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#coordinate-systems-and-projections">Coordinate systems and projections</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#now-that-our-two-geodataframe-spatial-layers-are-in-the-same-projection-we-can-plot-them-together">Now that our two geodataframe spatial layers are in the same projection, we can plot them together</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hmm-could-there-be-something-there">Hmm - could there be something there?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#let-s-do-a-spatial-join">Let’s do a “spatial join”</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#woah">Woah!</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#let-s-check-this-new-no-duplicate-geodataframe-to-see-if-looks-right">Let’s check this new, no duplicate geodataframe to see if looks right.</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#this-looks-good-based-on-visual-inspection">This looks good, based on visual inspection</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#let-s-clean-things-up-a-little-and-create-the-final-geodataframe-we-want-to-work-with">Let’s clean things up a little and create the final geodataframe we want to work with</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#first-steps-into-spatial-analysis">First steps into “spatial analysis”…</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-might-be-related-to-these-areas-with-higher-asthma">What might be related to these areas with higher asthma?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coordinate-systems-and-projections">Coordinate systems and projections</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#now-that-our-two-geodataframe-spatial-layers-are-in-the-same-projection-we-can-plot-them-together">Now that our two geodataframe spatial layers are in the same projection, we can plot them together</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hmm-could-there-be-something-there">Hmm - could there be something there?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#let-s-do-a-spatial-join">Let’s do a “spatial join”</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#woah">Woah!</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#let-s-check-this-new-no-duplicate-geodataframe-to-see-if-looks-right">Let’s check this new, no duplicate geodataframe to see if looks right.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#this-looks-good-based-on-visual-inspection">This looks good, based on visual inspection</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#let-s-clean-things-up-a-little-and-create-the-final-geodataframe-we-want-to-work-with">Let’s clean things up a little and create the final geodataframe we want to work with</a></li>
 </ul>
 </li>
 </ul>
