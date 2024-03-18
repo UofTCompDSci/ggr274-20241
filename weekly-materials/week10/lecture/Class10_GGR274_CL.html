@@ -661,202 +661,11 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Neighbourhood id</th>
-      <th>Neighbourhood Name</th>
-      <th>Total Population</th>
-      <th>% 19 and under</th>
-      <th>% 65 and over</th>
-      <th>% Living alone</th>
-      <th>% Aged 65+ living alone</th>
-      <th>% Lone parent families §</th>
-      <th>% 1 year mobility in population</th>
-      <th>Median household income before-tax $</th>
-      <th>...</th>
-      <th>% Less than high school education **</th>
-      <th>% With a University degree **</th>
-      <th>% No knowledge of English/French</th>
-      <th>% Recent immigrants-within 5 years</th>
-      <th>% Recent immigrants-within 10 years</th>
-      <th>% Immigrants</th>
-      <th>% Visible minority</th>
-      <th>Top 3 Home Languages for non-English speaking households, #1</th>
-      <th>Top 3 Home Languages for non-English speaking households, #2</th>
-      <th>Top 3 Home Languages for non-English speaking households, #3</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1</td>
-      <td>West Humber-Clairville</td>
-      <td>32252</td>
-      <td>26.8</td>
-      <td>11.3</td>
-      <td>3.7</td>
-      <td>11.7</td>
-      <td>26.3</td>
-      <td>11.6</td>
-      <td>63413</td>
-      <td>...</td>
-      <td>18.4</td>
-      <td>22.9</td>
-      <td>5.4</td>
-      <td>12.2</td>
-      <td>22.1</td>
-      <td>60.0</td>
-      <td>77.9</td>
-      <td>Panjabi (Punjabi)</td>
-      <td>Gujarati</td>
-      <td>Spanish</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2</td>
-      <td>Mount Olive-Silverstone-Jamestown</td>
-      <td>32127</td>
-      <td>32.2</td>
-      <td>8.1</td>
-      <td>4.1</td>
-      <td>15.4</td>
-      <td>31.5</td>
-      <td>15.7</td>
-      <td>48146</td>
-      <td>...</td>
-      <td>20.1</td>
-      <td>23.6</td>
-      <td>7.6</td>
-      <td>22.2</td>
-      <td>35.1</td>
-      <td>67.1</td>
-      <td>85.3</td>
-      <td>Panjabi (Punjabi)</td>
-      <td>Gujarati</td>
-      <td>Arabic</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3</td>
-      <td>Thistletown-Beaumond Heights</td>
-      <td>9928</td>
-      <td>25.3</td>
-      <td>16.7</td>
-      <td>5.4</td>
-      <td>17.5</td>
-      <td>30.1</td>
-      <td>10.9</td>
-      <td>55032</td>
-      <td>...</td>
-      <td>16.7</td>
-      <td>20.7</td>
-      <td>5.0</td>
-      <td>9.7</td>
-      <td>19.3</td>
-      <td>55.9</td>
-      <td>53.8</td>
-      <td>Panjabi (Punjabi)</td>
-      <td>Italian</td>
-      <td>Spanish</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>4</td>
-      <td>Rexdale-Kipling</td>
-      <td>10725</td>
-      <td>23.6</td>
-      <td>18.3</td>
-      <td>10.2</td>
-      <td>28.8</td>
-      <td>33.3</td>
-      <td>13.2</td>
-      <td>52428</td>
-      <td>...</td>
-      <td>15.3</td>
-      <td>18.8</td>
-      <td>3.0</td>
-      <td>8.3</td>
-      <td>14.0</td>
-      <td>47.2</td>
-      <td>41.8</td>
-      <td>Spanish</td>
-      <td>Panjabi (Punjabi)</td>
-      <td>Croatian</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>5</td>
-      <td>Elms-Old Rexdale</td>
-      <td>9437</td>
-      <td>29.9</td>
-      <td>10.5</td>
-      <td>5.8</td>
-      <td>13.0</td>
-      <td>39.1</td>
-      <td>9.7</td>
-      <td>53779</td>
-      <td>...</td>
-      <td>15.2</td>
-      <td>18.8</td>
-      <td>3.6</td>
-      <td>9.8</td>
-      <td>18.2</td>
-      <td>53.8</td>
-      <td>60.5</td>
-      <td>Spanish</td>
-      <td>Italian</td>
-      <td>Urdu</td>
-    </tr>
-  </tbody>
-</table>
-<p>5 rows × 28 columns</p>
-</div></div></div>
 </div>
 <p>Which column should we select to measure immigration?  There are several choices.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">socdem_neighb</span><span class="o">.</span><span class="n">columns</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;Neighbourhood id&#39;, &#39;Neighbourhood Name&#39;, &#39;Total Population&#39;,
-       &#39;% 19 and under&#39;, &#39;% 65 and over&#39;, &#39;% Living alone&#39;,
-       &#39;% Aged 65+ living alone&#39;, &#39;% Lone parent families §&#39;,
-       &#39;% 1 year mobility in population&#39;,
-       &#39;Median household income before-tax $&#39;,
-       &#39;Median household income after-tax $ ‡&#39;,
-       &#39;% Families-Incidence of low income before-tax&#39;,
-       &#39;% Families-Incidence of low income after-tax ‡&#39;,
-       &#39;% Individuals-Incidence of low income before-tax&#39;,
-       &#39;% Individuals-Incidence of low income after-tax ‡&#39;,
-       &#39;% Rented Dwellings&#39;, &#39;% Unemployment rate *&#39;,
-       &#39;% Not in labour force *&#39;, &#39;% Less than high school education **&#39;,
-       &#39;% With a University degree **&#39;, &#39;% No knowledge of English/French&#39;,
-       &#39;% Recent immigrants-within 5 years&#39;,
-       &#39;% Recent immigrants-within 10 years&#39;, &#39;% Immigrants&#39;,
-       &#39;% Visible minority&#39;,
-       &#39;Top 3 Home Languages for non-English speaking households, #1&#39;,
-       &#39;Top 3 Home Languages for non-English speaking households, #2&#39;,
-       &#39;Top 3 Home Languages for non-English speaking households, #3&#39;],
-      dtype=&#39;object&#39;)
 </pre></div>
 </div>
 </div>
@@ -895,88 +704,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Neighbid</th>
-      <th>name</th>
-      <th>median_income</th>
-      <th>rented_dwell</th>
-      <th>unemployment</th>
-      <th>immigration5</th>
-      <th>vismin</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1</td>
-      <td>West Humber-Clairville</td>
-      <td>56220</td>
-      <td>27.4</td>
-      <td>7.0</td>
-      <td>12.2</td>
-      <td>77.9</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2</td>
-      <td>Mount Olive-Silverstone-Jamestown</td>
-      <td>43975</td>
-      <td>52.0</td>
-      <td>9.9</td>
-      <td>22.2</td>
-      <td>85.3</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3</td>
-      <td>Thistletown-Beaumond Heights</td>
-      <td>49800</td>
-      <td>34.4</td>
-      <td>6.3</td>
-      <td>9.7</td>
-      <td>53.8</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>4</td>
-      <td>Rexdale-Kipling</td>
-      <td>46033</td>
-      <td>45.1</td>
-      <td>7.7</td>
-      <td>8.3</td>
-      <td>41.8</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>5</td>
-      <td>Elms-Old Rexdale</td>
-      <td>48055</td>
-      <td>41.2</td>
-      <td>7.8</td>
-      <td>9.8</td>
-      <td>60.5</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
 </div>
 </section>
 <section id="asthma-data">
@@ -994,173 +721,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Unnamed: 0</th>
-      <th>Unnamed: 1</th>
-      <th>Demographics ª</th>
-      <th>% With asthma</th>
-      <th>LL (95% CI)</th>
-      <th>UL (95% CI)</th>
-      <th>Demographics ª.1</th>
-      <th>% With asthma.1</th>
-      <th>LL (95% CI) .1</th>
-      <th>UL (95% CI) .1</th>
-      <th>...</th>
-      <th>Demographics ª.7</th>
-      <th>% With asthma.7</th>
-      <th>LL (95% CI) .7</th>
-      <th>UL (95% CI) .7</th>
-      <th>Demographics ª.8</th>
-      <th>% With asthma.8</th>
-      <th>LL (95% CI) .8</th>
-      <th>UL (95% CI) .8</th>
-      <th>Rate Ratio**.2</th>
-      <th>H/L/NS.2</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1</td>
-      <td>West Humber-Clairville</td>
-      <td>11977</td>
-      <td>9.7</td>
-      <td>9.2</td>
-      <td>10.2</td>
-      <td>11770</td>
-      <td>10.6</td>
-      <td>10.0</td>
-      <td>11.2</td>
-      <td>...</td>
-      <td>4435</td>
-      <td>12.3</td>
-      <td>11.3</td>
-      <td>13.3</td>
-      <td>8921</td>
-      <td>10.9</td>
-      <td>10.3</td>
-      <td>11.6</td>
-      <td>1.07</td>
-      <td>H</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2</td>
-      <td>Mount Olive-Silverstone-Jamestown</td>
-      <td>11157</td>
-      <td>7.9</td>
-      <td>7.4</td>
-      <td>8.4</td>
-      <td>11462</td>
-      <td>10.2</td>
-      <td>9.6</td>
-      <td>10.8</td>
-      <td>...</td>
-      <td>3819</td>
-      <td>13.5</td>
-      <td>12.5</td>
-      <td>14.6</td>
-      <td>7726</td>
-      <td>11.2</td>
-      <td>10.5</td>
-      <td>11.9</td>
-      <td>1.10</td>
-      <td>H</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3</td>
-      <td>Thistletown-Beaumond Heights</td>
-      <td>3307</td>
-      <td>9.4</td>
-      <td>8.4</td>
-      <td>10.4</td>
-      <td>3322</td>
-      <td>10.5</td>
-      <td>9.5</td>
-      <td>11.6</td>
-      <td>...</td>
-      <td>1307</td>
-      <td>12.3</td>
-      <td>10.5</td>
-      <td>14.1</td>
-      <td>2587</td>
-      <td>10.8</td>
-      <td>9.6</td>
-      <td>12.0</td>
-      <td>1.06</td>
-      <td>NS</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>4</td>
-      <td>Rexdale-Kipling</td>
-      <td>3317</td>
-      <td>9.7</td>
-      <td>8.7</td>
-      <td>10.7</td>
-      <td>3438</td>
-      <td>13.0</td>
-      <td>11.9</td>
-      <td>14.2</td>
-      <td>...</td>
-      <td>1468</td>
-      <td>13.2</td>
-      <td>11.5</td>
-      <td>14.9</td>
-      <td>2897</td>
-      <td>10.4</td>
-      <td>9.3</td>
-      <td>11.5</td>
-      <td>1.02</td>
-      <td>NS</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>5</td>
-      <td>Elms-Old Rexdale</td>
-      <td>3209</td>
-      <td>10.2</td>
-      <td>9.1</td>
-      <td>11.2</td>
-      <td>3379</td>
-      <td>13.0</td>
-      <td>11.8</td>
-      <td>14.1</td>
-      <td>...</td>
-      <td>1314</td>
-      <td>15.1</td>
-      <td>13.1</td>
-      <td>17.0</td>
-      <td>2610</td>
-      <td>11.8</td>
-      <td>10.6</td>
-      <td>13.0</td>
-      <td>1.16</td>
-      <td>H</td>
-    </tr>
-  </tbody>
-</table>
-<p>5 rows × 44 columns</p>
-</div></div></div>
 </div>
 <ul class="simple">
 <li><p>The asthma rates are broken down by sex and age.</p></li>
@@ -1170,24 +730,6 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">asthma_neighb</span><span class="o">.</span><span class="n">columns</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;Unnamed: 0&#39;, &#39;Unnamed: 1&#39;, &#39;Demographics ª&#39;, &#39;% With asthma&#39;,
-       &#39;LL (95% CI) &#39;, &#39;UL (95% CI) &#39;, &#39;Demographics ª.1&#39;, &#39;% With asthma.1&#39;,
-       &#39;LL (95% CI) .1&#39;, &#39;UL (95% CI) .1&#39;, &#39;Demographics ª.2&#39;,
-       &#39;% With asthma.2&#39;, &#39;LL (95% CI) .2&#39;, &#39;UL (95% CI) .2&#39;, &#39;Rate Ratio**&#39;,
-       &#39;H/L/NS&#39;, &#39;Demographics ª.3&#39;, &#39;% With asthma.3&#39;, &#39;LL (95% CI) .3&#39;,
-       &#39;UL (95% CI) .3&#39;, &#39;Demographics ª.4&#39;, &#39;% With asthma.4&#39;,
-       &#39;LL (95% CI) .4&#39;, &#39;UL (95% CI) .4&#39;, &#39;Demographics ª.5&#39;,
-       &#39;% With asthma.5&#39;, &#39;LL (95% CI) .5&#39;, &#39;UL (95% CI) .5&#39;, &#39;Rate Ratio**.1&#39;,
-       &#39;H/L/NS.1&#39;, &#39;Demographics ª.6&#39;, &#39;% With asthma.6&#39;, &#39;LL (95% CI) .6&#39;,
-       &#39;UL (95% CI) .6&#39;, &#39;Demographics ª.7&#39;, &#39;% With asthma.7&#39;,
-       &#39;LL (95% CI) .7&#39;, &#39;UL (95% CI) .7&#39;, &#39;Demographics ª.8&#39;,
-       &#39;% With asthma.8&#39;, &#39;LL (95% CI) .8&#39;, &#39;UL (95% CI) .8&#39;, &#39;Rate Ratio**.2&#39;,
-       &#39;H/L/NS.2&#39;],
-      dtype=&#39;object&#39;)
 </pre></div>
 </div>
 </div>
@@ -1212,64 +754,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Neighbid</th>
-      <th>name</th>
-      <th>asthma_pct</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1</td>
-      <td>West Humber-Clairville</td>
-      <td>10.2</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2</td>
-      <td>Mount Olive-Silverstone-Jamestown</td>
-      <td>9.1</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3</td>
-      <td>Thistletown-Beaumond Heights</td>
-      <td>10.0</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>4</td>
-      <td>Rexdale-Kipling</td>
-      <td>11.4</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>5</td>
-      <td>Elms-Old Rexdale</td>
-      <td>11.6</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
 </div>
 </section>
 </section>
@@ -1289,100 +773,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Neighbid</th>
-      <th>name_x</th>
-      <th>asthma_pct</th>
-      <th>name_y</th>
-      <th>median_income</th>
-      <th>rented_dwell</th>
-      <th>unemployment</th>
-      <th>immigration5</th>
-      <th>vismin</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1</td>
-      <td>West Humber-Clairville</td>
-      <td>10.2</td>
-      <td>West Humber-Clairville</td>
-      <td>56220</td>
-      <td>27.4</td>
-      <td>7.0</td>
-      <td>12.2</td>
-      <td>77.9</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2</td>
-      <td>Mount Olive-Silverstone-Jamestown</td>
-      <td>9.1</td>
-      <td>Mount Olive-Silverstone-Jamestown</td>
-      <td>43975</td>
-      <td>52.0</td>
-      <td>9.9</td>
-      <td>22.2</td>
-      <td>85.3</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3</td>
-      <td>Thistletown-Beaumond Heights</td>
-      <td>10.0</td>
-      <td>Thistletown-Beaumond Heights</td>
-      <td>49800</td>
-      <td>34.4</td>
-      <td>6.3</td>
-      <td>9.7</td>
-      <td>53.8</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>4</td>
-      <td>Rexdale-Kipling</td>
-      <td>11.4</td>
-      <td>Rexdale-Kipling</td>
-      <td>46033</td>
-      <td>45.1</td>
-      <td>7.7</td>
-      <td>8.3</td>
-      <td>41.8</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>5</td>
-      <td>Elms-Old Rexdale</td>
-      <td>11.6</td>
-      <td>Elms-Old Rexdale</td>
-      <td>48055</td>
-      <td>41.2</td>
-      <td>7.8</td>
-      <td>9.8</td>
-      <td>60.5</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
 </div>
 </section>
 </section>
@@ -1399,9 +789,6 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">regplot</span><span class="p">(</span><span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;asthma_pct&#39;</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;immigration5&#39;</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">asthma_socdem</span><span class="p">,</span> <span class="n">ci</span> <span class="o">=</span> <span class="kc">None</span><span class="p">);</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../../../_images/3d1c040b1c2c0902f91b2bf3bf7afbf595ea7483a74b5deb3c05d5f843904694.png" src="../../../_images/3d1c040b1c2c0902f91b2bf3bf7afbf595ea7483a74b5deb3c05d5f843904694.png" />
 </div>
 </div>
 <p>Describe the relationship between asthma and immigration.</p>
@@ -1428,18 +815,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><table class="simpletable">
-<tr>
-        <td></td>          <th>coef</th>     <th>std err</th>      <th>t</th>      <th>P>|t|</th>  <th>[0.025</th>    <th>0.975]</th>  
-</tr>
-<tr>
-  <th>Intercept</th>    <td>   11.8266</td> <td>    0.218</td> <td>   54.328</td> <td> 0.000</td> <td>   11.396</td> <td>   12.257</td>
-</tr>
-<tr>
-  <th>immigration5</th> <td>   -0.1597</td> <td>    0.019</td> <td>   -8.475</td> <td> 0.000</td> <td>   -0.197</td> <td>   -0.122</td>
-</tr>
-</table></div></div>
 </div>
 </section>
 </section>
@@ -1459,19 +834,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    140.000000
-mean       9.864286
-std        6.037045
-min        1.200000
-25%        4.975000
-50%        8.650000
-75%       13.100000
-max       32.800000
-Name: immigration5, dtype: float64
-</pre></div>
-</div>
-</div>
 </div>
 <ul class="simple">
 <li><p>The <strong>y-intercept</strong> in regression models often doesn’t have a sensible interpretation, but is often mathematically important for regression to work well.</p></li>
@@ -1484,11 +846,6 @@ Name: immigration5, dtype: float64
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.342332397042001
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1498,12 +855,6 @@ Name: immigration5, dtype: float64
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;residuals&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;residuals&#39;)
-</pre></div>
-</div>
-<img alt="../../../_images/bd0b4e15217751ef5c3338559baea3ef15936b868b1119ac48b541b4f4cf079d.png" src="../../../_images/bd0b4e15217751ef5c3338559baea3ef15936b868b1119ac48b541b4f4cf079d.png" />
 </div>
 </div>
 <ul class="simple">
@@ -1537,21 +888,11 @@ Name: immigration5, dtype: float64
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>RangeIndex(start=0, stop=5, step=1)
-</pre></div>
-</div>
-</div>
 </div>
 <p>A Boolean array that is <code class="docutils literal notranslate"><span class="pre">True</span></code> if the index is <code class="docutils literal notranslate"><span class="pre">0</span></code> or <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ True,  True, False, False, False])
 </pre></div>
 </div>
 </div>
@@ -1563,11 +904,6 @@ Name: immigration5, dtype: float64
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([False, False,  True,  True,  True])
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1575,44 +911,6 @@ Name: immigration5, dtype: float64
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>a</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>2</th>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>4</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>5</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
 </div>
 </section>
 <section id="creating-training-and-test-data-sets-from-a-single-dataset">
@@ -1650,13 +948,6 @@ Name: immigration5, dtype: float64
 <span class="nb">print</span><span class="p">(</span><span class="n">reg_df_train</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">reg_df_test</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(140, 9)
-(105, 9)
-(35, 9)
 </pre></div>
 </div>
 </div>
@@ -1707,11 +998,6 @@ Name: immigration5, dtype: float64
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.3987103239995489
-</pre></div>
-</div>
-</div>
 </div>
 <ul class="simple">
 <li><p>The observed asthma rates deviate from the predicted asthma rates in each neighbourhood by 1.4% in the training set.</p></li>
@@ -1740,11 +1026,6 @@ Name: immigration5, dtype: float64
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.109621980506299
-</pre></div>
-</div>
-</div>
 </div>
 </section>
 </section>
@@ -1768,13 +1049,6 @@ Name: immigration5, dtype: float64
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;Neighbid&#39;, &#39;name_x&#39;, &#39;asthma_pct&#39;, &#39;name_y&#39;, &#39;median_income&#39;,
-       &#39;rented_dwell&#39;, &#39;unemployment&#39;, &#39;immigration5&#39;, &#39;vismin&#39;],
-      dtype=&#39;object&#39;)
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1783,9 +1057,6 @@ Name: immigration5, dtype: float64
 <span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span><span class="n">asthma_socdem</span><span class="p">[</span><span class="n">to_show</span><span class="p">]);</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../../../_images/99e5dc5bd7173ef809331fbc109a49c718ab8d873b6dfbdbe360ecc6c442d4df.png" src="../../../_images/99e5dc5bd7173ef809331fbc109a49c718ab8d873b6dfbdbe360ecc6c442d4df.png" />
 </div>
 </div>
 <ul class="simple">
@@ -1804,21 +1075,6 @@ Name: immigration5, dtype: float64
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><table class="simpletable">
-<tr>
-        <td></td>           <th>coef</th>     <th>std err</th>      <th>t</th>      <th>P>|t|</th>  <th>[0.025</th>    <th>0.975]</th>  
-</tr>
-<tr>
-  <th>Intercept</th>     <td>   14.3041</td> <td>    0.497</td> <td>   28.758</td> <td> 0.000</td> <td>   13.321</td> <td>   15.288</td>
-</tr>
-<tr>
-  <th>immigration5</th>  <td>   -0.2054</td> <td>    0.019</td> <td>  -10.750</td> <td> 0.000</td> <td>   -0.243</td> <td>   -0.168</td>
-</tr>
-<tr>
-  <th>median_income</th> <td>-4.048e-05</td> <td> 7.45e-06</td> <td>   -5.431</td> <td> 0.000</td> <td>-5.52e-05</td> <td>-2.57e-05</td>
-</tr>
-</table></div></div>
 </div>
 <ul class="simple">
 <li><p>Notice that the slope estimate (coefficient) for <code class="docutils literal notranslate"><span class="pre">median_income</span></code> is 0, but so is the p-value and range of plausible values.</p></li>
@@ -1832,9 +1088,6 @@ Name: immigration5, dtype: float64
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">regplot</span><span class="p">(</span><span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;immigration5&#39;</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;median_income&#39;</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">asthma_socdem</span><span class="p">,</span> <span class="n">ci</span> <span class="o">=</span> <span class="kc">None</span><span class="p">);</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../../../_images/10e553eff2df43384dda89238fcee3dea7abe79226c7a13b5c76c6754e8ce7bc.png" src="../../../_images/10e553eff2df43384dda89238fcee3dea7abe79226c7a13b5c76c6754e8ce7bc.png" />
 </div>
 </div>
 </section>
@@ -1941,154 +1194,6 @@ Name: immigration5, dtype: float64
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>AREA_ATTR_ID</th>
-      <th>AREA_DESC</th>
-      <th>AREA_ID</th>
-      <th>AREA_LONG_CODE</th>
-      <th>AREA_NAME</th>
-      <th>AREA_SHORT_CODE</th>
-      <th>CLASSIFICATION</th>
-      <th>CLASSIFICATION_CODE</th>
-      <th>LATITUDE</th>
-      <th>LONGITUDE</th>
-      <th>OBJECTID</th>
-      <th>PARENT_AREA_ID</th>
-      <th>Shape__Area</th>
-      <th>Shape__Length</th>
-      <th>X</th>
-      <th>Y</th>
-      <th>_id</th>
-      <th>geometry</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>26005521</td>
-      <td>Casa Loma (96)</td>
-      <td>2480141</td>
-      <td>096</td>
-      <td>Casa Loma (96)</td>
-      <td>096</td>
-      <td>None</td>
-      <td>None</td>
-      <td>None</td>
-      <td>None</td>
-      <td>17545105</td>
-      <td>None</td>
-      <td>3.678385e+06</td>
-      <td>8214.176485</td>
-      <td>None</td>
-      <td>None</td>
-      <td>1</td>
-      <td>POLYGON ((-79.41469 43.67391, -79.41485 43.674...</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>26005520</td>
-      <td>Annex (95)</td>
-      <td>2480140</td>
-      <td>095</td>
-      <td>Annex (95)</td>
-      <td>095</td>
-      <td>None</td>
-      <td>None</td>
-      <td>None</td>
-      <td>None</td>
-      <td>17545121</td>
-      <td>None</td>
-      <td>5.337192e+06</td>
-      <td>10513.883143</td>
-      <td>None</td>
-      <td>None</td>
-      <td>2</td>
-      <td>POLYGON ((-79.39414 43.66872, -79.39588 43.668...</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>26005519</td>
-      <td>Caledonia-Fairbank (109)</td>
-      <td>2480139</td>
-      <td>109</td>
-      <td>Caledonia-Fairbank (109)</td>
-      <td>109</td>
-      <td>None</td>
-      <td>None</td>
-      <td>None</td>
-      <td>None</td>
-      <td>17545137</td>
-      <td>None</td>
-      <td>2.955857e+06</td>
-      <td>6849.911724</td>
-      <td>None</td>
-      <td>None</td>
-      <td>3</td>
-      <td>POLYGON ((-79.46021 43.68156, -79.46044 43.681...</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>26005444</td>
-      <td>Woodbine Corridor (64)</td>
-      <td>2480064</td>
-      <td>064</td>
-      <td>Woodbine Corridor (64)</td>
-      <td>064</td>
-      <td>None</td>
-      <td>None</td>
-      <td>None</td>
-      <td>None</td>
-      <td>17545153</td>
-      <td>None</td>
-      <td>3.052518e+06</td>
-      <td>7512.966773</td>
-      <td>None</td>
-      <td>None</td>
-      <td>4</td>
-      <td>POLYGON ((-79.31485 43.66674, -79.31660 43.666...</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>26005443</td>
-      <td>Lawrence Park South (103)</td>
-      <td>2480063</td>
-      <td>103</td>
-      <td>Lawrence Park South (103)</td>
-      <td>103</td>
-      <td>None</td>
-      <td>None</td>
-      <td>None</td>
-      <td>None</td>
-      <td>17545169</td>
-      <td>None</td>
-      <td>6.211341e+06</td>
-      <td>13530.370002</td>
-      <td>None</td>
-      <td>None</td>
-      <td>5</td>
-      <td>POLYGON ((-79.41096 43.70408, -79.41165 43.703...</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2096,11 +1201,6 @@ Name: immigration5, dtype: float64
 <span class="c1"># describes the polygon representing the first neighbourhood</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">nbrhd</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="s1">&#39;geometry&#39;</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>POLYGON ((-79.41469317817781 43.6739104164259, -79.41484930122832 43.6743388247927, -79.4155279126094 43.67606998537741, -79.4157867581137 43.6767302521386, -79.4164385645546 43.6783329020511, -79.4165782543862 43.6787785512344, -79.4167583944682 43.6792484522149, -79.41698203537291 43.6798247440047, -79.4170902471251 43.6801047004014, -79.4174797570886 43.681051830379, -79.4176666295158 43.6815699096212, -79.4176976020857 43.68163169892501, -79.4178116560388 43.6819252777403, -79.4181213711598 43.6827105222857, -79.4182734938897 43.6830961662335, -79.418301440907 43.683167503583, -79.4184313411692 43.6834966841996, -79.4184870757371 43.6836294842548, -79.4185410795905 43.6837582054538, -79.4184092922561 43.683786393574, -79.4182955283344 43.6834937157887, -79.4154265333151 43.684065660547, -79.4135200432832 43.6844456915062, -79.4134087861596 43.6844695957643, -79.4134686959176 43.6846245536214, -79.4124643275333 43.6848288476745, -79.4118960009694 43.6849418545125, -79.4126020656339 43.6866857692443, -79.4128218223812 43.687229039671, -79.4122731860895 43.687340632143, -79.4123095851789 43.6874306640936, -79.4124449310775 43.6877690817767, -79.4125749764611 43.6881026705283, -79.4126022442033 43.68820308289101, -79.4126262355444 43.6883388768546, -79.412631283351 43.6884334123732, -79.4126432068819 43.6885168725437, -79.4126690850027 43.6886690142942, -79.4121798023448 43.6887725684515, -79.4121317450359 43.688782747996, -79.4094911620232 43.6893416576956, -79.4095159141932 43.6894373160946, -79.4079543147094 43.6897847976179, -79.4064026019847 43.6900806794424, -79.4048987011668 43.6903958607535, -79.4030176369546 43.6907821281771, -79.4030622386805 43.6907397518989, -79.403084589916 43.6906872662864, -79.4030847025454 43.6906327275232, -79.40233853963132 43.6887211977866, -79.4014954899744 43.6866406966408, -79.401126389152 43.6857160700657, -79.400841057476 43.6850272500519, -79.4005303647662 43.6843098010236, -79.4002092949982 43.6835267044631, -79.4001688947727 43.6834159800984, -79.3998035302044 43.6825434875815, -79.3992154226597 43.6811276314469, -79.3990654446524 43.6807665464922, -79.3989394746847 43.6804604265612, -79.3987331620365 43.679962228305, -79.3985629657772 43.6795542728627, -79.3983515160598 43.6790391648102, -79.3981409020124 43.6785307360415, -79.3980121612171 43.6782038734666, -79.3979440512351 43.6780262977103, -79.3979313672526 43.6779949618024, -79.397997906573 43.6779648847871, -79.39810766305662 43.6779154844303, -79.3982178162304 43.677866084320804, -79.3983283660932 43.677816684457504, -79.3984396598895 43.6777672941492, -79.3985509707706 43.677722377402, -79.39866305797811 43.6776729695768, -79.3987751498381 43.6776280623042, -79.39888799806091 43.677583155590305, -79.3990012429834 43.6775382491152, -79.399114879728 43.6774888512157, -79.3992025285702 43.6774574239244, -79.3992901799736 43.6774169952501, -79.3993786050701 43.6773810678483, -79.3994674269127 43.677345149728104, -79.3995566132194 43.6773137235166, -79.3996462037999 43.6772777969312, -79.3997357818565 43.6772418792657, -79.3998261336784 43.6772104448643, -79.3999168946437 43.6771790287522, -79.4000076183382 43.6771475945326, -79.4000991356532 43.6771161699357, -79.4001906603179 43.6770802536138, -79.4002825618979 43.6770488292052, -79.4003752372778 43.6770218970549, -79.40046791256 43.6769949738305, -79.4005609796537 43.6769635502124, -79.4006540144064 43.6769366361508, -79.40074786265342 43.6769052040578, -79.4008416959652 43.6768827821947, -79.4009359160751 43.6768513592708, -79.4010305181557 43.6768289379187, -79.4011394914127 43.6767930269395, -79.40124844475712 43.6767616164984, -79.4013577948506 43.6767302062957, -79.4014675168886 43.6766987963088, -79.401577635645 43.6766674045606, -79.4016877469976 43.6766404773541, -79.4017982426678 43.6766135773755, -79.401909142447 43.6765821679758, -79.4020200223858 43.6765552591109, -79.4021313064015 43.6765238498247, -79.4022429725496 43.6765014420761, -79.4023546335109 43.6764745335542, -79.4024666788314 43.6764476252511, -79.4025787240519 43.6764207168379, -79.4026915556349 43.6763983006426, -79.40280397272 43.67637139232491, -79.402883149386 43.6763541860873, -79.4029167917251 43.6763489758964, -79.4030299826882 43.6763265686732, -79.4031435776805 43.6762996520191, -79.4049670168388 43.6759208047062, -79.4073338149418 43.675429007407, -79.407847991862 43.67532218132661, -79.4113608949251 43.6745959152122, -79.4121860970333 43.6744315128604, -79.4137161812489 43.6741115018232, -79.4146748682077 43.6739143093347, -79.41469317817781 43.6739104164259))
 </pre></div>
 </div>
 </div>
@@ -2115,11 +1215,6 @@ Name: immigration5, dtype: float64
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pandas.core.series.Series
-</pre></div>
-</div>
-</div>
 </div>
 </section>
 </section>
@@ -2131,12 +1226,6 @@ Name: immigration5, dtype: float64
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nbrhd</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
-</pre></div>
-</div>
-<img alt="../../../_images/27e712e60dc91b07a0b35350413459ec3351f1bd6903e40a2a2c0b5eb62327e4.png" src="../../../_images/27e712e60dc91b07a0b35350413459ec3351f1bd6903e40a2a2c0b5eb62327e4.png" />
 </div>
 </div>
 </section>
@@ -2160,13 +1249,6 @@ Name: immigration5, dtype: float64
 <span class="n">nbrhd</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">column</span> <span class="o">=</span> <span class="s2">&quot;AREA_NAME&quot;</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">axes</span><span class="p">);</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;matplotlib.figure.Figure&#39;&gt;
-&lt;class &#39;matplotlib.axes._subplots.AxesSubplot&#39;&gt;
-</pre></div>
-</div>
-<img alt="../../../_images/1ef46f2889d9c4626293574800eddb25e22fb7ccb194f6d053137ce64cb49661.png" src="../../../_images/1ef46f2889d9c4626293574800eddb25e22fb7ccb194f6d053137ce64cb49661.png" />
 </div>
 </div>
 <p>What if we want to do 2 maps in one figure?</p>
@@ -2193,12 +1275,6 @@ Name: immigration5, dtype: float64
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(2,)
-</pre></div>
-</div>
-<img alt="../../../_images/9262229187a3325950a280e13573f69baf327062d460403bc3e853453f6df21b.png" src="../../../_images/9262229187a3325950a280e13573f69baf327062d460403bc3e853453f6df21b.png" />
-</div>
 </div>
 <p>A note about axes:</p>
 <ul class="simple">
@@ -2223,9 +1299,6 @@ Name: immigration5, dtype: float64
 <span class="n">current_fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../../../_images/13821015bd982ac635867d0659e4286998e4c943278b0fe94ebfbd2f7f71079a.png" src="../../../_images/13821015bd982ac635867d0659e4286998e4c943278b0fe94ebfbd2f7f71079a.png" />
 </div>
 </div>
 </section>
@@ -2276,67 +1349,6 @@ Name: immigration5, dtype: float64
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The data type of nbrhd_spat_id is:  &lt;class &#39;str&#39;&gt;
-</pre></div>
-</div>
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>name</th>
-      <th>nbrhd_spat_id</th>
-      <th>geometry</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Casa Loma (96)</td>
-      <td>096</td>
-      <td>POLYGON ((-79.41469 43.67391, -79.41485 43.674...</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Annex (95)</td>
-      <td>095</td>
-      <td>POLYGON ((-79.39414 43.66872, -79.39588 43.668...</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Caledonia-Fairbank (109)</td>
-      <td>109</td>
-      <td>POLYGON ((-79.46021 43.68156, -79.46044 43.681...</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Woodbine Corridor (64)</td>
-      <td>064</td>
-      <td>POLYGON ((-79.31485 43.66674, -79.31660 43.666...</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Lawrence Park South (103)</td>
-      <td>103</td>
-      <td>POLYGON ((-79.41096 43.70408, -79.41165 43.703...</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2351,173 +1363,6 @@ Name: immigration5, dtype: float64
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Unnamed: 0</th>
-      <th>Unnamed: 1</th>
-      <th>Demographics ª</th>
-      <th>% With asthma</th>
-      <th>LL (95% CI)</th>
-      <th>UL (95% CI)</th>
-      <th>Demographics ª.1</th>
-      <th>% With asthma.1</th>
-      <th>LL (95% CI) .1</th>
-      <th>UL (95% CI) .1</th>
-      <th>...</th>
-      <th>Demographics ª.7</th>
-      <th>% With asthma.7</th>
-      <th>LL (95% CI) .7</th>
-      <th>UL (95% CI) .7</th>
-      <th>Demographics ª.8</th>
-      <th>% With asthma.8</th>
-      <th>LL (95% CI) .8</th>
-      <th>UL (95% CI) .8</th>
-      <th>Rate Ratio**.2</th>
-      <th>H/L/NS.2</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1</td>
-      <td>West Humber-Clairville</td>
-      <td>11977</td>
-      <td>9.7</td>
-      <td>9.2</td>
-      <td>10.2</td>
-      <td>11770</td>
-      <td>10.6</td>
-      <td>10.0</td>
-      <td>11.2</td>
-      <td>...</td>
-      <td>4435</td>
-      <td>12.3</td>
-      <td>11.3</td>
-      <td>13.3</td>
-      <td>8921</td>
-      <td>10.9</td>
-      <td>10.3</td>
-      <td>11.6</td>
-      <td>1.07</td>
-      <td>H</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2</td>
-      <td>Mount Olive-Silverstone-Jamestown</td>
-      <td>11157</td>
-      <td>7.9</td>
-      <td>7.4</td>
-      <td>8.4</td>
-      <td>11462</td>
-      <td>10.2</td>
-      <td>9.6</td>
-      <td>10.8</td>
-      <td>...</td>
-      <td>3819</td>
-      <td>13.5</td>
-      <td>12.5</td>
-      <td>14.6</td>
-      <td>7726</td>
-      <td>11.2</td>
-      <td>10.5</td>
-      <td>11.9</td>
-      <td>1.10</td>
-      <td>H</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3</td>
-      <td>Thistletown-Beaumond Heights</td>
-      <td>3307</td>
-      <td>9.4</td>
-      <td>8.4</td>
-      <td>10.4</td>
-      <td>3322</td>
-      <td>10.5</td>
-      <td>9.5</td>
-      <td>11.6</td>
-      <td>...</td>
-      <td>1307</td>
-      <td>12.3</td>
-      <td>10.5</td>
-      <td>14.1</td>
-      <td>2587</td>
-      <td>10.8</td>
-      <td>9.6</td>
-      <td>12.0</td>
-      <td>1.06</td>
-      <td>NS</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>4</td>
-      <td>Rexdale-Kipling</td>
-      <td>3317</td>
-      <td>9.7</td>
-      <td>8.7</td>
-      <td>10.7</td>
-      <td>3438</td>
-      <td>13.0</td>
-      <td>11.9</td>
-      <td>14.2</td>
-      <td>...</td>
-      <td>1468</td>
-      <td>13.2</td>
-      <td>11.5</td>
-      <td>14.9</td>
-      <td>2897</td>
-      <td>10.4</td>
-      <td>9.3</td>
-      <td>11.5</td>
-      <td>1.02</td>
-      <td>NS</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>5</td>
-      <td>Elms-Old Rexdale</td>
-      <td>3209</td>
-      <td>10.2</td>
-      <td>9.1</td>
-      <td>11.2</td>
-      <td>3379</td>
-      <td>13.0</td>
-      <td>11.8</td>
-      <td>14.1</td>
-      <td>...</td>
-      <td>1314</td>
-      <td>15.1</td>
-      <td>13.1</td>
-      <td>17.0</td>
-      <td>2610</td>
-      <td>11.8</td>
-      <td>10.6</td>
-      <td>13.0</td>
-      <td>1.16</td>
-      <td>H</td>
-    </tr>
-  </tbody>
-</table>
-<p>5 rows × 44 columns</p>
-</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2538,67 +1383,6 @@ Name: immigration5, dtype: float64
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The data type of Neighbid is:  &lt;class &#39;numpy.int64&#39;&gt;
-</pre></div>
-</div>
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Neighbid</th>
-      <th>name</th>
-      <th>asthma_pct</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1</td>
-      <td>West Humber-Clairville</td>
-      <td>10.2</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2</td>
-      <td>Mount Olive-Silverstone-Jamestown</td>
-      <td>9.1</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3</td>
-      <td>Thistletown-Beaumond Heights</td>
-      <td>10.0</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>4</td>
-      <td>Rexdale-Kipling</td>
-      <td>11.4</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>5</td>
-      <td>Elms-Old Rexdale</td>
-      <td>11.6</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
 </div>
 </section>
 <section id="note-that-the-nbrhd-spat-id-in-neighborhood-geodataframe-is-string">
@@ -2615,70 +1399,6 @@ Name: immigration5, dtype: float64
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>name</th>
-      <th>nbrhd_spat_id</th>
-      <th>geometry</th>
-      <th>Neighbid</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>30</th>
-      <td>West Humber-Clairville (1)</td>
-      <td>001</td>
-      <td>POLYGON ((-79.55236 43.70947, -79.55238 43.709...</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>40</th>
-      <td>Mount Olive-Silverstone-Jamestown (2)</td>
-      <td>002</td>
-      <td>POLYGON ((-79.60338 43.75786, -79.60205 43.758...</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>124</th>
-      <td>Thistletown-Beaumond Heights (3)</td>
-      <td>003</td>
-      <td>POLYGON ((-79.57751 43.73384, -79.57806 43.734...</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>122</th>
-      <td>Rexdale-Kipling (4)</td>
-      <td>004</td>
-      <td>POLYGON ((-79.55512 43.71510, -79.55504 43.714...</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <th>22</th>
-      <td>Elms-Old Rexdale (5)</td>
-      <td>005</td>
-      <td>POLYGON ((-79.55512 43.71510, -79.55569 43.716...</td>
-      <td>5</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
 </div>
 <section id="now-let-s-do-the-join">
 <h4>Now let’s do the join!<a class="headerlink" href="#now-let-s-do-the-join" title="Link to this heading">#</a></h4>
@@ -2689,82 +1409,6 @@ Name: immigration5, dtype: float64
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>name_x</th>
-      <th>nbrhd_spat_id</th>
-      <th>geometry</th>
-      <th>Neighbid</th>
-      <th>name_y</th>
-      <th>asthma_pct</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Casa Loma (96)</td>
-      <td>096</td>
-      <td>POLYGON ((-79.41469 43.67391, -79.41485 43.674...</td>
-      <td>96</td>
-      <td>Casa Loma</td>
-      <td>10.1</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Annex (95)</td>
-      <td>095</td>
-      <td>POLYGON ((-79.39414 43.66872, -79.39588 43.668...</td>
-      <td>95</td>
-      <td>Annex</td>
-      <td>9.5</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Caledonia-Fairbank (109)</td>
-      <td>109</td>
-      <td>POLYGON ((-79.46021 43.68156, -79.46044 43.681...</td>
-      <td>109</td>
-      <td>Caledonia-Fairbank</td>
-      <td>11.3</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Woodbine Corridor (64)</td>
-      <td>064</td>
-      <td>POLYGON ((-79.31485 43.66674, -79.31660 43.666...</td>
-      <td>64</td>
-      <td>Woodbine Corridor</td>
-      <td>13.0</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Lawrence Park South (103)</td>
-      <td>103</td>
-      <td>POLYGON ((-79.41096 43.70408, -79.41165 43.703...</td>
-      <td>103</td>
-      <td>Lawrence Park South</td>
-      <td>10.7</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
 </div>
 </section>
 </section>
@@ -2784,12 +1428,6 @@ Name: immigration5, dtype: float64
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
-</pre></div>
-</div>
-<img alt="../../../_images/a16e2c45b81dbaaa498798125905025b7d69d93e48b47c01e511706610205e3c.png" src="../../../_images/a16e2c45b81dbaaa498798125905025b7d69d93e48b47c01e511706610205e3c.png" />
-</div>
 </div>
 </section>
 </section>
@@ -2808,9 +1446,6 @@ Name: immigration5, dtype: float64
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../../../_images/97b669d417da2443b603d0d0ac6d01c7b17feaf191306d779e148f0c2eab12e8.png" src="../../../_images/97b669d417da2443b603d0d0ac6d01c7b17feaf191306d779e148f0c2eab12e8.png" />
 </div>
 </div>
 </section>
@@ -2842,12 +1477,6 @@ Name: immigration5, dtype: float64
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
-</pre></div>
-</div>
-<img alt="../../../_images/bea1a976986bf78fb632a6327b4bddcdccbef9fb158bb6102ccacbedafb36804.png" src="../../../_images/bea1a976986bf78fb632a6327b4bddcdccbef9fb158bb6102ccacbedafb36804.png" />
-</div>
 </div>
 <p>This map looks a lot better, I think! But the legend is overlapping the map. We should move it.</p>
 <p>The legend options are kind of complicated, but you can find more about stuff here: <a class="reference external" href="https://matplotlib.org/3.5.1/api/_as_gen/matplotlib.pyplot.legend.html">https://matplotlib.org/3.5.1/api/_as_gen/matplotlib.pyplot.legend.html</a></p>
@@ -2863,12 +1492,6 @@ Name: immigration5, dtype: float64
                                <span class="s1">&#39;title_fontsize&#39;</span><span class="p">:</span> <span class="mi">23</span><span class="p">,</span><span class="s1">&#39;fontsize&#39;</span><span class="p">:</span> <span class="mi">15</span><span class="p">})</span> <span class="c1">#&#39;loc&#39;=4 means lower right</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
-</pre></div>
-</div>
-<img alt="../../../_images/58575b3e7cf372c98f39147ef51da65e3a6327803b7a2783ad099709e758ad33.png" src="../../../_images/58575b3e7cf372c98f39147ef51da65e3a6327803b7a2783ad099709e758ad33.png" />
 </div>
 </div>
 <p>Can we show descriptive stats charts next to a map?</p>
@@ -2893,12 +1516,6 @@ Name: immigration5, dtype: float64
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Distribution of percent of residents with asthma in Toronto, ON&#39;)
-</pre></div>
-</div>
-<img alt="../../../_images/91594a7a8775a9b150f3190b5c4a4c393736900d7e38dc16263e6b10624a59ad.png" src="../../../_images/91594a7a8775a9b150f3190b5c4a4c393736900d7e38dc16263e6b10624a59ad.png" />
-</div>
 </div>
 </section>
 </section>
@@ -2917,12 +1534,6 @@ Name: immigration5, dtype: float64
 <span class="n">railways</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
-</pre></div>
-</div>
-<img alt="../../../_images/97eff3470ed1e39b220f931434c350daff57c8163f8e0a8cfd447921a8bbffc2.png" src="../../../_images/97eff3470ed1e39b220f931434c350daff57c8163f8e0a8cfd447921a8bbffc2.png" />
 </div>
 </div>
 </section>
@@ -2948,18 +1559,6 @@ Name: immigration5, dtype: float64
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The original projection of railways is:  EPSG:4269
-The original projection of nbrhd_simple is:  EPSG:4326
-The NEW projection of railways is:  EPSG:4326
-And nbrhd_simple is still:  EPSG:4326
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
-</pre></div>
-</div>
-<img alt="../../../_images/97eff3470ed1e39b220f931434c350daff57c8163f8e0a8cfd447921a8bbffc2.png" src="../../../_images/97eff3470ed1e39b220f931434c350daff57c8163f8e0a8cfd447921a8bbffc2.png" />
-</div>
 </div>
 </section>
 <section id="now-that-our-two-geodataframe-spatial-layers-are-in-the-same-projection-we-can-plot-them-together">
@@ -2978,12 +1577,6 @@ And nbrhd_simple is still:  EPSG:4326
 <span class="n">railways</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">edgecolor</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mf">.5</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">axes</span><span class="p">)</span> <span class="c1">#notice i&#39;m putting this in the same axes cell</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
-</pre></div>
-</div>
-<img alt="../../../_images/91e69d335768617107d0e125a543c8ae1cedf256f29a3361698ac240a00e2ed3.png" src="../../../_images/91e69d335768617107d0e125a543c8ae1cedf256f29a3361698ac240a00e2ed3.png" />
 </div>
 </div>
 </section>
@@ -3007,317 +1600,6 @@ And nbrhd_simple is still:  EPSG:4326
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>name_x</th>
-      <th>nbrhd_spat_id</th>
-      <th>geometry</th>
-      <th>Neighbid</th>
-      <th>name_y</th>
-      <th>asthma_pct</th>
-      <th>index_right</th>
-      <th>OBJECTID</th>
-      <th>OGF_ID</th>
-      <th>TRACKNID</th>
-      <th>...</th>
-      <th>GEOACQTECH</th>
-      <th>GEOACCURA</th>
-      <th>GEOPROVIDE</th>
-      <th>ATTCREDATE</th>
-      <th>ATTREVDATE</th>
-      <th>ATTACQTECH</th>
-      <th>ATTPROVIDE</th>
-      <th>EFFECTIVE_</th>
-      <th>SHAPE_Leng</th>
-      <th>SHAPE_1_Le</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Casa Loma (96)</td>
-      <td>096</td>
-      <td>POLYGON ((-79.41469 43.67391, -79.41485 43.674...</td>
-      <td>96</td>
-      <td>Casa Loma</td>
-      <td>10.1</td>
-      <td>1280.0</td>
-      <td>1720.0</td>
-      <td>10131.0</td>
-      <td>2579cdd5ccaf447e93bec017362a451a</td>
-      <td>...</td>
-      <td>Vector Data</td>
-      <td>10.0</td>
-      <td>Provincial/Territorial</td>
-      <td>201306</td>
-      <td>None</td>
-      <td>Vector Data</td>
-      <td>Federal</td>
-      <td>2013-07-30</td>
-      <td>0.0</td>
-      <td>0.026163</td>
-    </tr>
-    <tr>
-      <th>0</th>
-      <td>Casa Loma (96)</td>
-      <td>096</td>
-      <td>POLYGON ((-79.41469 43.67391, -79.41485 43.674...</td>
-      <td>96</td>
-      <td>Casa Loma</td>
-      <td>10.1</td>
-      <td>3222.0</td>
-      <td>8267.0</td>
-      <td>16018.0</td>
-      <td>ced49be659214db99e606ea1f3153f03</td>
-      <td>...</td>
-      <td>Vector Data</td>
-      <td>10.0</td>
-      <td>Provincial/Territorial</td>
-      <td>201306</td>
-      <td>None</td>
-      <td>Vector Data</td>
-      <td>Federal</td>
-      <td>2013-07-30</td>
-      <td>0.0</td>
-      <td>0.043467</td>
-    </tr>
-    <tr>
-      <th>0</th>
-      <td>Casa Loma (96)</td>
-      <td>096</td>
-      <td>POLYGON ((-79.41469 43.67391, -79.41485 43.674...</td>
-      <td>96</td>
-      <td>Casa Loma</td>
-      <td>10.1</td>
-      <td>888.0</td>
-      <td>9370.0</td>
-      <td>17250.0</td>
-      <td>05f860e758f746be971872822cb137c8</td>
-      <td>...</td>
-      <td>Vector Data</td>
-      <td>10.0</td>
-      <td>Provincial/Territorial</td>
-      <td>201306</td>
-      <td>None</td>
-      <td>Vector Data</td>
-      <td>Federal</td>
-      <td>2013-07-30</td>
-      <td>0.0</td>
-      <td>0.060344</td>
-    </tr>
-    <tr>
-      <th>0</th>
-      <td>Casa Loma (96)</td>
-      <td>096</td>
-      <td>POLYGON ((-79.41469 43.67391, -79.41485 43.674...</td>
-      <td>96</td>
-      <td>Casa Loma</td>
-      <td>10.1</td>
-      <td>1844.0</td>
-      <td>10459.0</td>
-      <td>3086.0</td>
-      <td>1fd8c25a828f46829c173713f49c63d3</td>
-      <td>...</td>
-      <td>Vector Data</td>
-      <td>10.0</td>
-      <td>Provincial/Territorial</td>
-      <td>201306</td>
-      <td>None</td>
-      <td>Vector Data</td>
-      <td>Federal</td>
-      <td>2013-07-30</td>
-      <td>0.0</td>
-      <td>0.008783</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Annex (95)</td>
-      <td>095</td>
-      <td>POLYGON ((-79.39414 43.66872, -79.39588 43.668...</td>
-      <td>95</td>
-      <td>Annex</td>
-      <td>9.5</td>
-      <td>1280.0</td>
-      <td>1720.0</td>
-      <td>10131.0</td>
-      <td>2579cdd5ccaf447e93bec017362a451a</td>
-      <td>...</td>
-      <td>Vector Data</td>
-      <td>10.0</td>
-      <td>Provincial/Territorial</td>
-      <td>201306</td>
-      <td>None</td>
-      <td>Vector Data</td>
-      <td>Federal</td>
-      <td>2013-07-30</td>
-      <td>0.0</td>
-      <td>0.026163</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>137</th>
-      <td>Humbermede (22)</td>
-      <td>022</td>
-      <td>POLYGON ((-79.52628 43.73640, -79.52649 43.736...</td>
-      <td>22</td>
-      <td>Humbermede</td>
-      <td>10.8</td>
-      <td>1239.0</td>
-      <td>9798.0</td>
-      <td>2436.0</td>
-      <td>816b3f97bace44149b88174dc78a7e55</td>
-      <td>...</td>
-      <td>Orthoimage</td>
-      <td>10.0</td>
-      <td>Federal</td>
-      <td>201306</td>
-      <td>None</td>
-      <td>Vector Data</td>
-      <td>Federal</td>
-      <td>2013-07-30</td>
-      <td>0.0</td>
-      <td>0.002236</td>
-    </tr>
-    <tr>
-      <th>137</th>
-      <td>Humbermede (22)</td>
-      <td>022</td>
-      <td>POLYGON ((-79.52628 43.73640, -79.52649 43.736...</td>
-      <td>22</td>
-      <td>Humbermede</td>
-      <td>10.8</td>
-      <td>2305.0</td>
-      <td>15763.0</td>
-      <td>8280.0</td>
-      <td>9da306e9415d4e7fa5b006a39dc550c1</td>
-      <td>...</td>
-      <td>Orthoimage</td>
-      <td>10.0</td>
-      <td>Federal</td>
-      <td>201306</td>
-      <td>None</td>
-      <td>Vector Data</td>
-      <td>Federal</td>
-      <td>2013-07-30</td>
-      <td>0.0</td>
-      <td>0.002528</td>
-    </tr>
-    <tr>
-      <th>137</th>
-      <td>Humbermede (22)</td>
-      <td>022</td>
-      <td>POLYGON ((-79.52628 43.73640, -79.52649 43.736...</td>
-      <td>22</td>
-      <td>Humbermede</td>
-      <td>10.8</td>
-      <td>717.0</td>
-      <td>5591.0</td>
-      <td>13590.0</td>
-      <td>632d434dd2b24ef5aaf8544d87f467f5</td>
-      <td>...</td>
-      <td>Orthoimage</td>
-      <td>10.0</td>
-      <td>Federal</td>
-      <td>201306</td>
-      <td>None</td>
-      <td>Vector Data</td>
-      <td>Federal</td>
-      <td>2013-07-30</td>
-      <td>0.0</td>
-      <td>0.012516</td>
-    </tr>
-    <tr>
-      <th>138</th>
-      <td>Willowdale West (37)</td>
-      <td>037</td>
-      <td>POLYGON ((-79.44043 43.76340, -79.44052 43.763...</td>
-      <td>37</td>
-      <td>Willowdale West</td>
-      <td>8.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>...</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>139</th>
-      <td>Willowdale East (51)</td>
-      <td>051</td>
-      <td>POLYGON ((-79.41225 43.76669, -79.41232 43.766...</td>
-      <td>51</td>
-      <td>Willowdale East</td>
-      <td>6.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>...</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-  </tbody>
-</table>
-<p>2528 rows × 69 columns</p>
-</div></div></div>
 </div>
 </section>
 <section id="woah">
@@ -3334,11 +1616,6 @@ And nbrhd_simple is still:  EPSG:4326
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(140, 69)
-</pre></div>
-</div>
-</div>
 </div>
 <section id="let-s-check-this-new-no-duplicate-geodataframe-to-see-if-looks-right">
 <h4>Let’s check this new, no duplicate geodataframe to see if looks right.<a class="headerlink" href="#let-s-check-this-new-no-duplicate-geodataframe-to-see-if-looks-right" title="Link to this heading">#</a></h4>
@@ -3348,12 +1625,6 @@ And nbrhd_simple is still:  EPSG:4326
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">no_duplicates_gdf</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">column</span> <span class="o">=</span> <span class="s2">&quot;index_right&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
-</pre></div>
-</div>
-<img alt="../../../_images/10e4f37de901fafae8b17623e7f05ef893257f60feabc12955fbb90f2208fc28.png" src="../../../_images/10e4f37de901fafae8b17623e7f05ef893257f60feabc12955fbb90f2208fc28.png" />
 </div>
 </div>
 </section>
@@ -3370,25 +1641,11 @@ And nbrhd_simple is still:  EPSG:4326
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True     85
-False    55
-Name: index_right, dtype: int64
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rail_not_present</span> <span class="o">=</span> <span class="n">no_duplicates_gdf</span><span class="p">[</span><span class="s2">&quot;index_right&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span>
 <span class="n">rail_not_present</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False    85
-True     55
-Name: index_right, dtype: int64
 </pre></div>
 </div>
 </div>
@@ -3412,88 +1669,6 @@ Name: index_right, dtype: int64
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>name_x</th>
-      <th>Neighbid</th>
-      <th>name_y</th>
-      <th>asthma_pct</th>
-      <th>index_right</th>
-      <th>geometry</th>
-      <th>rail_present</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Casa Loma (96)</td>
-      <td>96</td>
-      <td>Casa Loma</td>
-      <td>10.1</td>
-      <td>1280.0</td>
-      <td>POLYGON ((-79.41469 43.67391, -79.41485 43.674...</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Annex (95)</td>
-      <td>95</td>
-      <td>Annex</td>
-      <td>9.5</td>
-      <td>1280.0</td>
-      <td>POLYGON ((-79.39414 43.66872, -79.39588 43.668...</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Caledonia-Fairbank (109)</td>
-      <td>109</td>
-      <td>Caledonia-Fairbank</td>
-      <td>11.3</td>
-      <td>1305.0</td>
-      <td>POLYGON ((-79.46021 43.68156, -79.46044 43.681...</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Woodbine Corridor (64)</td>
-      <td>64</td>
-      <td>Woodbine Corridor</td>
-      <td>13.0</td>
-      <td>1940.0</td>
-      <td>POLYGON ((-79.31485 43.66674, -79.31660 43.666...</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Lawrence Park South (103)</td>
-      <td>103</td>
-      <td>Lawrence Park South</td>
-      <td>10.7</td>
-      <td>NaN</td>
-      <td>POLYGON ((-79.41096 43.70408, -79.41165 43.703...</td>
-      <td>False</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -3518,12 +1693,6 @@ Name: index_right, dtype: int64
              <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span> <span class="n">fontweight</span> <span class="o">=</span> <span class="s2">&quot;bold&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0.98, &#39;Percent of Population with Asthma for Neighbourhoods with Railways&#39;)
-</pre></div>
-</div>
-<img alt="../../../_images/4d1f6b9c74aab35b663ed677730e50412106a61a7b0d8667587e199be51fe4c0.png" src="../../../_images/4d1f6b9c74aab35b663ed677730e50412106a61a7b0d8667587e199be51fe4c0.png" />
 </div>
 </div>
 <p>It seems that the presence of railway in neighborhood is related to higher asthma rate!</p>
@@ -3565,13 +1734,6 @@ Name: index_right, dtype: int64
 <span class="n">pvalue</span> <span class="o">=</span> <span class="p">(</span><span class="n">numgreater</span> <span class="o">+</span> <span class="n">numsmaller</span><span class="p">)</span><span class="o">/</span> <span class="mi">5000</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The p-value is:&#39;</span><span class="p">,</span> <span class="n">pvalue</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The number of simulated differences greater than the observed difference is: 11
-The number of simulated differences smaller than the observed difference is: 13
-The p-value is: 0.0048
 </pre></div>
 </div>
 </div>
