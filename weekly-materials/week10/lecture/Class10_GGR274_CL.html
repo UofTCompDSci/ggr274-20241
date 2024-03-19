@@ -624,11 +624,202 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Neighbourhood id</th>
+      <th>Neighbourhood Name</th>
+      <th>Total Population</th>
+      <th>% 19 and under</th>
+      <th>% 65 and over</th>
+      <th>% Living alone</th>
+      <th>% Aged 65+ living alone</th>
+      <th>% Lone parent families §</th>
+      <th>% 1 year mobility in population</th>
+      <th>Median household income before-tax $</th>
+      <th>...</th>
+      <th>% Less than high school education **</th>
+      <th>% With a University degree **</th>
+      <th>% No knowledge of English/French</th>
+      <th>% Recent immigrants-within 5 years</th>
+      <th>% Recent immigrants-within 10 years</th>
+      <th>% Immigrants</th>
+      <th>% Visible minority</th>
+      <th>Top 3 Home Languages for non-English speaking households, #1</th>
+      <th>Top 3 Home Languages for non-English speaking households, #2</th>
+      <th>Top 3 Home Languages for non-English speaking households, #3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>West Humber-Clairville</td>
+      <td>32252</td>
+      <td>26.8</td>
+      <td>11.3</td>
+      <td>3.7</td>
+      <td>11.7</td>
+      <td>26.3</td>
+      <td>11.6</td>
+      <td>63413</td>
+      <td>...</td>
+      <td>18.4</td>
+      <td>22.9</td>
+      <td>5.4</td>
+      <td>12.2</td>
+      <td>22.1</td>
+      <td>60.0</td>
+      <td>77.9</td>
+      <td>Panjabi (Punjabi)</td>
+      <td>Gujarati</td>
+      <td>Spanish</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Mount Olive-Silverstone-Jamestown</td>
+      <td>32127</td>
+      <td>32.2</td>
+      <td>8.1</td>
+      <td>4.1</td>
+      <td>15.4</td>
+      <td>31.5</td>
+      <td>15.7</td>
+      <td>48146</td>
+      <td>...</td>
+      <td>20.1</td>
+      <td>23.6</td>
+      <td>7.6</td>
+      <td>22.2</td>
+      <td>35.1</td>
+      <td>67.1</td>
+      <td>85.3</td>
+      <td>Panjabi (Punjabi)</td>
+      <td>Gujarati</td>
+      <td>Arabic</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Thistletown-Beaumond Heights</td>
+      <td>9928</td>
+      <td>25.3</td>
+      <td>16.7</td>
+      <td>5.4</td>
+      <td>17.5</td>
+      <td>30.1</td>
+      <td>10.9</td>
+      <td>55032</td>
+      <td>...</td>
+      <td>16.7</td>
+      <td>20.7</td>
+      <td>5.0</td>
+      <td>9.7</td>
+      <td>19.3</td>
+      <td>55.9</td>
+      <td>53.8</td>
+      <td>Panjabi (Punjabi)</td>
+      <td>Italian</td>
+      <td>Spanish</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>Rexdale-Kipling</td>
+      <td>10725</td>
+      <td>23.6</td>
+      <td>18.3</td>
+      <td>10.2</td>
+      <td>28.8</td>
+      <td>33.3</td>
+      <td>13.2</td>
+      <td>52428</td>
+      <td>...</td>
+      <td>15.3</td>
+      <td>18.8</td>
+      <td>3.0</td>
+      <td>8.3</td>
+      <td>14.0</td>
+      <td>47.2</td>
+      <td>41.8</td>
+      <td>Spanish</td>
+      <td>Panjabi (Punjabi)</td>
+      <td>Croatian</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>Elms-Old Rexdale</td>
+      <td>9437</td>
+      <td>29.9</td>
+      <td>10.5</td>
+      <td>5.8</td>
+      <td>13.0</td>
+      <td>39.1</td>
+      <td>9.7</td>
+      <td>53779</td>
+      <td>...</td>
+      <td>15.2</td>
+      <td>18.8</td>
+      <td>3.6</td>
+      <td>9.8</td>
+      <td>18.2</td>
+      <td>53.8</td>
+      <td>60.5</td>
+      <td>Spanish</td>
+      <td>Italian</td>
+      <td>Urdu</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 28 columns</p>
+</div></div></div>
 </div>
 <p>Which column should we select to measure immigration?  There are several choices.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">socdem_neighb</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;Neighbourhood id&#39;, &#39;Neighbourhood Name&#39;, &#39;Total Population&#39;,
+       &#39;% 19 and under&#39;, &#39;% 65 and over&#39;, &#39;% Living alone&#39;,
+       &#39;% Aged 65+ living alone&#39;, &#39;% Lone parent families §&#39;,
+       &#39;% 1 year mobility in population&#39;,
+       &#39;Median household income before-tax $&#39;,
+       &#39;Median household income after-tax $ ‡&#39;,
+       &#39;% Families-Incidence of low income before-tax&#39;,
+       &#39;% Families-Incidence of low income after-tax ‡&#39;,
+       &#39;% Individuals-Incidence of low income before-tax&#39;,
+       &#39;% Individuals-Incidence of low income after-tax ‡&#39;,
+       &#39;% Rented Dwellings&#39;, &#39;% Unemployment rate *&#39;,
+       &#39;% Not in labour force *&#39;, &#39;% Less than high school education **&#39;,
+       &#39;% With a University degree **&#39;, &#39;% No knowledge of English/French&#39;,
+       &#39;% Recent immigrants-within 5 years&#39;,
+       &#39;% Recent immigrants-within 10 years&#39;, &#39;% Immigrants&#39;,
+       &#39;% Visible minority&#39;,
+       &#39;Top 3 Home Languages for non-English speaking households, #1&#39;,
+       &#39;Top 3 Home Languages for non-English speaking households, #2&#39;,
+       &#39;Top 3 Home Languages for non-English speaking households, #3&#39;],
+      dtype=&#39;object&#39;)
 </pre></div>
 </div>
 </div>
@@ -667,6 +858,88 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Neighbid</th>
+      <th>name</th>
+      <th>median_income</th>
+      <th>rented_dwell</th>
+      <th>unemployment</th>
+      <th>immigration5</th>
+      <th>vismin</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>West Humber-Clairville</td>
+      <td>56220</td>
+      <td>27.4</td>
+      <td>7.0</td>
+      <td>12.2</td>
+      <td>77.9</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Mount Olive-Silverstone-Jamestown</td>
+      <td>43975</td>
+      <td>52.0</td>
+      <td>9.9</td>
+      <td>22.2</td>
+      <td>85.3</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Thistletown-Beaumond Heights</td>
+      <td>49800</td>
+      <td>34.4</td>
+      <td>6.3</td>
+      <td>9.7</td>
+      <td>53.8</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>Rexdale-Kipling</td>
+      <td>46033</td>
+      <td>45.1</td>
+      <td>7.7</td>
+      <td>8.3</td>
+      <td>41.8</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>Elms-Old Rexdale</td>
+      <td>48055</td>
+      <td>41.2</td>
+      <td>7.8</td>
+      <td>9.8</td>
+      <td>60.5</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 </section>
 <section id="asthma-data">
@@ -684,6 +957,173 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Unnamed: 0</th>
+      <th>Unnamed: 1</th>
+      <th>Demographics ª</th>
+      <th>% With asthma</th>
+      <th>LL (95% CI)</th>
+      <th>UL (95% CI)</th>
+      <th>Demographics ª.1</th>
+      <th>% With asthma.1</th>
+      <th>LL (95% CI) .1</th>
+      <th>UL (95% CI) .1</th>
+      <th>...</th>
+      <th>Demographics ª.7</th>
+      <th>% With asthma.7</th>
+      <th>LL (95% CI) .7</th>
+      <th>UL (95% CI) .7</th>
+      <th>Demographics ª.8</th>
+      <th>% With asthma.8</th>
+      <th>LL (95% CI) .8</th>
+      <th>UL (95% CI) .8</th>
+      <th>Rate Ratio**.2</th>
+      <th>H/L/NS.2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>West Humber-Clairville</td>
+      <td>11977</td>
+      <td>9.7</td>
+      <td>9.2</td>
+      <td>10.2</td>
+      <td>11770</td>
+      <td>10.6</td>
+      <td>10.0</td>
+      <td>11.2</td>
+      <td>...</td>
+      <td>4435</td>
+      <td>12.3</td>
+      <td>11.3</td>
+      <td>13.3</td>
+      <td>8921</td>
+      <td>10.9</td>
+      <td>10.3</td>
+      <td>11.6</td>
+      <td>1.07</td>
+      <td>H</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Mount Olive-Silverstone-Jamestown</td>
+      <td>11157</td>
+      <td>7.9</td>
+      <td>7.4</td>
+      <td>8.4</td>
+      <td>11462</td>
+      <td>10.2</td>
+      <td>9.6</td>
+      <td>10.8</td>
+      <td>...</td>
+      <td>3819</td>
+      <td>13.5</td>
+      <td>12.5</td>
+      <td>14.6</td>
+      <td>7726</td>
+      <td>11.2</td>
+      <td>10.5</td>
+      <td>11.9</td>
+      <td>1.10</td>
+      <td>H</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Thistletown-Beaumond Heights</td>
+      <td>3307</td>
+      <td>9.4</td>
+      <td>8.4</td>
+      <td>10.4</td>
+      <td>3322</td>
+      <td>10.5</td>
+      <td>9.5</td>
+      <td>11.6</td>
+      <td>...</td>
+      <td>1307</td>
+      <td>12.3</td>
+      <td>10.5</td>
+      <td>14.1</td>
+      <td>2587</td>
+      <td>10.8</td>
+      <td>9.6</td>
+      <td>12.0</td>
+      <td>1.06</td>
+      <td>NS</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>Rexdale-Kipling</td>
+      <td>3317</td>
+      <td>9.7</td>
+      <td>8.7</td>
+      <td>10.7</td>
+      <td>3438</td>
+      <td>13.0</td>
+      <td>11.9</td>
+      <td>14.2</td>
+      <td>...</td>
+      <td>1468</td>
+      <td>13.2</td>
+      <td>11.5</td>
+      <td>14.9</td>
+      <td>2897</td>
+      <td>10.4</td>
+      <td>9.3</td>
+      <td>11.5</td>
+      <td>1.02</td>
+      <td>NS</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>Elms-Old Rexdale</td>
+      <td>3209</td>
+      <td>10.2</td>
+      <td>9.1</td>
+      <td>11.2</td>
+      <td>3379</td>
+      <td>13.0</td>
+      <td>11.8</td>
+      <td>14.1</td>
+      <td>...</td>
+      <td>1314</td>
+      <td>15.1</td>
+      <td>13.1</td>
+      <td>17.0</td>
+      <td>2610</td>
+      <td>11.8</td>
+      <td>10.6</td>
+      <td>13.0</td>
+      <td>1.16</td>
+      <td>H</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 44 columns</p>
+</div></div></div>
 </div>
 <ul class="simple">
 <li><p>The asthma rates are broken down by sex and age.</p></li>
@@ -693,6 +1133,24 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">asthma_neighb</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;Unnamed: 0&#39;, &#39;Unnamed: 1&#39;, &#39;Demographics ª&#39;, &#39;% With asthma&#39;,
+       &#39;LL (95% CI) &#39;, &#39;UL (95% CI) &#39;, &#39;Demographics ª.1&#39;, &#39;% With asthma.1&#39;,
+       &#39;LL (95% CI) .1&#39;, &#39;UL (95% CI) .1&#39;, &#39;Demographics ª.2&#39;,
+       &#39;% With asthma.2&#39;, &#39;LL (95% CI) .2&#39;, &#39;UL (95% CI) .2&#39;, &#39;Rate Ratio**&#39;,
+       &#39;H/L/NS&#39;, &#39;Demographics ª.3&#39;, &#39;% With asthma.3&#39;, &#39;LL (95% CI) .3&#39;,
+       &#39;UL (95% CI) .3&#39;, &#39;Demographics ª.4&#39;, &#39;% With asthma.4&#39;,
+       &#39;LL (95% CI) .4&#39;, &#39;UL (95% CI) .4&#39;, &#39;Demographics ª.5&#39;,
+       &#39;% With asthma.5&#39;, &#39;LL (95% CI) .5&#39;, &#39;UL (95% CI) .5&#39;, &#39;Rate Ratio**.1&#39;,
+       &#39;H/L/NS.1&#39;, &#39;Demographics ª.6&#39;, &#39;% With asthma.6&#39;, &#39;LL (95% CI) .6&#39;,
+       &#39;UL (95% CI) .6&#39;, &#39;Demographics ª.7&#39;, &#39;% With asthma.7&#39;,
+       &#39;LL (95% CI) .7&#39;, &#39;UL (95% CI) .7&#39;, &#39;Demographics ª.8&#39;,
+       &#39;% With asthma.8&#39;, &#39;LL (95% CI) .8&#39;, &#39;UL (95% CI) .8&#39;, &#39;Rate Ratio**.2&#39;,
+       &#39;H/L/NS.2&#39;],
+      dtype=&#39;object&#39;)
 </pre></div>
 </div>
 </div>
@@ -717,6 +1175,64 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Neighbid</th>
+      <th>name</th>
+      <th>asthma_pct</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>West Humber-Clairville</td>
+      <td>10.2</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Mount Olive-Silverstone-Jamestown</td>
+      <td>9.1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Thistletown-Beaumond Heights</td>
+      <td>10.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>Rexdale-Kipling</td>
+      <td>11.4</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>Elms-Old Rexdale</td>
+      <td>11.6</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 </section>
 </section>
@@ -736,6 +1252,100 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Neighbid</th>
+      <th>name_x</th>
+      <th>asthma_pct</th>
+      <th>name_y</th>
+      <th>median_income</th>
+      <th>rented_dwell</th>
+      <th>unemployment</th>
+      <th>immigration5</th>
+      <th>vismin</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>West Humber-Clairville</td>
+      <td>10.2</td>
+      <td>West Humber-Clairville</td>
+      <td>56220</td>
+      <td>27.4</td>
+      <td>7.0</td>
+      <td>12.2</td>
+      <td>77.9</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Mount Olive-Silverstone-Jamestown</td>
+      <td>9.1</td>
+      <td>Mount Olive-Silverstone-Jamestown</td>
+      <td>43975</td>
+      <td>52.0</td>
+      <td>9.9</td>
+      <td>22.2</td>
+      <td>85.3</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Thistletown-Beaumond Heights</td>
+      <td>10.0</td>
+      <td>Thistletown-Beaumond Heights</td>
+      <td>49800</td>
+      <td>34.4</td>
+      <td>6.3</td>
+      <td>9.7</td>
+      <td>53.8</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>Rexdale-Kipling</td>
+      <td>11.4</td>
+      <td>Rexdale-Kipling</td>
+      <td>46033</td>
+      <td>45.1</td>
+      <td>7.7</td>
+      <td>8.3</td>
+      <td>41.8</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>Elms-Old Rexdale</td>
+      <td>11.6</td>
+      <td>Elms-Old Rexdale</td>
+      <td>48055</td>
+      <td>41.2</td>
+      <td>7.8</td>
+      <td>9.8</td>
+      <td>60.5</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 </section>
 </section>
@@ -752,6 +1362,9 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">regplot</span><span class="p">(</span><span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;asthma_pct&#39;</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;immigration5&#39;</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">asthma_socdem</span><span class="p">,</span> <span class="n">ci</span> <span class="o">=</span> <span class="kc">None</span><span class="p">);</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/3d1c040b1c2c0902f91b2bf3bf7afbf595ea7483a74b5deb3c05d5f843904694.png" src="../../../_images/3d1c040b1c2c0902f91b2bf3bf7afbf595ea7483a74b5deb3c05d5f843904694.png" />
 </div>
 </div>
 <p>Describe the relationship between asthma and immigration.</p>
@@ -778,6 +1391,18 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="simpletable">
+<tr>
+        <td></td>          <th>coef</th>     <th>std err</th>      <th>t</th>      <th>P>|t|</th>  <th>[0.025</th>    <th>0.975]</th>  
+</tr>
+<tr>
+  <th>Intercept</th>    <td>   11.8266</td> <td>    0.218</td> <td>   54.328</td> <td> 0.000</td> <td>   11.396</td> <td>   12.257</td>
+</tr>
+<tr>
+  <th>immigration5</th> <td>   -0.1597</td> <td>    0.019</td> <td>   -8.475</td> <td> 0.000</td> <td>   -0.197</td> <td>   -0.122</td>
+</tr>
+</table></div></div>
 </div>
 </section>
 </section>
@@ -787,13 +1412,26 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\texttt{asthma_pct} = 11.8266  - 0.1597 \times \texttt{immigration5}\]</div>
 <ul class="simple">
-<li><p>The <strong>slope</strong> indicates that for a 1% <strong>increase</strong> in immigration in the past 5 years the percentage of asthma cases in a neighbourhood <strong>decrease</strong> by 0.1597 (approximately 16%).</p></li>
+<li><p>The <strong>slope</strong> indicates that for a 1% <strong>increase</strong> in immigration in the past 5 years the percentage of asthma cases in a neighbourhood <strong>decrease</strong> by 0.1597%.</p></li>
 <li><p>The <strong>y-intercept</strong> indicates that when a neighbourhood has 0% immigration the past 5 years then asthma rates are 11%.</p></li>
 <li><p>Are there any neighbourhoods with 0% immigration in the past 5 years?</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">asthma_socdem</span><span class="p">[</span><span class="s1">&#39;immigration5&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    140.000000
+mean       9.864286
+std        6.037045
+min        1.200000
+25%        4.975000
+50%        8.650000
+75%       13.100000
+max       32.800000
+Name: immigration5, dtype: float64
 </pre></div>
 </div>
 </div>
@@ -809,6 +1447,11 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.342332397042001
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -818,6 +1461,12 @@ document.write(`
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;residuals&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;residuals&#39;)
+</pre></div>
+</div>
+<img alt="../../../_images/bd0b4e15217751ef5c3338559baea3ef15936b868b1119ac48b541b4f4cf079d.png" src="../../../_images/bd0b4e15217751ef5c3338559baea3ef15936b868b1119ac48b541b4f4cf079d.png" />
 </div>
 </div>
 <ul class="simple">
@@ -851,6 +1500,11 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>RangeIndex(start=0, stop=5, step=1)
+</pre></div>
+</div>
+</div>
 </div>
 <p>A Boolean array that is <code class="docutils literal notranslate"><span class="pre">True</span></code> if the index is <code class="docutils literal notranslate"><span class="pre">0</span></code> or <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise.</p>
 <div class="cell docutils container">
@@ -859,11 +1513,62 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ True,  True, False, False, False])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">])]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>a</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p>To create a Boolean series that is <code class="docutils literal notranslate"><span class="pre">False</span></code> if the index is <code class="docutils literal notranslate"><span class="pre">0</span></code> or <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">True</span></code> otherwise we can negate <code class="docutils literal notranslate"><span class="pre">df.index.isin([0,1])</span></code> this Boolean series using the <code class="docutils literal notranslate"><span class="pre">~</span></code> operator <code class="docutils literal notranslate"><span class="pre">~df.index.isin([0,1])</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">~</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([False, False,  True,  True,  True])
 </pre></div>
 </div>
 </div>
@@ -874,6 +1579,44 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>a</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 </section>
 <section id="creating-training-and-test-data-sets-from-a-single-dataset">
@@ -911,6 +1654,13 @@ document.write(`
 <span class="nb">print</span><span class="p">(</span><span class="n">reg_df_train</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">reg_df_test</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(140, 9)
+(105, 9)
+(35, 9)
 </pre></div>
 </div>
 </div>
@@ -961,6 +1711,11 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.3987103239995489
+</pre></div>
+</div>
+</div>
 </div>
 <ul class="simple">
 <li><p>The observed asthma rates deviate from the predicted asthma rates in each neighbourhood by 1.4% in the training set.</p></li>
@@ -989,6 +1744,11 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.109621980506299
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 </section>
@@ -1012,6 +1772,13 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;Neighbid&#39;, &#39;name_x&#39;, &#39;asthma_pct&#39;, &#39;name_y&#39;, &#39;median_income&#39;,
+       &#39;rented_dwell&#39;, &#39;unemployment&#39;, &#39;immigration5&#39;, &#39;vismin&#39;],
+      dtype=&#39;object&#39;)
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1020,6 +1787,9 @@ document.write(`
 <span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span><span class="n">asthma_socdem</span><span class="p">[</span><span class="n">to_show</span><span class="p">]);</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/99e5dc5bd7173ef809331fbc109a49c718ab8d873b6dfbdbe360ecc6c442d4df.png" src="../../../_images/99e5dc5bd7173ef809331fbc109a49c718ab8d873b6dfbdbe360ecc6c442d4df.png" />
 </div>
 </div>
 <ul class="simple">
@@ -1038,6 +1808,21 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="simpletable">
+<tr>
+        <td></td>           <th>coef</th>     <th>std err</th>      <th>t</th>      <th>P>|t|</th>  <th>[0.025</th>    <th>0.975]</th>  
+</tr>
+<tr>
+  <th>Intercept</th>     <td>   14.3041</td> <td>    0.497</td> <td>   28.758</td> <td> 0.000</td> <td>   13.321</td> <td>   15.288</td>
+</tr>
+<tr>
+  <th>immigration5</th>  <td>   -0.2054</td> <td>    0.019</td> <td>  -10.750</td> <td> 0.000</td> <td>   -0.243</td> <td>   -0.168</td>
+</tr>
+<tr>
+  <th>median_income</th> <td>-4.048e-05</td> <td> 7.45e-06</td> <td>   -5.431</td> <td> 0.000</td> <td>-5.52e-05</td> <td>-2.57e-05</td>
+</tr>
+</table></div></div>
 </div>
 <ul class="simple">
 <li><p>Notice that the slope estimate (coefficient) for <code class="docutils literal notranslate"><span class="pre">median_income</span></code> is 0, but so is the p-value and range of plausible values.</p></li>
@@ -1051,6 +1836,9 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">regplot</span><span class="p">(</span><span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;immigration5&#39;</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;median_income&#39;</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">asthma_socdem</span><span class="p">,</span> <span class="n">ci</span> <span class="o">=</span> <span class="kc">None</span><span class="p">);</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/10e553eff2df43384dda89238fcee3dea7abe79226c7a13b5c76c6754e8ce7bc.png" src="../../../_images/10e553eff2df43384dda89238fcee3dea7abe79226c7a13b5c76c6754e8ce7bc.png" />
 </div>
 </div>
 </section>
@@ -1157,6 +1945,154 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>AREA_ATTR_ID</th>
+      <th>AREA_DESC</th>
+      <th>AREA_ID</th>
+      <th>AREA_LONG_CODE</th>
+      <th>AREA_NAME</th>
+      <th>AREA_SHORT_CODE</th>
+      <th>CLASSIFICATION</th>
+      <th>CLASSIFICATION_CODE</th>
+      <th>LATITUDE</th>
+      <th>LONGITUDE</th>
+      <th>OBJECTID</th>
+      <th>PARENT_AREA_ID</th>
+      <th>Shape__Area</th>
+      <th>Shape__Length</th>
+      <th>X</th>
+      <th>Y</th>
+      <th>_id</th>
+      <th>geometry</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>26005521</td>
+      <td>Casa Loma (96)</td>
+      <td>2480141</td>
+      <td>096</td>
+      <td>Casa Loma (96)</td>
+      <td>096</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>17545105</td>
+      <td>None</td>
+      <td>3.678385e+06</td>
+      <td>8214.176485</td>
+      <td>None</td>
+      <td>None</td>
+      <td>1</td>
+      <td>POLYGON ((-79.41469 43.67391, -79.41485 43.674...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>26005520</td>
+      <td>Annex (95)</td>
+      <td>2480140</td>
+      <td>095</td>
+      <td>Annex (95)</td>
+      <td>095</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>17545121</td>
+      <td>None</td>
+      <td>5.337192e+06</td>
+      <td>10513.883143</td>
+      <td>None</td>
+      <td>None</td>
+      <td>2</td>
+      <td>POLYGON ((-79.39414 43.66872, -79.39588 43.668...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>26005519</td>
+      <td>Caledonia-Fairbank (109)</td>
+      <td>2480139</td>
+      <td>109</td>
+      <td>Caledonia-Fairbank (109)</td>
+      <td>109</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>17545137</td>
+      <td>None</td>
+      <td>2.955857e+06</td>
+      <td>6849.911724</td>
+      <td>None</td>
+      <td>None</td>
+      <td>3</td>
+      <td>POLYGON ((-79.46021 43.68156, -79.46044 43.681...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>26005444</td>
+      <td>Woodbine Corridor (64)</td>
+      <td>2480064</td>
+      <td>064</td>
+      <td>Woodbine Corridor (64)</td>
+      <td>064</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>17545153</td>
+      <td>None</td>
+      <td>3.052518e+06</td>
+      <td>7512.966773</td>
+      <td>None</td>
+      <td>None</td>
+      <td>4</td>
+      <td>POLYGON ((-79.31485 43.66674, -79.31660 43.666...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>26005443</td>
+      <td>Lawrence Park South (103)</td>
+      <td>2480063</td>
+      <td>103</td>
+      <td>Lawrence Park South (103)</td>
+      <td>103</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>17545169</td>
+      <td>None</td>
+      <td>6.211341e+06</td>
+      <td>13530.370002</td>
+      <td>None</td>
+      <td>None</td>
+      <td>5</td>
+      <td>POLYGON ((-79.41096 43.70408, -79.41165 43.703...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1164,6 +2100,11 @@ document.write(`
 <span class="c1"># describes the polygon representing the first neighbourhood</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">nbrhd</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="s1">&#39;geometry&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>POLYGON ((-79.41469317817781 43.6739104164259, -79.41484930122832 43.6743388247927, -79.4155279126094 43.67606998537741, -79.4157867581137 43.6767302521386, -79.4164385645546 43.6783329020511, -79.4165782543862 43.6787785512344, -79.4167583944682 43.6792484522149, -79.41698203537291 43.6798247440047, -79.4170902471251 43.6801047004014, -79.4174797570886 43.681051830379, -79.4176666295158 43.6815699096212, -79.4176976020857 43.68163169892501, -79.4178116560388 43.6819252777403, -79.4181213711598 43.6827105222857, -79.4182734938897 43.6830961662335, -79.418301440907 43.683167503583, -79.4184313411692 43.6834966841996, -79.4184870757371 43.6836294842548, -79.4185410795905 43.6837582054538, -79.4184092922561 43.683786393574, -79.4182955283344 43.6834937157887, -79.4154265333151 43.684065660547, -79.4135200432832 43.6844456915062, -79.4134087861596 43.6844695957643, -79.4134686959176 43.6846245536214, -79.4124643275333 43.6848288476745, -79.4118960009694 43.6849418545125, -79.4126020656339 43.6866857692443, -79.4128218223812 43.687229039671, -79.4122731860895 43.687340632143, -79.4123095851789 43.6874306640936, -79.4124449310775 43.6877690817767, -79.4125749764611 43.6881026705283, -79.4126022442033 43.68820308289101, -79.4126262355444 43.6883388768546, -79.412631283351 43.6884334123732, -79.4126432068819 43.6885168725437, -79.4126690850027 43.6886690142942, -79.4121798023448 43.6887725684515, -79.4121317450359 43.688782747996, -79.4094911620232 43.6893416576956, -79.4095159141932 43.6894373160946, -79.4079543147094 43.6897847976179, -79.4064026019847 43.6900806794424, -79.4048987011668 43.6903958607535, -79.4030176369546 43.6907821281771, -79.4030622386805 43.6907397518989, -79.403084589916 43.6906872662864, -79.4030847025454 43.6906327275232, -79.40233853963132 43.6887211977866, -79.4014954899744 43.6866406966408, -79.401126389152 43.6857160700657, -79.400841057476 43.6850272500519, -79.4005303647662 43.6843098010236, -79.4002092949982 43.6835267044631, -79.4001688947727 43.6834159800984, -79.3998035302044 43.6825434875815, -79.3992154226597 43.6811276314469, -79.3990654446524 43.6807665464922, -79.3989394746847 43.6804604265612, -79.3987331620365 43.679962228305, -79.3985629657772 43.6795542728627, -79.3983515160598 43.6790391648102, -79.3981409020124 43.6785307360415, -79.3980121612171 43.6782038734666, -79.3979440512351 43.6780262977103, -79.3979313672526 43.6779949618024, -79.397997906573 43.6779648847871, -79.39810766305662 43.6779154844303, -79.3982178162304 43.677866084320804, -79.3983283660932 43.677816684457504, -79.3984396598895 43.6777672941492, -79.3985509707706 43.677722377402, -79.39866305797811 43.6776729695768, -79.3987751498381 43.6776280623042, -79.39888799806091 43.677583155590305, -79.3990012429834 43.6775382491152, -79.399114879728 43.6774888512157, -79.3992025285702 43.6774574239244, -79.3992901799736 43.6774169952501, -79.3993786050701 43.6773810678483, -79.3994674269127 43.677345149728104, -79.3995566132194 43.6773137235166, -79.3996462037999 43.6772777969312, -79.3997357818565 43.6772418792657, -79.3998261336784 43.6772104448643, -79.3999168946437 43.6771790287522, -79.4000076183382 43.6771475945326, -79.4000991356532 43.6771161699357, -79.4001906603179 43.6770802536138, -79.4002825618979 43.6770488292052, -79.4003752372778 43.6770218970549, -79.40046791256 43.6769949738305, -79.4005609796537 43.6769635502124, -79.4006540144064 43.6769366361508, -79.40074786265342 43.6769052040578, -79.4008416959652 43.6768827821947, -79.4009359160751 43.6768513592708, -79.4010305181557 43.6768289379187, -79.4011394914127 43.6767930269395, -79.40124844475712 43.6767616164984, -79.4013577948506 43.6767302062957, -79.4014675168886 43.6766987963088, -79.401577635645 43.6766674045606, -79.4016877469976 43.6766404773541, -79.4017982426678 43.6766135773755, -79.401909142447 43.6765821679758, -79.4020200223858 43.6765552591109, -79.4021313064015 43.6765238498247, -79.4022429725496 43.6765014420761, -79.4023546335109 43.6764745335542, -79.4024666788314 43.6764476252511, -79.4025787240519 43.6764207168379, -79.4026915556349 43.6763983006426, -79.40280397272 43.67637139232491, -79.402883149386 43.6763541860873, -79.4029167917251 43.6763489758964, -79.4030299826882 43.6763265686732, -79.4031435776805 43.6762996520191, -79.4049670168388 43.6759208047062, -79.4073338149418 43.675429007407, -79.407847991862 43.67532218132661, -79.4113608949251 43.6745959152122, -79.4121860970333 43.6744315128604, -79.4137161812489 43.6741115018232, -79.4146748682077 43.6739143093347, -79.41469317817781 43.6739104164259))
 </pre></div>
 </div>
 </div>
@@ -1178,6 +2119,11 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pandas.core.series.Series
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 </section>
@@ -1186,9 +2132,15 @@ document.write(`
 <p>It’s easy! You can “plot” a geodataframe and geopandas will make it a map!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nbrhd</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nbrhd</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span> 
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+</pre></div>
+</div>
+<img alt="../../../_images/27e712e60dc91b07a0b35350413459ec3351f1bd6903e40a2a2c0b5eb62327e4.png" src="../../../_images/27e712e60dc91b07a0b35350413459ec3351f1bd6903e40a2a2c0b5eb62327e4.png" />
 </div>
 </div>
 </section>
@@ -1212,6 +2164,13 @@ document.write(`
 <span class="n">nbrhd</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">column</span> <span class="o">=</span> <span class="s2">&quot;AREA_NAME&quot;</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">axes</span><span class="p">);</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;matplotlib.figure.Figure&#39;&gt;
+&lt;class &#39;matplotlib.axes._subplots.AxesSubplot&#39;&gt;
+</pre></div>
+</div>
+<img alt="../../../_images/1ef46f2889d9c4626293574800eddb25e22fb7ccb194f6d053137ce64cb49661.png" src="../../../_images/1ef46f2889d9c4626293574800eddb25e22fb7ccb194f6d053137ce64cb49661.png" />
 </div>
 </div>
 <p>What if we want to do 2 maps in one figure?</p>
@@ -1238,6 +2197,12 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(2,)
+</pre></div>
+</div>
+<img alt="../../../_images/9262229187a3325950a280e13573f69baf327062d460403bc3e853453f6df21b.png" src="../../../_images/9262229187a3325950a280e13573f69baf327062d460403bc3e853453f6df21b.png" />
+</div>
 </div>
 <p>A note about axes:</p>
 <ul class="simple">
@@ -1256,12 +2221,15 @@ document.write(`
 
 <span class="c1"># We want to plot the area of each neighborhood</span>
 <span class="n">nbrhd</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">column</span> <span class="o">=</span> <span class="s2">&quot;Shape__Area&quot;</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">axes</span><span class="p">,</span> 
-           <span class="n">cmap</span> <span class="o">=</span> <span class="s2">&quot;cool&quot;</span><span class="p">,</span> <span class="n">legend</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+           <span class="n">cmap</span> <span class="o">=</span> <span class="s2">&quot;spring&quot;</span><span class="p">,</span> <span class="n">legend</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 
 <span class="n">current_fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span>
 <span class="n">current_fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/149ff182d47c37e9eb7da49c1a020fa4ae588ce77bc106e2a822282b6111a780.png" src="../../../_images/149ff182d47c37e9eb7da49c1a020fa4ae588ce77bc106e2a822282b6111a780.png" />
 </div>
 </div>
 </section>
@@ -1312,6 +2280,67 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The data type of nbrhd_spat_id is:  &lt;class &#39;str&#39;&gt;
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>nbrhd_spat_id</th>
+      <th>geometry</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Casa Loma (96)</td>
+      <td>096</td>
+      <td>POLYGON ((-79.41469 43.67391, -79.41485 43.674...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Annex (95)</td>
+      <td>095</td>
+      <td>POLYGON ((-79.39414 43.66872, -79.39588 43.668...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Caledonia-Fairbank (109)</td>
+      <td>109</td>
+      <td>POLYGON ((-79.46021 43.68156, -79.46044 43.681...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Woodbine Corridor (64)</td>
+      <td>064</td>
+      <td>POLYGON ((-79.31485 43.66674, -79.31660 43.666...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Lawrence Park South (103)</td>
+      <td>103</td>
+      <td>POLYGON ((-79.41096 43.70408, -79.41165 43.703...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1326,6 +2355,173 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Unnamed: 0</th>
+      <th>Unnamed: 1</th>
+      <th>Demographics ª</th>
+      <th>% With asthma</th>
+      <th>LL (95% CI)</th>
+      <th>UL (95% CI)</th>
+      <th>Demographics ª.1</th>
+      <th>% With asthma.1</th>
+      <th>LL (95% CI) .1</th>
+      <th>UL (95% CI) .1</th>
+      <th>...</th>
+      <th>Demographics ª.7</th>
+      <th>% With asthma.7</th>
+      <th>LL (95% CI) .7</th>
+      <th>UL (95% CI) .7</th>
+      <th>Demographics ª.8</th>
+      <th>% With asthma.8</th>
+      <th>LL (95% CI) .8</th>
+      <th>UL (95% CI) .8</th>
+      <th>Rate Ratio**.2</th>
+      <th>H/L/NS.2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>West Humber-Clairville</td>
+      <td>11977</td>
+      <td>9.7</td>
+      <td>9.2</td>
+      <td>10.2</td>
+      <td>11770</td>
+      <td>10.6</td>
+      <td>10.0</td>
+      <td>11.2</td>
+      <td>...</td>
+      <td>4435</td>
+      <td>12.3</td>
+      <td>11.3</td>
+      <td>13.3</td>
+      <td>8921</td>
+      <td>10.9</td>
+      <td>10.3</td>
+      <td>11.6</td>
+      <td>1.07</td>
+      <td>H</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Mount Olive-Silverstone-Jamestown</td>
+      <td>11157</td>
+      <td>7.9</td>
+      <td>7.4</td>
+      <td>8.4</td>
+      <td>11462</td>
+      <td>10.2</td>
+      <td>9.6</td>
+      <td>10.8</td>
+      <td>...</td>
+      <td>3819</td>
+      <td>13.5</td>
+      <td>12.5</td>
+      <td>14.6</td>
+      <td>7726</td>
+      <td>11.2</td>
+      <td>10.5</td>
+      <td>11.9</td>
+      <td>1.10</td>
+      <td>H</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Thistletown-Beaumond Heights</td>
+      <td>3307</td>
+      <td>9.4</td>
+      <td>8.4</td>
+      <td>10.4</td>
+      <td>3322</td>
+      <td>10.5</td>
+      <td>9.5</td>
+      <td>11.6</td>
+      <td>...</td>
+      <td>1307</td>
+      <td>12.3</td>
+      <td>10.5</td>
+      <td>14.1</td>
+      <td>2587</td>
+      <td>10.8</td>
+      <td>9.6</td>
+      <td>12.0</td>
+      <td>1.06</td>
+      <td>NS</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>Rexdale-Kipling</td>
+      <td>3317</td>
+      <td>9.7</td>
+      <td>8.7</td>
+      <td>10.7</td>
+      <td>3438</td>
+      <td>13.0</td>
+      <td>11.9</td>
+      <td>14.2</td>
+      <td>...</td>
+      <td>1468</td>
+      <td>13.2</td>
+      <td>11.5</td>
+      <td>14.9</td>
+      <td>2897</td>
+      <td>10.4</td>
+      <td>9.3</td>
+      <td>11.5</td>
+      <td>1.02</td>
+      <td>NS</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>Elms-Old Rexdale</td>
+      <td>3209</td>
+      <td>10.2</td>
+      <td>9.1</td>
+      <td>11.2</td>
+      <td>3379</td>
+      <td>13.0</td>
+      <td>11.8</td>
+      <td>14.1</td>
+      <td>...</td>
+      <td>1314</td>
+      <td>15.1</td>
+      <td>13.1</td>
+      <td>17.0</td>
+      <td>2610</td>
+      <td>11.8</td>
+      <td>10.6</td>
+      <td>13.0</td>
+      <td>1.16</td>
+      <td>H</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 44 columns</p>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1346,6 +2542,67 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The data type of Neighbid is:  &lt;class &#39;numpy.int64&#39;&gt;
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Neighbid</th>
+      <th>name</th>
+      <th>asthma_pct</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>West Humber-Clairville</td>
+      <td>10.2</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Mount Olive-Silverstone-Jamestown</td>
+      <td>9.1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Thistletown-Beaumond Heights</td>
+      <td>10.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>Rexdale-Kipling</td>
+      <td>11.4</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>Elms-Old Rexdale</td>
+      <td>11.6</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 </section>
 <section id="note-that-the-nbrhd-spat-id-in-neighborhood-geodataframe-is-string">
@@ -1362,6 +2619,70 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>nbrhd_spat_id</th>
+      <th>geometry</th>
+      <th>Neighbid</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>30</th>
+      <td>West Humber-Clairville (1)</td>
+      <td>001</td>
+      <td>POLYGON ((-79.55236 43.70947, -79.55238 43.709...</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>40</th>
+      <td>Mount Olive-Silverstone-Jamestown (2)</td>
+      <td>002</td>
+      <td>POLYGON ((-79.60338 43.75786, -79.60205 43.758...</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>124</th>
+      <td>Thistletown-Beaumond Heights (3)</td>
+      <td>003</td>
+      <td>POLYGON ((-79.57751 43.73384, -79.57806 43.734...</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>122</th>
+      <td>Rexdale-Kipling (4)</td>
+      <td>004</td>
+      <td>POLYGON ((-79.55512 43.71510, -79.55504 43.714...</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>Elms-Old Rexdale (5)</td>
+      <td>005</td>
+      <td>POLYGON ((-79.55512 43.71510, -79.55569 43.716...</td>
+      <td>5</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <section id="now-let-s-do-the-join">
 <h4>Now let’s do the join!<a class="headerlink" href="#now-let-s-do-the-join" title="Link to this heading">#</a></h4>
@@ -1372,6 +2693,82 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name_x</th>
+      <th>nbrhd_spat_id</th>
+      <th>geometry</th>
+      <th>Neighbid</th>
+      <th>name_y</th>
+      <th>asthma_pct</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Casa Loma (96)</td>
+      <td>096</td>
+      <td>POLYGON ((-79.41469 43.67391, -79.41485 43.674...</td>
+      <td>96</td>
+      <td>Casa Loma</td>
+      <td>10.1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Annex (95)</td>
+      <td>095</td>
+      <td>POLYGON ((-79.39414 43.66872, -79.39588 43.668...</td>
+      <td>95</td>
+      <td>Annex</td>
+      <td>9.5</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Caledonia-Fairbank (109)</td>
+      <td>109</td>
+      <td>POLYGON ((-79.46021 43.68156, -79.46044 43.681...</td>
+      <td>109</td>
+      <td>Caledonia-Fairbank</td>
+      <td>11.3</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Woodbine Corridor (64)</td>
+      <td>064</td>
+      <td>POLYGON ((-79.31485 43.66674, -79.31660 43.666...</td>
+      <td>64</td>
+      <td>Woodbine Corridor</td>
+      <td>13.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Lawrence Park South (103)</td>
+      <td>103</td>
+      <td>POLYGON ((-79.41096 43.70408, -79.41165 43.703...</td>
+      <td>103</td>
+      <td>Lawrence Park South</td>
+      <td>10.7</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 </section>
 </section>
@@ -1391,6 +2788,12 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+</pre></div>
+</div>
+<img alt="../../../_images/a16e2c45b81dbaaa498798125905025b7d69d93e48b47c01e511706610205e3c.png" src="../../../_images/a16e2c45b81dbaaa498798125905025b7d69d93e48b47c01e511706610205e3c.png" />
+</div>
 </div>
 </section>
 </section>
@@ -1409,6 +2812,9 @@ document.write(`
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/97b669d417da2443b603d0d0ac6d01c7b17feaf191306d779e148f0c2eab12e8.png" src="../../../_images/97b669d417da2443b603d0d0ac6d01c7b17feaf191306d779e148f0c2eab12e8.png" />
 </div>
 </div>
 </section>
@@ -1440,6 +2846,12 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+</pre></div>
+</div>
+<img alt="../../../_images/bea1a976986bf78fb632a6327b4bddcdccbef9fb158bb6102ccacbedafb36804.png" src="../../../_images/bea1a976986bf78fb632a6327b4bddcdccbef9fb158bb6102ccacbedafb36804.png" />
+</div>
 </div>
 <p>This map looks a lot better, I think! But the legend is overlapping the map. We should move it.</p>
 <p>The legend options are kind of complicated, but you can find more about stuff here: <a class="reference external" href="https://matplotlib.org/3.5.1/api/_as_gen/matplotlib.pyplot.legend.html">https://matplotlib.org/3.5.1/api/_as_gen/matplotlib.pyplot.legend.html</a></p>
@@ -1455,6 +2867,12 @@ document.write(`
                                <span class="s1">&#39;title_fontsize&#39;</span><span class="p">:</span> <span class="mi">23</span><span class="p">,</span><span class="s1">&#39;fontsize&#39;</span><span class="p">:</span> <span class="mi">15</span><span class="p">})</span> <span class="c1">#&#39;loc&#39;=4 means lower right</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+</pre></div>
+</div>
+<img alt="../../../_images/58575b3e7cf372c98f39147ef51da65e3a6327803b7a2783ad099709e758ad33.png" src="../../../_images/58575b3e7cf372c98f39147ef51da65e3a6327803b7a2783ad099709e758ad33.png" />
 </div>
 </div>
 <p>Can we show descriptive stats charts next to a map?</p>
@@ -1479,6 +2897,12 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Distribution of percent of residents with asthma in Toronto, ON&#39;)
+</pre></div>
+</div>
+<img alt="../../../_images/91594a7a8775a9b150f3190b5c4a4c393736900d7e38dc16263e6b10624a59ad.png" src="../../../_images/91594a7a8775a9b150f3190b5c4a4c393736900d7e38dc16263e6b10624a59ad.png" />
+</div>
 </div>
 </section>
 </section>
@@ -1498,6 +2922,12 @@ document.write(`
 <span class="n">railways</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+</pre></div>
+</div>
+<img alt="../../../_images/97eff3470ed1e39b220f931434c350daff57c8163f8e0a8cfd447921a8bbffc2.png" src="../../../_images/97eff3470ed1e39b220f931434c350daff57c8163f8e0a8cfd447921a8bbffc2.png" />
 </div>
 </div>
 </section>
@@ -1523,6 +2953,101 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The original projection of railways is:  EPSG:4269
+The original projection of nbrhd_simple is:  EPSG:4326
+The NEW projection of railways is:  EPSG:4326
+And nbrhd_simple is still:  EPSG:4326
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+</pre></div>
+</div>
+<img alt="../../../_images/97eff3470ed1e39b220f931434c350daff57c8163f8e0a8cfd447921a8bbffc2.png" src="../../../_images/97eff3470ed1e39b220f931434c350daff57c8163f8e0a8cfd447921a8bbffc2.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nbrhd_simple</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name_x</th>
+      <th>nbrhd_spat_id</th>
+      <th>geometry</th>
+      <th>Neighbid</th>
+      <th>name_y</th>
+      <th>asthma_pct</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Casa Loma (96)</td>
+      <td>096</td>
+      <td>POLYGON ((-79.41469 43.67391, -79.41485 43.674...</td>
+      <td>96</td>
+      <td>Casa Loma</td>
+      <td>10.1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Annex (95)</td>
+      <td>095</td>
+      <td>POLYGON ((-79.39414 43.66872, -79.39588 43.668...</td>
+      <td>95</td>
+      <td>Annex</td>
+      <td>9.5</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Caledonia-Fairbank (109)</td>
+      <td>109</td>
+      <td>POLYGON ((-79.46021 43.68156, -79.46044 43.681...</td>
+      <td>109</td>
+      <td>Caledonia-Fairbank</td>
+      <td>11.3</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Woodbine Corridor (64)</td>
+      <td>064</td>
+      <td>POLYGON ((-79.31485 43.66674, -79.31660 43.666...</td>
+      <td>64</td>
+      <td>Woodbine Corridor</td>
+      <td>13.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Lawrence Park South (103)</td>
+      <td>103</td>
+      <td>POLYGON ((-79.41096 43.70408, -79.41165 43.703...</td>
+      <td>103</td>
+      <td>Lawrence Park South</td>
+      <td>10.7</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 </section>
 <section id="now-that-our-two-geodataframe-spatial-layers-are-in-the-same-projection-we-can-plot-them-together">
@@ -1532,6 +3057,8 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
 
+
+
 <span class="n">nbrhd_simple</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="s1">&#39;asthma_pct&#39;</span><span class="p">,</span> <span class="n">scheme</span><span class="o">=</span><span class="s1">&#39;quantiles&#39;</span><span class="p">,</span> 
                   <span class="n">k</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Greens&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;grey&#39;</span><span class="p">,</span>
                   <span class="n">linewidth</span> <span class="o">=</span> <span class="mf">.2</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">axes</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
@@ -1539,6 +3066,37 @@ document.write(`
                                <span class="s1">&#39;title_fontsize&#39;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span><span class="s1">&#39;fontsize&#39;</span><span class="p">:</span> <span class="mi">15</span><span class="p">})</span>
 
 <span class="n">railways</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">edgecolor</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mf">.5</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">axes</span><span class="p">)</span> <span class="c1">#notice i&#39;m putting this in the same axes cell</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+</pre></div>
+</div>
+<img alt="../../../_images/91e69d335768617107d0e125a543c8ae1cedf256f29a3361698ac240a00e2ed3.png" src="../../../_images/91e69d335768617107d0e125a543c8ae1cedf256f29a3361698ac240a00e2ed3.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">railways</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;OBJECTID&#39;, &#39;OGF_ID&#39;, &#39;TRACKNID&#39;, &#39;TRACKSEGID&#39;, &#39;TRACKNAME&#39;,
+       &#39;TRACKCLASS&#39;, &#39;REGULATOR&#39;, &#39;TRANSPTYPE&#39;, &#39;USETYPE&#39;, &#39;GAUGE&#39;,
+       &#39;NUMTRACKS&#39;, &#39;ELECTRIC&#39;, &#39;STATUS&#39;, &#39;SPEEDFREIT&#39;, &#39;SPEEDPASSE&#39;,
+       &#39;UNITOFSPEE&#39;, &#39;SOURCEID&#39;, &#39;OPERATOENA&#39;, &#39;OPERATOFNA&#39;, &#39;OPERATORMK&#39;,
+       &#39;OPSUBSTART&#39;, &#39;OPSUBEND&#39;, &#39;OPSUBUDIS&#39;, &#39;OWNERENA&#39;, &#39;OWNERFNA&#39;,
+       &#39;TRKUSR1ENA&#39;, &#39;TRKUSR1FNA&#39;, &#39;TRKUSR1RMK&#39;, &#39;TRKUSR2ENA&#39;, &#39;TRKUSR2FNA&#39;,
+       &#39;TRKUSR2RMK&#39;, &#39;TRKUSR3ENA&#39;, &#39;TRKUSR3FNA&#39;, &#39;TRKUSR3RMK&#39;, &#39;TRKUSR4ENA&#39;,
+       &#39;TRKUSR4FNA&#39;, &#39;TRKUSR4RMK&#39;, &#39;SUBDI1NID&#39;, &#39;SUBDI1NAME&#39;, &#39;SUBD1START&#39;,
+       &#39;SUBD1END&#39;, &#39;SUB1UNITDI&#39;, &#39;SUBDI2NID&#39;, &#39;SUBDI2NAME&#39;, &#39;SUBD2START&#39;,
+       &#39;SUBD2END&#39;, &#39;SUB2UNITDI&#39;, &#39;ADMINAREA&#39;, &#39;SPECVERS&#39;, &#39;SECURCLASS&#39;,
+       &#39;GEOCREDATE&#39;, &#39;GEOREVDATE&#39;, &#39;GEOACQTECH&#39;, &#39;GEOACCURA&#39;, &#39;GEOPROVIDE&#39;,
+       &#39;ATTCREDATE&#39;, &#39;ATTREVDATE&#39;, &#39;ATTACQTECH&#39;, &#39;ATTPROVIDE&#39;, &#39;EFFECTIVE_&#39;,
+       &#39;SHAPE_Leng&#39;, &#39;SHAPE_1_Le&#39;, &#39;geometry&#39;],
+      dtype=&#39;object&#39;)
 </pre></div>
 </div>
 </div>
@@ -1564,6 +3122,1691 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name_x</th>
+      <th>nbrhd_spat_id</th>
+      <th>geometry</th>
+      <th>Neighbid</th>
+      <th>name_y</th>
+      <th>asthma_pct</th>
+      <th>index_right</th>
+      <th>OBJECTID</th>
+      <th>OGF_ID</th>
+      <th>TRACKNID</th>
+      <th>...</th>
+      <th>GEOACQTECH</th>
+      <th>GEOACCURA</th>
+      <th>GEOPROVIDE</th>
+      <th>ATTCREDATE</th>
+      <th>ATTREVDATE</th>
+      <th>ATTACQTECH</th>
+      <th>ATTPROVIDE</th>
+      <th>EFFECTIVE_</th>
+      <th>SHAPE_Leng</th>
+      <th>SHAPE_1_Le</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Casa Loma (96)</td>
+      <td>096</td>
+      <td>POLYGON ((-79.41469 43.67391, -79.41485 43.674...</td>
+      <td>96</td>
+      <td>Casa Loma</td>
+      <td>10.1</td>
+      <td>1280.0</td>
+      <td>1720.0</td>
+      <td>10131.0</td>
+      <td>2579cdd5ccaf447e93bec017362a451a</td>
+      <td>...</td>
+      <td>Vector Data</td>
+      <td>10.0</td>
+      <td>Provincial/Territorial</td>
+      <td>201306</td>
+      <td>None</td>
+      <td>Vector Data</td>
+      <td>Federal</td>
+      <td>2013-07-30</td>
+      <td>0.0</td>
+      <td>0.026163</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>Casa Loma (96)</td>
+      <td>096</td>
+      <td>POLYGON ((-79.41469 43.67391, -79.41485 43.674...</td>
+      <td>96</td>
+      <td>Casa Loma</td>
+      <td>10.1</td>
+      <td>3222.0</td>
+      <td>8267.0</td>
+      <td>16018.0</td>
+      <td>ced49be659214db99e606ea1f3153f03</td>
+      <td>...</td>
+      <td>Vector Data</td>
+      <td>10.0</td>
+      <td>Provincial/Territorial</td>
+      <td>201306</td>
+      <td>None</td>
+      <td>Vector Data</td>
+      <td>Federal</td>
+      <td>2013-07-30</td>
+      <td>0.0</td>
+      <td>0.043467</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>Casa Loma (96)</td>
+      <td>096</td>
+      <td>POLYGON ((-79.41469 43.67391, -79.41485 43.674...</td>
+      <td>96</td>
+      <td>Casa Loma</td>
+      <td>10.1</td>
+      <td>888.0</td>
+      <td>9370.0</td>
+      <td>17250.0</td>
+      <td>05f860e758f746be971872822cb137c8</td>
+      <td>...</td>
+      <td>Vector Data</td>
+      <td>10.0</td>
+      <td>Provincial/Territorial</td>
+      <td>201306</td>
+      <td>None</td>
+      <td>Vector Data</td>
+      <td>Federal</td>
+      <td>2013-07-30</td>
+      <td>0.0</td>
+      <td>0.060344</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>Casa Loma (96)</td>
+      <td>096</td>
+      <td>POLYGON ((-79.41469 43.67391, -79.41485 43.674...</td>
+      <td>96</td>
+      <td>Casa Loma</td>
+      <td>10.1</td>
+      <td>1844.0</td>
+      <td>10459.0</td>
+      <td>3086.0</td>
+      <td>1fd8c25a828f46829c173713f49c63d3</td>
+      <td>...</td>
+      <td>Vector Data</td>
+      <td>10.0</td>
+      <td>Provincial/Territorial</td>
+      <td>201306</td>
+      <td>None</td>
+      <td>Vector Data</td>
+      <td>Federal</td>
+      <td>2013-07-30</td>
+      <td>0.0</td>
+      <td>0.008783</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Annex (95)</td>
+      <td>095</td>
+      <td>POLYGON ((-79.39414 43.66872, -79.39588 43.668...</td>
+      <td>95</td>
+      <td>Annex</td>
+      <td>9.5</td>
+      <td>1280.0</td>
+      <td>1720.0</td>
+      <td>10131.0</td>
+      <td>2579cdd5ccaf447e93bec017362a451a</td>
+      <td>...</td>
+      <td>Vector Data</td>
+      <td>10.0</td>
+      <td>Provincial/Territorial</td>
+      <td>201306</td>
+      <td>None</td>
+      <td>Vector Data</td>
+      <td>Federal</td>
+      <td>2013-07-30</td>
+      <td>0.0</td>
+      <td>0.026163</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>137</th>
+      <td>Humbermede (22)</td>
+      <td>022</td>
+      <td>POLYGON ((-79.52628 43.73640, -79.52649 43.736...</td>
+      <td>22</td>
+      <td>Humbermede</td>
+      <td>10.8</td>
+      <td>1239.0</td>
+      <td>9798.0</td>
+      <td>2436.0</td>
+      <td>816b3f97bace44149b88174dc78a7e55</td>
+      <td>...</td>
+      <td>Orthoimage</td>
+      <td>10.0</td>
+      <td>Federal</td>
+      <td>201306</td>
+      <td>None</td>
+      <td>Vector Data</td>
+      <td>Federal</td>
+      <td>2013-07-30</td>
+      <td>0.0</td>
+      <td>0.002236</td>
+    </tr>
+    <tr>
+      <th>137</th>
+      <td>Humbermede (22)</td>
+      <td>022</td>
+      <td>POLYGON ((-79.52628 43.73640, -79.52649 43.736...</td>
+      <td>22</td>
+      <td>Humbermede</td>
+      <td>10.8</td>
+      <td>2305.0</td>
+      <td>15763.0</td>
+      <td>8280.0</td>
+      <td>9da306e9415d4e7fa5b006a39dc550c1</td>
+      <td>...</td>
+      <td>Orthoimage</td>
+      <td>10.0</td>
+      <td>Federal</td>
+      <td>201306</td>
+      <td>None</td>
+      <td>Vector Data</td>
+      <td>Federal</td>
+      <td>2013-07-30</td>
+      <td>0.0</td>
+      <td>0.002528</td>
+    </tr>
+    <tr>
+      <th>137</th>
+      <td>Humbermede (22)</td>
+      <td>022</td>
+      <td>POLYGON ((-79.52628 43.73640, -79.52649 43.736...</td>
+      <td>22</td>
+      <td>Humbermede</td>
+      <td>10.8</td>
+      <td>717.0</td>
+      <td>5591.0</td>
+      <td>13590.0</td>
+      <td>632d434dd2b24ef5aaf8544d87f467f5</td>
+      <td>...</td>
+      <td>Orthoimage</td>
+      <td>10.0</td>
+      <td>Federal</td>
+      <td>201306</td>
+      <td>None</td>
+      <td>Vector Data</td>
+      <td>Federal</td>
+      <td>2013-07-30</td>
+      <td>0.0</td>
+      <td>0.012516</td>
+    </tr>
+    <tr>
+      <th>138</th>
+      <td>Willowdale West (37)</td>
+      <td>037</td>
+      <td>POLYGON ((-79.44043 43.76340, -79.44052 43.763...</td>
+      <td>37</td>
+      <td>Willowdale West</td>
+      <td>8.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>139</th>
+      <td>Willowdale East (51)</td>
+      <td>051</td>
+      <td>POLYGON ((-79.41225 43.76669, -79.41232 43.766...</td>
+      <td>51</td>
+      <td>Willowdale East</td>
+      <td>6.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>2528 rows × 69 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">join_left_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">join_left_df</span><span class="p">[</span><span class="s1">&#39;TRACKNID&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">()]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name_x</th>
+      <th>nbrhd_spat_id</th>
+      <th>geometry</th>
+      <th>Neighbid</th>
+      <th>name_y</th>
+      <th>asthma_pct</th>
+      <th>index_right</th>
+      <th>OBJECTID</th>
+      <th>OGF_ID</th>
+      <th>TRACKNID</th>
+      <th>...</th>
+      <th>GEOACQTECH</th>
+      <th>GEOACCURA</th>
+      <th>GEOPROVIDE</th>
+      <th>ATTCREDATE</th>
+      <th>ATTREVDATE</th>
+      <th>ATTACQTECH</th>
+      <th>ATTPROVIDE</th>
+      <th>EFFECTIVE_</th>
+      <th>SHAPE_Leng</th>
+      <th>SHAPE_1_Le</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>4</th>
+      <td>Lawrence Park South (103)</td>
+      <td>103</td>
+      <td>POLYGON ((-79.41096 43.70408, -79.41165 43.703...</td>
+      <td>103</td>
+      <td>Lawrence Park South</td>
+      <td>10.7</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Henry Farm (53)</td>
+      <td>053</td>
+      <td>POLYGON ((-79.35966 43.76649, -79.35966 43.766...</td>
+      <td>53</td>
+      <td>Henry Farm</td>
+      <td>6.7</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>Pleasant View (46)</td>
+      <td>046</td>
+      <td>POLYGON ((-79.34346 43.79517, -79.34359 43.795...</td>
+      <td>46</td>
+      <td>Pleasant View</td>
+      <td>7.7</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>Steeles (116)</td>
+      <td>116</td>
+      <td>POLYGON ((-79.34132 43.81565, -79.33988 43.816...</td>
+      <td>116</td>
+      <td>Steeles</td>
+      <td>6.5</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>Brookhaven-Amesbury (30)</td>
+      <td>030</td>
+      <td>POLYGON ((-79.50296 43.69574, -79.50415 43.696...</td>
+      <td>30</td>
+      <td>Brookhaven-Amesbury</td>
+      <td>12.2</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>Yonge-Eglinton (100)</td>
+      <td>100</td>
+      <td>POLYGON ((-79.41096 43.70408, -79.40962 43.704...</td>
+      <td>100</td>
+      <td>Yonge-Eglinton</td>
+      <td>10.8</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>Englemount-Lawrence (32)</td>
+      <td>032</td>
+      <td>POLYGON ((-79.43854 43.70586, -79.43855 43.705...</td>
+      <td>32</td>
+      <td>Englemount-Lawrence</td>
+      <td>10.1</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>Bridle Path-Sunnybrook-York Mills (41)</td>
+      <td>041</td>
+      <td>POLYGON ((-79.39008 43.72768, -79.39016 43.728...</td>
+      <td>41</td>
+      <td>Bridle Path-Sunnybrook-York Mills</td>
+      <td>9.2</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>Danforth East York (59)</td>
+      <td>059</td>
+      <td>POLYGON ((-79.34627 43.68272, -79.34645 43.683...</td>
+      <td>59</td>
+      <td>Danforth Village-East York</td>
+      <td>12.5</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>Elms-Old Rexdale (5)</td>
+      <td>005</td>
+      <td>POLYGON ((-79.55512 43.71510, -79.55569 43.716...</td>
+      <td>5</td>
+      <td>Elms-Old Rexdale</td>
+      <td>11.6</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>North St.James Town (74)</td>
+      <td>074</td>
+      <td>POLYGON ((-79.38057 43.67161, -79.37947 43.671...</td>
+      <td>74</td>
+      <td>North St. James Town</td>
+      <td>8.9</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>Highland Creek (134)</td>
+      <td>134</td>
+      <td>POLYGON ((-79.17527 43.78021, -79.17535 43.780...</td>
+      <td>134</td>
+      <td>Highland Creek</td>
+      <td>10.8</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>Don Valley Village (47)</td>
+      <td>047</td>
+      <td>POLYGON ((-79.36414 43.77164, -79.36412 43.771...</td>
+      <td>47</td>
+      <td>Don Valley Village</td>
+      <td>7.2</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>Mount Pleasant West (104)</td>
+      <td>104</td>
+      <td>POLYGON ((-79.39611 43.69566, -79.39620 43.696...</td>
+      <td>104</td>
+      <td>Mount Pleasant West</td>
+      <td>8.6</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>Westminster-Branson (35)</td>
+      <td>035</td>
+      <td>POLYGON ((-79.44043 43.76340, -79.44004 43.761...</td>
+      <td>35</td>
+      <td>Westminster-Branson</td>
+      <td>7.3</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>41</th>
+      <td>Bay Street Corridor (76)</td>
+      <td>076</td>
+      <td>POLYGON ((-79.38752 43.65067, -79.38663 43.650...</td>
+      <td>76</td>
+      <td>Bay Street Corridor</td>
+      <td>7.3</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>42</th>
+      <td>Bathurst Manor (34)</td>
+      <td>034</td>
+      <td>POLYGON ((-79.43998 43.76156, -79.43967 43.761...</td>
+      <td>34</td>
+      <td>Bathurst Manor</td>
+      <td>9.2</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>44</th>
+      <td>L'Amoreaux (117)</td>
+      <td>117</td>
+      <td>POLYGON ((-79.28857 43.79607, -79.28921 43.795...</td>
+      <td>117</td>
+      <td>L'Amoreaux</td>
+      <td>8.1</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>45</th>
+      <td>Trinity-Bellwoods (81)</td>
+      <td>081</td>
+      <td>POLYGON ((-79.42241 43.64349, -79.42255 43.643...</td>
+      <td>81</td>
+      <td>Trinity-Bellwoods</td>
+      <td>9.5</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td>Glenfield-Jane Heights (25)</td>
+      <td>025</td>
+      <td>POLYGON ((-79.52628 43.73640, -79.52721 43.740...</td>
+      <td>25</td>
+      <td>Glenfield-Jane Heights</td>
+      <td>11.7</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>49</th>
+      <td>Eringate-Centennial-West Deane (11)</td>
+      <td>011</td>
+      <td>POLYGON ((-79.56730 43.65425, -79.56755 43.654...</td>
+      <td>11</td>
+      <td>Eringate-Centennial-West Deane</td>
+      <td>11.2</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>54</th>
+      <td>Taylor-Massey (61)</td>
+      <td>061</td>
+      <td>POLYGON ((-79.28776 43.68978, -79.29269 43.688...</td>
+      <td>61</td>
+      <td>Crescent Town</td>
+      <td>9.9</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>55</th>
+      <td>Humewood-Cedarvale (106)</td>
+      <td>106</td>
+      <td>POLYGON ((-79.41849 43.68363, -79.41913 43.683...</td>
+      <td>106</td>
+      <td>Humewood-Cedarvale</td>
+      <td>10.8</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>60</th>
+      <td>Rustic (28)</td>
+      <td>028</td>
+      <td>POLYGON ((-79.50384 43.70288, -79.50425 43.704...</td>
+      <td>28</td>
+      <td>Rustic</td>
+      <td>11.5</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>62</th>
+      <td>Forest Hill North (102)</td>
+      <td>102</td>
+      <td>POLYGON ((-79.42556 43.70099, -79.42669 43.700...</td>
+      <td>102</td>
+      <td>Forest Hill North</td>
+      <td>8.9</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>63</th>
+      <td>Hillcrest Village (48)</td>
+      <td>048</td>
+      <td>POLYGON ((-79.34346 43.79517, -79.34351 43.795...</td>
+      <td>48</td>
+      <td>Hillcrest Village</td>
+      <td>6.9</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>64</th>
+      <td>Humber Heights-Westmount (8)</td>
+      <td>008</td>
+      <td>POLYGON ((-79.51329 43.69338, -79.51330 43.692...</td>
+      <td>8</td>
+      <td>Humber Heights-Westmount</td>
+      <td>9.8</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>65</th>
+      <td>Danforth (66)</td>
+      <td>066</td>
+      <td>POLYGON ((-79.32364 43.68337, -79.32477 43.683...</td>
+      <td>66</td>
+      <td>Danforth Village-Toronto</td>
+      <td>11.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>66</th>
+      <td>Newtonbrook West (36)</td>
+      <td>036</td>
+      <td>POLYGON ((-79.44576 43.79241, -79.44335 43.792...</td>
+      <td>36</td>
+      <td>Newtonbrook West</td>
+      <td>7.2</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>67</th>
+      <td>Black Creek (24)</td>
+      <td>024</td>
+      <td>POLYGON ((-79.53488 43.77269, -79.53441 43.772...</td>
+      <td>24</td>
+      <td>Black Creek</td>
+      <td>11.5</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>68</th>
+      <td>University (79)</td>
+      <td>079</td>
+      <td>POLYGON ((-79.40772 43.65648, -79.40847 43.658...</td>
+      <td>79</td>
+      <td>University</td>
+      <td>8.1</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>70</th>
+      <td>Kensington-Chinatown (78)</td>
+      <td>078</td>
+      <td>POLYGON ((-79.40401 43.64719, -79.40419 43.647...</td>
+      <td>78</td>
+      <td>Kensington-Chinatown</td>
+      <td>8.6</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>71</th>
+      <td>Old East York (58)</td>
+      <td>058</td>
+      <td>POLYGON ((-79.35056 43.69941, -79.35041 43.699...</td>
+      <td>58</td>
+      <td>Old East York</td>
+      <td>13.7</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>74</th>
+      <td>Palmerston-Little Italy (80)</td>
+      <td>080</td>
+      <td>POLYGON ((-79.42640 43.65360, -79.42744 43.656...</td>
+      <td>80</td>
+      <td>Palmerston-Little Italy</td>
+      <td>10.4</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>78</th>
+      <td>Bedford Park-Nortown (39)</td>
+      <td>039</td>
+      <td>POLYGON ((-79.40493 43.73601, -79.40503 43.735...</td>
+      <td>39</td>
+      <td>Bedford Park-Nortown</td>
+      <td>10.2</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>83</th>
+      <td>Willowridge-Martingrove-Richview (7)</td>
+      <td>007</td>
+      <td>POLYGON ((-79.52661 43.68233, -79.52705 43.682...</td>
+      <td>7</td>
+      <td>Willowridge-Martingrove-Richview</td>
+      <td>9.9</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>84</th>
+      <td>Woodbine-Lumsden (60)</td>
+      <td>060</td>
+      <td>POLYGON ((-79.31743 43.69644, -79.31775 43.697...</td>
+      <td>60</td>
+      <td>Woodbine-Lumsden</td>
+      <td>13.1</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>91</th>
+      <td>Morningside (135)</td>
+      <td>135</td>
+      <td>POLYGON ((-79.22552 43.78925, -79.22549 43.789...</td>
+      <td>135</td>
+      <td>Morningside</td>
+      <td>10.9</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>93</th>
+      <td>Lawrence Park North (105)</td>
+      <td>105</td>
+      <td>POLYGON ((-79.39008 43.72768, -79.39199 43.727...</td>
+      <td>105</td>
+      <td>Lawrence Park North</td>
+      <td>11.5</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>94</th>
+      <td>Clanton Park (33)</td>
+      <td>033</td>
+      <td>POLYGON ((-79.43371 43.73615, -79.43626 43.734...</td>
+      <td>33</td>
+      <td>Clanton Park</td>
+      <td>9.8</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>96</th>
+      <td>Markland Wood (12)</td>
+      <td>012</td>
+      <td>POLYGON ((-79.55959 43.63624, -79.55957 43.636...</td>
+      <td>12</td>
+      <td>Markland Wood</td>
+      <td>10.6</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>97</th>
+      <td>Maple Leaf (29)</td>
+      <td>029</td>
+      <td>POLYGON ((-79.49249 43.72010, -79.49185 43.720...</td>
+      <td>29</td>
+      <td>Maple Leaf</td>
+      <td>10.2</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>101</th>
+      <td>Etobicoke West Mall (13)</td>
+      <td>013</td>
+      <td>POLYGON ((-79.55959 43.63624, -79.55980 43.636...</td>
+      <td>13</td>
+      <td>Etobicoke West Mall</td>
+      <td>9.8</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>107</th>
+      <td>Church-Yonge Corridor (75)</td>
+      <td>075</td>
+      <td>POLYGON ((-79.37672 43.66242, -79.37658 43.662...</td>
+      <td>75</td>
+      <td>Church-Yonge Corridor</td>
+      <td>9.8</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>112</th>
+      <td>Newtonbrook East (50)</td>
+      <td>050</td>
+      <td>POLYGON ((-79.42008 43.79800, -79.41973 43.798...</td>
+      <td>50</td>
+      <td>Newtonbrook East</td>
+      <td>6.6</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>119</th>
+      <td>Oakwood Village (107)</td>
+      <td>107</td>
+      <td>POLYGON ((-79.45028 43.69569, -79.44934 43.695...</td>
+      <td>107</td>
+      <td>Oakwood-Vaughan</td>
+      <td>10.7</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>121</th>
+      <td>Mount Pleasant East (99)</td>
+      <td>099</td>
+      <td>POLYGON ((-79.37749 43.71309, -79.37739 43.712...</td>
+      <td>99</td>
+      <td>Mount Pleasant East</td>
+      <td>10.5</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>122</th>
+      <td>Rexdale-Kipling (4)</td>
+      <td>004</td>
+      <td>POLYGON ((-79.55512 43.71510, -79.55504 43.714...</td>
+      <td>4</td>
+      <td>Rexdale-Kipling</td>
+      <td>11.4</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>124</th>
+      <td>Thistletown-Beaumond Heights (3)</td>
+      <td>003</td>
+      <td>POLYGON ((-79.57751 43.73384, -79.57806 43.734...</td>
+      <td>3</td>
+      <td>Thistletown-Beaumond Heights</td>
+      <td>10.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>125</th>
+      <td>The Beaches (63)</td>
+      <td>063</td>
+      <td>POLYGON ((-79.31485 43.66674, -79.31356 43.667...</td>
+      <td>63</td>
+      <td>The Beaches</td>
+      <td>11.4</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>128</th>
+      <td>Forest Hill South (101)</td>
+      <td>101</td>
+      <td>POLYGON ((-79.42556 43.70099, -79.42314 43.701...</td>
+      <td>101</td>
+      <td>Forest Hill South</td>
+      <td>10.3</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>129</th>
+      <td>Princess-Rosethorn (10)</td>
+      <td>010</td>
+      <td>POLYGON ((-79.52679 43.65093, -79.52688 43.650...</td>
+      <td>10</td>
+      <td>Princess-Rosethorn</td>
+      <td>10.4</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>130</th>
+      <td>Lansing-Westgate (38)</td>
+      <td>038</td>
+      <td>POLYGON ((-79.43998 43.76156, -79.44004 43.761...</td>
+      <td>38</td>
+      <td>Lansing-Westgate</td>
+      <td>9.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>138</th>
+      <td>Willowdale West (37)</td>
+      <td>037</td>
+      <td>POLYGON ((-79.44043 43.76340, -79.44052 43.763...</td>
+      <td>37</td>
+      <td>Willowdale West</td>
+      <td>8.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>139</th>
+      <td>Willowdale East (51)</td>
+      <td>051</td>
+      <td>POLYGON ((-79.41225 43.76669, -79.41232 43.766...</td>
+      <td>51</td>
+      <td>Willowdale East</td>
+      <td>6.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>55 rows × 69 columns</p>
+</div></div></div>
 </div>
 </section>
 <section id="woah">
@@ -1580,6 +4823,11 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(140, 69)
+</pre></div>
+</div>
+</div>
 </div>
 <section id="let-s-check-this-new-no-duplicate-geodataframe-to-see-if-looks-right">
 <h3>Let’s check this new, no duplicate geodataframe to see if looks right.<a class="headerlink" href="#let-s-check-this-new-no-duplicate-geodataframe-to-see-if-looks-right" title="Link to this heading">#</a></h3>
@@ -1589,6 +4837,12 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">no_duplicates_gdf</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">column</span> <span class="o">=</span> <span class="s2">&quot;index_right&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+</pre></div>
+</div>
+<img alt="../../../_images/10e4f37de901fafae8b17623e7f05ef893257f60feabc12955fbb90f2208fc28.png" src="../../../_images/10e4f37de901fafae8b17623e7f05ef893257f60feabc12955fbb90f2208fc28.png" />
 </div>
 </div>
 </section>
@@ -1605,11 +4859,25 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True     85
+False    55
+Name: index_right, dtype: int64
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rail_not_present</span> <span class="o">=</span> <span class="n">no_duplicates_gdf</span><span class="p">[</span><span class="s2">&quot;index_right&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span>
 <span class="n">rail_not_present</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False    85
+True     55
+Name: index_right, dtype: int64
 </pre></div>
 </div>
 </div>
@@ -1633,6 +4901,88 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name_x</th>
+      <th>Neighbid</th>
+      <th>name_y</th>
+      <th>asthma_pct</th>
+      <th>index_right</th>
+      <th>geometry</th>
+      <th>rail_present</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Casa Loma (96)</td>
+      <td>96</td>
+      <td>Casa Loma</td>
+      <td>10.1</td>
+      <td>1280.0</td>
+      <td>POLYGON ((-79.41469 43.67391, -79.41485 43.674...</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Annex (95)</td>
+      <td>95</td>
+      <td>Annex</td>
+      <td>9.5</td>
+      <td>1280.0</td>
+      <td>POLYGON ((-79.39414 43.66872, -79.39588 43.668...</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Caledonia-Fairbank (109)</td>
+      <td>109</td>
+      <td>Caledonia-Fairbank</td>
+      <td>11.3</td>
+      <td>1305.0</td>
+      <td>POLYGON ((-79.46021 43.68156, -79.46044 43.681...</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Woodbine Corridor (64)</td>
+      <td>64</td>
+      <td>Woodbine Corridor</td>
+      <td>13.0</td>
+      <td>1940.0</td>
+      <td>POLYGON ((-79.31485 43.66674, -79.31660 43.666...</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Lawrence Park South (103)</td>
+      <td>103</td>
+      <td>Lawrence Park South</td>
+      <td>10.7</td>
+      <td>NaN</td>
+      <td>POLYGON ((-79.41096 43.70408, -79.41165 43.703...</td>
+      <td>False</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1657,6 +5007,12 @@ document.write(`
              <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span> <span class="n">fontweight</span> <span class="o">=</span> <span class="s2">&quot;bold&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0.98, &#39;Percent of Population with Asthma for Neighbourhoods with Railways&#39;)
+</pre></div>
+</div>
+<img alt="../../../_images/4d1f6b9c74aab35b663ed677730e50412106a61a7b0d8667587e199be51fe4c0.png" src="../../../_images/4d1f6b9c74aab35b663ed677730e50412106a61a7b0d8667587e199be51fe4c0.png" />
 </div>
 </div>
 <p>It seems that the presence of railway in neighborhood is related to higher asthma rate!</p>
@@ -1698,6 +5054,13 @@ document.write(`
 <span class="n">pvalue</span> <span class="o">=</span> <span class="p">(</span><span class="n">numgreater</span> <span class="o">+</span> <span class="n">numsmaller</span><span class="p">)</span><span class="o">/</span> <span class="mi">5000</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The p-value is:&#39;</span><span class="p">,</span> <span class="n">pvalue</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The number of simulated differences greater than the observed difference is: 11
+The number of simulated differences smaller than the observed difference is: 13
+The p-value is: 0.0048
 </pre></div>
 </div>
 </div>
