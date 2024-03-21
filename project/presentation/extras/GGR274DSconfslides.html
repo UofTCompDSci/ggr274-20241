@@ -457,8 +457,6 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#markdown-cells">Markdown cells</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rise">RISE</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hiding-code-while-displaying-output">Hiding Code While Displaying Output</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hiding-code-cell-example">Hiding code cell example</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#title-of-your-project-the-title-should-reflect-the-question-that-you-are-answering">Title of your project (the title should reflect the question that you are answering)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#name-a-pandas">Name:  A. Pandas</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tutorial-tutxxxx">Tutorial: TUTXXXX</a></li>
@@ -497,50 +495,14 @@ document.write(`
 <ul class="simple">
 <li><p>Choose Slide Type as Slide</p></li>
 </ul>
+<ul class="simple">
+<li><p>Note: You can combine different slide types in your presentation. For example, using ‘Skip’ can skip the code cells.</p></li>
+</ul>
 <p><img alt="" src="../../../_images/rise2.png" /></p>
 <ul class="simple">
 <li><p>Click on the RISE icon in the toolbar to run the slideshow.</p></li>
 </ul>
 <p><img alt="" src="../../../_images/rise3.png" /></p>
-</section>
-<section id="hiding-code-while-displaying-output">
-<h2>Hiding Code While Displaying Output<a class="headerlink" href="#hiding-code-while-displaying-output" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>You will want to display python output, but not all the code that produced the output during your presentation.  Although, we ask that your slides be reproducible, so the code and output should be in one notebook.  One way to accomplish this is to use the notebook extension called <em>Hide input</em>.  Here are the steps to trun this extension on in your notebook:</p></li>
-<li><p>Click the hide code button to hide the cell’s code, but display output.</p></li>
-</ul>
-<p><img alt="" src="../../../_images/hidecode2.png" /></p>
-<ul class="simple">
-<li><p>This notebook already has this extension turned on.</p></li>
-</ul>
-</section>
-<section id="hiding-code-cell-example">
-<h2>Hiding code cell example<a class="headerlink" href="#hiding-code-cell-example" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>The code cell below is hidden, but you should be able to see the bar plot.</p></li>
-<li><p>If you select the cell below then click on the hide code cell icon again the code will become visible.</p></li>
-</ul>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-
-<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span> 
-
-
-<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="n">y</span><span class="p">);</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x axis&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;y axis&#39;</span><span class="p">);</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Plot Title&#39;</span><span class="p">);</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../../../_images/58a3007735d0236714651745aab543be119e0c0665fb5ab7b530f2f9d7fb72fb.png" src="../../../_images/58a3007735d0236714651745aab543be119e0c0665fb5ab7b530f2f9d7fb72fb.png" />
-</div>
-</div>
 </section>
 <section id="title-of-your-project-the-title-should-reflect-the-question-that-you-are-answering">
 <h2>Title of your project (the title should reflect the question that you are answering)<a class="headerlink" href="#title-of-your-project-the-title-should-reflect-the-question-that-you-are-answering" title="Link to this heading">#</a></h2>
@@ -656,8 +618,6 @@ document.write(`
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#markdown-cells">Markdown cells</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rise">RISE</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hiding-code-while-displaying-output">Hiding Code While Displaying Output</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hiding-code-cell-example">Hiding code cell example</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#title-of-your-project-the-title-should-reflect-the-question-that-you-are-answering">Title of your project (the title should reflect the question that you are answering)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#name-a-pandas">Name:  A. Pandas</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tutorial-tutxxxx">Tutorial: TUTXXXX</a></li>
