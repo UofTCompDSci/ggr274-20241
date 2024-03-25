@@ -166,8 +166,8 @@ parts:
 
   - caption: Week 11
     chapters:
-    # - file: weekly-materials/week11/lecture/Class11_GGR274_CL.ipynb
-    #   title: Prof. Li's Notebook
+    - file: weekly-materials/week11/lecture/Class11_GGR274_CL.ipynb
+      title: Prof. Li's Notebook
     - file: weekly-materials/week11/lab/Lab_11.ipynb
       title: Lab 11 Notebook
     - file: weekly-materials/week11/homework/Homework_11.ipynb
