@@ -281,6 +281,10 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 11</span></p>
 <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../week11/lecture/Class11_GGR274_CL.html">Class 11</a></li>
+
+
+
 <li class="toctree-l1"><a class="reference internal" href="../../week11/lab/Lab_11.html">Lab 11 Notebook</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../week11/homework/Homework_11.html">Homework 11 Notebook</a></li>
 </ul>
@@ -1369,7 +1373,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/3d1c040b1c2c0902f91b2bf3bf7afbf595ea7483a74b5deb3c05d5f843904694.png" src="../../../_images/3d1c040b1c2c0902f91b2bf3bf7afbf595ea7483a74b5deb3c05d5f843904694.png" />
+<img alt="../../../_images/d731387bdc7010332bbb35039f73b1b1096929ecda865ff3d490ffd89ff56692.png" src="../../../_images/d731387bdc7010332bbb35039f73b1b1096929ecda865ff3d490ffd89ff56692.png" />
 </div>
 </div>
 <p>Describe the relationship between asthma and immigration.</p>
@@ -1453,7 +1457,7 @@ Name: immigration5, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.342332397042001
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.34233239704200125
 </pre></div>
 </div>
 </div>
@@ -1750,7 +1754,7 @@ Name: immigration5, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.109621980506299
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.1096219805062997
 </pre></div>
 </div>
 </div>
@@ -1843,7 +1847,7 @@ Name: immigration5, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/10e553eff2df43384dda89238fcee3dea7abe79226c7a13b5c76c6754e8ce7bc.png" src="../../../_images/10e553eff2df43384dda89238fcee3dea7abe79226c7a13b5c76c6754e8ce7bc.png" />
+<img alt="../../../_images/5b8cf5c3f8b2828fec4d943bb3b98bf84d0e3e78aa89320afaf60c4bbbb58de2.png" src="../../../_images/5b8cf5c3f8b2828fec4d943bb3b98bf84d0e3e78aa89320afaf60c4bbbb58de2.png" />
 </div>
 </div>
 </section>
@@ -2251,6 +2255,12 @@ Name: immigration5, dtype: float64
            <span class="n">cmap</span> <span class="o">=</span> <span class="s2">&quot;Pastel1&quot;</span><span class="p">,</span> <span class="n">legend</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+</pre></div>
+</div>
+<img alt="../../../_images/9323f71fa819ff3c5dffc0d0c6052f92ac02e0341b053e72fabd1ef49f21cf9c.png" src="../../../_images/9323f71fa819ff3c5dffc0d0c6052f92ac02e0341b053e72fabd1ef49f21cf9c.png" />
 </div>
 </div>
 <p>… These are silly maps. Who cares how big the neighbourhoods are or who can deal with a weird pastel map with a legend that is way too big…</p>
@@ -5053,7 +5063,7 @@ Name: index_right, dtype: int64
 <span class="n">numgreater</span> <span class="o">=</span> <span class="p">(</span><span class="n">simulated_diffs_df</span><span class="p">[</span><span class="s1">&#39;sim_diffs&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">obs_diff</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The number of simulated differences greater than the observed difference is:&#39;</span><span class="p">,</span> <span class="n">numgreater</span><span class="p">)</span>
 
-<span class="n">numsmaller</span> <span class="o">=</span> <span class="p">(</span><span class="n">simulated_diffs_df</span><span class="p">[</span><span class="s1">&#39;sim_diffs&#39;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="o">-</span><span class="mi">1</span> <span class="o">*</span> <span class="n">obs_diff</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">numsmaller</span> <span class="o">=</span> <span class="p">(</span><span class="n">simulated_diffs_df</span><span class="p">[</span><span class="s1">&#39;sim_diffs&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">1</span> <span class="o">*</span> <span class="n">obs_diff</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The number of simulated differences smaller than the observed difference is:&#39;</span><span class="p">,</span> <span class="n">numsmaller</span><span class="p">)</span>
 
 <span class="n">pvalue</span> <span class="o">=</span> <span class="p">(</span><span class="n">numgreater</span> <span class="o">+</span> <span class="n">numsmaller</span><span class="p">)</span><span class="o">/</span> <span class="mi">5000</span>
