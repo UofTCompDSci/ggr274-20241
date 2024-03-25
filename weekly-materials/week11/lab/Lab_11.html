@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>GGR274 Homework 3 &#8212; Computation and Data Science for Social Sciences</title>
+    <title>GGR274 Lab 11: Data analysis and result presentation &#8212; Computation and Data Science for Social Sciences</title>
   
   
   
@@ -57,12 +57,12 @@
     <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'weekly-materials/week03/homework/Homework_3';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'weekly-materials/week11/lab/Lab_11';</script>
     <link rel="icon" href="../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="GGR274 Homework 3" href="Homework_3_solution.html" />
-    <link rel="prev" title="GGR274 Lab 3: Introduction to Programming, Part 2" href="../lab/Lab_3_solutions.html" />
+    <link rel="next" title="GG274 Homework 11: Making a Map with GeoPandas" href="../homework/Homework_11.html" />
+    <link rel="prev" title="Homework 10 : Linear Regression" href="../../week10/homework/Homework_10.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -202,12 +202,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../../week02/homework/Homework_2_solution.html">Homework 02 Solutions</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 3</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../lecture/Class3_GGR274_DL_IM.html">Prof. Musabirov's Notebook</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lab/Lab_3.html">Lab 03 Notebook</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lab/Lab_3_solutions.html">Lab 03 Solutions</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Homework 03 Notebook</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Homework_3_solution.html">Homework 03 Solutions</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../week03/lecture/Class3_GGR274_DL_IM.html">Prof. Musabirov's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week03/lab/Lab_3.html">Lab 03 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week03/lab/Lab_3_solutions.html">Lab 03 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week03/homework/Homework_3.html">Homework 03 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../week03/homework/Homework_3_solution.html">Homework 03 Solutions</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 4</span></p>
 <ul class="nav bd-sidenav">
@@ -278,9 +278,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../week10/homework/Homework_10.html">Homework 10 Notebook</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 11</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../week11/lab/Lab_11.html">Lab 11 Notebook</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../week11/homework/Homework_11.html">Homework 11 Notebook</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lab 11 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../homework/Homework_11.html">Homework 11 Notebook</a></li>
 </ul>
 
     </div>
@@ -335,7 +335,7 @@
       
       
       
-      <li><a href="https://jupyter.utoronto.ca/hub/user-redirect/git-pull?repo=https%3A//github.com/UofTCompDSci/ggr274-20241&urlpath=tree/ggr274-20241/weekly-materials/week03/homework/Homework_3.ipynb&branch=main" target="_blank"
+      <li><a href="https://jupyter.utoronto.ca/hub/user-redirect/git-pull?repo=https%3A//github.com/UofTCompDSci/ggr274-20241&urlpath=tree/ggr274-20241/weekly-materials/week11/lab/Lab_11.ipynb&branch=main" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onJupyterHub"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -366,7 +366,7 @@
       
       
       
-      <li><a href="../../../_sources/weekly-materials/week03/homework/Homework_3.ipynb" target="_blank"
+      <li><a href="../../../_sources/weekly-materials/week11/lab/Lab_11.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -450,7 +450,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>GGR274 Homework 3</h1>
+    <h1>GGR274 Lab 11: Data analysis and result presentation</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -461,16 +461,8 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logistics">Logistics</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1-reading-in-a-data-set">Task 1: Reading in a data set</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-2-basic-statistics">Task 2: Basic statistics</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-number-of-reviews">2a. Number of reviews</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-total-and-average-review-length-counting-characters">2b. Total and average review length (counting characters)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-total-and-average-review-lengths-words">2c. Total and average review lengths (words)</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-3-identifying-positive-and-negative-reviews">Task 3: Identifying positive and negative reviews</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-categorizing-reviews">3a. Categorizing reviews</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-analysis">3b. Analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lab-11-introduction">Lab 11 Introduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#let-s-get-started">Let’s get started:</a></li>
 </ul>
 </li>
 </ul>
@@ -484,152 +476,157 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="ggr274-homework-3">
-<h1>GGR274 Homework 3<a class="headerlink" href="#ggr274-homework-3" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="ggr274-lab-11-data-analysis-and-result-presentation">
+<h1>GGR274 Lab 11: Data analysis and result presentation<a class="headerlink" href="#ggr274-lab-11-data-analysis-and-result-presentation" title="Link to this heading">#</a></h1>
 <section id="logistics">
 <h2>Logistics<a class="headerlink" href="#logistics" title="Link to this heading">#</a></h2>
-<p><strong>Due date</strong>: The homework is due 23:59 on Monday, January 30.</p>
-<p>You will submit your work on <a class="reference external" href="https://markus-ds.teach.cs.toronto.edu">MarkUs</a>.
-To submit your work:</p>
+<p>Lab grade will be based on submission of this notebook to MarkUs during the lab session (or by 23:59 on Thursday).</p>
+<p>You do not have to answer every question, but your notebook should be submitted as usual for attendance. Submit your completed file to <a class="reference external" href="https://markus-ds.teach.cs.toronto.edu">MarkUs</a>.
+Here are the instructions for submitting to MarkUs (same as last week):</p>
 <ol class="arabic simple">
-<li><p>Download this file (<code class="docutils literal notranslate"><span class="pre">Homework_3.ipynb</span></code>) from JupyterHub. (See <a class="reference internal" href="../../../guides/jupyterhub_guide.html"><span class="std std-doc">our JupyterHub Guide</span></a> for detailed instructions.)</p></li>
-<li><p>Submit this file to MarkUs under the <strong>hw3</strong> assignment. (See <a class="reference internal" href="../../../guides/markus_guide.html"><span class="std std-doc">our MarkUs Guide</span></a> for detailed instructions.)
-All homeworks will take place in a Jupyter notebook (like this one). When you are done, you will download this notebook and submit it to MarkUs.</p></li>
+<li><p>Download this file (<code class="docutils literal notranslate"><span class="pre">Lab_11.ipynb</span></code>) from JupyterHub. (See <a class="reference internal" href="../../../guides/jupyterhub_guide.html"><span class="std std-doc">our JupyterHub Guide</span></a> for detailed instructions.)</p></li>
+<li><p>Submit this file to MarkUs under the <strong>lab11</strong> assignment. (See <a class="reference internal" href="../../../guides/markus_guide.html"><span class="std std-doc">our MarkUs Guide</span></a> for detailed instructions.)</p></li>
 </ol>
+<p>Note: there’s no autograding set up for this week’s lab, but your TA will be checking that your submitted lab file is complete as part of your “lab attendance” grade.</p>
 </section>
-<section id="task-1-reading-in-a-data-set">
-<h2>Task 1: Reading in a data set<a class="headerlink" href="#task-1-reading-in-a-data-set" title="Link to this heading">#</a></h2>
-<p>In this lab, you’ll work with <strong>movie reviews from IMDB</strong>, part of a larger data set which was curated in 2011 by AI researchers at Stanford University (<a class="reference external" href="https://ai.stanford.edu/~amaas/data/sentiment/">source</a>).</p>
-<p>Since we covered in lecture how to read data from files, you’ll start by doing that here.
-In the code cell below, write code to open the movie review dataset file, called <strong>reviews.txt</strong>, and then use the <code class="docutils literal notranslate"><span class="pre">readlines</span></code> file method to read the lines of the file. Store the list of lines in a variable called <code class="docutils literal notranslate"><span class="pre">reviews</span></code>.</p>
-<p><em>Note</em>: remember to pass the <code class="docutils literal notranslate"><span class="pre">encoding=&quot;utf-8&quot;</span></code> argument to <code class="docutils literal notranslate"><span class="pre">open()</span></code> to ensure that all characters are read without error.</p>
+<section id="lab-11-introduction">
+<h2>Lab 11 Introduction<a class="headerlink" href="#lab-11-introduction" title="Link to this heading">#</a></h2>
+<p>Last week, we went over some questions you should ask yourself during the preliminary data exploration and analysis. This week, we will ask some questions that you may wish to consider during the analysis of your data, and how you may wish to visualize your results. Since your project is due very soon, it would be a good idea to start working on your project now if you have not started already.</p>
+<p>What you write in this and the following labs are for your own reference. You may answer the questions in either words or code, but whenever possible, you should give the function you intend to use.</p>
+<section id="let-s-get-started">
+<h3>Let’s get started:<a class="headerlink" href="#let-s-get-started" title="Link to this heading">#</a></h3>
+<p>What is the main analytical method that you will employ to analyze your data? What functions/packages will you need?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here</span>
-
-
-<span class="c1"># The following code is provided to help you check your work</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The first movie review:</span><span class="se">\n\n</span><span class="si">{</span><span class="n">reviews</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your notes here using comments</span>
 </pre></div>
 </div>
 </div>
 </div>
-</section>
-<section id="task-2-basic-statistics">
-<h2>Task 2: Basic statistics<a class="headerlink" href="#task-2-basic-statistics" title="Link to this heading">#</a></h2>
-<p>As you can probably guess, this is likely a fairly large dataset!
-Let’s use Python to help make sense of it.</p>
-<section id="a-number-of-reviews">
-<h3>2a. Number of reviews<a class="headerlink" href="#a-number-of-reviews" title="Link to this heading">#</a></h3>
-<p>The dataset stores each review on a single line.
-Using this fact and how you read in the data above (with <code class="docutils literal notranslate"><span class="pre">readlines</span></code>), compute the <em>number of reviews</em> in the dataset and store the result in a variable called <code class="docutils literal notranslate"><span class="pre">num_reviews</span></code>.</p>
+<p>Do you want to generate a confidence interval for your analysis? How could you accomplish this? (hint: refer to lecture on bootstrapping)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here</span>
-
-
-<span class="c1"># The following code is provided to help you check your work</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;There are </span><span class="si">{</span><span class="n">num_reviews</span><span class="si">}</span><span class="s2"> reviews in the dataset.&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your notes here using comments</span>
 </pre></div>
 </div>
 </div>
 </div>
-</section>
-<section id="b-total-and-average-review-length-counting-characters">
-<h3>2b. Total and average review length (counting characters)<a class="headerlink" href="#b-total-and-average-review-length-counting-characters" title="Link to this heading">#</a></h3>
-<p>Now let’s start computing on the individual reviews.</p>
-<p>First, use the approach from lecture to create a new list called <code class="docutils literal notranslate"><span class="pre">review_lengths</span></code> that contains the length, in terms of number of characters, of each review in the data set. (<em>Hint</em>: start with <code class="docutils literal notranslate"><span class="pre">review_lengths</span> <span class="pre">=</span> <span class="pre">[]</span></code> and then use a for loop.)</p>
-<p>Then using <code class="docutils literal notranslate"><span class="pre">review_lengths</span></code>, define the following variables with the described values:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">total_length</span></code>: the total number of characters across all of the reviews</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">max_length</span></code>: the length of the longest review</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">min_length</span></code> the length of the <em>shortest</em> review</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">average_length</span></code>: the average number of characters per review</p></li>
-</ul>
-<p><em>Hint</em>: use the functions <code class="docutils literal notranslate"><span class="pre">len</span></code>/<code class="docutils literal notranslate"><span class="pre">sum</span></code>/<code class="docutils literal notranslate"><span class="pre">max</span></code>/<code class="docutils literal notranslate"><span class="pre">min</span></code> to compute these values.</p>
+<p>What are some ways to check for the accuracy of your analysis? Which functions will you need? (hint: it may be useful to split your data into training and testing sets and think about overfitting/underfitting)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here</span>
-
-
-
-<span class="c1"># The following code is provided to help you check your work</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The length of the first review is </span><span class="si">{</span><span class="n">review_lengths</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The total review length is </span><span class="si">{</span><span class="n">total_length</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The maximum review length is </span><span class="si">{</span><span class="n">max_length</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The minimum review length is </span><span class="si">{</span><span class="n">min_length</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The average review length is </span><span class="si">{</span><span class="n">average_length</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your notes here using comments</span>
 </pre></div>
 </div>
 </div>
 </div>
-</section>
-<section id="c-total-and-average-review-lengths-words">
-<h3>2c. Total and average review lengths (words)<a class="headerlink" href="#c-total-and-average-review-lengths-words" title="Link to this heading">#</a></h3>
-<p>Now you’ll repeat part 2b, except counting words instead of characters.</p>
-<p>Specifically, define a new list variable called <code class="docutils literal notranslate"><span class="pre">review_word_lengths</span></code> that contains the length, in terms of number of words, of each review in the data set.
-Use the <code class="docutils literal notranslate"><span class="pre">str.split</span></code> method to split the reviews by spaces; don’t worry about punctuation marks appearing in the words, that’s expected.</p>
-<p>Then using <code class="docutils literal notranslate"><span class="pre">review_word_lengths</span></code>, define the following variables with the described values:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">total_word_length</span></code>: the total number of words across all of the reviews</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">max_word_length</span></code>: the length of the longest review (in words)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">min_word_length</span></code> the length of the <em>shortest</em> review (in words)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">average_word_length</span></code>: the average number of words per review</p></li>
-</ul>
+<p>How will you plan to visualize your data? (i.e. barplot, scatterplot etc.) Which functions will you use?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here</span>
-
-
-<span class="c1"># The following code is provided to help you check your work</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The length (in words) of the first review is </span><span class="si">{</span><span class="n">review_word_lengths</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The total review length (in words) is </span><span class="si">{</span><span class="n">total_word_length</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The maximum review length (in words) is </span><span class="si">{</span><span class="n">max_word_length</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The minimum review length (in words) is </span><span class="si">{</span><span class="n">min_word_length</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The average review length (in words) is </span><span class="si">{</span><span class="n">average_word_length</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your notes here using comments</span>
 </pre></div>
 </div>
 </div>
 </div>
-</section>
-</section>
-<section id="task-3-identifying-positive-and-negative-reviews">
-<h2>Task 3: Identifying positive and negative reviews<a class="headerlink" href="#task-3-identifying-positive-and-negative-reviews" title="Link to this heading">#</a></h2>
-<p>The original movie review dataset was originally curated for performing <em>sentiment analysis</em>, which is “natural language processing, text analysis, computational linguistics, and biometrics to systematically identify, extract, quantify, and study affective states and subjective information.” (<a class="reference external" href="https://en.wikipedia.org/wiki/Sentiment_analysis">Wikipedia</a>)</p>
-<p>In this task, you’ll perform a <em>very rudimentary</em> sentiment analysis on the movie reviews in our dataset. After writing the code and looking at the results, we’ll also ask you to reflect on the limitations of our current process and how we might improve it.</p>
-<section id="a-categorizing-reviews">
-<h3>3a. Categorizing reviews<a class="headerlink" href="#a-categorizing-reviews" title="Link to this heading">#</a></h3>
-<p>Create three new empty lists: <code class="docutils literal notranslate"><span class="pre">positive_reviews</span></code>, <code class="docutils literal notranslate"><span class="pre">negative_reviews</span></code>, and <code class="docutils literal notranslate"><span class="pre">ambiguous_reviews</span></code>.
-Then loop through the <code class="docutils literal notranslate"><span class="pre">reviews</span></code> and for each review:</p>
-<ul class="simple">
-<li><p>If the review contains the string <code class="docutils literal notranslate"><span class="pre">&quot;best&quot;</span></code> but not the string <code class="docutils literal notranslate"><span class="pre">&quot;worst&quot;</span></code>, append it to <code class="docutils literal notranslate"><span class="pre">positive_reviews</span></code>.</p></li>
-<li><p>If the review contains the string <code class="docutils literal notranslate"><span class="pre">&quot;worst&quot;</span></code> but not the string <code class="docutils literal notranslate"><span class="pre">&quot;best&quot;</span></code>, append it to <code class="docutils literal notranslate"><span class="pre">negative_reviews</span></code>.</p></li>
-<li><p>If the review contains <em>both</em> the strings <code class="docutils literal notranslate"><span class="pre">&quot;best&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">&quot;worst&quot;</span></code>, append it to <code class="docutils literal notranslate"><span class="pre">ambiguous_reviews</span></code>.</p></li>
-<li><p>If the review doesn’t contain either of the strings, don’t append it to any list.</p></li>
-</ul>
-<p>Use <code class="docutils literal notranslate"><span class="pre">____</span> <span class="pre">in</span> <span class="pre">____</span> </code> and <code class="docutils literal notranslate"><span class="pre">____</span> <span class="pre">not</span> <span class="pre">in</span> <span class="pre">____</span></code> to check whether one string is contained inside another string (or not). These comparisons are case-sensitive, so for example a review containing <code class="docutils literal notranslate"><span class="pre">&quot;BEST&quot;</span></code> but not <code class="docutils literal notranslate"><span class="pre">&quot;best&quot;</span></code> won’t be categorized as positive.</p>
-<p>It is possible to complete this task using one for loop or multiple for loops (do whatever makes the most sense to you).</p>
+<p>Do you want to visualize your variables in a map? Which functions will you use?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here</span>
-
-
-<span class="c1"># The following code is provided to help you check your work</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Here is the first positive review:</span><span class="se">\n\n</span><span class="si">{</span><span class="n">positive_reviews</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Here is the first negative review:</span><span class="se">\n\n</span><span class="si">{</span><span class="n">negative_reviews</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Here is the first ambiguous review:</span><span class="se">\n\n</span><span class="si">{</span><span class="n">ambiguous_reviews</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your notes here using comments</span>
 </pre></div>
 </div>
 </div>
 </div>
-</section>
-<section id="b-analysis">
-<h3>3b. Analysis<a class="headerlink" href="#b-analysis" title="Link to this heading">#</a></h3>
-<p>Read through some of the reviews in each category list (you can modify the <code class="docutils literal notranslate"><span class="pre">print</span></code> calls we provided to display more of them). Decide whether you agree with the categorization of these reviews.</p>
-<p>Then, create a new Markdown cell below this one, and write one or two paragraphs responding to the following prompt:</p>
-<blockquote>
-<div><p>Describe <strong>two different limitations</strong> of our very basic review categorization. What problems are caused by these limitations, and for what kinds of reviews might these problems occur? Using just what you’ve learned in the course so far, are there ways we could address these limitations, at least partially?</p>
-</div></blockquote>
+<p>What do you think are some of the weaknesses associated with your method of analysis?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your notes here using comments</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>You may want to take a look at the project rubric!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">slidesrubric</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;confrenceslidesrubric.csv&#39;</span><span class="p">,</span> <span class="n">keep_default_na</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">slidesrubric</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">hide</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;index&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+</style>
+<table id="T_3c811">
+  <thead>
+    <tr>
+      <th id="T_3c811_level0_col0" class="col_heading level0 col0" >Criteria</th>
+      <th id="T_3c811_level0_col1" class="col_heading level0 col1" >Category</th>
+      <th id="T_3c811_level0_col2" class="col_heading level0 col2" >Excellent</th>
+      <th id="T_3c811_level0_col3" class="col_heading level0 col3" >Good</th>
+      <th id="T_3c811_level0_col4" class="col_heading level0 col4" >Adequate</th>
+      <th id="T_3c811_level0_col5" class="col_heading level0 col5" >Poor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td id="T_3c811_row0_col0" class="data row0 col0" >Content</td>
+      <td id="T_3c811_row0_col1" class="data row0 col1" >Reasonable scope</td>
+      <td id="T_3c811_row0_col2" class="data row0 col2" >The scope of the analysis is clear and questions can be fully addressed using the available data.</td>
+      <td id="T_3c811_row0_col3" class="data row0 col3" >The scope of the analysis is clear and questions can be reasonably addressed using the available data.</td>
+      <td id="T_3c811_row0_col4" class="data row0 col4" >The scope of the analysis is less clear, the questions can somewhat be addressed using the available data with slight modifications.</td>
+      <td id="T_3c811_row0_col5" class="data row0 col5" >The questions are beyond the scope, cannot be reasonably addressed with the available data; need to resort to additional data or complete modification.</td>
+    </tr>
+    <tr>
+      <td id="T_3c811_row1_col0" class="data row1 col0" ></td>
+      <td id="T_3c811_row1_col1" class="data row1 col1" >Data wrangling</td>
+      <td id="T_3c811_row1_col2" class="data row1 col2" >Creative use of data wrangling to produce informative variables. </td>
+      <td id="T_3c811_row1_col3" class="data row1 col3" >Appropriate use of data wrangling to create sensible variables.</td>
+      <td id="T_3c811_row1_col4" class="data row1 col4" >Some use of data wrangling to create new variables.</td>
+      <td id="T_3c811_row1_col5" class="data row1 col5" >No evidence of data wrangling to create any variables.</td>
+    </tr>
+    <tr>
+      <td id="T_3c811_row2_col0" class="data row2 col0" ></td>
+      <td id="T_3c811_row2_col1" class="data row2 col1" >Graphical display</td>
+      <td id="T_3c811_row2_col2" class="data row2 col2" >Choice of graphs are appropriate and creative; graphs reveal useful information and tell a story. Meaningful captions and titles.</td>
+      <td id="T_3c811_row2_col3" class="data row2 col3" >Choice of graphs are appropriate; graphs reveal useful information, but are not self-sufficient. Might require some explaining.</td>
+      <td id="T_3c811_row2_col4" class="data row2 col4" >Choice of graphs are appropriate; graphs reveal some useful information.  Might require some explaining and minor changes to titles/axes/labels, etc.</td>
+      <td id="T_3c811_row2_col5" class="data row2 col5" >A lack of visual aid; graphs are inappropriate, reveal no information.</td>
+    </tr>
+    <tr>
+      <td id="T_3c811_row3_col0" class="data row3 col0" ></td>
+      <td id="T_3c811_row3_col1" class="data row3 col1" >Statistical methods</td>
+      <td id="T_3c811_row3_col2" class="data row3 col2" >The choice of method is appropriate; analyses are complete; diverse and creative use of more than one approach.</td>
+      <td id="T_3c811_row3_col3" class="data row3 col3" >The choice of method is appropriate; some  non-essential analyses are missing</td>
+      <td id="T_3c811_row3_col4" class="data row3 col4" >The choice of method is somewhat appropriate; some analyses are missing.</td>
+      <td id="T_3c811_row3_col5" class="data row3 col5" >The choice of method is inappropriate; essential analyses are missing.</td>
+    </tr>
+    <tr>
+      <td id="T_3c811_row4_col0" class="data row4 col0" ></td>
+      <td id="T_3c811_row4_col1" class="data row4 col1" >Appropriate conclusion</td>
+      <td id="T_3c811_row4_col2" class="data row4 col2" >Results are clearly and completely summarized. Appropriate limitations and concerned clearly stated.</td>
+      <td id="T_3c811_row4_col3" class="data row4 col3" >Results are completely summarized. Some limitations and concerned are stated.</td>
+      <td id="T_3c811_row4_col4" class="data row4 col4" >Some results are summarized. The conclusion is not appropriate and no mentioning of any limitations.</td>
+      <td id="T_3c811_row4_col5" class="data row4 col5" >Results are not summarized and conclusion is missing.</td>
+    </tr>
+    <tr>
+      <td id="T_3c811_row5_col0" class="data row5 col0" >Writing</td>
+      <td id="T_3c811_row5_col1" class="data row5 col1" >Organization</td>
+      <td id="T_3c811_row5_col2" class="data row5 col2" >Contents are very well organized under the appropriate section and subsection headings.</td>
+      <td id="T_3c811_row5_col3" class="data row5 col3" >Contents are organized under the appropriate section and subsection headings.</td>
+      <td id="T_3c811_row5_col4" class="data row5 col4" >Contents are somewhat organized under section and subsection headings. </td>
+      <td id="T_3c811_row5_col5" class="data row5 col5" >Contents are poorly organized under section and subsection headings.</td>
+    </tr>
+    <tr>
+      <td id="T_3c811_row6_col0" class="data row6 col0" ></td>
+      <td id="T_3c811_row6_col1" class="data row6 col1" >Overall Writing</td>
+      <td id="T_3c811_row6_col2" class="data row6 col2" >Very polished and well written.  </td>
+      <td id="T_3c811_row6_col3" class="data row6 col3" >Few errors in spelling, punctuation, and/or grammar. Mostly clear and understandable.</td>
+      <td id="T_3c811_row6_col4" class="data row6 col4" >Partly unclear, but mostly understandable. Several errors in spelling, punctuation, and/or grammar. </td>
+      <td id="T_3c811_row6_col5" class="data row6 col5" >Too many errors in spelling, punctuation, and/or grammar, which make it unclear and difficult to follow. </td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
 </section>
 </section>
 </section>
@@ -647,7 +644,7 @@ Then loop through the <code class="docutils literal notranslate"><span class="pr
         },
         kernelOptions: {
             name: "python3",
-            path: "./weekly-materials/week03/homework"
+            path: "./weekly-materials/week11/lab"
         },
         predefinedOutput: true
     }
@@ -665,20 +662,20 @@ Then loop through the <code class="docutils literal notranslate"><span class="pr
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../lab/Lab_3_solutions.html"
+       href="../../week10/homework/Homework_10.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">GGR274 Lab 3: Introduction to Programming, Part 2</p>
+        <p class="prev-next-title">Homework 10 : Linear Regression</p>
       </div>
     </a>
     <a class="right-next"
-       href="Homework_3_solution.html"
+       href="../homework/Homework_11.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">GGR274 Homework 3</p>
+        <p class="prev-next-title">GG274 Homework 11: Making a Map with GeoPandas</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -699,16 +696,8 @@ Then loop through the <code class="docutils literal notranslate"><span class="pr
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logistics">Logistics</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1-reading-in-a-data-set">Task 1: Reading in a data set</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-2-basic-statistics">Task 2: Basic statistics</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-number-of-reviews">2a. Number of reviews</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-total-and-average-review-length-counting-characters">2b. Total and average review length (counting characters)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-total-and-average-review-lengths-words">2c. Total and average review lengths (words)</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-3-identifying-positive-and-negative-reviews">Task 3: Identifying positive and negative reviews</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-categorizing-reviews">3a. Categorizing reviews</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-analysis">3b. Analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lab-11-introduction">Lab 11 Introduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#let-s-get-started">Let’s get started:</a></li>
 </ul>
 </li>
 </ul>
