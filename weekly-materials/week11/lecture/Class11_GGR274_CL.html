@@ -479,7 +479,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#more-on-cartography">More on Cartography</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#to-this-point-we-have-used-quantiles-to-classify-values-in-maps">To this point we have used quantiles to classify values in maps.</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#to-this-point-we-have-used-quantiles-to-classify-continous-values-in-maps">To this point we have used quantiles to classify continous values in maps.</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-other-common-options-do-we-have-see-the-document-of-geodataframe-plot-and-mapclassify">What other common options do we have?  See the document of GeoDataFrame.plot and mapclassify</a></li>
 </ul>
 </li>
@@ -529,15 +529,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <p>Before the class…</p>
-<p>Some information about the final exam.</p>
-<ul class="simple">
-<li><p>In-person exam</p></li>
-<li><p>Computer-based exam</p></li>
-<li><p>Open-book (access to all course materials in your JupyterHub), but no Internet</p></li>
-<li><p>Students be divided into three rooms, which will be announced in the Quercus.</p></li>
-</ul>
-<section class="tex2jax_ignore mathjax_ignore" id="class-11">
+  <section class="tex2jax_ignore mathjax_ignore" id="class-11">
 <h1>Class 11<a class="headerlink" href="#class-11" title="Link to this heading">#</a></h1>
 <section id="mar-26-2024">
 <h2>Mar. 26, 2024<a class="headerlink" href="#mar-26-2024" title="Link to this heading">#</a></h2>
@@ -609,12 +601,102 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>AREA_ATTR_ID</th>
+      <th>AREA_DESC</th>
+      <th>AREA_ID</th>
+      <th>AREA_LONG_CODE</th>
+      <th>AREA_NAME</th>
+      <th>AREA_SHORT_CODE</th>
+      <th>CLASSIFICATION</th>
+      <th>CLASSIFICATION_CODE</th>
+      <th>LATITUDE</th>
+      <th>LONGITUDE</th>
+      <th>OBJECTID</th>
+      <th>PARENT_AREA_ID</th>
+      <th>Shape__Area</th>
+      <th>Shape__Length</th>
+      <th>X</th>
+      <th>Y</th>
+      <th>_id</th>
+      <th>geometry</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>26005521</td>
+      <td>Casa Loma (96)</td>
+      <td>2480141</td>
+      <td>096</td>
+      <td>Casa Loma (96)</td>
+      <td>096</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>17545105</td>
+      <td>None</td>
+      <td>3.678385e+06</td>
+      <td>8214.176485</td>
+      <td>None</td>
+      <td>None</td>
+      <td>1</td>
+      <td>POLYGON ((-79.41469 43.67391, -79.41485 43.674...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>26005520</td>
+      <td>Annex (95)</td>
+      <td>2480140</td>
+      <td>095</td>
+      <td>Annex (95)</td>
+      <td>095</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>17545121</td>
+      <td>None</td>
+      <td>5.337192e+06</td>
+      <td>10513.883143</td>
+      <td>None</td>
+      <td>None</td>
+      <td>2</td>
+      <td>POLYGON ((-79.39414 43.66872, -79.39588 43.668...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p>What is geometry?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">first_neighbor</span> <span class="o">=</span> <span class="n">nbrhd</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="s1">&#39;geometry&#39;</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">first_neighbor</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>POLYGON ((-79.41469317817781 43.6739104164259, -79.41484930122832 43.6743388247927, -79.4155279126094 43.67606998537741, -79.4157867581137 43.6767302521386, -79.4164385645546 43.6783329020511, -79.4165782543862 43.6787785512344, -79.4167583944682 43.6792484522149, -79.41698203537291 43.6798247440047, -79.4170902471251 43.6801047004014, -79.4174797570886 43.681051830379, -79.4176666295158 43.6815699096212, -79.4176976020857 43.68163169892501, -79.4178116560388 43.6819252777403, -79.4181213711598 43.6827105222857, -79.4182734938897 43.6830961662335, -79.418301440907 43.683167503583, -79.4184313411692 43.6834966841996, -79.4184870757371 43.6836294842548, -79.4185410795905 43.6837582054538, -79.4184092922561 43.683786393574, -79.4182955283344 43.6834937157887, -79.4154265333151 43.684065660547, -79.4135200432832 43.6844456915062, -79.4134087861596 43.6844695957643, -79.4134686959176 43.6846245536214, -79.4124643275333 43.6848288476745, -79.4118960009694 43.6849418545125, -79.4126020656339 43.6866857692443, -79.4128218223812 43.687229039671, -79.4122731860895 43.687340632143, -79.4123095851789 43.6874306640936, -79.4124449310775 43.6877690817767, -79.4125749764611 43.6881026705283, -79.4126022442033 43.68820308289101, -79.4126262355444 43.6883388768546, -79.412631283351 43.6884334123732, -79.4126432068819 43.6885168725437, -79.4126690850027 43.6886690142942, -79.4121798023448 43.6887725684515, -79.4121317450359 43.688782747996, -79.4094911620232 43.6893416576956, -79.4095159141932 43.6894373160946, -79.4079543147094 43.6897847976179, -79.4064026019847 43.6900806794424, -79.4048987011668 43.6903958607535, -79.4030176369546 43.6907821281771, -79.4030622386805 43.6907397518989, -79.403084589916 43.6906872662864, -79.4030847025454 43.6906327275232, -79.40233853963132 43.6887211977866, -79.4014954899744 43.6866406966408, -79.401126389152 43.6857160700657, -79.400841057476 43.6850272500519, -79.4005303647662 43.6843098010236, -79.4002092949982 43.6835267044631, -79.4001688947727 43.6834159800984, -79.3998035302044 43.6825434875815, -79.3992154226597 43.6811276314469, -79.3990654446524 43.6807665464922, -79.3989394746847 43.6804604265612, -79.3987331620365 43.679962228305, -79.3985629657772 43.6795542728627, -79.3983515160598 43.6790391648102, -79.3981409020124 43.6785307360415, -79.3980121612171 43.6782038734666, -79.3979440512351 43.6780262977103, -79.3979313672526 43.6779949618024, -79.397997906573 43.6779648847871, -79.39810766305662 43.6779154844303, -79.3982178162304 43.677866084320804, -79.3983283660932 43.677816684457504, -79.3984396598895 43.6777672941492, -79.3985509707706 43.677722377402, -79.39866305797811 43.6776729695768, -79.3987751498381 43.6776280623042, -79.39888799806091 43.677583155590305, -79.3990012429834 43.6775382491152, -79.399114879728 43.6774888512157, -79.3992025285702 43.6774574239244, -79.3992901799736 43.6774169952501, -79.3993786050701 43.6773810678483, -79.3994674269127 43.677345149728104, -79.3995566132194 43.6773137235166, -79.3996462037999 43.6772777969312, -79.3997357818565 43.6772418792657, -79.3998261336784 43.6772104448643, -79.3999168946437 43.6771790287522, -79.4000076183382 43.6771475945326, -79.4000991356532 43.6771161699357, -79.4001906603179 43.6770802536138, -79.4002825618979 43.6770488292052, -79.4003752372778 43.6770218970549, -79.40046791256 43.6769949738305, -79.4005609796537 43.6769635502124, -79.4006540144064 43.6769366361508, -79.40074786265342 43.6769052040578, -79.4008416959652 43.6768827821947, -79.4009359160751 43.6768513592708, -79.4010305181557 43.6768289379187, -79.4011394914127 43.6767930269395, -79.40124844475712 43.6767616164984, -79.4013577948506 43.6767302062957, -79.4014675168886 43.6766987963088, -79.401577635645 43.6766674045606, -79.4016877469976 43.6766404773541, -79.4017982426678 43.6766135773755, -79.401909142447 43.6765821679758, -79.4020200223858 43.6765552591109, -79.4021313064015 43.6765238498247, -79.4022429725496 43.6765014420761, -79.4023546335109 43.6764745335542, -79.4024666788314 43.6764476252511, -79.4025787240519 43.6764207168379, -79.4026915556349 43.6763983006426, -79.40280397272 43.67637139232491, -79.402883149386 43.6763541860873, -79.4029167917251 43.6763489758964, -79.4030299826882 43.6763265686732, -79.4031435776805 43.6762996520191, -79.4049670168388 43.6759208047062, -79.4073338149418 43.675429007407, -79.407847991862 43.67532218132661, -79.4113608949251 43.6745959152122, -79.4121860970333 43.6744315128604, -79.4137161812489 43.6741115018232, -79.4146748682077 43.6739143093347, -79.41469317817781 43.6739104164259))
 </pre></div>
 </div>
 </div>
@@ -625,12 +707,19 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/4b938be3a15d781260e818a13824198846d9cccee135ad6a4ec0c600793328ee.svg" src="../../../_images/4b938be3a15d781260e818a13824198846d9cccee135ad6a4ec0c600793328ee.svg" /></div>
 </div>
 <p>Another example of geometry</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rails</span> <span class="o">=</span>  <span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="s2">&quot;toronto_rails.geojson&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">rails</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="s1">&#39;geometry&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>MULTILINESTRING ((-79.5125670999999 43.814361500000075, -79.51253669999994 43.81447250000008, -79.512524 43.81452850000005, -79.51251939999992 43.814607, -79.51251739999992 43.814716900000064, -79.51252729999993 43.814817, -79.51254659999995 43.81492840000004, -79.51261019999993 43.815184800000054, -79.51270719999991 43.815575100000046, -79.51291559999993 43.816454400000055, -79.51339439999992 43.81834120000008, -79.51371579999994 43.819633, -79.513803 43.820002, -79.51385459999995 43.82019790000004, -79.51389059999991 43.820318, -79.51392659999993 43.82045130000006))
 </pre></div>
 </div>
 </div>
@@ -658,6 +747,26 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(-79.5125670999999,
+ -79.51253669999994,
+ -79.512524,
+ -79.51251939999992,
+ -79.51251739999992,
+ -79.51252729999993,
+ -79.51254659999995,
+ -79.51261019999993,
+ -79.51270719999991,
+ -79.51291559999993,
+ -79.51339439999992,
+ -79.51371579999994,
+ -79.513803,
+ -79.51385459999995,
+ -79.51389059999991,
+ -79.51392659999993)
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -668,6 +777,9 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/a0d1dc4e28590f6c008d52c65326eabef4198d19561ca58b6a08ab40a9443b7c.png" src="../../../_images/a0d1dc4e28590f6c008d52c65326eabef4198d19561ca58b6a08ab40a9443b7c.png" />
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -675,11 +787,28 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/a9c90d2fe5cb7ef219b94d466110604094048a0fabd9c8c04bdfdaae1a96ebfc.svg" src="../../../_images/a9c90d2fe5cb7ef219b94d466110604094048a0fabd9c8c04bdfdaae1a96ebfc.svg" /></div>
 </div>
 <p>Note: the difference between plotting on Cartesian coordinate system and plotting as a geo-object comes from the different coordination system used by the GeoDataFrame.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rails</span><span class="o">.</span><span class="n">crs</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Geographic 2D CRS: EPSG:4269&gt;
+Name: NAD83
+Axis Info [ellipsoidal]:
+- Lat[north]: Geodetic latitude (degree)
+- Lon[east]: Geodetic longitude (degree)
+Area of Use:
+- name: North America - onshore and offshore: Canada - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon. Puerto Rico. United States (USA) - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Hawaii; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming. US Virgin Islands. British Virgin Islands.
+- bounds: (167.65, 14.92, -40.73, 86.45)
+Datum: North American Datum 1983
+- Ellipsoid: GRS 1980
+- Prime Meridian: Greenwich
 </pre></div>
 </div>
 </div>
@@ -695,12 +824,26 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;AREA_ATTR_ID&#39;, &#39;AREA_DESC&#39;, &#39;AREA_ID&#39;, &#39;AREA_LONG_CODE&#39;, &#39;AREA_NAME&#39;,
+       &#39;AREA_SHORT_CODE&#39;, &#39;CLASSIFICATION&#39;, &#39;CLASSIFICATION_CODE&#39;, &#39;LATITUDE&#39;,
+       &#39;LONGITUDE&#39;, &#39;OBJECTID&#39;, &#39;PARENT_AREA_ID&#39;, &#39;Shape__Area&#39;,
+       &#39;Shape__Length&#39;, &#39;X&#39;, &#39;Y&#39;, &#39;_id&#39;, &#39;geometry&#39;],
+      dtype=&#39;object&#39;)
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># important columns</span>
 <span class="n">important_spat_cols</span> <span class="o">=</span> <span class="n">nbrhd</span><span class="o">.</span><span class="n">columns</span><span class="p">[[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">17</span><span class="p">]]</span>
 <span class="n">important_spat_cols</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;AREA_NAME&#39;, &#39;AREA_SHORT_CODE&#39;, &#39;geometry&#39;], dtype=&#39;object&#39;)
 </pre></div>
 </div>
 </div>
@@ -715,6 +858,13 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;AREA_NAME&#39;: &#39;name&#39;,
+ &#39;AREA_SHORT_CODE&#39;: &#39;nbrhd_spat_id&#39;,
+ &#39;geometry&#39;: &#39;geometry&#39;}
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -726,6 +876,64 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>nbrhd_spat_id</th>
+      <th>geometry</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Casa Loma (96)</td>
+      <td>096</td>
+      <td>POLYGON ((-79.41469 43.67391, -79.41485 43.674...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Annex (95)</td>
+      <td>095</td>
+      <td>POLYGON ((-79.39414 43.66872, -79.39588 43.668...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Caledonia-Fairbank (109)</td>
+      <td>109</td>
+      <td>POLYGON ((-79.46021 43.68156, -79.46044 43.681...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Woodbine Corridor (64)</td>
+      <td>064</td>
+      <td>POLYGON ((-79.31485 43.66674, -79.31660 43.666...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Lawrence Park South (103)</td>
+      <td>103</td>
+      <td>POLYGON ((-79.41096 43.70408, -79.41165 43.703...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p>Convert our spatial ID from a string to a number:</p>
 <ul class="simple">
@@ -741,11 +949,81 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>nbrhd_spat_id</th>
+      <th>geometry</th>
+      <th>Neighbid</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Casa Loma (96)</td>
+      <td>096</td>
+      <td>POLYGON ((-79.41469 43.67391, -79.41485 43.674...</td>
+      <td>96</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Annex (95)</td>
+      <td>095</td>
+      <td>POLYGON ((-79.39414 43.66872, -79.39588 43.668...</td>
+      <td>95</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Caledonia-Fairbank (109)</td>
+      <td>109</td>
+      <td>POLYGON ((-79.46021 43.68156, -79.46044 43.681...</td>
+      <td>109</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Woodbine Corridor (64)</td>
+      <td>064</td>
+      <td>POLYGON ((-79.31485 43.66674, -79.31660 43.666...</td>
+      <td>64</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Lawrence Park South (103)</td>
+      <td>103</td>
+      <td>POLYGON ((-79.41096 43.70408, -79.41165 43.703...</td>
+      <td>103</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">nbrhd_simple</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="s1">&#39;nbrhd_spat_id&#39;</span><span class="p">]))</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">nbrhd_simple</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="s1">&#39;Neighbid&#39;</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;str&#39;&gt;
+&lt;class &#39;numpy.int64&#39;&gt;
 </pre></div>
 </div>
 </div>
@@ -770,10 +1048,123 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Unnamed: 0</th>
+      <th>Unnamed: 1</th>
+      <th>Demographics ª</th>
+      <th>% With asthma</th>
+      <th>LL (95% CI)</th>
+      <th>UL (95% CI)</th>
+      <th>Demographics ª.1</th>
+      <th>% With asthma.1</th>
+      <th>LL (95% CI) .1</th>
+      <th>UL (95% CI) .1</th>
+      <th>...</th>
+      <th>Demographics ª.7</th>
+      <th>% With asthma.7</th>
+      <th>LL (95% CI) .7</th>
+      <th>UL (95% CI) .7</th>
+      <th>Demographics ª.8</th>
+      <th>% With asthma.8</th>
+      <th>LL (95% CI) .8</th>
+      <th>UL (95% CI) .8</th>
+      <th>Rate Ratio**.2</th>
+      <th>H/L/NS.2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>West Humber-Clairville</td>
+      <td>11977</td>
+      <td>9.7</td>
+      <td>9.2</td>
+      <td>10.2</td>
+      <td>11770</td>
+      <td>10.6</td>
+      <td>10.0</td>
+      <td>11.2</td>
+      <td>...</td>
+      <td>4435</td>
+      <td>12.3</td>
+      <td>11.3</td>
+      <td>13.3</td>
+      <td>8921</td>
+      <td>10.9</td>
+      <td>10.3</td>
+      <td>11.6</td>
+      <td>1.07</td>
+      <td>H</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Mount Olive-Silverstone-Jamestown</td>
+      <td>11157</td>
+      <td>7.9</td>
+      <td>7.4</td>
+      <td>8.4</td>
+      <td>11462</td>
+      <td>10.2</td>
+      <td>9.6</td>
+      <td>10.8</td>
+      <td>...</td>
+      <td>3819</td>
+      <td>13.5</td>
+      <td>12.5</td>
+      <td>14.6</td>
+      <td>7726</td>
+      <td>11.2</td>
+      <td>10.5</td>
+      <td>11.9</td>
+      <td>1.10</td>
+      <td>H</td>
+    </tr>
+  </tbody>
+</table>
+<p>2 rows × 44 columns</p>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">asthma_neighb</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;Unnamed: 0&#39;, &#39;Unnamed: 1&#39;, &#39;Demographics ª&#39;, &#39;% With asthma&#39;,
+       &#39;LL (95% CI) &#39;, &#39;UL (95% CI) &#39;, &#39;Demographics ª.1&#39;, &#39;% With asthma.1&#39;,
+       &#39;LL (95% CI) .1&#39;, &#39;UL (95% CI) .1&#39;, &#39;Demographics ª.2&#39;,
+       &#39;% With asthma.2&#39;, &#39;LL (95% CI) .2&#39;, &#39;UL (95% CI) .2&#39;, &#39;Rate Ratio**&#39;,
+       &#39;H/L/NS&#39;, &#39;Demographics ª.3&#39;, &#39;% With asthma.3&#39;, &#39;LL (95% CI) .3&#39;,
+       &#39;UL (95% CI) .3&#39;, &#39;Demographics ª.4&#39;, &#39;% With asthma.4&#39;,
+       &#39;LL (95% CI) .4&#39;, &#39;UL (95% CI) .4&#39;, &#39;Demographics ª.5&#39;,
+       &#39;% With asthma.5&#39;, &#39;LL (95% CI) .5&#39;, &#39;UL (95% CI) .5&#39;, &#39;Rate Ratio**.1&#39;,
+       &#39;H/L/NS.1&#39;, &#39;Demographics ª.6&#39;, &#39;% With asthma.6&#39;, &#39;LL (95% CI) .6&#39;,
+       &#39;UL (95% CI) .6&#39;, &#39;Demographics ª.7&#39;, &#39;% With asthma.7&#39;,
+       &#39;LL (95% CI) .7&#39;, &#39;UL (95% CI) .7&#39;, &#39;Demographics ª.8&#39;,
+       &#39;% With asthma.8&#39;, &#39;LL (95% CI) .8&#39;, &#39;UL (95% CI) .8&#39;, &#39;Rate Ratio**.2&#39;,
+       &#39;H/L/NS.2&#39;],
+      dtype=&#39;object&#39;)
 </pre></div>
 </div>
 </div>
@@ -806,6 +1197,70 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Neighbid</th>
+      <th>name</th>
+      <th>adult_pop</th>
+      <th>asthma_pct</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>West Humber-Clairville</td>
+      <td>23747</td>
+      <td>10.2</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Mount Olive-Silverstone-Jamestown</td>
+      <td>22619</td>
+      <td>9.1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Thistletown-Beaumond Heights</td>
+      <td>6629</td>
+      <td>10.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>Rexdale-Kipling</td>
+      <td>6755</td>
+      <td>11.4</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>Elms-Old Rexdale</td>
+      <td>6588</td>
+      <td>11.6</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 </section>
 <section id="join-our-neighbourhood-gdf-with-our-asthma-rate-df">
@@ -817,6 +1272,70 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Neighbid</th>
+      <th>name</th>
+      <th>adult_pop</th>
+      <th>asthma_pct</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>West Humber-Clairville</td>
+      <td>23747</td>
+      <td>10.2</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Mount Olive-Silverstone-Jamestown</td>
+      <td>22619</td>
+      <td>9.1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Thistletown-Beaumond Heights</td>
+      <td>6629</td>
+      <td>10.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>Rexdale-Kipling</td>
+      <td>6755</td>
+      <td>11.4</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>Elms-Old Rexdale</td>
+      <td>6588</td>
+      <td>11.6</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p>For the spatial data, we sort it by neighborhood id to check the consistency</p>
 <div class="cell docutils container">
@@ -825,6 +1344,70 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>nbrhd_spat_id</th>
+      <th>geometry</th>
+      <th>Neighbid</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>30</th>
+      <td>West Humber-Clairville (1)</td>
+      <td>001</td>
+      <td>POLYGON ((-79.55236 43.70947, -79.55238 43.709...</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>40</th>
+      <td>Mount Olive-Silverstone-Jamestown (2)</td>
+      <td>002</td>
+      <td>POLYGON ((-79.60338 43.75786, -79.60205 43.758...</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>124</th>
+      <td>Thistletown-Beaumond Heights (3)</td>
+      <td>003</td>
+      <td>POLYGON ((-79.57751 43.73384, -79.57806 43.734...</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>122</th>
+      <td>Rexdale-Kipling (4)</td>
+      <td>004</td>
+      <td>POLYGON ((-79.55512 43.71510, -79.55504 43.714...</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>Elms-Old Rexdale (5)</td>
+      <td>005</td>
+      <td>POLYGON ((-79.55512 43.71510, -79.55569 43.716...</td>
+      <td>5</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -833,6 +1416,88 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name_x</th>
+      <th>nbrhd_spat_id</th>
+      <th>geometry</th>
+      <th>Neighbid</th>
+      <th>name_y</th>
+      <th>adult_pop</th>
+      <th>asthma_pct</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Casa Loma (96)</td>
+      <td>096</td>
+      <td>POLYGON ((-79.41469 43.67391, -79.41485 43.674...</td>
+      <td>96</td>
+      <td>Casa Loma</td>
+      <td>6640</td>
+      <td>10.1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Annex (95)</td>
+      <td>095</td>
+      <td>POLYGON ((-79.39414 43.66872, -79.39588 43.668...</td>
+      <td>95</td>
+      <td>Annex</td>
+      <td>20869</td>
+      <td>9.5</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Caledonia-Fairbank (109)</td>
+      <td>109</td>
+      <td>POLYGON ((-79.46021 43.68156, -79.46044 43.681...</td>
+      <td>109</td>
+      <td>Caledonia-Fairbank</td>
+      <td>6615</td>
+      <td>11.3</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Woodbine Corridor (64)</td>
+      <td>064</td>
+      <td>POLYGON ((-79.31485 43.66674, -79.31660 43.666...</td>
+      <td>64</td>
+      <td>Woodbine Corridor</td>
+      <td>8346</td>
+      <td>13.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Lawrence Park South (103)</td>
+      <td>103</td>
+      <td>POLYGON ((-79.41096 43.70408, -79.41165 43.703...</td>
+      <td>103</td>
+      <td>Lawrence Park South</td>
+      <td>9709</td>
+      <td>10.7</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 </section>
 <section id="map-the-attribute-data-asthma">
@@ -851,6 +1516,7 @@ document.write(`
 <span class="c1"># This code sets the stage - it says how many images - by rows/columns</span>
 <span class="c1"># We can also set other figure attributes in here, like figure size using figsize</span>
 
+<span class="c1">#import matplotlib.pyplot as plt</span>
 <span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span>
 
 <span class="c1"># Then plot the data with certain arguements:</span>
@@ -862,6 +1528,12 @@ document.write(`
                                <span class="s1">&#39;title_fontsize&#39;</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span><span class="s1">&#39;fontsize&#39;</span><span class="p">:</span> <span class="mi">12</span><span class="p">})</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+</pre></div>
+</div>
+<img alt="../../../_images/937fcc55d551b8999d7b4dfcb267aa26eca65a608967b1defc82d9da2c481682.png" src="../../../_images/937fcc55d551b8999d7b4dfcb267aa26eca65a608967b1defc82d9da2c481682.png" />
 </div>
 </div>
 <p>Make a figure with two maps side by side…</p>
@@ -879,6 +1551,12 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+</pre></div>
+</div>
+<img alt="../../../_images/bc204ce5d8c37e9351668aaee0c6e8beece6f12642d8c491011042d73ad51e56.png" src="../../../_images/bc204ce5d8c37e9351668aaee0c6e8beece6f12642d8c491011042d73ad51e56.png" />
+</div>
 </div>
 </section>
 <section id="pop-quiz">
@@ -892,50 +1570,68 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 3 maps in 1 row</span>
 
-<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(,</span> <span class="p">,</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span>
 
-<span class="n">nbrhd_simple</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="p">)</span>
-<span class="n">nbrhd_simple</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="p">)</span>
-<span class="n">nbrhd_simple</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="p">)</span>
+<span class="n">nbrhd_simple</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">nbrhd_simple</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">nbrhd_simple</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+</pre></div>
+</div>
+<img alt="../../../_images/abda9ae5877dfbedbb6182ae8bcb9f45e046cf544b83179d107acd0558594fac.png" src="../../../_images/abda9ae5877dfbedbb6182ae8bcb9f45e046cf544b83179d107acd0558594fac.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 3 maps in 1 column</span>
 
-<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(,</span> <span class="p">,</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span>
 
-<span class="n">nbrhd_simple</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="p">)</span>
-<span class="n">nbrhd_simple</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="p">)</span>
-<span class="n">nbrhd_simple</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="p">)</span>
+<span class="n">nbrhd_simple</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">nbrhd_simple</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">nbrhd_simple</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+</pre></div>
+</div>
+<img alt="../../../_images/3f1d230d7c3cbc38756647d1a9a5a674f56d21b2f9ca4133b7dc4ed0d8e07939.png" src="../../../_images/3f1d230d7c3cbc38756647d1a9a5a674f56d21b2f9ca4133b7dc4ed0d8e07939.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 6 maps in 3 rows and 2 columns</span>
 
-<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(,</span> <span class="p">,</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span>
 
-<span class="n">nbrhd_simple</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="p">)</span>
-<span class="n">nbrhd_simple</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="p">)</span>
-<span class="n">nbrhd_simple</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="p">)</span>
-<span class="n">nbrhd_simple</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="p">)</span>
-<span class="n">nbrhd_simple</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="p">)</span>
-<span class="n">nbrhd_simple</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="p">)</span>
+<span class="n">nbrhd_simple</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">nbrhd_simple</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">nbrhd_simple</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">nbrhd_simple</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">nbrhd_simple</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">nbrhd_simple</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+</pre></div>
+</div>
+<img alt="../../../_images/004e70f6cbf4364638ab56e3ac0acc090e17ff2038d9ab84592a9a24f455420e.png" src="../../../_images/004e70f6cbf4364638ab56e3ac0acc090e17ff2038d9ab84592a9a24f455420e.png" />
 </div>
 </div>
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="more-on-cartography">
 <h1>More on Cartography<a class="headerlink" href="#more-on-cartography" title="Link to this heading">#</a></h1>
-<section id="to-this-point-we-have-used-quantiles-to-classify-values-in-maps">
-<h2>To this point we have used quantiles to classify values in maps.<a class="headerlink" href="#to-this-point-we-have-used-quantiles-to-classify-values-in-maps" title="Link to this heading">#</a></h2>
+<section id="to-this-point-we-have-used-quantiles-to-classify-continous-values-in-maps">
+<h2>To this point we have used quantiles to classify continous values in maps.<a class="headerlink" href="#to-this-point-we-have-used-quantiles-to-classify-continous-values-in-maps" title="Link to this heading">#</a></h2>
 <section id="what-other-common-options-do-we-have-see-the-document-of-geodataframe-plot-and-mapclassify">
 <h3>What other common options do we have?  See the document of <a class="reference external" href="https://geopandas.org/en/stable/docs/reference/api/geopandas.GeoDataFrame.plot.html">GeoDataFrame.plot</a> and <a class="reference external" href="https://github.com/pysal/mapclassify/tree/main">mapclassify</a><a class="headerlink" href="#what-other-common-options-do-we-have-see-the-document-of-geodataframe-plot-and-mapclassify" title="Link to this heading">#</a></h3>
 <ol class="arabic simple">
@@ -956,6 +1652,12 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nbrhd_simple</span><span class="o">.</span><span class="n">asthma_pct</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+</pre></div>
+</div>
+<img alt="../../../_images/abf76421b548f121ac6f5f6d7c6dc8105a3820fd3e5799fc04f4846162151b93.png" src="../../../_images/abf76421b548f121ac6f5f6d7c6dc8105a3820fd3e5799fc04f4846162151b93.png" />
 </div>
 </div>
 <p>Close to normal distribution, which means that the equal intervals should be fine.</p>
@@ -986,10 +1688,13 @@ document.write(`
 <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Equal Intervals&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
 <span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Natural Breaks&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
 
-<span class="c1"># current_fig = plt.gcf() #get current figure aka gcf</span>
-<span class="c1"># current_fig.savefig(&#39;asthma_three_class.png&#39;,dpi=100) #export maps as an image file!</span>
+<span class="n">current_fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span> <span class="c1">#get current figure aka gcf</span>
+<span class="n">current_fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;asthma_three_class.png&#39;</span><span class="p">,</span><span class="n">dpi</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span> <span class="c1">#export maps as an image file!</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/f576c9d6158b9f7b22d0967363206b1a67d5c265a3eee08b7eaf2b5f1f9b2781.png" src="../../../_images/f576c9d6158b9f7b22d0967363206b1a67d5c265a3eee08b7eaf2b5f1f9b2781.png" />
 </div>
 </div>
 <p>Another way to show the figure: save it and import it to show in the presentation!
@@ -1006,6 +1711,21 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#check current crs: WGS 84 (EPSG:4326)</span>
 <span class="n">nbrhd_simple</span><span class="o">.</span><span class="n">crs</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Geographic 2D CRS: EPSG:4326&gt;
+Name: WGS 84
+Axis Info [ellipsoidal]:
+- Lat[north]: Geodetic latitude (degree)
+- Lon[east]: Geodetic longitude (degree)
+Area of Use:
+- name: World.
+- bounds: (-180.0, -90.0, 180.0, 90.0)
+Datum: World Geodetic System 1984 ensemble
+- Ellipsoid: WGS 84
+- Prime Meridian: Greenwich
 </pre></div>
 </div>
 </div>
@@ -1035,6 +1755,12 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Polar&#39;)
+</pre></div>
+</div>
+<img alt="../../../_images/60f3fd6f89fe4afaeaeaa0aa7dfa40f34904e4ac33b7c44fb382c6bcbc42c49a.png" src="../../../_images/60f3fd6f89fe4afaeaeaa0aa7dfa40f34904e4ac33b7c44fb382c6bcbc42c49a.png" />
+</div>
 </div>
 <p>Note: The coordinate reference system will change how the geometry is plotted in a 2D map.</p>
 </section>
@@ -1053,6 +1779,9 @@ document.write(`
 <span class="n">cx</span><span class="o">.</span><span class="n">add_basemap</span><span class="p">(</span><span class="n">axes</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/e20ddc6cf540f9a55e06cb6b0f0e17374ba7d163614612722edfab586f653980.png" src="../../../_images/e20ddc6cf540f9a55e06cb6b0f0e17374ba7d163614612722edfab586f653980.png" />
 </div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">contextily</span></code> pacakage also provides different map source.</p>
@@ -1080,9 +1809,12 @@ document.write(`
                   <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
 
 <span class="n">cx</span><span class="o">.</span><span class="n">add_basemap</span><span class="p">(</span><span class="n">axes</span><span class="p">,</span>
-              <span class="n">source</span><span class="o">=</span><span class="n">cx</span><span class="o">.</span><span class="n">providers</span><span class="o">.</span><span class="n">CartoDB</span><span class="o">.</span><span class="n">Voyager</span><span class="p">)</span>
+              <span class="n">source</span><span class="o">=</span><span class="n">cx</span><span class="o">.</span><span class="n">providers</span><span class="o">.</span><span class="n">CartoDB</span><span class="o">.</span><span class="n">DarkMatter</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/a26622ca3ea058267d28cb509500b51b04f51e69e9499545cf8a253c3edb12e9.png" src="../../../_images/a26622ca3ea058267d28cb509500b51b04f51e69e9499545cf8a253c3edb12e9.png" />
 </div>
 </div>
 </section>
@@ -1102,10 +1834,201 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Neighbourhood id</th>
+      <th>Neighbourhood Name</th>
+      <th>Total Population</th>
+      <th>% 19 and under</th>
+      <th>% 65 and over</th>
+      <th>% Living alone</th>
+      <th>% Aged 65+ living alone</th>
+      <th>% Lone parent families §</th>
+      <th>% 1 year mobility in population</th>
+      <th>Median household income before-tax $</th>
+      <th>...</th>
+      <th>% Less than high school education **</th>
+      <th>% With a University degree **</th>
+      <th>% No knowledge of English/French</th>
+      <th>% Recent immigrants-within 5 years</th>
+      <th>% Recent immigrants-within 10 years</th>
+      <th>% Immigrants</th>
+      <th>% Visible minority</th>
+      <th>Top 3 Home Languages for non-English speaking households, #1</th>
+      <th>Top 3 Home Languages for non-English speaking households, #2</th>
+      <th>Top 3 Home Languages for non-English speaking households, #3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>West Humber-Clairville</td>
+      <td>32252</td>
+      <td>26.8</td>
+      <td>11.3</td>
+      <td>3.7</td>
+      <td>11.7</td>
+      <td>26.3</td>
+      <td>11.6</td>
+      <td>63413</td>
+      <td>...</td>
+      <td>18.4</td>
+      <td>22.9</td>
+      <td>5.4</td>
+      <td>12.2</td>
+      <td>22.1</td>
+      <td>60.0</td>
+      <td>77.9</td>
+      <td>Panjabi (Punjabi)</td>
+      <td>Gujarati</td>
+      <td>Spanish</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Mount Olive-Silverstone-Jamestown</td>
+      <td>32127</td>
+      <td>32.2</td>
+      <td>8.1</td>
+      <td>4.1</td>
+      <td>15.4</td>
+      <td>31.5</td>
+      <td>15.7</td>
+      <td>48146</td>
+      <td>...</td>
+      <td>20.1</td>
+      <td>23.6</td>
+      <td>7.6</td>
+      <td>22.2</td>
+      <td>35.1</td>
+      <td>67.1</td>
+      <td>85.3</td>
+      <td>Panjabi (Punjabi)</td>
+      <td>Gujarati</td>
+      <td>Arabic</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Thistletown-Beaumond Heights</td>
+      <td>9928</td>
+      <td>25.3</td>
+      <td>16.7</td>
+      <td>5.4</td>
+      <td>17.5</td>
+      <td>30.1</td>
+      <td>10.9</td>
+      <td>55032</td>
+      <td>...</td>
+      <td>16.7</td>
+      <td>20.7</td>
+      <td>5.0</td>
+      <td>9.7</td>
+      <td>19.3</td>
+      <td>55.9</td>
+      <td>53.8</td>
+      <td>Panjabi (Punjabi)</td>
+      <td>Italian</td>
+      <td>Spanish</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>Rexdale-Kipling</td>
+      <td>10725</td>
+      <td>23.6</td>
+      <td>18.3</td>
+      <td>10.2</td>
+      <td>28.8</td>
+      <td>33.3</td>
+      <td>13.2</td>
+      <td>52428</td>
+      <td>...</td>
+      <td>15.3</td>
+      <td>18.8</td>
+      <td>3.0</td>
+      <td>8.3</td>
+      <td>14.0</td>
+      <td>47.2</td>
+      <td>41.8</td>
+      <td>Spanish</td>
+      <td>Panjabi (Punjabi)</td>
+      <td>Croatian</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>Elms-Old Rexdale</td>
+      <td>9437</td>
+      <td>29.9</td>
+      <td>10.5</td>
+      <td>5.8</td>
+      <td>13.0</td>
+      <td>39.1</td>
+      <td>9.7</td>
+      <td>53779</td>
+      <td>...</td>
+      <td>15.2</td>
+      <td>18.8</td>
+      <td>3.6</td>
+      <td>9.8</td>
+      <td>18.2</td>
+      <td>53.8</td>
+      <td>60.5</td>
+      <td>Spanish</td>
+      <td>Italian</td>
+      <td>Urdu</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 28 columns</p>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">socdem_neighb</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;Neighbourhood id&#39;, &#39;Neighbourhood Name&#39;, &#39;Total Population&#39;,
+       &#39;% 19 and under&#39;, &#39;% 65 and over&#39;, &#39;% Living alone&#39;,
+       &#39;% Aged 65+ living alone&#39;, &#39;% Lone parent families §&#39;,
+       &#39;% 1 year mobility in population&#39;,
+       &#39;Median household income before-tax $&#39;,
+       &#39;Median household income after-tax $ ‡&#39;,
+       &#39;% Families-Incidence of low income before-tax&#39;,
+       &#39;% Families-Incidence of low income after-tax ‡&#39;,
+       &#39;% Individuals-Incidence of low income before-tax&#39;,
+       &#39;% Individuals-Incidence of low income after-tax ‡&#39;,
+       &#39;% Rented Dwellings&#39;, &#39;% Unemployment rate *&#39;,
+       &#39;% Not in labour force *&#39;, &#39;% Less than high school education **&#39;,
+       &#39;% With a University degree **&#39;, &#39;% No knowledge of English/French&#39;,
+       &#39;% Recent immigrants-within 5 years&#39;,
+       &#39;% Recent immigrants-within 10 years&#39;, &#39;% Immigrants&#39;,
+       &#39;% Visible minority&#39;,
+       &#39;Top 3 Home Languages for non-English speaking households, #1&#39;,
+       &#39;Top 3 Home Languages for non-English speaking households, #2&#39;,
+       &#39;Top 3 Home Languages for non-English speaking households, #3&#39;],
+      dtype=&#39;object&#39;)
 </pre></div>
 </div>
 </div>
@@ -1125,6 +2048,14 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Neighbourhood id&#39;: &#39;Neighbid&#39;,
+ &#39;Neighbourhood Name&#39;: &#39;name&#39;,
+ &#39;Median household income after-tax $ ‡&#39;: &#39;median_income&#39;,
+ &#39;% Recent immigrants-within 5 years&#39;: &#39;immigration5&#39;}
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1136,6 +2067,70 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Neighbid</th>
+      <th>name</th>
+      <th>median_income</th>
+      <th>immigration5</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>West Humber-Clairville</td>
+      <td>56220</td>
+      <td>12.2</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Mount Olive-Silverstone-Jamestown</td>
+      <td>43975</td>
+      <td>22.2</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Thistletown-Beaumond Heights</td>
+      <td>49800</td>
+      <td>9.7</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>Rexdale-Kipling</td>
+      <td>46033</td>
+      <td>8.3</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>Elms-Old Rexdale</td>
+      <td>48055</td>
+      <td>9.8</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 </section>
 <section id="merge-dataset">
@@ -1149,6 +2144,106 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name_x</th>
+      <th>nbrhd_spat_id</th>
+      <th>geometry</th>
+      <th>Neighbid</th>
+      <th>name_y</th>
+      <th>adult_pop</th>
+      <th>asthma_pct</th>
+      <th>name</th>
+      <th>median_income</th>
+      <th>immigration5</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Casa Loma (96)</td>
+      <td>096</td>
+      <td>POLYGON ((-8840403.206 5415116.967, -8840420.5...</td>
+      <td>96</td>
+      <td>Casa Loma</td>
+      <td>6640</td>
+      <td>10.1</td>
+      <td>Casa Loma</td>
+      <td>59151</td>
+      <td>4.9</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Annex (95)</td>
+      <td>095</td>
+      <td>POLYGON ((-8838115.394 5414318.191, -8838308.4...</td>
+      <td>95</td>
+      <td>Annex</td>
+      <td>20869</td>
+      <td>9.5</td>
+      <td>Annex</td>
+      <td>46012</td>
+      <td>4.7</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Caledonia-Fairbank (109)</td>
+      <td>109</td>
+      <td>POLYGON ((-8845470.121 5416294.143, -8845495.7...</td>
+      <td>109</td>
+      <td>Caledonia-Fairbank</td>
+      <td>6615</td>
+      <td>11.3</td>
+      <td>Caledonia-Fairbank</td>
+      <td>46712</td>
+      <td>7.6</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Woodbine Corridor (64)</td>
+      <td>064</td>
+      <td>POLYGON ((-8829288.812 5414013.407, -8829483.7...</td>
+      <td>64</td>
+      <td>Woodbine Corridor</td>
+      <td>8346</td>
+      <td>13.0</td>
+      <td>Woodbine Corridor</td>
+      <td>49287</td>
+      <td>4.5</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Lawrence Park South (103)</td>
+      <td>103</td>
+      <td>POLYGON ((-8839987.390 5419761.937, -8840063.9...</td>
+      <td>103</td>
+      <td>Lawrence Park South</td>
+      <td>9709</td>
+      <td>10.7</td>
+      <td>Lawrence Park South</td>
+      <td>99440</td>
+      <td>2.5</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 </section>
 <section id="conduct-linear-regression">
@@ -1163,6 +2258,18 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="simpletable">
+<tr>
+        <td></td>          <th>coef</th>     <th>std err</th>      <th>t</th>      <th>P>|t|</th>  <th>[0.025</th>    <th>0.975]</th>  
+</tr>
+<tr>
+  <th>Intercept</th>    <td>   11.8266</td> <td>    0.218</td> <td>   54.328</td> <td> 0.000</td> <td>   11.396</td> <td>   12.257</td>
+</tr>
+<tr>
+  <th>immigration5</th> <td>   -0.1597</td> <td>    0.019</td> <td>   -8.475</td> <td> 0.000</td> <td>   -0.197</td> <td>   -0.122</td>
+</tr>
+</table></div></div>
 </div>
 </section>
 <section id="visualize-the-results">
@@ -1224,6 +2331,9 @@ document.write(`
 <span class="n">current_fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;results.png&#39;</span><span class="p">,</span><span class="n">dpi</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span> <span class="c1">#export maps as an image file!</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/3f46c5a3a446c5afa08cc749a0eeabb17ea38bba4497e588a334ad1a9a1ef4e1.png" src="../../../_images/3f46c5a3a446c5afa08cc749a0eeabb17ea38bba4497e588a334ad1a9a1ef4e1.png" />
 </div>
 </div>
 <p><img alt="results" src="../../../_images/results.png" /></p>
@@ -1386,7 +2496,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#more-on-cartography">More on Cartography</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#to-this-point-we-have-used-quantiles-to-classify-values-in-maps">To this point we have used quantiles to classify values in maps.</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#to-this-point-we-have-used-quantiles-to-classify-continous-values-in-maps">To this point we have used quantiles to classify continous values in maps.</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-other-common-options-do-we-have-see-the-document-of-geodataframe-plot-and-mapclassify">What other common options do we have?  See the document of GeoDataFrame.plot and mapclassify</a></li>
 </ul>
 </li>
