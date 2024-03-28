@@ -508,8 +508,9 @@ document.write(`
 <section id="conference-slides">
 <h3>Conference Slides<a class="headerlink" href="#conference-slides" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>You should produce your conference slides using the Jupyter notebook Slideshow Extension RISE which is available on the <a class="reference external" href="https://jupyter.utoronto.ca">UofT Jupyterhub</a>. The template of a Jupyter notebook document to produce the slides for your presentation is <a class="reference internal" href="extras/GGR274DSconfslides.html"><span class="std std-doc">here</span></a>.  You will be allowed to present <strong>five</strong> content slides (i.e., does not include slides to break up sections described below).</p></li>
-<li><p>Your presentation slides should include reproducible Python output (i.e., graphs, tables should be produced by Python code but not not hard-coded or inserted as an image), but not Python code unless it’s directly related to one of the sections below.  See the <a class="reference internal" href="extras/GGR274DSconfslides.html"><span class="std std-doc">template</span></a> and <a class="reference internal" href="extras/Tipsandtricksforslides.html"><span class="std std-doc">tips</span></a> for an example of how to write code chunks to do this.</p></li>
+<li><p>You should produce your conference slides using the Jupyter notebook Slideshow Extension RISE which is available on the <a class="reference external" href="https://jupyter.utoronto.ca">UofT Jupyterhub</a>. The template of a Jupyter notebook document to produce the slides for your presentation is <a class="reference internal" href="extras/GGR274DSconfslides.html"><span class="std std-doc">here</span></a>.</p></li>
+<li><p>You will be allowed to present <strong>five</strong> content slides. The five slides do not include title page and do not include slides to break up sections described below.</p></li>
+<li><p>Your presentation slides should include reproducible Python output (i.e., graphs, tables should be produced by Python code but not not hard-coded or inserted as an image), but not Python code unless it’s directly related to one of the sections below.  See the <a class="reference internal" href="extras/GGR274DSconfslides.html"><span class="std std-doc">template</span></a> and <a class="reference internal" href="extras/Tipsandtricksforslides.html"><span class="std std-doc">tips</span></a> for an example of how to write code chunks to do this. Simply speaking, you may want to use <code class="docutils literal notranslate"><span class="pre">skip</span></code> to skip python code cell and <code class="docutils literal notranslate"><span class="pre">fragement</span></code> to show multiple cells in one slide.</p></li>
 <li><p>Your title slide must include your name, tutorial section (e.g., TUTXXXX), and the link to your presentation video.</p></li>
 <li><p>Your slides should include the following sections:</p>
 <ul>
@@ -675,6 +676,7 @@ This link should look something like</p>
 <ul class="simple">
 <li><p>You will submit the Jupyter notebook that was used to produce your conference slides.</p></li>
 <li><p>Your TA will attempt to reproduce your conference slides using the Jupyter notebook (.ipynb) and data files you submit.</p></li>
+<li><p>In order to reproduce notebook, you may want to use relative path to import data files in your notebook. A example can be found in <a class="reference internal" href="../../weekly-materials/week10/lab/Lab_10.html"><span class="std std-doc">lab 10 notebook</span></a> (Or even the code here!)</p></li>
 <li><p>If your TA cannot run the .ipynb file you submit to reproduce your conference slide content then you will receive 0; if the TA has to make minor changes to get it to run then you will receive 1; and if it runs with no changes then you will receive 2.</p></li>
 </ul>
 </section>
