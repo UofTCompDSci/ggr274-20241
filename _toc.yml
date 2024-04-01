@@ -128,8 +128,8 @@ parts:
       title: Lab 07 Solutions
     - file: weekly-materials/week07/homework/Homework_7.ipynb
       title: Homework 07 Notebook
-    # - file: weekly-materials/week07/homework/marking/Homework_7_solution.ipynb
-    #   title: Homework 07 Solutions
+    - file: weekly-materials/week07/homework/marking/Homework_7_solution.ipynb
+      title: Homework 07 Solutions
   
   - caption: Week 8
     chapters:
@@ -137,10 +137,12 @@ parts:
       title: Prof. Moon's Notebook
     - file: weekly-materials/week08/lab/Lab_8.ipynb
       title: Lab 08 Notebook
-    # - file: weekly-materials/week08/lab/marking/Lab_8_solution.ipynb
-    #   title: Lab 08 Solution
+    - file: weekly-materials/week08/lab/marking/Lab_8_solution.ipynb
+      title: Lab 08 Solution
     - file: weekly-materials/week08/homework/Homework_8.ipynb
       title: Homework 08 Notebook
+    - file: weekly-materials/week08/homework/marking/Homework_8_solution.ipynb
+      title: Homework 08 Solutions
 
   - caption: Week 9
     chapters:
@@ -161,8 +163,8 @@ parts:
       title: Lab 10 Notebook
     - file: weekly-materials/week10/homework/Homework_10.ipynb
       title: Homework 10 Notebook
-    # - file: weekly-materials/week10/homework/marking/Homework_10_solution.ipynb.ipynb
-    #   title: Homework 10 Solutions
+    - file: weekly-materials/week10/homework/marking/Homework_10_solution.ipynb
+      title: Homework 10 Solutions
 
   - caption: Week 11
     chapters:
@@ -172,7 +174,7 @@ parts:
       title: Lab 11 Notebook
     - file: weekly-materials/week11/homework/Homework_11.ipynb
       title: Homework 11 Notebook
-    # - file: weekly-materials/week11/homework/marking/Homework_11_solution.ipynb.ipynb
+    # - file: weekly-materials/week11/homework/marking/Homework_11_solution.ipynb
     #   title: Homework 11 Solutions
 
   - caption: Week 12
