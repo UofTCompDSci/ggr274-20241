@@ -1,0 +1,973 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>GGR274 Lab 8: Project Proposal and Comparing Two-samples &#8212; Computation and Data Science for Social Sciences</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'weekly-materials/week08/lab/marking/Lab_8_solution';</script>
+    <link rel="icon" href="../../../../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="GG274 Homework 8: Hypothesis Testing" href="../../homework/Homework_8.html" />
+    <link rel="prev" title="GGR274 Lab 8: Project Proposal and Comparing Two-samples" href="../Lab_8.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../../jupyter-book/index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Computation and Data Science for Social Sciences</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../../jupyter-book/index.html">
+                    👋 Course Website for GGR274H1-S Winter 2024
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Quick Links</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../../syllabus/ggr274_syllabus.html">Course Syllabus</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://q.utoronto.ca/courses/338580/announcements">Announcements</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://piazza.com/utoronto.ca/winter2024/ggr274h1">Piazza</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://forms.office.com/Pages/ResponsePage.aspx?id=JsKqeAMvTUuQN7RtVsVSEF-wqptfr85NieT8UyliaxxUOUtMSVFUQkFTNVdRTlVJNkZFQU84NldYUi4u">Course Feedback Form</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Resources</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../../guides/jupyterhub_guide.html">JupyterHub Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../guides/markus_guide.html">MarkUs Guide</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 1</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://q.utoronto.ca/courses/338580/files?preview=29750629">Prof. Li's Slides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week01/lecture/Class1_GGR274_MM.html">Prof. Moon's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week01/lecture/Class1_GGR274_IM.html">Prof. Musabirov's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week01/lab/Lab_1.html">Lab 01 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week01/lab/Lab_1_solutions.html">Lab 01 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week01/homework/Homework_1.html">Homework 01 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week01/homework/Homework_1_solution.html">Homework 01 Solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 2</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../week02/lecture/Class2_GGR274_DL_IM.html">Prof. Musabirov's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week02/lab/Lab_2.html">Lab 02 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week02/lab/Lab_2_solutions.html">Lab 02 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week02/homework/Homework_2.html">Homework 02 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week02/homework/Homework_2_solution.html">Homework 02 Solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 3</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../week03/lecture/Class3_GGR274_DL_IM.html">Prof. Musabirov's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week03/lab/Lab_3.html">Lab 03 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week03/lab/Lab_3_solutions.html">Lab 03 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week03/homework/Homework_3.html">Homework 03 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week03/homework/Homework_3_solution.html">Homework 03 Solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 4</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://q.utoronto.ca/courses/338580/files?preview=30071956">Prof. Li's Slides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week04/lecture/Class4_GGR274_MM.html">Prof. Moon's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week04/lab/Lab_4.html">Lab 04 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week04/lab/Lab_4_solutions.html">Lab 04 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week04/homework/Homework_4.html">Homework 04 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week04/homework/marking/Homework_4_solution.html">Homework 04 Solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 5</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../week05/lecture/Class5_GGR274_MM.html">Prof. Moon's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week05/lab/Lab_5.html">Lab 05 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week05/lab/Lab_5_solutions.html">Lab 05 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week05/homework/Homework_5.html">Homework 05 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week05/homework/marking/Homework_5_solution.html">Homework 05 Solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Practice Midterm</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../../practice/sample_midterm/GGR274_Midterm.html">2022 Midterm Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../practice/review_w1-3.html">Review of frequent errors and extra examples for weeks 1-3</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Midterm</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../../tests/midterm/Midterm.html">Midterm Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../tests/midterm-makeup/Midterm_makeup.html">Midterm (makeup) Notebook</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Course Project</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../../project/proposal/GGR274_Project_Proposal.html">Project Proposal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../project/presentation/GGR274_Final_Project_Instruction.html">Final Project Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../project/presentation/extras/GGR274DSconfslides.html">Final Project Presentation Slides Template</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../project/presentation/extras/Tipsandtricksforslides.html">Additional Tips and Tricks for Creating Slides in a Jupyter Notebook</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 7</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://q.utoronto.ca/courses/338580/files?preview=30627394">Prof. Li's Slides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week07/lecture/Class7_GGR274_MM.html">Prof. Moon's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week07/lab/Lab_7.html">Lab 07 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week07/lab/Lab_7_solutions.html">Lab 07 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week07/homework/Homework_7.html">Homework 07 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week07/homework/marking/Homework_7_solution.html">Homework 07 Solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 8</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../lecture/Class8_GGR274_MM.html">Prof. Moon's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Lab_8.html">Lab 08 Notebook</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lab 08 Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../homework/Homework_8.html">Homework 08 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../homework/marking/Homework_8_solution.html">Homework 08 Solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 9</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../week09/lecture/Class9_GGR274_CL.html">Class 9</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../../../week09/lab/Lab_9.html">Lab 09 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week09/homework/Homework_9.html">Homework 09 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week09/homework/marking/Homework_9_solution.html">Homework 09 Solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 10</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../week10/lecture/Class10_GGR274_CL.html">Class 10</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../../../week10/lab/Lab_10.html">Lab 10 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week10/homework/Homework_10.html">Homework 10 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week10/homework/marking/Homework_10_solution.html">Homework 10 Solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 11</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../week11/lecture/Class11_GGR274_CL.html">Class 11</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../../../week11/lab/Lab_11.html">Lab 11 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week11/homework/Homework_11.html">Homework 11 Notebook</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 12</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../week12/lecture/Class12_GGR274_CL.html">Class 12</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../../../week12/lecture/Exercise/Cluster_analysis_exercise.html">Cluster Exercise</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://jupyter.utoronto.ca/hub/user-redirect/git-pull?repo=https%3A//github.com/UofTCompDSci/ggr274-20241&urlpath=tree/ggr274-20241/weekly-materials/week08/lab/marking/Lab_8_solution.ipynb&branch=main" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onJupyterHub"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">JupyterHub</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../../_sources/weekly-materials/week08/lab/marking/Lab_8_solution.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>GGR274 Lab 8: Project Proposal and Comparing Two-samples</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logistics">Logistics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#piloting-markus-jupyterhub-extension-optional">Piloting MarkUs JupyterHub Extension (optional)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lab-instructions-and-learning-objectives">Lab Instructions and Learning Objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-question-will-you-answer-in-the-final-project">What Question will you answer in the final project?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-simulation-of-a-null-hypothesis">Create a simulation of a null hypothesis</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gender-bias-in-promotion">Gender Bias in Promotion</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-they-found">What they found</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-data">The data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1">Task 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-2-simulate-the-null-hypothesis">Task 2 - Simulate the null hypothesis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-3-iterate-task-2">Task 3 - Iterate Task 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-4-plot-the-null-hypothesis-distribution">Task 4 - Plot the null hypothesis distribution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-5-evidence">Task 5 - Evidence</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="ggr274-lab-8-project-proposal-and-comparing-two-samples">
+<h1>GGR274 Lab 8: Project Proposal and Comparing Two-samples<a class="headerlink" href="#ggr274-lab-8-project-proposal-and-comparing-two-samples" title="Link to this heading">#</a></h1>
+<section id="logistics">
+<h2>Logistics<a class="headerlink" href="#logistics" title="Link to this heading">#</a></h2>
+<p>Like previous weeks, our lab grade will be based on attendance and submission of a few small tasks to MarkUs during the lab session (or by 23:59 on Thursday).</p>
+<p>Complete the tasks in this Jupyter notebook and submit your completed file to <a class="reference external" href="https://markus-ds.teach.cs.toronto.edu">MarkUs</a>.
+Here are the instructions for submitting to MarkUs (same as last week):</p>
+<ol class="arabic simple">
+<li><p>Download this file (<code class="docutils literal notranslate"><span class="pre">Lab_8.ipynb</span></code>) from JupyterHub. (See <a class="reference internal" href="#../../../guides/jupyterhub_guide.ipynb"><span class="xref myst">our JupyterHub Guide</span></a> for detailed instructions.)</p></li>
+<li><p>Submit this file to MarkUs under the <strong>lab8</strong> assignment. (See <a class="reference internal" href="#../../../guides/markus_guide.ipynb"><span class="xref myst">our MarkUs Guide</span></a> for detailed instructions.)</p></li>
+</ol>
+<p>Note: there’s no autograding set up for this week’s lab, but your TA will be checking that your submitted lab file is complete as part of your “lab attendance” grade.</p>
+<section id="piloting-markus-jupyterhub-extension-optional">
+<h3>Piloting MarkUs JupyterHub Extension (optional)<a class="headerlink" href="#piloting-markus-jupyterhub-extension-optional" title="Link to this heading">#</a></h3>
+<p>We’re piloting a new way to submit files to MarkUs directly from JupyterHub (without needing to download them). This is <strong>optional</strong> so you can still submit your work the usual way, but if you have some time please try it out by following the instructions on the <a class="reference internal" href="#../../../guides/markus_guide.ipynb"><span class="xref myst">MarkUs Guide</span></a>.</p>
+</section>
+</section>
+<section id="lab-instructions-and-learning-objectives">
+<h2>Lab Instructions and Learning Objectives<a class="headerlink" href="#lab-instructions-and-learning-objectives" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Developing part of your project proposal</p></li>
+<li><p>Simulating the null hypothesis distribution for comparing two samples</p></li>
+</ul>
+</section>
+<section id="what-question-will-you-answer-in-the-final-project">
+<h2>What Question will you answer in the final project?<a class="headerlink" href="#what-question-will-you-answer-in-the-final-project" title="Link to this heading">#</a></h2>
+<p>Review the <a class="reference external" href="https://uoftcompdsci.github.io/ggr274-20231/project/presentation/GGR274videopresentation.html#final-project-questions">sample final project questions</a>.</p>
+<p><a class="reference external" href="https://bookdown.org/rdpeng/artofdatascience/chapter-question.html">Chapter 3</a> in <a class="reference external" href="https://bookdown.org/rdpeng/artofdatascience/">The Art of Data Science (Peng, R. and Matsui, E. (2017)</a> discusses characteristics of a good Data Science question and translating a question into a data problem.</p>
+<p>In this part of the tutorial you are going to look at part of the project proposal backwards.</p>
+<p>a) Write a few bullet points describing the conclusions you hope to make or what you hope to learn from the project.</p>
+<p><em>Your answer goes here…</em></p>
+<p>b) What question will the conclusions answer?  Briefly describe the question using a few bullet points.</p>
+<p><em>Answer goes here …</em></p>
+</section>
+<section id="create-a-simulation-of-a-null-hypothesis">
+<h2>Create a simulation of a null hypothesis<a class="headerlink" href="#create-a-simulation-of-a-null-hypothesis" title="Link to this heading">#</a></h2>
+<section id="gender-bias-in-promotion">
+<h3>Gender Bias in Promotion<a class="headerlink" href="#gender-bias-in-promotion" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>1972 study on “sex role stereotypes on personnel decisions”.</p></li>
+<li><p>48 male managers were asked to rate whether several candidates were suitable for promotion.</p></li>
+<li><p>Managers were randomly assigned to review the file of either a male or female candidate.  The files were otherwise identical.</p></li>
+</ul>
+<p>B. Rosen and T.H. Jerdee (1974). Influence of sex role stereotypes on personnel decisions. <em>Journal of Applied Psychology</em> <strong>59</strong>(1), 9-14.</p>
+</section>
+</section>
+<section id="what-they-found">
+<h2>What they found<a class="headerlink" href="#what-they-found" title="Link to this heading">#</a></h2>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Observed results</p></th>
+<th class="head"><p>Male</p></th>
+<th class="head"><p>Female</p></th>
+<th class="head"><p>Total</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Promoted</p></td>
+<td><p>21</p></td>
+<td><p>14</p></td>
+<td><p>35</p></td>
+</tr>
+<tr class="row-odd"><td><p>Not promoted</p></td>
+<td><p>3</p></td>
+<td><p>10</p></td>
+<td><p>13</p></td>
+</tr>
+<tr class="row-even"><td><p>Total</p></td>
+<td><p>24</p></td>
+<td><p>24</p></td>
+<td><p>48</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>21/24 = 87.5% of males were recommended for promotion</p></li>
+<li><p>14/24 = 58.3% of females were recommended for promotion</p></li>
+</ul>
+</section>
+<section id="the-data">
+<h2>The data<a class="headerlink" href="#the-data" title="Link to this heading">#</a></h2>
+<p>Data are in the DataFrame <code class="docutils literal notranslate"><span class="pre">bias</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">sex</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;M&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">24</span> <span class="o">+</span> <span class="p">[</span><span class="s1">&#39;F&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">24</span>
+<span class="n">promoted</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Y&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">21</span> <span class="o">+</span> <span class="p">[</span><span class="s1">&#39;N&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">+</span> <span class="p">[</span><span class="s1">&#39;Y&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">14</span> <span class="o">+</span> <span class="p">[</span><span class="s1">&#39;N&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">10</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;sex&#39;</span><span class="p">:</span> <span class="n">sex</span><span class="p">,</span> <span class="s1">&#39;promoted&#39;</span><span class="p">:</span> <span class="n">promoted</span><span class="p">}</span>
+<span class="n">bias</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="n">bias</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sex</th>
+      <th>promoted</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>M</td>
+      <td>Y</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>M</td>
+      <td>Y</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>M</td>
+      <td>Y</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>M</td>
+      <td>Y</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>M</td>
+      <td>Y</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="task-1">
+<h2>Task 1<a class="headerlink" href="#task-1" title="Link to this heading">#</a></h2>
+<p>a) The code in the cell below computes the proportion of promoted males <code class="docutils literal notranslate"><span class="pre">promoted_males</span></code> and females <code class="docutils literal notranslate"><span class="pre">promoted_females</span></code>. Complete the code below by filling in the <code class="docutils literal notranslate"><span class="pre">...</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Give this cell to students</span>
+<span class="c1"># Fill in the ... below</span>
+
+<span class="n">promoted_males</span> <span class="o">=</span> <span class="p">(</span><span class="n">bias</span><span class="p">[</span><span class="n">bias</span><span class="p">[</span><span class="s1">&#39;sex&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="o">...</span><span class="p">][</span><span class="s1">&#39;promoted&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="o">...</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="n">promoted_females</span> <span class="o">=</span> <span class="p">(</span><span class="n">bias</span><span class="p">[</span><span class="n">bias</span><span class="p">[</span><span class="s1">&#39;sex&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="o">...</span><span class="p">][</span><span class="s1">&#39;promoted&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="o">...</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Solution</span>
+<span class="n">promoted_males</span> <span class="o">=</span> <span class="p">(</span><span class="n">bias</span><span class="p">[</span><span class="n">bias</span><span class="p">[</span><span class="s1">&#39;sex&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">][</span><span class="s1">&#39;promoted&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Y&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="n">promoted_females</span> <span class="o">=</span> <span class="p">(</span><span class="n">bias</span><span class="p">[</span><span class="n">bias</span><span class="p">[</span><span class="s1">&#39;sex&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">][</span><span class="s1">&#39;promoted&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Y&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>b) Use <code class="docutils literal notranslate"><span class="pre">promoted_males</span></code> and <code class="docutils literal notranslate"><span class="pre">promoted_females</span></code> to compute the observed mean difference in promoted Males minus promoted and store the value in <code class="docutils literal notranslate"><span class="pre">observed_diff</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">observed_diff</span> <span class="o">=</span> <span class="n">promoted_males</span> <span class="o">-</span> <span class="n">promoted_females</span>
+
+<span class="n">observed_diff</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.29166666666666663
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="task-2-simulate-the-null-hypothesis">
+<h2>Task 2 - Simulate the null hypothesis<a class="headerlink" href="#task-2-simulate-the-null-hypothesis" title="Link to this heading">#</a></h2>
+<p>a) Randomly shuffle the column <code class="docutils literal notranslate"><span class="pre">sex</span></code> and assign the shuffled column to <code class="docutils literal notranslate"><span class="pre">bias_sex_shuffle</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bias_sex_shuffle</span> <span class="o">=</span> <span class="n">bias</span><span class="p">[</span><span class="s1">&#39;sex&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">frac</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>b) Use the shuffled labels to compute the mean number of males and females promoted.  Use <code class="docutils literal notranslate"><span class="pre">promoted_males_shuffled</span></code> and <code class="docutils literal notranslate"><span class="pre">promoted_females_shuffled</span></code> to calculate the proportions of males and females promoted when <code class="docutils literal notranslate"><span class="pre">sex</span></code> is randomly shuffled.  Store the result in <code class="docutils literal notranslate"><span class="pre">prop_males_shuffled</span></code> and <code class="docutils literal notranslate"><span class="pre">prop_females_shuffled</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">promoted_males_shuffled</span> <span class="o">=</span> <span class="p">(</span><span class="n">bias</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">bias_sex_shuffle</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;promoted&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Y&#39;</span><span class="p">)</span>
+
+<span class="n">promoted_females_shuffled</span> <span class="o">=</span> <span class="p">(</span><span class="n">bias</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">bias_sex_shuffle</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;promoted&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Y&#39;</span><span class="p">)</span>
+
+<span class="c1"># Fill in the ... below</span>
+
+<span class="n">prop_males_shuffled</span> <span class="o">=</span> <span class="o">...</span>
+
+<span class="n">prop_females_shuffled</span> <span class="o">=</span> <span class="o">...</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># answer cell</span>
+
+<span class="n">promoted_males_shuffled</span> <span class="o">=</span> <span class="p">(</span><span class="n">bias</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">bias_sex_shuffle</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;promoted&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Y&#39;</span><span class="p">)</span>
+
+<span class="n">promoted_females_shuffled</span> <span class="o">=</span> <span class="p">(</span><span class="n">bias</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">bias_sex_shuffle</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;promoted&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Y&#39;</span><span class="p">)</span>
+
+<span class="n">prop_males_shuffled</span> <span class="o">=</span> <span class="n">promoted_males_shuffled</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="n">prop_females_shuffled</span> <span class="o">=</span> <span class="n">promoted_females_shuffled</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>c) Calculate the difference between <code class="docutils literal notranslate"><span class="pre">prop_males_shuffled</span></code> and <code class="docutils literal notranslate"><span class="pre">prop_females_shuffled</span></code>.  Store the value in <code class="docutils literal notranslate"><span class="pre">diff_sim</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">diff_sim</span> <span class="o">=</span> <span class="n">prop_males_shuffled</span> <span class="o">-</span> <span class="n">prop_females_shuffled</span>
+
+<span class="n">diff_sim</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-0.20833333333333337
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="task-3-iterate-task-2">
+<h2>Task 3 - Iterate Task 2<a class="headerlink" href="#task-3-iterate-task-2" title="Link to this heading">#</a></h2>
+<p>In this task you will use a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop to iterate Task 2 steps a) - c) 5000 times.  Store the results in a list called <code class="docutils literal notranslate"><span class="pre">sim_results</span></code>.</p>
+<p>To complete this Task, copy and paste your answers from Task 2 a), b), c) into the following code below.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sim_results</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5000</span><span class="p">):</span>
+    <span class="c1"># paste the code from above here</span>
+
+    <span class="c1"># Then, fill in the ... below</span>
+    <span class="n">sim_results</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sim_results</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5000</span><span class="p">):</span>
+    <span class="n">bias_sex_shuffle</span> <span class="o">=</span> <span class="n">bias</span><span class="p">[</span><span class="s1">&#39;sex&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">frac</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+    <span class="n">promoted_males_shuffled</span> <span class="o">=</span> <span class="p">(</span><span class="n">bias</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">bias_sex_shuffle</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;promoted&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Y&#39;</span><span class="p">)</span>
+    <span class="n">promoted_females_shuffled</span> <span class="o">=</span> <span class="p">(</span><span class="n">bias</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">bias_sex_shuffle</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;promoted&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Y&#39;</span><span class="p">)</span>
+    <span class="n">prop_males_shuffled</span> <span class="o">=</span> <span class="n">promoted_males_shuffled</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+    <span class="n">prop_females_shuffled</span> <span class="o">=</span> <span class="n">promoted_females_shuffled</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+    <span class="n">diff_sim</span> <span class="o">=</span> <span class="n">prop_males_shuffled</span> <span class="o">-</span> <span class="n">prop_females_shuffled</span>
+    <span class="n">sim_results</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">diff_sim</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="task-4-plot-the-null-hypothesis-distribution">
+<h2>Task 4 - Plot the null hypothesis distribution<a class="headerlink" href="#task-4-plot-the-null-hypothesis-distribution" title="Link to this heading">#</a></h2>
+<p>Use <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot</span></code> to plot <code class="docutils literal notranslate"><span class="pre">sim_results</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This import is provided for you (do not change it)</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">sim_results</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([  22.,  109.,  375.,  772., 1199., 1209.,  821.,  356.,  115.,
+          22.]),
+ array([-0.45833333, -0.36666667, -0.275     , -0.18333333, -0.09166667,
+         0.        ,  0.09166667,  0.18333333,  0.275     ,  0.36666667,
+         0.45833333]),
+ &lt;BarContainer object of 10 artists&gt;)
+</pre></div>
+</div>
+<img alt="../../../../_images/6fec38d8c7a76dc555713c04f42c7e0c4751f94cb80c664d15742adb4cdd98dc.png" src="../../../../_images/6fec38d8c7a76dc555713c04f42c7e0c4751f94cb80c664d15742adb4cdd98dc.png" />
+</div>
+</div>
+</section>
+<section id="task-5-evidence">
+<h2>Task 5 - Evidence<a class="headerlink" href="#task-5-evidence" title="Link to this heading">#</a></h2>
+<p>Is there evidence that the difference in males versus females promoted was not due to chance?</p>
+<p><em>Your answer goes here…</em></p>
+<p>The p-value of the test is below.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pvalue</span> <span class="o">=</span> <span class="p">((</span><span class="n">sim_results</span> <span class="o">&gt;=</span> <span class="n">observed_diff</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">+</span> <span class="p">(</span><span class="n">sim_results</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">1</span> <span class="o">*</span> <span class="n">observed_diff</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span> <span class="o">/</span> <span class="mi">5000</span>
+
+<span class="n">pvalue</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0318
+</pre></div>
+</div>
+</div>
+</div>
+<p>2.7% of the simulations were more extreme than the observed value of the difference assuming that the labels M, F were randomly shuffled. It’s unlikely that the difference is due to random chance.  This means that this data supports that males were promoted more often than females.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./weekly-materials/week08/lab/marking"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../Lab_8.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">GGR274 Lab 8: Project Proposal and Comparing Two-samples</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../../homework/Homework_8.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">GG274 Homework 8: Hypothesis Testing</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logistics">Logistics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#piloting-markus-jupyterhub-extension-optional">Piloting MarkUs JupyterHub Extension (optional)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lab-instructions-and-learning-objectives">Lab Instructions and Learning Objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-question-will-you-answer-in-the-final-project">What Question will you answer in the final project?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-simulation-of-a-null-hypothesis">Create a simulation of a null hypothesis</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gender-bias-in-promotion">Gender Bias in Promotion</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-they-found">What they found</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-data">The data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1">Task 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-2-simulate-the-null-hypothesis">Task 2 - Simulate the null hypothesis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-3-iterate-task-2">Task 3 - Iterate Task 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-4-plot-the-null-hypothesis-distribution">Task 4 - Plot the null hypothesis distribution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-5-evidence">Task 5 - Evidence</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By GGR274 Instructors
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
