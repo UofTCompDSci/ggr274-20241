@@ -150,8 +150,8 @@ parts:
       title: Lab 09 Notebook
     - file: weekly-materials/week09/homework/Homework_9.ipynb
       title: Homework 09 Notebook
-    # - file: weekly-materials/week09/homework/marking/Homework_9_solution.ipynb.ipynb
-    #   title: Homework 09 Solutions
+    - file: weekly-materials/week09/homework/marking/Homework_9_solution.ipynb
+      title: Homework 09 Solutions
 
   - caption: Week 10
     chapters:
@@ -172,6 +172,16 @@ parts:
       title: Lab 11 Notebook
     - file: weekly-materials/week11/homework/Homework_11.ipynb
       title: Homework 11 Notebook
-    # - file: weekly-materials/week10/homework/marking/Homework_10_solution.ipynb.ipynb
-    #   title: Homework 10 Solutions
+    # - file: weekly-materials/week11/homework/marking/Homework_11_solution.ipynb.ipynb
+    #   title: Homework 11 Solutions
+
+  - caption: Week 12
+    chapters:
+    - file: weekly-materials/week12/lecture/Class12_GGR274_CL.ipynb
+      title: Prof. Li's Notebook
+    - file: weekly-materials/week12/lecture/Exercise/Cluster_analysis_exercise.ipynb
+      title: Cluster Exercise
+    # - file: weekly-materials/week12/lecture/Exercise/Cluster_analysis_solution.ipynb
+    #   title: Cluster Exercise Solutions
+
 
