@@ -186,4 +186,9 @@ parts:
     # - file: weekly-materials/week12/lecture/Exercise/Cluster_analysis_solution.ipynb
     #   title: Cluster Exercise Solutions
 
+  - caption: Practice Final
+    chapters:
+    - file: practice/final_exam_2022/ggr_final_answers_2022.ipynb
+      title: 2022 Final Notebook
+
 
