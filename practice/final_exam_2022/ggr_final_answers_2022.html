@@ -1,0 +1,2130 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Instructions &#8212; Computation and Data Science for Social Sciences</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'practice/final_exam_2022/ggr_final_answers_2022';</script>
+    <link rel="icon" href="../../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="Exercise: Run a cluster analysis" href="../../weekly-materials/week12/lecture/Exercise/Cluster_analysis_exercise.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../jupyter-book/index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Computation and Data Science for Social Sciences</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../jupyter-book/index.html">
+                    👋 Course Website for GGR274H1-S Winter 2024
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Quick Links</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../syllabus/ggr274_syllabus.html">Course Syllabus</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://q.utoronto.ca/courses/338580/announcements">Announcements</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://piazza.com/utoronto.ca/winter2024/ggr274h1">Piazza</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://forms.office.com/Pages/ResponsePage.aspx?id=JsKqeAMvTUuQN7RtVsVSEF-wqptfr85NieT8UyliaxxUOUtMSVFUQkFTNVdRTlVJNkZFQU84NldYUi4u">Course Feedback Form</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Resources</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../guides/jupyterhub_guide.html">JupyterHub Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../guides/markus_guide.html">MarkUs Guide</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 1</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://q.utoronto.ca/courses/338580/files?preview=29750629">Prof. Li's Slides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week01/lecture/Class1_GGR274_MM.html">Prof. Moon's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week01/lecture/Class1_GGR274_IM.html">Prof. Musabirov's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week01/lab/Lab_1.html">Lab 01 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week01/lab/Lab_1_solutions.html">Lab 01 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week01/homework/Homework_1.html">Homework 01 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week01/homework/Homework_1_solution.html">Homework 01 Solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 2</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week02/lecture/Class2_GGR274_DL_IM.html">Prof. Musabirov's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week02/lab/Lab_2.html">Lab 02 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week02/lab/Lab_2_solutions.html">Lab 02 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week02/homework/Homework_2.html">Homework 02 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week02/homework/Homework_2_solution.html">Homework 02 Solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 3</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week03/lecture/Class3_GGR274_DL_IM.html">Prof. Musabirov's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week03/lab/Lab_3.html">Lab 03 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week03/lab/Lab_3_solutions.html">Lab 03 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week03/homework/Homework_3.html">Homework 03 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week03/homework/Homework_3_solution.html">Homework 03 Solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 4</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://q.utoronto.ca/courses/338580/files?preview=30071956">Prof. Li's Slides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week04/lecture/Class4_GGR274_MM.html">Prof. Moon's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week04/lab/Lab_4.html">Lab 04 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week04/lab/Lab_4_solutions.html">Lab 04 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week04/homework/Homework_4.html">Homework 04 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week04/homework/marking/Homework_4_solution.html">Homework 04 Solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 5</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week05/lecture/Class5_GGR274_MM.html">Prof. Moon's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week05/lab/Lab_5.html">Lab 05 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week05/lab/Lab_5_solutions.html">Lab 05 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week05/homework/Homework_5.html">Homework 05 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week05/homework/marking/Homework_5_solution.html">Homework 05 Solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Practice Midterm</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../sample_midterm/GGR274_Midterm.html">2022 Midterm Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../review_w1-3.html">Review of frequent errors and extra examples for weeks 1-3</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Midterm</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../tests/midterm/Midterm.html">Midterm Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tests/midterm-makeup/Midterm_makeup.html">Midterm (makeup) Notebook</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Course Project</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../project/proposal/GGR274_Project_Proposal.html">Project Proposal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../project/presentation/GGR274_Final_Project_Instruction.html">Final Project Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../project/presentation/extras/GGR274DSconfslides.html">Final Project Presentation Slides Template</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../project/presentation/extras/Tipsandtricksforslides.html">Additional Tips and Tricks for Creating Slides in a Jupyter Notebook</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 7</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://q.utoronto.ca/courses/338580/files?preview=30627394">Prof. Li's Slides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week07/lecture/Class7_GGR274_MM.html">Prof. Moon's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week07/lab/Lab_7.html">Lab 07 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week07/lab/Lab_7_solutions.html">Lab 07 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week07/homework/Homework_7.html">Homework 07 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week07/homework/marking/Homework_7_solution.html">Homework 07 Solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 8</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week08/lecture/Class8_GGR274_MM.html">Prof. Moon's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week08/lab/Lab_8.html">Lab 08 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week08/lab/marking/Lab_8_solution.html">Lab 08 Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week08/homework/Homework_8.html">Homework 08 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week08/homework/marking/Homework_8_solution.html">Homework 08 Solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 9</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week09/lecture/Class9_GGR274_CL.html">Class 9</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week09/lab/Lab_9.html">Lab 09 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week09/homework/Homework_9.html">Homework 09 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week09/homework/marking/Homework_9_solution.html">Homework 09 Solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 10</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week10/lecture/Class10_GGR274_CL.html">Class 10</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week10/lab/Lab_10.html">Lab 10 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week10/homework/Homework_10.html">Homework 10 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week10/homework/marking/Homework_10_solution.html">Homework 10 Solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 11</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week11/lecture/Class11_GGR274_CL.html">Class 11</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week11/lab/Lab_11.html">Lab 11 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week11/homework/Homework_11.html">Homework 11 Notebook</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 12</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week12/lecture/Class12_GGR274_CL.html">Class 12</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../../weekly-materials/week12/lecture/Exercise/Cluster_analysis_exercise.html">Cluster Exercise</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Practice Final</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2022 Final Notebook</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://jupyter.utoronto.ca/hub/user-redirect/git-pull?repo=https%3A//github.com/UofTCompDSci/ggr274-20241&urlpath=tree/ggr274-20241/practice/final_exam_2022/ggr_final_answers_2022.ipynb&branch=main" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onJupyterHub"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">JupyterHub</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/practice/final_exam_2022/ggr_final_answers_2022.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Instructions</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1">Question 1</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#merging-the-data">Merging the data</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1-5">Question 1.5</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2">Question 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-3">Question 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-4">Question 4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-5">Question 5</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <!--
+
+## LAST (Family) NAME:   _____________________________________
+
+## FIRST (Given) NAME:  ______________________________________
+
+
+## STUDENT NUMBER: _______________________________________
+
+
+## UNIVERSITY OF TORONTO
+## Faculty of Arts & Science
+
+## April 2022 EXAMINATIONS
+
+## GGR274H1S
+## Introductory Computation and Data Science for the Social Sciences
+
+### Duration: 3 hours
+
+### Aids Allowed: 10 8.5x11 inch sheets of notes, with text on both sides allowed
+
+### Exam Reminders:
+
+
+
++	Fill out your name and student number on the top of this page. 
++	Do not begin writing the actual exam until the announcements have ended and the Exam Facilitator has started the exam.
++	As a student, you help create a fair and inclusive writing environment. If you possess an unauthorized aid during an exam, you may be charged with an academic offence.
++	Turn off and place all cell phones, smart watches, electronic devices, and unauthorized study materials in your bag under your desk. If it is left in your pocket, it may be an academic offence.
++	When you are done your exam, raise your hand for someone to come and collect your exam. Do not collect your bag and jacket before your exam is handed in.
++	If you are feeling ill and unable to finish your exam, please bring it to the attention of an Exam Facilitator so it can be recorded before leaving the exam hall.
++	In the event of a fire alarm, do not check your cell phone when escorted outside.
+
+Special Instructions:
+
+
+
+
+Exam Format and Grading Scheme:
+
+
+Students must hand in all examination materials at the end
+--><section class="tex2jax_ignore mathjax_ignore" id="instructions">
+<h1>Instructions<a class="headerlink" href="#instructions" title="Link to this heading">#</a></h1>
+<p>In this exam, we will use information from the Toronto Health Profiles dataset and the Ontario Marginalization Index dataset.</p>
+<p>We have made good use of both of these dataset this term but as a quick recap:</p>
+<ul class="simple">
+<li><p>the Toronto Health Profiles dataset describes the rates of various diseases and health issues at the neighbourhood level across Toronto.</p></li>
+<li><p>the Ontario Marginalization Index dataset provides a number thaat represents the level of social marginalization in each Toronto neighbourhood. Marginialization is defined as a combination of material deprivation, residential instability, dependency, and ‘ethnic concentration’.</p></li>
+</ul>
+<p>While there are a number of diseases in the Toronto Health Profiles dataset, for this exam, we will focus on chronic obstructive pulmonary disease (COPD), which is a long-term lung condition that makes it hard for you to breathe. We will use the variable describing the percent of adults age 35+ who have COPD in each neighbourhood.</p>
+<p>A data scientist wants to answer the following questions by conducting 4 different analyses:</p>
+<ol class="arabic simple">
+<li><p>Do neighbourhoods with higher levels of marginalization have higher precentages of adults with COPD?</p></li>
+<li><p>Is there spatial clustering of COPD in Toronto and if so, where is it?</p></li>
+<li><p>Can we use a linear regression to model how the percent of adults with COPD relates to marginalization and the number of COVID-19 testing sites in a neighbourhood?</p></li>
+</ol>
+<section id="question-1">
+<h2>Question 1<a class="headerlink" href="#question-1" title="Link to this heading">#</a></h2>
+<p>Do neighbourhoods with higher levels of marginalization have higher precentages of adults with COPD?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">marg_neighb</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s1">&#39;1_marg_neighb_toronto_2006_OnMarg.xls&#39;</span><span class="p">,</span> 
+                            <span class="n">sheet_name</span><span class="o">=</span><span class="s1">&#39;Neighbourhood_Toronto_OnMarg&#39;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">important_columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Neighb id &#39;</span><span class="p">,</span> <span class="s1">&#39;Neighbourhood name &#39;</span><span class="p">,</span> 
+                     <span class="s1">&#39;POPULATION&#39;</span><span class="p">,</span><span class="s1">&#39;ONMARG_COMBINED_Q&#39;</span><span class="p">]</span>
+
+<span class="n">column_names</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Neighb id &#39;</span><span class="p">:</span> <span class="s1">&#39;neighbID&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;Neighbourhood name &#39;</span><span class="p">:</span> <span class="s1">&#39;names&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;POPULATION&#39;</span><span class="p">:</span> <span class="s1">&#39;population&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;ONMARG_COMBINED_Q&#39;</span><span class="p">:</span> <span class="s1">&#39;onMarg&#39;</span><span class="p">}</span>
+
+<span class="n">sub_marg_df</span> <span class="o">=</span> <span class="n">marg_neighb</span><span class="p">[</span><span class="n">important_columns</span><span class="p">]</span>
+<span class="n">renamed_marg_df</span> <span class="o">=</span> <span class="n">sub_marg_df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="n">column_names</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">renamed_marg_df</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+<span class="n">renamed_marg_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(140, 4)
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>neighbID</th>
+      <th>names</th>
+      <th>population</th>
+      <th>onMarg</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>West Humber-Clairville</td>
+      <td>32252</td>
+      <td>2.4</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Mount Olive-Silverstone-Jamestown</td>
+      <td>32127</td>
+      <td>2.4</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Thistletown-Beaumond Heights</td>
+      <td>9928</td>
+      <td>2.8</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>Rexdale-Kipling</td>
+      <td>10725</td>
+      <td>2.8</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>Elms-Old Rexdale</td>
+      <td>9879</td>
+      <td>2.6</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Answer the following questions related to the python code above.</p>
+<p><strong>Q</strong></p>
+<p>What is the full name of the text file that is read into the pandas DataFrame <code class="docutils literal notranslate"><span class="pre">marg_neighb</span></code>?</p>
+<p>ANS: <code class="docutils literal notranslate"><span class="pre">'1_marg_neighb_toronto_2006_OnMarg.xls'</span></code></p>
+<p><strong>Q</strong></p>
+<p>What is the purpose of <code class="docutils literal notranslate"><span class="pre">header=1</span></code>?</p>
+<p>ANS: this tells us where the column header (name) information is.</p>
+<p><strong>Q</strong></p>
+<p>i)</p>
+<p>What will be printed out when the following code is run? (1 mark)</p>
+<p>ANS: list</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">important_columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Neighb id &#39;</span><span class="p">,</span> <span class="s1">&#39;Neighbourhood name &#39;</span><span class="p">,</span> 
+                     <span class="s1">&#39;POPULATION&#39;</span><span class="p">,</span> <span class="s1">&#39;ONMARG_COMBINED_Q&#39;</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">important_columns</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;list&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>ii)</p>
+<p>What will be printed out when the following code is run? (1 mark)</p>
+<p>ANS: dict</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">column_names</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Neighb id &#39;</span><span class="p">:</span> <span class="s1">&#39;neighbID&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;Neighbourhood name &#39;</span><span class="p">:</span> <span class="s1">&#39;names&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;POPULATION&#39;</span><span class="p">:</span> <span class="s1">&#39;population&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;ONMARG_COMBINED_Q&#39;</span><span class="p">:</span> <span class="s1">&#39;onMarg&#39;</span><span class="p">}</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">column_names</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;dict&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Q</strong></p>
+<p>How many rows and columns are in the DataFrame <code class="docutils literal notranslate"><span class="pre">renamed_marg_df</span></code>? (2 marks)</p>
+<p>ANS: 140 rows and 4 columns</p>
+<p><strong>Q</strong></p>
+<p>What is the name of the column specified by <code class="docutils literal notranslate"><span class="pre">renamed_marg_df.iloc[:,</span> <span class="pre">2]</span></code>?  (1 mark)</p>
+<p>ANS: population</p>
+<section id="merging-the-data">
+<h3>Merging the data<a class="headerlink" href="#merging-the-data" title="Link to this heading">#</a></h3>
+<p>Now we will bring in the Toronto Health Profiles data and join it with the Ontario Marg. data:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">copd_full_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s1">&#39;1_ahd_neighb_db_ast_hbp_mhv_copd_2007.xls&#39;</span><span class="p">,</span> 
+                            <span class="n">sheet_name</span><span class="o">=</span><span class="s1">&#39;1_ahd_neighb_copd_2007&#39;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="mi">11</span><span class="p">)</span>
+
+<span class="n">sub_copd_data</span> <span class="o">=</span> <span class="n">copd_full_data</span><span class="p">[</span><span class="n">copd_full_data</span><span class="o">.</span><span class="n">columns</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">11</span><span class="p">]]]</span>                    
+
+<span class="n">column_names_copd</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Unnamed: 0&#39;</span><span class="p">:</span> <span class="s1">&#39;neighbID&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;% With COPD.2&#39;</span><span class="p">:</span> <span class="s1">&#39;percent_copd&#39;</span><span class="p">}</span>
+
+<span class="n">renamed_copd_df</span> <span class="o">=</span> <span class="n">sub_copd_data</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="n">column_names_copd</span><span class="p">)</span>
+
+<span class="n">marg_copd_df</span> <span class="o">=</span> <span class="n">renamed_copd_df</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">renamed_marg_df</span><span class="p">,</span> <span class="n">on</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;neighbID&#39;</span><span class="p">])</span>
+<span class="n">marg_copd_df</span>
+
+<span class="c1">#sub_marg_df = copd_full_data[important_columns]</span>
+<span class="c1">#renamed_marg_df = sub_marg_df.rename(columns = column_names)</span>
+
+<span class="c1">#print(renamed_marg_df.shape)</span>
+
+<span class="c1">#renamed_marg_df.head()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>neighbID</th>
+      <th>percent_copd</th>
+      <th>names</th>
+      <th>population</th>
+      <th>onMarg</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>6.6</td>
+      <td>West Humber-Clairville</td>
+      <td>32252</td>
+      <td>2.4</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>7.1</td>
+      <td>Mount Olive-Silverstone-Jamestown</td>
+      <td>32127</td>
+      <td>2.4</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>7.4</td>
+      <td>Thistletown-Beaumond Heights</td>
+      <td>9928</td>
+      <td>2.8</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>8.4</td>
+      <td>Rexdale-Kipling</td>
+      <td>10725</td>
+      <td>2.8</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>9.0</td>
+      <td>Elms-Old Rexdale</td>
+      <td>9879</td>
+      <td>2.6</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>135</th>
+      <td>136</td>
+      <td>10.0</td>
+      <td>West Hill</td>
+      <td>25632</td>
+      <td>2.8</td>
+    </tr>
+    <tr>
+      <th>136</th>
+      <td>137</td>
+      <td>7.9</td>
+      <td>Woburn</td>
+      <td>52461</td>
+      <td>3.0</td>
+    </tr>
+    <tr>
+      <th>137</th>
+      <td>138</td>
+      <td>8.7</td>
+      <td>Eglinton East</td>
+      <td>22387</td>
+      <td>3.2</td>
+    </tr>
+    <tr>
+      <th>138</th>
+      <td>139</td>
+      <td>8.2</td>
+      <td>Scarborough Village</td>
+      <td>15590</td>
+      <td>3.2</td>
+    </tr>
+    <tr>
+      <th>139</th>
+      <td>140</td>
+      <td>8.4</td>
+      <td>Guildwood</td>
+      <td>10026</td>
+      <td>1.8</td>
+    </tr>
+  </tbody>
+</table>
+<p>140 rows × 5 columns</p>
+</div></div></div>
+</div>
+</section>
+</section>
+<section id="question-1-5">
+<h2>Question 1.5<a class="headerlink" href="#question-1-5" title="Link to this heading">#</a></h2>
+<p>Here, we make a copy of the dataframe. The code in this question operates on a copy of the renamed marginalization dataset so that it doesn’t interfere with questions that come later.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">marg_copd_df_copy</span> <span class="o">=</span> <span class="n">marg_copd_df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">marg_copd_df_copy</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>neighbID</th>
+      <th>percent_copd</th>
+      <th>names</th>
+      <th>population</th>
+      <th>onMarg</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>6.6</td>
+      <td>West Humber-Clairville</td>
+      <td>32252</td>
+      <td>2.4</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>7.1</td>
+      <td>Mount Olive-Silverstone-Jamestown</td>
+      <td>32127</td>
+      <td>2.4</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>7.4</td>
+      <td>Thistletown-Beaumond Heights</td>
+      <td>9928</td>
+      <td>2.8</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>8.4</td>
+      <td>Rexdale-Kipling</td>
+      <td>10725</td>
+      <td>2.8</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>9.0</td>
+      <td>Elms-Old Rexdale</td>
+      <td>9879</td>
+      <td>2.6</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p><strong>Q</strong></p>
+<p>What type is <code class="docutils literal notranslate"><span class="pre">marg_copd_df_copy['onMarg']</span></code>?</p>
+<p>ANS: Series</p>
+<p><strong>Q</strong></p>
+<p>The values in <code class="docutils literal notranslate"><span class="pre">marg_copd_df_copy['percent_copd']</span></code> are percentages (0 to 100). For this question, we want a new column in <code class="docutils literal notranslate"><span class="pre">marg_copd_df_copy</span></code> called <code class="docutils literal notranslate"><span class="pre">'proportion_copd'</span></code> that had the same information but as a <strong>proportion</strong> (0 to 1).</p>
+<p>Which of the following code cells would create that column? Select all that apply.</p>
+<p>ANS: A, C, and D</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># A</span>
+<span class="n">copd_proportions</span> <span class="o">=</span> <span class="n">marg_copd_df_copy</span><span class="p">[</span><span class="s1">&#39;percent_copd&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="mf">.01</span>
+<span class="n">marg_copd_df_copy</span><span class="p">[</span><span class="s1">&#39;proportion_copd&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">copd_proportions</span>
+<span class="n">marg_copd_df_copy</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>neighbID</th>
+      <th>percent_copd</th>
+      <th>names</th>
+      <th>population</th>
+      <th>onMarg</th>
+      <th>proportion_copd</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>6.6</td>
+      <td>West Humber-Clairville</td>
+      <td>32252</td>
+      <td>2.4</td>
+      <td>0.066</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>7.1</td>
+      <td>Mount Olive-Silverstone-Jamestown</td>
+      <td>32127</td>
+      <td>2.4</td>
+      <td>0.071</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>7.4</td>
+      <td>Thistletown-Beaumond Heights</td>
+      <td>9928</td>
+      <td>2.8</td>
+      <td>0.074</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>8.4</td>
+      <td>Rexdale-Kipling</td>
+      <td>10725</td>
+      <td>2.8</td>
+      <td>0.084</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>9.0</td>
+      <td>Elms-Old Rexdale</td>
+      <td>9879</td>
+      <td>2.6</td>
+      <td>0.090</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># B</span>
+<span class="c1">#copd_proportions = marg_copd_df_copy[&#39;percent_copd&#39;] ÷ 100</span>
+<span class="c1">#marg_copd_df_copy[&#39;proportion_copd&#39;] = copd_proportions</span>
+<span class="c1">#marg_copd_df_copy.head()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># C</span>
+<span class="n">copd_proportions</span> <span class="o">=</span> <span class="n">marg_copd_df_copy</span><span class="p">[</span><span class="s1">&#39;percent_copd&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="mi">100</span>
+<span class="n">marg_copd_df_copy</span><span class="p">[</span><span class="s1">&#39;proportion_copd&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">copd_proportions</span>
+<span class="n">marg_copd_df_copy</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>neighbID</th>
+      <th>percent_copd</th>
+      <th>names</th>
+      <th>population</th>
+      <th>onMarg</th>
+      <th>proportion_copd</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>6.6</td>
+      <td>West Humber-Clairville</td>
+      <td>32252</td>
+      <td>2.4</td>
+      <td>0.066</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>7.1</td>
+      <td>Mount Olive-Silverstone-Jamestown</td>
+      <td>32127</td>
+      <td>2.4</td>
+      <td>0.071</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>7.4</td>
+      <td>Thistletown-Beaumond Heights</td>
+      <td>9928</td>
+      <td>2.8</td>
+      <td>0.074</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>8.4</td>
+      <td>Rexdale-Kipling</td>
+      <td>10725</td>
+      <td>2.8</td>
+      <td>0.084</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>9.0</td>
+      <td>Elms-Old Rexdale</td>
+      <td>9879</td>
+      <td>2.6</td>
+      <td>0.090</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># D</span>
+<span class="n">marg_copd_df_copy</span><span class="p">[</span><span class="s1">&#39;proportion_copd&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">marg_copd_df_copy</span><span class="p">[</span><span class="s1">&#39;percent_copd&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="mi">100</span>
+<span class="n">marg_copd_df_copy</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>neighbID</th>
+      <th>percent_copd</th>
+      <th>names</th>
+      <th>population</th>
+      <th>onMarg</th>
+      <th>proportion_copd</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>6.6</td>
+      <td>West Humber-Clairville</td>
+      <td>32252</td>
+      <td>2.4</td>
+      <td>0.066</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>7.1</td>
+      <td>Mount Olive-Silverstone-Jamestown</td>
+      <td>32127</td>
+      <td>2.4</td>
+      <td>0.071</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>7.4</td>
+      <td>Thistletown-Beaumond Heights</td>
+      <td>9928</td>
+      <td>2.8</td>
+      <td>0.074</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>8.4</td>
+      <td>Rexdale-Kipling</td>
+      <td>10725</td>
+      <td>2.8</td>
+      <td>0.084</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>9.0</td>
+      <td>Elms-Old Rexdale</td>
+      <td>9879</td>
+      <td>2.6</td>
+      <td>0.090</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># E</span>
+<span class="c1">#copd_proportions = marg_copd_df_copy[&#39;percent_copd&#39;] / 100</span>
+<span class="c1">#marg_copd_df_copy.iloc[:,&#39;proportion_copd&#39;] = copd_proportions</span>
+<span class="c1">#marg_copd_df_copy.head()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Q</strong></p>
+<p>Consider this code. From the choices below, select the statements that are valid.</p>
+<p>ANS: B, C</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">low_marg</span> <span class="o">=</span> <span class="n">marg_copd_df_copy</span><span class="p">[</span><span class="s1">&#39;onMarg&#39;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">2</span>
+<span class="n">low_marg_df</span> <span class="o">=</span> <span class="n">marg_copd_df_copy</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">low_marg</span><span class="p">,</span> <span class="p">:]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>A. Variable <code class="docutils literal notranslate"><span class="pre">low_marg</span></code> refers to column <code class="docutils literal notranslate"><span class="pre">'onMarg'</span></code> from <code class="docutils literal notranslate"><span class="pre">marg_copd_df_copy</span></code>.</p>
+<p>B.  Variable <code class="docutils literal notranslate"><span class="pre">low_marg</span></code> refers to a Boolean series that is <code class="docutils literal notranslate"><span class="pre">True</span></code> for <code class="docutils literal notranslate"><span class="pre">'onMarg'</span></code> values that are less than or equal to 2 in <code class="docutils literal notranslate"><span class="pre">marg_copd_df_copy</span></code> and <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise.</p>
+<p>C. Variable <code class="docutils literal notranslate"><span class="pre">low_marg_df</span></code> refers to a dataframe containing only the rows from <code class="docutils literal notranslate"><span class="pre">marg_copd_df_copy</span></code> where the <code class="docutils literal notranslate"><span class="pre">'onMarg'</span></code> value is less than or equal to than 2.</p>
+<p>D. Variable <code class="docutils literal notranslate"><span class="pre">low_marg_df</span></code> refers to the same thing as <code class="docutils literal notranslate"><span class="pre">marg_copd_df_copy</span></code> but with a new column called <code class="docutils literal notranslate"><span class="pre">'high_marg'</span></code>.</p>
+</section>
+<section id="question-2">
+<h2>Question 2<a class="headerlink" href="#question-2" title="Link to this heading">#</a></h2>
+<p>The data scientist conducts further analyses below.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">marg_copd_df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>neighbID</th>
+      <th>percent_copd</th>
+      <th>population</th>
+      <th>onMarg</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>140.0000</td>
+      <td>140.000000</td>
+      <td>140.000000</td>
+      <td>140.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>70.5000</td>
+      <td>8.965714</td>
+      <td>17805.450000</td>
+      <td>2.400000</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>40.5586</td>
+      <td>1.941288</td>
+      <td>8427.630364</td>
+      <td>0.557487</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>1.0000</td>
+      <td>5.800000</td>
+      <td>6493.000000</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>35.7500</td>
+      <td>7.300000</td>
+      <td>11641.000000</td>
+      <td>2.000000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>70.5000</td>
+      <td>8.650000</td>
+      <td>15210.500000</td>
+      <td>2.400000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>105.2500</td>
+      <td>10.325000</td>
+      <td>21669.000000</td>
+      <td>2.800000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>140.0000</td>
+      <td>14.200000</td>
+      <td>52461.000000</td>
+      <td>3.400000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">marg_copd_df</span><span class="p">[</span><span class="s2">&quot;percent_copd&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;grey&#39;</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">bins</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;histogram of percent copd&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;perc. of adults with copd&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0, &#39;perc. of adults with copd&#39;)
+</pre></div>
+</div>
+<img alt="../../_images/a5d51bec09d410a9a6e52eb7e6e05e9ae998bd479b6f52e8b02b5ce8bc077778.png" src="../../_images/a5d51bec09d410a9a6e52eb7e6e05e9ae998bd479b6f52e8b02b5ce8bc077778.png" />
+</div>
+</div>
+<p>Answer the following questions using the code and the output above.</p>
+<p><strong>Q:</strong> The data scientist begins by examining the empirical distribution of the data.</p>
+<ul class="simple">
+<li><p>Approximately how many neighbourhoods have a <code class="docutils literal notranslate"><span class="pre">percent_copd</span></code> value between 8.65 and 10.325?</p></li>
+</ul>
+<p>ANS: 35 neighbourhoods (25% of 140)</p>
+<p><strong>Q:</strong></p>
+<ul class="simple">
+<li><p>What does the mean of <code class="docutils literal notranslate"><span class="pre">percent_copd</span></code> being higher than the median imply about the distribution of the data?</p></li>
+</ul>
+<p>ANS: there are a few neighbourhoods with high values; or the distribution skews right.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">marg_copd_df</span><span class="p">[</span><span class="s1">&#39;high_marg&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">marg_copd_df_copy</span><span class="p">[</span><span class="s1">&#39;onMarg&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">2.4</span>
+
+<span class="n">marg_copd_df</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">column</span> <span class="o">=</span> <span class="s1">&#39;percent_copd&#39;</span><span class="p">,</span> 
+                          <span class="n">by</span> <span class="o">=</span> <span class="s1">&#39;high_marg&#39;</span><span class="p">,</span>  
+                          <span class="n">grid</span><span class="o">=</span><span class="kc">False</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Percent of Adults with COPD&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Percent of Adults with COPD&#39;)
+</pre></div>
+</div>
+<img alt="../../_images/7001456712014b1172c534fbdd2e01848756200c3a375e710df360ac778baf04.png" src="../../_images/7001456712014b1172c534fbdd2e01848756200c3a375e710df360ac778baf04.png" />
+</div>
+</div>
+<p>Answer the following questions by interpreting the code and resulting boxplot in the cell above:</p>
+<p><strong>Q</strong></p>
+<ul class="simple">
+<li><p>Is this statement true or false? The neighbourhood with the highest percentage of adults with COPD has an <code class="docutils literal notranslate"><span class="pre">'onMarg'</span></code> value greater than 2.4.</p></li>
+</ul>
+<p>ANS: FALSE</p>
+<ul class="simple">
+<li><p>Compare the two medians. Rounding to the nearest integer (whole number), how much greater is the median “percent of adults with COPD” in neighbourhoods with higher levels of marginalization than the median in neighbourhoods with lower levels of marginalization?</p></li>
+</ul>
+<p>ANS: ~2</p>
+</section>
+<section id="question-3">
+<h2>Question 3<a class="headerlink" href="#question-3" title="Link to this heading">#</a></h2>
+<p>Next, the data scientist would like to compare the percent of COPD in neighbourhoods with higher levels of marginalization (from column <code class="docutils literal notranslate"><span class="pre">'high_marg'</span></code>) with the percent of COPD in neighbourhoods with lower levels of marginalization. The data scientist conducts the following analyses.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">random_shuffle_mean</span><span class="p">():</span>
+    <span class="n">onMarg_HL_shuffle</span> <span class="o">=</span> <span class="n">marg_copd_df</span><span class="p">[</span><span class="s1">&#39;high_marg&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">frac</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+
+    <span class="n">perc_copd_low_shuffle</span> <span class="o">=</span> <span class="n">marg_copd_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">onMarg_HL_shuffle</span> <span class="o">==</span> <span class="kc">False</span><span class="p">,</span> <span class="s1">&#39;percent_copd&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+    <span class="n">perc_copd_high_shuffle</span>  <span class="o">=</span> <span class="n">marg_copd_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">onMarg_HL_shuffle</span> <span class="o">==</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">&#39;percent_copd&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+    
+    <span class="n">shuffled_diff</span> <span class="o">=</span> <span class="n">perc_copd_high_shuffle</span> <span class="o">-</span> <span class="n">perc_copd_low_shuffle</span> 
+    
+    <span class="k">return</span> <span class="n">shuffled_diff</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mean_table</span> <span class="o">=</span> <span class="n">marg_copd_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;high_marg&#39;</span><span class="p">)[</span><span class="s1">&#39;percent_copd&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mean_table</span><span class="p">)</span>
+
+<span class="n">observed_mean_difference</span> <span class="o">=</span> <span class="n">mean_table</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">mean_table</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">observed_mean_difference</span><span class="p">)</span>
+
+<span class="n">random_shuffle_mean</span><span class="p">()</span>
+<span class="n">shuffled_diffs</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">):</span>
+    <span class="n">shuffled_diffs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">random_shuffle_mean</span><span class="p">())</span>
+    
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">shuffled_diffs</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;grey&#39;</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">observed_mean_difference</span><span class="p">,</span> <span class="n">ymin</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">ymax</span> <span class="o">=</span> <span class="mi">250</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="o">*</span><span class="n">observed_mean_difference</span><span class="p">,</span> <span class="n">ymin</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">ymax</span> <span class="o">=</span> <span class="mi">250</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>high_marg
+False    8.563014
+True     9.404478
+Name: percent_copd, dtype: float64
+0.8414639133101627
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.LineCollection at 0x7f85989e64c0&gt;
+</pre></div>
+</div>
+<img alt="../../_images/65b597f50d7859d9e54ca2bcf1183a26b6329b6e1d888137979ecfae5dd6b65e.png" src="../../_images/65b597f50d7859d9e54ca2bcf1183a26b6329b6e1d888137979ecfae5dd6b65e.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">pvalue</span><span class="p">(</span><span class="n">shuff_diffs</span><span class="p">,</span> <span class="n">obs_diffs</span><span class="p">):</span>
+    <span class="n">rightextreme_count</span> <span class="o">=</span> <span class="p">(</span><span class="n">shuff_diffs</span> <span class="o">&gt;=</span> <span class="n">obs_diffs</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+    <span class="n">leftextreme_count</span> <span class="o">=</span> <span class="p">(</span><span class="n">shuff_diffs</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">1</span><span class="o">*</span><span class="n">obs_diffs</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+    <span class="n">allextreme</span> <span class="o">=</span> <span class="n">rightextreme_count</span> <span class="o">+</span> <span class="n">leftextreme_count</span>
+    <span class="n">pval</span> <span class="o">=</span> <span class="n">allextreme</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">shuff_diffs</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">pval</span>  
+
+<span class="n">pvalue</span><span class="p">(</span><span class="n">shuff_diffs</span> <span class="o">=</span> <span class="n">shuffled_diffs</span><span class="p">,</span> <span class="n">obs_diffs</span> <span class="o">=</span> <span class="n">observed_mean_difference</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.009
+</pre></div>
+</div>
+</div>
+</div>
+<p>Answer the following questions based on the code above.</p>
+<p><strong>Q</strong>  In function <code class="docutils literal notranslate"><span class="pre">random_shuffle_means</span></code>, when we sample the data, we and set the <code class="docutils literal notranslate"><span class="pre">replace</span></code> parameter equal to <code class="docutils literal notranslate"><span class="pre">False</span></code>. Is the following statement true or false?</p>
+<ul class="simple">
+<li><p>We are allowing rows to be sampled more than once.</p></li>
+</ul>
+<p>ANS: False</p>
+<p><strong>Q:</strong> How many shuffled differences of means are generated in the code above?</p>
+<p>a. 250
+b. 10
+c. 5000
+d. 1000</p>
+<p>ANS:  d.</p>
+<p><strong>Q</strong> Consider this claim:</p>
+<ul class="simple">
+<li><p>There is no difference in the percentage of adults with COPD between neighbourhoods with high <code class="docutils literal notranslate"><span class="pre">'onMarg'</span></code> values and those with low <code class="docutils literal notranslate"><span class="pre">'onMarg'</span></code> values.</p></li>
+</ul>
+<p>Is that the <strong>null</strong> hypothesis or the <strong>alternative</strong> hypothesis?</p>
+<p>ANS: null hypothesis</p>
+<p><strong>Q:</strong> Given the p-value and a threshold of 0.05, do we reject or fail to reject the null hypothesis? (2 marks)</p>
+<p>ANS: We reject the null hypothesis.</p>
+<p>[PAUL QUESTION: does this give away the previous answer?]</p>
+<p>[Michael answer: no, i don’t think so]</p>
+<p><strong>Q</strong> True or False: Using the method above, it is impossible to incorrectly reject a null hypthesis.</p>
+<p>ANS: False</p>
+<p>[PAUL COMMENT: ooh, this is a good question!]</p>
+<p><strong>Q</strong> Given the analysis above, would you say that neighbourhoods with higher levels of marginalization have higher percentages of adults with COPD? Yes or no.</p>
+<p>ANS: Yes</p>
+</section>
+<section id="question-4">
+<h2>Question 4<a class="headerlink" href="#question-4" title="Link to this heading">#</a></h2>
+<p>Next, the data scientist would like to explore the spatial distribution of the <code class="docutils literal notranslate"><span class="pre">'percent_copd'</span></code> column to understand if there is geographic clustering. They do the following analysis:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
+<span class="kn">import</span> <span class="nn">mapclassify</span>
+<span class="kn">import</span> <span class="nn">splot</span>
+<span class="kn">import</span> <span class="nn">libpysal</span> <span class="k">as</span> <span class="nn">lps</span>
+<span class="kn">import</span> <span class="nn">esda</span>
+<span class="kn">from</span> <span class="nn">splot.esda</span> <span class="kn">import</span> <span class="n">moran_scatterplot</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nbrhd</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="s2">&quot;Toronto_Neighbourhoods.geojson&quot;</span><span class="p">)</span>
+
+<span class="n">important_spat_cols</span> <span class="o">=</span> <span class="n">nbrhd</span><span class="o">.</span><span class="n">columns</span><span class="p">[[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">17</span><span class="p">]]</span>
+<span class="n">colnames_spat</span> <span class="o">=</span> <span class="p">{</span><span class="n">important_spat_cols</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span>
+           <span class="n">important_spat_cols</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">:</span> <span class="s1">&#39;nbrhd_spat_id&#39;</span><span class="p">,</span>
+           <span class="n">important_spat_cols</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="p">:</span> <span class="s1">&#39;geometry&#39;</span><span class="p">}</span>
+
+<span class="n">nbrhd_simple</span> <span class="o">=</span> <span class="n">nbrhd</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="n">nbrhd_simple</span> <span class="o">=</span> <span class="n">nbrhd_simple</span><span class="p">[</span><span class="n">important_spat_cols</span><span class="p">]</span>
+<span class="n">nbrhd_simple</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="n">colnames_spat</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">nbrhd_simple</span><span class="p">[</span><span class="s2">&quot;neighbID&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">nbrhd_simple</span><span class="p">[</span><span class="s2">&quot;nbrhd_spat_id&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Before merge: &#39;</span><span class="p">)</span>
+<span class="n">nbrhd_simple</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Before merge: 
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>nbrhd_spat_id</th>
+      <th>geometry</th>
+      <th>neighbID</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Casa Loma (96)</td>
+      <td>096</td>
+      <td>POLYGON ((-79.41469 43.67391, -79.41485 43.674...</td>
+      <td>96</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Annex (95)</td>
+      <td>095</td>
+      <td>POLYGON ((-79.39414 43.66872, -79.39588 43.668...</td>
+      <td>95</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Caledonia-Fairbank (109)</td>
+      <td>109</td>
+      <td>POLYGON ((-79.46021 43.68156, -79.46044 43.681...</td>
+      <td>109</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Woodbine Corridor (64)</td>
+      <td>064</td>
+      <td>POLYGON ((-79.31485 43.66674, -79.31660 43.666...</td>
+      <td>64</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Lawrence Park South (103)</td>
+      <td>103</td>
+      <td>POLYGON ((-79.41096 43.70408, -79.41165 43.703...</td>
+      <td>103</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nbrhd_simple</span> <span class="o">=</span> <span class="n">nbrhd_simple</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">marg_copd_df</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s2">&quot;neighbID&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;After merge: &#39;</span><span class="p">)</span>
+<span class="n">nbrhd_simple</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>After merge: 
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>nbrhd_spat_id</th>
+      <th>geometry</th>
+      <th>neighbID</th>
+      <th>percent_copd</th>
+      <th>names</th>
+      <th>population</th>
+      <th>onMarg</th>
+      <th>high_marg</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Casa Loma (96)</td>
+      <td>096</td>
+      <td>POLYGON ((-79.41469 43.67391, -79.41485 43.674...</td>
+      <td>96</td>
+      <td>7.7</td>
+      <td>Casa Loma</td>
+      <td>9815</td>
+      <td>2.0</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Annex (95)</td>
+      <td>095</td>
+      <td>POLYGON ((-79.39414 43.66872, -79.39588 43.668...</td>
+      <td>95</td>
+      <td>8.6</td>
+      <td>Annex</td>
+      <td>27482</td>
+      <td>1.8</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Caledonia-Fairbank (109)</td>
+      <td>109</td>
+      <td>POLYGON ((-79.46021 43.68156, -79.46044 43.681...</td>
+      <td>109</td>
+      <td>11.0</td>
+      <td>Caledonia-Fairbank</td>
+      <td>10281</td>
+      <td>2.4</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Woodbine Corridor (64)</td>
+      <td>064</td>
+      <td>POLYGON ((-79.31485 43.66674, -79.31660 43.666...</td>
+      <td>64</td>
+      <td>12.2</td>
+      <td>Woodbine Corridor</td>
+      <td>11550</td>
+      <td>2.0</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Lawrence Park South (103)</td>
+      <td>103</td>
+      <td>POLYGON ((-79.41096 43.70408, -79.41165 43.703...</td>
+      <td>103</td>
+      <td>6.7</td>
+      <td>Lawrence Park South</td>
+      <td>14827</td>
+      <td>1.0</td>
+      <td>False</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p><strong>Q</strong> In the code, we created a new column <code class="docutils literal notranslate"><span class="pre">'neighbID'</span></code> that is based on column <code class="docutils literal notranslate"><span class="pre">'nbrhd_spat_id'</span></code>. Why did we do that?</p>
+<p>ANS: nbrhd_spat_id contains strings and we need them as numbers to do the merge.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span>
+
+<span class="n">nbrhd_simple</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="s1">&#39;percent_copd&#39;</span><span class="p">,</span> <span class="n">scheme</span><span class="o">=</span><span class="s1">&#39;quantiles&#39;</span><span class="p">,</span> 
+                  <span class="n">k</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Greys&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> 
+                  <span class="n">ax</span> <span class="o">=</span> <span class="n">axes</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
+                  <span class="n">legend_kwds</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;loc&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;Percent with COPD&#39;</span><span class="p">,</span> 
+                               <span class="s1">&#39;title_fontsize&#39;</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span><span class="s1">&#39;fontsize&#39;</span><span class="p">:</span> <span class="mi">12</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+</pre></div>
+</div>
+<img alt="../../_images/bc17804d8aa4a540d5b3771036adbe5652df31cbb6ee13c3651e5ffee709f9a4.png" src="../../_images/bc17804d8aa4a540d5b3771036adbe5652df31cbb6ee13c3651e5ffee709f9a4.png" />
+</div>
+</div>
+<p>Answer the following questions based on the code above the map and the output.</p>
+<p><strong>Q</strong> How many “figure” objects are produced?</p>
+<p>ANS: 1</p>
+<p><strong>Q</strong> How many “axis” objects are produced?</p>
+<p>ANS: 1</p>
+<p><strong>Q</strong> Given the categorization scheme of <code class="docutils literal notranslate"><span class="pre">quantiles</span></code> and 5 groups, what are the percentile ranges for the five categories in the legend? (3 marks)</p>
+<p>ANS: 0-20th percentiles, 20-40, 40-60, 60-80, 80-100</p>
+<p>Next, the data scientist creates a weights matrix and conducts a cluster analysis.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">w</span> <span class="o">=</span> <span class="n">lps</span><span class="o">.</span><span class="n">weights</span><span class="o">.</span><span class="n">Queen</span><span class="o">.</span><span class="n">from_dataframe</span><span class="p">(</span><span class="n">nbrhd_simple</span><span class="p">)</span>
+<span class="n">w</span><span class="o">.</span><span class="n">transform</span> <span class="o">=</span> <span class="s1">&#39;R&#39;</span>
+
+<span class="n">w</span><span class="p">[</span><span class="mi">120</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{81: 0.16666666666666666,
+ 103: 0.16666666666666666,
+ 104: 0.16666666666666666,
+ 57: 0.16666666666666666,
+ 26: 0.16666666666666666,
+ 12: 0.16666666666666666}
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Q</strong> The neighbourhood whose <code class="docutils literal notranslate"><span class="pre">'neighbID'</span></code> value is <code class="docutils literal notranslate"><span class="pre">120</span></code> is neighbours with how many other neighbourhoods?</p>
+<p>ANS: 6</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># text-based histogram of the weights matrix</span>
+<span class="n">w</span><span class="o">.</span><span class="n">histogram</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(3, 9), (4, 13), (5, 31), (6, 40), (7, 25), (8, 13), (9, 8), (10, 0), (11, 1)]
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Q</strong> Referring to the histogram in the output from the previous cell, how many neighbourhoods have exactly 10 neighbours?</p>
+<p>ANS: 0</p>
+<p><strong>Q</strong> Referring to the histogram in the output from the previous cell, what is the most common number of neighbours our neighbourhoods have?</p>
+<p>ANS: 6</p>
+<p>[PAUL QUESTION: isn’t it 6?]</p>
+<p>[Michael answer: yes! corrected]</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mi_randNumCol</span> <span class="o">=</span> <span class="n">esda</span><span class="o">.</span><span class="n">Moran</span><span class="p">(</span><span class="n">nbrhd_simple</span><span class="p">[</span><span class="s1">&#39;percent_copd&#39;</span><span class="p">],</span> <span class="n">w</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The Morans I value is: &#39;</span><span class="p">,</span> <span class="n">mi_randNumCol</span><span class="o">.</span><span class="n">I</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The p-value of this Morans I value is: &#39;</span><span class="p">,</span> <span class="n">mi_randNumCol</span><span class="o">.</span><span class="n">p_sim</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The Morans I value is:  0.6341562248493351
+The p-value of this Morans I value is:  0.001
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lisa</span> <span class="o">=</span> <span class="n">esda</span><span class="o">.</span><span class="n">Moran_Local</span><span class="p">(</span><span class="n">nbrhd_simple</span><span class="p">[</span><span class="s1">&#39;percent_copd&#39;</span><span class="p">],</span> <span class="n">w</span><span class="p">)</span>
+<span class="n">splot</span><span class="o">.</span><span class="n">esda</span><span class="o">.</span><span class="n">plot_local_autocorrelation</span><span class="p">(</span><span class="n">lisa</span><span class="p">,</span> <span class="n">nbrhd_simple</span><span class="p">,</span> <span class="s1">&#39;percent_copd&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&lt;Figure size 1080x288 with 3 Axes&gt;,
+ array([&lt;AxesSubplot:title={&#39;center&#39;:&#39;Moran Local Scatterplot&#39;}, xlabel=&#39;Attribute&#39;, ylabel=&#39;Spatial Lag&#39;&gt;,
+        &lt;AxesSubplot:&gt;, &lt;AxesSubplot:&gt;], dtype=object))
+</pre></div>
+</div>
+<img alt="../../_images/4df3a26ca3aa48e27f17305a89780b18e5f9b5e4c0ecea980c4eb1f16e8cc1a7.png" src="../../_images/4df3a26ca3aa48e27f17305a89780b18e5f9b5e4c0ecea980c4eb1f16e8cc1a7.png" />
+</div>
+</div>
+<p><strong>Q</strong> What does the Moran’s I value of 0.634 imply about the spatial clustering of column <code class="docutils literal notranslate"><span class="pre">percent_copd</span></code>?</p>
+<p>ANS: There is positive spatial autocorrelation or there is geographic clustering of this variable where high values are near high values and low values are near low values.</p>
+<p><strong>Q</strong> In the Moran Local Scatterplot, how would you describe the spatial context of neighbourhoods with points in the lower right quadrant (quadrant 4)?</p>
+<p>Fill in the blanks: The neighbourhoods in this quadrant have <code class="docutils literal notranslate"><span class="pre">'percent_copd'</span></code> values (greater than/lower than) the mean while their neighbours have <code class="docutils literal notranslate"><span class="pre">'percent_copd'</span></code> values (greater than/lower than) the mean.</p>
+<p>ANS: greater, lower</p>
+<p><strong>Q</strong> How would you describe the neighbourhood colored light blue on in the map in the centre in the previous cell, in the context of understanding how its <code class="docutils literal notranslate"><span class="pre">'percent_copd'</span></code> value relates to its neighbours?</p>
+<p>ANS: It has a value lower than the mean, while its neighbours have percent copd values higher than the mean.</p>
+</section>
+<section id="question-5">
+<h2>Question 5<a class="headerlink" href="#question-5" title="Link to this heading">#</a></h2>
+<p>Finally, the data scientist decides they want to model how the percent of adults with COPD varies by neighbourhood, accounting for both the Ontario marginalization index AND the number of covid-19 testing sites within neighbourhoods.</p>
+<p>To do this, they will first conduct a spatial join and then compute a regression model.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">covid19sites</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="s1">&#39;covid-19-testing-sites.geojson&#39;</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+<span class="n">nbrhd_simple</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="s1">&#39;percent_copd&#39;</span><span class="p">,</span> <span class="n">scheme</span><span class="o">=</span><span class="s1">&#39;quantiles&#39;</span><span class="p">,</span> 
+                  <span class="n">k</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;GnBu&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;grey&#39;</span><span class="p">,</span> 
+                  <span class="n">ax</span> <span class="o">=</span> <span class="n">axes</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
+                  <span class="n">legend_kwds</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;loc&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;Percent with COPD&#39;</span><span class="p">,</span> 
+                               <span class="s1">&#39;title_fontsize&#39;</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span><span class="s1">&#39;fontsize&#39;</span><span class="p">:</span> <span class="mi">12</span><span class="p">})</span>
+
+<span class="n">covid19sites</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span> <span class="o">=</span> <span class="n">axes</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+</pre></div>
+</div>
+<img alt="../../_images/583b508bf2877c047e7a198531e8cc1d74caa8baaec9d908219ac1411b88fe21.png" src="../../_images/583b508bf2877c047e7a198531e8cc1d74caa8baaec9d908219ac1411b88fe21.png" />
+</div>
+</div>
+<p><strong>Q</strong> Reading the code in the cell above the map, what do the red points represent?</p>
+<p>ANS: covid-19 testing sites</p>
+<p><strong>Q</strong> The data scientist wants to make a figure with two maps, with 2 rows and 1 column. Rewrite this line to make that happen:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">fig,</span> <span class="pre">axes</span> <span class="pre">=</span> <span class="pre">plt.subplots(1,1,</span> <span class="pre">figsize</span> <span class="pre">=</span> <span class="pre">(12,8)</span></code></p></li>
+</ul>
+<p>ANS: <code class="docutils literal notranslate"><span class="pre">fig,</span> <span class="pre">axes</span> <span class="pre">=</span> <span class="pre">plt.subplots(2,1,</span> <span class="pre">figsize</span> <span class="pre">=</span> <span class="pre">(12,8)</span></code></p>
+<p><strong>Q</strong> When we create the plot using <code class="docutils literal notranslate"><span class="pre">nbrhd_simple.plot</span></code>, to place a map or graph in the first of two axes, what would you put following the parameter <code class="docutils literal notranslate"><span class="pre">ax</span> <span class="pre">=</span> </code>?</p>
+<p>ANS: <code class="docutils literal notranslate"><span class="pre">axes[0]</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">join_left_df</span> <span class="o">=</span> <span class="n">nbrhd_simple</span><span class="o">.</span><span class="n">sjoin</span><span class="p">(</span><span class="n">covid19sites</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">,</span> <span class="n">predicate</span> <span class="o">=</span> <span class="s2">&quot;contains&quot;</span><span class="p">)</span>
+<span class="n">no_duplicates_gdf</span> <span class="o">=</span> <span class="n">join_left_df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">no_duplicates_gdf</span> <span class="o">=</span> <span class="n">no_duplicates_gdf</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="s1">&#39;neighbID&#39;</span><span class="p">)</span>
+<span class="n">testingsite_present</span> <span class="o">=</span> <span class="n">no_duplicates_gdf</span><span class="p">[</span><span class="s2">&quot;index_right&quot;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">0</span>
+<span class="n">testingsite_present</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+<span class="n">testingsite_not_present</span> <span class="o">=</span> <span class="n">no_duplicates_gdf</span><span class="p">[</span><span class="s2">&quot;index_right&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span>
+<span class="n">testingsite_not_present</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+
+<span class="n">columns_to_keep</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">,</span><span class="s2">&quot;neighbID&quot;</span><span class="p">,</span><span class="s2">&quot;onMarg&quot;</span><span class="p">,</span><span class="s2">&quot;percent_copd&quot;</span><span class="p">,</span><span class="s2">&quot;index_right&quot;</span><span class="p">,</span><span class="s2">&quot;geometry&quot;</span><span class="p">]</span>
+
+<span class="c1">#create our final analysis geodataframe and create a column &#39;rail_present&#39; that is true </span>
+<span class="c1">#if railways are in the neighbourhood and false if not:</span>
+<span class="n">final_toronto_analysis</span> <span class="o">=</span> <span class="n">no_duplicates_gdf</span><span class="p">[</span><span class="n">columns_to_keep</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">final_toronto_analysis</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">testingsite_present</span><span class="p">,</span> <span class="s1">&#39;testing_site_present&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">final_toronto_analysis</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">testingsite_not_present</span><span class="p">,</span> <span class="s1">&#39;testing_site_present&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">final_toronto_analysis</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>neighbID</th>
+      <th>onMarg</th>
+      <th>percent_copd</th>
+      <th>index_right</th>
+      <th>geometry</th>
+      <th>testing_site_present</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Casa Loma (96)</td>
+      <td>96</td>
+      <td>2.0</td>
+      <td>7.7</td>
+      <td>NaN</td>
+      <td>POLYGON ((-79.41469 43.67391, -79.41485 43.674...</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Annex (95)</td>
+      <td>95</td>
+      <td>1.8</td>
+      <td>8.6</td>
+      <td>NaN</td>
+      <td>POLYGON ((-79.39414 43.66872, -79.39588 43.668...</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Caledonia-Fairbank (109)</td>
+      <td>109</td>
+      <td>2.4</td>
+      <td>11.0</td>
+      <td>NaN</td>
+      <td>POLYGON ((-79.46021 43.68156, -79.46044 43.681...</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Woodbine Corridor (64)</td>
+      <td>64</td>
+      <td>2.0</td>
+      <td>12.2</td>
+      <td>NaN</td>
+      <td>POLYGON ((-79.31485 43.66674, -79.31660 43.666...</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Lawrence Park South (103)</td>
+      <td>103</td>
+      <td>1.0</td>
+      <td>6.7</td>
+      <td>NaN</td>
+      <td>POLYGON ((-79.41096 43.70408, -79.41165 43.703...</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">statsmodels.formula.api</span> <span class="kn">import</span> <span class="n">ols</span>
+
+<span class="n">regmod</span> <span class="o">=</span> <span class="n">ols</span><span class="p">(</span><span class="s1">&#39;percent_copd ~ onMarg + testing_site_present&#39;</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">final_toronto_analysis</span><span class="p">)</span> <span class="c1"># setup the model</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">regmod_fit</span> <span class="o">=</span> <span class="n">regmod</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span> 
+<span class="nb">print</span><span class="p">(</span><span class="n">regmod_fit</span><span class="o">.</span><span class="n">params</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;rsquared: &quot;</span><span class="p">,</span><span class="n">regmod_fit</span><span class="o">.</span><span class="n">rsquared</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Intercept               6.588549
+onMarg                  0.979627
+testing_site_present    0.192023
+dtype: float64
+rsquared:  0.08388954348277133
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">copd_summary</span> <span class="o">=</span> <span class="n">regmod_fit</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+
+<span class="n">copd_summary</span><span class="o">.</span><span class="n">tables</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="simpletable">
+<tr>
+            <td></td>              <th>coef</th>     <th>std err</th>      <th>t</th>      <th>P>|t|</th>  <th>[0.025</th>    <th>0.975]</th>  
+</tr>
+<tr>
+  <th>Intercept</th>            <td>    6.5885</td> <td>    0.705</td> <td>    9.350</td> <td> 0.000</td> <td>    5.195</td> <td>    7.982</td>
+</tr>
+<tr>
+  <th>onMarg</th>               <td>    0.9796</td> <td>    0.290</td> <td>    3.379</td> <td> 0.001</td> <td>    0.406</td> <td>    1.553</td>
+</tr>
+<tr>
+  <th>testing_site_present</th> <td>    0.1920</td> <td>    0.470</td> <td>    0.408</td> <td> 0.684</td> <td>   -0.738</td> <td>    1.122</td>
+</tr>
+</table></div></div>
+</div>
+<p><strong>Q</strong>
+State which variables are the dependent and independent variables in the regression model <code class="docutils literal notranslate"><span class="pre">regmod</span></code>. (3 marks)</p>
+<p>ANS: onMarg, testing_site_present are dependent variables, and percent_copd is the independent variable.</p>
+<p><strong>Q</strong>
+Write out the regression equation given the intercept and coefficient values from the regression model <code class="docutils literal notranslate"><span class="pre">regmod</span></code>. (4 marks)</p>
+<p>ANS: y = 6.588549 + (x1 * 9.79627) +  (x2 * 0.1920)  - 1 point for intercept b1 and b2 each, 4 points if all are correct</p>
+<p><strong>Q</strong> Does the regression model indicate a positive or negative relationship between percent COPD and onMarg? What about percent_copd and testing_site_present? What does the r-squared value tell us about the relationship between our two variables?  Briefly explain.  (5 marks)</p>
+<p>ANS: The regression model indicates there is a positive and significant relationship between percent_copd and onMarg.(2 points) There is no significant relationship between percent_copd and testing_site_present (2 points). The r-square indicates the model is poorly fit. (1 point)</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./practice/final_exam_2022"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../../weekly-materials/week12/lecture/Exercise/Cluster_analysis_exercise.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Exercise: Run a cluster analysis</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1">Question 1</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#merging-the-data">Merging the data</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1-5">Question 1.5</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2">Question 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-3">Question 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-4">Question 4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-5">Question 5</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By GGR274 Instructors
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
