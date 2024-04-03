@@ -183,8 +183,8 @@ parts:
       title: Prof. Li's Notebook
     - file: weekly-materials/week12/lecture/Exercise/Cluster_analysis_exercise.ipynb
       title: Cluster Exercise
-    # - file: weekly-materials/week12/lecture/Exercise/Cluster_analysis_solution.ipynb
-    #   title: Cluster Exercise Solutions
+    - file: weekly-materials/week12/lecture/Exercise/Cluster_analysis_solution.ipynb
+      title: Cluster Exercise Solutions
 
   - caption: Practice Final
     chapters:
