@@ -1,0 +1,1158 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Exercise: Run a cluster analysis &#8212; Computation and Data Science for Social Sciences</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'weekly-materials/week12/lecture/Exercise/Cluster_analysis_solution';</script>
+    <link rel="icon" href="../../../../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Instructions" href="../../../../practice/final_exam_2022/ggr_final_answers_2022.html" />
+    <link rel="prev" title="Exercise: Run a cluster analysis" href="Cluster_analysis_exercise.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../../jupyter-book/index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Computation and Data Science for Social Sciences</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../../jupyter-book/index.html">
+                    👋 Course Website for GGR274H1-S Winter 2024
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Quick Links</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../../syllabus/ggr274_syllabus.html">Course Syllabus</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://q.utoronto.ca/courses/338580/announcements">Announcements</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://piazza.com/utoronto.ca/winter2024/ggr274h1">Piazza</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://forms.office.com/Pages/ResponsePage.aspx?id=JsKqeAMvTUuQN7RtVsVSEF-wqptfr85NieT8UyliaxxUOUtMSVFUQkFTNVdRTlVJNkZFQU84NldYUi4u">Course Feedback Form</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Resources</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../../guides/jupyterhub_guide.html">JupyterHub Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../guides/markus_guide.html">MarkUs Guide</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 1</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://q.utoronto.ca/courses/338580/files?preview=29750629">Prof. Li's Slides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week01/lecture/Class1_GGR274_MM.html">Prof. Moon's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week01/lecture/Class1_GGR274_IM.html">Prof. Musabirov's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week01/lab/Lab_1.html">Lab 01 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week01/lab/Lab_1_solutions.html">Lab 01 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week01/homework/Homework_1.html">Homework 01 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week01/homework/Homework_1_solution.html">Homework 01 Solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 2</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../week02/lecture/Class2_GGR274_DL_IM.html">Prof. Musabirov's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week02/lab/Lab_2.html">Lab 02 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week02/lab/Lab_2_solutions.html">Lab 02 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week02/homework/Homework_2.html">Homework 02 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week02/homework/Homework_2_solution.html">Homework 02 Solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 3</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../week03/lecture/Class3_GGR274_DL_IM.html">Prof. Musabirov's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week03/lab/Lab_3.html">Lab 03 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week03/lab/Lab_3_solutions.html">Lab 03 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week03/homework/Homework_3.html">Homework 03 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week03/homework/Homework_3_solution.html">Homework 03 Solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 4</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://q.utoronto.ca/courses/338580/files?preview=30071956">Prof. Li's Slides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week04/lecture/Class4_GGR274_MM.html">Prof. Moon's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week04/lab/Lab_4.html">Lab 04 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week04/lab/Lab_4_solutions.html">Lab 04 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week04/homework/Homework_4.html">Homework 04 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week04/homework/marking/Homework_4_solution.html">Homework 04 Solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 5</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../week05/lecture/Class5_GGR274_MM.html">Prof. Moon's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week05/lab/Lab_5.html">Lab 05 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week05/lab/Lab_5_solutions.html">Lab 05 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week05/homework/Homework_5.html">Homework 05 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week05/homework/marking/Homework_5_solution.html">Homework 05 Solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Practice Midterm</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../../practice/sample_midterm/GGR274_Midterm.html">2022 Midterm Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../practice/review_w1-3.html">Review of frequent errors and extra examples for weeks 1-3</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Midterm</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../../tests/midterm/Midterm.html">Midterm Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../tests/midterm-makeup/Midterm_makeup.html">Midterm (makeup) Notebook</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Course Project</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../../project/proposal/GGR274_Project_Proposal.html">Project Proposal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../project/presentation/GGR274_Final_Project_Instruction.html">Final Project Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../project/presentation/extras/GGR274DSconfslides.html">Final Project Presentation Slides Template</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../project/presentation/extras/Tipsandtricksforslides.html">Additional Tips and Tricks for Creating Slides in a Jupyter Notebook</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 7</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://q.utoronto.ca/courses/338580/files?preview=30627394">Prof. Li's Slides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week07/lecture/Class7_GGR274_MM.html">Prof. Moon's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week07/lab/Lab_7.html">Lab 07 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week07/lab/Lab_7_solutions.html">Lab 07 Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week07/homework/Homework_7.html">Homework 07 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week07/homework/marking/Homework_7_solution.html">Homework 07 Solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 8</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../week08/lecture/Class8_GGR274_MM.html">Prof. Moon's Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week08/lab/Lab_8.html">Lab 08 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week08/lab/marking/Lab_8_solution.html">Lab 08 Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week08/homework/Homework_8.html">Homework 08 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week08/homework/marking/Homework_8_solution.html">Homework 08 Solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 9</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../week09/lecture/Class9_GGR274_CL.html">Class 9</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../../../week09/lab/Lab_9.html">Lab 09 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week09/homework/Homework_9.html">Homework 09 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week09/homework/marking/Homework_9_solution.html">Homework 09 Solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 10</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../week10/lecture/Class10_GGR274_CL.html">Class 10</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../../../week10/lab/Lab_10.html">Lab 10 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week10/homework/Homework_10.html">Homework 10 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week10/homework/marking/Homework_10_solution.html">Homework 10 Solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 11</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../week11/lecture/Class11_GGR274_CL.html">Class 11</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../../../week11/lab/Lab_11.html">Lab 11 Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../week11/homework/Homework_11.html">Homework 11 Notebook</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 12</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Class12_GGR274_CL.html">Class 12</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="Cluster_analysis_exercise.html">Cluster Exercise</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Cluster Exercise Solutions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Practice Final</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../../practice/final_exam_2022/ggr_final_answers_2022.html">2022 Final Notebook</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://jupyter.utoronto.ca/hub/user-redirect/git-pull?repo=https%3A//github.com/UofTCompDSci/ggr274-20241&urlpath=tree/ggr274-20241/weekly-materials/week12/lecture/Exercise/Cluster_analysis_solution.ipynb&branch=main" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onJupyterHub"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">JupyterHub</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../../_sources/weekly-materials/week12/lecture/Exercise/Cluster_analysis_solution.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Exercise: Run a cluster analysis</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="exercise-run-a-cluster-analysis">
+<h1>Exercise: Run a cluster analysis<a class="headerlink" href="#exercise-run-a-cluster-analysis" title="Link to this heading">#</a></h1>
+<p>You will use the skills you’ve learned throughout the course to conduct two analyses where you compute the Moran’s I statistic.</p>
+<p><strong>Step 1</strong>
+Load the <code class="docutils literal notranslate"><span class="pre">Toronto_Neighbourhoods.geojson</span></code> and <code class="docutils literal notranslate"><span class="pre">toronto_health_data_2017.csv</span></code> files into python</p>
+<p><strong>Step 2</strong>
+Merge the health data with the spatial data</p>
+<p><strong>Step 3</strong>
+Generate a map of two of the three health variables included in the data set (e.g., pick diabetes and mental health, or mental health and asthma). Make sure to classify the data and make it look nice.</p>
+<p>For each of the two columns do the following:</p>
+<p><strong>Step 4</strong>
+Calculate a weights matrix using <code class="docutils literal notranslate"><span class="pre">libpysal</span></code> (referred to as <code class="docutils literal notranslate"><span class="pre">lps</span></code> below).
+<em>Hint</em> The function is <code class="docutils literal notranslate"><span class="pre">lps.weights.Queen.from_dataframe</span></code>.</p>
+<p><strong>Step 5</strong>
+Use the <code class="docutils literal notranslate"><span class="pre">esda.Moran()</span></code> function to calculate the moran’s I statistic and plot it.</p>
+<p><strong>Step 6</strong>
+Use the <code class="docutils literal notranslate"><span class="pre">esda.Moran_Local()</span></code> function to calculate the LISA statistic and plot it.</p>
+<p><strong>Step 7</strong>
+Interpret the global and local Moran’s statistics in a few sentences. What do they tell us about the spatial distribution of the two health outcomes you selected?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">mapclassify</span>
+<span class="kn">import</span> <span class="nn">esda</span>
+<span class="kn">import</span> <span class="nn">splot</span>
+<span class="kn">import</span> <span class="nn">libpysal</span> <span class="k">as</span> <span class="nn">lps</span>
+<span class="kn">import</span> <span class="nn">contextily</span> <span class="k">as</span> <span class="nn">cx</span>
+<span class="kn">from</span> <span class="nn">splot.esda</span> <span class="kn">import</span> <span class="n">moran_scatterplot</span>
+<span class="kn">from</span> <span class="nn">splot.esda</span> <span class="kn">import</span> <span class="n">lisa_cluster</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#start your code here - add cells as needed</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1) import data and clean</span>
+
+<span class="c1">## Neighborhood data</span>
+<span class="n">nbrhd</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="s2">&quot;Toronto_Neighbourhoods.geojson&quot;</span><span class="p">)</span>
+<span class="n">important_spat_cols</span> <span class="o">=</span> <span class="n">nbrhd</span><span class="o">.</span><span class="n">columns</span><span class="p">[[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">17</span><span class="p">]]</span>
+<span class="n">colnames_spat</span> <span class="o">=</span> <span class="p">{</span><span class="n">important_spat_cols</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span>
+           <span class="n">important_spat_cols</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">:</span> <span class="s1">&#39;nbrhd_spat_id&#39;</span><span class="p">,</span>
+           <span class="n">important_spat_cols</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="p">:</span> <span class="s1">&#39;geometry&#39;</span><span class="p">}</span>
+<span class="n">nbrhd_simple</span> <span class="o">=</span> <span class="n">nbrhd</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">nbrhd_simple</span> <span class="o">=</span> <span class="n">nbrhd_simple</span><span class="p">[</span><span class="n">important_spat_cols</span><span class="p">]</span>
+<span class="n">nbrhd_simple</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="n">colnames_spat</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># remember to change the data type of neighbor id</span>
+<span class="n">nbrhd_simple</span><span class="p">[</span><span class="s2">&quot;Neighbid&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">nbrhd_simple</span><span class="p">[</span><span class="s2">&quot;nbrhd_spat_id&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span> 
+<span class="n">nbrhd_simple</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>nbrhd_spat_id</th>
+      <th>geometry</th>
+      <th>Neighbid</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Casa Loma (96)</td>
+      <td>096</td>
+      <td>POLYGON ((-79.41469 43.67391, -79.41485 43.674...</td>
+      <td>96</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Annex (95)</td>
+      <td>095</td>
+      <td>POLYGON ((-79.39414 43.66872, -79.39588 43.668...</td>
+      <td>95</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Caledonia-Fairbank (109)</td>
+      <td>109</td>
+      <td>POLYGON ((-79.46021 43.68156, -79.46044 43.681...</td>
+      <td>109</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Woodbine Corridor (64)</td>
+      <td>064</td>
+      <td>POLYGON ((-79.31485 43.66674, -79.31660 43.666...</td>
+      <td>64</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Lawrence Park South (103)</td>
+      <td>103</td>
+      <td>POLYGON ((-79.41096 43.70408, -79.41165 43.703...</td>
+      <td>103</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Health data</span>
+
+<span class="n">health</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;toronto_health_data_2017.csv&#39;</span><span class="p">)</span>
+<span class="n">health_rename_dict</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;NeighbID&#39;</span><span class="p">:</span> <span class="s1">&#39;Neighbid&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;prev_diab_20up&#39;</span><span class="p">:</span> <span class="s1">&#39;diabetes&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;prev_asthma_0up&#39;</span><span class="p">:</span> <span class="s1">&#39;asthma&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;prev_mh_20up&#39;</span><span class="p">:</span> <span class="s1">&#39;mentalhealth&#39;</span>
+<span class="p">}</span>
+<span class="n">health</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="n">health_rename_dict</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">health</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Neighbid</th>
+      <th>Name</th>
+      <th>diabetes</th>
+      <th>asthma</th>
+      <th>mentalhealth</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>West Humber-Clairville</td>
+      <td>18.2</td>
+      <td>15.9</td>
+      <td>7.2</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Mount Olive-Silverstone-Jamestown</td>
+      <td>18.4</td>
+      <td>14.6</td>
+      <td>8.1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Thistletown-Beaumond Heights</td>
+      <td>17.7</td>
+      <td>16.0</td>
+      <td>8.4</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>Rexdale-Kipling</td>
+      <td>17.5</td>
+      <td>16.7</td>
+      <td>9.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>Elms-Old Rexdale</td>
+      <td>17.0</td>
+      <td>19.0</td>
+      <td>8.9</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Check the order of the neighborhood id</span>
+<span class="n">nbrhd_simple</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span> <span class="o">=</span> <span class="s1">&#39;Neighbid&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>nbrhd_spat_id</th>
+      <th>geometry</th>
+      <th>Neighbid</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>30</th>
+      <td>West Humber-Clairville (1)</td>
+      <td>001</td>
+      <td>POLYGON ((-79.55236 43.70947, -79.55238 43.709...</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>40</th>
+      <td>Mount Olive-Silverstone-Jamestown (2)</td>
+      <td>002</td>
+      <td>POLYGON ((-79.60338 43.75786, -79.60205 43.758...</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>124</th>
+      <td>Thistletown-Beaumond Heights (3)</td>
+      <td>003</td>
+      <td>POLYGON ((-79.57751 43.73384, -79.57806 43.734...</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>122</th>
+      <td>Rexdale-Kipling (4)</td>
+      <td>004</td>
+      <td>POLYGON ((-79.55512 43.71510, -79.55504 43.714...</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>Elms-Old Rexdale (5)</td>
+      <td>005</td>
+      <td>POLYGON ((-79.55512 43.71510, -79.55569 43.716...</td>
+      <td>5</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 2) Merge health data to neighbhorhood</span>
+
+<span class="n">nbrhd_health</span> <span class="o">=</span> <span class="n">nbrhd_simple</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">health</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;Neighbid&#39;</span><span class="p">)</span>
+<span class="n">nbrhd_health</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>nbrhd_spat_id</th>
+      <th>geometry</th>
+      <th>Neighbid</th>
+      <th>Name</th>
+      <th>diabetes</th>
+      <th>asthma</th>
+      <th>mentalhealth</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Casa Loma (96)</td>
+      <td>096</td>
+      <td>POLYGON ((-79.41469 43.67391, -79.41485 43.674...</td>
+      <td>96</td>
+      <td>Casa Loma</td>
+      <td>8.1</td>
+      <td>13.6</td>
+      <td>9.3</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Annex (95)</td>
+      <td>095</td>
+      <td>POLYGON ((-79.39414 43.66872, -79.39588 43.668...</td>
+      <td>95</td>
+      <td>Annex</td>
+      <td>7.4</td>
+      <td>12.4</td>
+      <td>9.7</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Caledonia-Fairbank (109)</td>
+      <td>109</td>
+      <td>POLYGON ((-79.46021 43.68156, -79.46044 43.681...</td>
+      <td>109</td>
+      <td>Caledonia-Fairbank</td>
+      <td>14.3</td>
+      <td>16.6</td>
+      <td>9.8</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Woodbine Corridor (64)</td>
+      <td>064</td>
+      <td>POLYGON ((-79.31485 43.66674, -79.31660 43.666...</td>
+      <td>64</td>
+      <td>Woodbine Corridor</td>
+      <td>8.9</td>
+      <td>14.7</td>
+      <td>10.3</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Lawrence Park South (103)</td>
+      <td>103</td>
+      <td>POLYGON ((-79.41096 43.70408, -79.41165 43.703...</td>
+      <td>103</td>
+      <td>Lawrence Park South</td>
+      <td>6.2</td>
+      <td>14.7</td>
+      <td>8.3</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 3) Map two health outcome variables. We pick diabetes and mentalhealth here</span>
+
+<span class="c1">## Before mapping, it is a good idea to see the distribution of the variables</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+
+<span class="n">nbrhd_health</span><span class="o">.</span><span class="n">diabetes</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">nbrhd_health</span><span class="o">.</span><span class="n">mentalhealth</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+</pre></div>
+</div>
+<img alt="../../../../_images/752c24295b247e996f425e4f7e03787246308dc9d4b606a731514b7f6e80f1ba.png" src="../../../../_images/752c24295b247e996f425e4f7e03787246308dc9d4b606a731514b7f6e80f1ba.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Map the variables in quantiles</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">20</span><span class="p">))</span>
+
+<span class="n">nbrhd_health</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">column</span> <span class="o">=</span> <span class="s1">&#39;diabetes&#39;</span><span class="p">,</span> <span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;YlOrRd&#39;</span><span class="p">,</span> 
+                  <span class="n">scheme</span><span class="o">=</span><span class="s1">&#39;quantiles&#39;</span><span class="p">,</span><span class="n">k</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+                 <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">legend_kwds</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;loc&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;Percent Diabetes&#39;</span><span class="p">,</span> 
+                               <span class="s1">&#39;title_fontsize&#39;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span><span class="s1">&#39;fontsize&#39;</span><span class="p">:</span> <span class="mi">12</span><span class="p">})</span>
+<span class="n">nbrhd_health</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">column</span> <span class="o">=</span> <span class="s1">&#39;mentalhealth&#39;</span><span class="p">,</span> <span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;YlGnBu&#39;</span><span class="p">,</span> <span class="n">scheme</span><span class="o">=</span><span class="s1">&#39;quantiles&#39;</span><span class="p">,</span><span class="n">k</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+                <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">legend_kwds</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;loc&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;Percent mental health&#39;</span><span class="p">,</span> 
+                               <span class="s1">&#39;title_fontsize&#39;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span><span class="s1">&#39;fontsize&#39;</span><span class="p">:</span> <span class="mi">12</span><span class="p">})</span>
+
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Diabetes&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Mental Health&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Mental Health&#39;)
+</pre></div>
+</div>
+<img alt="../../../../_images/bc8643f06717f708f11c91c7e1dc8c8b24cea0fcadfa0b8a8449772d43c5ea26.png" src="../../../../_images/bc8643f06717f708f11c91c7e1dc8c8b24cea0fcadfa0b8a8449772d43c5ea26.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># For each variable</span>
+<span class="c1"># 4) calculate a weight matrix</span>
+<span class="c1">## Note: the weight matrix is the same for both variables</span>
+
+<span class="c1">## Reproject the gdf to a projection coordinate system</span>
+<span class="n">nbrhd_health</span> <span class="o">=</span> <span class="n">nbrhd_health</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="s2">&quot;EPSG:3857&quot;</span><span class="p">)</span>
+
+<span class="c1">## Create Queen&#39;s contiguity weight matrix</span>
+<span class="n">w</span> <span class="o">=</span> <span class="n">lps</span><span class="o">.</span><span class="n">weights</span><span class="o">.</span><span class="n">Queen</span><span class="o">.</span><span class="n">from_dataframe</span><span class="p">(</span><span class="n">nbrhd_health</span><span class="p">)</span>
+
+<span class="c1">## Normalization</span>
+<span class="n">w</span><span class="o">.</span><span class="n">transform</span> <span class="o">=</span> <span class="s1">&#39;R&#39;</span>
+
+<span class="c1">## Plot the contiguity matrix</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span>
+<span class="n">nbrhd_health</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span> <span class="o">=</span> <span class="n">axes</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">facecolor</span> <span class="o">=</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+<span class="n">w</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">nbrhd_health</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">,</span> 
+        <span class="n">edge_kws</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span>
+        <span class="n">node_kws</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">marker</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/p0/ynn6kljd5pg6sh4_616yzw3c0000gn/T/ipykernel_3507/2886366439.py:9: FutureWarning: `use_index` defaults to False but will default to True in future. Set True/False directly to control this behavior and silence this warning
+  w = lps.weights.Queen.from_dataframe(nbrhd_health)
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&lt;Figure size 864x864 with 1 Axes&gt;, &lt;AxesSubplot:&gt;)
+</pre></div>
+</div>
+<img alt="../../../../_images/357b849c2b5209274b6500a7cb945d7790ec0ffd902ba02ff7f10bb22454fc8a.png" src="../../../../_images/357b849c2b5209274b6500a7cb945d7790ec0ffd902ba02ff7f10bb22454fc8a.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 5) Calculate the global Moran&#39;s I and plot it</span>
+
+<span class="c1">## Diabetes</span>
+
+<span class="n">mi_diabetes</span> <span class="o">=</span> <span class="n">esda</span><span class="o">.</span><span class="n">Moran</span><span class="p">(</span><span class="n">nbrhd_health</span><span class="p">[</span><span class="s1">&#39;diabetes&#39;</span><span class="p">],</span> <span class="n">w</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The Morans I value is: &#39;</span><span class="p">,</span> <span class="n">mi_diabetes</span><span class="o">.</span><span class="n">I</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The p-value of this Morans I value is: &#39;</span><span class="p">,</span> <span class="n">mi_diabetes</span><span class="o">.</span><span class="n">p_sim</span><span class="p">)</span>
+
+<span class="c1">#visualize!</span>
+<span class="n">splot</span><span class="o">.</span><span class="n">esda</span><span class="o">.</span><span class="n">moran_scatterplot</span><span class="p">(</span><span class="n">mi_diabetes</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The Morans I value is:  0.7810426925829449
+The p-value of this Morans I value is:  0.001
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&lt;Figure size 504x504 with 1 Axes&gt;,
+ &lt;AxesSubplot:title={&#39;center&#39;:&#39;Moran Scatterplot (0.78)&#39;}, xlabel=&#39;Attribute&#39;, ylabel=&#39;Spatial Lag&#39;&gt;)
+</pre></div>
+</div>
+<img alt="../../../../_images/f7d4d58731a6f44061f99e1bf7ed5b15bcd9aedaa302ed3589c82de8359d30d6.png" src="../../../../_images/f7d4d58731a6f44061f99e1bf7ed5b15bcd9aedaa302ed3589c82de8359d30d6.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Mental health</span>
+
+<span class="n">mi_mentalhealth</span> <span class="o">=</span> <span class="n">esda</span><span class="o">.</span><span class="n">Moran</span><span class="p">(</span><span class="n">nbrhd_health</span><span class="p">[</span><span class="s1">&#39;mentalhealth&#39;</span><span class="p">],</span> <span class="n">w</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The Morans I value is: &#39;</span><span class="p">,</span> <span class="n">mi_mentalhealth</span><span class="o">.</span><span class="n">I</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The p-value of this Morans I value is: &#39;</span><span class="p">,</span> <span class="n">mi_mentalhealth</span><span class="o">.</span><span class="n">p_sim</span><span class="p">)</span>
+
+<span class="c1">#visualize!</span>
+<span class="n">splot</span><span class="o">.</span><span class="n">esda</span><span class="o">.</span><span class="n">moran_scatterplot</span><span class="p">(</span><span class="n">mi_mentalhealth</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The Morans I value is:  0.6056281976101754
+The p-value of this Morans I value is:  0.001
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&lt;Figure size 504x504 with 1 Axes&gt;,
+ &lt;AxesSubplot:title={&#39;center&#39;:&#39;Moran Scatterplot (0.61)&#39;}, xlabel=&#39;Attribute&#39;, ylabel=&#39;Spatial Lag&#39;&gt;)
+</pre></div>
+</div>
+<img alt="../../../../_images/af4eae365b26d22bc42953abf792a0783642dfc0608032486953bf3c366b561f.png" src="../../../../_images/af4eae365b26d22bc42953abf792a0783642dfc0608032486953bf3c366b561f.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 6) Calculate local cluster indicator LISA</span>
+
+<span class="c1">## diabetes</span>
+<span class="n">lisa_diabetes</span> <span class="o">=</span> <span class="n">esda</span><span class="o">.</span><span class="n">Moran_Local</span><span class="p">(</span><span class="n">nbrhd_health</span><span class="p">[</span><span class="s1">&#39;diabetes&#39;</span><span class="p">],</span> <span class="n">w</span><span class="p">)</span>
+<span class="n">splot</span><span class="o">.</span><span class="n">esda</span><span class="o">.</span><span class="n">plot_local_autocorrelation</span><span class="p">(</span><span class="n">lisa_diabetes</span><span class="p">,</span> <span class="n">nbrhd_health</span><span class="p">,</span> <span class="s1">&#39;diabetes&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&lt;Figure size 1080x288 with 3 Axes&gt;,
+ array([&lt;AxesSubplot:title={&#39;center&#39;:&#39;Moran Local Scatterplot&#39;}, xlabel=&#39;Attribute&#39;, ylabel=&#39;Spatial Lag&#39;&gt;,
+        &lt;AxesSubplot:&gt;, &lt;AxesSubplot:&gt;], dtype=object))
+</pre></div>
+</div>
+<img alt="../../../../_images/571f1dd4a20da7e7bc79dc6013a28f3800c92aa4ed1c720a808da7c2bf4e62b8.png" src="../../../../_images/571f1dd4a20da7e7bc79dc6013a28f3800c92aa4ed1c720a808da7c2bf4e62b8.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## mental health</span>
+<span class="n">lisa_mentalhealth</span> <span class="o">=</span> <span class="n">esda</span><span class="o">.</span><span class="n">Moran_Local</span><span class="p">(</span><span class="n">nbrhd_health</span><span class="p">[</span><span class="s1">&#39;mentalhealth&#39;</span><span class="p">],</span> <span class="n">w</span><span class="p">)</span>
+<span class="n">splot</span><span class="o">.</span><span class="n">esda</span><span class="o">.</span><span class="n">plot_local_autocorrelation</span><span class="p">(</span><span class="n">lisa_mentalhealth</span><span class="p">,</span> <span class="n">nbrhd_health</span><span class="p">,</span> <span class="s1">&#39;mentalhealth&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&lt;Figure size 1080x288 with 3 Axes&gt;,
+ array([&lt;AxesSubplot:title={&#39;center&#39;:&#39;Moran Local Scatterplot&#39;}, xlabel=&#39;Attribute&#39;, ylabel=&#39;Spatial Lag&#39;&gt;,
+        &lt;AxesSubplot:&gt;, &lt;AxesSubplot:&gt;], dtype=object))
+</pre></div>
+</div>
+<img alt="../../../../_images/b2fe6ad79b3507e37f8a420e07c2b7c27cf89874836a4e176bc24257f65d020b.png" src="../../../../_images/b2fe6ad79b3507e37f8a420e07c2b7c27cf89874836a4e176bc24257f65d020b.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 7) Interpretation</span>
+
+<span class="c1">## Make your interpretation here!</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./weekly-materials/week12/lecture/Exercise"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Cluster_analysis_exercise.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Exercise: Run a cluster analysis</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../../../../practice/final_exam_2022/ggr_final_answers_2022.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Instructions</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By GGR274 Instructors
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
