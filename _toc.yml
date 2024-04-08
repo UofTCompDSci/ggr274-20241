@@ -174,8 +174,8 @@ parts:
       title: Lab 11 Notebook
     - file: weekly-materials/week11/homework/Homework_11.ipynb
       title: Homework 11 Notebook
-    # - file: weekly-materials/week11/homework/marking/Homework_11_solution.ipynb
-    #   title: Homework 11 Solutions
+    - file: weekly-materials/week11/homework/marking/Homework_11_solution.ipynb
+      title: Homework 11 Solutions
 
   - caption: Week 12
     chapters:
