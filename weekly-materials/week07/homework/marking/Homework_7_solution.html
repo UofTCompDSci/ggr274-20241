@@ -42,7 +42,7 @@
   <script src="../../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
     <script src="../../../../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../../../_static/copybutton.js?v=f281be69"></script>
@@ -587,6 +587,18 @@ All homeworks will take place in a Jupyter notebook (like this one). When you ar
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/0j/ybsv4ncn5w50v40vdh5jjlww0000gn/T/ipykernel_99251/207783302.py:2: DeprecationWarning: 
+Pyarrow will become a required dependency of pandas in the next major release of pandas (pandas 3.0),
+(to allow more performant data types, such as the Arrow string type, and better interoperability with other libraries)
+but was not found to be installed on your system.
+If this would cause problems for you,
+please provide us feedback at https://github.com/pandas-dev/pandas/issues/54466
+        
+  import pandas as pd
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 <section id="step-2">
@@ -638,57 +650,57 @@ All homeworks will take place in a Jupyter notebook (like this one). When you ar
   </thead>
   <tbody>
     <tr>
-      <td>0</td>
+      <th>0</th>
       <td>10000</td>
       <td>0</td>
     </tr>
     <tr>
-      <td>1</td>
+      <th>1</th>
       <td>10001</td>
       <td>0</td>
     </tr>
     <tr>
-      <td>2</td>
+      <th>2</th>
       <td>10002</td>
       <td>120</td>
     </tr>
     <tr>
-      <td>3</td>
+      <th>3</th>
       <td>10003</td>
       <td>0</td>
     </tr>
     <tr>
-      <td>4</td>
+      <th>4</th>
       <td>10004</td>
       <td>0</td>
     </tr>
     <tr>
-      <td>...</td>
+      <th>...</th>
       <td>...</td>
       <td>...</td>
     </tr>
     <tr>
-      <td>17385</td>
+      <th>17385</th>
       <td>27385</td>
       <td>0</td>
     </tr>
     <tr>
-      <td>17386</td>
+      <th>17386</th>
       <td>27386</td>
       <td>0</td>
     </tr>
     <tr>
-      <td>17387</td>
+      <th>17387</th>
       <td>27387</td>
       <td>30</td>
     </tr>
     <tr>
-      <td>17388</td>
+      <th>17388</th>
       <td>27388</td>
       <td>10</td>
     </tr>
     <tr>
-      <td>17389</td>
+      <th>17389</th>
       <td>27389</td>
       <td>135</td>
     </tr>
@@ -775,6 +787,7 @@ Name: time_spent_cleaning, dtype: float64
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0, &#39;Time spent cleaning (minutes)&#39;)
 </pre></div>
 </div>
+<img alt="../../../../_images/63b167c0044f3e6bc18ade60bb897d6b9755528c3891e7f8a14f4b54edbb6ce3.png" src="../../../../_images/63b167c0044f3e6bc18ade60bb897d6b9755528c3891e7f8a14f4b54edbb6ce3.png" />
 </div>
 </div>
 </section>
@@ -783,7 +796,9 @@ Name: time_spent_cleaning, dtype: float64
 <p>In a markdown cell, describe the distribution of data, pointing out features like mode (where most observations lie), skew, and potential outliers. Do our results make sense given what we know about time spent on daily cleaning?</p>
 <p>Are there any strange values? Specifically, does it make sense for people to spend 0 mins cleaning?  Briefly explain.
 <strong>(2 marks)</strong></p>
-<p><strong>Answer goes here …</strong></p>
+<blockquote>
+<div><p>From the histogram, you can tell that the data is <strong>right-skewed</strong> (or a decreasing shape; you don’t need to use the exact term), ranges between 0 and just above 800, centred around the lower end (0~200), etc. There is a large number of values with 0 minute. One may argue that it doesn’t make sense to have so many people spend 0 minute cleaning in a day or argue the other way. e.g., perhaps it’s reasonable to assume people clean as they are involved in other activities but don’t recognize it as time spent on cleaning. Any reasonable explanation based on the context would be acceptable.</p>
+</div></blockquote>
 </section>
 </section>
 <section id="task-3-compute-the-empirical-mean">
@@ -1159,7 +1174,23 @@ EEB125
 <section id="step-2-answer-this-question">
 <h2>Step 2 - Answer this question<a class="headerlink" href="#step-2-answer-this-question" title="Link to this heading">#</a></h2>
 <p>Briefly explain what the keys and values represent in the dictionary <code class="docutils literal notranslate"><span class="pre">all_sample_means_by_sample_size</span></code>.  You can obtain the keys by using the <code class="docutils literal notranslate"><span class="pre">keys</span></code> method <code class="docutils literal notranslate"><span class="pre">all_sample_means_by_sample_size.keys()</span></code>.</p>
-<p><strong>answer to question …</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">all_sample_means_by_sample_size</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">all_sample_means_by_sample_size</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_keys([5, 10, 20, 50, 100, 200, 500, 1000])
+dict_values([[112.0, 70.0, 155.0, 43.0, 102.0, 63.0, 76.0, 92.0, 83.0, 103.0, 99.0, 53.0, 78.0, 60.0, 70.0, 48.0, 128.0, 225.0, 74.0, 53.0, 59.0, 69.0, 46.0, 149.0, 200.0, 69.0, 45.0, 40.0, 114.0, 47.0, 43.0, 177.0, 149.0, 42.0, 140.0, 55.0, 70.0, 54.0, 84.0, 106.0, 85.0, 67.0, 152.0, 65.0, 77.0, 85.0, 104.0, 155.0, 59.0, 46.0, 124.0, 103.0, 46.0, 67.0, 70.0, 106.0, 255.0, 66.0, 159.0, 159.0, 92.0, 74.0, 87.0, 45.0, 84.0, 78.0, 78.0, 157.0, 46.0, 52.0, 113.0, 120.0, 86.0, 137.0, 49.0, 27.0, 123.0, 32.0, 47.0, 93.0, 159.0, 26.0, 94.0, 155.0, 82.0, 145.0, 69.0, 117.0, 51.0, 33.0, 54.0, 77.0, 67.0, 51.0, 68.0, 50.0, 160.0, 139.0, 62.0, 108.0], [74.0, 74.0, 129.5, 52.5, 123.5, 97.0, 72.0, 104.5, 95.5, 99.0, 99.5, 60.0, 68.0, 47.0, 74.5, 78.5, 98.5, 165.5, 71.0, 65.5, 67.5, 77.0, 111.5, 128.0, 130.0, 81.5, 83.5, 71.5, 82.0, 72.0, 69.5, 135.0, 106.0, 104.0, 112.0, 77.5, 64.5, 70.0, 79.0, 84.0, 106.0, 74.5, 109.5, 72.0, 88.5, 63.5, 104.5, 150.0, 62.5, 70.5, 104.5, 78.0, 73.0, 60.5, 62.0, 105.5, 197.5, 78.5, 138.5, 128.5, 87.5, 74.0, 77.5, 57.5, 100.5, 106.5, 88.0, 105.5, 72.5, 96.5, 93.5, 101.0, 65.5, 106.5, 92.0, 57.0, 92.5, 34.5, 90.5, 73.0, 109.0, 56.5, 59.0, 116.5, 90.5, 100.5, 73.0, 121.0, 137.0, 47.0, 87.5, 67.5, 72.0, 44.0, 106.0, 58.0, 125.5, 127.5, 72.4, 82.5], [55.75, 69.25, 89.25, 70.0, 106.75, 78.75, 67.0, 103.25, 82.5, 84.75, 76.0, 72.0, 96.5, 72.25, 86.25, 93.5, 78.25, 114.75, 79.5, 80.0, 72.25, 82.5, 90.5, 115.25, 97.0, 102.5, 68.75, 76.5, 87.75, 95.75, 73.0, 109.5, 127.25, 129.5, 124.5, 75.5, 79.0, 80.5, 79.25, 96.75, 98.0, 99.25, 87.0, 112.25, 74.0, 89.75, 87.0, 122.0, 69.25, 49.5, 101.25, 89.5, 77.0, 68.25, 65.25, 86.25, 145.25, 77.0, 98.0, 119.5, 89.75, 81.25, 80.75, 86.0, 78.75, 96.5, 110.0, 89.75, 79.75, 88.0, 95.25, 78.75, 67.25, 87.0, 75.25, 66.0, 110.0, 46.25, 105.5, 81.0, 106.5, 70.25, 89.5, 110.75, 76.25, 101.5, 75.0, 117.25, 140.5, 60.5, 91.5, 89.0, 69.0, 67.75, 112.25, 105.5, 101.5, 112.0, 81.95, 95.0], [79.6, 76.3, 104.9, 86.6, 100.5, 90.2, 98.2, 99.7, 87.3, 76.0, 72.1, 67.0, 86.0, 62.4, 114.7, 96.8, 91.1, 115.6, 91.3, 94.0, 90.9, 104.7, 74.4, 106.2, 87.8, 82.8, 92.6, 73.6, 100.2, 90.6, 74.9, 106.72, 103.3, 118.8, 110.8, 84.3, 97.4, 107.6, 96.9, 83.5, 86.3, 109.6, 71.9, 84.2, 88.7, 106.0, 85.2, 103.4, 93.1, 74.8, 92.2, 97.1, 85.8, 75.5, 107.8, 88.9, 140.7, 90.6, 83.6, 97.9, 76.4, 102.3, 91.1, 98.8, 98.4, 79.6, 102.4, 73.9, 118.1, 110.2, 91.9, 94.9, 100.6, 94.2, 81.1, 76.1, 108.0, 61.2, 84.3, 93.5, 101.9, 87.7, 104.4, 91.5, 71.1, 85.3, 90.2, 99.9, 109.7, 60.2, 88.6, 108.0, 72.3, 78.8, 103.8, 106.9, 84.6, 90.4, 86.98, 139.5], [76.5, 78.35, 89.9, 93.65, 91.5, 94.45, 94.6, 90.55, 88.3, 68.0, 72.8, 73.5, 95.4, 70.75, 105.4, 86.45, 97.05, 102.05, 93.7, 93.5, 97.7, 99.45, 86.55, 100.25, 99.5, 85.6, 81.45, 82.75, 97.9, 89.25, 83.05, 86.36, 93.5, 103.4, 99.55, 95.75, 101.1, 109.2, 94.4, 77.45, 87.7, 95.5, 74.55, 82.75, 87.35, 105.54, 89.05, 89.95, 89.8, 81.05, 97.25, 85.85, 89.8, 80.6, 93.25, 86.15, 113.0, 89.0, 87.35, 88.55, 96.35, 103.1, 84.65, 98.6, 89.5, 77.0, 89.6, 83.75, 105.75, 94.3, 89.65, 91.05, 96.05, 87.25, 83.6, 93.5, 89.95, 74.95, 82.4, 85.75, 97.8, 93.65, 90.65, 84.85, 78.95, 81.55, 94.15, 95.9, 92.1, 82.55, 95.15, 104.5, 82.5, 86.25, 106.4, 95.5, 96.75, 98.1, 97.74, 110.4], [80.65, 73.475, 96.15, 94.325, 89.25, 100.0, 91.15, 85.35, 84.25, 86.075, 85.875, 86.225, 84.025, 89.175, 93.025, 91.625, 100.35, 99.35, 92.95, 89.675, 86.575, 91.375, 94.55, 99.325, 89.125, 88.1, 86.325, 87.77, 96.6, 84.8, 84.75, 82.53, 96.5, 95.975, 94.6, 97.4, 97.9, 96.425, 89.25, 81.575, 86.975, 92.125, 71.2, 88.4, 92.2, 101.42, 90.925, 92.125, 94.05, 89.55, 99.8, 88.3, 87.65, 87.05, 91.475, 95.6, 106.825, 94.72, 86.825, 91.645, 88.075, 96.275, 88.35, 96.425, 82.55, 80.8, 90.37, 93.475, 93.0, 87.85, 84.65, 96.425, 93.6, 97.75, 88.2, 97.3, 87.975, 83.7, 85.45, 83.175, 87.675, 99.575, 80.75, 90.925, 92.85, 87.4, 98.375, 96.3, 106.775, 83.025, 90.2, 94.975, 94.375, 98.675, 96.225, 91.125, 94.65, 96.275, 96.195, 99.5], [85.49, 80.82, 91.79, 94.59, 86.88, 91.86, 85.45, 91.062, 92.76, 92.79, 88.28, 89.762, 85.53, 92.2, 92.27, 91.008, 96.7, 89.43, 91.45, 86.602, 91.43, 93.34, 93.39, 93.08, 94.46, 92.1, 90.032, 90.678, 98.39, 83.59, 90.45, 88.082, 96.12, 93.942, 92.448, 90.23, 96.448, 99.948, 90.5, 87.03, 89.69, 90.81, 79.498, 85.14, 95.9, 94.488, 88.93, 96.412, 95.502, 90.64, 92.14, 89.37, 91.042, 89.74, 88.452, 91.43, 100.52, 95.738, 85.03, 93.238, 98.55, 93.38, 84.66, 97.43, 86.26, 88.71, 90.028, 92.99, 92.48, 92.238, 86.34, 90.77, 97.74, 89.28, 87.18, 87.22, 88.61, 87.76, 92.55, 87.46, 89.54, 90.53, 87.138, 91.852, 91.158, 87.29, 92.62, 101.03, 98.66, 90.58, 96.76, 91.68, 89.042, 94.86, 101.17, 94.0, 93.25, 94.66, 90.798, 97.11], [90.374, 90.405, 93.855, 95.23, 93.335, 89.36, 89.035, 92.305, 94.074, 94.24, 86.465, 89.836, 89.375, 89.34, 92.92, 89.004, 93.295, 90.97, 93.74, 91.286, 89.34, 93.235, 91.82, 96.275, 94.991, 88.179, 88.296, 93.835, 94.72, 86.45, 91.811, 84.876, 91.27, 94.831, 90.37, 91.095, 95.344, 93.229, 91.46, 91.715, 88.82, 95.02, 85.164, 86.7, 92.1, 91.069, 93.65, 92.026, 89.35, 91.18, 94.96, 92.041, 92.171, 90.27, 87.531, 90.004, 93.23, 95.17, 88.22, 93.721, 95.37, 91.321, 87.845, 95.335, 89.125, 90.35, 90.194, 90.271, 93.641, 93.219, 90.245, 94.16, 93.82, 86.625, 88.89, 89.16, 88.415, 85.72, 93.514, 89.244, 88.659, 94.689, 89.23, 92.691, 92.129, 90.34, 92.26, 94.81, 95.67, 90.03, 92.431, 88.57, 90.94, 90.555, 99.355, 92.245, 90.891, 94.78, 91.219, 93.94]])
+</pre></div>
+</div>
+</div>
+</div>
+<blockquote>
+<div><p>The <code class="docutils literal notranslate"><span class="pre">keys</span></code> in the dictionary represent the sample size used to simulate the <code class="docutils literal notranslate"><span class="pre">values</span></code>. Note that the <code class="docutils literal notranslate"><span class="pre">keys</span></code> have 8 numbers and <code class="docutils literal notranslate"><span class="pre">values</span></code> have 8 list of 100 simulated values using the sample sizes in the corresponding <code class="docutils literal notranslate"><span class="pre">keys</span></code>.)</p>
+</div></blockquote>
 </section>
 <section id="task-6-plot-the-results">
 <h2>Task 6 - Plot the results<a class="headerlink" href="#task-6-plot-the-results" title="Link to this heading">#</a></h2>
@@ -1179,6 +1210,21 @@ EEB125
 <span class="n">mean_of_sample_means_by_sample_size</span> <span class="o">=</span> <span class="n">sample_means_by_sample_size</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 
 <span class="n">diff_sample_mean_empirical_means_by_sample_size</span> <span class="o">=</span> <span class="n">mean_of_sample_means_by_sample_size</span> <span class="o">-</span> <span class="n">empirical_mean_time_spent_cleaning</span>
+
+<span class="n">mean_of_sample_means_by_sample_size</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5       89.82000
+10      89.08400
+20      89.01200
+50      92.40400
+100     90.76790
+200     91.14500
+500     91.41486
+1000    91.45881
+dtype: float64
 </pre></div>
 </div>
 </div>
@@ -1207,7 +1253,7 @@ EEB125
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Difference between sample mean and population mean&#39;)
 </pre></div>
 </div>
-<img alt="../../../../_images/e193df1921d93974f9ab096747e6ee2d450a0f364f710897ae1a07c960b29106.png" src="../../../../_images/e193df1921d93974f9ab096747e6ee2d450a0f364f710897ae1a07c960b29106.png" />
+<img alt="../../../../_images/e0b4dc3ae9fc4ad2d5cd915ab34d368fcc957776752b922c0ccea973b957d992.png" src="../../../../_images/e0b4dc3ae9fc4ad2d5cd915ab34d368fcc957776752b922c0ccea973b957d992.png" />
 </div>
 </div>
 </section>
@@ -1218,15 +1264,21 @@ EEB125
 <ol class="arabic simple">
 <li><p>What is the empirical mean time spent cleaning by respondents per day (in minutes). Does this value make sense? Why or why not? Answer in one line. <strong>(1 mark)</strong></p></li>
 </ol>
-<p><strong>Answer goes here …</strong></p>
+<blockquote>
+<div><p>The empirical mean time spent cleaning is stored in <code class="docutils literal notranslate"><span class="pre">empirical_mean_time_spent_cleaning</span></code>. It is approximately 91 minutes. It seems reasonable that people spend about an hour and a half cleaning per day on average. (Any reasonable argument based on the context and the correctvalue is acceptable.)</p>
+</div></blockquote>
 <ol class="arabic simple" start="2">
 <li><p>Based on your final scatter plot, what trend or pattern do you notice between sample size and difference between the mean of sample means and empirical mean? Does the difference decrease or increase with sample size? Explain why this trend is seen, drawing on your understanding of randomness of sampling. <strong>(2 marks)</strong></p></li>
 </ol>
-<p><strong>Answer goes here …</strong></p>
+<blockquote>
+<div><p>As the sample size increases, the difference becomes closer to 0. This is due to the law of averages (or explain that with a larger sample size, a random sample is more likely to represent the population closesly.)</p>
+</div></blockquote>
 <ol class="arabic simple" start="3">
 <li><p>If you were to do further analysis to study how the time spent cleaning is different for various subpopulations, which additional sociodemographic variables might you consider? Why? Write 3-5 sentences identifying 1-2 variables (e.g. age - don’t pick this!) of interest and what differences in cleaning time you might expect to find.</p></li>
 </ol>
-<p><strong>Answer goes here …</strong></p>
+<blockquote>
+<div><p>(Any sociodemographic variable is acceptable with a reasonable expected difference identified.)</p>
+</div></blockquote>
 </section>
 </section>
 
