@@ -531,6 +531,118 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Neighb id</th>
+      <th>Neighbourhood name</th>
+      <th>POPULATION</th>
+      <th>INSTABILITY</th>
+      <th>INSTABILITY_Q</th>
+      <th>DEPRIVATION</th>
+      <th>DEPRIVATION_Q</th>
+      <th>ETHNICCONCENTRATION</th>
+      <th>ETHNICCONCENTRATION_Q</th>
+      <th>DEPENDENCY</th>
+      <th>DEPENDENCY_Q</th>
+      <th>ONMARG_COMBINED_Q</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>West Humber-Clairville</td>
+      <td>32252</td>
+      <td>-0.6639</td>
+      <td>1</td>
+      <td>0.1620</td>
+      <td>3</td>
+      <td>2.4548</td>
+      <td>5</td>
+      <td>-0.2021</td>
+      <td>3</td>
+      <td>2.4</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Mount Olive-Silverstone-Jamestown</td>
+      <td>32127</td>
+      <td>-0.1081</td>
+      <td>1</td>
+      <td>1.0195</td>
+      <td>5</td>
+      <td>3.7433</td>
+      <td>5</td>
+      <td>-0.5975</td>
+      <td>1</td>
+      <td>2.4</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Thistletown-Beaumond Heights</td>
+      <td>9928</td>
+      <td>-0.3131</td>
+      <td>1</td>
+      <td>0.3460</td>
+      <td>4</td>
+      <td>1.6220</td>
+      <td>4</td>
+      <td>0.2845</td>
+      <td>5</td>
+      <td>2.8</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>Rexdale-Kipling</td>
+      <td>10725</td>
+      <td>0.1866</td>
+      <td>2</td>
+      <td>0.4704</td>
+      <td>4</td>
+      <td>1.2396</td>
+      <td>3</td>
+      <td>0.2734</td>
+      <td>5</td>
+      <td>2.8</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>Elms-Old Rexdale</td>
+      <td>9879</td>
+      <td>-0.0150</td>
+      <td>2</td>
+      <td>0.8040</td>
+      <td>5</td>
+      <td>1.9911</td>
+      <td>4</td>
+      <td>-0.3527</td>
+      <td>2</td>
+      <td>2.6</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p>Use <code class="docutils literal notranslate"><span class="pre">marg_neighb</span></code> to create a another <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> called <code class="docutils literal notranslate"><span class="pre">instability_df</span></code> that has three columns: <code class="docutils literal notranslate"><span class="pre">'Neighb</span> <span class="pre">id</span> <span class="pre">',</span> <span class="pre">'Neighbourhood</span> <span class="pre">name</span> <span class="pre">',</span> <span class="pre">'INSTABILITY'</span></code>.</p>
 <div class="cell docutils container">
@@ -541,6 +653,64 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Neighb id</th>
+      <th>Neighbourhood name</th>
+      <th>INSTABILITY</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>West Humber-Clairville</td>
+      <td>-0.6639</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Mount Olive-Silverstone-Jamestown</td>
+      <td>-0.1081</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Thistletown-Beaumond Heights</td>
+      <td>-0.3131</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>Rexdale-Kipling</td>
+      <td>0.1866</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>Elms-Old Rexdale</td>
+      <td>-0.0150</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p>b) Rename the column names of <code class="docutils literal notranslate"><span class="pre">instability_df</span></code> using the following table.  The DataFrame with the new column names should be called <code class="docutils literal notranslate"><span class="pre">instability_df</span></code> (i.e., don’t change the name of the DataFrame).</p>
 <table class="table">
@@ -575,6 +745,64 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Neighbid</th>
+      <th>name</th>
+      <th>INSTABILITY</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>West Humber-Clairville</td>
+      <td>-0.6639</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Mount Olive-Silverstone-Jamestown</td>
+      <td>-0.1081</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Thistletown-Beaumond Heights</td>
+      <td>-0.3131</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>Rexdale-Kipling</td>
+      <td>0.1866</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>Elms-Old Rexdale</td>
+      <td>-0.0150</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 </section>
 <section id="step-2-read-the-mental-health-visit-data-into-a-pandas-dataframe">
@@ -588,6 +816,173 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Unnamed: 0</th>
+      <th>Unnamed: 1</th>
+      <th>Male</th>
+      <th>Female</th>
+      <th>Both sexes</th>
+      <th>Male.1</th>
+      <th>Female.1</th>
+      <th>Both sexes.1</th>
+      <th>Male.2</th>
+      <th>Female.2</th>
+      <th>...</th>
+      <th>Female.12</th>
+      <th>Both sexes.12</th>
+      <th>Rate Ratio**, Both sexes.4</th>
+      <th>H/ L/ NS, Both sexes.4</th>
+      <th>(95% CI) LL, Male.4</th>
+      <th>(95% CI) UL,  Male.4</th>
+      <th>(95% CI) LL, Female.4</th>
+      <th>(95% CI) UL, Female.4</th>
+      <th>(95% CI) LL, Both sexes.4</th>
+      <th>(95% CI) UL, Both sexes.4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>West Humber-Clairville</td>
+      <td>938</td>
+      <td>1168</td>
+      <td>2106</td>
+      <td>13915</td>
+      <td>14046</td>
+      <td>27961</td>
+      <td>6.6</td>
+      <td>8.2</td>
+      <td>...</td>
+      <td>7.2</td>
+      <td>7.2</td>
+      <td>0.85</td>
+      <td>L</td>
+      <td>6.1</td>
+      <td>8.3</td>
+      <td>6.2</td>
+      <td>8.3</td>
+      <td>6.4</td>
+      <td>8.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Mount Olive-Silverstone-Jamestown</td>
+      <td>866</td>
+      <td>1130</td>
+      <td>1996</td>
+      <td>12256</td>
+      <td>13082</td>
+      <td>25338</td>
+      <td>7.0</td>
+      <td>8.6</td>
+      <td>...</td>
+      <td>8.5</td>
+      <td>8.2</td>
+      <td>0.96</td>
+      <td>NS</td>
+      <td>6.6</td>
+      <td>9.4</td>
+      <td>7.2</td>
+      <td>10.0</td>
+      <td>7.3</td>
+      <td>9.3</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Thistletown-Beaumond Heights</td>
+      <td>275</td>
+      <td>410</td>
+      <td>685</td>
+      <td>4124</td>
+      <td>4453</td>
+      <td>8577</td>
+      <td>6.4</td>
+      <td>9.2</td>
+      <td>...</td>
+      <td>8.1</td>
+      <td>7.9</td>
+      <td>0.93</td>
+      <td>NS</td>
+      <td>5.9</td>
+      <td>9.9</td>
+      <td>6.4</td>
+      <td>10.0</td>
+      <td>6.7</td>
+      <td>9.3</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>Rexdale-Kipling</td>
+      <td>328</td>
+      <td>453</td>
+      <td>781</td>
+      <td>4130</td>
+      <td>4470</td>
+      <td>8600</td>
+      <td>7.7</td>
+      <td>10.0</td>
+      <td>...</td>
+      <td>9.0</td>
+      <td>9.1</td>
+      <td>1.07</td>
+      <td>NS</td>
+      <td>7.2</td>
+      <td>11.6</td>
+      <td>7.3</td>
+      <td>11.0</td>
+      <td>7.8</td>
+      <td>10.6</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>Elms-Old Rexdale</td>
+      <td>287</td>
+      <td>396</td>
+      <td>683</td>
+      <td>3787</td>
+      <td>4028</td>
+      <td>7815</td>
+      <td>7.4</td>
+      <td>9.6</td>
+      <td>...</td>
+      <td>8.1</td>
+      <td>7.5</td>
+      <td>0.88</td>
+      <td>NS</td>
+      <td>4.8</td>
+      <td>9.2</td>
+      <td>6.2</td>
+      <td>10.5</td>
+      <td>6.1</td>
+      <td>9.1</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 81 columns</p>
+</div></div></div>
 </div>
 <p>b) Create a new DataFrame <code class="docutils literal notranslate"><span class="pre">mhvisitrates</span></code> by selecting the columns in <code class="docutils literal notranslate"><span class="pre">mentalhealth_neighb</span></code> that corresponds to Neighbourhood ID, Neighbourhood Name, and ‘Age-Standardized rate of Mental Health Visits (2012), All Ages 20+’ rename this column in <code class="docutils literal notranslate"><span class="pre">mhvisitrates</span></code> to <code class="docutils literal notranslate"><span class="pre">mhvisitrates_mf</span></code>.  When you rename this column don’t change the name of the DataFrame <code class="docutils literal notranslate"><span class="pre">mhvisitrates</span></code>.</p>
 <div class="cell docutils container">
@@ -606,6 +1001,64 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Neighbid</th>
+      <th>name</th>
+      <th>mhvisitrates_mf</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>West Humber-Clairville</td>
+      <td>7.4</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Mount Olive-Silverstone-Jamestown</td>
+      <td>7.8</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Thistletown-Beaumond Heights</td>
+      <td>7.8</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>Rexdale-Kipling</td>
+      <td>8.9</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>Elms-Old Rexdale</td>
+      <td>8.5</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 </section>
 <section id="step-3-merge-mental-health-visits-and-instability">
@@ -619,6 +1072,70 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Neighbid</th>
+      <th>name</th>
+      <th>mhvisitrates_mf</th>
+      <th>INSTABILITY</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>West Humber-Clairville</td>
+      <td>7.4</td>
+      <td>-0.6639</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Mount Olive-Silverstone-Jamestown</td>
+      <td>7.8</td>
+      <td>-0.1081</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Thistletown-Beaumond Heights</td>
+      <td>7.8</td>
+      <td>-0.3131</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>Rexdale-Kipling</td>
+      <td>8.9</td>
+      <td>0.1866</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>Elms-Old Rexdale</td>
+      <td>8.5</td>
+      <td>-0.0150</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 </section>
 <section id="step-4">
@@ -648,9 +1165,22 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>instab_HL
+Low     70
+High    66
+Name: count, dtype: int64
+</pre></div>
+</div>
+</div>
 </div>
 <p>c) Is there evidence that Toronto has many neighbourhoods that have residential instability?  Briefly explain. <strong>(1 mark)</strong></p>
-<p>answer goes here …</p>
+<blockquote>
+<div><p>There is more than one possible way to answer the question. e.g.,</p>
+<p>i. The data shows that about half of the neighbourhoods in Toronto, 66 out of 136, having residential instability measures that are higher than the city-wide mean. It is difficult to provide a definite answer to the question based on the result since it only provide comparison within the city.</p>
+<p>ii. (a bit mor. naive answer) About half of the neighbourhoods in Toronto have high residential instability.</p>
+<p>Any answer with a sensible reasoning based on the data is acceptable.</p>
+</div></blockquote>
 </section>
 <section id="step-5-do-neighbourhoods-with-high-residential-instability-have-more-mental-health-visits-compared-to-neighbourhoods-with-low-residential-isntability">
 <h2>Step 5 - Do neighbourhoods with high residential instability have more mental health visits compared to neighbourhoods with low residential isntability?<a class="headerlink" href="#step-5-do-neighbourhoods-with-high-residential-instability-have-more-mental-health-visits-compared-to-neighbourhoods-with-low-residential-isntability" title="Link to this heading">#</a></h2>
@@ -663,6 +1193,72 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>count</th>
+      <th>mean</th>
+      <th>std</th>
+      <th>min</th>
+      <th>25%</th>
+      <th>50%</th>
+      <th>75%</th>
+      <th>max</th>
+    </tr>
+    <tr>
+      <th>instab_HL</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>High</th>
+      <td>66.0</td>
+      <td>8.362121</td>
+      <td>0.937388</td>
+      <td>5.9</td>
+      <td>7.825</td>
+      <td>8.45</td>
+      <td>9.075</td>
+      <td>10.5</td>
+    </tr>
+    <tr>
+      <th>Low</th>
+      <td>70.0</td>
+      <td>7.867143</td>
+      <td>1.000539</td>
+      <td>5.7</td>
+      <td>7.025</td>
+      <td>7.80</td>
+      <td>8.775</td>
+      <td>9.9</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p>Use <code class="docutils literal notranslate"><span class="pre">median_table</span></code> to compute the difference in medians between neighbourhoods with high and low instability.  Store this value in <code class="docutils literal notranslate"><span class="pre">median_diff</span></code>.</p>
 <div class="cell docutils container">
@@ -670,6 +1266,15 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">median_diff</span> <span class="o">=</span> <span class="n">median_table</span><span class="p">[</span><span class="s1">&#39;50%&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">median_table</span><span class="p">[</span><span class="s1">&#39;50%&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
 
 <span class="n">median_diff</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/0j/ybsv4ncn5w50v40vdh5jjlww0000gn/T/ipykernel_11385/223760169.py:1: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+  median_diff = median_table[&#39;50%&#39;][0] - median_table[&#39;50%&#39;][1]
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.6499999999999995
 </pre></div>
 </div>
 </div>
@@ -726,10 +1331,25 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">random_shuffle_median</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    randomly shuffles the column of mhvisitinstab that corresponds to 
+
+    high/low instability and calculates the difference in median visit rates 
+    
+    for high and low instability neighbourhoods
+    
 </pre></div>
 </div>
 </div>
@@ -739,7 +1359,9 @@ document.write(`
 </pre></div>
 </div>
 <p>in 1-2 sentences.</p>
-<p>answer goes here</p>
+<blockquote>
+<div><p>The line randomly samples 100% (<code class="docutils literal notranslate"><span class="pre">frac=1</span></code>) of the selected column (<code class="docutils literal notranslate"><span class="pre">'instab_HL'</span></code>) without replacements (<code class="docutils literal notranslate"><span class="pre">replace=False</span></code>) and removes the old ordering (<code class="docutils literal notranslate"><span class="pre">reset_index(drop=True)</span></code>). It mimicks random asingment of the high vs low labels to each neighbourhood.</p>
+</div></blockquote>
 </section>
 <section id="step-7-compute-the-distribution-of-simulated-values-of-the-median-difference-assuming-the-null-hypothesis-is-true">
 <h2>Step 7 - Compute the distribution of simulated values of the median difference assuming the null hypothesis is true<a class="headerlink" href="#step-7-compute-the-distribution-of-simulated-values-of-the-median-difference-assuming-the-null-hypothesis-is-true" title="Link to this heading">#</a></h2>
@@ -747,7 +1369,7 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># # Replace the ... with your student number</span>
-<span class="c1"># student_number = ...</span>
+<span class="n">student_number</span> <span class="o">=</span> <span class="mi">12345</span>
 
 <span class="c1"># # This checks that you correctly typed in your student_number as an int.</span>
 <span class="c1"># # Make sure there&#39;s no error when you run this cell!</span>
@@ -791,6 +1413,12 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Frequency&#39;)
+</pre></div>
+</div>
+<img alt="../../../../_images/231999c1b8abbbba4b3eab20e44589f39eec8ca61c36bbb8f6638b15b28ab4fa.png" src="../../../../_images/231999c1b8abbbba4b3eab20e44589f39eec8ca61c36bbb8f6638b15b28ab4fa.png" />
+</div>
 </div>
 </section>
 <section id="step-8-compute-the-p-value">
@@ -824,19 +1452,44 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0064
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 <section id="step-9-communicate-what-you-did-in-the-steps-above">
 <h2>Step 9 - Communicate what you did in the steps above<a class="headerlink" href="#step-9-communicate-what-you-did-in-the-steps-above" title="Link to this heading">#</a></h2>
 <p>a) In a few sentences introduce the question that you explored in this homework (see the <a class="reference internal" href="#gg274-homework-8-hypothesis-testing"><span class="xref myst">beginning</span></a> of this homework).  For example, why do you or others think this is an important question?  (<strong>1 mark</strong>)</p>
-<p>answer goes here …</p>
+<blockquote>
+<div><p>We investigated whether neighbourhoods whose residential statuses are relatively instable visit mental health services more or less frequently compared to those with relatively stable residential statuses. The analysis may tell us whether the marginalized neighbourhoods need more support for their mental health.</p>
+</div></blockquote>
 <p>b)  Briefly describe the data sources that you used to answer the question.  Which statistical variables did you use and why did you use these varaibles? (<strong>1 mark</strong>)</p>
-<p>answer goes here …</p>
+<blockquote>
+<div><p>We used the residential instabilty measure from the Ontario Marginalization Index and the age-standardized rates for mental health visits among those above age 20. We computed the mean of the instability measure to dicotomize the neighbourhoods to those whose measures are above the mean and those whose measures are below the mean. This allowed us to label the neighbourhoods into two groups - high vs. low residential instability.</p>
+<p>We then computed the difference in the median mental health visit rates between the two groups. The medians provided the “typical” (or centre of the distributions) visit rates of the two groups.</p>
+</div></blockquote>
 <p>c) What computational and statistical methods or analyses did you use to answer the question?  Briefly describe these methods and how they were used to answer the question.  (<strong>1 mark</strong>)</p>
-<p>answer goes here …</p>
+<blockquote>
+<div><p>We simulated the distribution of the difference in median mental health visits rates under the assumption that there is no difference in the median rates betwee the two groups using the bootstrap. We then located the observed difference in the simulated distribution to assess high likely it would be to observe the value when there is actually no difference. When the location of the value in the distribution indicates that it is unlikely, we can reasonably conclude that the median mental health visit rates are different between the two groups.</p>
+<p>Note: Full marks if the data and method used are reasonably well explained between part b) and c).</p>
+</div></blockquote>
 <p>d) Briefly describe the results of your statistical analysis in a few sentences. (<strong>1 mark</strong>)</p>
+<blockquote>
+<div><p>After locating the observed difference in the simulated distribution, the resulting p-value is 0.0064 which is very small. It is reasonable to reject the hypothtesis that there is no difference between the two groups and conclude that the mental health visit rates are different between high and low residential instability neighbourhoods. Specifically, the visit rates are higher for those in neighbourhood with higher residential instability.</p>
+</div></blockquote>
 <p>e) What conclusions can you draw about the question you set out to answer that is supported by the data and statistical analysis of the data?  State at least one limitation of your conclusions. (See the <a class="reference external" href="https://libguides.usc.edu/writingguide/limitations">USC Research Guide section on study limitations</a>) (<strong>1 mark</strong>)</p>
-<p>answer goes here …</p>
+<blockquote>
+<div><p>The data shows that the typical mental health visit rates in Toronto neighbourhoods with relatively unstable residential statuses is higher. Our statistical analysis provides a reasonably strong evidence that there is a systematic difference and we didn’t observe the difference by chance.</p>
+<p>Limitations may include…</p>
+<ul class="simple">
+<li><p>the mental health visit rate data are from 2012 whereas the Ontario Marginalization Index is from 2006; a significant change in the neighbourhood composition may have altered the residential stability.</p></li>
+<li><p>the mental health visit rates are based on OHIP only (this requires some diggin on the data source: <a class="reference external" href="https://www.ontariohealthprofiles.ca/o_documents/aboutTheDataON/1_AboutTheData_AdultHealthDisease.pdf">https://www.ontariohealthprofiles.ca/o_documents/aboutTheDataON/1_AboutTheData_AdultHealthDisease.pdf</a>); other types of mental health visits may be relevant.</p></li>
+<li><p>…</p></li>
+</ul>
+<p>Any reasonable limitation identified is acceptable.</p>
+</div></blockquote>
 </section>
 </section>
 
